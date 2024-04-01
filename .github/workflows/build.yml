@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job
       # can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: setup prerequisites
         shell: bash
@@ -37,13 +37,13 @@ jobs:
         run: cd src/2.0/fr ; make
 
       - name: artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: pdf-fr-2.0
           path: src/2.0/fr/pdf_img/grisbi-manuel-img-2.0.pdf
 
       - name: artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: html-fr-2.0
           path: src/2.0/fr/html_img
@@ -53,13 +53,13 @@ jobs:
         run: cd src/1.0/en ; make English
 
       - name: artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: pdf-en-1.0
           path: src/1.0/en/pdf_img/grisbi-manuel-en-img-1.0.pdf
 
       - name: artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: html-en-1.0
           path: src/1.0/en/html_img
