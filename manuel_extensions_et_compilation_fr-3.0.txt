@@ -1,0 +1,76 @@
+Compilation du manuel de l'utilisateur Grisbi :
+[mise à jour: avril 2024 - ]
+
+Pour compiler complètement le manuel avec les images dans les formats pdf et html, vous devrez installer une distribution Latex (par ex. texlive) et les paquetages hevea et perl.
+Vous devrez aussi vous assurer que les extensions appelées dans les fichiers:
+- grisbi-manual.tex,
+- macros.sty,
+- hva/macros.hva
+par la commande \usepackage{extension}, sont installées et en particulier:
+(pour vérifier si l'extension est présente, faire la commande suivante: kpsewhich extension.sty)
+babel (base) (1)(2)=[2024/03],
+---bigfoot (fourni perpage) (1) (est remplacé par footmisc),
+caption (1)(2)=[2023/10],
+---fixfoot (1) (est remplacé par footmisc),
+footmisc (fourni perpage, label et footref) (1)(2)=[2023/07]
+glossaries (1)(2)=[2023/10],
+hyperref (1)(2)=[2024/10] (remplace url)
+idxlayout (1),
+imakeidx (1),
+macros-3.0, pointe vers /git/src/macro-3.0.sty,
+picins (2)=[1995] (est remplacé par wrapfig2),
+translator (1),
+---url (1) (est remplacé par hyperref),
+varioref (tools) (1)(2)=[2023/11], ou cleveref (?)
+wrapfig2 (1)(2)=[2024/001] (remplace picins),
+xindy (2)(3) (verifier si nécessaire).
+(1) contenu dans texlive-latex-base, -extra, -recommanded.
+(2) disponible dans le dépôt du CTAN https://ctan.org/ [date-du-dépôt], plus récent.
+(3) xindy.deb package
+
+La compilation se fait avec les commandes suivantes, dans le répertoire src/3.0/$LANG :
+
+# compile au format PDF sans images :
+$ make pdf
+
+# compile au format PDF sans images, avec index et glossaire :
+$ make pdf_indexglossary ; make pdf
+
+# compile au format PDF avec images :
+$ make pdf_img
+
+# compile au format PDF avec images, avec index et glossaire :
+$ make pdf_img_indexglossary ; make pdf_img
+
+# compile au format HTML sans images, avec index :
+$ make html
+
+# compile au format HTML avec images, avec index :
+$ make html_img
+
+
+Pour nettoyer le répertoire src/ en supprimant TOUS les fichiers
+auxiliaires créés par une compilation précédente (.aux, .log, etc.) :
+$ make clean
+
+Ou bien supprimer ces mêmes fichiers et TOUS les fichiers créés par le
+Makefile (c'est ce qui est recommandé de faire avant chaque compilation)
+:
+$ make distclean
+
+
+Après compilation:
+- le fichier grisbi-manuel-xxx.pdf (sans images) se trouve dans src/pdf/
+- le fichier grisbi-manuel-img-xxx.pdf (avec images) se trouve dans
+  src/pdf_img/
+- les fichiers html sans images  se trouvent dans src/html/ et l'archive
+  dans src/tgz_html/
+- les fichiers html avec images  se trouvent dans src/html_img/ et
+  l'archive dans src/tgz_html_img/
+
+En html, le manuel est disponible sous deux formes:
+- grisbi-manuel.html pour la page d'en-tête avec sommaire et index, avec
+  liens vers les chapitres, en autant de fichiers que de chapitres
+- grisbi-manuel-1page.html pour le manuel en une seule page et en un
+  seul gros fichier
+
