@@ -54,12 +54,12 @@
 \rehead{\rightmark}			% rightmark at right of even page
 \rohead{\rightmark}			% rightmark at right of odd page
 \cfoot*{\pagemark}			% pagemark in the center of the footer
-\KOMAoptions{%
-	headsepline,			% draw rule below header
-	footsepline,			% draw rule above footer
+%\KOMAoptions{%
+%	headsepline,			% draw rule below header
+%	footsepline,			% draw rule above footer
 	%plainheadsepline,		% headsepline on plain pages	
-	plainfootsepline 		% draw footsepline on plain pages (here for heading pages, may be due to twoside=semi in scrbook options)
-}
+%	plainfootsepline 		% draw footsepline on plain pages (here for heading pages, may be due to twoside=semi in scrbook options)
+%}
 \ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
 \ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
 %\ModifyLayer[addvoffset=-4pt]{scrheadings.foot.above.line}		% move up footsepline with addvoffset (add minus to voffset whose origin is the top edge of the paper)
