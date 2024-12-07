@@ -41,9 +41,9 @@
 
 %\usepackage{ifpdf}					% detect pdfTeX, replaced by \Ifpdfoutput (KOMA-script)
 \usepackage[T1]{fontenc}			% the font encoding
-\usepackage[utf8]{inputenc}		% no longer need to specify, included in LaTex since April 2018
-\usepackage{lmodern}				% police Latin Modern
-\usepackage{babel}			% the language  %TODO: make this customizable ; frenchb in place of french
+%\usepackage[utf8]{inputenc}			% no longer need to specify, included in LaTex since April 2018
+\usepackage{lmodern}				% Latin Modern police
+\usepackage{babel}					% use the language define in \documentclass
 \def\frenchcontentsname{Sommaire}	% rename "Table des matières" (at end of document) from [french]{babel} to "Sommaire" (at start of document)
 \frenchsetup{ItemLabeli=\textbullet}	% change 1st level list marker of french babel
 \frenchsetup{ItemLabelii=-}			% change 2nd level list marker of french babel
@@ -59,7 +59,7 @@
 \usepackage{microtype}				% Font expansion (use for title) with "\textls[x]" - doesn't work with pandoc / espace entre caractères (utilisé pour le titre)
 % Web addresses
 %\usepackage{url}					% loaded by hyperref
-\usepackage[unicode]{hyperref}		% TODO replace \usepackage{url}, used to add an URL and rewrite the "grisbi-manuel-urldef.tex" file
+\usepackage[unicode]{hyperref}		% replace \usepackage{url}, used to add an URL and rewrite the "grisbi-manuel-urldef.tex" file
 \include{31-grisbi-manuel-urldef}		% include the "grisbi-manuel-urldef" file during the compilation
 
 
@@ -90,7 +90,7 @@
 
 
 %\usepackage{scrlayer-fancyhdr}		% facilities for constructing headers and footers, replace fancyhdr
-									% TODO change to scrlayer-scrpage here and in macros.sty
+									% change to scrlayer-scrpage here and in macros.sty
 
 																
 %\pagestyle{fancyplain}
@@ -105,7 +105,7 @@
 \usepackage{thumbpdf}				% create thumbnails (vignettes) in pdf
 
 
-%\usepackage{emptypage}		% change by using \cleardoubleemptypage (in koma-scripts) % TODO see to change in macro-3.0.sty
+%\usepackage{emptypage}		% change by using \cleardoubleemptypage (in koma-scripts)
 % Latex loads macros-3.0.sty for pdf output and Hevea loads /hva/macros.hva for html output
 \usepackage{macros-3.0}
 
