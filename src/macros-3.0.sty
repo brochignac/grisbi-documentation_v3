@@ -9,17 +9,17 @@
 %	- rewrite options' geometry package
 %	- remove toc/lof layout
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TODO add FR/EN translate for comments
+% add FR/EN translate for comments
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % For the hypertext link display on images
-\newcommand{\refimage}[1]{ (fig. \vref{#1})}
+%\newcommand{\refimage}[1]{ (fig. \vref{#1})}
 
 
 % For spaces after images bordered with text
-\newcommand{\vspacepdf}[1]{\vspace{#1}}
-\newcommand{\vspacehevea}[1]{}
+%\newcommand{\vspacepdf}[1]{\vspace{#1}}
+%\newcommand{\vspacehevea}[1]{}
 
 % Avoid margin overfull by text
 %\newcommand{\newlinepdf}{\newline}
@@ -116,7 +116,7 @@
 % Redefines empty pages without numbering neither header and footer
 %\newcommand{\myclearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
 
-% TODO mise en forme toc (table of contents = table des matières)
+% mise en forme toc (table of contents = table des matières)
 %% Redefines the tableofcontents command, for good alignment of names and numbering
 %\makeatletter
 %\renewcommand\tableofcontents{%
@@ -138,7 +138,7 @@
 %    }
 %\makeatother
 
-% TODO lof (list of figures) -> define in documentclass's scrbook options
+% lof (list of figures) -> define in documentclass's scrbook options
 % Redefines listoffigures command
 %\ifpdf
 %\makeatletter
@@ -167,7 +167,7 @@
 
 
 % Adjusts the space between a figure and its legend; by default it is 10pt
-% TODO should be change to scrlayer-scrpage (actually use scrlayer-fancyhdr instead of fancyhdr)
+% should be change to scrlayer-scrpage (actually use scrlayer-fancyhdr instead of fancyhdr)
 %\fancypagestyle{plain}{
 %\fancyhf{}
 %\fancyfoot[RO,LE]{\thepage{}}
