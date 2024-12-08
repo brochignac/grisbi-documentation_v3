@@ -124,23 +124,25 @@ totoc           %
 \usepackage[unicode]{hyperref}		% replace \usepackage{url}, used to add an URL and rewrite the "grisbi-manuel-urldef.tex" file (must be the last package)
 \include{31-grisbi-manuel-urldef}		% include the "grisbi-manuel-urldef" file during the compilation
 
-\hypersetup{%                                     % to create metadata to insert in pdf
-	pdftitle={Manuel de Grisbi},
-	pdfauthor={Alain PORTAL <dionysos@grisbi.org>},
-	pdfpagemode=UseOutlines,
-	pdfstartview=XYZ null null 1.0,
-	pdffitwindow=true,
-	pdfcenterwindow=true,
-	bookmarksnumbered=true,
-	%  bookmarksopen=true,
-	colorlinks=true,
-	citebordercolor=1 1 1,
-	linkbordercolor=1 1 1,
-	linkcolor=blue,
-	menubordercolor=1 1 1,
-	urlbordercolor=1 1 1,
-	urlcolor=blue,
-	plainpages=false   % pdfpagelabels Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
+\hypersetup{%							% to create metadata to insert in pdf
+	pdftitle={Manuel de Grisbi},		% sets the document information Title field
+	pdfauthor={The Grisbi Team},		% sets the document information Author field
+	pdfcreator={Alain PORTAL}			% sets the document information Creator field
+	pdfpagemode=UseOutlines,			% set default mode of PDF display, UseOutlines=show bookmarks
+	pdfstartview=XYZ null null 1.0,		% set the startup page view, XYZ=left top zoom
+	pdffitwindow=true,					% resize document window to fit document size, default=false
+	pdfcenterwindow=true,				% position the document window in the center of the screen, default=false
+	bookmarksnumbered=true,				% put section numbers in bookmarks, default=false
+	bookmarksopen=true,					% open up bookmark tree, default=false
+	colorlinks=true,					% color links, default=false
+	citebordercolor=1 1 1,				% the color of the box around citations, rgb color
+	linkbordercolor=1 1 1,				% the color of the box around normal links, rgb color
+	linkcolor=blue,						% color for normal internal links, color=blue
+	menubordercolor=1 1 1,				% color of border around menu links, rgb color
+	urlbordercolor=1 1 1,				% color of border around URL links, rgb color
+	urlcolor=blue,						% color of URL links, color=blue
+	plainpages=false					% do page number anchors as plain Arabic, default=false
+%	pdfpagelabels						% set PDF page labels - Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
 }
 
 % Glossary
