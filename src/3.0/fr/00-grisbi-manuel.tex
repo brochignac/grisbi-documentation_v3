@@ -73,7 +73,9 @@
 %%\usepackage[pdftex]{graphicx}		% enhanced support for importing graphics (x=enhanced) and then using the \includegraphics command to insert the file
 %%}{%			
 % else								% Commented out to avoid errors in html, and put in the macros.sty file for pdf
-\usepackage{graphicx}
+\usepackage{graphicx}				% enhanced support for importing graphics (x=enhanced) and then using the \includegraphics command to insert the file
+\newcommand{\refimage}[1]{ (fig. \vref{#1})}	% for the hypertext link display on images
+\newcommand{\vspacepdf}[1]{\vspace{#1}}			% for spaces after images bordered with text
 %%}
 %% Graphics Extensions
 %\ifpdf
@@ -204,6 +206,8 @@
 \newcommand{\file}[1]{\textbf{#1}}				% new command -> \file = bold
 \newcommand{\xml}[1]{\texttt{#1}}				% new command -> \xml = teletype font
 \newcommand{\indexword}[1]{\textsf{#1}}			% new command -> \indexword = sans serif, for easy search of each indexed word in the page
+
+\newcommand{\refimage}[1]{ (fig. \vref{#1})}	% For the hypertext link display on images
 
 %\renewcommand*{\footnote}{\centering}
 
