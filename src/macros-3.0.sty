@@ -31,37 +31,37 @@
 
 
 % Page layout
-\usepackage[%
+%\usepackage[%
 %  showframe,                    % to see frame of geometry package
-  top=1in,						% marge haute
-  headheight=7mm,				% hauteur en-tête
-  headsep=6mm,					% distance entre entête et corps de texte
-  textheight=252mm,				% textheight=paperheight-topmargin-headheight-headsep-footskip
-  footskip=11mm,				% distance entre bas de pied de page et bas du corps de texte
-  hmargin=25mm					% horizontal margins (left and right), textwidth = paperwidt - margins
-]{geometry}
-\usepackage[%
+%  top=1in,						% marge haute
+%  headheight=7mm,				% hauteur en-tête
+%  headsep=6mm,					% distance entre entête et corps de texte
+%  textheight=252mm,				% textheight=paperheight-topmargin-headheight-headsep-footskip
+%  footskip=11mm,				% distance entre bas de pied de page et bas du corps de texte
+%  hmargin=25mm					% horizontal margins (left and right), textwidth = paperwidt - margins
+%]{geometry}
+%\usepackage[%
 %	footsepline=0.25pt,		% to show the footwidth
 %	headsepline,			% draw rule below header 
 %	footsepline,			% draw rule above footer
 %	plainfootsepline,		% draw rule above footer
 %	automark,				% This would use chapter titles for the even pages and section titles for the odd pages
 %	autooneside=false		% option to use both \leftmark and \rightmark in a one-sided document
-]{scrlayer-scrpage}			% define and manage page styles by controlling page headers and footers			
-\clearpairofpagestyles		% remove the default marks of the headings and the plain pages
-\lehead{\leftmark}			% leftmark at left of even page
-\lohead{\leftmark}			% leftmark at left of odd page
-\rehead{\rightmark}			% rightmark at right of even page
-\rohead{\rightmark}			% rightmark at right of odd page
-\cfoot*{\pagemark}			% pagemark in the center of the footer
+%]{scrlayer-scrpage}			% define and manage page styles by controlling page headers and footers			
+%\clearpairofpagestyles		% remove the default marks of the headings and the plain pages
+%\lehead{\leftmark}			% leftmark at left of even page
+%\lohead{\leftmark}			% leftmark at left of odd page
+%\rehead{\rightmark}			% rightmark at right of even page
+%\rohead{\rightmark}			% rightmark at right of odd page
+%\cfoot*{\pagemark}			% pagemark in the center of the footer
 %\KOMAoptions{%
 %	headsepline,			% draw rule below header
 %	footsepline,			% draw rule above footer
 	%plainheadsepline,		% headsepline on plain pages	
 %	plainfootsepline 		% draw footsepline on plain pages (here for heading pages, may be due to twoside=semi in scrbook options)
 %}
-\ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
-\ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
+%\ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
+%\ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
 %\ModifyLayer[addvoffset=-4pt]{scrheadings.foot.above.line}		% move up footsepline with addvoffset (add minus to voffset whose origin is the top edge of the paper)
 % for <style_page(scrheadings_or_plain)>.foot.above.line
 %\clearpairofpagestyles											% clear left/right page number, replaces outdated \clearscrheadfoot
