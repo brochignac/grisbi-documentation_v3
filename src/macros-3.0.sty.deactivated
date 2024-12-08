@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Style file for pdf only
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% $Id : macros-3.0.sty, v 3.0 2024/04 Dominique Brochard :
+%	- change fancyhdr to scrlayer-scrpage and rewrite
+% $Id : macros-3.0.sty, v 3.0 2024/11 Dominique Brochard :
+%	- add footmisc package
+%	- remove perpage, fixfoot,atbegshi  packages
+%	- rewrite options' geometry package
+%	- remove toc/lof layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% add FR/EN translate for comments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% For the hypertext link display on images
+%\newcommand{\refimage}[1]{ (fig. \vref{#1})}
+
+
+% For spaces after images bordered with text
+%\newcommand{\vspacepdf}[1]{\vspace{#1}}
+%\newcommand{\vspacehevea}[1]{}
+
+% Avoid margin overfull by text
+%\newcommand{\newlinepdf}{\newline}
+%\newcommand{\dash}{-}
+
+
+% For pdf only, not used
+%\pdfcompresslevel=9
+
+
+% Page layout
+%\usepackage[%
+%  showframe,                    % to see frame of geometry package
+%  top=1in,						% marge haute
+%  headheight=7mm,				% hauteur en-tête
+%  headsep=6mm,					% distance entre entête et corps de texte
+%  textheight=252mm,				% textheight=paperheight-topmargin-headheight-headsep-footskip
+%  footskip=11mm,				% distance entre bas de pied de page et bas du corps de texte
+%  hmargin=25mm					% horizontal margins (left and right), textwidth = paperwidt - margins
+%]{geometry}
+%\usepackage[%
+%	footsepline=0.25pt,		% to show the footwidth
+%	headsepline,			% draw rule below header 
+%	footsepline,			% draw rule above footer
+%	plainfootsepline,		% draw rule above footer
+%	automark,				% This would use chapter titles for the even pages and section titles for the odd pages
+%	autooneside=false		% option to use both \leftmark and \rightmark in a one-sided document
+%]{scrlayer-scrpage}			% define and manage page styles by controlling page headers and footers			
+%\clearpairofpagestyles		% remove the default marks of the headings and the plain pages
+%\lehead{\leftmark}			% leftmark at left of even page
+%\lohead{\leftmark}			% leftmark at left of odd page
+%\rehead{\rightmark}			% rightmark at right of even page
+%\rohead{\rightmark}			% rightmark at right of odd page
+%\cfoot*{\pagemark}			% pagemark in the center of the footer
+%\KOMAoptions{%
+%	headsepline,			% draw rule below header
+%	footsepline,			% draw rule above footer
+	%plainheadsepline,		% headsepline on plain pages	
+%	plainfootsepline 		% draw footsepline on plain pages (here for heading pages, may be due to twoside=semi in scrbook options)
+%}
+%\ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
+%\ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
+%\ModifyLayer[addvoffset=-4pt]{scrheadings.foot.above.line}		% move up footsepline with addvoffset (add minus to voffset whose origin is the top edge of the paper)
+% for <style_page(scrheadings_or_plain)>.foot.above.line
+%\clearpairofpagestyles											% clear left/right page number, replaces outdated \clearscrheadfoot
+
+%\cfoot*{\pagemark}%             % pagemark center in the footer of the left&right pages
+%\voffset=-1in
+%\oddsidemargin=25mm             % odd, right, verso (paire, droite, verso)
+%\evensidemargin=25mm            % evensidemargin de 15 à 20mm. even, left, recto(impair, gauche, recto)
+%\marginparwidth=0mm				% largeur note de marge
+%\marginparsep=0mm				% distance entre note de marge et corps de texte
+%\headheight=7mm					% hauteur entête (6mm pour V0.5)
+%\setlength{\headheight}{\baselineskip}		% hauteur entête par rapport à la 1ère ligne de texte
+%\headsep=6mm					% distance entre entête et corps de texte
+%\footskip=15mm					% distance entre bas de pied de page et bas du corps de texte
+%\textwidth=160mm				% textwidth = paperwidth - oddsidemargin - evensidemargin - marginparwidth - marginparsep
+%\textheight=252mm				% textheight=paperheight-topmargin-headheight-headsep-footskip
+%\topmargin=10mm
+%\usepackage{atbegshi}          % required to see frame of geometry package
+
+% Footnotes for pdf only
+%\usepackage[%
+%	perpage						% resets footnote numbering for each page of the document.
+%]{footmisc}						% provides several different customizations of footnotes
+%\MakePerPage{footnote}			% designates a counter to be reset per page (from perpage)
+%\renewcommand\footnoterule{%	% redefine rule above footnote
+%	\kern 5pt 					% above footnoterule, space between text and footnoterule  
+%	\hrule width 2.5in			% define rule's width to 2.5 in
+%	\kern 6pt}					% space between footrule and footnotes below
+%\def\footnoterule{\kern -3pt}
+%\addtolength{\footnotesep}{5mm} % change space between rule and all the footnotes (here 5mm)
+%\addtolength{\skip\footins}{25mm} % change space between rule text above
+%\renewcommand\footnoterule{{\hrule height 10pt}} % change thicknees of footnotes' rule
+%\usepackage{fixfoot}			% for repetitives footnotes in the same page
+% Declaration of the repetitives footnotes
+% example : \DeclareFixedFootnote{\rep}{Text to repeat}
+%\DeclareFixedFootnote{\valeur}{valeur par défaut}
+%\DeclareFixedFootnote{\couleur}{couleur par défaut}
+%\DeclareFixedFootnote{\couleurs}{couleurs par défaut}
+%\DeclareFixedFootnote{\siteGrisbi}{\urlGrisbi}
+%\DeclareFixedFootnote{\siteGitHub}{\urlGitHubGrisbi}
+%\DeclareFixedFootnote{\siteGrisbiTelechargement}{\urlGrisbiTelechargement{}}
+%\DeclareFixedFootnote{\siteSourceForgeDocumentation}{\urlSourceForgeDocumentation{}}
+%\DeclareFixedFootnote{\siteMantis}{\urlBugTracker{}}
+%\DeclareFixedFootnote{\listeDevel}{\urlListDevelEmail{}}
+%\DeclareFixedFootnote{\listeBugsreport}{\urlListBugsreport{}}
+
+
+% Style of indexed words in the text, for easy search of each indexed word in the page
+%\newcommand{\indexword}[1]{\textsf{#1}}
+
+
+% Redefines empty pages without numbering neither header and footer
+%\newcommand{\myclearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+% mise en forme toc (table of contents = table des matières)
+%% Redefines the tableofcontents command, for good alignment of names and numbering
+%\makeatletter
+%\renewcommand\tableofcontents{%
+%	% increased space between number and subsection name for number >9  (see book.cls file)
+%	\renewcommand\l@section{\@dottedtocline{1}{1.5em}{2.8em}}
+%	\renewcommand\l@subsection{\@dottedtocline{2}{4.3em}{3.5em}}
+%    \if@twocolumn
+%      \@restonecoltrue\onecolumn
+%    \else
+%      \@restonecolfalse
+%    \fi
+
+%% Replaced because «table des matières» was repeated in capitals characters
+%%    \chapter*{\contentsname \@mkboth{\MakeUppercase\contentsname}{}}
+%% by
+%    \chapter*{\contentsname}
+%    \@starttoc{toc}
+%    \if@restonecol\twocolumn\fi
+%    }
+%\makeatother
+
+% lof (list of figures) -> define in documentclass's scrbook options
+% Redefines listoffigures command
+%\ifpdf
+%\makeatletter
+%\renewcommand\listoffigures{%
+%	% increases space between number and figure name for number >9 (see book.cls file)
+%	\renewcommand\l@figure{\@dottedtocline{1}{1.5em}{2.8em}}%
+%    \if@twocolumn
+%      \@restonecoltrue\onecolumn
+%    \else
+%      \@restonecolfalse
+%    \fi
+%    \chapter*{\listfigurename}
+%      \@mkboth{\MakeUppercase\listfigurename}{}
+%    \@starttoc{lof}
+%    \if@restonecol\twocolumn\fi
+%    }
+%\makeatother
+%\else
+%\fi
+
+% Redefines the list labels of frenchb extension, in frenchb.ldf file % TODO voir avec [french] babel option
+%\renewcommand*{\Frlabelitemi}{\textbullet}
+%\renewcommand*{\Frlabelitemii}{\textasteriskcentered}
+%\renewcommand*{\Frlabelitemiii}{\textendash}
+%\renewcommand*{\Frlabelitemiv}{\textperiodcentered}
+
+
+% Adjusts the space between a figure and its legend; by default it is 10pt
+% should be change to scrlayer-scrpage (actually use scrlayer-fancyhdr instead of fancyhdr)
+%\fancypagestyle{plain}{
+%\fancyhf{}
+%\fancyfoot[RO,LE]{\thepage{}}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0.4pt}}
+
+%\fancypagestyle{headings}{
+%\fancyhf{}
+%\fancyhead[RE]{\textsc\nouppercase{\rightmark{}}}   % \textsc replace \sc
+%\fancyfoot[RO,LE]{\thepage{}}
+%\fancyhead[LO]{\large\textsc\nouppercase{\leftmark{}}}  % \textsc replace \sc
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}}
+
+%\pagestyle{scrheadings}				% titles of chapters and sections are repeated in the header, number of page in the footer
+
+
+
+
+
+
+
+% Hyperlinks
+% hyperref must be the last package
+%\Ifpdfoutput							% replace \ifpdf
+%\usepackage[pdftex]{hyperref}             % used to handle cross-referencing commands in LaTeX to produce hypertext links in the document.
+
+%\else
+%\fi
+
+
+
+
+
