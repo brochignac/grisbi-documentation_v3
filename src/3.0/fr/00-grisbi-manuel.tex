@@ -139,7 +139,8 @@
 \renewcommand\footnoterule{%	% redefine rule above footnote
 	\kern 5pt 					% above footnoterule, space between text and footnoterule  
 	\hrule width 2.5in			% define rule's width to 2.5 in
-	\kern 6pt}					% space between footrule and footnotes below
+	\kern 6pt					% space between footrule and footnotes below
+}
 
 %% Index %%
 \usepackage[%
@@ -177,11 +178,11 @@
 
 %% Glossary %%
 \usepackage[%
-xindy,              % sort glossaries
-toc                 % add the glossary reference to the toc (table of contents)
+	xindy,              % sort glossaries
+	toc                 % add the glossary reference to the toc (table of contents)
 ]{glossaries}       % create a glossary, must be loaded AFTER hyperref
 \usepackage[%
-automake
+	automake
 ]{glossaries-extra} 	% check why no glossaries and give solutions
 
 %% Index %%
@@ -202,6 +203,7 @@ automake
 \newcommand{\cmd}[1]{\texttt{#1}}				% new command -> \cmd = teletype font
 \newcommand{\file}[1]{\textbf{#1}}				% new command -> \file = bold
 \newcommand{\xml}[1]{\texttt{#1}}				% new command -> \xml = teletype font
+\newcommand{\indexword}[1]{\textsf{#1}}			% new command -> \indexword = sans serif, for easy search of each indexed word in the page
 
 %\renewcommand*{\footnote}{\centering}
 
