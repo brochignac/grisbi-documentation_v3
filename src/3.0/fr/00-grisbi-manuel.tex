@@ -111,6 +111,27 @@
 % Latex loads macros-3.0.sty for pdf output and Hevea loads /hva/macros.hva for html output
 \usepackage{macros-3.0}
 
+%% Page layout %%
+\usepackage[%
+%	showframe,					% to see frame of geometry package
+	top=1in,					% marge haute
+	headheight=7mm,				% hauteur en-tête
+	headsep=6mm,				% distance entre entête et corps de texte
+	textheight=252mm,			% textheight=paperheight-topmargin-headheight-headsep-footskip
+	footskip=11mm,				% distance entre bas de pied de page et bas du corps de texte
+	hmargin=25mm				% horizontal margins (left and right), textwidth = paperwidt - margins
+]{geometry}
+\usepackage{scrlayer-scrpage}	% define and manage page styles by controlling page headers and footers			
+\clearpairofpagestyles			% remove the default marks of the headings and the plain pages
+\lehead{\leftmark}				% leftmark at left of even page
+\lohead{\leftmark}				% leftmark at left of odd page
+\rehead{\rightmark}				% rightmark at right of even page
+\rohead{\rightmark}				% rightmark at right of odd page
+\cfoot*{\pagemark}				% pagemark in the center of the footer
+\ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
+\ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
+
+
 % Index
 \usepackage[xindy]{imakeidx}						% for creating an index
 \usepackage[%
