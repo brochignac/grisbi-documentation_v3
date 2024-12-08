@@ -188,51 +188,16 @@
 
 
 
-% Index
-\usepackage[xindy]{imakeidx}						% for creating an index
-\usepackage[%
-  columns=2,      % default value is 2
-  rule=1pt,       % thickness of a vertical rule between index columns. Default value is 0 pt, i. e. no rule.
-  totoc           %
-]{idxlayout}      % key-value interface to configure index layout parameters
 
 
 % Hyperlinks
 % hyperref must be the last package
 %\Ifpdfoutput							% replace \ifpdf
 %\usepackage[pdftex]{hyperref}             % used to handle cross-referencing commands in LaTeX to produce hypertext links in the document.
-\hypersetup{%                                     % to create metadata to insert in pdf
-  pdftitle={Manuel de Grisbi},
-  pdfauthor={Alain PORTAL <dionysos@grisbi.org>},
-  pdfpagemode=UseOutlines,
-  pdfstartview=XYZ null null 1.0,
-  pdffitwindow=true,
-  pdfcenterwindow=true,
-  bookmarksnumbered=true,
-%  bookmarksopen=true,
-  colorlinks=true,
-  citebordercolor=1 1 1,
-  linkbordercolor=1 1 1,
-  linkcolor=blue,
-  menubordercolor=1 1 1,
-  urlbordercolor=1 1 1,
-  urlcolor=blue,
-  plainpages=false   % pdfpagelabels Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
-}
+
 %\else
 %\fi
 
-% Glossary
-% Creating a glossary with xindy, must be loaded AFTER hyperref
-\usepackage[%
-	xindy,              % sort glossaries
-	toc                 % add the glossary reference to the toc (table of contents)
-]{glossaries}           % create glossaries
-\usepackage[%
-  automake
-]{glossaries-extra} 	% check why no glossaries and give solutions
-% Index
-\makeindex  %[intoc]	% creates the index with its reference in the toc
 
 
 
