@@ -1,0 +1,442 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%THIS FILE CONTAINS ALL COMMON COMMANDS NEEDED FOR COMPILATION INTO BOTH PDF AND HTML.
+%THE EXTENSION file src/macros.sty CONTAINS ONLY COMMANDS NEEDED EXCLUSIVELY FOR COMPILATION INTO PDF
+%THE DIRECTORY src/hva/ CONTAINS ONLY COMMANDS NEEDED EXCLUSIVELY FOR COMPILATION INTO HTML WITH HEVEA, WITH THREE EXTENSION FILES, imakeidx.hva, macros.hva AND picins.hva.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2024/04:
+% - \documentclass[] : change {book} to {scrbook} from KOMA-script -> rewritting the manual.
+% - change fancyhdr to scrlayer-fancyhdr (compatibility with scrbook) to scrlayer-scrpage (contained in koma-script) -> modify macros.sty too.
+% - rewriting title page for \maketitle (use with pandoc [produce html file], \begin(title)...\end(title) doesn't work with pandoc, "microtype" package too)
+% 2024/10
+% - renaming chapter files with an order number
+% - clean documentclass / packages / add comments
+% 2024/10
+% - comment \ifIllustration to always have pictures in manuel
+% - texlive-extra-utils -> make4ht
+% 2024/11
+% - simplification of \usepackage{graphicx} when pdf
+
+%\ifx\pdfoutput\undefined		% if no pdfLaTeX outputting
+% test KOMA-script with "scrbook" instead of "book"
+%\documentclass[%
+%	paper=a4,			% default=a4 and therefore not needed
+%	12pt,				% default=11pt
+%	headsepline,		% line under the header
+%	footsepline,		% line above the footer
+%	twoside=semi		% same left/right margins, default=twoside
+%]{scrbook} 			% 
+%}{
+%\else							% else pdfLaTeX outputting
+\documentclass[%
+pdflatex,
+a4paper,			% default=a4 and therefore not needed
+12pt,				% default=11pt
+english,			% use in babel, translator and varioref packages options %TODO: change with ngerman/english option in de/en manuals
+toc=listof,			% add a "lof" (list of figures) line at the begining of the toc (table of contents)
+twoside=semi,		% same recto/verso margins similar to simple verso margins, default=twoside
+headsepline,		% draw rule below header
+footsepline,		% draw rule above footer
+plainfootsepline 	% draw footsepline on plain pages (here for heading pages, may be due to twoside=semi in scrbook options
+]{scrbook} 				% KOMA-Script class "book"		
+%}
+%\fi
+
+%\usepackage{ifpdf}					% detect pdfTeX, replaced by \Ifpdfoutput (KOMA-script)
+\usepackage[T1]{fontenc}			% the font encoding
+%\usepackage[utf8]{inputenc}			% no longer need to specify, included in LaTex since April 2018
+\usepackage{lmodern}				% Latin Modern police
+\usepackage{babel}					% use the language define in \documentclass
+%\def\frenchcontentsname{Sommaire}	% rename "Table des matières" (at end of document) from [french]{babel} to "Sommaire" (at start of document)
+%\frenchsetup{ItemLabeli=\textbullet}	% change 1st level list marker of french babel
+%\frenchsetup{ItemLabelii=-}			% change 2nd level list marker of french babel
+\usepackage{translator}		% for translating the Fixed Names
+\usepackage{textcomp}				% for special characters like \textcurrency
+%\usepackage{txfonts}
+%\usepackage{ae}
+%\usepackage{cmbright}
+%\usepackage{times}					% changed from txfonts
+\usepackage{newtxtext}				% install texlive-fonts-extra, replacing times which replaces txfonts
+%\usepackage{lwarp}					% produce html file with lwarp (install texlive-extra-utils)
+
+\usepackage{microtype}				% Font expansion (use for title) with "\textls[x]" - doesn't work with pandoc / espace entre caractères (utilisé pour le titre)
+% Web addresses
+%\usepackage{url}					% loaded by hyperref
+
+
+% --------------------------------------------
+% Load graphicx package with pdf if needed
+% --------------------------------------------
+%\ifpdf
+%%\Ifpdfoutput{%
+	%%\usepackage[pdftex]{graphicx}		% enhanced support for importing graphics (x=enhanced) and then using the \includegraphics command to insert the file
+	%%}{%			
+	% else								% Commented out to avoid errors in html, and put in the macros.sty file for pdf
+	\usepackage{graphicx}				% enhanced support for importing graphics (x=enhanced) and then using the \includegraphics command to insert the file
+	\newcommand{\refimage}[1]{ (fig. \vref{#1})}	% for the hypertext link display on images
+	\newcommand{\vspacepdf}[1]{\vspace{#1}}			% for spaces after images bordered with text
+	%%}
+%% Graphics Extensions
+%\ifpdf
+%%\Ifpdfoutput{%
+	%%\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+	%%}{%
+	%\else
+	%%\DeclareGraphicsExtensions{.eps}
+	%%}
+%\fi
+
+
+% For illustrations
+%\usepackage{picins}				% for text around image TODO change to wrapfig2 in the manuel
+\usepackage{wrapfig2}				% TODO change in chapters, for text around image (replace picins)
+\usepackage{caption}				% for good references in table of figures
+
+
+%\usepackage{scrlayer-fancyhdr}		% facilities for constructing headers and footers, replace fancyhdr
+% change to scrlayer-scrpage here and in macros.sty
+
+
+%\pagestyle{fancyplain}
+%\usepackage{tabularx}
+%\usepackage{hhline}				% produce single or double line
+%\usepackage{layout}				% TODO: Only if DE mode
+\usepackage{varioref}		% defines the commands \vref, \vpageref, \vrefrange, and \vpagerefrange in french
+%\usepackage{lastpage}
+%\usepackage{longtable}
+\usepackage{color}					% for a colored title page
+%\usepackage{vmargin}				% for changing the title page margins
+\usepackage{thumbpdf}				% create thumbnails (vignettes) in pdf
+
+
+%\usepackage{emptypage}		% change by using \cleardoubleemptypage (in koma-scripts)
+% Latex loads macros-3.0.sty for pdf output and Hevea loads /hva/macros.hva for html output
+%\usepackage{macros-3.0}
+
+%% Page layout %%
+\usepackage[%
+%	showframe,					% to see frame of geometry package
+top=1in,					% marge haute
+headheight=7mm,				% hauteur en-tête
+headsep=6mm,				% distance entre entête et corps de texte
+textheight=252mm,			% textheight=paperheight-topmargin-headheight-headsep-footskip
+footskip=11mm,				% distance entre bas de pied de page et bas du corps de texte
+hmargin=25mm				% horizontal margins (left and right), textwidth = paperwidt - margins
+]{geometry}
+\usepackage{scrlayer-scrpage}	% define and manage page styles by controlling page headers and footers			
+\clearpairofpagestyles			% remove the default marks of the headings and the plain pages
+\lehead{\leftmark}				% leftmark at left of even page
+\lohead{\leftmark}				% leftmark at left of odd page
+\rehead{\rightmark}				% rightmark at right of even page
+\rohead{\rightmark}				% rightmark at right of odd page
+\cfoot*{\pagemark}				% pagemark in the center of the footer
+\ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
+\ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
+
+%% Footnotes %%
+\usepackage[%
+perpage						% resets footnote numbering for each page of the document.
+]{footmisc}						% provides several different customizations of footnotes
+
+\renewcommand\footnoterule{%	% redefine rule above footnote
+	\kern 5pt 					% above footnoterule, space between text and footnoterule  
+	\hrule width 2.5in			% define rule's width to 2.5 in
+	\kern 6pt					% space between footrule and footnotes below
+}
+
+%% Index %%
+\usepackage[%
+xindy						% sort index
+]{imakeidx}						% for creating an index
+\usepackage[%
+columns=2,					% default value is 2
+rule=1pt,					% thickness of a vertical rule between index columns. Default value is 0 pt, i. e. no rule.
+totoc						% add index in toc
+]{idxlayout}					% key-value interface to configure index layout parameters
+
+\usepackage[unicode]{hyperref}		% replace \usepackage{url}, used to add an URL and rewrite the "grisbi-manuel-urldef.tex" file (must be the last package)
+\hypersetup{%							% to create metadata to insert in pdf
+	pdftitle={Manuel de Grisbi},		% sets the document information Title field
+	pdfauthor={The Grisbi Team},		% sets the document information Author field
+	pdfcreator={Alain PORTAL}			% sets the document information Creator field
+	pdfpagemode=UseOutlines,			% set default mode of PDF display, UseOutlines=show bookmarks
+	pdfstartview=XYZ null null 1.0,		% set the startup page view, XYZ=left top zoom
+	pdffitwindow=true,					% resize document window to fit document size, default=false
+	pdfcenterwindow=true,				% position the document window in the center of the screen, default=false
+	bookmarksnumbered=true,				% put section numbers in bookmarks, default=false
+	bookmarksopen=true,					% open up bookmark tree, default=false
+	colorlinks=true,					% color links, default=false
+	citebordercolor=1 1 1,				% the color of the box around citations, rgb color
+	linkbordercolor=1 1 1,				% the color of the box around normal links, rgb color
+	linkcolor=blue,						% color for normal internal links, color=blue
+	menubordercolor=1 1 1,				% color of border around menu links, rgb color
+	urlbordercolor=1 1 1,				% color of border around URL links, rgb color
+	urlcolor=blue,						% color of URL links, color=blue
+	plainpages=true,					% do page number anchors as plain Arabic, default=false
+	%	pdfpagelabels=true					% set PDF page labels - Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
+}
+\include{31-grisbi-manuel-urldef-en}		% include the "grisbi-manuel-urldef" file during the compilation
+
+%% Glossary %%
+\usepackage[%
+xindy,              % sort glossaries
+toc                 % add the glossary reference to the toc (table of contents)
+]{glossaries}       % create a glossary, must be loaded AFTER hyperref
+\usepackage[%
+automake
+]{glossaries-extra} 	% check why no glossaries and give solutions
+
+%% Index %%
+\makeindex  %[intoc]	% creates the index with its reference in the toc
+
+\definecolor{jaunegrisbi}{rgb}{1,1,.6}			% creating your own colors {yourcolorname}{model=rgb[0to1],RGB[0to255],cmyk or grey} rgb= 3 comma-separated values between 0 and 1 define the components of the color.
+\definecolor{bleugrisbi}{rgb}{.1,.1,.4}
+\definecolor{vertgrisbi}{rgb}{0,.6,.4}
+\definecolor{ocregrisbi}{rgb}{1,.7,0}
+
+
+% Virtualization of fonts
+\newcommand{\lang}[1]{\emph{#1}}				% new command -> \lang = emph (e.g. italic)
+\newcommand{\familyname}[1]{\textsc{#1}}		% new command -> \familynamelang = small caps
+\newcommand{\menu}[1]{\textsl{#1}}				% new command -> \menu = slanted is oblique version of the roman font (e.g. italic)
+\newcommand{\strong}[1]{\textsc{\textbf{#1}}}	% new command -> \strong = small caps + bold
+\newcommand{\key}[1]{\texttt{<#1>}}				% new command -> \key = teletype font
+\newcommand{\cmd}[1]{\texttt{#1}}				% new command -> \cmd = teletype font
+\newcommand{\file}[1]{\textbf{#1}}				% new command -> \file = bold
+\newcommand{\xml}[1]{\texttt{#1}}				% new command -> \xml = teletype font
+\newcommand{\indexword}[1]{\textsf{#1}}			% new command -> \indexword = sans serif, for easy search of each indexed word in the page
+
+%\renewcommand*{\footnote}{\centering}
+
+\newcommand{\actuality}{}	% to see places to watch when updating the doc, using  the command grep actuality *.tex
+
+
+%% Commented out because it doesn't work in html, and put in the macros.sty file for pdf
+%% NE FONCTIONNE PAS POUR HTML
+% redefine command listoffigures
+%\ifpdf
+%\makeatletter
+%\renewcommand\listoffigures{%
+%	% increases space between number and figure name for number >9 (see book.cls file)
+%	\renewcommand\l@figure{\@dottedtocline{1}{1.5em}{2.8em}}%
+%    \if@twocolumn
+%     \@restonecoltrue\onecolumn
+%    \else
+%      \@restonecolfalse
+%    \fi
+%    \chapter*{\listfigurename}
+%      \@mkboth{\MakeUppercase\listfigurename}{}
+%    \@starttoc{lof}
+%    \if@restonecol\twocolumn\fi
+%    }
+%\makeatother
+%\else
+%\fi
+
+% For pdf only; for html, redefined  by an empty command in hva/macros.hva
+% Glossary
+\makeglossaries									% creates the glossary, entries of the glossary are in "src/{version}/{lang}/30-grisbi-manuel-glossary-en.tex"
+
+%\input{grisbi-manuel-glossary}					% include "grisbi-manuel-glossary.tex" file in the document
+\loadglsentries{30-grisbi-manuel-glossary-en}		% load and include glossary's entries in and from "30-grisbi-manuel-glossary-en"
+
+%\input{grisbi-manuel-boolean-illustration}		% include "grisbi-manuel-boolean-illustration.tex" file in the document
+
+%% -------------------
+%% Begin of title page
+%% -------------------
+
+%\ifIllustration
+\title{%
+	\fontsize{40}{20}\selectfont					% increase size of title=40pt / line spacing=20pt
+	\scshape										% small caps
+	%	M\:a\:n\:u\:e\:l\; d\:e\; G\:r\:i\:s\:b\:i\\	% \: = medium space, \; = large space, \\ = line break
+	\textls[250]{%									% increase space between characters, default=100 (active "microtype" package) [[ !!! doesn't work with pandoc !!! ]]
+	Grisbi\; Manual}
+	\\												% new line
+	\vspace{1.5cm}									% vertical space between title and logo
+	\includegraphics[width=6cm]{image/grisbi-logo.png}		% insert {file_name} graphic with width=6cm
+	\vspace{1.5cm}									% % vertical space between logo and subtitle
+}
+\subtitle{%											% subtitle font size, default=large
+	\sffamily\bfseries								% sans serif, bold
+	\scshape										% small caps
+	\fontsize{19}{20}\selectfont					% increase size of subtitle=20pt / line spacing=22pt
+	Personal accounting software
+	\vspace{1cm}\\									% vertical space
+	\rule{4.5cm}{0.4pt}								% horizontal line, first argument width, second thickness
+	\vspace{0.6cm}\\								% vertical space
+}
+\addtokomafont{author}{\large}						% modify author font size, default=Large
+\author{%
+	Copyright © 2001-2003 Daniel \familyname{Cartron}\\
+	Copyright © 2004 Loïc \familyname{Breilloux}\\
+	Copyright © 2004 Benjamin \familyname{Drieu}\\
+	Copyright © 2011-2014 Jean-Luc \familyname{Duflot}\\
+	Copyright © 2018 Bob \familyname{Anderson} (en)\\
+	Copyright © 2018-2020 Martin \familyname{Stromberger} (de)\\
+	Copyright © 2024 Dominique \familyname{Brochard}\\
+	\rule{2.5cm}{0.4pt}							% insert horizontal line, first argument width, second thickness
+}
+\addtokomafont{date}{\large}					% modify date font size, default=Large
+\date{%
+	Version 3.0 of 2024 (provisional)
+}
+%\else
+%\title{Manuel de Grisbi}
+%\fi
+
+%% -----------------
+%% End of title page
+%% -----------------
+
+\begin{document}
+
+%\pagestyle{scrheadings}			% titles of chapters and sections are repeated in the header, number of page in the footer
+
+
+\maketitle							% create title page
+%\cleardoubleoddemptypage			% force a break to an even (left, verso) page -> produce an additional odd page with empty style
+% For pdf only; for html, redefined  by an empty command in hva/macros.hva
+\frontmatter						% renders numbered pages in toc/tof in lower-case Roman letters
+
+% not used
+%\include{grisbi-manuel-title}
+
+%\maketitle				% title v3.0.1 -> %\maketitle
+%\myclearemptydoublepage
+
+%\sommaire
+\tableofcontents					% table of contents (toc)	
+
+%\myclearemptydoublepage
+
+
+% List of figures for pdf only ; for html, the addcontentsline is redefined by an empty command in hva/macros.hva
+% Adds reference to lof in the toc
+%\ifIllustration
+%	\listoffigures
+%		\ifpdf
+%		\addcontentsline{toc}{chapter}{Table des figures}
+%%		\myclearemptydoublepage
+%		\cleardoubleemptypage % replace \myclearemptydoublepage
+%		\else
+%		\fi
+%	\else
+%\fi
+
+\listoffigures				% list of figures (lof)
+
+%% mis dans le \mainmatter pour lien correct des entrées d'index dans le préambule en html
+%% voir aussi le chapitre Préambule
+%\include{grisbi-manuel-preamble}
+%\myclearemptydoublepage
+% For pdf only; for html, redefined  by an empty command in hva/macros.hva
+\mainmatter							% pages are numbered in Arabic numerals and the page counter is reset to 1.
+%\KOMAScriptVersion						% print the used version number of Koma-Script
+%\include{00-grisbi-manuel-preamble-en} 	 % TODO update screenshots and text "preamble", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{01-grisbi-manuel-intro-en}			% TODO update screenshots and text "intro", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{02-grisbi-manuel-entrance-en}		% TODO update screenshots and text "entrance", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{03-grisbi-manuel-start-en}			% TODO update screenshots and text "start", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{05-grisbi-manuel-home-en}			% TODO update screenshots and text "home", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{06-grisbi-manuel-QIF-en}			% TODO update screenshots and text "QIF", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{07-grisbi-manuel-datamanagement-en}	% TODO update screenshots and text "datamanagement", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{08-grisbi-manuel-accounts-en}		% TODO update screenshots and text "accounts", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{09-grisbi-manuel-transactions-en}	% TODO update screenshots and text "transactions", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{10-grisbi-manuel-reconciliation-en}	% TODO update screenshots and text "reconciliation", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{11-grisbi-manuel-planned-en}		% TODO update screenshots and text "planned", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{12-grisbi-manuel-search-en}			% TODO update screenshots and text "search", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{13-grisbi-manuel-third-en}			% TODO update screenshots and text "third", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{14-grisbi-manuel-categories-en}		% TODO update screenshots and text "categories", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{15-grisbi-manuel-budgetlines-en}	% TODO update screenshots and text "budgetlines", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{16-grisbi-manuel-financialyear-en}	% TODO update screenshots and text "financialyear", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{17-grisbi-manuel-credit-en}			% TODO update screenshots and text "credit", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{18-grisbi-manuel-budget-en}			% TODO update screenshots and text "budget", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{19-grisbi-manuel-bankcardmanagement-en}	% TODO update screenshots and text "bankcardmanagement", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{20-grisbi-manuel-association}		% fr version only
+%\cleardoubleemptypage
+
+%\include{21-grisbi-manuel-reports-en}			% TODO update screenshots and text "reports", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{22-grisbi-manuel-reports-creation-en}	% TODO update screenshots and text "reports-creation", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{23-grisbi-manuel-setup-en}				% TODO update screenshots and text "setup", uncomment when finished
+%\cleardoubleemptypage
+
+%\include{24-grisbi-manuel-maintenance-en}		% TODO update screenshots and text "maintenance", uncomment when finished
+%\cleardoubleemptypage
+
+
+
+%% Files editors not used anymore, so useless 
+%%\include{grisbi-manuel-todo}
+%%\cleardoubleemptypage
+%
+%% Files editors not used anymore, so useless 
+%%\include{grisbi-manuel-problems}
+%%\cleardoubleemptypage
+%
+%% Useless so don't include it
+%%\include{grisbi-manuel-XML}
+%
+%% Useless so don't include it
+%%\include{grisbi-manuel-FDL}
+
+
+% Prints the index
+\printindex
+
+
+% Displays a note at the beginning of the glossary
+\renewcommand{\glossarypreamble}{\textbf{Note}: most of the definitions in this glossary are taken from articles of the same name in the free, collaborative encyclopaedia \lang{Wikipédia}
+\footnote{\urlWikipedia{}}. Although these texts have been modified and adapted to the specific context of this glossary, the author would like to thank Wikipedia for providing these references.\newline}
+
+
+% Prints the glossary
+% For pdf only; redefined in hva/macros.hva by an empty command in html
+\printglossaries
+
+
+\end{document}
+
+
+
