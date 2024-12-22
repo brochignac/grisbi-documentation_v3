@@ -18,8 +18,6 @@ tgz_html_img
 *.xdy
 *.toc
 *.pdf
-src/macros-3.0.idx
-src/macros-3.0.log
 *.synctex(busy)
 *.gls
 *.glg
