@@ -30,19 +30,13 @@ jobs:
 
       - name: "build 3.0 fr"
         shell: bash
-        run: cd src/3.0/fr ; make
+        run: cd src/3.0/fr ; make pdf_img_indexglossary && make pdf_img
 
       - name: artifacts
         uses: actions/upload-artifact@v4
         with:
           name: pdf-fr-3.0
-          path: src/3.0/fr/pdf_img/grisbi-manuel-img-3.0.pdf
-
-      - name: artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: html-fr-3.0
-          path: src/3.0/fr/html_img
+          path: src/3.0/fr/pdf_img/00-grisbi-manuel-img-3.0.pdf
 
       - name: "build 2.0 fr"
         shell: bash
