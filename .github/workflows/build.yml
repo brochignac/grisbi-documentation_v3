@@ -21,7 +21,7 @@ jobs:
       - name: setup prerequisites
         shell: bash
         run: |
-          sudo apt install texlive-latex-base texlive-latex-recommended  	texlive-latex-extra hevea texlive-lang-french xindy
+          sudo apt install texlive-latex-base texlive-latex-recommended  	texlive-latex-extra hevea texlive-lang-french xindy texlive-fonts-extra
           wget http://mirrors.ctan.org/macros/latex209/contrib/picins.zip
           unzip picins.zip
           mkdir -p ~/texmf/tex/latex
