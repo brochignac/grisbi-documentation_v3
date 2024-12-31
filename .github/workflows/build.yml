@@ -28,6 +28,22 @@ jobs:
           mv picins ~/texmf/tex/latex
           texhash ~/texmf
 
+      - name: "build 3.0 fr"
+        shell: bash
+        run: cd src/3.0/fr ; make
+
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-fr-3.0
+          path: src/3.0/fr/pdf_img/grisbi-manuel-img-3.0.pdf
+
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-fr-3.0
+          path: src/3.0/fr/html_img
+
       - name: "build 2.0 fr"
         shell: bash
         run: cd src/2.0/fr ; make
