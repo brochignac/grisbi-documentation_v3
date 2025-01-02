@@ -32,8 +32,8 @@ Grisbi emphasises simplicity and efficiency, without excluding the sophisticatio
 
 
 \subsection{What Grisbi knows how to do}
-
-\begin{itemize}
+%TODO la suite
+\begin{itemize}\itemsep=-3pt
 	\item Software developed by French programmers, so in full compliance with the logic of French accounting
 	\item Simple and intuitive interface, with full-screen display control
 	\item Multi-account and multi-user management
@@ -71,12 +71,9 @@ Grisbi emphasises simplicity and efficiency, without excluding the sophisticatio
 
 \subsection{What Grisbi does not know yet}
 
-\begin{itemize}
-
-\item Automatic breakdown of loan repayments
-
-\item Internet reconciliation
-
+\begin{itemize}\itemsep=-3pt
+	\item Automatic breakdown of loan repayments
+	\item Internet reconciliation
 \end{itemize}
 
 \section{Software Evolution}
@@ -100,98 +97,54 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 
 \subsection{What's new in version 0.6, since version 0.4.5}
 
-\begin{itemize}
-
-\item Revamped GUI
-
-\item GTK + 2 library support for a nicer environment and simplified porting on Windows
-
-\item No more dependencies on Gnome
-
-\item Native Windows version (thanks to François Terrot)
-
-\item Native \gls{UTF-8} support 
-
-\item Printing reports by \gls{LaTeX}
-
-\item Export reports in \gls{HTML}
-
-\item Improved user interface:
-
-\begin{itemize}
-
-\item message enhancement, users can select "ignore",
-
-\item improved management of segmentation errors,
-
-\item improvement of the preferences window,
-
-\item pop-up menu on the list of operations,
-
-\item ?? amélioration des items ??;
-
+\begin{itemize}\itemsep=-3pt
+	\item Revamped GUI
+	\item GTK + 2 library support for a nicer environment and simplified porting on Windows
+	\item No more dependencies on Gnome
+	\item Native Windows version (thanks to François Terrot)
+	\item Native \gls{UTF-8} support 
+	\item Printing reports by \gls{LaTeX}
+	\item Export reports in \gls{HTML}
+	\item Improved user interface:
+\begin{itemize}\itemsep=-3pt
+	\item message enhancement, users can select "ignore",
+	\item improved management of segmentation errors,
+	\item improvement of the preferences window,
+	\item pop-up menu on the list of operations,
+	\item ?? amélioration des items ??;
 \end{itemize}
-
-\item Completely clickable list of accounts with summaries
-
-\item Global configuration in \gls{XML} (thanks to Axel Rousseau)
-
-\item Rewrite of the file import:
-
-\begin{itemize}
-
-\item support for the \gls{QIF} ,\gls{OFX}, \gls{Gnucash} or \gls{CSV}  formats
-
-\item incremental import,
-
-\item automatic reconciliation;
-
+	\item Completely clickable list of accounts with summaries
+	\item Global configuration in \gls{XML} (thanks to Axel Rousseau)
+	\item Rewrite of the file import:
+\begin{itemize}\itemsep=-3pt
+	\item support for the \gls{QIF} ,\gls{OFX}, \gls{Gnucash} or \gls{CSV}  formats
+	\item incremental import,
+	\item automatic reconciliation;
 \end{itemize}
-
-\item Beginning of the Italian translation by Giorgio Mandolfo
-
-\item ?? Taux de change cachés sur une session pour éviter de les ressaisir ??
-
-\item Support for text attributes (bold, italic, large, small) for states
-
-\item New logo with mascot Grisbi on a Euro sign (thanks to André Pascual)
-
-\item Editable animated waiting logo
-
-\item Completely case-sensitive lists of characters
-
-\item Improved entry of bank details
-
-\item Keyboard support for Payee ??trees, categories and budget allocations??
-
-\item Clickable automatic term maturities
-
-\item ??Échéances ventilables??
-
-\item Transactions convertible into instalments
-
-\item Operations that can be moved to another account
-
+	\item Beginning of the Italian translation by Giorgio Mandolfo
+	\item ?? Taux de change cachés sur une session pour éviter de les ressaisir ??
+	\item Support for text attributes (bold, italic, large, small) for states
+	\item New logo with mascot Grisbi on a Euro sign (thanks to André Pascual)
+	\item Editable animated waiting logo
+	\item Completely case-sensitive lists of characters
+	\item Improved entry of bank details
+	\item Keyboard support for Payee ??trees, categories and budget allocations??
+	\item Clickable automatic term maturities
+	\item ??Échéances ventilables??
+	\item Transactions convertible into instalments
+	\item Operations that can be moved to another account
 \end{itemize}
 
 \subsection{What's new in version 0.8}
 
-\begin{itemize}
-
-\item Budget module in the basic version
-
-\item Credit simulator and amortization tables with the possibility to print and export the data in a spreadsheet
-
-\item Amortization table for liability accounts with the ability to print and export data in a spreadsheet
-
-\item Local Settings Management (Date Format, Decimal Separators and Thousands)
-
-\item Embedding custom icons in the accounts file
-
-\item Shading of different periods in the scheduler
-
-\item Cloning scheduled operations
-
+\begin{itemize}\itemsep=-3pt
+	\item Budget module in the basic version
+	\item Credit simulator and amortization tables with the possibility to print and export the data in a spreadsheet
+	\item Amortization table for liability accounts with the ability to print and export data in a spreadsheet
+	\item Local Settings Management (Date Format, Decimal Separators and Thousands)
+	\item Embedding custom icons in the accounts file
+	\item Shading of different periods in the scheduler
+	\item Cloning scheduled operations
 \end{itemize}
 
 % page break for solidarity title
@@ -200,34 +153,20 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 
 \subsection{What's new in version 1.0}
 
-\begin{itemize}
-
-\item Graphics on forecasts
-
-\item Credit card management (immediate or deferred debit)
-
-\item Business accounting with a Chart of Accounts
-
-\item Grisbi icon in the \indexword{ \gls{SVG}} \index{svg} formats 
-
-\item Even more context menus on the right mouse button
-
-\item Importing category files into budget allocations
-
-\item Changing the account display order by drag and drop in the account list
-
-\item Calculation of the balance according to the date of the transaction or its valuation date
-
-\item ??Clear Credit and Flow fields option for auto-complete??
-
-\item View unused payees
-
-\item Full-screen display command by function key \key{F11}
-
-\item Keyboard shortcut \key{Ctrl} \key{T} for the call of a new operation
-
-\item Direct access to the user manual through the menu \menu{Help} or the keyboard shortcut \key{Ctrl} \key{H}
-
+\begin{itemize}\itemsep=-3pt
+	\item Graphics on forecasts
+	\item Credit card management (immediate or deferred debit)
+	\item Business accounting with a Chart of Accounts
+	\item Grisbi icon in the \indexword{ \gls{SVG}} \index{svg} formats 
+	\item Even more context menus on the right mouse button
+	\item Importing category files into budget allocations
+	\item Changing the account display order by drag and drop in the account list
+	\item Calculation of the balance according to the date of the transaction or its valuation date
+	\item ??Clear Credit and Flow fields option for auto-complete??
+	\item View unused payees
+	\item Full-screen display command by function key \key{F11}
+	\item Keyboard shortcut \key{Ctrl} \key{T} for the call of a new operation
+	\item Direct access to the user manual through the menu \menu{Help} or the keyboard shortcut \key{Ctrl} \key{H}
 \end{itemize}
 
 \subsection{And for the future?}
@@ -327,16 +266,11 @@ The tools needed to read the various manual formats are presented in the  \vref{
 
 Although Grisbi is designed to be as intuitive as possible and most functions are immediately understandable, a reference manual is needed. This manual has been designed according to the following principles:
 
-\begin{itemize}
-
-\item the most comprehensive possible, covering all the program features;
-
-\item to facilitate navigation through the manual its chapters are organized as closely as possible according to a uniform format: presentation of the chapter - description of the display, description of the functions, 
-
-\item Editing recurring paragraphs from one chapter to another in the most identical way possible, to facilitate quick reading;
-
-\item search for information facilitated by numerous \gls{hyperlinks}, an index and a glossary.
-
+\begin{itemize}\itemsep=-3pt
+	\item the most comprehensive possible, covering all the program features;
+	\item to facilitate navigation through the manual its chapters are organized as closely as possible according to a uniform format: presentation of the chapter - description of the display, description of the functions, 
+	\item Editing recurring paragraphs from one chapter to another in the most identical way possible, to facilitate quick reading;
+	\item search for information facilitated by numerous \gls{hyperlinks}, an index and a glossary.
 \end{itemize}
 
 % space for theme change: 5 mm
@@ -345,86 +279,49 @@ Although Grisbi is designed to be as intuitive as possible and most functions ar
 
 Here is a brief description of the different chapters:
 
-\begin{itemize}
-
-\item \menu{Preamble} Introduces the English translation and explains the origin of the name given to this software;
-
-\item \menu{Introduction} Introduces the software, the manual, their authors and contacts;
-
-\item \menu{First start Grisbi} is the \emph{essential} chapter to help you to start using the software;
-
-\item \menu{Home} describes the main elements of the GUI and their manipulation with the mouse and the keyboard (shortcuts);
-
-\item \menu{Export and Import Accounts} describes how to exchange data with other software;
-
-\item \menu{Data Management} presents the options of the account files, backups and archives and their management;
-
-\item \menu{Account Management} describes the properties of accounts, their management and the different types of accounts with their use;
-
-\item \menu{Account Operations} describes the operations on accounts, the information and input fields used and their management
-
-\item \menu{Bank Reconciliation} details the procedure for reconciling an account and managing reconciliations;
-
-\item \menu{Schedule} describes the planning of future entries and their manipulation;
-
-\item \menu{Searches} takes stock of data search possibilities;
-
-\item \menu{Payees}, \menu{Categories}, \menu{budgetary allocations} and \menu{Exercises} describe the management of this data;
-
-\item \menu{Credit Simulation} describes methods and simulation management;
-
-\item \menu{Forecast Budgets} describes the tools and procedures for budget creation and depreciation tables, as well as their management;
-
-\item \menu{Credit card management and their prediction} describes the management of these cards, including deferred debit cards, and forecasting methods;
-
-\item \menu{Business Accounting} presents two introductions for business managers;
-
-\item \menu{Reports} and \menu{Report creation} describe the management and creation of reports;
-
-\item \menu{Configuration of Grisbi} details all the possibilities of setting the software;
-
-\item \menu{Maintenance Tools} gives some tips to use in case of errors or bugs.
-
+\begin{itemize}\itemsep=-3pt
+	\item \menu{Preamble} Introduces the English translation and explains the origin of the name given to this software;
+	\item \menu{Introduction} Introduces the software, the manual, their authors and contacts;
+	\item \menu{First start Grisbi} is the \emph{essential} chapter to help you to start using the software;
+	\item \menu{Home} describes the main elements of the GUI and their manipulation with the mouse and the keyboard (shortcuts);
+	\item \menu{Export and Import Accounts} describes how to exchange data with other software;
+	\item \menu{Data Management} presents the options of the account files, backups and archives and their management;
+	\item \menu{Account Management} describes the properties of accounts, their management and the different types of accounts with their use;
+	\item \menu{Account Operations} describes the operations on accounts, the information and input fields used and their management
+	\item \menu{Bank Reconciliation} details the procedure for reconciling an account and managing reconciliations;
+	\item \menu{Schedule} describes the planning of future entries and their manipulation;
+	\item \menu{Searches} takes stock of data search possibilities;
+	\item \menu{Payees}, \menu{Categories}, \menu{budgetary allocations} and \menu{Exercises} describe the management of this data;
+	\item \menu{Credit Simulation} describes methods and simulation management;
+	\item \menu{Forecast Budgets} describes the tools and procedures for budget creation and depreciation tables, as well as their management;
+	\item \menu{Credit card management and their prediction} describes the management of these cards, including deferred debit cards, and forecasting methods;
+	\item \menu{Business Accounting} presents two introductions for business managers;
+	\item \menu{Reports} and \menu{Report creation} describe the management and creation of reports;
+	\item \menu{Configuration of Grisbi} details all the possibilities of setting the software;
+	\item \menu{Maintenance Tools} gives some tips to use in case of errors or bugs.
 \end{itemize}
 
 \subsection{Typographical conventions of this manual \label{introduction-manual-conventions}}
 
 The following list defines and illustrates the typographic conventions used as visual aids for identifying particular elements of the text of the document:
 
-\begin{itemize}
-
-\item the interface components are window titles, icon and button names, menu names, and other options that appear on the monitor screen; they are presented as follows: \newline
-
+\begin{itemize}\itemsep=-3pt
+	\item the interface components are window titles, icon and button names, menu names, and other options that appear on the monitor screen; they are presented as follows: \newline
 \hspace {1.5cm} click \menu{Back};
-
-\item the keyboard key label represents what is written on the keyboard keys; it is presented as follows: \newline
-
+	\item the keyboard key label represents what is written on the keyboard keys; it is presented as follows: \newline
 \hspace {1.5cm} press the \key{Enter} key;
-
-\item key combinations are a series of keys to be pressed simultaneously (unless otherwise specified) to perform a single function; they are presented as follows: \newline
-
+	\item key combinations are a series of keys to be pressed simultaneously (unless otherwise specified) to perform a single function; they are presented as follows: \newline
 \hspace {1.5cm} press the key combination \key{Ctrl} \key{R};
-
-\item The commands that are part of an instruction and that must be entered are presented as follows:\newline
-
+	\item The commands that are part of an instruction and that must be entered are presented as follows:\newline
 \hspace {1.5cm} type \cmd{grisbi} to start the program;
-
-\item file and directory names are shown as: \newline
-
+	\item file and directory names are shown as: \newline
 \hspace {1.5cm} \file{graybi-n.n.n.rpm} and \file{/ usr / local / bin};
-
-\item the command lines consist of a command and can include one or more possible parameters of the command; they are presented as follows: \newline
-
+	\item the command lines consist of a command and can include one or more possible parameters of the command; they are presented as follows: \newline
 \hspace {1.5cm} \cmd{rpm -Uvh graybi-n.n.n.rpm};
-
-\item any sequence of alphanumeric characters in blue, in the document in PDF or HTML format, is a hypertext link, referring to either an image, another part of the document, an indexed word or to the glossary (for PDF only);
-
-\item The words or groups of words referenced in the index are highlighted in the chapters as follows:\newline
-
+	\item any sequence of alphanumeric characters in blue, in the document in PDF or HTML format, is a hypertext link, referring to either an image, another part of the document, an indexed word or to the glossary (for PDF only);
+	\item The words or groups of words referenced in the index are highlighted in the chapters as follows:\newline
 \hspace {1.5cm} \textsf{referenced term} for PDF format; \newline
-
 \hspace {1.5cm} in brown for HTML.
-
 \end{itemize}
 
 % space before Attention or Note: 5 mm
@@ -437,30 +334,18 @@ In addition, a \textbf{Note} underlines a particular point to take into account,
 
 To read this document, we recommend the use of free software, which respects all your privacy and the confidentiality of your data; the following software has the features of \gls{hyperlinks}:
 
-\begin{itemize}
-
-\item for PDF format:
-
-\begin{itemize}
-
-\item Linux: Evince, Epdfviewer, Firefox, Ghostscript, MuPDF, Okular,
-
-\item Mac: Okular, Vindaloo, Xpdf,
-
-\item Windows: Evince, Firefox, MuPDF, Okular, SumatraPdf;
-
+\begin{itemize}\itemsep=-3pt
+	\item for PDF format:
+\begin{itemize}\itemsep=-3pt
+	\item Linux: Evince, Epdfviewer, Firefox, Ghostscript, MuPDF, Okular,
+	\item Mac: Okular, Vindaloo, Xpdf,
+	\item Windows: Evince, Firefox, MuPDF, Okular, SumatraPdf;
 \end{itemize}
-
-\item for the HTML format:
-
-\begin{itemize}
-
-\item Linux: Arora, Dillo, Firefox, Kazehakase, Links2, Midori, SeaMonkey,
-
-\item Mac: Arora, Camino, Firefox, SeaMonkey, Shiira,
-
-\item Windows: Arora, Firefox, Iron, K-Meleon, Midori, SeaMonkey.
-
+	\item for the HTML format:
+\begin{itemize}\itemsep=-3pt
+	\item Linux: Arora, Dillo, Firefox, Kazehakase, Links2, Midori, SeaMonkey,
+	\item Mac: Arora, Camino, Firefox, SeaMonkey, Shiira,
+	\item Windows: Arora, Firefox, Iron, K-Meleon, Midori, SeaMonkey.
 \end{itemize}
 
 \end{itemize}
