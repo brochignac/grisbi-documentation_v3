@@ -28,15 +28,15 @@
 %}{
 %\else							% else pdfLaTeX outputting
 \documentclass[%
-pdflatex,
-a4paper,			% default=a4 and therefore not needed
-12pt,				% default=11pt
-english,			% use in babel, translator and varioref packages options %TODO: change with ngerman/english option in de/en manuals
-toc=listof,			% add a "lof" (list of figures) line at the begining of the toc (table of contents)
-twoside=semi,		% same recto/verso margins similar to simple verso margins, default=twoside
-headsepline,		% draw rule below header
-footsepline,		% draw rule above footer
-plainfootsepline 	% draw footsepline on plain pages (here for heading pages, may be due to twoside=semi in scrbook options
+	pdflatex,
+	a4paper,			% default=a4 and therefore not needed
+	12pt,				% default=11pt
+	english,			% use in babel, translator and varioref packages options %TODO: change with ngerman/english option in de/en manuals
+	toc=listof,			% add a "lof" (list of figures) line at the begining of the toc (table of contents)
+	twoside=semi,		% same recto/verso margins similar to simple verso margins, default=twoside
+	headsepline,		% draw rule below header
+	footsepline,		% draw rule above footer
+	plainfootsepline 	% draw footsepline on plain pages (here for heading pages, may be due to twoside=semi in scrbook options
 ]{scrbook} 				% KOMA-Script class "book"		
 %}
 %\fi
@@ -71,9 +71,9 @@ plainfootsepline 	% draw footsepline on plain pages (here for heading pages, may
 	%%\usepackage[pdftex]{graphicx}		% enhanced support for importing graphics (x=enhanced) and then using the \includegraphics command to insert the file
 	%%}{%			
 	% else								% Commented out to avoid errors in html, and put in the macros.sty file for pdf
-	\usepackage{graphicx}				% enhanced support for importing graphics (x=enhanced) and then using the \includegraphics command to insert the file
-	\newcommand{\refimage}[1]{ (fig. \vref{#1})}	% for the hypertext link display on images
-	\newcommand{\vspacepdf}[1]{\vspace{#1}}			% for spaces after images bordered with text
+\usepackage{graphicx}				% enhanced support for importing graphics (x=enhanced) and then using the \includegraphics command to insert the file
+\newcommand{\refimage}[1]{ (fig. \vref{#1})}	% for the hypertext link display on images
+\newcommand{\vspacepdf}[1]{\vspace{#1}}			% for spaces after images bordered with text
 	%%}
 %% Graphics Extensions
 %\ifpdf
@@ -115,12 +115,12 @@ plainfootsepline 	% draw footsepline on plain pages (here for heading pages, may
 %% Page layout %%
 \usepackage[%
 %	showframe,					% to see frame of geometry package
-top=1in,					% marge haute
-headheight=7mm,				% hauteur en-tête
-headsep=6mm,				% distance entre entête et corps de texte
-textheight=252mm,			% textheight=paperheight-topmargin-headheight-headsep-footskip
-footskip=11mm,				% distance entre bas de pied de page et bas du corps de texte
-hmargin=25mm				% horizontal margins (left and right), textwidth = paperwidt - margins
+	top=1in,					% marge haute
+	headheight=7mm,				% hauteur en-tête
+	headsep=6mm,				% distance entre entête et corps de texte
+	textheight=252mm,			% textheight=paperheight-topmargin-headheight-headsep-footskip
+	footskip=11mm,				% distance entre bas de pied de page et bas du corps de texte
+	hmargin=25mm				% horizontal margins (left and right), textwidth = paperwidt - margins
 ]{geometry}
 \usepackage{scrlayer-scrpage}	% define and manage page styles by controlling page headers and footers			
 \clearpairofpagestyles			% remove the default marks of the headings and the plain pages
@@ -134,7 +134,7 @@ hmargin=25mm				% horizontal margins (left and right), textwidth = paperwidt - m
 
 %% Footnotes %%
 \usepackage[%
-perpage						% resets footnote numbering for each page of the document.
+	perpage						% resets footnote numbering for each page of the document.
 ]{footmisc}						% provides several different customizations of footnotes
 
 \renewcommand\footnoterule{%	% redefine rule above footnote
@@ -145,12 +145,12 @@ perpage						% resets footnote numbering for each page of the document.
 
 %% Index %%
 \usepackage[%
-xindy						% sort index
+	xindy						% sort index
 ]{imakeidx}						% for creating an index
 \usepackage[%
-columns=2,					% default value is 2
-rule=1pt,					% thickness of a vertical rule between index columns. Default value is 0 pt, i. e. no rule.
-totoc						% add index in toc
+	columns=2,					% default value is 2
+	rule=1pt,					% thickness of a vertical rule between index columns. Default value is 0 pt, i. e. no rule.
+	totoc						% add index in toc
 ]{idxlayout}					% key-value interface to configure index layout parameters
 
 \usepackage[unicode]{hyperref}		% replace \usepackage{url}, used to add an URL and rewrite the "grisbi-manuel-urldef.tex" file (must be the last package)
@@ -178,11 +178,11 @@ totoc						% add index in toc
 
 %% Glossary %%
 \usepackage[%
-xindy,              % sort glossaries
-toc                 % add the glossary reference to the toc (table of contents)
+	xindy,              % sort glossaries
+	toc                 % add the glossary reference to the toc (table of contents)
 ]{glossaries}       % create a glossary, must be loaded AFTER hyperref
 \usepackage[%
-automake
+	automake
 ]{glossaries-extra} 	% check why no glossaries and give solutions
 
 %% Index %%
