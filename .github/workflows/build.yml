@@ -2,11 +2,7 @@ name: Generate documentation
 
 # Controls when the action will run. Triggers the workflow on push or
 # pull request events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push, pull_request]
 
 # A workflow run is made up of one or more jobs that can run
 # sequentially or in parallel
@@ -25,12 +21,31 @@ jobs:
       - name: setup prerequisites
         shell: bash
         run: |
-          sudo apt install texlive-latex-base texlive-latex-recommended  	texlive-latex-extra hevea texlive-lang-french xindy
+          sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra hevea texlive-lang-french xindy texlive-fonts-extra pandoc
           wget http://mirrors.ctan.org/macros/latex209/contrib/picins.zip
           unzip picins.zip
           mkdir -p ~/texmf/tex/latex
           mv picins ~/texmf/tex/latex
           texhash ~/texmf
+
+      - name: "build 3.0 fr"
+        shell: bash
+        run: |
+          cd src/3.0/fr
+          make pdf_img_indexglossary && make pdf_img
+          make html_pandoc
+
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-fr-3.0
+          path: src/3.0/fr/html/grisbi-manuel.html
+
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-fr-3.0
+          path: src/3.0/fr/pdf_img/00-grisbi-manuel-img-3.0.pdf
 
       - name: "build 2.0 fr"
         shell: bash
@@ -40,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pdf-fr-2.0
-          path: src/2.0/fr/pdf_img/grisbi-manuel-img-2.0.pdf
+          path: src/2.0/fr/pdf_img/00-grisbi-manuel-img-2.0.pdf
 
       - name: artifacts
         uses: actions/upload-artifact@v4
