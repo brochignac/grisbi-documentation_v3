@@ -157,6 +157,10 @@ html_txt:	txt html
 	mv $(FILE)-txt-$(VERSION).tar.gz tgz/$(FILE)-txt-$(VERSION).tar.gz
 	mv fr html_txt
 
+html_pandoc: img
+	rm -rf html
+	mkdir html
+	pandoc --embed-resources --standalone --toc --output=html/grisbi-manuel.html $(FILE).tex
 
 ps:	$(FILE).ps
 
