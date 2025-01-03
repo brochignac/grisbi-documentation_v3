@@ -26,14 +26,14 @@ Grisbi emphasises simplicity and efficiency, without excluding the sophisticatio
 
 \section{Features\label{introduction-features}}
 
-\strong{Translators Note:} In this translation, the French word "tiers" in general has been replaced by the English word "Payees", however the French version of Grisbi also caters for small business use. In the French version any third party i.e. a creditor or debtor could be implied by the word "tiers".\\
-\textcolor{red}{\strong{Warning:}} French business accounting rules may be incompatible with the rules of any English speaking territories, Grisbi should be used \strong{only} for personal financial record keeping outside of France.
+\strong{Translators Note:} In this translation, the French word ``Tiers'' in general has been replaced by the English word "Payees", however the French version of Grisbi also caters for small business use. In the French version any third party i.e. a creditor or debtor could be implied by the word ``Tiers''.\\
+\textbf{Note:} French business accounting rules may be incompatible with the rules of any English speaking territories, Grisbi should be used \strong{only} for personal financial record keeping outside of France.
 
 
 
 \subsection{What Grisbi knows how to do}
-%TODO la suite
-\begin{itemize}\itemsep=-3pt
+
+\begin{itemize}
 	\item Software developed by French programmers, so in full compliance with the logic of French accounting
 	\item Simple and intuitive interface, with full-screen display control
 	\item Multi-account and multi-user management
@@ -53,25 +53,24 @@ Grisbi emphasises simplicity and efficiency, without excluding the sophisticatio
 	\item Shading of different periods in the scheduler
 	\item Analysis and financial reports thanks to the powerful report templates module
 	\item Several pre-formatted report templates available and customizable
-	\item ??Tiers virtuels créés par les états??
-	\item Printing of  ??états??
+	\item Virtuals Payees created by reports
+	\item Printing of reports
 	\item Simulation of loans and depreciation tables with printing and data export
 	\item Estimated budget with charts on forecasts and historical data
-	\item Credit card management (immediate or deferred debit)
-	\item Business Accounting with Chart of Accounts
+	\item Business Accounting with Chart of Accounts (for French Accounting)
 	\item Account order by drag and drop in the account list
 	\item Import files in the following formats: \gls{QIF}, \gls{OFX}, \gls{Gnucash} or \gls{CSV}
 	\item Importing category files into budget allocations
 	\item Export files in the \gls{QIF} or \gls{CSV} formats
 	\item Choice of custom icons for your different accounts
-	\item Icons in the \indexword{ \gls{SVG}} \index{svg} formats
+	\item Icons in the \indexword{\gls{SVG}}\index{svg} formats
 	\item Even more context menus on the right mouse button (navigation pane)
 	\item Numerous keyboard shortcuts for good ergonomics
 \end{itemize}
 
 \subsection{What Grisbi does not know yet}
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}
 	\item Automatic breakdown of loan repayments
 	\item Internet reconciliation
 \end{itemize}
@@ -80,24 +79,74 @@ Grisbi emphasises simplicity and efficiency, without excluding the sophisticatio
 
 \subsection{Development and versions}
 
-Grisbi is software in active development, any feedback (idea, bug, documentation\dots) is welcome. You can send it to the relevant lists referenced in the  \vref{introduction-contacts} \menu{Contacts} section or on the  \lang{Grisbi}\footnote{\urlGrisbi{}} site.
+Grisbi is software in active development, any feedback (idea, bug, documentation\dots{}) is welcome. You can send it to the relevant lists referenced in the  \vref{introduction-contacts} \menu{Contacts} section or on the  \lang{Grisbi}\footnote{\urlGrisbi{}} site.
 
 
-You can, if you have the taste of adventure, download the versions in 
-development on the Grisbi content management system based on \gls{Git}.
+%You can, if you have the taste of adventure, download the versions in development on the Grisbi content management system based on \gls{Git}.
+If you're feeling adventurous, you can download and compile the latest version being under development on the content management system \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} using \gls{Git}.
+
 Indeed, the code of a new versions of Grisbi is typically frozen several weeks before its final release, in order to allow the development team time to check and eradicate the latest bugs. During this period, the format of the account file no longer changes, and you can, with a minimum of precautions (frequent backups, etc.), benefit from the latest improvements several weeks in advance, and also participate in debugging.
 
-Finally you also have access to all the evolutions of the code after version 0.3.2 (the version from which we set up a \gls{CVS} on the Grisbi site.
+%Finally you also have access to all the evolutions of the code after version 0.3.2 (the version from which we set up a \gls{CVS} on the Grisbi site.
+Finally, you can access all changes to the code since version 0.3.2 (the version from which the code is available on the \gls{GitHub}\footref{siteGitHubGrisbi} website).
 
 Note that as of version 0.6, even numbered minor number versions (e.g. 0. \underline8) are stable versions, whereas odd number minor number versions are unstable and should not be used under normal conditions; therefore only stable versions are mentioned here.
 
 % page break for solidarity title
 
-\newpage
+%\newpage
+\subsection{Version 0.1}
+
+\begin{itemize}
+	\item Management of several accounts%Gestion de plusieurs comptes
+	\item Creation, modification and deletion of accounts and transactions (the minimum required to operate  \dots{})%Création, modification et suppression de comptes et d'opérations (enfin le minimum pour fonctionner \dots{})
+	\item Possibility of pointing operations%Possibilité de pointer les opérations
+	\item And backup, without which none of this would be very useful!%Et la sauvegarde, sans laquelle tout cela n'aurait pas beaucoup d'intérêt !
+\end{itemize}
+
+\subsection{Version 0.2}
+
+\begin{itemize}
+	\item Automatic import of account files from previous versions%Importation automatique des fichiers de comptes de versions précédentes
+	\item Use of lists for third parties and categories \dots{} (more practical than typing everything)%Utilisation de listes pour les tiers, catégories \dots{} (plus pratique que de tout taper)
+	\item Automatic entry when typing and filling in of the end of the transaction like the previous version%Saisie automatique lors de la frappe et remplissage de la fin de l'opération comme la précédente semblable
+	\item Management of transfers between accounts%Gestion des virements entre comptes
+	\item Simplified or full display of transactions%Affichage des opération simplifié ou complet
+	\item Account balancing%Équilibrage de comptes
+\end{itemize}
+
+\subsection{From version 0.3.0 to version 0.3.3}%De la version 0.3.0 à la version 0.3.3}
+
+\begin{itemize}
+	\item Management of planned or cyclical operations (schedule)%Gestion des opérations prévues ou cycliques (échéancier) 
+	\item Support for currencies and the changeover to the euro (from 1 January 1999 to 1 January 2002)%Prise en charge des devises et du passage à l'euro (du 1er janvier 1999 au 1er janvier 2002)
+	\item Import/export added and file import improved \gls{QIF}%Ajout de l'import/export et amélioration de l'import de fichiers \gls{QIF}
+	\item Added breakdown%Ajout de la ventilation
+	\item Multi-user support%Support multi-utilisateur
+	\item For each bank and account, added details such as%Pour chaque banque et compte, ajout des détails comme:
+	\begin{itemize}
+		\item full numbers of the associated account, branch and bank code%numéros complets du compte associé, du guichet et du code banque
+		\item different holder for each account with home address%titulaire différent pour chaque compte avec adresse personnelle
+		\item contact details for a correspondent%coordonnées d'un correspondant
+	\end{itemize}
+	\item Categories tab added%Ajout de l'onglet catégories
+	\item Ability to change currency names and codes%Possibilité de changer le nom et le code des devises
+	\item Alphabetical sorting now (finally) takes accents into account%Le classement alphabétique prend (enfin) en compte les accents
+	\item Memorises the last working directory and the last files opened% Mémorise le dernier répertoire de travail et les derniers fichiers ouverts
+	\item A single number per transaction, whatever the account%Un numéro unique par opération quel que soit le compte
+	\item The \key{+} (\key{-}) keys in a date field increment (decrement) the date%Les touches \key{+} (\key{-}) dans un champ de date incrémentent (décrémentent) la date
+	\item New fields can be displayed in the transaction entry form%Affichage possible de nouveaux champs dans le formulaire de saisie des opérations 
+	\item Deadlines can be set for a defined period of time%Échéances paramétrables pour un laps de temps défini
+	\item Display of the current balance%Affichage du solde courant pointé
+	\item Possibility of entering the date in the form ddmm, ddmmyyy or ddmmyyyy%Possibilité d'entrer la date sous la forme jjmm, jjmmaa ou jjmmaaaa
+	\item Transaction totals in the Payees, Categories and Budget Allocations tabs%Totaux des opérations dans les onglets Tiers, Catégories et Imputations Budgétaires (IB)
+	\item The logo and display font can be customised%Personnalisation possible du logo et de la police d'affichage.
+	\item Automake and Autoconf tools to simplify compilation of software source files%Mise en place des outils Automake et Autoconf permettant de simplifier la compilation des fichiers sources du logiciel
+\end{itemize}
 
 \subsection{What's new in version 0.6, since version 0.4.5}
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item Revamped GUI
 	\item GTK + 2 library support for a nicer environment and simplified porting on Windows
 	\item No more dependencies on Gnome
@@ -106,7 +155,7 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 	\item Printing reports by \gls{LaTeX}
 	\item Export reports in \gls{HTML}
 	\item Improved user interface:
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item message enhancement, users can select "ignore",
 	\item improved management of segmentation errors,
 	\item improvement of the preferences window,
@@ -116,7 +165,7 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 	\item Completely clickable list of accounts with summaries
 	\item Global configuration in \gls{XML} (thanks to Axel Rousseau)
 	\item Rewrite of the file import:
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item support for the \gls{QIF} ,\gls{OFX}, \gls{Gnucash} or \gls{CSV}  formats
 	\item incremental import,
 	\item automatic reconciliation;
@@ -137,7 +186,7 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 
 \subsection{What's new in version 0.8}
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item Budget module in the basic version
 	\item Credit simulator and amortization tables with the possibility to print and export the data in a spreadsheet
 	\item Amortization table for liability accounts with the ability to print and export data in a spreadsheet
@@ -153,7 +202,7 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 
 \subsection{What's new in version 1.0}
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item Graphics on forecasts
 	\item Credit card management (immediate or deferred debit)
 	\item Business accounting with a Chart of Accounts
@@ -266,7 +315,7 @@ The tools needed to read the various manual formats are presented in the  \vref{
 
 Although Grisbi is designed to be as intuitive as possible and most functions are immediately understandable, a reference manual is needed. This manual has been designed according to the following principles:
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item the most comprehensive possible, covering all the program features;
 	\item to facilitate navigation through the manual its chapters are organized as closely as possible according to a uniform format: presentation of the chapter - description of the display, description of the functions, 
 	\item Editing recurring paragraphs from one chapter to another in the most identical way possible, to facilitate quick reading;
@@ -279,7 +328,7 @@ Although Grisbi is designed to be as intuitive as possible and most functions ar
 
 Here is a brief description of the different chapters:
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item \menu{Preamble} Introduces the English translation and explains the origin of the name given to this software;
 	\item \menu{Introduction} Introduces the software, the manual, their authors and contacts;
 	\item \menu{First start Grisbi} is the \emph{essential} chapter to help you to start using the software;
@@ -305,7 +354,7 @@ Here is a brief description of the different chapters:
 
 The following list defines and illustrates the typographic conventions used as visual aids for identifying particular elements of the text of the document:
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item the interface components are window titles, icon and button names, menu names, and other options that appear on the monitor screen; they are presented as follows: \newline
 \hspace {1.5cm} click \menu{Back};
 	\item the keyboard key label represents what is written on the keyboard keys; it is presented as follows: \newline
@@ -334,15 +383,15 @@ In addition, a \textbf{Note} underlines a particular point to take into account,
 
 To read this document, we recommend the use of free software, which respects all your privacy and the confidentiality of your data; the following software has the features of \gls{hyperlinks}:
 
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item for PDF format:
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item Linux: Evince, Epdfviewer, Firefox, Ghostscript, MuPDF, Okular,
 	\item Mac: Okular, Vindaloo, Xpdf,
 	\item Windows: Evince, Firefox, MuPDF, Okular, SumatraPdf;
 \end{itemize}
 	\item for the HTML format:
-\begin{itemize}\itemsep=-3pt
+\begin{itemize}%\itemsep=-3pt
 	\item Linux: Arora, Dillo, Firefox, Kazehakase, Links2, Midori, SeaMonkey,
 	\item Mac: Arora, Camino, Firefox, SeaMonkey, Shiira,
 	\item Windows: Arora, Firefox, Iron, K-Meleon, Midori, SeaMonkey.
