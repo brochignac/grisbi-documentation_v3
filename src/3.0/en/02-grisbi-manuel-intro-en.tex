@@ -204,15 +204,15 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 	\item Completely case-sensitive lists of characters
 	\item Improved entry of bank details
 	\item Keyboard support in the tree structure of payees, categories and budget charges
-	\item Clickable automatic term maturities
-	\item Breakdown of due dates
-	\item Transactions convertible into instalments
-	\item Operations that can be moved to another account
+	\item Automatic clickable term maturities
+	\item Breakdown of maturities
+	\item Transactions convertible into maturities
+	\item Transactions that can be moved to another account
 \end{itemize}
 
 \subsection{What's new in version 0.8}
 
-\begin{itemize}%\itemsep=-3pt
+\begin{itemize}
 	\item Budget module in the basic version
 	\item Credit simulator and amortization tables with the possibility to print and export the data in a spreadsheet
 	\item Amortization table for liability accounts with the ability to print and export data in a spreadsheet
@@ -232,51 +232,77 @@ Note that as of version 0.6, even numbered minor number versions (e.g. 0. \under
 	\item Graphics on forecasts
 	\item Credit card management (immediate or deferred debit)
 	\item Business accounting with a Chart of Accounts
-	\item Grisbi icon in the \indexword{ \gls{SVG}} \index{svg} formats 
+	\item Grisbi icon in the \indexword{ \gls{SVG}}\index{svg} formats 
 	\item Even more context menus on the right mouse button
 	\item Importing category files into budget allocations
 	\item Changing the account display order by drag and drop in the account list
 	\item Calculation of the balance according to the date of the transaction or its valuation date
-	\item ??Clear Credit and Flow fields option for auto-complete??
+	\item Option to delete credit and debit fields for auto-completion
 	\item View unused payees
 	\item Full-screen display command by function key \key{F11}
 	\item Keyboard shortcut \key{Ctrl} \key{T} for the call of a new operation
 	\item Direct access to the user manual through the menu \menu{Help} or the keyboard shortcut \key{Ctrl} \key{H}
 \end{itemize}
 
+\subsection{What's new in version 2.0}
+
+\begin{itemize}
+	\item Ported to \gls{GTK}+ 3 (since version 1.2.0)%Portage sous \gls{GTK}+ 3 (depuis la version 1.2.0)
+	\item Addition of a search module in the list of accessible operations, in the operations context menu (right-click on an operation)%Ajout d'un module de recherche dans la liste des opérations accessibles, dans le menu contextuel des opérations (clic droit sur une opération)
+	\item Automatic detection/integration of dark schematics%Détection automatique/intégration de schéma de couleur foncée
+	\item New colour settings%Nouveaux réglages pour les couleurs
+	\item General font size configuration%Configuration générale de la taille de police
+	\item Improved display on low-resolution devices%Affichage amélioré sur les dispositifs à faible résolution
+	\item Revised credit module%Révision du module de crédit
+	\item Import rules for \gls{CVS} files%Règles d'importation pour les fichiers \gls{CSV}
+	\item Search functionality%Fonctionnalité de recherche
+	\item Setting for deleting old backups%Réglage pour la suppression d'anciennes sauvegardes
+	\item Bug fixes%Résolution de bogues
+\end{itemize}
+
+\subsection{What's new in version 3.0}
+
+\begin{itemize}
+	\item Modification of the beneficiary search%Modification de la recherche du bénéficiaire
+	\item Addition of a new type of consumer loan%Ajout d'un nouveau type de prêt à la consommation
+	\item All transactions added to archives when account is closed%Ajout de toutes les transactions dans les archives lorsque le compte est clôturé
+	\item Code clean-up%Nettoyage du code
+	\item Preparing the transition to \gls{GTK} 4%Préparation de la transition vers \gls{GTK} 4
+	\item Bug fixes%Résolution de bogues
+\end{itemize}
+
 \subsection{And for the future?}
 
-Future releases (unstable 1.1 and stable 1.2) will still use the \gls{GTK} version~2 library.
-
-Future versions (unstable 1.3 and stable 1.4) will benefit from the new GTK version~3 library.
+Full port under \gls{GTK} 4
 
 \section{Contacts\label{introduction-contacts}}
-
-\strong{Translators Note:} Many of the following links are now out of date or invalid.  These links will be fixed once the French version of the manual has been updated.
 
 In addition to emailing the authors, you have several mailing lists you can contact us or obtain information through.
 
 To keep abreast of developments in Grisbi, you can register on the \lang{Information list}\footnote{\urlListInfoEmail{}} provided for this purpose.  You will then receive an email at the release of each new version.
 
-If you want to participate in the development of Grisbi, there is a \lang{development list}\footnote{\urlListDevelEmail{}}.
+%If you want to participate in the development of Grisbi, there is a \lang{development list}\footnote{\urlListDevelEmail{}}.
+If you'd like to get involved in Grisbi's development, there's a \lang{development list}\footnote{urlListDevelEmail{}}.
 
-If you want to regularly compile the latest version of Grisbi's code from \gls{Git}, you will find it advantageous to subscribe to the \lang{Git information list}\footnote{\urlListCVSEmail{}} to be notified of the latest \cmd{commit}.
+%If you want to regularly compile the latest version of Grisbi's code from \gls{Git}, you will find it advantageous to subscribe to the \lang{Git information list}\footnote{\urlListCVSEmail{}} to be notified of the latest \cmd{commit}.
 
-In addition, we decided to undertake the internationalization of Grisbi and, if you wish to help us, you can first contact us on the development list.
+%In addition, we decided to undertake the internationalization of Grisbi and, if you wish to help us, you can first contact us on the development list.
+We've also decided to take Grisbi international, and if you'd like to help us, you can get in touch with us on the development list.
 
-Specialized lists will be created for each language as needed.
+%Specialized lists will be created for each language as needed.
 
-For now, only the \lang{English translation list}\footnote{\urlListAnglaiseEmail{}} exists.
+%For now, only the \lang{English translation list}\footnote{\urlListAnglaiseEmail{}} exists.
 
-To subscribe to one of these lists, simply go to the page
-\urlListSF{}\emph{list} replacing \emph{list} with the name of the list you are interested in. Or go to 
-\lang{Grisbi}\footnote{\urlGrisbi{}} and look for \cmd{Contacts} there.
+%To subscribe to one of these lists, simply go to the page \urlListSF{}\emph{list} replacing \emph{list} with the name of the list you are interested in. Or go to \lang{Grisbi}\footnote{\urlGrisbi{}} and look for \cmd{Contacts} there.
+To subscribe to one of these lists, simply go to the \urlListDiffGrisbi{} page and click on the list(s) you are interested in.
+
+You can also use the discussion forums (or newsgroups) with a program called ``news reader'' (like Thunderbird for example) by entering \cmd{listes.grisbi.org} as the group server name.
 
 In addition do not hesitate to regularly consult Grisbi's official website.
 
 % page break for solidarity title
 
-\newpage
+%\newpage
 
 \section{Authors and contributors\label{introduction-authors}}
 
