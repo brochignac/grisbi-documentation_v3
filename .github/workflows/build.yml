@@ -21,7 +21,7 @@ jobs:
       - name: setup prerequisites
         shell: bash
         run: |
-          sudo apt install texlive-latex-base texlive-latex-recommended  	texlive-latex-extra hevea texlive-lang-french xindy texlive-fonts-extra
+          sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra hevea texlive-lang-french xindy texlive-fonts-extra pandoc
           wget http://mirrors.ctan.org/macros/latex209/contrib/picins.zip
           unzip picins.zip
           mkdir -p ~/texmf/tex/latex
@@ -30,7 +30,16 @@ jobs:
 
       - name: "build 3.0 fr"
         shell: bash
-        run: cd src/3.0/fr ; make pdf_img_indexglossary && make pdf_img
+        run: |
+          cd src/3.0/fr
+          make pdf_img_indexglossary && make pdf_img
+          make html_pandoc
+
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-fr-3.0
+          path: src/3.0/fr/html/grisbi-manuel.html
 
       - name: artifacts
         uses: actions/upload-artifact@v4
