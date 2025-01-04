@@ -300,7 +300,7 @@ In addition do not hesitate to regularly consult Grisbi's official website.
 
 %\newpage
 
-\section{Authors and contributors\label{introduction-authors}}
+\section{Authors and contributors\label{introduction-authors}} %TODO section to be updated/completed
 
 Cédric \familyname{Auger} is the basis of the project.
 
@@ -404,8 +404,8 @@ Here is a brief description of the different chapters:
 	\item \menu{Home} describes the main elements of the GUI and their manipulation with the mouse and the keyboard (shortcuts);
 	\item \menu{Export and Import Accounts} describes how to exchange data with other software;
 	\item \menu{Data Management} presents the options of the account files, backups and archives and their management;
-	\item \menu{Account Management} describes the properties of accounts, their management and the different types of accounts with their use;
-	\item \menu{Account Operations} describes the operations on accounts, the information and input fields used and their management
+	\item \menu{Accounts Management} describes the properties of accounts, their management and the different types of accounts with their use;
+	\item \menu{Account Operations}  describes how transactions are handled, the information and input fields used and how they are managed, and how transactions are created and managed;
 	\item \menu{Bank Reconciliation} details the procedure for reconciling an account and managing reconciliations;
 	\item \menu{Schedule} describes the planning of future entries and their manipulation;
 	\item \menu{Searches} takes stock of data search possibilities;
@@ -413,7 +413,7 @@ Here is a brief description of the different chapters:
 	\item \menu{Credit Simulation} describes methods and simulation management;
 	\item \menu{Forecast Budgets} describes the tools and procedures for budget creation and depreciation tables, as well as their management;
 	\item \menu{Credit card management and their prediction} describes the management of these cards, including deferred debit cards, and forecasting methods;
-	\item \menu{Business Accounting} presents two introductions for business managers;
+	\item \menu{Business Accounting} presents two introductions for business managers (for French only)
 	\item \menu{Reports} and \menu{Report creation} describe the management and creation of reports;
 	\item \menu{Configuration of Grisbi} details all the possibilities of setting the software;
 	\item \menu{Maintenance Tools} gives some tips to use in case of errors or bugs.
@@ -423,54 +423,55 @@ Here is a brief description of the different chapters:
 
 The following list defines and illustrates the typographic conventions used as visual aids for identifying particular elements of the text of the document:
 
-\begin{itemize}%\itemsep=-3pt
+\begin{itemize}
 	\item the interface components are window titles, icon and button names, menu names, and other options that appear on the monitor screen; they are presented as follows: \newline
-\hspace {1.5cm} click \menu{Back};
+	\hspace*{1.5cm} click \menu{Back}
 	\item the keyboard key label represents what is written on the keyboard keys; it is presented as follows: \newline
-\hspace {1.5cm} press the \key{Enter} key;
+	\hspace*{1.5cm} press the \key{Enter} key;
 	\item key combinations are a series of keys to be pressed simultaneously (unless otherwise specified) to perform a single function; they are presented as follows: \newline
-\hspace {1.5cm} press the key combination \key{Ctrl} \key{R};
+	\hspace*{1.5cm} press the key combination \key{Ctrl} \key{R}
 	\item The commands that are part of an instruction and that must be entered are presented as follows:\newline
-\hspace {1.5cm} type \cmd{grisbi} to start the program;
+	\hspace*{1.5cm} type \cmd{grisbi} to start the program
 	\item file and directory names are shown as: \newline
-\hspace {1.5cm} \file{graybi-n.n.n.rpm} and \file{/ usr / local / bin};
+	\hspace*{1.5cm} \file{grisbi-n.n.n.rpm} and \file{/usr/local/bin}
 	\item the command lines consist of a command and can include one or more possible parameters of the command; they are presented as follows: \newline
-\hspace {1.5cm} \cmd{rpm -Uvh graybi-n.n.n.rpm};
+	\hspace*{1.5cm} \cmd{rpm -Uvh grisbi-n.n.n.rpm}
 	\item any sequence of alphanumeric characters in blue, in the document in PDF or HTML format, is a hypertext link, referring to either an image, another part of the document, an indexed word or to the glossary (for PDF only);
 	\item The words or groups of words referenced in the index are highlighted in the chapters as follows:\newline
-\hspace {1.5cm} \textsf{referenced term} for PDF format; \newline
-\hspace {1.5cm} in brown for HTML.
+	\hspace*{1.5cm} \textsf{referenced term} for \gls{PDF} format \newline
+	\hspace*{1.5cm} in brown for \gls{HTML}
 \end{itemize}
 
 % space before Attention or Note: 5 mm
 
 \vspacepdf{5mm}
 
-In addition, a \textbf{Note} underlines a particular point to take into account, while a \strong{Attention} indicates either a very important point for the understanding, or an error not to do under pain of important damage for your data ; a \strong{Warning} is \emph{to be respected}.
+%In addition, a \textbf{Note} underlines a particular point to take into account, while a \strong{Attention} indicates either a very important point for the understanding, or an error not to do under pain of important damage for your data ; a \strong{Warning} is \emph{to be respected}.
+
+In addition, a \textbf{Note} underlines a particular point to be taken into account, while a \textcolor{red}{\strong{Warning}} indicates either a point that is very important for understanding, or an error that must not be made on pain of serious damage to your data; a \textcolor{red}{\strong{Warning}} is \emph{imperatively to be respected}.
 
 \subsection{Reading software \label{introduction-manual-readers}}
 
 To read this document, we recommend the use of free software, which respects all your privacy and the confidentiality of your data; the following software has the features of \gls{hyperlinks}:
 
-\begin{itemize}%\itemsep=-3pt
-	\item for PDF format:
-\begin{itemize}%\itemsep=-3pt
-	\item Linux: Evince, Epdfviewer, Firefox, Ghostscript, MuPDF, Okular,
-	\item Mac: Okular, Vindaloo, Xpdf,
-	\item Windows: Evince, Firefox, MuPDF, Okular, SumatraPdf;
-\end{itemize}
-	\item for the HTML format:
-\begin{itemize}%\itemsep=-3pt
-	\item Linux: Arora, Dillo, Firefox, Kazehakase, Links2, Midori, SeaMonkey,
-	\item Mac: Arora, Camino, Firefox, SeaMonkey, Shiira,
-	\item Windows: Arora, Firefox, Iron, K-Meleon, Midori, SeaMonkey.
-\end{itemize}
-
+\begin{itemize}
+	\item for \gls{PDF} format:
+	\begin{itemize}
+		\item[\textopenbullet] Linux : Evince, Firefox, Xpdf, Ghostscript, MuPDF, Okular
+		\item[\textopenbullet] Mac : Okular, Skim, Xpdf
+		\item[\textopenbullet] Windows : Evince, Firefox, MuPDF, Okular, SumatraPdf
+	\end{itemize}
+	\item for the \gls{HTML} format:
+	\begin{itemize}
+		\item[\textopenbullet] Linux : Firefox, Falcon, Links2, Midori, Dillo, SeaMonkey, NetSurf, Min
+		\item[\textopenbullet] Mac : Firefox, Falcon, Midori, SeaMonkey, NetSurf
+		\item[\textopenbullet] Windows : Firefox, Falcon, Midori, SeaMonkey, NetSurf
+	\end{itemize}
 \end{itemize}
 
 % space for theme change: 5 mm
 
-\vspacepdf{5mm}
+%\vspacepdf{5mm}
 
 In short, you have the choice!
 
@@ -478,4 +479,6 @@ In short, you have the choice!
 
 \vspacepdf{5mm}
 
-These programs are all downloadable on their own website and are all under a license of \gls{free software}, and you can also find them on the \lang{Framasoft}\footnote{\urlFramasoftLogiciels{}} site.
+%These programs are all downloadable on their own website and are all under a license of \gls{free software}, and you can also find them on the \lang{Framasoft}\footnote{\urlFramasoftLogiciels{}} site.
+These software packages can all be downloaded from their own websites and are all licensed as \gls{free software}, and you can read about some of them on the French \lang{Framasoft}\footnote{\urlFramasoftLogiciels{}} website.
+
