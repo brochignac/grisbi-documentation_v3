@@ -1,0 +1,2878 @@
+<!DOCTYPE html> 
+<html lang="fr" xml:lang="fr" > 
+<head><title>Manuel de Grisbi 
+</title> 
+<meta  charset="utf-8" /> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" type="text/css" href="00-grisbi-manuel.css" /> 
+<meta name="src" content="00-grisbi-manuel.tex" /> 
+</head><body 
+>
+  <div class="titlepage">
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       <!--l. 307--><p class="indent" >
+                                                                                       
+                                                                                       
+</p>
+<h2 class="titleHead">Manuel de Grisbi<br />
+<img 
+src="image/grisbi-logo.png" alt="PIC"  
+width="170" height="170"  /> </h2>
+<div class="subtitle"><span 
+class="ec-qhvb-sc-x-x-178">Logiciel de comptabilit</span><span 
+class="ec-qhvb-sc-x-x-178">é personnelle et</span>
+<span 
+class="ec-qhvb-sc-x-x-178">associative </span><br />
+____ <br />
+</div>
+<div class="tabular"> <table id="TBL-1" class="tabular" 
+ 
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-1"  
+class="td11">    <div class="author" ><span 
+class="ntx-Regular-tlf-t1-x-x-144">Copyright </span><span 
+class="ts1-qtmr-x-x-144">© </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">2001-2003 Daniel </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-144">Cartron         </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-1"  
+class="td11">       <span 
+class="ntx-Regular-tlf-t1-x-x-144">Copyright </span><span 
+class="ts1-qtmr-x-x-144">© </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">2004 Lo</span><span 
+class="ntx-Regular-tlf-t1-x-x-144">ïc </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-144">Breilloux              </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-1"  
+class="td11">       <span 
+class="ntx-Regular-tlf-t1-x-x-144">Copyright </span><span 
+class="ts1-qtmr-x-x-144">© </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">2004 Benjamin </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-144">Drieu              </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-1"  
+class="td11">    <span 
+class="ntx-Regular-tlf-t1-x-x-144">Copyright </span><span 
+class="ts1-qtmr-x-x-144">© </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">2011-2014 Jean-Luc </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-144">Duflot         </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-1"  
+class="td11">     <span 
+class="ntx-Regular-tlf-t1-x-x-144">Copyright </span><span 
+class="ts1-qtmr-x-x-144">© </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">2018 Bob </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-144">Anderson </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">(en)           </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-6-1"  
+class="td11"> <span 
+class="ntx-Regular-tlf-t1-x-x-144">Copyright </span><span 
+class="ts1-qtmr-x-x-144">© </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">2018-2020 Martin </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-144">Stromberger </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">(de)  </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-7-1"  
+class="td11">    <span 
+class="ntx-Regular-tlf-t1-x-x-144">Copyright </span><span 
+class="ts1-qtmr-x-x-144">© </span><span 
+class="ntx-Regular-tlf-t1-x-x-144">2024 Dominique </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-144">Brochard         </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-8-1"  
+class="td11">               _________</div>               </td></tr></table>                         </div>
+<div class="date" ><span 
+class="ntx-Regular-tlf-t1-x-x-144">Version 3.0 de 2024 (provisoire) </span></div>
+                                                                                       
+                                                                                       
+  </div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!--l. 307--><p class="indent" >
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 316--><p class="indent" >  <a 
+ id="chapter*.1"></a>
+</p><!--l. 316--><p class="noindent" >
+</p>
+  <h2 class="likechapterHead"><a 
+ id="x1-1000"></a>Sommaire</h2>
+  <div class="tableofcontents">
+  <span class="chapterToc" > <a 
+href="#Q1-1-3">Table des figures</a></span>
+<br />  <span class="chapterToc" >1 <a 
+href="#x1-30001" id="QQ2-1-4">Préambule</a></span>
+<br />  <span class="sectionToc" >1.1  <a 
+href="#x1-40001.1" id="QQ2-1-5">Étymologie</a></span>
+<br />  <span class="sectionToc" >1.2  <a 
+href="#x1-120001.2" id="QQ2-1-13">Bibliographie</a></span>
+<br />  <span class="sectionToc" >1.3  <a 
+href="#x1-130001.3" id="QQ2-1-14">Filmographie</a></span>
+<br />  <span class="chapterToc" >2 <a 
+href="#x1-220002" id="QQ2-1-23">Introduction</a></span>
+<br />  <span class="sectionToc" >2.1  <a 
+href="#x1-230002.1" id="QQ2-1-24">Généralités</a></span>
+<br />  <span class="sectionToc" >2.2  <a 
+href="#x1-240002.2" id="QQ2-1-25">Fonctionnalités</a></span>
+<br />  <span class="sectionToc" >2.3  <a 
+href="#x1-270002.3" id="QQ2-1-28">Évolution du logiciel</a></span>
+<br />  <span class="sectionToc" >2.4  <a 
+href="#x1-390002.4" id="QQ2-1-40">Contacts</a></span>
+<br />  <span class="sectionToc" >2.5  <a 
+href="#x1-400002.5" id="QQ2-1-41">Auteurs et contributions</a></span>
+<br />  <span class="sectionToc" >2.6  <a 
+href="#x1-410002.6" id="QQ2-1-42">Remerciements</a></span>
+<br />  <span class="sectionToc" >2.7  <a 
+href="#x1-420002.7" id="QQ2-1-43">Licences</a></span>
+<br />  <span class="sectionToc" >2.8  <a 
+href="#x1-430002.8" id="QQ2-1-44">À propos du présent manuel</a></span>
+<br />  <span class="chapterToc" >3 <a 
+href="#x1-470003" id="QQ2-1-48">Entrée dans Grisbi</a></span>
+<br />  <span class="chapterToc" >4 <a 
+href="#x1-480004" id="QQ2-1-50">Premier démarrage de Grisbi</a></span>
+<br />  <span class="sectionToc" >4.1  <a 
+href="#x1-490004.1" id="QQ2-1-51">Assistant premier démarrage</a></span>
+<br />  <span class="sectionToc" >4.2  <a 
+href="#x1-500004.2" id="QQ2-1-53">Fichier exemple</a></span>
+<br />  <span class="sectionToc" >4.3  <a 
+href="#x1-510004.3" id="QQ2-1-54">Création d’un nouveau fichier de comptabilité</a></span>
+<br />  <span class="sectionToc" >4.4  <a 
+href="#x1-520004.4" id="QQ2-1-58">Enregistrement de votre fichier de comptabilité</a></span>
+<br />  <span class="sectionToc" >4.5  <a 
+href="#x1-530004.5" id="QQ2-1-59">Import à partir d’un autre logiciel de comptabilité personnelle</a></span>
+<br />  <span class="chapterToc" > <a 
+href="#Q1-1-61">Glossaire</a></span>
+  </div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!--l. 334--><p class="indent" >  <a 
+ id="chapter*.2"></a>
+</p><!--l. 334--><p class="noindent" >
+</p>
+  <h2 class="likechapterHead"><a 
+ id="x1-2000"></a>Table des figures</h2>
+<a 
+ id="Q1-1-3"></a>
+<div class="tableofcontents"><span class="lofToc" >3.1 <a 
+href="#x1-47003r1">Fenêtre  de  démarrage</a></span><br /><span class="lofToc" >4.1 <a 
+href="#x1-49002r1">Configuration  initiale  du  fichier  de
+comptabilité.</a></span><br /><span class="lofToc" >4.2 <a 
+href="#x1-51009r2">Configuration générale du fichier de comptabilité</a></span><br /><span class="lofToc" >4.3 <a 
+href="#x1-51038r3">Sélection
+des catégories à utiliser</a></span><br /><span class="lofToc" >4.4 <a 
+href="#x1-51058r4">Choix du premier compte</a></span><br />
+</div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!--l. 14--><p class="indent" >
+                                                                                       
+                                                                                       
+</p>
+  <h2 class="chapterHead"><span class="titlemark">1</span>  <a 
+ id="x1-30001"></a>Préambule</h2>
+<!--l. 24--><p class="noindent" >Plusieurs utilisateurs de <a 
+href="#glo:Grisbi">Grisbi</a> ont demandé à Daniel <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Cartron</span>, rédacteur de la première version du
+manuel, d’insérer dans celui-ci un bref rappel de la signification de ce mot, qui, à son grand dam, est
+retombé en désuétude.
+</p><!--l. 26--><p class="indent" >  Ses premières (brèves) recherches n’ayant pas ramené de résultats valant la peine d’être publiés, il
+avait laissé tomber jusqu’à ce qu’un jour il prenne le temps de passer quelques moments dans une
+bibliothèque bien fournie en dictionnaires de toutes sortes. Et là, la moisson fut abondante. Tellement
+abondante que Daniel <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Cartron </span>a longuement hésité pour savoir ce qu’il allait garder et ce qu’il allait
+éliminer. . .
+</p><!--l. 28--><p class="indent" >  Finalement il décida de tout garder, même si on passe ainsi à un paragraphe de quatre pages. Il a
+juste opéré un classement des articles les plus courts vers les plus longs.
+</p><!--l. 30--><p class="indent" >  En effet il trouve intéressant d’étudier les divergences entre les différents dictionnaires, mais plus
+encore de constater les ressemblances, à ce point frappantes que l’on pourrait intituler ce chapitre non
+pas <span 
+class="ntx-Italic-tlf-t1-x-x-120">Le jeu des sept erreurs </span>mais <span 
+class="ntx-Italic-tlf-t1-x-x-120">Qui a copi</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">é qui ? </span>À vous de trouver. . .
+</p><!--l. 32--><p class="indent" >  Et il a aussi rajouté un passage sur le film puisque pour ceux qui savent encore ce que <span 
+class="ec-qhvr-x-x-112">grisbi</span><a 
+ id="dx1-3001"></a> veut dire
+cela tient essentiellement à la renommée méritée de cette œuvre.
+</p>
+  <h3 class="sectionHead"><span class="titlemark">1.1</span>  <a 
+ id="x1-40001.1"></a>Étymologie</h3>
+<!--l. 37--><p class="noindent" >Voici donc quelques sources sur l’étymologie <a 
+ id="dx1-4001"></a>du mot grisbi :
+</p><!--l. 40--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-5000"></a>Dictionnaire de la langue française — Hachette</h4>
+<!--l. 42--><p class="noindent" >[grizbi] n. m. Arg. Argent — De gris (monnaie grise ; cd. rouchi griset [1834], « liard »), et suff. pop.
+-bi ; 1895, répandu en 1953.
+</p><!--l. 45--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-6000"></a>Grand Larousse de la langue française</h4>
+<!--l. 47--><p class="noindent" >[grizbi] n. m. (de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris[et]</span>, pièce de six liards [1834, Esnault] — dér. de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris</span>, à cause de la couleur [cf.
+aussi <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisette</span>, « monnaie » — XVIIe s. —, et <span 
+class="ntx-Italic-tlf-t1-x-x-120">monnaie blanche et grise</span>, 1784, Esnault] — avec le
+suff.arg. <span 
+class="ntx-Italic-tlf-t1-x-x-120">-bi </span>; 1896, Delesalle).
+</p><!--l. 49--><p class="indent" >  <span 
+class="ntx-Italic-tlf-t1-x-x-120">Arg. </span>Argent : <span 
+class="ntx-Italic-tlf-t1-x-x-120">Touchez pas au grisbi </span>(titre d’un roman d’Albert Simonin [1953]).
+</p><!--l. 52--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-7000"></a>Dictionnaire historique de la langue française — Robert</h4>
+                                                                                       
+                                                                                       
+<!--l. 54--><p class="noindent" >n.m. apparu en 1895 (<span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbis</span>) et répandu à partir de 1953 par le roman <span 
+class="ntx-Italic-tlf-t1-x-x-120">Touchez pas au grisbi </span>de A.
+Simonin, serait composé de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris </span>«  monnaie grise » (1784 : cf. le rouchi <span 
+class="ntx-Italic-tlf-t1-x-x-120">griset </span>« pièce de six liards »,
+1834 ; et <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisette </span>« monnaie », v. 1634) et de l’élément <span 
+class="ntx-Italic-tlf-t1-x-x-120">bi </span>d’origine obscure : <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi</span>, « argent » en argot,
+pourrait être un composé tautologique de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris </span>et <span 
+class="ntx-Italic-tlf-t1-x-x-120">bis</span>.
+</p><!--l. 57--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-8000"></a>Dictionnaire de l’argot français et de ses origines — Larousse</h4>
+<!--l. 59--><p class="noindent" >Origine très controversée : soit de griset, « pièce de monnaie », et d’un mystérieux suffixe -bi, ou du
+pain à la fois gris et bis, ou du slang anglais crispy, argent ; nous proposons d’y voir un emploi
+métonymique de gripis 1628 [Cheneau], grispin, grisbis 1849 [Halbert], « meunier », c’est-à-dire
+« celui qui a chez lui du blé » 1895 [Delsalle] mais remis en circulation par « Touchez pas au grisbi »,
+célèbre roman de A. Simonin, paru en 1953.
+</p><!--l. 61--><p class="indent" >  VARIANTES — grĳbi : 1902 [Esnault] — grèzbi : vers 1926 [id.]
+</p><!--l. 63--><p class="indent" >  DÉRIVÉS — grisbinette n.f. Pièce de cent anciens francs : 1957 [Sandry-Carrère].
+</p><!--l. 67--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-9000"></a>Trésors de la langue française</h4>
+<!--l. 69--><p class="noindent" ><span 
+class="ntx-Italic-tlf-t1-x-x-120">Arg. </span>Argent. Synon. pop. <span 
+class="ntx-Italic-tlf-t1-x-x-120">fric, galette, p</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">èze, pognon. Le grisbi je suis assez grand pour aller le chercher</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">moi-m</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">ême ! ( . . .) Riton qu’avait m</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">ême pas su se tenir en homme ( . . .) d</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">ès qu’il s’</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">était senti assez de</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi </span>(<span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin</span>, <span 
+class="ntx-Italic-tlf-t1-x-x-120">Touchez pas au grisbi</span>, 1953, p. 231).
+</p><!--l. 71--><p class="indent" >  <span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Prononc. </span>: [grizbi]. <span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Étymol. et Hist. </span>1896 <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbis </span>arg. « argent » (<span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Delesalle</span>, <span 
+class="ntx-Italic-tlf-t1-x-x-120">Dict. arg.-fr. et</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">fr.-arg.</span>). Mot composé du rad. de <span 
+class="ntx-Italic-tlf-t1-x-x-120">griset</span>, au sens de « pièce de six liards » (1834 ds <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Esn.</span>), dér. de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris</span>, à
+cause de la couleur (<span 
+class="ntx-Italic-tlf-t1-x-x-120">cf. </span>aussi <span 
+class="ntx-Italic-tlf-t1-x-x-120">ca </span>1634 <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisette </span>« monnaie », <span 
+class="ntx-Italic-tlf-t1-x-x-120">La Muse Normande </span>de D. Ferrand, éd. A.
+Héron, II, 91 ; 1784, Brest, <span 
+class="ntx-Italic-tlf-t1-x-x-120">monnaie blanche et grise </span>ds <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Esn.</span>), et d’une seconde partie d’orig. obsc. qui
+représente peut-être le suff. pop. -bi, à rapprocher de <span 
+class="ntx-Italic-tlf-t1-x-x-120">nerbi </span>« très noir » (d’apr. <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Esn.</span>). Il n’est pas
+impossible que <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi </span>(anciennement <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbis</span>) soit un composé tautologique de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris </span>et de
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">bis</span>.
+</p><!--l. 74--><p class="indent" >  <span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Bbg. </span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Rigaud </span>(A.). L’arg. litt. <span 
+class="ntx-Italic-tlf-t1-x-x-120">Vie lang. </span>1972, pp. 114-117.
+</p><!--l. 77--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-10000"></a>Grand Robert de la langue française</h4>
+<!--l. 79--><p class="noindent" >[grizbi] n. m. — 1895 : répandu 1953 par le roman de Simonin <span 
+class="ntx-Italic-tlf-t1-x-x-120">Touchez pas au grisbi </span>; le mot était rare
+ou archaïque v. 1950 : de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris </span>« monnaie grise » (cf. rouchi <span 
+class="ntx-Italic-tlf-t1-x-x-120">griset </span>« liard », 1834), et suff. pop. <span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Argot.</span>
+Argent. <span 
+class="ntx-Italic-tlf-t1-x-x-120">T’as du grisbi ?</span>
+</p><!--l. 81--><p class="indent" >  1 — Cette expression : « Ne touchez pas au grisbi » devient une variante de « Ne chahutez pas
+avec les nippes ». C’est le maître mot qui dirige la chronique de ces chevaliers de fortune
+mal acquise qui donnèrent de la mobilité aux romans de cape et de mitraillette de Peter
+Cheyney.
+                                                                                       
+                                                                                       
+</p><!--l. 83--><p class="indent" >  <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">P. Mac Orlan</span>, <span 
+class="ntx-Italic-tlf-t1-x-x-120">in </span>Albert <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin</span>, Touchez pas au grisbi, Préface, p. 6.<br 
+class="newline" />
+</p><!--l. 85--><p class="indent" >  2 — « Te casse pas la tête pour les politesses . . .D’abord on a pas le temps si tu veux que je te trouve
+Ali. Tout dépend de ce qu’il a de grisbi en fouille ; s’il est armé, on a une chance de le trouver au
+flambe, à la partie du Carillon »
+</p><!--l. 87--><p class="indent" >  Albert <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin</span>, Touchez pas au grisbi, p. 147.
+</p><!--l. 90--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-11000"></a>Dictionnaire du français non conventionnel — Hachette</h4>
+<!--l. 92--><p class="noindent" >n.m. (grisby)
+</p><!--l. 94--><p class="indent" >  Argent (intrinsèquement).
+</p><!--l. 96--><p class="indent" >  « Au petit caïd de l’équipe, un mouflet à casquette torpédo, bleu de chauffe et pompes vernies, la
+môme venait d’affirmer qu’elle me frimait seulement pour le bon motif, pour me soulager de mes cent
+sacs. Il avait répliqué, le vilain jalmince : — Le <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi</span>, je suis assez grand pour aller le
+chercher moi-même ! Ils disaient vrai tous les deux, l’un et l’autre également prêts à tout
+pour le <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi</span>. Eux et leurs petits potes. Pareil Angelo-la-Tante et Josy-la-Peau-de-Vache ;
+pareil Ali-le-Fumier et ses ordures d’espingos ; pareil Riton qu’avait même pas su se tenir
+en homme avec sa môme, dès qu’il s’était senti assez de <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi </span>; pareil Marco et sa petite
+Wanda, si honnête, mais qu’hésitait pas à se faire enjamber par le bonhomme <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi </span>! pareil
+aussi la môme Lulu sans doute, qu’attendait patiemment chez moi que je rabatte, avec mon
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi </span>! »
+</p><!--l. 98--><p class="indent" >  A. <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin</span>, Touchez pas au grisbi, p. 233
+</p><!--l. 100--><p class="indent" >  HIST. —1895, mais sans doute peu usité : A. Bruant et L. Blédort, qui accumulent à l’occasion les
+synonymes (<span 
+class="ntx-Italic-tlf-t1-x-x-120">p</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">èse, os, </span>etc.), n’emploient pas <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbi</span>, bien que Bruant l’enregistre en 1901 (<span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbis</span>). Le
+succès mérité du roman d’A. <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin </span>en 1953 a rendu une jeunesse au mot, qui ne paraît pas pour
+autant véritablement intégré à la série des désignants de l’argent, comme <span 
+class="ntx-Italic-tlf-t1-x-x-120">bl</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">é, oseille, flouze </span>ou
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">fric</span>.
+</p><!--l. 102--><p class="indent" >  Du rouchi <span 
+class="ntx-Italic-tlf-t1-x-x-120">griset</span>, « pièce de six liards » (1834), ainsi dénommée à cause de sa couleur. Mais
+l’explication donnée par <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Esnault</span>, actuellement seule disponible, n’est pas satisfaisante ; d’une part,
+l’élément <span 
+class="ntx-Italic-tlf-t1-x-x-120">bi </span>reste inexpliqué, sinon par un « suffixe » inconnu ; d’autre part, <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Bruant </span>écrit <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisbis</span>, et il
+est possible (sinon probable) que le <span 
+class="ntx-Italic-tlf-t1-x-x-120">s </span>central ne soit prononcé que depuis 1953 ; ce qui amènerait à une
+explication : <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris-bis</span>, dans la série des désignants issus d’un nom du pain, <span 
+class="ntx-Italic-tlf-t1-x-x-120">bl</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">é, carme, biscuit, galette</span>,
+etc.
+</p><!--l. 104--><p class="indent" >  Enfin, si la métonymie de la couleur est effectivement utilisée pour dénommer l’argent, il s’agit
+toujours d’une catégorie d’argent précise : des « espèces ». Ainsi <span 
+class="ntx-Italic-tlf-t1-x-x-120">jaunet, blanc, blanche, cuivre</span>, ne sont
+pas interchangeables, ni utilisables pour « de l’argent » abstrait.
+</p><!--l. 106--><p class="indent" >  On rappellera par ailleurs le sens de <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris </span>: « cher » (V. <span 
+class="ntx-Italic-tlf-t1-x-x-120">grisol</span>) et la possibilité du pseudo-suffixe
+augmentatif <span 
+class="ntx-Italic-tlf-t1-x-x-120">bi</span>, « très », même rare. On aurait alors : <span 
+class="ntx-Italic-tlf-t1-x-x-120">gris-bi</span>, « très cher » ? Mais l’hypothèse est
+spéculative.
+</p><!--l. 109--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+  <h3 class="sectionHead"><span class="titlemark">1.2</span>  <a 
+ id="x1-120001.2"></a>Bibliographie</h3>
+<!--l. 112--><p class="noindent" ><span 
+class="ntx-Italic-tlf-t1-x-x-120">Touchez pas au Grisbi ! </span>d’Albert <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin</span>, publié en 1953<br 
+class="newline" />
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 115--><p class="indent" >    Gallimard, Collection Série Noire n<span 
+class="ntx-Regular-tlf-t1-x-x-78">o</span> 148, première édition en 1953
+        </p></li>
+      <li class="itemize">
+      <!--l. 116--><p class="indent" >    Le Livre de Poche n<span 
+class="ntx-Regular-tlf-t1-x-x-78">o</span> 1152, première édition en 1953
+        </p></li>
+      <li class="itemize">
+      <!--l. 117--><p class="indent" >    Gallimard, Collection Carré Noir n<span 
+class="ntx-Regular-tlf-t1-x-x-78">o</span> 94, première édition en 1972
+        </p></li>
+      <li class="itemize">
+      <!--l. 118--><p class="indent" >    Gallimard, Collection Folio n<span 
+class="ntx-Regular-tlf-t1-x-x-78">o</span> 2068, première édition en 1989
+        </p></li>
+      <li class="itemize">
+      <!--l. 119--><p class="indent" >    Gallimard,  Collection  Folio  Policier  n<span 
+class="ntx-Regular-tlf-t1-x-x-78">o</span> 183,  première  édition  en  1953,  réédition  en
+      2014 (toujours édité)</p></li></ul>
+<!--l. 123--><p class="noindent" >
+</p>
+  <h3 class="sectionHead"><span class="titlemark">1.3</span>  <a 
+ id="x1-130001.3"></a>Filmographie</h3>
+<!--l. 126--><p class="noindent" ><span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Touchez pas au grisbi</span>
+</p><!--l. 128--><p class="indent" >  Film franco-italien (1954). Policier. Durée : 1h 34 min
+</p><!--l. 130--><p class="indent" >  Titre Original : Grisbi<br 
+class="newline" />
+</p><!--l. 132--><p class="indent" >  Distribution :
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 135--><p class="indent" >    Jean <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Gabin </span>: Max le menteur
+        </p></li>
+      <li class="itemize">
+      <!--l. 136--><p class="indent" >    René <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Dary </span>: Riton
+        </p></li>
+      <li class="itemize">
+      <!--l. 137--><p class="indent" >    Dora <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Doll </span>: Lola
+        </p></li>
+      <li class="itemize">
+      <!--l. 138--><p class="indent" >    Vittorio <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Sanipoli </span>: Ramon
+        </p></li>
+      <li class="itemize">
+                                                                                       
+                                                                                       
+      <!--l. 139--><p class="indent" >    Marilyn <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Buferd </span>: Betty
+        </p></li>
+      <li class="itemize">
+      <!--l. 140--><p class="indent" >    Gaby <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Basset </span>: Marinette
+        </p></li>
+      <li class="itemize">
+      <!--l. 141--><p class="indent" >    Paul <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Barge </span>: Eugène</p></li></ul>
+<!--l. 144--><p class="indent" >  Réalisateur : Jacques <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Becker</span>
+</p><!--l. 147--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-14000"></a>Synopsis</h4>
+<!--l. 149--><p class="noindent" >Max-le-menteur et Riton viennent de réussir le coup de leur vie : voler 50 millions de francs en
+lingots d’or à Orly. Avec ce « grisbi », les deux gangsters comptent bien profiter d’une
+retraite paisible. Mais Riton ne peut s’empêcher de parler du magot à sa maîtresse Josy.
+L’entraîneuse transmet la précieuse information à Angelo, un trafiquant de drogue avec lequel elle
+trompe Riton. Angelo kidnappe le vieux truand et demande le « grisbi » à Max comme
+rançon. . .
+</p><!--l. 152--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-15000"></a>Anecdotes</h4>
+<!--l. 154--><p class="indent" >  <a 
+ id="paragraph*.3"></a></p>
+<!--l. 154--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-16000"></a>Un tandem bien huilé :</span> Jean <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Gabin </span>et René <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Dary </span>sont considérés comme deux monstres sacrés du
+cinéma de l’avant-guerre.
+</p><!--l. 156--><p class="indent" >  <a 
+ id="paragraph*.4"></a></p>
+<!--l. 156--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-17000"></a><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Becker </span>père et fils :</span> Le fils de Jacques <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Becker</span>, Jean, fait ici ses débuts au cinéma en tant qu’assistant
+réalisateur. Il n’a pourtant que quinze ans !
+</p><!--l. 158--><p class="indent" >  <a 
+ id="paragraph*.5"></a></p>
+<!--l. 158--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-18000"></a>Albert <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin </span>:</span> L’écrivain et scénariste Albert <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Simonin</span>, qui adapte ici son propre roman, fera
+quatre autres films avec <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Gabin</span>, tous dialogués par <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Audiard </span>: <span 
+class="ntx-Italic-tlf-t1-x-x-120">Le cave se rebiffe </span>(1961) et
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Le gentleman d’Epsom </span>(1962) de Gilles <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Grangier</span>, <span 
+class="ntx-Italic-tlf-t1-x-x-120">M</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">élodie en sous-sol </span>(1963) d’Henri
+<span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Verneuil </span>et <span 
+class="ntx-Italic-tlf-t1-x-x-120">Le pacha </span>(1967) de Georges <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Lautner</span>. Après avoir adapté son œuvre <span 
+class="ntx-Italic-tlf-t1-x-x-120">Les Tontons</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">flingueurs </span>pour Georges <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Lautner </span>(1963), il devient son scénariste pour <span 
+class="ntx-Italic-tlf-t1-x-x-120">Les Barbouzes</span>
+(1964).
+                                                                                       
+                                                                                       
+</p><!--l. 161--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-19000"></a>Version DVD zone 2</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 164--><p class="indent" >    Interactivité  :  Menu  d’accueil,  accès  aux  scènes,  filmographies  déroulantes  du
+      réalisateur, de Lino <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Ventura </span>et Jean <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Gabin</span>
+        </p></li>
+      <li class="itemize">
+      <!--l. 165--><p class="indent" >    Format cinéma : plein écran
+        </p></li>
+      <li class="itemize">
+      <!--l. 166--><p class="indent" >    Version sonore : VF en mono
+        </p></li>
+      <li class="itemize">
+      <!--l. 167--><p class="indent" >    Sous-titres : aucun
+        </p></li>
+      <li class="itemize">
+      <!--l. 168--><p class="indent" >    France — 1954 — Noir &#x0026; blanc — 92 min — Film Office — 1 disque — 1 face —
+      1 couche
+        </p></li>
+      <li class="itemize">
+      <!--l. 169--><p class="indent" >    Date de parution : 19 septembre 2001
+        </p></li>
+      <li class="itemize">
+      <!--l. 170--><p class="indent" >    Éditeur : Studio Canal</p></li></ul>
+<!--l. 173--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-20000"></a>Version Blu-ray zone 2</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 176--><p class="indent" >    Format cinéma : 4/3 format respecté 1.33
+        </p></li>
+      <li class="itemize">
+      <!--l. 177--><p class="indent" >    Version sonore : VF en stéréo
+        </p></li>
+      <li class="itemize">
+      <!--l. 178--><p class="indent" >    France — 1954 — Noir &#x0026; blanc — 94 min
+        </p></li>
+      <li class="itemize">
+      <!--l. 179--><p class="indent" >    Sous-titres : aucun
+        </p></li>
+                                                                                       
+                                                                                       
+      <li class="itemize">
+      <!--l. 180--><p class="indent" >    Date de parution : 10 mars 2017
+        </p></li>
+      <li class="itemize">
+      <!--l. 181--><p class="indent" >    Éditeur : Studio Canal</p></li></ul>
+<!--l. 184--><p class="noindent" >
+</p>
+  <h4 class="likesubsectionHead"><a 
+ id="x1-21000"></a>Versions DVD / Blu-ray zone 1</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 187--><p class="indent" >    Format cinéma : 4/3 respectant le format 1.33
+        </p></li>
+      <li class="itemize">
+      <!--l. 188--><p class="indent" >    Version sonore : VF en stéréo
+        </p></li>
+      <li class="itemize">
+      <!--l. 189--><p class="indent" >    France — 1954 — Noir &#x0026; blanc — 94 min
+        </p></li>
+      <li class="itemize">
+      <!--l. 190--><p class="indent" >    Sous-titres : anglais
+        </p></li>
+      <li class="itemize">
+      <!--l. 191--><p class="indent" >    Date de parution : 21 Août 2017
+        </p></li>
+      <li class="itemize">
+      <!--l. 192--><p class="indent" >    Éditeur : Studio Canal</p></li></ul>
+<!--l. 195--><p class="noindent" >Les versions de la zone 1 sont sous-titrées en anglais et contiennent des interviews du cinéaste Jean
+Becker et de l’actrice Jeanne Moreau.
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 16--><p class="indent" >
+                                                                                       
+                                                                                       
+</p>
+  <h2 class="chapterHead"><span class="titlemark">2</span>  <a 
+ id="x1-220002"></a>Introduction</h2>
+  <h3 class="sectionHead"><span class="titlemark">2.1</span>  <a 
+ id="x1-230002.1"></a>Généralités</h3>
+<!--l. 22--><p class="noindent" >Grisbi est un <a 
+href="#glo:logiciel libre">logiciel libre</a> de comptabilité personnelle, développé en <a 
+href="#glo:Langage C">Langage C</a> avec le support <a 
+href="#glo:GTK">GTK</a>+ 3,
+originellement pour la plate-forme <a 
+href="#glo:GNU/Linux">GNU/Linux</a>. Il y a maintenant un <a 
+href="#glo:portage"><span 
+class="ec-qhvr-x-x-112">portage</span></a><a 
+ id="dx1-23001"></a> sous <a 
+href="#glo:Windows">Windows</a>, <a 
+href="#glo:macOS">macOS</a>,
+FreeBSD, des paquetages pour différentes <a 
+href="#glo:distributions Linux">distributions Linux</a>, et d’autres possibilités à découvrir sur le site de
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Grisbi</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel2.html#fn1x2"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-23002f1"></a>   ou celui
+de Sourceforge <span class="footnote-mark"><a 
+href="00-grisbi-manuel3.html#fn2x2"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-23004f2"></a>  .
+</p><!--l. 24--><p class="indent" >  Le principe de base est de vous permettre de classer de façon simple et intuitive vos opérations
+financières, quelles qu’elles soient, afin de pouvoir les exploiter au mieux en fonction de vos
+besoins.
+</p><!--l. 26--><p class="indent" >  Grisbi a pris le parti de la simplicité et de l’efficacité pour un usage de base, sans toutefois exclure la
+sophistication nécessaire à un usage plus avancé. Les fonctionnalités futures tenteront toujours de
+respecter ces critères.
+</p>
+  <h3 class="sectionHead"><span class="titlemark">2.2</span>  <a 
+ id="x1-240002.2"></a>Fonctionnalités</h3>
+<!--l. 33--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.2.1</span>  <a 
+ id="x1-250002.2.1"></a>Ce que Grisbi sait faire</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 36--><p class="indent" >    Logiciel développé par des Français, donc en totale conformité avec la logique française
+      de la comptabilité
+        </p></li>
+      <li class="itemize">
+      <!--l. 37--><p class="indent" >    Interface simple et intuitive, avec commande d’affichage plein écran
+        </p></li>
+      <li class="itemize">
+      <!--l. 38--><p class="indent" >    Gestion multi-comptes et multi-utilisateurs
+        </p></li>
+      <li class="itemize">
+      <!--l. 39--><p class="indent" >    Gestion des paramètres locaux (dates, séparateurs décimal et des milliers)
+        </p></li>
+      <li class="itemize">
+                                                                                       
+                                                                                       
+      <!--l. 40--><p class="indent" >    Comptes bancaires, de caisse, d’actif et de passif
+        </p></li>
+      <li class="itemize">
+      <!--l. 41--><p class="indent" >    Gestion multi-devises, avec prise en charge des taux de change et des frais de change
+        </p></li>
+      <li class="itemize">
+      <!--l. 42--><p class="indent" >    Gestion des cartes bancaires (débit immédiat ou différé)
+        </p></li>
+      <li class="itemize">
+      <!--l. 43--><p class="indent" >    Description des opérations avec : date, date de valeur, exercice, tiers, montant, devise,
+      catégorie  et  sous-catégorie,  imputation  et  sous-imputation  budgétaires  (permettant  de
+      tenir  une  comptabilité  analytique),  remarque,  numéro  d’écriture  (attribué  par  Grisbi),
+      numéro de pièce comptable, références bancaires
+        </p></li>
+      <li class="itemize">
+      <!--l. 46--><p class="indent" >    Auto-complètement  des  tiers,  catégories  et  imputations  budgétaires  avec  rappel
+      automatique des opérations et des sous-opérations pour un tiers donné
+        </p></li>
+      <li class="itemize">
+      <!--l. 47--><p class="indent" >    Option d’effacement des champs Crédit et Débit pour l’auto-complètement
+        </p></li>
+      <li class="itemize">
+      <!--l. 48--><p class="indent" >    Calcul du solde en fonction de la date de l’opération ou de sa date de valeur
+        </p></li>
+      <li class="itemize">
+      <!--l. 49--><p class="indent" >    Virement  entre  comptes,  y  compris  de  devises  différentes,  avec  contre-écriture
+      automatique
+        </p></li>
+      <li class="itemize">
+      <!--l. 50--><p class="indent" >    Planification d’opérations avec validation automatique ou manuelle
+        </p></li>
+      <li class="itemize">
+      <!--l. 51--><p class="indent" >    Surveillance des échéances
+        </p></li>
+      <li class="itemize">
+      <!--l. 52--><p class="indent" >    Déplacement et clonage des opérations
+        </p></li>
+      <li class="itemize">
+      <!--l. 53--><p class="indent" >    Clonage des opérations planifiées
+        </p></li>
+      <li class="itemize">
+      <!--l. 54--><p class="indent" >    Colorisation des débits dans l’échéancier
+        </p></li>
+      <li class="itemize">
+      <!--l. 55--><p class="indent" >    Analyse et rapports financiers grâce au puissant module de génération d’états
+        </p></li>
+      <li class="itemize">
+      <!--l. 57--><p class="indent" >    Plusieurs états pré-formatés disponibles et personnalisables
+        </p></li>
+                                                                                       
+                                                                                       
+      <li class="itemize">
+      <!--l. 58--><p class="indent" >    Tiers virtuels créés par les états
+        </p></li>
+      <li class="itemize">
+      <!--l. 59--><p class="indent" >    Impression des états
+        </p></li>
+      <li class="itemize">
+      <!--l. 60--><p class="indent" >    Simulation  de  crédits  et  tableaux  d’amortissement  avec  impression  et  export  des
+      données
+        </p></li>
+      <li class="itemize">
+      <!--l. 61--><p class="indent" >    Budget prévisionnel avec graphiques sur les prévisions et les données historiques
+        </p></li>
+      <li class="itemize">
+      <!--l. 62--><p class="indent" >    Comptabilité d’association avec plan comptable
+        </p></li>
+      <li class="itemize">
+      <!--l. 63--><p class="indent" >    Ordre d’affichage des comptes par glisser/déposer dans la liste des comptes
+        </p></li>
+      <li class="itemize">
+      <!--l. 64--><p class="indent" >    Import de fichiers aux formats <a 
+href="#glo:QIF">QIF</a>, <a 
+href="#glo:OFX">OFX</a>, <a 
+href="#glo:Gnucash">Gnucash</a> ou <a 
+href="#glo:CSV">CSV</a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 65--><p class="indent" >    Import de fichiers de catégories dans les imputations budgétaires
+        </p></li>
+      <li class="itemize">
+      <!--l. 66--><p class="indent" >    Export de fichiers aux formats <a 
+href="#glo:QIF">QIF</a> ou <a 
+href="#glo:CSV">CSV</a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 67--><p class="indent" >    Icônes personnalisées dans le fichier de comptes
+        </p></li>
+      <li class="itemize">
+      <!--l. 68--><p class="indent" >    Icône de Grisbi au format <a 
+href="#glo:SVG"><span 
+class="ec-qhvr-x-x-112">SVG</span></a><a 
+ id="dx1-25001"></a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 69--><p class="indent" >    Encore  plus  de  menus  contextuels  sur  le  bouton  droit  de  la  souris  (panneau  de
+      navigation)
+        </p></li>
+      <li class="itemize">
+      <!--l. 70--><p class="indent" >    Nombreux raccourcis-clavier pour une bonne ergonomie</p></li></ul>
+<!--l. 74--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.2.2</span>  <a 
+ id="x1-260002.2.2"></a>Ce que Grisbi ne sait pas encore faire</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+                                                                                       
+                                                                                       
+      <!--l. 77--><p class="indent" >    La ventilation automatique des remboursements d’emprunt
+        </p></li>
+      <li class="itemize">
+      <!--l. 78--><p class="indent" >    Le rapprochement par Internet</p></li></ul>
+<!--l. 82--><p class="noindent" >
+</p>
+  <h3 class="sectionHead"><span class="titlemark">2.3</span>  <a 
+ id="x1-270002.3"></a>Évolution du logiciel</h3>
+<!--l. 85--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.1</span>  <a 
+ id="x1-280002.3.1"></a>Développement et versions</h4>
+<!--l. 87--><p class="noindent" >Grisbi étant un logiciel en plein développement, toute remarque (idée, bogue, documentation. . .)
+est la bienvenue. Vous pouvez l’envoyer aux différentes listes indiquées dans la
+section <a 
+href="#x1-390002.4">2.4<!--tex4ht:ref: introduction-contacts --></a>  :autorefsection30 :autorefsection30=page ci-contre <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Contacts </span>ou sur le site de
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Grisbi</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel4.html#fn3x2"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-28001f1"></a>  .
+</p><!--l. 90--><p class="indent" >  Vous pouvez, si vous avez le goût de l’aventure, télécharger et compiler la
+dernière version en cours de développement sur le système de gestion de contenu
+<a 
+href="#glo:GitHub">GitHub</a> <span class="footnote-mark"><a 
+href="00-grisbi-manuel3.html#fn2x2"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-28003f2"></a> <span class="footnote-mark"><a 
+ id="x1-28004x2.3.1"></a><a 
+ id="fn2x2">     2.  </a></span><a 
+href="https://github.com/grisbi/grisbi/" class="url" ><span 
+class="t1xtt-">https://github.com/grisbi/grisbi/</span></a> 
+utilisant <a 
+href="#glo:Git">Git</a>.
+</p><!--l. 93--><p class="indent" >  En effet, le code des nouvelles versions de Grisbi est bien souvent figé plusieurs semaines avant la
+distribution effective de celles-ci, le temps pour l’équipe de développement de vérifier et d’éradiquer
+les ultimes bogues. Pendant cette période, le format du fichier de comptes ne bouge plus, et vous
+pouvez donc, avec un minimum de précautions (sauvegardes fréquentes, etc.), bénéficier
+des dernières améliorations avec plusieurs semaines d’avance, et également participer au
+débogage.
+</p><!--l. 97--><p class="indent" >  Vous pouvez enfin avoir accès à toutes les évolutions du code postérieures à la version 0.3.2 (version
+à partir de laquelle le code est disponible sur le site de <a 
+href="#glo:GitHub">GitHub</a> <span class="footnote-mark"><a 
+href="00-grisbi-manuel3.html#fn2x2"><sup class="textsuperscript"><a 
+href="#x1-28004x2">2<!--tex4ht:ref: siteGitHubGrisbi --></a></sup></a></span>).
+</p><!--l. 99--><p class="indent" >  Notez qu’à partir de la version 0.6, les versions de numéro mineur pair (par ex. 0.<span class="underline">8</span>) sont des versions
+stables, tandis que celles de numéro mineur impair sont instables et ne devraient pas être
+utilisées en conditions normales ; de ce fait seules les versions stables sont mentionnées
+ici.
+</p><!--l. 102--><p class="indent" >
+                                                                                       
+                                                                                       
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.2</span>  <a 
+ id="x1-290002.3.2"></a>Version 0.1</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 107--><p class="indent" >    Gestion de plusieurs comptes
+        </p></li>
+      <li class="itemize">
+      <!--l. 108--><p class="indent" >    Création, modification et suppression de comptes et d’opérations (enfin le minimum
+      pour fonctionner . . .)
+        </p></li>
+      <li class="itemize">
+      <!--l. 109--><p class="indent" >    Possibilité de pointer les opérations
+        </p></li>
+      <li class="itemize">
+      <!--l. 110--><p class="indent" >    Et la sauvegarde, sans laquelle tout cela n’aurait pas beaucoup d’intérêt !</p></li></ul>
+<!--l. 113--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.3</span>  <a 
+ id="x1-300002.3.3"></a>Version 0.2</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 116--><p class="indent" >    Importation automatique des fichiers de comptes de versions précédentes
+        </p></li>
+      <li class="itemize">
+      <!--l. 117--><p class="indent" >    Utilisation de listes pour les tiers, catégories . . . (plus pratique que de tout taper)
+        </p></li>
+      <li class="itemize">
+      <!--l. 118--><p class="indent" >    Saisie automatique lors de la frappe et remplissage de la fin de l’opération comme la
+      précédente semblable
+        </p></li>
+      <li class="itemize">
+      <!--l. 119--><p class="indent" >    Gestion des virements entre comptes
+        </p></li>
+      <li class="itemize">
+      <!--l. 120--><p class="indent" >    Affichage des opération simplifié ou complet
+        </p></li>
+      <li class="itemize">
+      <!--l. 121--><p class="indent" >    Équilibrage de comptes</p></li></ul>
+<!--l. 124--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+  <h4 class="subsectionHead"><span class="titlemark">2.3.4</span>  <a 
+ id="x1-310002.3.4"></a>De la version 0.3.0 à la version 0.3.3</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 127--><p class="indent" >    Gestion des opérations prévues ou cycliques (échéancier)
+        </p></li>
+      <li class="itemize">
+      <!--l. 128--><p class="indent" >    Prise en charge des devises et du passage à l’euro (du 1er janvier 1999 au 1er janvier
+      2002)
+        </p></li>
+      <li class="itemize">
+      <!--l. 129--><p class="indent" >    Ajout de l’import/export et amélioration de l’import de fichiers <a 
+href="#glo:QIF">QIF</a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 130--><p class="indent" >    Ajout de la ventilation
+        </p></li>
+      <li class="itemize">
+      <!--l. 131--><p class="indent" >    Support multi-utilisateur
+        </p></li>
+      <li class="itemize">
+      <!--l. 132--><p class="indent" >    Pour chaque banque et compte, ajout des détails comme : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 134--><p class="indent" >    numéros complets du compte associé, du guichet et du code banque
+           </p></li>
+         <li class="itemize">
+         <!--l. 135--><p class="indent" >    titulaire différent pour chaque compte avec adresse personnelle
+           </p></li>
+         <li class="itemize">
+         <!--l. 136--><p class="indent" >    coordonnées d’un correspondant</p></li></ul>
+        </li>
+      <li class="itemize">
+      <!--l. 138--><p class="indent" >    Ajout de l’onglet catégories
+        </p></li>
+      <li class="itemize">
+      <!--l. 139--><p class="indent" >    Possibilité de changer le nom et le code des devises
+        </p></li>
+      <li class="itemize">
+      <!--l. 140--><p class="indent" >    Le classement alphabétique prend (enfin) en compte les accents
+        </p></li>
+      <li class="itemize">
+      <!--l. 141--><p class="indent" >    Mémorise le dernier répertoire de travail et les derniers fichiers ouverts
+        </p></li>
+      <li class="itemize">
+      <!--l. 142--><p class="indent" >    Un numéro unique par opération quel que soit le compte
+        </p></li>
+      <li class="itemize">
+      <!--l. 143--><p class="indent" >    Les touches <span 
+class="t1xtt-x-x-120">&lt;+&gt; </span>(<span 
+class="t1xtt-x-x-120">&lt;-&gt;</span>) dans un champ de date incrémentent (décrémentent) la
+      date.
+                                                                                       
+                                                                                       
+        </p></li>
+      <li class="itemize">
+      <!--l. 145--><p class="indent" >    Affichage possible de nouveaux champs dans le formulaire de saisie des opérations
+        </p></li>
+      <li class="itemize">
+      <!--l. 146--><p class="indent" >    Échéances paramétrables pour un laps de temps défini
+        </p></li>
+      <li class="itemize">
+      <!--l. 147--><p class="indent" >    Affichage du solde courant pointé
+        </p></li>
+      <li class="itemize">
+      <!--l. 148--><p class="indent" >    Possibilité d’entrer la date sous la forme jjmm, jjmmaa ou jjmmaaaa
+        </p></li>
+      <li class="itemize">
+      <!--l. 149--><p class="indent" >    Totaux des opérations dans les onglets Tiers, Catégories et Imputations Budgétaires
+      (IB)
+        </p></li>
+      <li class="itemize">
+      <!--l. 150--><p class="indent" >    Personnalisation possible du logo et de la police d’affichage.
+        </p></li>
+      <li class="itemize">
+      <!--l. 151--><p class="indent" >    Mise en place des outils Automake et Autoconf permettant de simplifier la compilation des
+      fichiers sources du logiciel</p></li></ul>
+<!--l. 156--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.5</span>  <a 
+ id="x1-320002.3.5"></a>De la version 0.4.0 à la version 0.4.4</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 159--><p class="indent" >    Personnalisation de l’agencement de l’interface
+        </p></li>
+      <li class="itemize">
+      <!--l. 160--><p class="indent" >    Possibilité d’import/export : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 162--><p class="indent" >    de listes de catégories
+           </p></li>
+         <li class="itemize">
+         <!--l. 163--><p class="indent" >    de listes d’imputations budgétaires (IB)
+           </p></li>
+         <li class="itemize">
+         <!--l. 164--><p class="indent" >    d’états créés</p></li></ul>
+        </li>
+      <li class="itemize">
+      <!--l. 166--><p class="indent" >    Ajout des rapports financiers
+        </p></li>
+                                                                                       
+                                                                                       
+      <li class="itemize">
+      <!--l. 167--><p class="indent" >    Grisbi est désormais internationalisé et les traductions sont améliorées
+        </p></li>
+      <li class="itemize">
+      <!--l. 168--><p class="indent" >    Affichage des soldes multi-devises dans l’écran de démarrage
+        </p></li>
+      <li class="itemize">
+      <!--l. 169--><p class="indent" >    Les remarques peuvent être affichées dans l’échéancier
+        </p></li>
+      <li class="itemize">
+      <!--l. 170--><p class="indent" >    Nouvel outil permettant aux contributeurs d’anonymiser les fichiers Grisbi afin de garder la
+      confidentialité avant de les envoyer
+        </p></li>
+      <li class="itemize">
+      <!--l. 171--><p class="indent" >    La largeur des colonnes de l’échéancier est modifiable
+        </p></li>
+      <li class="itemize">
+      <!--l. 172--><p class="indent" >    Harmonisation dans les champs de date : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 174--><p class="indent" >    <span 
+class="t1xtt-x-x-120">&lt;Ctrl&gt;&lt;Entr</span><span 
+class="t1xtt-x-x-120">ée&gt; </span>dans un champ de date ouvre un calendrier
+           </p></li>
+         <li class="itemize">
+         <!--l. 175--><p class="indent" >    les touches fléchées sont actives dans un calendrier
+           </p></li>
+         <li class="itemize">
+         <!--l. 176--><p class="indent" >    <span 
+class="t1xtt-x-x-120">&lt;Ctrl&gt;&lt;+&gt; </span>(<span 
+class="t1xtt-x-x-120">&lt;-&gt;</span>) dans un champ de date augmente (diminue) la date d’environ
+         une semaine
+           </p></li>
+         <li class="itemize">
+         <!--l. 177--><p class="indent" >    <span 
+class="t1xtt-x-x-120">&lt;Pg.Pr</span><span 
+class="t1xtt-x-x-120">éc&gt; </span>(<span 
+class="t1xtt-x-x-120">&lt;Pg.Suiv&gt;</span>) augmente (diminue) la date d’environ un mois
+           </p></li>
+         <li class="itemize">
+         <!--l. 178--><p class="indent" >    <span 
+class="t1xtt-x-x-120">&lt;Ctrl&gt;&lt;Pg.Pr</span><span 
+class="t1xtt-x-x-120">éc&gt; </span>(<span 
+class="t1xtt-x-x-120">&lt;Pg.Suiv&gt;</span>) augmente (diminue) la date d’environ un an</p></li></ul>
+      </li></ul>
+<!--l. 182--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.6</span>  <a 
+ id="x1-330002.3.6"></a>De la version 0.4.5 à la version 0.6</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 185--><p class="indent" >    Refonte de l’interface graphique
+        </p></li>
+      <li class="itemize">
+      <!--l. 186--><p class="indent" >    Support de la bibliothèque <a 
+href="#glo:GTK">GTK</a>+ 2 pour un environnement plus sympathique et un
+      portage simplifié sous Windows
+                                                                                       
+                                                                                       
+        </p></li>
+      <li class="itemize">
+      <!--l. 187--><p class="indent" >    Plus aucune dépendance vis-à-vis de <a 
+href="#glo:Gnome">Gnome</a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 188--><p class="indent" >    Version Windows native (merci à François <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Terrot</span>)
+        </p></li>
+      <li class="itemize">
+      <!--l. 189--><p class="indent" >    Support <a 
+href="#glo:UTF-8">UTF-8</a> natif
+        </p></li>
+      <li class="itemize">
+      <!--l. 190--><p class="indent" >    Impression des états par <a 
+href="#glo:LaTeX">L<span 
+class="ntx-Regular-tlf-t1-x-x-80">A</span>TeX</a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 191--><p class="indent" >    Export des états en <a 
+href="#glo:HTML">HTML</a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 192--><p class="indent" >    Amélioration de l’interface utilisateur : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 194--><p class="indent" >    amélioration des messages, les utilisateurs peuvent en ignorer
+           </p></li>
+         <li class="itemize">
+         <!--l. 195--><p class="indent" >    amélioration de la gestion des erreurs de segmentation
+           </p></li>
+         <li class="itemize">
+         <!--l. 196--><p class="indent" >    amélioration de la fenêtre des préférences
+           </p></li>
+         <li class="itemize">
+         <!--l. 197--><p class="indent" >    menu contextuel sur la liste des opérations
+           </p></li>
+         <li class="itemize">
+         <!--l. 198--><p class="indent" >    amélioration des items</p></li></ul>
+        </li>
+      <li class="itemize">
+      <!--l. 200--><p class="indent" >    Listes de comptes et d’états complètement cliquables
+        </p></li>
+      <li class="itemize">
+      <!--l. 201--><p class="indent" >    Configuration globale en <a 
+href="#glo:XML">XML</a> (merci à Axel Rousseau)
+        </p></li>
+      <li class="itemize">
+      <!--l. 202--><p class="indent" >    Réécriture de l’import de fichiers : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 204--><p class="indent" >    support des formats <a 
+href="#glo:QIF">QIF</a>, <a 
+href="#glo:OFX">OFX</a>, <a 
+href="#glo:Gnucash">Gnucash</a> ou <a 
+href="#glo:CSV">CSV</a>
+           </p></li>
+         <li class="itemize">
+         <!--l. 205--><p class="indent" >    import incrémental
+           </p></li>
+                                                                                       
+                                                                                       
+         <li class="itemize">
+         <!--l. 206--><p class="indent" >    rapprochement automatique</p></li></ul>
+        </li>
+      <li class="itemize">
+      <!--l. 208--><p class="indent" >    Début de la traduction italienne par Giorgio <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Mandolfo</span>
+        </p></li>
+      <li class="itemize">
+      <!--l. 209--><p class="indent" >    Taux de change cachés sur une session pour éviter de les ressaisir
+        </p></li>
+      <li class="itemize">
+      <!--l. 210--><p class="indent" >    Support des attributs de texte (gras, italique, grand, petit) pour les états
+        </p></li>
+      <li class="itemize">
+      <!--l. 211--><p class="indent" >    Nouveau logo avec la mascotte Grisbi sur le symbole de l’euro (<span 
+class="ntx-Regular-tlf-t1-x-x-84">=</span>C) (merci à André
+      <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Pascual</span>)
+        </p></li>
+      <li class="itemize">
+      <!--l. 212--><p class="indent" >    Logo d’attente animé modifiable
+        </p></li>
+      <li class="itemize">
+      <!--l. 213--><p class="indent" >    Complètement des listes sensible à la casse des caractères
+        </p></li>
+      <li class="itemize">
+      <!--l. 214--><p class="indent" >    Amélioration de la saisie des détails des banques
+        </p></li>
+      <li class="itemize">
+      <!--l. 215--><p class="indent" >    Support du clavier dans l’arborescence des tiers, catégories et imputations budgétaires
+        </p></li>
+      <li class="itemize">
+      <!--l. 216--><p class="indent" >    Échéances automatiques à terme cliquables
+        </p></li>
+      <li class="itemize">
+      <!--l. 217--><p class="indent" >    Échéances ventilables
+        </p></li>
+      <li class="itemize">
+      <!--l. 218--><p class="indent" >    Opérations convertibles en échéances
+        </p></li>
+      <li class="itemize">
+      <!--l. 219--><p class="indent" >    Opérations déplaçables dans un autre compte</p></li></ul>
+<!--l. 223--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.7</span>  <a 
+ id="x1-340002.3.7"></a>Nouveautés de la version 0.8</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 226--><p class="indent" >    Module budgétaire dans la version de base
+                                                                                       
+                                                                                       
+        </p></li>
+      <li class="itemize">
+      <!--l. 227--><p class="indent" >    Simulateur  de  crédits  et  tableaux  d’amortissement  avec  possibilité  d’imprimer  et
+      d’exporter les données dans un tableur
+        </p></li>
+      <li class="itemize">
+      <!--l. 228--><p class="indent" >    Tableau  d’amortissement  pour  les  comptes  de  passif  avec  possibilité  d’imprimer  et
+      d’exporter les données dans un tableur
+        </p></li>
+      <li class="itemize">
+      <!--l. 229--><p class="indent" >    Gestion des paramètres locaux (format des dates, séparateurs décimal et des milliers)
+        </p></li>
+      <li class="itemize">
+      <!--l. 230--><p class="indent" >    Incorporation des icônes personnalisées dans le fichier de comptes
+        </p></li>
+      <li class="itemize">
+      <!--l. 231--><p class="indent" >    Colorisation des débits dans l’échéancier
+        </p></li>
+      <li class="itemize">
+      <!--l. 232--><p class="indent" >    Clonage des opérations planifiées</p></li></ul>
+<!--l. 236--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.8</span>  <a 
+ id="x1-350002.3.8"></a>Nouveautés de la version 1.0</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 239--><p class="indent" >    Graphiques sur les prévisions
+        </p></li>
+      <li class="itemize">
+      <!--l. 240--><p class="indent" >    Gestion des cartes bancaires (débit immédiat ou différé)
+        </p></li>
+      <li class="itemize">
+      <!--l. 241--><p class="indent" >    Comptabilité d’association avec plan comptable
+        </p></li>
+      <li class="itemize">
+      <!--l. 242--><p class="indent" >    Icône de Grisbi au format <a 
+href="#glo:SVG"><span 
+class="ec-qhvr-x-x-112">SVG</span></a><a 
+ id="dx1-35001"></a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 243--><p class="indent" >    Encore plus de menus contextuels sur le bouton droit de la souris
+        </p></li>
+      <li class="itemize">
+      <!--l. 244--><p class="indent" >    Import de fichiers de catégories dans les imputations budgétaires
+        </p></li>
+      <li class="itemize">
+      <!--l. 245--><p class="indent" >    Modification de l’ordre d’affichage des comptes par glisser/déposer dans la liste des
+      comptes
+                                                                                       
+                                                                                       
+        </p></li>
+      <li class="itemize">
+      <!--l. 246--><p class="indent" >    Calcul du solde en fonction de la date de l’opération ou de sa date de valeur
+        </p></li>
+      <li class="itemize">
+      <!--l. 247--><p class="indent" >    Option d’effacement des champs Crédit et Débit pour l’auto-complètement
+        </p></li>
+      <li class="itemize">
+      <!--l. 248--><p class="indent" >    Affichage des tiers inutilisés
+        </p></li>
+      <li class="itemize">
+      <!--l. 249--><p class="indent" >    Commande d’affichage plein écran par la touche de fonction <span 
+class="t1xtt-x-x-120">&lt;F11&gt;</span>
+        </p></li>
+      <li class="itemize">
+      <!--l. 250--><p class="indent" >  Raccourci-clavier <span 
+class="t1xtt-x-x-120">&lt;Ctrl&gt;&lt;T&gt; </span>pour l’appel d’une nouvelle opération
+        </p></li>
+      <li class="itemize">
+      <!--l. 251--><p class="indent" >    Accès  direct  au  manuel  de  l’utilisateur  par  le  menu  <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Aide  </span>ou  le  raccourci-clavier
+      <span 
+class="t1xtt-x-x-120">&lt;Ctrl&gt;&lt;H&gt;</span></p></li></ul>
+<!--l. 255--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.9</span>  <a 
+ id="x1-360002.3.9"></a>Nouveautés de la version 2.0</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 258--><p class="indent" >    Portage sous <a 
+href="#glo:GTK">GTK</a>+ 3 (depuis la version 1.2.0)
+        </p></li>
+      <li class="itemize">
+      <!--l. 259--><p class="indent" >    Ajout d’un module de recherche dans la liste des opérations accessibles, dans le menu
+      contextuel des opérations (clic droit sur une opération)
+        </p></li>
+      <li class="itemize">
+      <!--l. 260--><p class="indent" >    Détection automatique/intégration de schéma de couleur foncée
+        </p></li>
+      <li class="itemize">
+      <!--l. 261--><p class="indent" >    Nouveaux réglages pour les couleurs
+        </p></li>
+      <li class="itemize">
+      <!--l. 262--><p class="indent" >    Configuration générale de la taille de police
+        </p></li>
+      <li class="itemize">
+      <!--l. 263--><p class="indent" >    Affichage amélioré sur les dispositifs à faible résolution
+        </p></li>
+      <li class="itemize">
+      <!--l. 264--><p class="indent" >    Révision du module de crédit
+        </p></li>
+                                                                                       
+                                                                                       
+      <li class="itemize">
+      <!--l. 265--><p class="indent" >    Règles d’importation pour les fichiers <a 
+href="#glo:CSV">CSV</a>
+        </p></li>
+      <li class="itemize">
+      <!--l. 266--><p class="indent" >    Fonctionnalité de recherche
+        </p></li>
+      <li class="itemize">
+      <!--l. 267--><p class="indent" >    Réglage pour la suppression d’anciennes sauvegardes
+        </p></li>
+      <li class="itemize">
+      <!--l. 268--><p class="indent" >    Résolution de bogues</p></li></ul>
+<!--l. 272--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.10</span>  <a 
+ id="x1-370002.3.10"></a>Nouveautés de la version 3.0</h4>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 275--><p class="indent" >    Modification de la recherche du bénéficiaire
+        </p></li>
+      <li class="itemize">
+      <!--l. 276--><p class="indent" >    Ajout d’un nouveau type de prêt à la consommation
+        </p></li>
+      <li class="itemize">
+      <!--l. 277--><p class="indent" >    Ajout de toutes les transactions dans les archives lorsque le compte est clôturé
+        </p></li>
+      <li class="itemize">
+      <!--l. 278--><p class="indent" >    Nettoyage du code
+        </p></li>
+      <li class="itemize">
+      <!--l. 279--><p class="indent" >    Préparation de la transition vers <a 
+href="#glo:GTK">GTK</a> 4
+        </p></li>
+      <li class="itemize">
+      <!--l. 280--><p class="indent" >    Résolution de bogues</p></li></ul>
+<!--l. 283--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.3.11</span>  <a 
+ id="x1-380002.3.11"></a>Et pour le futur ?</h4>
+<!--l. 285--><p class="noindent" >Portage complet sous <a 
+href="#glo:GTK">GTK</a> 4
+</p><!--l. 289--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+  <h3 class="sectionHead"><span class="titlemark">2.4</span>  <a 
+ id="x1-390002.4"></a>Contacts</h3>
+<!--l. 292--><p class="noindent" >Outre les courriers aux auteurs, vous disposez de plusieurs listes de diffusion pour nous contacter ou
+obtenir des informations.
+</p><!--l. 295--><p class="indent" >  Pour être tenu(e) au courant des évolutions de Grisbi, vous pouvez vous inscrire sur la <span 
+class="ntx-Italic-tlf-t1-x-x-120">liste</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">d’information</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel4.html#fn3x2"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-39001f1"></a> <span class="footnote-mark"><a 
+ id="x1-39002x2.4"></a><a 
+ id="fn3x2">     1.  </a></span><a 
+href="info@listes.grisbi.org" class="url" ><span 
+class="t1xtt-">info@listes.grisbi.org</span></a> 
+prévue à cet effet. Vous recevrez juste un courriel à la sortie de chaque nouvelle version.
+</p><!--l. 299--><p class="indent" >  Si vous souhaitez participer au développement de Grisbi, il existe une <span 
+class="ntx-Italic-tlf-t1-x-x-120">liste</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">d</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">éveloppement</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel3.html#fn2x2"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-39003f2"></a> <span class="footnote-mark"><a 
+ id="x1-39004x2.4"></a><a 
+ id="fn2x2">     2.  </a></span><a 
+href="devel@listes.grisbi.org" class="url" ><span 
+class="t1xtt-">devel@listes.grisbi.org</span></a> .
+</p><!--l. 301--><p class="indent" >  Par ailleurs, nous avons décidé d’entreprendre l’internationalisation de Grisbi et, si vous
+souhaitez nous aider, vous pouvez dans un premier temps nous contacter sur la liste de
+développement.
+</p><!--l. 304--><p class="indent" >  Pour vous abonner à l’une de ces listes, rendez vous simplement sur la page 
+<a 
+href="https://listes.grisbi.org/mailman/listinfo" class="url" ><span 
+class="t1xtt-x-x-120">https://listes.grisbi.org/mailman/listinfo</span></a> puis cliquez sur la/les liste(s) qui vous
+intéresse(nt).
+</p><!--l. 308--><p class="indent" >  Vous pouvez également utiliser les forums de discussions (ou newsgroups) avec un logiciel appelé
+&#x0022;lecteur de nouvelles&#x0022; (comme Thunderbird par exemple) en renseignant <span 
+class="t1xtt-x-x-120">listes.grisbi.org</span>
+comme nom de serveur de groupes.
+</p><!--l. 310--><p class="indent" >  N’hésitez pas de toute façon à consulter régulièrement le site officiel de Grisbi.
+</p><!--l. 315--><p class="noindent" >
+</p>
+  <h3 class="sectionHead"><span class="titlemark">2.5</span>  <a 
+ id="x1-400002.5"></a>Auteurs et contributions</h3>
+<!--l. 318--><p class="noindent" >Cédric <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Auger </span>est à la base du projet de ce manuel.
+</p><!--l. 320--><p class="indent" >  Daniel <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Cartron </span>a rédigé la documentation jusqu’à la version 0.4.0, fourni des conseils en
+comptabilité et en ergonomie, et créé le premier site de Grisbi. Sa passion des fichiers de comptes ultra
+compliqués amène un plus indéniable à la découverte de bogues inédits.
+</p><!--l. 324--><p class="indent" >  André <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Pascual</span>, de <span 
+class="ntx-Italic-tlf-t1-x-x-120">Linuxgraphic</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel4.html#fn3x2"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-40001f3"></a> <span class="footnote-mark"><a 
+ id="x1-40002x2.5"></a><a 
+ id="fn3x2">     3.  </a></span><a 
+href="https://www.linuxgraphic.org" class="url" ><span 
+class="t1xtt-">https://www.linuxgraphic.org</span></a> ,
+est l’auteur du premier logo (mascotte Grisbi sur le symbole de l’euro <span 
+class="ntx-Regular-tlf-t1-x-x-84">=</span> C).
+</p><!--l. 327--><p class="indent" >  Sébastien <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Blondeel </span>a écrit les scripts permettant de produire les différents formats de
+la documentation et ceux relatifs à la conversion des images aux formats adéquats. Il est
+également l’artisan de l’adoption de <a 
+href="#glo:LaTeX">L<span 
+class="ntx-Regular-tlf-t1-x-x-80">A</span>TeX</a> pour la rédaction de la documentation. En outre, son
+expérience de l’édition électronique en fait un précieux conseiller, source de nombreuses
+suggestions.
+</p><!--l. 329--><p class="indent" >  Benjamin <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Drieu</span>, développeur pour Grisbi et empaqueteur officiel pour <a 
+href="#glo:Debian">Debian</a>.
+</p><!--l. 331--><p class="indent" >  Alain <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Portal</span>, qui commençait à s’ennuyer dans l’empaquetage <a 
+href="#glo:RedHat">Red Hat</a>, s’essaye au
+développement. Son amour du travail bien fait et son opiniâtreté font de lui, pour le moment, un
+correcteur de bogues. Il participe également à l’élaboration de la documentation. Il se prend une envie
+de commencer à coder dans la version instable.
+</p><!--l. 333--><p class="indent" >  Loic <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Breilloux </span>a mis à jour la documentation pour la version 0.5.1 et va tâcher de faire les mises à
+jour de la documentation pour les versions futures.
+</p><!--l. 335--><p class="indent" >  Gérald <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Niel </span>a remplacé Daniel <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Cartron </span>dans le rôle de webmestre et est donc le créateur de la nouvelle version
+                                                                                       
+                                                                                       
+du site de <span 
+class="ntx-Italic-tlf-t1-x-x-120">Grisbi</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel5.html#fn4x2"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-40003f1"></a>  .
+Il est également responsable des paquets <a 
+href="#glo:Slackware">Slackware</a>.
+</p><!--l. 339--><p class="indent" >  Juliette <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Martin </span>assure la tâche ingrate de relecture de la documentation. S’il reste des
+erreurs, c’est certainement qu’elles étaient bien cachées pour avoir échappé à ses yeux
+attentifs.
+</p><!--l. 342--><p class="indent" >  François <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Terrot</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel3.html#fn2x2"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-40005f2"></a> <span class="footnote-mark"><a 
+ id="x1-40006x2.5"></a><a 
+ id="fn2x2">     2.  </a></span><a 
+href="grisbi@terrot.net" class="url" ><span 
+class="t1xtt-">grisbi@terrot.net</span></a> 
+a rejoint l’équipe afin d’assurer le <a 
+href="#glo:portage">portage</a> de Grisbi sous Windows.
+</p><!--l. 344--><p class="indent" >  Pierre <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Biava</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel4.html#fn3x2"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-40007f3"></a> <span class="footnote-mark"><a 
+ id="x1-40008x2.5"></a><a 
+ id="fn3x2">     3.  </a></span><a 
+href="pierre.biava@orange.fr" class="url" ><span 
+class="t1xtt-">pierre.biava@orange.fr</span></a> 
+a rejoint l’équipe de développement en 2008.
+</p><!--l. 346--><p class="indent" >  Didier <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Chevalier</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel5.html#fn4x2"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x1-40009f4"></a> <span class="footnote-mark"><a 
+ id="x1-40010x2.5"></a><a 
+ id="fn4x2">     4.  </a></span><a 
+href="didier.chevalier35@gmail.com" class="url" ><span 
+class="t1xtt-">didier.chevalier35@gmail.com</span></a> ,
+William <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Ollivier</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel6.html#fn5x2"><sup class="textsuperscript">5</sup></a></span><a 
+ id="x1-40011f5"></a>  
+et Mickaël <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Remars </span>ont eux aussi participé au développement.
+</p><!--l. 348--><p class="indent" >  Jean-Luc <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Duflot</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel7.html#fn6x2"><sup class="textsuperscript">6</sup></a></span><a 
+ id="x1-40013f6"></a>  
+a réalisé pour la version 0.6 une grosse mise à jour du manuel, qui en avait bien besoin depuis 2004, et
+a continué sur la 0.8 et la 1.0.
+</p><!--l. 350--><p class="indent" >  Alain <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Letient</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel8.html#fn7x2"><sup class="textsuperscript">7</sup></a></span><a 
+ id="x1-40015f7"></a>  
+a effectué avec ténacité la relecture du manuel 0.6 et a réalisé son iconographie, et a aussi continué sur
+les versions 0.8 et 1.0.
+</p><!--l. 352--><p class="indent" >  Guy <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Leb</span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">ègue</span>, d’abord pour la version 0.8, puis avec Michèle
+<span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Bondil</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel9.html#fn8x2"><sup class="textsuperscript">8</sup></a></span><a 
+ id="x1-40017f8"></a>  
+pour la 1.0, ont réalisé la partie Comptabilité d’association, qui nécessite bien des compétences de
+spécialiste en comptabilité.
+</p>
+  <h3 class="sectionHead"><span class="titlemark">2.6</span>  <a 
+ id="x1-410002.6"></a>Remerciements</h3>
+<!--l. 358--><p class="noindent" >Merci à <span 
+class="ntx-Italic-tlf-t1-x-x-120">TuxFamily</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel10.html#fn9x2"><sup class="textsuperscript">9</sup></a></span><a 
+ id="x1-41001f9"></a>  
+qui a longtemps mis à notre disposition tous les outils dont nous avions besoin pour développer Grisbi (site
+Internet, ftp, CVS, listes de diffusions, etc.). Hélas, les attaques de pirates subies fin 2003 - début 2004 par
+                                                                                       
+                                                                                       
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">TuxFamily </span>nous ont contraint à chercher un nouvel hébergement. Nous remercions donc aujourd’hui’hui
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">SourceForge</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel11.html#fn10x2"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-41003f1"></a>  ,
+la plateforme sur laquelle nous avons migré, et souhaitons un prompt et rapide rétablissement à
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">TuxFamily </span>qui fait cruellement défaut à des centaines de projets libres.
+</p><!--l. 362--><p class="indent" >  Un grand merci également à tous les contributeurs de la liste de développement qui participent à
+l’évolution de Grisbi par leurs suggestions, remarques et rapports de bogues, ainsi qu’aux
+nombreux relecteurs du <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Manuel de l'utilisateur</span>, qui contribuent à en faire un meilleur
+outil.
+</p>
+  <h3 class="sectionHead"><span class="titlemark">2.7</span>  <a 
+ id="x1-420002.7"></a>Licences</h3>
+<!--l. 368--><p class="noindent" >Le programme est soumis aux termes de la <a 
+href="#glo:Licence Publique Generale GNU">Licence Publique Générale GNU</a> (en anglais : <a 
+href="#glo:GNU General Public License"><span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">General Public License</span></a>). Les corrections de bogues et mises à jour ne sont pas garanties.
+</p><!--l. 371--><p class="indent" >  Le manuel est soumis aux termes de la <a 
+href="#glo:Licence de Documentation Libre GNU">Licence de Documentation Libre GNU</a> (en anglais : <a 
+href="#glo:GNU Free Documentation License"><span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Free Documentation License</span></a>).
+</p><!--l. 373--><p class="indent" >  Permission est accordée de copier, distribuer et/ou modifier ce document selon les termes de la
+Licence de Documentation Libre GNU version 1.1 ou toute version ultérieure publiée par la <a 
+href="#glo:Free Software Foundation"><span 
+class="ntx-Italic-tlf-t1-x-x-120">Free</span>
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Software Foundation</span></a>.
+</p><!--l. 377--><p class="noindent" >
+</p>
+  <h3 class="sectionHead"><span class="titlemark">2.8</span>  <a 
+ id="x1-430002.8"></a>À propos du présent manuel</h3>
+<!--l. 380--><p class="noindent" >Vous avez sous les yeux la version 3.0 du manuel, en date de décembre 2024, qui correspond à la
+version 3.0 du logiciel Grisbi.
+</p><!--l. 384--><p class="indent" >  <span 
+class="ntx-Bold-tlf-t1-x-x-120">Note </span>: cette version 3.0 du manuel est une mise à jour de la version 2.0 sauf pour le chapitre <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span>
+page ?? <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Comptabilit</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">é d'association</span>, qui reste en version 2.0
+</p><!--l. 388--><p class="indent" >  Ce manuel a été écrit avec le <a 
+href="#glo:formateur de texte">formateur de texte</a> <a 
+href="#glo:LaTeX">L<span 
+class="ntx-Regular-tlf-t1-x-x-80">A</span>TeX</a><a 
+ id="dx1-43001"></a>, et il est disponible sous le <a 
+href="#glo:format de fichier">format de fichier</a>
+<a 
+href="#glo:PDF">PDF</a> ou <a 
+href="#glo:HTML">HTML</a>, avec illustrations (copies d’écran) dans ces deux formats.
+</p><!--l. 390--><p class="indent" >  Il est accessible directement dans le logiciel Grisbi par le menu <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Aide - Manuel </span>de la barre de menus,
+sous le format <a 
+href="#glo:HTML">HTML</a> avec illustrations.
+</p><!--l. 392--><p class="indent" >  Cependant, tous ces différents formats peuvent être téléchargés sur le site de
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Sourceforge</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel3.html#fn2x2"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-43002f2"></a> <span class="footnote-mark"><a 
+ id="x1-43003x2.8"></a><a 
+ id="fn2x2">     2.  </a></span><a 
+href="https://sourceforge.net/projects/grisbi/files/Documentation/" class="url" ><span 
+class="t1xtt-">https://sourceforge.net/projects/grisbi/files/Documentation/</span></a> ,
+ainsi  que  les  versions  correspondantes  du  logiciel  sur
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Sourceforge</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel4.html#fn3x2"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-43004f3"></a> <span class="footnote-mark"><a 
+ id="x1-43005x2.8"></a><a 
+ id="fn3x2">     3.  </a></span><a 
+href="https://sourceforge.net/projects/grisbi/files/" class="url" ><span 
+class="t1xtt-">https://sourceforge.net/projects/grisbi/files/</span></a> 
+dans les dossiers « <span 
+class="ec-qhvr-x-x-112">grisbi stable </span>» ou « <span 
+class="ec-qhvr-x-x-112">grisbi unstable </span>».
+</p><!--l. 394--><p class="indent" >  Les outils nécessaires à la lecture de ces différents formats de documentation sont présentés dans
+la section <a 
+href="#x1-460002.8.3">2.8.3<!--tex4ht:ref: introduction-manual-readers --></a>  :autorefsubsection36 :autorefsubsection36=page suivante <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Logiciels de</span>
+<span 
+class="ntxth-Italic-tlf-t-1x-x-120">lecture</span>.
+                                                                                       
+                                                                                       
+</p><!--l. 397--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.8.1</span>  <a 
+ id="x1-440002.8.1"></a>Présentation</h4>
+<!--l. 399--><p class="noindent" >Bien que le logiciel Grisbi soit conçu pour être le plus intuitif possible et que la plupart des fonctions
+soient immédiatement compréhensibles, il est nécessaire de disposer d’un manuel de référence. Ce
+manuel a été conçu selon les principes suivants :
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 402--><p class="indent" >    le plus exhaustif possible, donc description de toutes les fonctionnalités ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 403--><p class="indent" >    chapitres organisés suivant une trame la plus standardisée possible : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 405--><p class="indent" >    présentation du chapitre,
+           </p></li>
+         <li class="itemize">
+         <!--l. 406--><p class="indent" >    description de l’affichage,
+           </p></li>
+         <li class="itemize">
+         <!--l. 407--><p class="indent" >    description des fonctions,</p></li></ul>
+   <!--l. 409--><p class="noindent" >pour faciliter le repérage dans le document ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 410--><p class="indent" >    rédaction des paragraphes récurrents d’un chapitre à l’autre d’une manière la plus identique
+      possible, pour faciliter la lecture rapide ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 411--><p class="indent" >    recherche d’information facilitée grâce aux nombreux <a 
+href="#glo:liens hypertexte">liens hypertexte</a>, à un index et à un
+      glossaire.</p></li></ul>
+<!--l. 416--><p class="indent" >  Voici une description succincte des différents chapitres :
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 419--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Pr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éambule </span>explique l’origine du nom donné à ce logiciel ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 420--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Introduction </span>présente le logiciel, le manuel, leurs auteurs et les contacts ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 421--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Premier d</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">émarrage de Grisbi </span>est le chapitre <span 
+class="ntx-Italic-tlf-t1-x-x-120">indispensable </span>pour commencer l’utilisation
+      du logiciel ;
+        </p></li>
+      <li class="itemize">
+                                                                                       
+                                                                                       
+      <!--l. 422--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Accueil </span>décrit les éléments principaux de l’interface graphique et leur manipulation à
+      la souris et au clavier (raccourcis) ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 423--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Export et Import de comptes </span>décrit comment échanger des données avec les autres
+      logiciels ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 424--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Gestion des donn</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">ées </span>présente les options des fichiers de comptes, les sauvegardes et
+      les archives ainsi que leur gestion ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 425--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Gestion des comptes </span>décrit les propriétés des comptes, leur gestion et les différents
+      types de comptes avec leur utilisation ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 426--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Op</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">érations  d'un  compte  </span>décrit  les  manipulations  sur  les  opérations,  les  champs
+      d’information et de saisie utilisés et leur gestion, la création d’opérations et leur gestion ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 427--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Rapprochement bancaire </span>détaille la procédure de rapprochement d’un compte et la
+      gestion des rapprochements ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 428--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Éch</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éancier </span>décrit la planification des opérations futures et leur manipulation ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 429--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Recherches </span>fait le point sur les possibilités de recherche de données ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 430--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Tiers</span>,  <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Cat</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">égories</span>,  <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Imputations  budg</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">étaires  </span>et  <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Exercices  </span>décrivent  la  gestion  de  ces
+      données ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 431--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Simulation de cr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">édit </span>décrit les méthodes et la gestion de simulations ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 432--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Budgets pr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">évisionnels </span>décrit les outils et les procédures de création de budget et de
+      tableaux d’amortissement, ainsi que leur gestion ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 433--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Gestion  des  cartes  bancaires  et  leurs  pr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">évisions  </span>décrit  la  gestion  de  ces  cartes,
+      notamment celles à débit différé, et les méthodes de prévision ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 434--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Comptabilit</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">é    d'association    </span>présente    deux    introductions    pour    les    trésoriers
+      d’association ;
+        </p></li>
+      <li class="itemize">
+                                                                                       
+                                                                                       
+      <!--l. 435--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">États </span>et <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Cr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éation d'un </span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">état </span>décrivent la gestion et la création des états ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 436--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Con guration de Grisbi </span>détaille toutes les possibilités de réglage du logiciel ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 437--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Outils de maintenance </span>donne quelques clés à utiliser en cas d’erreurs ou de bogues.</p></li></ul>
+<!--l. 441--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.8.2</span>  <a 
+ id="x1-450002.8.2"></a>Conventions typographiques du présent manuel</h4>
+<!--l. 443--><p class="noindent" >La liste suivante définit et illustre les conventions typographiques utilisées comme aides visuelles à
+l’identification d’éléments particuliers du texte du document :
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 446--><p class="indent" >    les composants d’interface sont des titres de fenêtre, des noms d’icône et de bouton,
+      des noms de menu et d’autres options qui apparaissent sur l’écran du moniteur ; ils sont
+      présentés ainsi : <br 
+class="newline" />                 cliquez sur <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Retour </span>;
+        </p></li>
+      <li class="itemize">
+      <!--l. 448--><p class="indent" >    le libellé des touches du clavier représente ce qui est écrit sur les touches du clavier ; il
+      est présenté ainsi : <br 
+class="newline" />                 appuyez sur la touche <span 
+class="t1xtt-x-x-120">&lt;Entr</span><span 
+class="t1xtt-x-x-120">ée&gt; </span>;
+        </p></li>
+      <li class="itemize">
+      <!--l. 450--><p class="indent" >    les combinaisons de touches sont une série de touches à enfoncer simultanément (à
+      moins  d’indication  contraire)  pour  réaliser  une  fonction  unique ;  elles  sont  présentées
+      ainsi : <br 
+class="newline" />                 appuyez sur la combinaison de touches <span 
+class="t1xtt-x-x-120">&lt;Ctrl&gt;&lt;R&gt; </span>;
+        </p></li>
+      <li class="itemize">
+      <!--l. 452--><p class="indent" >    les  commandes  qui  font  partie  d’une  instruction  et  qui  doivent  être  saisies  sont
+      présentées ainsi : <br 
+class="newline" />                 tapez <span 
+class="t1xtt-x-x-120">grisbi </span>pour démarrer le programme ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 454--><p class="indent" >    les noms de fichier et de répertoire sont présentés ainsi : <br 
+class="newline" />                 <span 
+class="ntx-Bold-tlf-t1-x-x-120">grisbi-n.n.n.rpm </span>et <span 
+class="ntx-Bold-tlf-t1-x-x-120">/usr/local/bin </span>;
+        </p></li>
+      <li class="itemize">
+      <!--l. 456--><p class="indent" >    les lignes de commande consistent en une commande et peuvent inclure un ou plusieurs
+      paramètres possibles de la commande ; elles sont présentées ainsi : <br 
+class="newline" />                  <span 
+class="t1xtt-x-x-120">rpm -Uvh grisbi-n.n.n.rpm </span>;
+                                                                                       
+                                                                                       
+        </p></li>
+      <li class="itemize">
+      <!--l. 458--><p class="indent" >    toute suite de caractères alphanumériques en bleu, dans le document au format <a 
+href="#glo:PDF">PDF</a> ou
+      <a 
+href="#glo:HTML">HTML</a>, est un lien hypertexte, renvoyant soit à une image, une autre partie du document,
+      un mot indexé ou encore au glossaire (pour <a 
+href="#glo:PDF">PDF</a> uniquement) ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 459--><p class="indent" >    les  mots  ou  groupes  de  mots  référencés  dans  l’index  sont  mis  en  valeur  dans  les
+      chapitres ainsi : <br 
+class="newline" />                  <span 
+class="ec-qhvr-x-x-112">terme r</span><span 
+class="ec-qhvr-x-x-112">éf</span><span 
+class="ec-qhvr-x-x-112">érenc</span><span 
+class="ec-qhvr-x-x-112">é </span>pour le format <a 
+href="#glo:PDF">PDF</a> ; <br 
+class="newline" />                  en marron pour le format <a 
+href="#glo:HTML">HTML</a>.</p></li></ul>
+<!--l. 466--><p class="indent" >  De plus, une <span 
+class="ntx-Bold-tlf-t1-x-x-120">Note </span>souligne un point particulier à prendre en compte, tandis qu’un <span id="textcolor1"><span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Attention</span></span>
+indique soit un point très important pour la compréhension, soit une erreur à ne pas faire sous peine de
+dommage important pour vos données ; un <span id="textcolor2"><span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Attention</span></span> est <span 
+class="ntx-Italic-tlf-t1-x-x-120">à respecter imp</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">érativement</span>.
+</p><!--l. 469--><p class="noindent" >
+</p>
+  <h4 class="subsectionHead"><span class="titlemark">2.8.3</span>  <a 
+ id="x1-460002.8.3"></a>Logiciels de lecture</h4>
+<!--l. 471--><p class="noindent" >Pour lire ce document, nous vous recommandons l’utilisation de logiciels libres, qui respectent tous
+votre vie privée et la confidentialité de vos données ; les logiciels suivants disposent des fonctionnalités
+de <a 
+href="#glo:liens hypertexte">liens hypertexte</a> : </p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 473--><p class="indent" >    pour le format <a 
+href="#glo:PDF">PDF</a> : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 475--><p class="indent" >    Linux : Evince, Firefox, Xpdf, Ghostscript, MuPDF, Okular,
+           </p></li>
+         <li class="itemize">
+         <!--l. 476--><p class="indent" >    Mac : Okular, Skim, Xpdf,
+           </p></li>
+         <li class="itemize">
+         <!--l. 477--><p class="indent" >    Windows : Evince, Firefox, MuPDF, Okular, SumatraPdf ;</p></li></ul>
+        </li>
+      <li class="itemize">
+      <!--l. 479--><p class="indent" >    pour le format <a 
+href="#glo:HTML">HTML</a> : </p>
+           <ul class="itemize2">
+         <li class="itemize">
+         <!--l. 481--><p class="indent" >    Linux : Firefox, Falcon, Links2, Midori, Dillo, SeaMonkey, NetSurf, Min,
+           </p></li>
+         <li class="itemize">
+         <!--l. 482--><p class="indent" >    Mac : Firefox, Falcon, Midori, SeaMonkey, NetSurf,
+           </p></li>
+         <li class="itemize">
+         <!--l. 483--><p class="indent" >    Windows : Firefox, Falcon, Midori, SeaMonkey, NetSurf.</p></li></ul>
+      </li></ul>
+                                                                                       
+                                                                                       
+<!--l. 489--><p class="indent" >  Bref, vous avez le choix !
+</p><!--l. 493--><p class="indent" >  Ces logiciels sont tous téléchargeables sur leur propre site Internet et sont tous placés sous une
+licence de <a 
+href="#glo:logiciel libre">logiciel libre</a>, et vous pouvez, pour certains, en lire une présentation sur le site de
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Framasoft</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel5.html#fn4x2"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-46001f1"></a> <span class="footnote-mark"><a 
+ id="x1-46002x2.8.3"></a><a 
+ id="fn4x2">     1.  </a></span><a 
+href="https://framalibre.org/" class="url" ><span 
+class="t1xtt-">https://framalibre.org/</span></a> .
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 9--><p class="indent" >
+                                                                                       
+                                                                                       
+</p>
+  <h2 class="chapterHead"><span class="titlemark">3</span>  <a 
+ id="x1-470003"></a>Entrée dans Grisbi</h2>
+<!--l. 19--><p class="noindent" >Au lancement de l’application, Grisbi affiche la page qui vous permet de démarrer de différentes
+manières.
+</p><!--l. 25--><p class="indent" >  Vous pouvez afficher la fenêtre de Grisbi en <span 
+class="ec-qhvr-x-x-112">plein </span><span 
+class="ec-qhvr-x-x-112">écran</span><a 
+ id="dx1-47001"></a><a 
+ id="dx1-47002"></a> par la touche de fonction <span 
+class="t1xtt-x-x-120">&lt;F11&gt;</span>, et revenir
+en arrière par la même touche.
+</p>
+  <figure class="figure"> 
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<div class="center" 
+>
+<!--l. 31--><p class="noindent" >
+</p><!--l. 32--><p class="noindent" ><img 
+src="image/screenshot/start_grisbi.png" alt="PIC"  
+width="432" height="432"  /></p></div>
+<a 
+ id="x1-47003r1"></a>
+<figcaption class="caption" ><span class="id"><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Figure</span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120"> 3.1</span> – </span><span  
+class="content">Fenêtre de démarrage
+</span></figcaption><!--tex4ht:label?: x1-47003r1 -->
+                                                                                       
+                                                                                       
+  </figure>
+<!--l. 41--><p class="indent" >  Cette fenêtre affiche plusieurs pavés ;
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 44--><p class="indent" >    le pavé Nouveau, pour lancer l’assistant d’Aide à la création d’un nouveau fichier de
+      comptabilités (ou fichier de compte<span 
+class="ntx-Bold-tlf-t1-x-x-120">S </span>pour Grisbi, notez le <span 
+class="ntx-Bold-tlf-t1-x-x-120">S</span>) ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 45--><p class="indent" >    le pavé Ouvrir, pour afficher un gestionnaire de fichier avec lequel vous pourrez chercher
+      un fichier de comptes existant dans votre ordinateur ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 46--><p class="indent" >    le pavé Importer, pour lancer l’assistant d’Aide à l’importation de fichiers ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 47--><p class="indent" >    un ou plusieurs autres pavés, portant le nom de fichiers de comptabilité (ou fichiers de
+      compte<span 
+class="ntx-Bold-tlf-t1-x-x-120">S </span>pour Grisbi, notez le <span 
+class="ntx-Bold-tlf-t1-x-x-120">S</span>) que Grisbi a déjà utilisés.</p></li></ul>
+<!--l. 51--><p class="indent" >
+                                                                                       
+                                                                                       
+</p><!--l. 53--><p class="indent" >  <span 
+class="ntx-Bold-tlf-t1-x-x-120">Note </span>: les pavés portant les noms des fichiers de comptabilité que Grisbi a déjà utilisés ne sont
+présents que si ces fichiers existent ; si vous voulez les enlever de cette page d’entrée, déplacez les dans
+un autre répertoire, ou supprimez-les.
+</p><!--l. 57--><p class="indent" >  En bas de page, un bandeau vous appelle à choisir une action en sélectionnant l’un de ces
+pavés.
+</p><!--l. 61--><p class="indent" >  Si vous voulez juste découvrir le logiciel Grisbi pour avoir un aperçu de son aspect et de ses
+possibilités, vous pouvez à la place utiliser un fichier exemple comme celui présent sur le site de
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Sourceforge.net</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel12.html#fn1x3"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-47004f1"></a>  
+dans le dossier « <span 
+class="ec-qhvr-x-x-112">examples </span>».
+</p><!--l. 65--><p class="indent" >  <span 
+class="ntx-Bold-tlf-t1-x-x-120">Note </span>: en cliquant simplement sur le fichier exemple téléchargé, Grisbi affichera directement la
+fenêtre d’accueil (fig. <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ??) sans passer par la fenêtre de démarrage.
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 16--><p class="indent" >
+                                                                                       
+                                                                                       
+</p>
+  <h2 class="chapterHead"><span class="titlemark">4</span>  <a 
+ id="x1-480004"></a>Premier démarrage de Grisbi</h2>
+  <h3 class="sectionHead"><span class="titlemark">4.1</span>  <a 
+ id="x1-490004.1"></a>Assistant premier démarrage</h3>
+<!--l. 22--><p class="noindent" >Après l’installation de Grisbi, au premier lancement du logiciel, l’assistant premier démarrage s’affiche
+pour vous aider à configurer l’application. Il comprend deux étapes, dont la deuxième qui concerne la
+gestion du <span 
+class="ec-qhvr-x-x-112">fichier de comptabilit</span><span 
+class="ec-qhvr-x-x-112">é</span><a 
+ id="dx1-49001"></a> (chargement et enregistrement automatiques, chiffrement et copies de
+sauvegarde).
+</p>
+  <figure class="figure"> 
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<div class="center" 
+>
+<!--l. 27--><p class="noindent" >
+</p><!--l. 28--><p class="noindent" ><img 
+src="image/screenshot/start_first_launch.png" alt="PIC"  
+width="409" height="409"  /></p></div>
+<a 
+ id="x1-49002r1"></a>
+<figcaption class="caption" ><span class="id"><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Figure</span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120"> 4.1</span> – </span><span  
+class="content">Configuration initiale du fichier de comptabilité.
+</span></figcaption><!--tex4ht:label?: x1-49002r1 -->
+                                                                                       
+                                                                                       
+  </figure>
+<!--l. 34--><p class="indent" >  Il est conseillé de cocher les options :
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 37--><p class="indent" >    chargement automatique du dernier fichier consulté ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 38--><p class="indent" >    enregistrer automatiquement en fermant ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 39--><p class="indent" >    effectuer une copie de sauvegarde avant d’enregistrer les fichiers (coché par défaut).</p></li></ul>
+<!--l. 43--><p class="indent" >  <span id="textcolor3"><span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Attention</span></span> : si vous cochez l’option <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Chi rer le  chier Grisbi</span>, la perte du mot de passe rendra votre
+fichier inutilisable.
+</p><!--l. 46--><p class="indent" >  Cet assistant est suivi automatiquement par un deuxième, l’assistant de création du <span 
+class="ec-qhvr-x-x-112">fichier de</span>
+<span 
+class="ec-qhvr-x-x-112">comptabilit</span><span 
+class="ec-qhvr-x-x-112">é</span><a 
+ id="dx1-49003"></a>. Puis vient automatiquement un troisième assistant, l’assistant de création de compte,
+qui permet de créer le premier compte. Tout cela est décrit en détail dans la section <a 
+href="#x1-510004.3">4.3<!--tex4ht:ref: start-newfile --></a>
+ci-dessous.
+</p><!--l. 48--><p class="indent" >  À tout moment vous pouvez sortir de n’importe quel assistant par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Annuler</span>.
+</p><!--l. 50--><p class="indent" >  Si vous ne voulez pas utiliser l’assistant premier démarrage, vous pouvez à la place utiliser un fichier
+exemple (voir la section ci-dessous).
+</p>
+  <h3 class="sectionHead"><span class="titlemark">4.2</span>  <a 
+ id="x1-500004.2"></a>Fichier exemple</h3>
+<!--l. 57--><p class="noindent" >Si vous voulez utiliser Grisbi immédiatement sans être obligé de rentrer tout un
+tas d’opérations, par exemple pour vous faire une idée des possibilités de ce
+logiciel, vous pouvez télécharger le fichier <span 
+class="ntx-Bold-tlf-t1-x-x-120">Example_3.0-fr.gsb </span>sur le site de
+<span 
+class="ntx-Italic-tlf-t1-x-x-120">Sourceforge.net</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel13.html#fn1x4"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-50001f1"></a>  
+dans le dossier « <span 
+class="ec-qhvr-x-x-112">examples </span>».
+</p><!--l. 61--><p class="indent" >  <span 
+class="ntx-Bold-tlf-t1-x-x-120">Note </span>: dans ce fichier exemple, les noms des tiers sont de pure invention ; seul un hasard
+indépendant de notre volonté peut avoir fait que ce soit celui d’une personne ou d’une entité
+existante.
+</p>
+  <h3 class="sectionHead"><span class="titlemark">4.3</span>  <a 
+ id="x1-510004.3"></a>Création d’un nouveau fichier de comptabilité</h3>
+<!--l. 67--><p class="noindent" >La première fois que vous utiliserez Grisbi, vous devrez d’abord créer un <span 
+class="ec-qhvr-x-x-112">fichier de comptabilit</span><span 
+class="ec-qhvr-x-x-112">é</span><a 
+ id="dx1-51001"></a> (ou
+fichiers de compte<span 
+class="ntx-Bold-tlf-t1-x-x-120">S </span>pour Grisbi, notez le <span 
+class="ntx-Bold-tlf-t1-x-x-120">S</span>). L’<a 
+href="#glo:extension">extension</a> de ce fichier sera <span 
+class="ntx-Bold-tlf-t1-x-x-120">.gsb </span>et son nom
+<span 
+class="ntx-Bold-tlf-t1-x-x-120">nom-de-votre-fichier.gsb</span>.
+</p><!--l. 70--><p class="indent" >  Immédiatement après, il vous faudra créer au minimum un compte (bancaire, de caisse, de passif ou
+                                                                                       
+                                                                                       
+d’actif, décrits au chapitre <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ?? <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Gestion des comptes</span>), et par la suite quelques autres comptes
+(comptes courants, d’épargne, de crédit, éventuellement un compte d’espèces et quelques comptes de
+transition) qui contiendront leurs opérations respectives.
+</p><!--l. 72--><p class="indent" >  Pour une gestion familiale, vous n’aurez normalement qu’un seul fichier de comptabilité (que
+Grisbi appelle fichier de compte<span 
+class="ntx-Bold-tlf-t1-x-x-120">S</span>, notez le <span 
+class="ntx-Bold-tlf-t1-x-x-120">S</span>), car cela permet tous les échanges entre
+vos différents comptes. Si vous gérez une association, ou une autre famille sans rapport
+comptable avec la première, vous créerez un autre fichier de comptabilité, qui portera un autre
+nom <span 
+class="ntx-Bold-tlf-t1-x-x-120">nom-de-votre-deuxi</span><span 
+class="ntx-Bold-tlf-t1-x-x-120">ème-fichier.gsb</span>. Ainsi les <span 
+class="ec-qhvr-x-x-112">entit</span><span 
+class="ec-qhvr-x-x-112">és comptables</span><a 
+ id="dx1-51002"></a> resteront bien
+séparées.
+</p><!--l. 76--><p class="indent" >  <span id="textcolor4"><span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Attention</span></span> : pour une entité comptable donnée, il est nécessaire et important de bien distinguer LE
+« <span 
+class="ec-qhvr-x-x-112">fichier de comptes</span><a 
+ id="dx1-51003"></a> » et LES « <span 
+class="ec-qhvr-x-x-112">fichiers de compte</span><a 
+ id="dx1-51004"></a> » :
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 79--><p class="indent" >    LE « fichier de comptes » que vous aurez créé aura pour extension <span 
+class="ntx-Bold-tlf-t1-x-x-120">.gsb </span>et pour nom
+      <span 
+class="ntx-Bold-tlf-t1-x-x-120">nom-de-votre-fichier.gsb </span>; il contient toutes les données de tous les comptes créés pour
+      la gestion d’une entité comptable ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 80--><p class="indent" >    LES « fichiers de compte » sont des fichiers que vous pourriez être amené(e) à utiliser
+      ou à créer pour importer ou exporter des données d’une application de comptabilité à une
+      autre ; ces fichiers ne contiendront que les données d’un seul compte (courant ou autre) à
+      la fois ; ils auront des extensions différentes (<span 
+class="ntx-Bold-tlf-t1-x-x-120">.ofx</span>, <span 
+class="ntx-Bold-tlf-t1-x-x-120">.csv </span>ou <span 
+class="ntx-Bold-tlf-t1-x-x-120">.qif</span>) suivant leur contenu ; pour
+      plus de détails, voir le chapitre <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ??, <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Export et import de comptes</span>.</p></li></ul>
+<!--l. 85--><p class="indent" >  Autrement dit, l’ensemble des comptes de votre foyer est enregistré dans un fichier de comptabilité,
+et l’ensemble des comptes de votre association l’est dans un autre fichier de comptabilité ; et un compte
+dans Grisbi peut correspondre à un fichier de compte, mais seulement lorsqu’on parle d’importation ou
+d’exportation de données.
+</p><!--l. 89--><p class="indent" >  Le déroulement général de la procédure de création d’un fichier de comptabilité est le suivant :
+cliquez sur le menu <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Fichier > Nouveau  chier de comptabilit</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">é </span>; l’assistant de création de
+fichier de comptabilité s’ouvre, qui comprend six étapes. À la sixième étape, l’assistant vous
+propose :
+</p>
+        <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 92--><p class="indent" >    soit de créer un nouveau compte, et il enchaîne sur l’assistant de création de compte,
+      qui comprend lui-même cinq étapes, pour créer le premier compte (car il est indispensable
+      de disposer d’au moins un compte) ;
+        </p></li>
+      <li class="itemize">
+      <!--l. 93--><p class="indent" >    soit  d’utiliser  des  données  déjà  existantes,  et  il  enchaîne  alors  sur  l’assistant
+      d’importation  des  opérations,  qui  comprend  aussi  cinq  étapes,  pour  importer  des
+      opérations de comptes existants.</p></li></ul>
+<!--l. 96--><p class="indent" >  Après la création de ce premier compte ou l’importation d’opérations de comptes existants, si vous
+                                                                                       
+                                                                                       
+voulez créer d’autres comptes, vous retournerez à la fin de la procédure de création du
+fichier de comptes, ce qui vous renverra dans les deux cas vers la création d’un nouveau
+compte.
+</p><!--l. 100--><p class="indent" >  Pour créer votre fichier de comptabilité, cliquez sur le menu <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Fichier > Nouveau  chier de</span>
+<span 
+class="ntxth-Italic-tlf-t-1x-x-120">comptabilit</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">é</span>, la procédure détaillée est la suivante :
+</p><!--l. 102--><p class="indent" >
+        </p><ol  class="enumerate1" >
+<li 
+  class="enumerate" id="x1-51006x1">
+      <!--l. 103--><p class="indent" >    Fenêtre d’accueil : validez par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Suivant </span>(étape 1/6) :
+        </p></li>
+<li 
+  class="enumerate" id="x1-51008x2">
+      <!--l. 104--><p class="indent" >    Configuration générale (étape 2/6) :
+</p>
+        <figure class="figure"> 
+
+<div class="center" 
+>
+<!--l. 115--><p class="noindent" >
+</p><!--l. 116--><p class="noindent" ><img 
+src="image/screenshot/start_file_create.png" alt="PIC"  
+width="409" height="409"  /></p></div>
+<a 
+ id="x1-51009r2"></a>
+      <figcaption class="caption" ><span class="id"><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Figure</span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120"> 4.2</span> – </span><span  
+class="content">Configuration générale du fichier de comptabilité
+      </span></figcaption><!--tex4ht:label?: x1-51009r2 -->
+        </figure>
+      <!--l. 124--><p class="indent" >
+           </p><ol  class="enumerate2" >
+<li 
+  class="enumerate" id="x1-51011x1">
+         <!--l. 125--><p class="indent" >    choisissez le nom de l’entité comptable dont vous gérez la comptabilité, par exemple
+         « Ma  comptabilité »,  qui  pourra  être  choisi  comme  titre  de  la  page  d’accueil  de
+         l’application Grisbi,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51013x2">
+         <!--l. 126--><p class="indent" >    saisissez le nom du fichier de comptes avec son arborescence complète ; Grisbi vous
+         propose par défaut le même nom que celui de l’entité comptable, mais vous pouvez
+         le modifier,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51015x3">
+         <!--l. 127--><p class="indent" >    cochez la case <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Chi rer le  chier Grisbi </span>si vous voulez <a 
+href="#glo:chiffrer">chiffrer</a> le fichier de comptes,
+         </p><!--l. 130--><p class="indent" >  <span id="textcolor5"><span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Attention</span></span> : si vous cochez l’option <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Chi rer le  chier Grisbi</span>, la perte du mot de
+         passe rendra votre fichier inaccessible.
+                                                                                       
+                                                                                       
+           </p></li>
+<li 
+  class="enumerate" id="x1-51017x4">
+         <!--l. 133--><p class="indent" >    sélectionnez le <span 
+class="ec-qhvr-x-x-112">format de la date</span><a 
+ id="dx1-51018"></a> avec l’un des quatre boutons :
+        </p>
+              <ul class="itemize1">
+           <li class="itemize">
+           <!--l. 136--><p class="indent" >    &#x0022;dd/mm/yyyy&#x0022; pour &#x0022;jour/mois/année&#x0022;,
+              </p></li>
+           <li class="itemize">
+           <!--l. 137--><p class="indent" >    &#x0022;mm/dd/yyyy&#x0022; pour &#x0022;mois/jour/année&#x0022;,
+              </p></li>
+           <li class="itemize">
+           <!--l. 138--><p class="indent" >    &#x0022;dd.mm.yyyy&#x0022; pour &#x0022;jour.mois.année&#x0022;,
+              </p></li>
+           <li class="itemize">
+           <!--l. 139--><p class="indent" >    &#x0022;yyyy-mm-dd&#x0022; pour &#x0022;année-mois-jour&#x0022;,</p></li></ul>
+           </li>
+<li 
+  class="enumerate" id="x1-51020x5">
+         <!--l. 142--><p class="indent" >    choisissez le <span 
+class="ec-qhvr-x-x-112">s</span><span 
+class="ec-qhvr-x-x-112">éparateur</span><a 
+ id="dx1-51021"></a> décimal et celui des milliers dans les listes déroulantes,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51023x6">
+         <!--l. 143--><p class="indent" >    renseignez l’adresse (facultatif),
+           </p></li>
+<li 
+  class="enumerate" id="x1-51025x7">
+         <!--l. 144--><p class="indent" >    validez par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Suivant </span>;</p></li></ol>
+        </li>
+<li 
+  class="enumerate" id="x1-51027x3">
+      <!--l. 147--><p class="indent" >    Sélection de la <span 
+class="ec-qhvr-x-x-112">devise</span><a 
+ id="dx1-51028"></a> de base (étape 3/6) :
+           </p><ol  class="enumerate2" >
+<li 
+  class="enumerate" id="x1-51030x1">
+         <!--l. 149--><p class="indent" >    cliquez sur la devise choisie dans la liste,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51032x2">
+         <!--l. 150--><p class="indent" >    cochez la case <span 
+class="ntxth-Italic-tlf-t-1x-x-120">A cher les devises obsol</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">ètes </span>si vous voulez aussi afficher d’anciennes
+         devises,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51034x3">
+         <!--l. 151--><p class="indent" >    validez par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Suivant </span>;</p></li></ol>
+                                                                                       
+                                                                                       
+        </li>
+<li 
+  class="enumerate" id="x1-51036x4">
+      <!--l. 154--><p class="indent" >    sélection des <span 
+class="ec-qhvr-x-x-112">types de cat</span><span 
+class="ec-qhvr-x-x-112">égories</span><a 
+ id="dx1-51037"></a> utilisées (étape 4/6) :
+</p>
+        <figure class="figure"> 
+
+<div class="center" 
+>
+<!--l. 157--><p class="noindent" >
+</p><!--l. 158--><p class="noindent" ><img 
+src="image/screenshot/start_category_select.png" alt="PIC"  
+width="409" height="409"  /></p></div>
+<a 
+ id="x1-51038r3"></a>
+      <figcaption class="caption" ><span class="id"><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Figure</span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120"> 4.3</span> – </span><span  
+class="content">Sélection des catégories à utiliser
+      </span></figcaption><!--tex4ht:label?: x1-51038r3 -->
+        </figure>
+      <!--l. 164--><p class="indent" >
+           </p><ol  class="enumerate2" >
+<li 
+  class="enumerate" id="x1-51040x1">
+         <!--l. 165--><p class="indent" >    cliquez sur la catégorie choisie dans la liste ci-dessus :
+           </p></li>
+<li 
+  class="enumerate" id="x1-51042x2">
+         <!--l. 173--><p class="indent" >    cochez  la  case  <span 
+class="ntxth-Italic-tlf-t-1x-x-120">A cher  l'ensemble  des  cat</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">égories  </span>si  vous  voulez  aussi  afficher
+         d’autres catégories libellées en anglais,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51044x3">
+         <!--l. 174--><p class="indent" >    validez par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Suivant </span>;</p></li></ol>
+        </li>
+<li 
+  class="enumerate" id="x1-51046x5">
+      <!--l. 177--><p class="indent" >    Définition des <span 
+class="ec-qhvr-x-x-112">banques</span><a 
+ id="dx1-51047"></a> détenant vos comptes (étape 5/6) :
+           </p><ol  class="enumerate2" >
+<li 
+  class="enumerate" id="x1-51049x1">
+         <!--l. 179--><p class="indent" >    cliquez sur <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Ajouter </span>pour définir une banque ; renseignez les détails de la banque
+         (nom, code banque, etc.), puis validez par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Ajouter </span>pour valider la banque,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51051x2">
+         <!--l. 180--><p class="indent" >    sélectionnez une banque dans la liste et validez par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Enlever </span>pour supprimer
+         une banque, puis confirmez dans la fenêtre qui s’ouvre,
+           </p></li>
+<li 
+  class="enumerate" id="x1-51053x3">
+         <!--l. 181--><p class="indent" >    répétez les actions a et b autant de fois que nécessaire,
+                                                                                       
+                                                                                       
+           </p></li>
+<li 
+  class="enumerate" id="x1-51055x4">
+         <!--l. 182--><p class="indent" >    validez par le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Suivant </span>pour passer à l’étape suivante, <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Cr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éation d'un nouveau</span>
+         <span 
+class="ntxth-Italic-tlf-t-1x-x-120">compte </span>;</p></li></ol>
+        </li>
+<li 
+  class="enumerate" id="x1-51057x6">
+      <!--l. 185--><p class="indent" >    Configuration terminée (étape 6/6) :
+      </p><!--l. 186--><p class="indent" >  La configuration du fichier de comptabilité est terminée, et la fenêtre ci-dessous vous
+      propose de choisir l’une des deux méthodes de création de votre premier compte :
+      </p><figure class="figure"> 
+
+<div class="center" 
+>
+<!--l. 195--><p class="noindent" >
+</p><!--l. 196--><p class="noindent" ><img 
+src="image/screenshot/start_account_choice.png" alt="PIC"  
+width="409" height="409"  /></p></div>
+<a 
+ id="x1-51058r4"></a>
+      <figcaption class="caption" ><span class="id"><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Figure</span><span 
+class="ntx-Regular-tlf-sc-t1-x-x-120"> 4.4</span> – </span><span  
+class="content">Choix du premier compte
+      </span></figcaption><!--tex4ht:label?: x1-51058r4 -->
+        </figure>
+           <ul class="itemize1">
+         <li class="itemize">
+         <!--l. 205--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Cr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éer un nouveau compte vide </span>: si vous cochez cette ligne, puis si vous validez par
+         le bouton <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Fermer</span>, cette fenêtre se ferme et l’assistant de création de nouveau compte
+         démarre. Reportez-vous à la section <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ??, <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Cr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éation d'un nouveau compte</span>, qui
+         décrit entièrement cette procédure, puis revenez à cette page ;
+           </p></li>
+         <li class="itemize">
+         <!--l. 207--><p class="indent" >    <span 
+class="ntxth-Italic-tlf-t-1x-x-120">À  partir  de  donn</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">ées  provenant  d'un   chier  bancaire  ou  d'un  autre  logiciel  </span>:  si
+         vous  cochez  cette  ligne,  puis  si  vous  validez  par  le  bouton  <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Fermer</span>,  cette  fenêtre
+         se ferme et l’assistant d’importation des données d’un fichier de compte par Grisbi
+         démarre. Reportez-vous à la section <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ??, <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Import de  chiers de compte d'un</span>
+         <span 
+class="ntxth-Italic-tlf-t-1x-x-120">autre logiciel dans Grisbi</span>, qui décrit entièrement cette procédure, puis revenez à cette
+         page.</p></li></ul>
+      </li></ol>
+<!--l. 214--><p class="indent" >  <span 
+class="ntx-BoldItalic-tlf-t1-x-x-120">D’une mani</span><span 
+class="ntx-BoldItalic-tlf-t1-x-x-120">ère ou d’une autre</span>, vous venez donc de créer votre fichier de comptabilité, ainsi que le
+premier compte de ce fichier.
+</p><!--l. 218--><p class="indent" >  Si vous voulez créer maintenant d’autres comptes, sélectionnez le menu <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Édition - Nouveau</span>
+<span 
+class="ntxth-Italic-tlf-t-1x-x-120">compte </span>pour créer un autre compte (voir la section <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ??, <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Cr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éation d'un nouveau</span>
+<span 
+class="ntxth-Italic-tlf-t-1x-x-120">compte</span>).
+</p><!--l. 222--><p class="indent" >  Sinon, vous pouvez commencer à utiliser le compte que vous venez de créer ou celui dont vous
+venez d’importer les données.
+                                                                                       
+                                                                                       
+</p><!--l. 226--><p class="indent" >  <span id="textcolor6"><span 
+class="ntx-Bold-tlf-sc-t1-x-x-120">Attention</span></span> : d’une manière générale, il est déconseillé d’avoir des accents ou des espaces dans les
+noms des répertoires et fichiers utilisés par Grisbi. Si c’est le cas, renommez-les maintenant. Par
+exemple, les espaces peuvent être remplacées par des tirets bas (_).
+</p><!--l. 232--><p class="noindent" >
+</p>
+  <h3 class="sectionHead"><span class="titlemark">4.4</span>  <a 
+ id="x1-520004.4"></a>Enregistrement de votre fichier de comptabilité</h3>
+<!--l. 235--><p class="noindent" >Vos opérations ne sont pas écrites au fur et à mesure de leur saisie comme elles peuvent l’être dans
+d’autres logiciels ; vous devez donc enregistrer votre fichier de comptabilité avant de quitter. N’ayez
+crainte, Grisbi vous prévient si vous ne l’avez pas fait.
+</p><!--l. 238--><p class="indent" >  Vous pouvez configurer les options d’enregistrement du fichier de comptabilité dans le menu <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Édition</span>
+<span 
+class="ntxth-Italic-tlf-t-1x-x-120">- Pr</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">éf</span><span 
+class="ntxth-Italic-tlf-t-1x-x-120">érences</span>, voir le paragraphe <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ??, <span 
+class="ntxth-Italic-tlf-t-1x-x-120">Gestion des  chiers de comptes</span>.
+</p><!--l. 241--><p class="noindent" >
+</p>
+  <h3 class="sectionHead"><span class="titlemark">4.5</span>  <a 
+ id="x1-530004.5"></a>Import à partir d’un autre logiciel de comptabilité personnelle</h3>
+<!--l. 243--><p class="noindent" >Voir la section <span 
+class="ntx-Bold-tlf-t1-x-x-120">??</span> page ?? pour importer des fichiers de compte d’un autre logiciel dans Grisbi. Pour
+le moment, Grisbi supporte les formats <a 
+href="#glo:Gnucash">Gnucash</a>, <a 
+href="#glo:OFX">OFX</a>, <a 
+href="#glo:CSV">CSV</a> et <a 
+href="#glo:QIF">QIF</a>.
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 433--><p class="indent" >
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="indent" >  <a 
+ id="chapter*.6"></a>
+</p><!--l. 1--><p class="noindent" >
+</p>
+  <h2 class="likechapterHead"><a 
+ id="x1-54000"></a>Index</h2>
+  <div class="theindex"><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">A</span>
+<span class="index-item">affichage <br /></span>
+<span class="index-subitem">    plein écran, 17 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">B</span>
+<span class="index-item">banques <br /></span>
+<span class="index-subitem">    définition, 22 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">C</span>
+<span class="index-item">catégories <br /></span>
+<span class="index-subitem">    types, 22 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">D</span>
+<span class="index-item">devise, 22 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">E</span>
+<span class="index-item">entité comptable, 20 <br /></span>
+<span class="index-item">étymologie, 1 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">F</span>
+<span class="index-item">fichier de comptabilité, 19, 20 <br /></span>
+<span class="index-item">fichier de comptes, 20 <br /></span>
+<span class="index-item">fichiers de compte, 20 <br /></span>
+<span class="index-item">format de date, 22 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">G</span>
+<span class="index-item">Grisbi, 1 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">L</span>
+<span class="index-item">LaTeX, 14 <br /></span>
+                                                                                       
+                                                                                       
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">P</span>
+<span class="index-item">plein écran <br /></span>
+<span class="index-subitem">    affichage, 17 <br /></span>
+<span class="index-item">portage, 7 <br /></span>
+</p><p class="theindex">
+  <span 
+class="ntx-Bold-tlf-t1-x-x-120">S</span>
+<span class="index-item">séparateur, 22 <br /></span>
+<span class="index-item">svg, 8, 11 <br /></span>
+</p></div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!--l. 1--><p class="indent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="indent" >  <a 
+ id="likesection.7"></a><a 
+ id="x1-54001x"></a><a 
+ id="Q1-1-61"></a>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="indent" >  <a 
+ id="chapter*.8"></a>
+</p><!--l. 1--><p class="noindent" >
+</p>
+  <h2 class="likechapterHead"><a 
+ id="x1-55000"></a>Glossaire</h2>
+<!--l. 1--><p class="noindent" ><span 
+class="ntx-Bold-tlf-t1-x-x-120">Note </span>: la plupart des définitions des entrées de ce glossaire est issue des articles du même nom de l’encyclopédie libre et
+collaborative <span 
+class="ntx-Italic-tlf-t1-x-x-120">Wikip</span><span 
+class="ntx-Italic-tlf-t1-x-x-120">édia</span> <span class="footnote-mark"><a 
+href="00-grisbi-manuel14.html#fn2x4"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-55001f1"></a>  .
+Bien que ces textes aient été modifiés et adaptés au contexte particulier de ce glossaire, l’auteur
+remercie Wikipédia de lui avoir fourni ces références.<br 
+class="newline" />
+        </p><dl class="description"><dt class="description">
+  <a 
+ id="glo:chiffrer"></a><span 
+class="ec-qhvb-x-x-112">chiffrer</span> </dt><dd 
+class="description">
+      <!--l. 28--><p class="indent" >    Chiffrer  ou  crypter  un  document  est  en  cryptographie  le  procédé  grâce  auquel  on
+      souhaite rendre la compréhension de ce document impossible à toute personne qui ne
+      connaît pas la clé de (dé)chiffrement. 21
+        </p></dd><dt class="description">
+  <a 
+ id="glo:CSV"></a><span 
+class="ec-qhvb-x-x-112">CSV</span> </dt><dd 
+class="description">
+      <!--l. 33--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">Comma-Separated Values</span>) est un format ouvert de données représentant celles-ci sous forme
+      de valeurs séparées par des virgules. 8, 10, 11, 24
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Debian"></a><span 
+class="ec-qhvb-x-x-112">Debian</span> </dt><dd 
+class="description">
+      <!--l. 36--><p class="indent" >    est une organisation communautaire et démocratique dont le but est le développement de
+      systèmes d’exploitation basés exclusivement sur des logiciels libres. Les systèmes d’exploitation
+      Debian sont aussi utilisés comme base par de nombreuses autres distributions comme Knoppix
+      ou Ubuntu, qui rencontrent un grand succès. Son nom vient de la contraction de deux prénoms
+      : Debra, la femme du créateur du projet, et Ian <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Murdock</span>, le créateur lui-même.
+      12
+        </p></dd><dt class="description">
+  <a 
+ id="glo:distributions Linux"></a><span 
+class="ec-qhvb-x-x-112">distributions Linux</span> </dt><dd 
+class="description">
+      <!--l. 38--><p class="indent" >    Une distribution Linux, appelée aussi distribution GNU/Linux pour faire référence aux
+      logiciels du projet <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU</span>, est un ensemble cohérent de logiciels, la plupart sous licence libre,
+      assemblés autour du noyau Linux. Il existe une très grande variété de distributions, chacune
+      ayant des objectifs et une philosophie particulière. 7
+        </p></dd><dt class="description">
+  <a 
+ id="glo:extension"></a><span 
+class="ec-qhvb-x-x-112">extension</span> </dt><dd 
+class="description">
+      <!--l. 41--><p class="indent" >    C’est une courte chaîne de caractères (le plus souvent 3 caractères), précédée
+      d’un point, qui est ajoutée à la fin du nom d’un fichier pour permettre d’identifier
+      rapidement son format. Par exemple, le fichier lisez-moi.pdf est un fichier au format PDF.
+      20
+                                                                                       
+                                                                                       
+        </p></dd><dt class="description">
+  <a 
+ id="glo:format de fichier"></a><span 
+class="ec-qhvb-x-x-112">format de fichier</span> </dt><dd 
+class="description">
+      <!--l. 44--><p class="indent" >    C’est une convention, éventuellement normalisée, utilisée pour représenter des données (des
+      informations représentant un texte, une page, une image, un son, un fichier exécutable, etc.). Une
+      telle convention permet d’échanger des données entre différents logiciels. On peut identifier le
+      format d’un fichier par son extension, si le nom de ce fichier en comporte une, ce qui n’est pas
+      obligatoire. 14
+        </p></dd><dt class="description">
+  <a 
+ id="glo:formateur de texte"></a><span 
+class="ec-qhvb-x-x-112">formateur de texte</span> </dt><dd 
+class="description">
+      <!--l. 46--><p class="indent" >    est le nom donné aux logiciels destinés à mettre en page du texte, laissant le rédacteur
+      concentré sur son texte, et sans que l’affichage du résultat ne perturbe son activité créatrice. Le
+      résultat sera obtenu ultérieurement par compilation du document source dans le format désiré,
+      par exemple PDF ou PostScript. LaTeX est un exemple de formateur de texte. Il s’agit d’un
+      concept opposé à celui du traitement de texte, où rédaction et mise en forme peuvent être créées
+      au cours du même processus. 14
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Free Software Foundation"></a><span 
+class="ec-qhvbi-x-x-112">Free Software Foundation</span> </dt><dd 
+class="description">
+      <!--l. 48--><p class="indent" >    abrégé en <span 
+class="ntx-Italic-tlf-t1-x-x-120">FSF</span>, soit Fondation pour le Logiciel Libre, est une organisation états-unienne à but
+      non lucratif fondée par Richard <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Stallman </span>le 4 octobre 1985, dont la mission mondiale est la
+      promotion du logiciel libre et la défense des utilisateurs. La <span 
+class="ntx-Italic-tlf-t1-x-x-120">FSF </span>aide également au financement
+      du projet <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU </span>depuis l’origine. Son nom est associé au mouvement du logiciel libre.
+      14
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Git"></a><span 
+class="ec-qhvb-x-x-112">Git</span> </dt><dd 
+class="description">
+      <!--l. 51--><p class="indent" >    est un logiciel de gestion décentralisée de versions logicielles. C’est un logiciel libre créé par
+      Linus <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Torvalds</span>, le créateur du noyau Linux, et distribué selon les termes de la Licence
+      Publique Générale GNU version 2. 8
+        </p></dd><dt class="description">
+  <a 
+ id="glo:GitHub"></a><span 
+class="ec-qhvb-x-x-112">GitHub</span> </dt><dd 
+class="description">
+      <!--l. 53--><p class="indent" >    est un service web d’hébergement et de gestion de développement de logiciels, utilisant le
+      logiciel de gestion de versions Git. 8
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Gnome"></a><span 
+class="ec-qhvb-x-x-112">Gnome</span> </dt><dd 
+class="description">
+      <!--l. 55--><p class="indent" >    acronyme de <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU Network Object Model Environment</span>, est un environnement de bureau libre
+      et convivial dont l’objectif est de rendre accessible l’utilisation du système d’exploitation
+      <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU </span>au plus grand nombre; cette interface graphique est populaire sur les systèmes
+      GNU/Linux et fonctionne également sur la plupart des systèmes de type UNIX.
+      10
+        </p></dd><dt class="description">
+  <a 
+ id="glo:GNU Free Documentation License"></a><span 
+class="ec-qhvbi-x-x-112">GNU Free Documentation License</span> </dt><dd 
+class="description">
+      <!--l. 57--><p class="indent" >    est le nom anglais officiel, abrégé en <span 
+class="ntx-Italic-tlf-t1-x-x-120">GFDL</span>, de la Licence de Documentation Libre GNU.
+      C’est une licence relevant du droit d’auteur, produite par la <span 
+class="ntx-Italic-tlf-t1-x-x-120">Free Software Foundation</span>.
+      Elle a pour but de protéger la diffusion de contenus libres et peut être utilisée par
+      chacun afin de déterminer le mode de diffusion de son œuvre. L’objet de cette licence
+      est de rendre un document, écrit sur tout support (manuel, livre, etc.), « libre » au
+      sens de la liberté d’utilisation, à savoir : assurer à chacun la liberté effective de le
+      copier ou de le redistribuer, avec ou sans modifications, commercialement ou non.
+      14
+                                                                                       
+                                                                                       
+        </p></dd><dt class="description">
+  <a 
+ id="glo:GNU General Public License"></a><span 
+class="ec-qhvbi-x-x-112">GNU General Public License</span> </dt><dd 
+class="description">
+      <!--l. 59--><p class="indent" >    est le nom anglais officiel, communément abrégé en <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU GPL</span>, voire simplement <span 
+class="ntx-Italic-tlf-t1-x-x-120">GPL</span>,
+      de la Licence Publique Générale GNU. C’est une licence qui fixe les conditions
+      légales de distribution des logiciels libres du projet <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU</span>. Richard <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Stallman </span>et Eben
+      <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Moglen</span>, deux des grands acteurs de la <span 
+class="ntx-Italic-tlf-t1-x-x-120">Free Software Foundation</span>, en furent les premiers
+      rédacteurs. Sa dernière version est la <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU GPL </span>version 3 publiée le 29 juin 2007.
+      13
+        </p></dd><dt class="description">
+  <a 
+ id="glo:GNU/Linux"></a><span 
+class="ec-qhvb-x-x-112">GNU/Linux</span> </dt><dd 
+class="description">
+      <!--l. 61--><p class="indent" >    <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU </span>est un système d’exploitation libre lancé en 1984 par Richard Stallman et maintenu par
+      le projet <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU</span>. Son nom est un acronyme récursif qui signifie en anglais « <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU’s Not UNIX </span>»
+      (littéralement, « GNU n’est pas UNIX »). Il reprend les concepts et le fonctionnement d’UNIX.
+      Le système <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU </span>permet l’utilisation de tous les logiciels libres, pas seulement ceux
+      réalisés dans le cadre du projet <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU</span>. GNU/Linux, ou plus familièrement Linux,
+      est un système d’exploitation libre fonctionnant avec le noyau Linux, qui est une
+      implémentation libre du système UNIX respectant les spécifications POSIX. Son nom
+      vient du prénom de son créateur, Linus <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Torvalds</span>, avec un petit clin d’œil à Unix.
+      7
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Gnucash"></a><span 
+class="ec-qhvb-x-x-112">Gnucash</span> </dt><dd 
+class="description">
+      <!--l. 65--><p class="indent" >    est un logiciel libre de comptabilité personnelle; il n’utilise pas obligatoirement d’extension
+      pour ses fichiers de données, mais peut utiliser les extensions <span 
+class="ntx-Bold-tlf-t1-x-x-120">.xac</span>, <span 
+class="ntx-Bold-tlf-t1-x-x-120">.gnc </span>et <span 
+class="ntx-Bold-tlf-t1-x-x-120">.gnucash</span>. 8, 10,
+      24
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Grisbi"></a><span 
+class="ec-qhvb-x-x-112">Grisbi</span> </dt><dd 
+class="description">
+      <!--l. 67--><p class="indent" >    Grisbi est un logiciel libre de comptabilité personnelle. L’origine de son nom se trouve ici.
+      1
+        </p></dd><dt class="description">
+  <a 
+ id="glo:GTK"></a><span 
+class="ec-qhvb-x-x-112">GTK</span> </dt><dd 
+class="description">
+      <!--l. 71--><p class="indent" >    (The GIMP Toolkit, anciennement GTK+) est un ensemble de bibliothèques logicielles,
+      c’est-à-dire un ensemble de fonctions informatiques permettant de réaliser des interfaces
+      graphiques. 7, 10–12
+        </p></dd><dt class="description">
+  <a 
+ id="glo:HTML"></a><span 
+class="ec-qhvb-x-x-112">HTML</span> </dt><dd 
+class="description">
+      <!--l. 76--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">HyperText Markup Language</span>), soit Langage de Balisage Hypertexte, est le format de données
+      conçu pour représenter les pages web. C’est un langage à balises de formatage qui
+      permet d’écrire des liens hypertexte, de structurer sémantiquement et de mettre en
+      forme le contenu des pages, d’inclure des ressources multimédias (dont des images),
+      des formulaires de saisie et des éléments programmables tels que des applets. 10,
+      14–16
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Langage C"></a><span 
+class="ec-qhvb-x-x-112">Langage C</span> </dt><dd 
+class="description">
+      <!--l. 79--><p class="indent" >    Le C est un langage de programmation impératif, qui a été inventé au début des années 1970
+      pour écrire le système d’exploitation UNIX. Il a conservé de cela une très grande efficacité pour
+      tout ce qui concerne le développement système. Ainsi le noyau de grands systèmes
+      d’exploitation comme Windows et Linux sont développés en grande partie en C. Il est devenu un
+                                                                                       
+                                                                                       
+      des langages les plus utilisés, et de nombreux langages plus modernes comme C++, Java et PHP
+      reprennent des aspects de C. 7
+        </p></dd><dt class="description">
+  <a 
+ id="glo:LaTeX"></a><span 
+class="ec-qhvb-x-x-112">LaTeX</span> </dt><dd 
+class="description">
+      <!--l. 83--><p class="indent" >    est un langage et un système de composition de documents. Il s’agit d’une collection de
+      macro-commandes destinées à faciliter l’utilisation du « processeur de texte » TeX. Son nom
+      vient de son auteur Leslie <span 
+class="ntx-Regular-tlf-sc-t1-x-x-120">Lamport </span>et est l’abréviation de Lamport TeX. On écrit
+      souvent LaTeX, son logo, ce logiciel permettant ce type de mise en forme. 10, 12,
+      14
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Licence de Documentation Libre GNU"></a><span 
+class="ec-qhvb-x-x-112">Licence de Documentation Libre GNU</span> </dt><dd 
+class="description">
+      <!--l. 85--><p class="indent" >    est le nom en français de la <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU Free Documentation License </span>en anglais, abrégé en <span 
+class="ntx-Italic-tlf-t1-x-x-120">GFDL</span>.
+      14
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Licence Publique Generale GNU"></a><span 
+class="ec-qhvb-x-x-112">Licence Publique G</span><span 
+class="ec-qhvb-x-x-112">én</span><span 
+class="ec-qhvb-x-x-112">érale GNU</span> </dt><dd 
+class="description">
+      <!--l. 87--><p class="indent" >    est le nom en français de la <span 
+class="ntx-Italic-tlf-t1-x-x-120">GNU General Public License </span>en anglais, communément abrégé en
+      <span 
+class="ntx-Italic-tlf-t1-x-x-120">GPL</span>. 13
+        </p></dd><dt class="description">
+  <a 
+ id="glo:liens hypertexte"></a><span 
+class="ec-qhvb-x-x-112">liens hypertexte</span> </dt><dd 
+class="description">
+      <!--l. 90--><p class="indent" >    ou hyperliens, ou simplement liens sont de références dans un système hypertexte, permettant
+      de passer automatiquement d’un document consulté à un document lié, ou d’une partie à une
+      autre dans un même document. Les liens hypertexte sont notamment utilisés dans Internet
+      pour permettre le passage d’une page Web à une autre d’un seul clic de souris. 14,
+      16
+        </p></dd><dt class="description">
+  <a 
+ id="glo:logiciel libre"></a><span 
+class="ec-qhvb-x-x-112">logiciel libre</span> </dt><dd 
+class="description">
+      <!--l. 93--><p class="indent" >    Un logiciel libre, en opposition à un logiciel propriétaire, est un logiciel dont l’utilisation,
+      l’étude, la modification et la duplication en vue de sa diffusion sont possibles techniquement et
+      permises légalement. Ces droits sont le plus souvent définis par une licence. Par exemple, Grisbi
+      est placé sous la licence <span 
+class="ntx-Italic-tlf-t1-x-x-120">GPL </span>(<span 
+class="ntx-Italic-tlf-t1-x-x-120">General Public License</span>) ou Licence Publique Générale GNU. 7,
+      16
+        </p></dd><dt class="description">
+  <a 
+ id="glo:macOS"></a><span 
+class="ec-qhvb-x-x-112">macOS</span> </dt><dd 
+class="description">
+      <!--l. 96--><p class="indent" >    auparavant Mac OS X puis OS X, est un système d’exploitation partiellement
+      propriétaire développé et commercialisé par Apple depuis 1998, dont la version
+      macOS Sequoia (version 15) a été lancée le 16 septembre 2024 pour le grand public.
+      7
+        </p></dd><dt class="description">
+  <a 
+ id="glo:OFX"></a><span 
+class="ec-qhvb-x-x-112">OFX</span> </dt><dd 
+class="description">
+      <!--l. 101--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">Open Financial Exchange</span>) est un format ouvert utilisé par des institutions financières et des
+      éditeurs de logiciels; il s’agit d’un formatage XML de données financières. 8, 10,
+      24
+        </p></dd><dt class="description">
+  <a 
+ id="glo:PDF"></a><span 
+class="ec-qhvb-x-x-112">PDF</span> </dt><dd 
+class="description">
+      <!--l. 105--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">Portable Document Format</span>) est un langage de description de page créé par la société Adobe
+      Systems et dont la spécificité est de préserver la mise en forme d’un document (polices de
+                                                                                       
+                                                                                       
+      caractères, images, objets graphiques, etc.) telle qu’elle a été définie par son auteur, et cela quels
+      que soient le logiciel, le système d’exploitation et l’ordinateur utilisés pour l’imprimer ou le
+      visualiser. 14–16
+        </p></dd><dt class="description">
+  <a 
+ id="glo:portage"></a><span 
+class="ec-qhvb-x-x-112">portage</span> </dt><dd 
+class="description">
+      <!--l. 108--><p class="indent" >    Un portage est l’adaptation d’un programme dans un système d’exploitation autre que celui
+      pour lequel il a été créé à l’origine. 7, 13
+        </p></dd><dt class="description">
+  <a 
+ id="glo:QIF"></a><span 
+class="ec-qhvb-x-x-112">QIF</span> </dt><dd 
+class="description">
+      <!--l. 113--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">Quicken Interchange Format</span>) est un format d’échange de données financières; c’est le
+      format utilisé par le logiciel Quicken et aussi par plusieurs banques en ligne. 8–10,
+      24
+        </p></dd><dt class="description">
+  <a 
+ id="glo:RedHat"></a><span 
+class="ec-qhvb-x-x-112">Red Hat</span> </dt><dd 
+class="description">
+      <!--l. 116--><p class="indent" >    est une société multinationale d’origine états-unienne éditant la distribution GNU/Linux
+      éponyme. Elle est l’une des entreprises dédiées aux logiciels Open Source les plus importantes
+      et les plus reconnues. Elle constitue également le premier distributeur du système d’exploitation
+      GNU/Linux. 13
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Slackware"></a><span 
+class="ec-qhvb-x-x-112">Slackware</span> </dt><dd 
+class="description">
+      <!--l. 119--><p class="indent" >    est une distribution Linux qui, à la différence d’autres distributions populaires, a longtemps
+      été maintenue par une seule personne. Elle est connue pour suivre au mieux la « philosophie
+      Unix » et se veut être une distribution légère, rapide et sans fioritures; elle est fort appréciée sur
+      les serveurs. 13
+        </p></dd><dt class="description">
+  <a 
+ id="glo:SVG"></a><span 
+class="ec-qhvb-x-x-112">SVG</span> </dt><dd 
+class="description">
+      <!--l. 122--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">Scalable Vector Graphics</span>, soit en français « graphique vectoriel adaptable »), est un format de
+      données conçu pour décrire des ensembles de graphiques vectoriels, et est basé sur XML. 8,
+      11
+        </p></dd><dt class="description">
+  <a 
+ id="glo:UTF-8"></a><span 
+class="ec-qhvb-x-x-112">UTF-8</span> </dt><dd 
+class="description">
+      <!--l. 125--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">UCS Transformation Format 8 bits</span>) est un codage informatique de caractères, conçu pour
+      coder l’ensemble des caractères internationaux d’Unicode, tout en restant compatible avec la
+      norme ASCII limitée à l’anglais. 10
+        </p></dd><dt class="description">
+  <a 
+ id="glo:Windows"></a><span 
+class="ec-qhvb-x-x-112">Windows</span> </dt><dd 
+class="description">
+      <!--l. 128--><p class="indent" >    (littéralement « Fenêtres » en anglais) est une gamme de systèmes d’exploitation propriétaires
+      développés par Microsoft. La première version de Windows, en 1985, n’était qu’une interface
+      graphique pour MS-DOS utilisé sur les ordinateurs IBM. Ont suivis les versions
+      2, 3, 95 (sortie en 1995 et vendue préinstallée sur la quasi-totalité des ordinateurs
+      personnels, du à de très nombreux accords d’exclusivité passé avec les constructeurs
+      d’ordinateurs leur interdisant d’installer un autre système sous peine de sanctions
+      financières), XP, Vista, 7, 8 et 10. La version 11 est la version actuelle en 2024.
+      7
+        </p></dd><dt class="description">
+  <a 
+ id="glo:XML"></a><span 
+class="ec-qhvb-x-x-112">XML</span> </dt><dd 
+class="description">
+                                                                                       
+                                                                                       
+      <!--l. 131--><p class="indent" >    (<span 
+class="ntx-Italic-tlf-t1-x-x-120">eXtensible Markup Language</span>), soit en français « langage extensible à balises »,
+      est un langage informatique de balisage générique qui dérive du langage SGML.
+      10</p></dd></dl>
+   
+</body> 
+</html>
+                                                                                       
+
+
