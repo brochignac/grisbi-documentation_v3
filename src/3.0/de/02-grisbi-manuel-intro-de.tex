@@ -23,34 +23,33 @@
 Grisbi ist eine \gls{Freie Software} für persönliche Buchhaltung, die in \gls{Programmiersprache C} mit \gls{GTK}+ 3-Unterstützung entwickelt wurde, ursprünglich für die Plattform {GNU/Linux}. Es gibt nun eine \gls{Portierung} unter \gls{Windows}, \gls{MacOS}, FreeBSD, Pakete für verschiedene \gls{Linux-Distribution} und weitere Möglichkeiten, die Sie auf der Website von \lang{Grisbi}\footnote{\urlGrisbi{}} oder der von \lang{Sourceforge}\footnote{\urlSourceForge{}} entdecken können.
 
 
-Le principe de base est de vous permettre de classer de façon simple et intuitive vos opérations financières, quelles qu’elles soient, afin de pouvoir les exploiter au mieux en fonction de vos besoins.
+%Le principe de base est de vous permettre de classer de façon simple et intuitive vos opérations financières, quelles qu’elles soient, afin de pouvoir les exploiter au mieux en fonction de vos besoins.
+Das Grundprinzip besteht darin, dass Sie Ihre Finanztransaktionen jeglicher Art einfach und intuitiv klassifizieren können, um sie entsprechend Ihren Bedürfnissen optimal nutzen zu können.
 
-Grisbi a pris le parti de la simplicité et de l'efficacité pour un usage de
-base, sans toutefois exclure la sophistication nécessaire à un usage plus avancé. Les fonctionnalités futures tenteront toujours de respecter ces critères.
-
-
-\section{Fonctionnalités\label{introduction-features}}
+%Grisbi a pris le parti de la simplicité et de l'efficacité pour un usage de base, sans toutefois exclure la sophistication nécessaire à un usage plus avancé. Les fonctionnalités futures tenteront toujours de respecter ces critères.
+Grisbi hat sich zum Ziel gesetzt, einfach und effizient für den grundlegenden Gebrauch zu sein, ohne jedoch die Raffinesse auszuschließen, die für einen fortgeschrittenen Gebrauch erforderlich ist. Zukünftige Funktionen werden immer versuchen, diese Kriterien zu erfüllen.
 
 
-\subsection{Ce que Grisbi sait faire}
+\section{Funktionalitäten\label{introduction-features}}
+
+
+\subsection{Was Grisbi kann}%Ce que Grisbi sait faire
 
 \begin{itemize}
-	\item Logiciel développé par des Français, donc en totale conformité avec la logique française de la comptabilité
-	\item Interface simple et intuitive, avec commande d'affichage plein écran
-	\item Gestion multi-comptes et multi-utilisateurs
-	\item Gestion des paramètres locaux (dates, séparateurs décimal et des milliers)	
-	\item Comptes bancaires, de caisse, d'actif et de passif
-	\item Gestion multi-devises, avec prise en charge des taux de change et des frais de change
-	\item Gestion des cartes bancaires (débit immédiat ou différé)	
-	\item Description des opérations avec : date, date de valeur, exercice, tiers,
-	montant, devise, catégorie et sous-catégorie, imputation et sous-imputation
-	budgétaires (permettant de tenir une comptabilité analytique), remarque, numéro d'écriture (attribué par Grisbi), numéro de pièce comptable, références bancaires
-	\item Auto-complètement des tiers, catégories et imputations budgétaires avec rappel automatique des  opérations et des sous-opérations pour un tiers donné
-	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
-	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
-	\item Virement entre comptes, y compris de devises différentes, avec contre-écriture automatique
-	\item Planification d'opérations avec validation automatique ou manuelle
-	\item Surveillance des échéances
+	\item Von Franzosen entwickelte Software, die vollständig mit der französischen Logik der Buchführung übereinstimmt.%Logiciel développé par des Français, donc en totale conformité avec la logique française de la comptabilité
+	\item Einfache, intuitive Benutzeroberfläche mit Vollbildschirmsteuerung.%Interface simple et intuitive, avec commande d'affichage plein écran
+	\item Mehrkonten- und Mehrbenutzerverwaltung%Gestion multi-comptes et multi-utilisateurs
+	\item Lokalisierung (Datum, Dezimal und Tausender Trennzeichen)%Gestion des paramètres locaux (dates, séparateurs décimal et des milliers)	
+	\item Bankkonten, Bargeldkonten, Kreditkonten, Anlagekonten%Comptes bancaires, de caisse, d'actif et de passif
+	\item Verwaltung von mehreren Währungen mit Wechselkursen und Wechselgebühren%Gestion multi-devises, avec prise en charge des taux de change et des frais de change
+	\item Kreditkartenmanagement (sofortige oder verzögerte Belastung)%Gestion des cartes bancaires (débit immédiat ou différé)	
+	\item Beschreibung der Buchungen mit: Datum, Valutadatum, Geschäftsjahr, Empfänger, Betrag, Währung, Kategorien und Unterkategorien, Haushaltszuweisung und Unterzuweisung (zur Analyse der Ausgaben), Notizen, Buchungsnummer (von Grisbi vergeben), Buchungsbelegnummer, Bankreferenz%Description des opérations avec : date, date de valeur, exercice, tiers, montant, devise, catégorie et sous-catégorie, imputation et sous-imputation budgétaires (permettant de tenir une comptabilité analytique), remarque, numéro d'écriture (attribué par Grisbi), numéro de pièce comptable, références bancaires
+	\item Auto-Vervollständigung von Empfänger, Kategorien und Haushaltsverbuchungen mit automatischem Abruf von Buchungen und Unterbuchungen für einen bestimmten Empfänger%Auto-complètement des tiers, catégories et imputations budgétaires avec rappel automatique des  opérations et des sous-opérations pour un tiers donné
+	%\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
+	\item Berechnung vom Saldo mit Buchung oder Valutadatum%Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
+	\item Überweisungen zwischen Konten, auch in verschiedenen Währungen, mit automatischer Gegenbuchung%Virement entre comptes, y compris de devises différentes, avec contre-écriture automatique
+	\item Terminierung von Buchungen mit automatischer oder manueller Validierung%Planification d'opérations avec validation automatique ou manuelle
+	\item %Surveillance des échéances
 	\item Déplacement et clonage des opérations
 	\item Clonage des opérations planifiées
 	\item Colorisation des débits dans l'échéancier
