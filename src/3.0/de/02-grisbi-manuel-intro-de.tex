@@ -1,0 +1,502 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contents : The introduction chapter
+% $Id : grisbi-manuel-intro.tex,v 0.4 2002/10/27 Daniel Cartron
+% $Id : grisbi-manuel-intro.tex, v 0.5.0 2004/06/01 Loic Breilloux
+% $Id : grisbi-manuel-intro.tex, v 0.6.0 2011/11/17 Jean-Luc Duflot
+% $Id : grisbi-manuel-intro.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
+% $Id : grisbi-manuel-intro.tex, v 1.0 2014/02/12 Jean-Luc Duflot
+% $Id : grisbi-manuel-intro.tex, v 3.0 2024/11 Dominique Brochard :
+% - update links and text
+% - update pdf/html readers
+% - add versions 0.1 to 0.4.4
+% - use \label within \footnote command, and after use \footref to avoid duplicates in footnotes
+% - add newsgroups in 2.4 Contacts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction\label{introduction}}
+
+
+\section{Généralités\label{introduction-general}}
+
+
+Grisbi est un \gls{logiciel libre} de comptabilité personnelle, développé en \gls{Langage C} avec le support \gls{GTK}+ 3, originellement pour la plate-forme \gls{GNU/Linux}. Il y a maintenant un \indexword{\gls{portage}}\index{portage} sous \gls{Windows}, \gls{macOS}, FreeBSD, des paquetages pour différentes \gls{distributions Linux}, et d'autres possibilités à découvrir sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}} ou celui de {Sourceforge}\footnote{\urlSourceForge{}}.
+
+Le principe de base est de vous permettre de classer de façon simple et intuitive vos opérations financières, quelles qu’elles soient, afin de pouvoir les exploiter au mieux en fonction de vos besoins.
+
+Grisbi a pris le parti de la simplicité et de l'efficacité pour un usage de
+base, sans toutefois exclure la sophistication nécessaire à un usage plus avancé. Les fonctionnalités futures tenteront toujours de respecter ces critères.
+
+
+\section{Fonctionnalités\label{introduction-features}}
+
+
+\subsection{Ce que Grisbi sait faire}
+
+\begin{itemize}
+	\item Logiciel développé par des Français, donc en totale conformité avec la logique française de la comptabilité
+	\item Interface simple et intuitive, avec commande d'affichage plein écran
+	\item Gestion multi-comptes et multi-utilisateurs
+	\item Gestion des paramètres locaux (dates, séparateurs décimal et des milliers)	
+	\item Comptes bancaires, de caisse, d'actif et de passif
+	\item Gestion multi-devises, avec prise en charge des taux de change et des frais de change
+	\item Gestion des cartes bancaires (débit immédiat ou différé)	
+	\item Description des opérations avec : date, date de valeur, exercice, tiers,
+	montant, devise, catégorie et sous-catégorie, imputation et sous-imputation
+	budgétaires (permettant de tenir une comptabilité analytique), remarque, numéro d'écriture (attribué par Grisbi), numéro de pièce comptable, références bancaires
+	\item Auto-complètement des tiers, catégories et imputations budgétaires avec rappel automatique des  opérations et des sous-opérations pour un tiers donné
+	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
+	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
+	\item Virement entre comptes, y compris de devises différentes, avec contre-écriture automatique
+	\item Planification d'opérations avec validation automatique ou manuelle
+	\item Surveillance des échéances
+	\item Déplacement et clonage des opérations
+	\item Clonage des opérations planifiées
+	\item Colorisation des débits dans l'échéancier
+	\item Analyse et rapports financiers grâce au puissant module de génération
+	d'états
+	\item Plusieurs états pré-formatés disponibles et personnalisables
+	\item Tiers virtuels créés par les états
+	\item Impression des états
+	\item Simulation de crédits et tableaux d'amortissement avec impression et export des données
+	\item Budget prévisionnel avec graphiques sur les prévisions et les données historiques
+	\item Comptabilité d'association avec plan comptable
+	\item Ordre d'affichage des comptes par glisser/déposer dans la liste des comptes
+	\item Import de fichiers aux formats \gls{QIF}, \gls{OFX}, \gls{Gnucash} ou \gls{CSV}
+	\item Import de fichiers de catégories dans les imputations budgétaires
+	\item Export de fichiers aux formats \gls{QIF} ou \gls{CSV}
+	\item Icônes personnalisées dans le fichier de comptes
+	\item Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg}
+	\item Encore plus de menus contextuels sur le bouton droit de la souris (panneau de navigation)
+	\item Nombreux raccourcis-clavier pour une bonne ergonomie
+\end{itemize}
+
+
+\subsection{Ce que Grisbi ne sait pas encore faire}
+
+\begin{itemize}
+	\item La ventilation automatique des remboursements d'emprunt
+	\item Le rapprochement par Internet
+\end{itemize}
+
+
+\section{Évolution du logiciel}
+
+
+\subsection{Développement et versions}
+
+Grisbi étant un logiciel en plein développement, toute remarque (idée,
+bogue, documentation\dots{}) est la bienvenue. Vous pouvez l'envoyer aux différentes listes indiquées dans la section \vref{introduction-contacts} \menu{Contacts} ou sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}}.
+
+Vous pouvez, si vous avez le goût de l'aventure, télécharger et compiler la dernière version en 
+cours de développement sur le système de gestion de contenu \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} utilisant \gls{Git}.
+
+En effet, le code des nouvelles versions de Grisbi est bien souvent figé
+plusieurs semaines avant la distribution effective de celles-ci, le temps pour 
+l'équipe de développement de vérifier et d'éradiquer les ultimes bogues. Pendant cette période, le format du fichier de comptes ne bouge plus, et vous pouvez donc, avec un minimum de précautions (sauvegardes fréquentes, etc.), bénéficier des dernières améliorations avec plusieurs semaines d'avance, et également participer au débogage.
+
+Vous pouvez enfin avoir accès à toutes les évolutions du code postérieures à la version 0.3.2 (version à partir de laquelle le code est disponible sur le site de \gls{GitHub}\footref{siteGitHubGrisbi}).
+
+Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par ex. 0.\underline8) sont des versions stables, tandis que celles de numéro mineur impair sont instables et ne devraient pas être utilisées en conditions normales ; de ce fait seules les versions stables sont mentionnées ici.
+
+% saut de page pour titre solidaire
+\newpage
+
+\subsection{Version 0.1}
+
+\begin{itemize}
+	\item Gestion de plusieurs comptes
+	\item Création, modification et suppression de comptes et d'opérations (enfin le minimum pour fonctionner\dots{})
+	\item Possibilité de pointer les opérations
+	\item Et la sauvegarde, sans laquelle tout cela n'aurait pas beaucoup d'intérêt !
+\end{itemize}
+
+\subsection{Version 0.2}
+
+\begin{itemize}
+	\item Importation automatique des fichiers de comptes de versions précédentes
+	\item Utilisation de listes pour les tiers, catégories\dots{} (plus pratique que de tout taper)
+	\item Saisie automatique lors de la frappe et remplissage de la fin de l'opération comme la précédente semblable
+	\item Gestion des virements entre comptes
+	\item Affichage des opération simplifié ou complet
+	\item Équilibrage de comptes
+\end{itemize}
+
+\subsection{De la version 0.3.0 à la version 0.3.3}
+
+\begin{itemize}
+	\item Gestion des opérations prévues ou cycliques (échéancier) 
+	\item Prise en charge des devises et du passage à l'euro (du 1er janvier 1999 au 1er janvier 2002)
+	\item Ajout de l'import/export et amélioration de l'import de fichiers \gls{QIF}
+	\item Ajout de la ventilation
+	\item Support multi-utilisateur
+	\item Pour chaque banque et compte, ajout des détails comme:
+		\begin{itemize}
+		\item numéros complets du compte associé, du guichet et du code banque
+		\item titulaire différent pour chaque compte avec adresse personnelle
+		\item coordonnées d'un correspondant
+		\end{itemize}
+	\item Ajout de l'onglet catégories
+	\item Possibilité de changer le nom et le code des devises
+	\item Le classement alphabétique prend (enfin) en compte les accents
+	\item Mémorise le dernier répertoire de travail et les derniers fichiers ouverts
+	\item Un numéro unique par opération quel que soit le compte
+	\item Les touches \key{+} (\key{-}) dans un champ de date incrémentent (décrémentent)
+	la date
+	\item Affichage possible de nouveaux champs dans le formulaire de saisie des opérations 
+	\item Échéances paramétrables pour un laps de temps défini
+	\item Affichage du solde courant pointé
+	\item Possibilité d'entrer la date sous la forme jjmm, jjmmaa ou jjmmaaaa
+	\item Totaux des opérations dans les onglets Tiers, Catégories et Imputations Budgétaires (IB)
+	\item Personnalisation possible du logo et de la police d'affichage.
+	\item Mise en place des outils Automake et Autoconf permettant de simplifier la compilation des fichiers sources du logiciel
+\end{itemize}
+
+%\newpage			% saut de page pour titre solidaire
+
+\subsection{De la version 0.4.0 à la version 0.4.4}
+
+\begin{itemize}
+	\item Personnalisation de l'agencement de l'interface
+	\item Possibilité d'import/export:
+		\begin{itemize}
+		\item de listes de catégories
+		\item de listes d'imputations budgétaires (IB)
+		\item d'états créés
+		\end{itemize}	
+	\item Ajout des rapports financiers
+	\item Grisbi est désormais internationalisé et les traductions sont améliorées
+	\item Affichage des soldes multi-devises dans l'écran de démarrage
+	\item Les remarques peuvent être affichées dans l'échéancier
+	\item Nouvel outil permettant aux contributeurs d'anonymiser les fichiers Grisbi afin de garder la confidentialité avant de les envoyer
+	\item La largeur des colonnes de l'échéancier est modifiable
+	\item Harmonisation dans les champs de date:
+		\begin{itemize}
+		\item \key{Ctrl}\key{Entrée} dans un champ de date ouvre un calendrier
+		\item les touches fléchées sont actives dans un calendrier
+		\item \key{Ctrl}\key{+} (\key{-}) dans un champ de date augmente (diminue) la date d'environ une semaine
+		\item \key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un mois
+		\item \key{Ctrl}\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un an
+		\end{itemize}	
+\end{itemize}
+
+\subsection{De la version 0.4.5 à la version 0.6}
+
+\begin{itemize}
+	\item Refonte de l'interface graphique
+	\item Support de la bibliothèque \gls{GTK}+ 2 pour un environnement plus sympathique et un portage simplifié sous Windows
+	\item Plus aucune dépendance vis-à-vis de \gls{Gnome}
+	\item Version Windows native (merci à François \familyname{Terrot})%\footnote{\urlFrancoisTerrotEmail{}}
+	\item Support \gls{UTF-8} natif
+	\item Impression des états par \gls{LaTeX}
+	\item Export des états en \gls{HTML}
+	\item Amélioration de l'interface utilisateur:
+		\begin{itemize}
+		\item amélioration des messages, les utilisateurs peuvent en ignorer
+		\item amélioration de la gestion des erreurs de segmentation
+		\item amélioration de la fenêtre des préférences
+		\item menu contextuel sur la liste des opérations
+		\item amélioration des items
+		\end{itemize}
+	\item Listes de comptes et d'états complètement cliquables
+	\item Configuration globale en \gls{XML} (merci à Axel Rousseau)
+	\item Réécriture de l'import de fichiers:
+		\begin{itemize}
+		\item support des formats \gls{QIF}, \gls{OFX}, \gls{Gnucash} ou \gls{CSV}
+		\item import incrémental
+		\item rapprochement automatique
+		\end{itemize}
+	\item Début de la traduction italienne par Giorgio \familyname{Mandolfo}
+	\item Taux de change cachés sur une session pour éviter de les ressaisir
+	\item Support des attributs de texte (gras, italique, grand, petit) pour les états
+	\item Nouveau logo avec la mascotte Grisbi sur le symbole de l'euro (€) (merci à André \familyname{Pascual})
+	\item Logo d'attente animé modifiable
+	\item Complètement des listes sensible à la casse des caractères
+	\item Amélioration de la saisie des détails des banques
+	\item Support du clavier dans l'arborescence des tiers, catégories et imputations budgétaires
+	\item Échéances automatiques à terme cliquables
+	\item Échéances ventilables
+	\item Opérations convertibles en échéances
+	\item Opérations déplaçables dans un autre compte
+\end{itemize}
+
+
+\subsection{Nouveautés de la version 0.8}
+
+\begin{itemize}
+	\item Module budgétaire dans la version de base
+	\item Simulateur de crédits et tableaux d'amortissement avec possibilité d'imprimer et d'exporter les données dans un tableur
+	\item Tableau d'amortissement pour les comptes de passif avec possibilité d'imprimer et d'exporter les données dans un tableur
+	\item Gestion des paramètres locaux (format des dates, séparateurs décimal et des milliers)
+	\item Incorporation des icônes personnalisées dans le fichier de comptes
+	\item Colorisation des débits dans l'échéancier
+	\item Clonage des opérations planifiées
+\end{itemize}
+
+
+\subsection{Nouveautés de la version 1.0}
+
+\begin{itemize}
+	\item Graphiques sur les prévisions
+	\item Gestion des cartes bancaires (débit immédiat ou différé)
+	\item Comptabilité d'association avec plan comptable
+	\item Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg}
+	\item Encore plus de menus contextuels sur le bouton droit de la souris
+	\item Import de fichiers de catégories dans les imputations budgétaires
+	\item Modification de l'ordre d'affichage des comptes par glisser/déposer dans la liste des comptes
+	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
+	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
+	\item Affichage des tiers inutilisés	
+	\item Commande d'affichage plein écran par la touche de fonction \key{F11}
+	\item Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération
+	\item Accès direct au manuel de l'utilisateur par le menu \menu{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}
+\end{itemize}
+
+
+\subsection{Nouveautés de la version 2.0}
+
+\begin{itemize}
+	\item Portage sous \gls{GTK}+ 3 (depuis la version 1.2.0)
+	\item Ajout d'un module de recherche dans la liste des opérations accessibles, dans le menu contextuel des opérations (clic droit sur une opération)
+	\item Détection automatique/intégration de schéma de couleur foncée
+	\item Nouveaux réglages pour les couleurs
+	\item Configuration générale de la taille de police
+	\item Affichage amélioré sur les dispositifs à faible résolution
+	\item Révision du module de crédit
+	\item Règles d'importation pour les fichiers \gls{CSV}
+	\item Fonctionnalité de recherche
+	\item Réglage pour la suppression d'anciennes sauvegardes
+	\item Résolution de bogues
+\end{itemize}
+
+
+\subsection{Nouveautés de la version 3.0}
+
+\begin{itemize}
+	\item Modification de la recherche du bénéficiaire
+	\item Ajout d'un nouveau type de prêt à la consommation
+	\item Ajout de toutes les transactions dans les archives lorsque le compte est clôturé
+	\item Nettoyage du code
+	\item Préparation de la transition vers \gls{GTK} 4
+	\item Résolution de bogues
+\end{itemize}
+
+\subsection{Et pour le futur ?}
+
+Portage complet sous \gls{GTK} 4
+
+%\newpage						% saut de page pour titre solidaire
+
+\section{Contacts\label{introduction-contacts}} 	% TODO à mettre à jour en profondeur / to be completely updated
+
+
+Outre les courriers aux auteurs, vous disposez de plusieurs listes de diffusion 
+pour nous contacter ou obtenir des informations.
+
+Pour être tenu(e) au courant des évolutions de Grisbi, vous pouvez vous inscrire 
+sur la \lang{liste d'information}\footnote{\urlListInfoEmail{}} prévue à cet effet. 
+Vous recevrez juste un courriel à la sortie de chaque nouvelle version.
+
+Si vous souhaitez participer au développement de Grisbi, il existe une \lang{liste développement}\footnote{\urlListDevelEmail{}}.
+
+Par ailleurs, nous avons décidé d'entreprendre l'internationalisation de Grisbi
+et, si vous souhaitez nous aider, vous pouvez dans un premier temps nous contacter sur la liste de développement.
+
+Pour vous abonner à l'une de ces listes, rendez vous simplement sur la page
+\urlListDiffGrisbi{} puis cliquez sur la/les liste(s) qui vous intéresse(nt).
+% Ou bien allez sur le site de {Grisbi}\footnote{\urlGrisbi{}}} dans la rubrique \cmd{Contacts}. % <<Contacts>> non présent sur le site
+
+Vous pouvez également utiliser les forums de discussions (ou newsgroups) avec un logiciel appelé "lecteur de nouvelles" (comme Thunderbird par exemple) en renseignant \cmd{listes.grisbi.org} comme nom de serveur de groupes.
+
+N'hésitez pas de toute façon à consulter régulièrement le site officiel de Grisbi.
+
+%\newpage						% saut de page pour titre solidaire
+
+
+\section{Auteurs et contributions\label{introduction-authors}}		% TODO : section to be updated/completed
+
+
+Cédric \familyname{Auger} est à la base du projet de ce manuel.
+
+Daniel \familyname{Cartron} a rédigé la documentation jusqu'à la version 0.4.0, fourni des conseils en comptabilité
+et en ergonomie, et créé le premier site de Grisbi. Sa passion des fichiers de
+comptes ultra compliqués amène un plus indéniable à la découverte de bogues inédits.
+
+André \familyname{Pascual}, de
+\lang{Linuxgraphic}\footnote{\urlLinuxGraphic{}}, est l'auteur du premier logo (mascotte Grisbi sur le symbole de l'euro €).
+
+Sébastien \familyname{Blondeel} a écrit les scripts permettant de produire les différents formats de la documentation et ceux relatifs à la conversion des images aux formats adéquats. Il est également l'artisan de l'adoption de \gls{LaTeX} pour la rédaction de la documentation. En outre, son expérience de l'édition électronique en fait un précieux conseiller, source de nombreuses suggestions.
+
+Benjamin \familyname{Drieu}, développeur pour Grisbi et empaqueteur officiel pour \gls{Debian}.
+
+Alain \familyname{Portal}, qui commençait à s'ennuyer dans l'empaquetage \gls{RedHat}, s'essaye au développement. Son amour du travail bien fait et son opiniâtreté font de lui, pour le moment, un correcteur de bogues. Il participe également à l'élaboration de la documentation. Il se prend une envie de commencer à coder dans la version instable.
+
+Loic \familyname{Breilloux} a mis à jour la documentation pour la version 0.5.1 et va tâcher de faire les mises à jour de la documentation pour les versions futures.
+
+Gérald \familyname{Niel} a remplacé
+Daniel \familyname{Cartron} dans le rôle de webmestre et est donc le créateur de la nouvelle version du site de \lang{Grisbi}\footnote{\urlGrisbi{}}. Il est
+également responsable des paquets \gls{Slackware}.
+
+Juliette \familyname{Martin} assure la tâche ingrate de relecture de la documentation. S'il reste des erreurs, c'est certainement qu'elles étaient bien cachées pour avoir échappé à ses yeux
+attentifs.
+
+François \familyname{Terrot}\footnote{\urlFrancoisTerrotEmail{}} a rejoint l'équipe afin d'assurer le \gls{portage} de Grisbi sous Windows.
+
+Pierre \familyname{Biava}\footnote{\urlPierreBiavaEmail{}} a rejoint l'équipe de développement en 2008.
+
+Didier \familyname{Chevalier}\footnote{\urlDidierChevalierEmail{}}, William \familyname{Ollivier}\footnote{\urlWilliamOllivierEmail{}} et Mickaël \familyname{Remars} ont eux aussi participé au développement.
+
+Jean-Luc \familyname{Duflot}\footnote{\urlJeanLucDuflotEmail{}} a réalisé pour la version 0.6 une grosse mise à jour du manuel, qui en avait bien besoin depuis 2004, et a continué sur la 0.8 et la 1.0.
+
+Alain \familyname{Letient}\footnote{\urlAlainLetientEmail{}} a effectué avec ténacité la relecture du manuel 0.6 et a réalisé son iconographie, et a aussi continué sur les versions 0.8 et 1.0.
+
+Guy \familyname{Lebègue}, d'abord pour la version 0.8, puis avec Michèle \familyname{Bondil}\footnote{\urlMicheleBondilEmail{}} pour la 1.0, ont réalisé la partie Comptabilité d'association, qui nécessite bien des compétences de spécialiste en comptabilité.
+
+
+\section{Remerciements\label{introduction-thanks}}
+
+
+Merci à \lang{TuxFamily}\footnote{\urlTuxFamily{}} qui a longtemps mis à notre disposition tous les outils dont nous avions besoin pour développer Grisbi
+(site Internet, ftp, CVS, listes de diffusions, etc.). Hélas, les attaques
+de pirates subies fin 2003 - début 2004 par \lang{TuxFamily} nous ont contraint à chercher un nouvel hébergement. Nous remercions donc aujourd'hui'hui \lang{SourceForge}\footnote{\urlSourceForge{}}, la plateforme sur laquelle nous avons migré, et souhaitons un prompt et rapide rétablissement à \lang{TuxFamily} qui fait cruellement défaut à des centaines de projets libres.
+
+Un grand merci également à tous les contributeurs de la liste de développement qui participent à l'évolution de Grisbi par leurs suggestions, remarques et rapports de bogues, ainsi qu'aux nombreux relecteurs du \menu{Manuel de l'utilisateur}, qui contribuent à en faire un meilleur outil.
+
+
+\section{Licences\label{introduction-licenses}}
+
+
+Le programme est soumis aux termes de la \gls{Licence Publique Generale GNU}
+(en anglais : \gls{GNU General Public License}). Les corrections de bogues et mises à jour ne sont pas garanties.
+
+Le manuel est soumis aux termes de la \gls{Licence de Documentation Libre GNU} (en anglais : \gls{GNU Free Documentation License}).
+
+Permission est accordée de copier, distribuer et/ou modifier ce document
+selon les termes de la Licence de Documentation Libre GNU version 1.1 ou toute version ultérieure publiée par la \gls{Free Software Foundation}.
+
+
+\section{À propos du présent manuel\label{introduction-manual}}
+
+
+Vous avez sous les yeux la version \actuality{}3.0 du manuel, en date de \actuality{}début 2025, qui correspond à la version 3.0 du logiciel Grisbi.
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+\textbf{Note}: cette version 3.0 du manuel est une mise à jour de la version 2.0 sauf pour le chapitre \vref{association} \menu{Comptabilité d'association}, qui reste en version 2.0 %TODO to modify when it"ll be updated
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+Ce manuel a été écrit avec le \gls{formateur de texte} \gls{LaTeX}\index{latex@\LaTeX}, et il est disponible sous le \gls{format de fichier} \gls{PDF} ou \gls{HTML}, avec illustrations (copies d'écran) dans ces deux formats. 
+
+Il est accessible directement dans le logiciel Grisbi par le menu \menu{Aide - Manuel} de la barre de menus, sous le format \gls{HTML} avec illustrations.
+
+Cependant, tous ces différents formats peuvent être téléchargés sur le site de \lang{Sourceforge}\footnote{\urlSourceForgeDocumentation{}}, ainsi que les versions correspondantes du logiciel sur \lang{Sourceforge}\footnote{\urlSourceForge{}} dans les dossiers << \textsf{grisbi stable} >> ou << \textsf{grisbi unstable} >>.
+
+Les outils nécessaires à la lecture de ces différents formats de documentation sont présentés dans la section \vref{introduction-manual-readers} \menu{Logiciels de lecture}.
+
+
+\subsection{Présentation\label{introduction-manual-presentation}}
+
+Bien que le logiciel Grisbi soit conçu pour être le plus intuitif possible et que la plupart des fonctions soient immédiatement compréhensibles, il est nécessaire de disposer d'un manuel de référence. Ce manuel a été conçu selon les principes suivants :
+
+\begin{itemize} 
+	\item le plus exhaustif possible, donc description de toutes les fonctionnalités;
+	\item chapitres organisés suivant une trame la plus standardisée possible:
+		\begin{itemize}
+		\item présentation du chapitre,
+		\item description de l'affichage,
+		\item description des fonctions,
+		\end{itemize}
+	pour faciliter le repérage dans le document;
+	\item rédaction des paragraphes récurrents d'un chapitre à l'autre d'une manière la plus identique possible, pour faciliter la lecture rapide;
+	\item recherche d'information facilitée grâce aux nombreux \gls{liens hypertexte}, à un index et à un glossaire.
+\end{itemize}
+
+% espace pour changement de thème : 5 mm
+\vspacepdf{5mm}
+Voici une description succincte des différents chapitres:
+
+\begin{itemize}
+	\item \menu{Préambule} explique l'origine du nom donné à ce logiciel;
+	\item \menu{Introduction} présente le logiciel, le manuel, leurs auteurs et les contacts;
+	\item \menu{Premier démarrage de Grisbi} est le chapitre \emph{indispensable} pour commencer l'utilisation du logiciel;
+	\item \menu{Accueil} décrit les éléments principaux de l'interface graphique et leur manipulation à la souris et au clavier (raccourcis);
+	\item \menu{Export et Import de comptes} décrit comment échanger des données avec les autres logiciels;
+	\item \menu{Gestion des données} présente les options des fichiers de comptes, les sauvegardes et les archives ainsi que leur gestion;
+	\item \menu{Gestion des comptes} décrit les propriétés des comptes, leur gestion et les différents types de comptes avec leur utilisation;
+	\item \menu{Opérations d'un compte} décrit les manipulations sur les opérations, les champs d'information et de saisie utilisés et leur gestion, la création d'opérations et leur gestion;
+	\item \menu{Rapprochement bancaire} détaille la procédure de rapprochement d'un compte et la gestion des rapprochements;		
+	\item \menu{Échéancier} décrit la planification des opérations futures et leur manipulation;
+	\item \menu{Recherches} fait le point sur les possibilités de recherche de données;
+	\item \menu{Tiers}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{Exercices} décrivent la gestion de ces données;
+	\item \menu{Simulation de crédit} décrit les méthodes et la gestion de simulations;
+	\item \menu{Budgets prévisionnels} décrit les outils et les procédures de création de budget et de tableaux d'amortissement, ainsi que leur gestion;
+	\item \menu{Gestion des cartes bancaires et leurs prévisions} décrit la gestion de ces cartes, notamment celles à débit différé, et les méthodes de prévision;	
+	\item \menu{Comptabilité d'association} présente deux introductions pour les trésoriers d'association;
+	\item \menu{États} et \menu{Création d'un état} décrivent la gestion et la création des états;
+	\item \menu{Configuration de Grisbi} détaille toutes les possibilités de réglage du logiciel;
+	\item \menu{Outils de maintenance} donne quelques clés à utiliser en cas d'erreurs ou de bogues.
+\end{itemize}
+
+
+\subsection{Conventions typographiques du présent manuel\label{introduction-manual-conventions}}
+
+La liste suivante définit et illustre les conventions typographiques utilisées comme aides visuelles à l'identification d'éléments particuliers du texte du document:
+
+\begin{itemize}
+	\item les composants d'interface sont des titres de fenêtre, des noms d'icône et de bouton, des noms de menu et d'autres options qui apparaissent sur l'écran du moniteur ; ils sont présentés ainsi:
+		\newline
+		\hspace*{1.5cm}cliquez sur \menu{Retour};
+	\item le libellé des touches du clavier représente ce qui est écrit sur les touches du clavier; il est présenté ainsi:
+		\newline
+		\hspace*{1.5cm}appuyez sur la touche \key{Entrée};	
+	\item les combinaisons de touches sont une série de touches à enfoncer 	simultanément (à moins d'indication contraire) pour réaliser une fonction 	unique ; elles sont présentées ainsi:
+		\newline
+		\hspace*{1.5cm}appuyez sur la combinaison de touches \key{Ctrl}\key{R};
+	\item les commandes qui font partie d'une instruction et qui doivent être saisies sont présentées ainsi:
+		\newline
+		\hspace*{1.5cm}tapez \cmd{grisbi} pour démarrer le programme;
+	\item les noms de fichier et de répertoire sont présentés ainsi:
+		\newline
+		\hspace*{1.5cm}\file{grisbi-n.n.n.rpm} et \file{/usr/local/bin};	
+	\item les lignes de commande consistent en une commande et peuvent inclure un ou plusieurs paramètres possibles de la commande ; elles sont présentées ainsi:
+		\newline
+		\hspace*{1.5cm}	\cmd{rpm -Uvh grisbi-n.n.n.rpm};
+	\item toute suite de caractères alphanumériques en bleu, dans le document au format \gls{PDF} ou \gls{HTML}, est un lien hypertexte, renvoyant soit à une image, une autre partie du document, un mot indexé ou encore au glossaire (pour \gls{PDF} uniquement);
+	\item les mots ou groupes de mots référencés dans l'index sont mis en valeur dans les chapitres ainsi:
+		\newline
+		\hspace*{1.5cm}	\textsf{terme référencé} pour le format \gls{PDF};
+		\newline 
+		\hspace*{1.5cm} en marron pour le format \gls{HTML}. 
+\end{itemize}
+
+% espace avant Attention ou Note  : 5 mm
+\vspacepdf{5mm}
+De plus, une \textbf{Note} souligne un point particulier à prendre en compte, tandis qu'un \textcolor{red}{\strong{Attention}} indique soit un point très important pour la compréhension, soit une erreur à ne pas faire sous peine de dommage important pour vos données ; un \textcolor{red}{\strong{Attention}} est \emph{à respecter impérativement}.
+
+
+\subsection{Logiciels de lecture\label{introduction-manual-readers}}
+
+Pour lire ce document, nous vous recommandons l'utilisation de logiciels libres, qui respectent tous votre vie privée et la confidentialité de vos données; les logiciels suivants disposent des fonctionnalités de \gls{liens hypertexte}: 
+\begin{itemize}
+	\item pour le format \gls{PDF}: 
+		\begin{itemize}
+				\item Linux: Evince, Firefox, Xpdf, Ghostscript\textsuperscript{\textcolor{red}{\textbf{*}}}, MuPDF\textsuperscript{\textcolor{red}{\textbf{*}}}, Okular,
+				\item Mac: Okular, Skim, Xpdf,
+				\item Windows: Evince, Firefox, MuPDF\textsuperscript{\textcolor{red}{\textbf{*}}}, Okular, SumatraPdf;
+		\end{itemize}
+		\textsuperscript{\textcolor{red}{\textbf{*}}} Logiciels ne permettant pas d'afficher le sommaire dans un panneau latéral.
+	\item pour le format \gls{HTML}:
+		\begin{itemize}
+				\item Linux: Firefox, Falcon, Links2, Midori, Dillo, SeaMonkey, NetSurf, Min,
+				\item Mac: Firefox, Falcon, Midori, SeaMonkey, NetSurf,
+				\item Windows: Firefox, Falcon, Midori, SeaMonkey, NetSurf.
+		\end{itemize}
+\end{itemize}
+
+% espace pour changement de thème : 5 mm
+\vspacepdf{5mm}
+Bref, vous avez le choix!
+
+% espace pour changement de thème : 5 mm
+\vspacepdf{5mm}
+Ces logiciels sont tous téléchargeables sur leur propre site Internet et sont tous placés sous une licence de \gls{logiciel libre}, et vous pouvez, pour certains, en lire une présentation sur le site de \lang{Framasoft}\footnote{\urlFramasoftLogiciels{}}.
