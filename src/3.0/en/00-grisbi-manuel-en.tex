@@ -58,7 +58,7 @@
 \usepackage{newtxtext}				% install texlive-fonts-extra, replacing times which replaces txfonts
 %\usepackage{lwarp}					% produce html file with lwarp (install texlive-extra-utils)
 
-\usepackage{microtype}				% Font expansion (use for title) with "\textls[x]" - doesn't work with pandoc / espace entre caractères (utilisé pour le titre)
+\usepackage[letterspace=200]{microtype}		% Font expansion (use for title) with "lsstyle" (and "\textls[x] which doesn't work with pandoc) / espace entre caractères (utilisé pour le titre)
 % Web addresses
 %\usepackage{url}					% loaded by hyperref
 
@@ -280,22 +280,23 @@
 \title{%
 	\fontsize{40}{20}\selectfont					% increase size of title=40pt / line spacing=20pt
 	\scshape										% small caps
-	%	M\:a\:n\:u\:e\:l\; d\:e\; G\:r\:i\:s\:b\:i\\	% \: = medium space, \; = large space, \\ = line break
-	\textls[250]{%									% increase space between characters, default=100 (active "microtype" package) [[ !!! doesn't work with pandoc !!! ]]
-	Grisbi\; Manual}
-	\\												% new line
-	\vspace{1.5cm}									% vertical space between title and logo
+%	G\:r\:i\:s\:b\:i\; M\:a\:n\:u\:a\:l\\		% \: = medium space, \; = large space, \\ = line break
+%	\textls[200]{%									% increase space between characters, default=100 (active "microtype" package) [doesn't work with pandoc]
+	\lsstyle										% spacing between characters, defined with the ‘letterspace’ option in the microtype package
+	Grisbi Manual\\												% new line
+	\vspace*{2cm}									% vertical space between title and logo
 	\includegraphics[width=6cm]{image/grisbi-logo.png}		% insert {file_name} graphic with width=6cm
-	\vspace{1.5cm}									% % vertical space between logo and subtitle
+	\vspace*{1.5cm}									% vertical space between logo and subtitle
 }
 \subtitle{%											% subtitle font size, default=large
-	\sffamily\bfseries								% sans serif, bold
+	\sffamily										% sans serif
+	\bfseries										% bold
 	\scshape										% small caps
 	\fontsize{19}{20}\selectfont					% increase size of subtitle=20pt / line spacing=22pt
-	Personal accounting software
-	\vspace{1cm}\\									% vertical space
-	\rule{4.5cm}{0.4pt}								% horizontal line, first argument width, second thickness
-	\vspace{0.6cm}\\								% vertical space
+	Personal accounting software\\
+	\vspace*{1.5cm}\\									% vertical space
+%	\rule{4.5cm}{0.4pt}								% horizontal line, first argument width, second thickness
+%	\vspace{0.6cm}\\								% vertical space
 }
 \addtokomafont{author}{\large}						% modify author font size, default=Large
 \author{%
