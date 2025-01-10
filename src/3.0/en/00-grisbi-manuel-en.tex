@@ -58,7 +58,7 @@
 \usepackage{newtxtext}				% install texlive-fonts-extra, replacing times which replaces txfonts
 %\usepackage{lwarp}					% produce html file with lwarp (install texlive-extra-utils)
 
-\usepackage[letterspace=200]{microtype}		% Font expansion (use for title) with "lsstyle" (and "\textls[x] which doesn't work with pandoc) / espace entre caractères (utilisé pour le titre)
+\usepackage[letterspace=300]{microtype}		% Font expansion (use for title) with "lsstyle" (and "\textls[x] which doesn't work with pandoc) / espace entre caractères (utilisé pour le titre)
 % Web addresses
 %\usepackage{url}					% loaded by hyperref
 
@@ -283,7 +283,7 @@
 %	G\:r\:i\:s\:b\:i\; M\:a\:n\:u\:a\:l\\		% \: = medium space, \; = large space, \\ = line break
 %	\textls[200]{%									% increase space between characters, default=100 (active "microtype" package) [doesn't work with pandoc]
 	\lsstyle										% spacing between characters, defined with the ‘letterspace’ option in the microtype package
-	Grisbi Manual\\												% new line
+	Grisbi\: Manual\\												% new line
 	\vspace*{2cm}									% vertical space between title and logo
 	\includegraphics[width=6cm]{image/grisbi-logo.png}		% insert {file_name} graphic with width=6cm
 	\vspace*{1.5cm}									% vertical space between logo and subtitle
