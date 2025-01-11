@@ -82,21 +82,22 @@ Grisbi hat sich zum Ziel gesetzt, einfach und effizient für den grundlegenden G
 \section{Entwicklung der Software}%Évolution du logiciel
 
 
-\subsection{Développement et versions}
+\subsection{Entwicklung und Versionen}Développement et versions
 
-Grisbi étant un logiciel en plein développement, toute remarque (idée,
-bogue, documentation\dots{}) est la bienvenue. Vous pouvez l'envoyer aux différentes listes indiquées dans la section \vref{introduction-contacts} \menu{Contacts} ou sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}}.
+%Grisbi étant un logiciel en plein développement, toute remarque (idée, bogue, documentation\dots{}) est la bienvenue. Vous pouvez l'envoyer aux différentes listes indiquées dans la section \vref{introduction-contacts} \menu{Contacts} ou sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}}.
+Da Grisbi eine Software ist, die sich noch in der Entwicklung befindet, ist jedes Feedback (Ideen, Fehler, Dokumentation\dots{}) willkommen. Sie können sie an die verschiedenen Listen senden, die im Abschnitt \vref{introduction-contacts} \menu{Kontakte} oder auf der Website von \lang{Grisbi}\footnote{urlGrisbi{}} angegeben sind.
 
-Vous pouvez, si vous avez le goût de l'aventure, télécharger et compiler la dernière version en 
-cours de développement sur le système de gestion de contenu \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} utilisant \gls{Git}.
+%Vous pouvez, si vous avez le goût de l'aventure, télécharger et compiler la dernière version en cours de développement sur le système de gestion de contenu \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} utilisant \gls{Git}.
+Wenn Sie abenteuerlustig sind, können Sie die neueste Version, die derzeit auf dem Content-Management-System \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} entwickelt wird, unter Verwendung von \gls{Git} herunterladen und kompilieren.
 
-En effet, le code des nouvelles versions de Grisbi est bien souvent figé
-plusieurs semaines avant la distribution effective de celles-ci, le temps pour 
-l'équipe de développement de vérifier et d'éradiquer les ultimes bogues. Pendant cette période, le format du fichier de comptes ne bouge plus, et vous pouvez donc, avec un minimum de précautions (sauvegardes fréquentes, etc.), bénéficier des dernières améliorations avec plusieurs semaines d'avance, et également participer au débogage.
+%En effet, le code des nouvelles versions de Grisbi est bien souvent figé plusieurs semaines avant la distribution effective de celles-ci, le temps pour l'équipe de développement de vérifier et d'éradiquer les ultimes bogues. Pendant cette période, le format du fichier de comptes ne bouge plus, et vous pouvez donc, avec un minimum de précautions (sauvegardes fréquentes, etc.), bénéficier des dernières améliorations avec plusieurs semaines d'avance, et également participer au débogage.
+Der Code neuer Grisbi-Versionen wird oft mehrere Wochen vor der eigentlichen Veröffentlichung eingefroren, damit das Entwicklungsteam die letzten Fehler überprüfen und beseitigen kann. Während dieser Zeit bleibt das Format der Account-Datei unverändert, so dass Sie mit einem Minimum an Vorsichtsmaßnahmen (häufige Backups etc.) die neuesten Verbesserungen mehrere Wochen im Voraus nutzen und auch an der Fehlerbeseitigung teilnehmen können.
 
-Vous pouvez enfin avoir accès à toutes les évolutions du code postérieures à la version 0.3.2 (version à partir de laquelle le code est disponible sur le site de \gls{GitHub}\footref{siteGitHubGrisbi}).
+%Vous pouvez enfin avoir accès à toutes les évolutions du code postérieures à la version 0.3.2 (version à partir de laquelle le code est disponible sur le site de \gls{GitHub}\footref{siteGitHubGrisbi}).
+Schließlich haben Sie Zugriff auf alle Entwicklungen des Codes nach Version 0.3.2 (Version, ab der der Code auf der \gls{GitHub}\footref{siteGitHubGrisbi}-Website verfügbar ist).
 
-Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par ex. 0.\underline8) sont des versions stables, tandis que celles de numéro mineur impair sont instables et ne devraient pas être utilisées en conditions normales ; de ce fait seules les versions stables sont mentionnées ici.
+%Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par ex. 0.\underline8) sont des versions stables, tandis que celles de numéro mineur impair sont instables et ne devraient pas être utilisées en conditions normales ; de ce fait seules les versions stables sont mentionnées ici.
+Beachten Sie, dass ab Version 0.6 Versionen mit gerader Minor Number (z. B. 0.\underline8) stabile Versionen sind, während Versionen mit ungerader Minor Number instabil sind und unter normalen Umständen nicht verwendet werden sollten; daher werden hier nur die stabilen Versionen erwähnt.
 
 % saut de page pour titre solidaire
 \newpage
@@ -104,185 +105,184 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 \subsection{Version 0.1}
 
 \begin{itemize}
-	\item Gestion de plusieurs comptes
-	\item Création, modification et suppression de comptes et d'opérations (enfin le minimum pour fonctionner\dots{})
-	\item Possibilité de pointer les opérations
-	\item Et la sauvegarde, sans laquelle tout cela n'aurait pas beaucoup d'intérêt !
+	\item Verwaltung mehrerer Konten%Gestion de plusieurs comptes
+	\item Erstellen, Ändern und Löschen von Konten und Vorgängen (endlich das Minimum, um zu funktionieren\dots{})%Création, modification et suppression de comptes et d'opérations (enfin le minimum pour fonctionner\dots{})
+	\item Fähigkeit, Buchungen aufzuzeigen%Possibilité de pointer les opérations
+	\item Und die Datensicherung, ohne die das alles nicht viel Sinn machen würde!%Et la sauvegarde, sans laquelle tout cela n'aurait pas beaucoup d'intérêt !
 \end{itemize}
 
 \subsection{Version 0.2}
 
 \begin{itemize}
-	\item Importation automatique des fichiers de comptes de versions précédentes
-	\item Utilisation de listes pour les tiers, catégories\dots{} (plus pratique que de tout taper)
-	\item Saisie automatique lors de la frappe et remplissage de la fin de l'opération comme la précédente semblable
-	\item Gestion des virements entre comptes
-	\item Affichage des opération simplifié ou complet
-	\item Équilibrage de comptes
+	\item Automatischer Import von Kontodateien aus früheren Versionen%Importation automatique des fichiers de comptes de versions précédentes
+	\item Verwenden von Listen für Empfänger, Kategorien\dots{} (bequemer als alles einzutippen)%Utilisation de listes pour les tiers, catégories\dots{} (plus pratique que de tout taper)
+	\item Automatische Vervollständigung während der Eingabe und Ausfüllen am Ende des Vorgangs wie beim vorherigen ähnlich%Saisie automatique lors de la frappe et remplissage de la fin de l'opération comme la précédente semblable
+	\item Verwaltung von Überweisungen zwischen Konten%Gestion des virements entre comptes
+	\item Vereinfachte oder vollständige Anzeige der Buchungen%Affichage des opération simplifié ou complet
+	\item Ausgleichen von Konten%Équilibrage de comptes
 \end{itemize}
 
-\subsection{De la version 0.3.0 à la version 0.3.3}
+\subsection{Von Version 0.3.0 bis Version 0.3.3}%De la version 0.3.0 à la version 0.3.3}
 
 \begin{itemize}
-	\item Gestion des opérations prévues ou cycliques (échéancier) 
-	\item Prise en charge des devises et du passage à l'euro (du 1er janvier 1999 au 1er janvier 2002)
-	\item Ajout de l'import/export et amélioration de l'import de fichiers \gls{QIF}
-	\item Ajout de la ventilation
-	\item Support multi-utilisateur
-	\item Pour chaque banque et compte, ajout des détails comme:
+	\item Verwaltung geplanter oder zyklischer Buchungen (Planer)%Gestion des opérations prévues ou cycliques (échéancier) 
+	\item Übernahme von Währungen und der Umstellung auf den Euro (1. Januar 1999 bis 1. Januar 2002)%Prise en charge des devises et du passage à l'euro (du 1er janvier 1999 au 1er janvier 2002)
+	\item Import/Export hinzugefügt und Import von \gls{QIF}-Dateien verbessert%Ajout de l'import/export et amélioration de l'import de fichiers \gls{QIF}
+	\item Hinzufügen der Splittbuchung%Ajout de la ventilation
+	\item Mehrbenutzerunterstützung%Support multi-utilisateur
+	\item Für jede Bank und jedes Konto, Hinzufügen von Details wie%Pour chaque banque et compte, ajout des détails comme:
 		\begin{itemize}
-		\item numéros complets du compte associé, du guichet et du code banque
-		\item titulaire différent pour chaque compte avec adresse personnelle
-		\item coordonnées d'un correspondant
+		\item[\textopenbullet] Vollständige Nummern des zugehörigen Kontos, des Schalters und der Bankleitzahl%numéros complets du compte associé, du guichet et du code banque
+		\item[\textopenbullet] Unterschiedlicher Inhaber für jedes Konto mit persönlicher Adresse%titulaire différent pour chaque compte avec adresse personnelle
+		\item[\textopenbullet] Kontaktdaten eines Korrespondenten%coordonnées d'un correspondant
 		\end{itemize}
-	\item Ajout de l'onglet catégories
-	\item Possibilité de changer le nom et le code des devises
-	\item Le classement alphabétique prend (enfin) en compte les accents
-	\item Mémorise le dernier répertoire de travail et les derniers fichiers ouverts
-	\item Un numéro unique par opération quel que soit le compte
-	\item Les touches \key{+} (\key{-}) dans un champ de date incrémentent (décrémentent)
-	la date
-	\item Affichage possible de nouveaux champs dans le formulaire de saisie des opérations 
-	\item Échéances paramétrables pour un laps de temps défini
-	\item Affichage du solde courant pointé
-	\item Possibilité d'entrer la date sous la forme jjmm, jjmmaa ou jjmmaaaa
-	\item Totaux des opérations dans les onglets Tiers, Catégories et Imputations Budgétaires (IB)
-	\item Personnalisation possible du logo et de la police d'affichage.
-	\item Mise en place des outils Automake et Autoconf permettant de simplifier la compilation des fichiers sources du logiciel
+	\item Hinzufügen der Registerkarte Kategorien%Ajout de l'onglet catégories
+	\item Möglichkeit, den Namen und den Code der Währungen zu ändern%Possibilité de changer le nom et le code des devises
+	%\item Le classement alphabétique prend (enfin) en compte les accents
+	\item Speichert das letzte Arbeitsverzeichnis und die zuletzt geöffneten Dateien%Mémorise le dernier répertoire de travail et les derniers fichiers ouverts
+	\item Eine eindeutige Nummer pro Buchung unabhängig vom Konto%Un numéro unique par opération quel que soit le compte
+	\item Die Tasten \key{+} (\key{-}) in einem Datumsfeld inkrementieren (dekrementieren) das Datum%Les touches \key{+} (\key{-}) dans un champ de date incrémentent (décrémentent) la date
+	\item Mögliche Anzeige neuer Felder im Formular für die Eingabe von Buchungen%Affichage possible de nouveaux champs dans le formulaire de saisie des opérations 
+	\item Einstellbare Fälligkeiten für einen bestimmten Zeitraum%Échéances paramétrables pour un laps de temps défini
+	\item Anzeige des aktuellen gepunkteten Saldos%Affichage du solde courant pointé
+	\item Möglichkeit, das Datum in der Form ttmm, ttmmjj oder ttmmjjj einzugeben%Possibilité d'entrer la date sous la forme jjmm, jjmmaa ou jjmmaaaa
+	\item Transaktionssummen auf den Registerkarten Empfänger, Kategorien und Budgetzuweisungen%Totaux des opérations dans les onglets Tiers, Catégories et Imputations Budgétaires (IB)
+	\item Logo und Schriftart der Anzeige können individuell gestaltet werden%Personnalisation possible du logo et de la police d'affichage.
+	\item Einführung der Tools Automake und Autoconf, mit denen die Zusammenstellung der Quelldateien der Software vereinfacht werden kann%Mise en place des outils Automake et Autoconf permettant de simplifier la compilation des fichiers sources du logiciel
 \end{itemize}
 
 %\newpage			% saut de page pour titre solidaire
 
-\subsection{De la version 0.4.0 à la version 0.4.4}
+\subsection{Von Version 0.4.0 bis Version 0.4.4}%De la version 0.4.0 à la version 0.4.4}
 
 \begin{itemize}
-	\item Personnalisation de l'agencement de l'interface
-	\item Possibilité d'import/export:
+	\item Anpassen des Layouts der Benutzeroberfläche%Personnalisation de l'agencement de l'interface
+	\item Möglichkeit des Imports/Exports:%Possibilité d'import/export:
 		\begin{itemize}
-		\item de listes de catégories
-		\item de listes d'imputations budgétaires (IB)
-		\item d'états créés
+		\item[\textopenbullet] von Kategorielisten%de listes de catégories
+		\item[\textopenbullet] Listen von Gruppen%de listes d'imputations budgétaires (IB)
+		\item[\textopenbullet] von erstellten Berichten%d'états créés
 		\end{itemize}	
-	\item Ajout des rapports financiers
-	\item Grisbi est désormais internationalisé et les traductions sont améliorées
-	\item Affichage des soldes multi-devises dans l'écran de démarrage
-	\item Les remarques peuvent être affichées dans l'échéancier
-	\item Nouvel outil permettant aux contributeurs d'anonymiser les fichiers Grisbi afin de garder la confidentialité avant de les envoyer
-	\item La largeur des colonnes de l'échéancier est modifiable
-	\item Harmonisation dans les champs de date:
+	\item Finanzberichte wurden hinzugefügt%Ajout des rapports financiers
+	\item Grisbi ist nun internationalisiert und die Übersetzungen wurden verbessert%Grisbi est désormais internationalisé et les traductions sont améliorées
+	\item Anzeige von Salden in mehreren Währungen im Startbildschirm%Affichage des soldes multi-devises dans l'écran de démarrage
+	\item Notizen können im Planner angezeigt werden%Les remarques peuvent être affichées dans l'échéancier
+	\item Neues Tool, mit dem Beitragende die Grisbi-Dateien anonymisieren können, um die Vertraulichkeit vor dem Versand zu wahren%Nouvel outil permettant aux contributeurs d'anonymiser les fichiers Grisbi afin de garder la confidentialité avant de les envoyer
+	\item Die Breite der Spalten im Fälligkeitsplan kann geändert werden%La largeur des colonnes de l'échéancier est modifiable
+	\item Harmonisierung in den Datumsfeldern%Harmonisation dans les champs de date:
 		\begin{itemize}
-		\item \key{Ctrl}\key{Entrée} dans un champ de date ouvre un calendrier
-		\item les touches fléchées sont actives dans un calendrier
-		\item \key{Ctrl}\key{+} (\key{-}) dans un champ de date augmente (diminue) la date d'environ une semaine
-		\item \key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un mois
-		\item \key{Ctrl}\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un an
+		\item[\textopenbullet] \key{Strg/Ctrl}\key{Enter} in einem Datumsfeld öffnet einen Kalender%\key{Ctrl}\key{Entrée} dans un champ de date ouvre un calendrier
+		\item[\textopenbullet] Die Pfeiltasten sind in einem Kalender aktiv%les touches fléchées sont actives dans un calendrier
+		\item[\textopenbullet] \key{Strg/Ctrl}\key{+} (\key{-}) in einem Datumsfeld erhöht (verringert) das Datum um etwa eine Woche%\key{Ctrl}\key{+} (\key{-}) dans un champ de date augmente (diminue) la date d'environ une semaine
+		\item[\textopenbullet] \key{Bild auf} (\key{Bild ab}) erhöht (verringert) das Datum um etwa einen Monat%\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un mois
+		\item[\textopenbullet] \key{Strg/Ctrl}\key{Bild auf} (\key{Bild ab}) erhöht (verringert) das Datum um etwa ein Jahr%\key{Ctrl}\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un an
 		\end{itemize}	
 \end{itemize}
 
-\subsection{De la version 0.4.5 à la version 0.6}
+\subsection{Von Version 0.4.5 bis Version 0.6}%De la version 0.4.5 à la version 0.6}
 
 \begin{itemize}
-	\item Refonte de l'interface graphique
-	\item Support de la bibliothèque \gls{GTK}+ 2 pour un environnement plus sympathique et un portage simplifié sous Windows
-	\item Plus aucune dépendance vis-à-vis de \gls{Gnome}
-	\item Version Windows native (merci à François \familyname{Terrot})%\footnote{\urlFrancoisTerrotEmail{}}
-	\item Support \gls{UTF-8} natif
-	\item Impression des états par \gls{LaTeX}
-	\item Export des états en \gls{HTML}
-	\item Amélioration de l'interface utilisateur:
+	\item Überarbeitung der grafischen Oberfläche%Refonte de l'interface graphique
+	\item Umstellung auf \gls{GTK}+ 2%Support de la bibliothèque \gls{GTK}+ 2 pour un environnement plus sympathique et un portage simplifié sous Windows
+	\item Entfernung \gls{Gnome} Abhängigkeiten%Plus aucune dépendance vis-à-vis de \gls{Gnome}
+	\item Native Windows Version%Version Windows native (merci à François \familyname{Terrot})%\footnote{\urlFrancoisTerrotEmail{}}
+	\item Vollständige \gls{UTF-8} Unterstützung%Support \gls{UTF-8} natif
+	\item Berichte in \gls{LaTeX} drucken%Impression des états par \gls{LaTeX}
+	\item Berichte in \gls{HTML} exportieren%Export des états en \gls{HTML}
+	\item Verbesserte Benutzeroberfläche:%Amélioration de l'interface utilisateur:
 		\begin{itemize}
-		\item amélioration des messages, les utilisateurs peuvent en ignorer
-		\item amélioration de la gestion des erreurs de segmentation
-		\item amélioration de la fenêtre des préférences
-		\item menu contextuel sur la liste des opérations
-		\item amélioration des items
+		\item[\textopenbullet] Konfigurierbarkeit von Meldungen%amélioration des messages, les utilisateurs peuvent en ignorer
+		\item[\textopenbullet] verbesserte Fehlerbehandlung%amélioration de la gestion des erreurs de segmentation
+		\item[\textopenbullet] Neuanordnung von Menüpunkten%amélioration de la fenêtre des préférences
+		\item[\textopenbullet] Kontextmenü in der Buchungsübersicht%menu contextuel sur la liste des opérations
+		\item[\textopenbullet] zusätzliche Einstellungen%amélioration des items
 		\end{itemize}
-	\item Listes de comptes et d'états complètement cliquables
-	\item Configuration globale en \gls{XML} (merci à Axel Rousseau)
-	\item Réécriture de l'import de fichiers:
+	\item Vollständig anklickbare Listen von Konten und Berichten%Listes de comptes et d'états complètement cliquables
+	\item Speichern der Konfiguration ein einer \gls{XML} Datei%Configuration globale en \gls{XML} (merci à Axel Rousseau)
+	\item Import und Export:%Réécriture de l'import de fichiers:
 		\begin{itemize}
-		\item support des formats \gls{QIF}, \gls{OFX}, \gls{Gnucash} ou \gls{CSV}
-		\item import incrémental
-		\item rapprochement automatique
+		\item[\textopenbullet] Unterstützung von \gls{QIF}, \gls{OFX}, \gls{Gnucash} und \gls{CSV} Formaten%support des formats \gls{QIF}, \gls{OFX}, \gls{Gnucash} ou \gls{CSV}
+		\item[\textopenbullet] inkrementeller Import%import incrémental
+		\item[\textopenbullet] automatische Abstimmung beim Import%rapprochement automatique
 		\end{itemize}
-	\item Début de la traduction italienne par Giorgio \familyname{Mandolfo}
-	\item Taux de change cachés sur une session pour éviter de les ressaisir
-	\item Support des attributs de texte (gras, italique, grand, petit) pour les états
-	\item Nouveau logo avec la mascotte Grisbi sur le symbole de l'euro (€) (merci à André \familyname{Pascual})
-	\item Logo d'attente animé modifiable
-	\item Complètement des listes sensible à la casse des caractères
-	\item Amélioration de la saisie des détails des banques
-	\item Support du clavier dans l'arborescence des tiers, catégories et imputations budgétaires
-	\item Échéances automatiques à terme cliquables
-	\item Échéances ventilables
-	\item Opérations convertibles en échéances
-	\item Opérations déplaçables dans un autre compte
+	\item Neue Übersetzungen%Début de la traduction italienne par Giorgio \familyname{Mandolfo}
+	%\item Taux de change cachés sur une session pour éviter de les ressaisir
+	\item Unterstützung von Textattributen (fett, kursiv, groß, klein) für Berichte%Support des attributs de texte (gras, italique, grand, petit) pour les états
+	\item Neues Logo mit Maskottchen Grisbi auf einem Eurozeichen (€)%Nouveau logo avec la mascotte Grisbi sur le symbole de l'euro (€) (merci à André \familyname{Pascual})
+	\item Anzeige von Logo ist konfigurierbar%Logo d'attente animé modifiable
+	\item Autovervollständigung ist nicht mehr case sensitive%Complètement des listes sensible à la casse des caractères
+	\item Verwaltung von mehreren Banken%Amélioration de la saisie des détails des banques
+	\item Tastaturbedienbarkeit für Empfänger, Kategorien und Gruppen%Support du clavier dans l'arborescence des tiers, catégories et imputations budgétaires
+	\item Automatische klickbare Fälligkeitstermine%Échéances automatiques à terme cliquables
+	\item Übersicht für geplante Buchungen%Échéances ventilables
+	\item Geplante Buchungen können aus der Buchungsübersicht erstellt werden%Opérations convertibles en échéances
+	\item Buchungen können auf andere Konten verschoben werden%Opérations déplaçables dans un autre compte
 \end{itemize}
 
 
-\subsection{Nouveautés de la version 0.8}
+\subsection{Neuerungen in Version 0.8}%Nouveautés de la version 0.8}
 
 \begin{itemize}
-	\item Module budgétaire dans la version de base
-	\item Simulateur de crédits et tableaux d'amortissement avec possibilité d'imprimer et d'exporter les données dans un tableur
-	\item Tableau d'amortissement pour les comptes de passif avec possibilité d'imprimer et d'exporter les données dans un tableur
-	\item Gestion des paramètres locaux (format des dates, séparateurs décimal et des milliers)
-	\item Incorporation des icônes personnalisées dans le fichier de comptes
-	\item Colorisation des débits dans l'échéancier
-	\item Clonage des opérations planifiées
+	\item Budgets (Basisversion)%Module budgétaire dans la version de base
+	\item Kreditrechner mit Tilgungsplan (inklusive Druck und Export)%Simulateur de crédits et tableaux d'amortissement avec possibilité d'imprimer et d'exporter les données dans un tableur
+	\item Abschreibungstabelle für Passivkonten mit der Möglichkeit, die Daten auszudrucken und in ein Tabellenkalkulationsprogramm zu exportieren%Tableau d'amortissement pour les comptes de passif avec possibilité d'imprimer et d'exporter les données dans un tableur
+	\item Lokalisierung (Datum, Dezimal und Tausender Trennzeichen)%Gestion des paramètres locaux (format des dates, séparateurs décimal et des milliers)
+	\item Konfigurierbare Symbole für Konten%Incorporation des icônes personnalisées dans le fichier de comptes
+	\item Optische Hervorhebungen für Salden%Colorisation des débits dans l'échéancier
+	\item Duplizieren von Buchungen%Clonage des opérations planifiées
 \end{itemize}
 
 
-\subsection{Nouveautés de la version 1.0}
+\subsection{Neuerungen in Version 1.0}%Nouveautés de la version 1.0}
 
 \begin{itemize}
-	\item Graphiques sur les prévisions
-	\item Gestion des cartes bancaires (débit immédiat ou différé)
-	\item Comptabilité d'association avec plan comptable
-	\item Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg}
-	\item Encore plus de menus contextuels sur le bouton droit de la souris
-	\item Import de fichiers de catégories dans les imputations budgétaires
-	\item Modification de l'ordre d'affichage des comptes par glisser/déposer dans la liste des comptes
-	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
-	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
-	\item Affichage des tiers inutilisés	
-	\item Commande d'affichage plein écran par la touche de fonction \key{F11}
-	\item Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération
-	\item Accès direct au manuel de l'utilisateur par le menu \menu{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}
+	\item Grafiken zur Prognosen%Graphiques sur les prévisions
+	\item Kreditkartenmanagement (sofortige oder verzögerte Belastung)%Gestion des cartes bancaires (débit immédiat ou différé)
+	%\item Comptabilité d'association avec plan comptable		% for French accounting only
+	\item Grisbi's Ikone im Format \indexword{\gls{SVG}}\index{svg}%Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg}
+	\item Kontextmenü Erweiterungen%Encore plus de menus contextuels sur le bouton droit de la souris
+	\item Datenimport für Kategorien und Gruppen%Import de fichiers de catégories dans les imputations budgétaires
+	\item Anordnung von Konten ist mit Drag \& Drop änderbar%Modification de l'ordre d'affichage des comptes par glisser/déposer dans la liste des comptes
+	\item Berechnung vom Saldo mit Buchung oder Valutadatum%Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
+	\item Zurücksetzen der Betragsfelder bei automatischer Datenbefüllung%Option d'effacement des champs Crédit et Débit pour l'auto-complètement
+	\item Anzeige von unbenutzten Empfängern%Affichage des tiers inutilisés	
+	\item Vollbildanzeige mit Funktionstaste \key{F11}%Commande d'affichage plein écran par la touche de fonction \key{F11}
+	\item Erstellung Buchung mit Kurzbefehl \key{Strg/Ctrl}\key{T}%Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération
+	\item Aufruf der \menu{Hilfe} mit Kurzbefehl \key{Strg/Ctrl}\key{H}%Accès direct au manuel de l'utilisateur par le menu \menu{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}
 \end{itemize}
 
 
-\subsection{Nouveautés de la version 2.0}
+\subsection{Neuerungen in Version 2.0}%Nouveautés de la version 2.0}
 
 \begin{itemize}
-	\item Portage sous \gls{GTK}+ 3 (depuis la version 1.2.0)
-	\item Ajout d'un module de recherche dans la liste des opérations accessibles, dans le menu contextuel des opérations (clic droit sur une opération)
-	\item Détection automatique/intégration de schéma de couleur foncée
-	\item Nouveaux réglages pour les couleurs
-	\item Configuration générale de la taille de police
-	\item Affichage amélioré sur les dispositifs à faible résolution
-	\item Révision du module de crédit
-	\item Règles d'importation pour les fichiers \gls{CSV}
-	\item Fonctionnalité de recherche
-	\item Réglage pour la suppression d'anciennes sauvegardes
-	\item Résolution de bogues
+	\item Umstellung auf \gls{GTK}+ 3 (seit Version 1.2.0)%Portage sous \gls{GTK}+ 3 (depuis la version 1.2.0)
+	\item Hinzufügen eines Suchmoduls in der Liste der zugänglichen Buchungen, im Kontextmenü der Buchungen (Rechtsklick auf einen Buchung)%Ajout d'un module de recherche dans la liste des opérations accessibles, dans le menu contextuel des opérations (clic droit sur une opération)
+	\item Automatische Erkennung/Integration von dunklen Farbschemen%Détection automatique/intégration de schéma de couleur foncée
+	\item Neue Einstellungen für Farben%Nouveaux réglages pour les couleurs
+	\item Konfiguration für allgemeine Schrittgröße%Configuration générale de la taille de police
+	\item Verbesserte Darstellung auf Geräten mit geringer Auflösung%Affichage amélioré sur les dispositifs à faible résolution
+	\item Überarbeitung vom Kreditmodul%Révision du module de crédit
+	\item Importregeln für \gls{CSV} Dateien%Règles d'importation pour les fichiers \gls{CSV}
+	\item Suchfunktionalität%Fonctionnalité de recherche
+	\item Einstellung für die Löschung von alten Sicherungen%Réglage pour la suppression d'anciennes sauvegardes
+	\item Fehlerbehebungen%Résolution de bogues
 \end{itemize}
 
 
-\subsection{Nouveautés de la version 3.0}
+\subsection{Neuerungen in Version 3.0}%Nouveautés de la version 3.0}
 
 \begin{itemize}
-	\item Modification de la recherche du bénéficiaire
-	\item Ajout d'un nouveau type de prêt à la consommation
-	\item Ajout de toutes les transactions dans les archives lorsque le compte est clôturé
-	\item Nettoyage du code
-	\item Préparation de la transition vers \gls{GTK} 4
-	\item Résolution de bogues
+	\item Änderung der Suche nach dem Empfänger%Modification de la recherche du bénéficiaire
+	\item Hinzufügen einer neuen Art von Konsumentenkredit%Ajout d'un nouveau type de prêt à la consommation
+	\item Hinzufügen aller Transaktionen zum Archiv, wenn das Konto geschlossen wird%Ajout de toutes les transactions dans les archives lorsque le compte est clôturé
+	\item Bereinigung des Codes%Nettoyage du code
+	\item Vorbereitung der Umstellung auf \gls{GTK} 4%Préparation de la transition vers \gls{GTK} 4
+	\item Fehlerbehebungen%Résolution de bogues
 \end{itemize}
 
-\subsection{Et pour le futur ?}
+\subsection{Was ist mit der Zukunft?}%Et pour le futur ?}
 
-Portage complet sous \gls{GTK} 4
+Vollständige Portierung unter \gls{GTK} 4%Portage complet sous \gls{GTK} 4
 
 %\newpage						% saut de page pour titre solidaire
 
