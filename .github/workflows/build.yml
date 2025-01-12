@@ -59,6 +59,18 @@ jobs:
           name: html-en-3.0
           path: src/3.0/en/html/grisbi-manuel.html
 
+      - name: "build 3.0 de"
+        shell: bash
+        run: |
+          cd src/3.0/de
+          make FILE=00-grisbi-manuel-de html_pandoc
+
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-de-3.0
+          path: src/3.0/de/html/grisbi-manuel.html
+
       - name: "build 2.0 fr"
         shell: bash
         run: cd src/2.0/fr ; make
