@@ -51,6 +51,7 @@ jobs:
         shell: bash
         run: |
           cd src/3.0/en
+          make FILE=00-grisbi-manuel-en pdf_img_indexglossary && make FILE=00-grisbi-manuel-en pdf_img
           make FILE=00-grisbi-manuel-en html_pandoc
 
       - name: artifacts
@@ -59,10 +60,17 @@ jobs:
           name: html-en-3.0
           path: src/3.0/en/html/grisbi-manuel.html
 
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-en-3.0
+          path: src/3.0/en/pdf_img/00-grisbi-manuel-en-img-3.0.pdf
+
       - name: "build 3.0 de"
         shell: bash
         run: |
           cd src/3.0/de
+          make FILE=00-grisbi-manuel-de pdf_img_indexglossary && make FILE=00-grisbi-manuel-de pdf_img
           make FILE=00-grisbi-manuel-de html_pandoc
 
       - name: artifacts
@@ -70,6 +78,12 @@ jobs:
         with:
           name: html-de-3.0
           path: src/3.0/de/html/grisbi-manuel.html
+
+      - name: artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-de-3.0
+          path: src/3.0/de/pdf_img/00-grisbi-manuel-de-img-3.0.pdf
 
       - name: "build 2.0 fr"
         shell: bash
