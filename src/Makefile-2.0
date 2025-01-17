@@ -6,7 +6,7 @@ TOOL_DIR := $(TOP)tool
 #TODO overfull, underfull rules...
 
 FILE=grisbi-manuel
-VERSION=1.0
+VERSION=2.0
 INCLUDES:=$(wildcard grisbi-manuel*.tex) $(wildcard tool/*.pl) Makefile
 FIGURES_PNG:=$(wildcard image/screenshot/*.png) $(wildcard image/icon/*.png)
 FIGURES_EPS:=$(patsubst %.png,%.eps,$(FIGURES_PNG))
