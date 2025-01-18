@@ -44,8 +44,6 @@ Cette fenêtre affiche plusieurs pavés:
 	\item un ou plusieurs autres pavés, portant le nom de fichiers de comptabilité (ou fichiers de compte\textbf{S} pour Grisbi, notez le \textbf{S}) que Grisbi a déjà utilisés.
 \end{itemize}
 
-%\vspacepdf{5mm}			% espace : 5 mm
-\newpage
 
 \textbf{Note} : les pavés portant les noms des fichiers de comptabilité que Grisbi a déjà utilisés ne sont présents que si ces fichiers existent; si vous voulez les enlever de cette page d'entrée, déplacez les dans un autre répertoire, ou supprimez-les.
 
@@ -59,36 +57,38 @@ Si vous voulez juste découvrir le logiciel Grisbi pour avoir un aperçu de son 
 
 \vspacepdf{5mm}			% espace   : 5 mm
 
-\textbf{Note}: en cliquant simplement sur le fichier exemple téléchargé, Grisbi affichera directement la fenêtre  d'accueil\refimage{home} sans passer par la fenêtre de démarrage.
+\textbf{Note}: en cliquant simplement sur le fichier exemple téléchargé, Grisbi affichera directement la fenêtre d'accueil\refimage{home} sans passer par la fenêtre de démarrage.
+
 
 \section{Accueil\label{home}}
 
-En ouvrant un fichier de comptabilité, Grisbi affiche sa page d'accueil\refimage{home-img}.
-
+En ouvrant un fichier de comptabilité, Grisbi affiche sa page d'accueil\refimage{home}.
 C'est la page de démarrage du programme; on peut y accéder à tout moment en cliquant sur l'onglet \menu{Comptes}. 
 
-Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage!plein écran}\index{plein écran!affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.
 
-
-% image centrée
-\begin{figure}[htbp]
+\begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
 \begin{center}
-\includegraphics[scale=0.35]{image/screenshot/home}
+\includegraphics[width=1\textwidth]{image/screenshot/home}
 \end{center}
-\caption{Page d'accueil}
+\caption{Page d'accueil}		% sous-titre/subtitle
 \label{home-img}
 \end{figure}
 
-Grisbi affiche toutes ses pages de la même manière : comme n'importe quel logiciel, il affiche une barre de menus qui donne accès à la plupart des fonctionnalités importantes de Grisbi, et aussi trois zones :
+Grisbi affiche toutes ses pages de la même manière: comme n'importe quel logiciel, il affiche:% une barre de titre, une barre de menus qui donne accès à la plupart des fonctionnalités importantes de Grisbi, et aussi trois zones:
 
-\begin{itemize}
-	 \item la barre d'information, sous la barre de menus ;
-	 \item le panneau de navigation ;
-	 \item le pavé des détails.
+\begin{itemize}%[\large \textcircled{\small 2}]
+	\item[\large\textcircled{\small 1}] une barre de titre;
+	\item[\large\textcircled{\small 2}] une barre de menus qui donne accès à la plupart des fonctionnalités importantes de Grisbi;
 \end{itemize}
+et aussi trois zones:
+\begin{itemize}%[3,4,5]
+	\item[\large\textcircled{\small 3}] la barre d'information, sous la barre de menus;
+	\item[\large\textcircled{\small 4}] le panneau de navigation;
+	\item[\large\textcircled{\small 5}] le panneau des détails
+\end{itemize}
+qui sont spécifiques à Grisbi.
 
-
-Ces trois zones, spécifiques à Grisbi, sont encadrées de couleurs dans la figure pour bien les identifier\refimage{home-img}.
+%Les zones 3, 4 et 5 sont spécifiques à Grisbi%, sont encadrées de couleurs dans la figure pour bien les identifier\refimage{home}.
 
 
 \section{Barre d'information\label{home-synthesis}}
@@ -221,14 +221,14 @@ Pour afficher la page d'accueil, sélectionnez l'onglet \menu{Comptes} ; le pav�
 
 % espace pour changement de thème
 \vspacepdf{5mm}
-Les libellés des comptes s'affichent en noir{\couleur} ; au passage du pointeur de la souris sur la ligne de l'un d'eux, cette couleur passe au gris{\couleur}.
-Un solde supérieur au \menu{Solde minimal voulu} s'affiche en vert foncé{\couleur} ; au passage du pointeur sur sa ligne, cette couleur passe au vert clair{\couleur}.
-Un solde inférieur au \menu{Solde minimal voulu} et supérieur au \menu{Solde minimal autorisé} s'affiche en orange{\couleur} ; au passage du pointeur sur sa ligne, cette couleur passe à l'orange clair{\couleur}.
-Un solde inférieur au \menu{Solde minimal autorisé} s'affiche en rouge{\couleur} ; au passage du pointeur sur sa ligne, cette couleur passe au rouge clair{\couleur}.
+Les libellés des comptes s'affichent en \textcolor{black}{noir}; au passage du pointeur de la souris sur la ligne de l'un d'eux, cette couleur passe au \textcolor{gray}{gris}.
+Un solde supérieur au \menu{Solde minimal voulu} s'affiche en \textcolor{teal}{vert foncé}; au passage du pointeur sur sa ligne, cette couleur passe au \textcolor{lime}{vert clair}.
+Un solde inférieur au \menu{Solde minimal voulu} et supérieur au \menu{Solde minimal autorisé} s'affiche en \textcolor{orange}{orange}; au passage du pointeur sur sa ligne, cette couleur passe à l'\textcolor{orange}{orange clair}.
+Un solde inférieur au \menu{Solde minimal autorisé} s'affiche en \textcolor{red}{rouge}; au passage du pointeur sur sa ligne, cette couleur passe au \textcolor{red}{rouge clair}.
 
 Au passage du pointeur de la souris sur la ligne d'un compte, tout changement de couleur indique que si l'on clique (droit ou gauche) avec la souris, ce compte s'affiche, comme s'il avait été sélectionné avec la barre d'information ou le panneau de navigation ; il affiche alors la page qui contient la ligne d'opération  affichant ce solde.
 
-Un solde partiel, qui correspond à un groupe de comptes, s'affiche en noir{\couleur}. S'il est négatif, il peut s'afficher en rouge foncé{\couleur}, mais seulement si cela a été configuré ainsi (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Soldes partiels de la liste des comptes}). Une ligne de solde partiel ne change pas de couleur au passage du pointeur de la souris dessus, car on ne peut pas afficher les opérations d'un groupe de comptes.
+Un solde partiel, qui correspond à un groupe de comptes, s'affiche en \textcolor{black}{noir}. S'il est négatif, il peut s'afficher en \textcolor{red}{rouge foncé}, mais seulement si cela a été configuré ainsi (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Soldes partiels de la liste des comptes}). Une ligne de solde partiel ne change pas de couleur au passage du pointeur de la souris dessus, car on ne peut pas afficher les opérations d'un groupe de comptes.
 
 % espace pour changement de thème
 \vspacepdf{5mm}
@@ -245,10 +245,10 @@ Vous pouvez configurer certains aspects de l'affichage de cette page d'accueil d
 
 En particulier, si vous trouvez une erreur d’orthographe dans cette page, vous pourrez la corriger : voir le paragraphe \vref{setup-general-home-final}, \menu{Pluriel de final} !
 
-\ifIllustration
+%\ifIllustration
 % saut de page pour paragraphe solidaire
-\newpage
-\fi
+%\newpage
+%\fi
 
 \section{Barre de menus\label{home-menus}}
 
