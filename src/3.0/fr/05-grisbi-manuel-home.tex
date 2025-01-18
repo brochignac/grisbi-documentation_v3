@@ -9,18 +9,67 @@
 % $Id : grisbi-manuel-home.tex, v 1.0 2014/02/12 Jean-Luc Duflot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Accueil\label{home}}
+\chapter{Entrée dans Grisbi\label{entrance}}
+
+\section{Sélection d'un fichier\label{select-file}}
+
+\vspacepdf{5mm}			% vertical space = 5 mm
+
+Au lancement de l'application, Grisbi affiche la page qui vous permet de démarrer de différentes manières.
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage!plein écran}\index{plein écran!affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.			% "!" separates the term from the subterm of the index entry
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+%\ifIllustration
+\begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
+	\begin{center}					% image centrée
+		\includegraphics[width=0.95\textwidth]{image/screenshot/start_grisbi}		% width=95% as wide as the current text
+	\end{center}
+	\caption{Fenêtre de démarrage}			% sous-titre/subtitle
+	\label{start_grisbi}					% figure's ref., use for link in text with \refimage{}
+\end{figure}
+%\fi
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+Cette fenêtre affiche plusieurs pavés:
+
+\begin{itemize}
+	\item le pavé Nouveau, pour lancer l'assistant d'Aide à la création d'un nouveau fichier de comptabilités (ou fichier de compte\textbf{S} pour Grisbi, notez le \textbf{S});
+	\item le pavé Ouvrir, pour afficher un gestionnaire de fichier avec lequel vous pourrez chercher un fichier de comptes existant dans votre ordinateur;
+	\item le pavé Importer, pour lancer l'assistant d'Aide à l'importation de fichiers;
+	\item un ou plusieurs autres pavés, portant le nom de fichiers de comptabilité (ou fichiers de compte\textbf{S} pour Grisbi, notez le \textbf{S}) que Grisbi a déjà utilisés.
+\end{itemize}
+
+%\vspacepdf{5mm}			% espace : 5 mm
+\newpage
+
+\textbf{Note} : les pavés portant les noms des fichiers de comptabilité que Grisbi a déjà utilisés ne sont présents que si ces fichiers existent; si vous voulez les enlever de cette page d'entrée, déplacez les dans un autre répertoire, ou supprimez-les.
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+En bas de page, un bandeau vous appelle à choisir une action en sélectionnant l'un de ces pavés.
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+Si vous voulez juste découvrir le logiciel Grisbi pour avoir un aperçu de son aspect et de ses possibilités, vous pouvez à la place utiliser un fichier exemple comme celui présent sur le site de \lang{Sourceforge.net}\footnote{\urlSourceForgeDocumentation{}} dans le dossier \frquote{\textsf{examples}}.		% (voir la section \vref{new-example}).
+
+\vspacepdf{5mm}			% espace   : 5 mm
+
+\textbf{Note}: en cliquant simplement sur le fichier exemple téléchargé, Grisbi affichera directement la fenêtre  d'accueil\refimage{home} sans passer par la fenêtre de démarrage.
+
+\section{Accueil\label{home}}
+
+En ouvrant un fichier de comptabilité, Grisbi affiche sa page d'accueil\refimage{home-img}.
+
+C'est la page de démarrage du programme; on peut y accéder à tout moment en cliquant sur l'onglet \menu{Comptes}. 
+
+Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage!plein écran}\index{plein écran!affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.
 
 
-Au démarrage de l'application, Grisbi affiche sa page 
-\ifIllustration d'accueil\refimage{home-img}.
-\else d'accueil.
-\fi
-C'est la page de démarrage du programme ; on peut y accéder à tout moment en cliquant sur l'onglet \menu{Comptes}. 
-
-Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage !plein écran}\index{plein écran !affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.
-
-\ifIllustration
 % image centrée
 \begin{figure}[htbp]
 \begin{center}
@@ -29,8 +78,6 @@ Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{aff
 \caption{Page d'accueil}
 \label{home-img}
 \end{figure}
-% image centrée
-\fi
 
 Grisbi affiche toutes ses pages de la même manière : comme n'importe quel logiciel, il affiche une barre de menus qui donne accès à la plupart des fonctionnalités importantes de Grisbi, et aussi trois zones :
 
@@ -40,10 +87,8 @@ Grisbi affiche toutes ses pages de la même manière : comme n'importe quel logi
 	 \item le pavé des détails.
 \end{itemize}
 
-\ifIllustration 
+
 Ces trois zones, spécifiques à Grisbi, sont encadrées de couleurs dans la figure pour bien les identifier\refimage{home-img}.
-\else
-\fi
 
 
 \section{Barre d'information\label{home-synthesis}}
@@ -132,11 +177,8 @@ Des \indexword{menus contextuels}\index{menu contextuel}, accessibles par un cli
 		\end{itemize}
 \end{itemize}
 
-\ifIllustration
-\else
 % saut de page pour titre solidaire
 \newpage
-\fi
 
 
 \section{Pavé des détails\label{home-details}}
