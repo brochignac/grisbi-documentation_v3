@@ -77,28 +77,28 @@ et l’ensemble des comptes de votre association l’est dans un autre fichier d
 
 % espace pour changement de thème
 \vspacepdf{5mm}
-Le déroulement général de la procédure de création d'un fichier de comptes est le suivant: cliquez sur le menu \menu{Fichier > Nouveau fichier de comptes}; l'assistant \frquote{Aide à la création d'un nouveau fichier de comptes}, qui comprend six étapes, s'ouvre. À la sixième étape, l'assistant vous propose:
+%Le déroulement général de la procédure de création d'un fichier de comptes est le suivant: cliquez sur le menu \menu{Fichier > Nouveau fichier de comptes}; l'assistant \frquote{Aide à la création d'un nouveau fichier de comptes}, qui comprend six étapes, s'ouvre. À la sixième étape, l'assistant vous propose:
 
-\begin{itemize}
-	\item soit de créer un nouveau compte vide, et il enchaîne sur l'assistant \frquote{Créer un nouveau compte}, qui comprend lui-même quatre étapes, pour créer le premier compte (car il est indispensable de disposer d'au moins un compte);
-	\item soit d'utiliser des données déjà existantes, et il enchaîne alors sur l'assistant \frquote{Importation des opérations par Grisbi}, qui comprend aussi quatre étapes, pour importer des opérations de comptes existants.
-\end{itemize}
+%\begin{itemize}
+%	\item soit de créer un nouveau compte vide, et il enchaîne sur l'assistant \frquote{Créer un nouveau compte}, qui comprend lui-même quatre étapes, pour créer le premier compte (car il est indispensable de disposer d'au moins un compte);
+%	\item soit d'utiliser des données déjà existantes, et il enchaîne alors sur l'assistant \frquote{Importation des opérations par Grisbi}, qui comprend aussi quatre étapes, pour importer des opérations de comptes existants.
+%\end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouveau fichier de comptes}, la procédure détaillée (en six étapes) est la suivante:
+%\vspacepdf{5mm}
+Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouveau fichier de comptes} ou sur le pavé Nouveau\refimage{start_grisbi}, et la procédure se déroulera en six étapes détaillées comme suit:
 
 \begin{enumerate}
-	\item Fenêtre d'accueil: validez par le bouton \menu{Suivant} (étape 1/6):
+	\item Fenêtre d'accueil (étape 1/6): validez par le bouton \menu{Suivant}:
 	\item Configuration
- générale (étape 2/6):\refimage{start_file_create}
+ générale (étape 2/6)\refimage{start_file_create}:
 
 		\begin{figure}[htbp]
 		\begin{center}
 		\includegraphics[width=0.9\textwidth]{image/screenshot/start_file_create}
 		\end{center}
 		\caption{Configuration générale du fichier de comptes}
-		\label{start-file-create}
+		\label{start_file_create}
 		\end{figure}
 		
 		\begin{enumerate} 
@@ -113,7 +113,7 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 			\item sélectionnez le \indexword{format de la date}\index{format de date} avec l'un des quatre boutons:
 			%\begin{addmargin}{-0.2cm}
 				\begin{itemize}	
-				\item[\textopenbullet] "dd/mm/yyyy" pour "jour/mois/année",
+				\item[\S] "dd/mm/yyyy" pour "jour/mois/année",
 				\item[\textopenbullet] "mm/dd/yyyy" pour "mois/jour/année",
 				\item[\textopenbullet] "dd.mm.yyyy" pour "jour.mois.année",
 				\item[\textopenbullet] "yyyy-mm-dd" pour "année-mois-jour",
@@ -131,7 +131,7 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 			\item validez par le bouton \menu{Suivant};
 		\end{enumerate}
 
-	\item sélection des \indexword{types de catégories}\index{catégories!types} utilisées (étape 4/6):
+	\item sélection des \indexword{types de catégories}\index{catégories!types} utilisées (étape 4/6)\refimage{start_category_select}:
 	
 	\begin{figure}[htbp]
 	\begin{center}
@@ -142,7 +142,7 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 	\end{figure}
 		
 		\begin{enumerate} 
-		 	\item cliquez sur la catégorie choisie dans la liste ci-dessus:
+		 	\item cliquez sur la catégorie choisie dans la liste;
 %		 	\begin{itemize}
 %		 		\item\menu{Catégories générales},
 %		 		\item \menu{Liste vide},
@@ -162,8 +162,8 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 			\item validez par le bouton \menu{Suivant} pour passer à l'étape suivante, \menu{Création d'un nouveau compte};
 		\end{enumerate}		 	
 
-	\item Configuration terminée (étape 6/6):\par
-	La configuration du fichier de comptes est terminée, et la fenêtre ci-dessous vous propose de choisir l'une des deux méthodes de création de votre premier compte\refimage{start_account_choice}:
+	\item Configuration terminée (étape 6/6)\refimage{start_account_choice}:\par
+	La configuration du fichier de comptes est terminée, et la fenêtre ci-dessous vous propose de choisir l'une des deux méthodes de création de votre premier compte:
 
 \vspace{2mm}
 
@@ -176,10 +176,10 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 \end{figure}
 
 		\begin{itemize}
-			\item \menu{Créer un nouveau compte vide}: si vous cochez cette ligne, puis si vous validez par le bouton \menu{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Créer un nouveau compte} démarre. Reportez-vous à la section \vref{accounts-new}%8.4
+			\item[\textopenbullet] \menu{Créer un nouveau compte vide}: si vous cochez cette ligne, puis si vous validez par le bouton \menu{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Créer un nouveau compte} démarre. Reportez-vous à la section \vref{accounts-new}%8.4
 			, \menu{Création d'un nouveau compte}, qui décrit entièrement cette procédure, puis revenez à cette page;
 
-			\item \menu{À partir de données provenant d'un fichier bancaire ou d'un autre logiciel}: si vous cochez cette ligne, puis si vous validez par le bouton \menu{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Importation des opérations par Grisbi}, permettant l'importation de données d'un fichier de comptes, démarre. Reportez-vous à la section \vref{move-import-importinit}%6.1.2
+			\item[\textopenbullet] \menu{À partir de données provenant d'un fichier bancaire ou d'un autre logiciel}: si vous cochez cette ligne, puis si vous validez par le bouton \menu{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Importation des opérations par Grisbi}, permettant l'importation de données d'un fichier de comptes, démarre. Reportez-vous à la section \vref{move-import-importinit}%6.1.2
 			, \menu{Import de fichiers de compte d'un autre logiciel dans Grisbi}, qui décrit entièrement cette procédure, puis revenez à cette page.
 		\end{itemize}
 \end{enumerate}
