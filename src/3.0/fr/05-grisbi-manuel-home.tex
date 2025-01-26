@@ -57,24 +57,24 @@ Si vous voulez juste découvrir le logiciel Grisbi pour avoir un aperçu de son 
 
 \vspacepdf{5mm}			% espace : 5 mm
 
-\textbf{Note}: en cliquant simplement sur le fichier exemple téléchargé, Grisbi affichera directement la fenêtre d'accueil\refimage{home} sans passer par la fenêtre de démarrage.
+\textbf{Note}: en cliquant simplement sur le fichier exemple téléchargé, Grisbi affichera directement la fenêtre d'accueil\refimage{home_3.0} sans passer par la fenêtre de démarrage.
 
 
 \section{Accueil\label{home}}
 
 \vspacepdf{5mm}
 
-En ouvrant un fichier de comptes, Grisbi affiche sa page d'accueil\refimage{home-img}.
+En ouvrant un fichier de comptes, Grisbi affiche sa page d'accueil\refimage{home_3.0}.
 C'est la page de démarrage du programme; on peut y accéder à tout moment en cliquant sur l'onglet \menu{Comptes}. 
 
 \vspacepdf{3mm}
 
 \begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
 \begin{center}
-\includegraphics[width=1\textwidth]{image/screenshot/home}
+\includegraphics[width=1\textwidth]{image/screenshot/home_3.0}
 \end{center}
 \caption{Page d'accueil}		% sous-titre/subtitle
-\label{home-img}
+\label{home_3.0}
 \end{figure}
 
 \vspacepdf{3mm}
@@ -143,63 +143,66 @@ On peut réduire ou agrandir la largeur du panneau de navigation en cliquant sur
 Des \indexword{menus contextuels}\index{menu contextuel}, accessibles par un clic-droit de souris, sont disponibles sur les éléments de ce panneau et proposent les fonctions suivantes:
 
 \begin{itemize}
-	 \item sur \menu{Comptes}:
+	\item sur \menu{Comptes}:
 		\begin{itemize}
-			 \item \menu{Nouveau compte};
+			\item \menu{Nouveau compte};
+			\item sur un compte quelconque: 
+				\begin{itemize}
+					\item \menu{Nouveau compte},
+					\item \menu{Supprimer ce compte};
+				\end{itemize}
 		\end{itemize}
-	 \item sur un compte quelconque: 
+	\item sur \menu{Tiers}:
 		\begin{itemize}
-			 \item \menu{Nouveau compte},
-			 \item \menu{Supprimer ce compte};
+			\item \menu{Nouveau tiers},
+			\item \menu{Supprimer le tiers sélectionné},
+			\item \menu{Éditer le tiers sélectionné},
+			\item \menu{Gérer les tiers},
+			\item \menu{Supprimer les tiers inutilisés};
 		\end{itemize}
-	 \item sur \menu{Tiers}:
+	\item sur \menu{Catégories}: 
 		\begin{itemize}
-			 \item \menu{Nouveau tiers},
-			 \item \menu{Supprimer le tiers sélectionné},
-			 \item \menu{Éditer le tiers sélectionné},
-			 \item \menu{Gérer les tiers},
-			 \item \menu{Supprimer les tiers inutilisés};
+			\item \menu{Nouvelle catégorie},
+			\item \menu{Supprimer la catégorie sélectionnée},
+			\item \menu{Editer la catégorie sélectionnée},
+			\item \menu{Importer un fichier de catégories (.csgb)},
+			\item \menu{Exporter la liste des catégories (.csgb)};
 		\end{itemize}
-	 \item sur \menu{Catégories}: 
+	\item sur \menu{Imputations budgétaires}:
 		\begin{itemize}
-			 \item \menu{Nouvelle catégorie},
-			 \item \menu{Supprimer la catégorie sélectionnée},
-			 \item \menu{Editer la catégorie sélectionnée},
-			 \item \menu{Importer un fichier de catégories (.csgb)},
-			 \item \menu{Exporter la liste des catégories (.csgb)};
+			\item \menu{Nouvelle imputation budgétaire},
+			\item \menu{Supprimer l'imputation sélectionnée},
+			\item \menu{Editer l'imputation sélectionnée},
+			\item \menu{Importer un fichier d'imputations budgétaires (.isgb)},
+			\item \menu{Exporter la liste des imputations budgétaires (.isgb)};
 		\end{itemize}
-	 \item sur \menu{Imputations budgétaires}:
+	\item sur \menu{État}:
 		\begin{itemize}
-			 \item \menu{Nouvelle imputation budgétaire},
-			 \item \menu{Supprimer l'imputation sélectionnée},
-			 \item \menu{Editer l'imputation sélectionnée},
-			 \item \menu{Importer un fichier d'imputations budgétaires (.isgb)},
-			 \item \menu{Exporter la liste des imputations budgétaires (.isgb)};
-		\end{itemize}
-	 \item sur \menu{État}: \menu{Nouvel état};
-	 \item sur un état quelconque: 
-		\begin{itemize}
-			 \item \menu{Nouvel état},
-			 \item \menu{Supprimer cet état}.
+			\item \menu{Nouvel état};
+			\item sur un état quelconque: 
+				\begin{itemize}
+					\item \menu{Nouvel état},
+					\item \menu{Supprimer cet état}.
+				\end{itemize}
 		\end{itemize}
 \end{itemize}
 
 % saut de page pour titre solidaire
-\newpage
+%\newpage
 
 
-\section{Pavé des détails\label{home-details}}
+\section{Panneau des détails\label{home-details}}
 
 
 Le pavé des détails affiche tous les détails sur les onglets ou sous-onglets sélectionnés par la barre d'information ou le panneau de navigation. C'est la zone de travail principale de Grisbi.
 
-On peut réduire ou agrandir sa largeur en cliquant sur la fine barre verticale entre ce pavé et le panneau de navigation, et en la déplaçant. Si la largeur du pavé a été réduite à zéro ou agrandie au maximum de la largeur de la fenêtre de Grisbi, il faut retrouver cette barre, respectivement complètement à droite ou à gauche de la fenêtre, et la faire glisser à la place désirée. 
+On peut réduire ou agrandir sa largeur en cliquant sur la fine barre verticale entre ce panneau et le panneau de navigation, et en la déplaçant. Si la largeur du panneau a été réduite à zéro ou agrandie au maximum de la largeur de la fenêtre de Grisbi, il faut retrouver cette barre, respectivement complètement à droite ou à gauche de la fenêtre, et la faire glisser à la place désirée. 
  
-% TODO: LA SUITE
+%%TODO%: LA SUITE
  
 \subsection{Affichage de la page d'accueil\label{home-details-homepage}}
 
-Pour afficher la page d'accueil, sélectionnez l'onglet \menu{Comptes}; le pavé des détails affiche, de haut en bas:
+Pour afficher la page d'accueil, sélectionnez l'onglet \menu{Comptes}; le panneau des détails affiche, de haut en bas:
 
 \begin{itemize}
 	 \item dans un pavé sur fond gris, l'icône \menu{Grisbi} à gauche, et à droite un \indexword{titre}\index{affichage!titre}\index{titre!page d'accueil} qui permet d'identifier sur quelle comptabilité vous travaillez actuellement, sous la forme \frquote{libellé - Grisbi}; vous pouvez définir ce libellé, parmi trois possibilités, dans le menu \menu{Édition - Préférences} (voir le paragraphe \vref{setup-display-addresses-titles}, \menu{Titres}):
