@@ -462,36 +462,40 @@ Die folgende Liste definiert und illustriert typografische Konventionen, die als
 \begin{itemize}
 	\item Schnittstellenkomponenten sind Fenstertitel, Symbol- und Schaltflächennamen, Menünamen und andere Optionen, die auf dem Bildschirm erscheinen; sie werden so dargestellt:%les composants d'interface sont des titres de fenêtre, des noms d'icône et de bouton, des noms de menu et d'autres options qui apparaissent sur l'écran; ils sont présentés ainsi:
 		\newline
-		\hspace*{1.5cm}klicken Sie auf \menu{Enter};%cliquez sur \menu{Retour};
+		\hspace*{1.5cm}klicken Sie auf \menu{Enter}%cliquez sur \menu{Retour};
 	\item Die Tastaturbeschriftung stellt dar, was auf den Tasten der Tastatur geschrieben wird; sie wird so dargestellt:%le libellé des touches du clavier représente ce qui est écrit sur les touches du clavier; il est présenté ainsi:
 		\newline
 		\hspace*{1.5cm}drücken Sie die Taste \key{Enter};%appuyez sur la touche \key{Entrée};	
 	\item Tastenkombinationen sind eine Reihe von Tasten, die (sofern nicht anders angegeben) gleichzeitig gedrückt werden müssen, um eine einzige Funktion auszuführen:%les combinaisons de touches sont une série de touches à enfoncer 	simultanément (à moins d'indication contraire) pour réaliser une fonction unique; elles sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}drücken Sie die Tastenkombination \key{Strg/Ctrl}\key{R};%appuyez sur la combinaison de touches \key{Ctrl}\key{R};
+		\hspace*{1.5cm}drücken Sie die Tastenkombination \key{Strg/Ctrl}\key{R}%appuyez sur la combinaison de touches \key{Ctrl}\key{R};
 	\item werden Befehle, die Teil einer Anweisung sind und eingegeben werden müssen, so dargestellt:%les commandes qui font partie d'une instruction et qui doivent être saisies sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}geben Sie \cmd{grisbi} ein, um das Programm zu starten;%tapez \cmd{grisbi} pour démarrer le programme;
+		\hspace*{1.5cm}geben Sie \cmd{grisbi} ein, um das Programm zu starten%tapez \cmd{grisbi} pour démarrer le programme;
 	\item werden die Datei- und Verzeichnisnamen so dargestellt:%les noms de fichier et de répertoire sont présentés ainsi:
 		\newline
 		\hspace*{1.5cm}\file{grisbi-n.n.n.rpm} und \file{/usr/local/bin};	
 	\item Befehlszeilen bestehen aus einem Befehl und können einen oder mehrere mögliche Parameter des Befehls enthalten; sie werden so dargestellt:%les lignes de commande consistent en une commande et peuvent inclure un ou plusieurs paramètres possibles de la commande ; elles sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}	\cmd{rpm -Uvh grisbi-n.n.n.rpm};
+		\hspace*{1.5cm}	\cmd{rpm -Uvh grisbi-n.n.n.rpm}
 	\item Jede alphanumerische Zeichenfolge in blauer Farbe in einem Dokument im Format \gls{PDF} oder \gls{HTML} ist ein Hyperlink, der entweder auf ein Bild, einen anderen Teil des Dokuments, ein Indexwort oder das Glossar (nur für \gls{PDF}) verweist;%toute suite de caractères alphanumériques en bleu, dans le document au format \gls{PDF} ou \gls{HTML}, est un lien hypertexte, renvoyant soit à une image, une autre partie du document, un mot indexé ou encore au glossaire (pour \gls{PDF} uniquement);
 	\item Wörter oder Wortgruppen, auf die im Index verwiesen wird, werden in den Kapiteln so hervorgehoben:%les mots ou groupes de mots référencés dans l'index sont mis en valeur dans les chapitres ainsi:
 		\newline
-		\hspace*{1.5cm}	\textsf{referierter Begriff} für das Format \gls{PDF}; %pour le format \gls{PDF};
+% TODO: to be updated
+		\hspace*{1.5cm} \textopenbullet{}	\textsf{referierter Begriff} für das Format \gls{PDF}, %pour le format \gls{PDF};
 		\newline 
-		\hspace*{1.5cm} in braun für das Format \gls{HTML}.%en marron pour le format \gls{HTML}. 
+		\hspace*{1.5cm} \textopenbullet{} in braun für das Format \gls{HTML};%en marron pour le format \gls{HTML}. 
+% END_TODO
+	\item \textbf{Notiz}: einen besonderen Punkt hervor, den es zu beachten gilt;
+	\item \textcolor{red}{\strong{Achtung}}: entweder auf einen Punkt hinweist, der für das Verständnis sehr wichtig ist, oder auf einen Fehler, der nicht gemacht werden darf, da sonst Ihre Daten großen Schaden nehmen können; ein \textcolor{red}{\strong{Achtung}} ist \emph{unbedingt zu beachten}.
 \end{itemize}
 
 % espace avant Attention ou Note  : 5 mm
-\vspacepdf{5mm}
+%\vspacepdf{5mm}
 %De plus, une \textbf{Note} souligne un point particulier à prendre en compte, tandis qu'un \textcolor{red}{\strong{Attention}} indique soit un point très important pour la compréhension, soit une erreur à ne pas faire sous peine de dommage important pour vos données ; un \textcolor{red}{\strong{Attention}} est \emph{à respecter impérativement}.
-Außerdem hebt eine \textbf{Notiz} einen besonderen Punkt hervor, den es zu beachten gilt, während ein \textcolor{red}{\strong{Achtung}} entweder auf einen Punkt hinweist, der für das Verständnis sehr wichtig ist, oder auf einen Fehler, der nicht gemacht werden darf, da sonst Ihre Daten großen Schaden nehmen können; ein \textcolor{red}{\strong{Achtung}} ist \emph{unbedingt zu beachten}.
+%Außerdem hebt eine \textbf{Notiz} einen besonderen Punkt hervor, den es zu beachten gilt, während ein \textcolor{red}{\strong{Achtung}} entweder auf einen Punkt hinweist, der für das Verständnis sehr wichtig ist, oder auf einen Fehler, der nicht gemacht werden darf, da sonst Ihre Daten großen Schaden nehmen können; ein \textcolor{red}{\strong{Achtung}} ist \emph{unbedingt zu beachten}.
 
-\subsection{Logiciels de lecture\label{introduction-manual-readers}}
+\subsection{Software zum Lesen\label{introduction-manual-readers}}
 
 %Pour lire ce document, nous vous recommandons l'utilisation de logiciels libres, qui respectent tous votre vie privée et la confidentialité de vos données; les logiciels suivants disposent des fonctionnalités de \gls{liens hypertexte}:
 Um dieses Dokument zu lesen, empfehlen wir Ihnen die Verwendung von Open-Source-Software, die Ihre Privatsphäre und den Schutz Ihrer Daten respektiert; die folgenden Programme verfügen über \gls{Hyperlinks}: 
