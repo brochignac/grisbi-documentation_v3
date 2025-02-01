@@ -28,7 +28,7 @@
 %}{
 %\else							% else pdfLaTeX outputting
 \documentclass[%
-	pdflatex,
+%	pdflatex,			% commented to avoid compilation error
 	a4paper,			% default=a4 and therefore not needed
 	12pt,				% default=11pt
 	ngerman,			% use in babel, translator and varioref packages options %TODO: change with ngerman/english option in de/en manuals
@@ -443,7 +443,9 @@
 
 % Prints the glossary
 % For pdf only; redefined in hva/macros.hva by an empty command in html
-\printglossaries
+\printglossary[%				% print glossary
+	toctitle={Glossar}%			% define glossary name in toc, doesn't work with \printglossaries
+	]
 
 
 \end{document}
