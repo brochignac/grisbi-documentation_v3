@@ -179,7 +179,7 @@
 	plainpages=true						% do page number anchors as plain Arabic, default=false
 %	pdfpagelabels=true					% set PDF page labels - Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
 }
-\input{31-grisbi-manuel-urldef}		% include the "grisbi-manuel-urldef" file during the compilation
+\input{31-grisbi-manuel-urldef-fr}		% include the "grisbi-manuel-urldef" file during the compilation
 
 %% Glossary %%
 \usepackage[%
@@ -243,7 +243,7 @@
 \makeglossaries									% creates the glossary, entries of the glossary are in "src/{version}/{lang}/30-grisbi-manuel-glossary.tex"
 
 %\input{grisbi-manuel-glossary}					% include "grisbi-manuel-glossary.tex" file in the document
-\loadglsentries{30-grisbi-manuel-glossary}		% load and include glossary's entries in and from "30-grisbi-manuel-glossary"
+\loadglsentries{30-grisbi-manuel-glossary-fr}		% load and include glossary's entries in and from "30-grisbi-manuel-glossary"
 
 
 %\input{grisbi-manuel-boolean-illustration}		% include "grisbi-manuel-boolean-illustration.tex" file in the document
@@ -341,19 +341,19 @@
 % For pdf only; for html, redefined  by an empty command in hva/macros.hva
 \mainmatter								% la numérotation des pages se fait en chiffres arabes et le compteur de pages est remis à 1 / pages are numbered in Arabic numerals and the page counter is reset to 1.
 %\KOMAScriptVersion						% print the used version number of Koma-Script
-\include{01-grisbi-manuel-preamble}
+\include{01-grisbi-manuel-preamble-fr}
 %\cleardoubleemptypage
 
-\include{02-grisbi-manuel-intro}
+\include{02-grisbi-manuel-intro-fr}
 %\cleardoubleemptypage
 
 %\include{103-grisbi-manuel-entrance}			% moved to the beginning of "04-grisbi-manuel-home" file, renamed from 03-grisbi-manuel-entrance
 %\cleardoubleemptypage
 
-\include{03-grisbi-manuel-start}				% renamed from 04-grisbi-manuel-start
+\include{03-grisbi-manuel-start-fr}				% renamed from 04-grisbi-manuel-start
 %\cleardoubleemptypage
 
-\include{04-grisbi-manuel-home}					% renamed from 05-grisbi-manuel-home
+\include{04-grisbi-manuel-home-fr}				% renamed from 05-grisbi-manuel-home
 %\cleardoubleemptypage		
 
 %\include{06-grisbi-manuel-QIF}					% TODO: update screenshots and text "QIF", remove % when finished
