@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Contents : The first start chapter
-% $Id : grisbi-manuel-start.tex, v 0.4 2002/10/27 Daniel Cartron
-% $Id : grisbi-manuel-start.tex, v 0.5.0 2004/06/01 Loic Breilloux
-% $Id : grisbi-manuel-start.tex, v 0.6.0 2011/11/17 Jean-Luc Duflot
-% $Id : grisbi-manuel-start.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
-% $Id : grisbi-manuel-start.tex, v 1.0 2014/02/12 Jean-Luc Duflot
+% Contents: The first start chapter
+% $Id: grisbi-manuel-start.tex, v 0.4 2002/10/27 Daniel Cartron
+% $Id: grisbi-manuel-start.tex, v 0.5.0 2004/06/01 Loic Breilloux
+% $Id: grisbi-manuel-start.tex, v 0.6.0 2011/11/17 Jean-Luc Duflot
+% $Id: grisbi-manuel-start.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
+% $Id: grisbi-manuel-start.tex, v 1.0 2014/02/12 Jean-Luc Duflot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -54,9 +54,9 @@ If you do not want to use the Set-up Wizard, you can open a example file instead
 
 If you want to use Grisbi immediately without having to go through the full set-up, for example to get an idea of the possibilities of this program, you can download the  \file{Example\_3.0-en.gsb} file from \lang{Sourceforge.net}\footnote{\urlSourceForgeDocumentation{}} website in the folder \enquote{textsf{examples}}.
 
-% espace avant Attention ou Note  :  mm
+% espace avant Attention ou Note :  mm
 \vspacepdf{5mm}
-\textbf{Note} : in this example file, the names of the payees etc are pure invention; any similarity with a real person or business is entirely accidental.
+\textbf{Note}: in this example file, the names of the payees etc are pure invention; any similarity with a real person or business is entirely accidental.
 
 \section{Creation of a new set of accounts\label{start-newfile}}
 
@@ -70,7 +70,7 @@ Immediately afterwards, you will need to create at least one account, and then s
 For personal accounting, you will normally have only one account file, as this supports all the links between your different accounts. If you manage a busniess, or another personal account without a financial relationship with the first one, you will create another account file, which will have another name \file{your-second-file.gsb}. Thus \indexword{accounting entities}\index{accounting entity} will remain well separated.
 
 
-% espace avant Attention ou Note  : 5 mm
+% espace avant Attention ou Note : 5 mm
 \vspacepdf{5mm}
 
 \strong{Caution}: for a given reporting entity, it is necessary and important to distinguish between the  \enquote{\indexword{accounts file}\index{accounts file}} and the  \enquote{\indexword{account files}\index{account files}}:
@@ -81,7 +81,7 @@ For personal accounting, you will normally have only one account file, as this s
 \item The \enquote{account files} are files that you may need to use or create to import or export data from one accounting application to another; these files will only contain data from one account (current or otherwise) at a time; they will have different extensions (\file{.ofx}, \file{.csv} or \file{.qif}) depending on their content; for more details, see the chapter \vref{move}, \menu{Export and import of accounts}.
 \end{itemize}
 
-% espace aprs Attention ou Note  : 5 mm
+% espace aprs Attention ou Note: 5 mm
 \vspacepdf{5mm}
 In other words, all the accounts in your household accounts are recorded in a single accounts file, and all the accounts in your business are stored in a separate accounts file; and an account in Grisbi can correspond to an account file, but only when talking about importing or exporting data.
 
@@ -104,17 +104,16 @@ To create your accounts file, click the File - New Account File menu; the detail
 enumerate
 welcome window: confirm with the Forward button;
 
-To create your accounts file, click the \menu{File - New Account File} menu ; the detailed procedure is as follows:
+To create your accounts file, click the \menu{File - New Account File} menu: the detailed procedure is as follows:
 
 \begin{enumerate}
-\item New file assistant welcome window: confirm with the \menu{Forward} button ;
+\item New file assistant welcome window: confirm with the \menu{Forward} button:
 \item General configuration
-\ifIllustration générale\refimage{start-file-create-img} :
-\else générale :
-\fi
+générale\refimage{start-file-create-img}:
 
-\ifIllustration
-% image centre
+
+
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[scale=0.5]{image/screenshot/start_file_create}
@@ -122,48 +121,45 @@ To create your accounts file, click the \menu{File - New Account File} menu ; th
 \caption{General configuration of an accounts file}
 \label{start-file-create-img}
 \end{figure}
-% image centre
-\fi
+
+
 
 \begin{enumerate} 
  \item choose the name of the accounting entity whose accounts you are managing, for example \enquote{My accounts}, which can be chosen as the title of the Grisbi application home page,
 \item enter the name of the accounts file with its complete tree; Grisbi defaults to the same name as the reporting entity, but you can change it
-\item check the  \menu{Encrypt Grisbi} box if you wish to \gls{encrypt} the accounts file,
+\item check the  \menu{Encrypt Grisbi} box if you wish \gls{to encrypt} the accounts file,
 \item select the \indexword{date format}\index{date format} with one of the two buttons: dd/mm/yyyy for day/month/year, or  mm/dd/yyyy for month/day/year,
 \item choose the decimal \indexword{separator}\index{separator} and the thousands from the drop-down lists,
  \item fill in the address (optional),
  \item  confirm with the  \menu{Forward} button;
 \end{enumerate}
 
-\item selection of the base \indexword{currency}\index{currency} :
+\item selection of the base \indexword{currency}\index{currency}:
 \begin{enumerate} 
  \item click on the chosen currency in the list,
 \item check the "include obsolete currencies" box if you also want to display old currencies,
 \item confirm with the \menu{Forward} button;
 \end{enumerate}
 
-\item selection of the  \indexword{list of categories}\index{catgories !types} you will use :
+\item selection of the  \indexword{list of categories}\index{catgories !types} you will use:
 \begin{enumerate} 
  \item click on your desired category, either the \menu{Standard category list} or the \menu{Empty list} \footnote{\strong{Translators Note:} Users installing the program on a system with a French Language interface will find different categories are offered including some for business users} 
 \item check the \menu{Display foreign category sets} box to check if other categories are available\footnote{\strong{Translators Note:} This option is mainly for the benefit of users of a computer system with the French Language interface who will then be shown the two English categories mentioned in the previous step}
 \item confirm with the \menu{Forward} button;
 \end{enumerate}
 
-\item Enter details of \indexword{banks}\index{banques !définition} holding your accounts :
+\item Enter details of \indexword{banks}\index{banques !définition} holding your accounts:
 \begin{enumerate} 
  \item click  \menu{Add} to define a bank; fill in the details of the bank (name, bank code, etc.), then confirm with the \menu{Add} to add the bank,
 \item select a bank from the list and click the \menu{Remove} button to delete a bank, then confirm in the window that opens,
 \item repeat actions a and b as many times as necessary,
-\item  confirm with the \menu{Forward}  button to go to the next step, \menu{Creating a new account} ;
+\item  confirm with the \menu{Forward}  button to go to the next step, \menu{Creating a new account}:
 \end{enumerate} 
 
 \item configuration completed: the configuration of the accounts file is complete, and this window offers you to choose one of the two methods of creating your first account
-\ifIllustration compte\refimage{start-account-choice-img} :
-\else compte :
-\fi
+compte\refimage{start-account-choice-img}:
 
-\ifIllustration
-% image centre
+
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{image/screenshot/start_account_choice}
@@ -171,13 +167,12 @@ To create your accounts file, click the \menu{File - New Account File} menu ; th
 \caption{Selecting the first account}
 \label{start-account-choice-img}
 \end{figure}
-% image centre
-\fi
+
 
 \begin{itemize}
-\item \menu{Create a new empty account} : if you check this line, then if you confirm with the \menu{Close} button, this window closes and the new account creation wizard starts. See  \vref{accounts-new}, \menu{Creating a new account},  which fully describes this procedure, then return to this page ;
+\item \menu{Create a new empty account}: if you check this line, then if you confirm with the \menu{Close} button, this window closes and the new account creation wizard starts. See  \vref{accounts-new}, \menu{Creating a new account},  which fully describes this procedure, then return to this page:
 
-\item \menu{From data from a bank file or other software} : if you check this line and then confirm with the \menu{Close} button ,  this window closes and the Import Data Wizard of a file account by Grisbi starts. See the \vref{move-import-importinit} section, \menu{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
+\item \menu{From data from a bank file or other software}: if you check this line and then confirm with the \menu{Close} button ,  this window closes and the Import Data Wizard of a file account by Grisbi starts. See the \vref{move-import-importinit} section, \menu{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
 \end{itemize}
 \end{enumerate}
 
@@ -196,10 +191,10 @@ If you want to create other accounts now, select the \menu{Edit - New Account} t
 
 Otherwise, you can start using the account you just created or the one from which you just imported the data.
 
-% espace avant Attention ou Note  : 5 mm
+% espace avant Attention ou Note : 5 mm
 \vspacepdf{5mm}
 
-\strong{Warning} : in general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\underline{}).
+\strong{Warning}: in general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\underline{}).
 
 % saut de page pour titre solidaire
 \newpage
