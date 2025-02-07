@@ -32,58 +32,58 @@ jobs:
         shell: bash
         run: |
           cd src/3.0/fr
-          make pdf_img_indexglossary && make pdf_img
+          make pdf_indexglossary && make pdf
           make html_pandoc
 
       - name: artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: html-fr-3.0
-          path: src/3.0/fr/html/grisbi-manuel.html
+          name: html_3.0-fr
+          path: src/3.0/fr/html_pandoc/grisbi-manuel_3.0-fr.html
 
       - name: artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: pdf-fr-3.0
-          path: src/3.0/fr/pdf_img/00-grisbi-manuel-img-3.0.pdf
+          name: pdf_3.0-fr
+          path: src/3.0/fr/pdf/grisbi-manuel_3.0-fr.pdf
 
       - name: "build 3.0 en"
         shell: bash
         run: |
           cd src/3.0/en
-          make FILE=00-grisbi-manuel-en pdf_img_indexglossary && make FILE=00-grisbi-manuel-en pdf_img
-          make FILE=00-grisbi-manuel-en html_pandoc
+          make pdf_indexglossary && make pdf
+          make html_pandoc
 
       - name: artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: html-en-3.0
-          path: src/3.0/en/html/grisbi-manuel.html
+          name: html_3.0-en
+          path: src/3.0/en/html_pandoc/grisbi-manuel_3.0-en.html
 
       - name: artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: pdf-en-3.0
-          path: src/3.0/en/pdf_img/00-grisbi-manuel-en-img-3.0.pdf
+          name: pdf_3.0-en
+          path: src/3.0/en/pdf/grisbi-manuel_3.0-en.pdf
 
       - name: "build 3.0 de"
         shell: bash
         run: |
           cd src/3.0/de
-          make FILE=00-grisbi-manuel-de pdf_img_indexglossary && make FILE=00-grisbi-manuel-de pdf_img
-          make FILE=00-grisbi-manuel-de html_pandoc
+          make pdf_indexglossary && make pdf
+          make html_pandoc
 
       - name: artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: html-de-3.0
-          path: src/3.0/de/html/grisbi-manuel.html
+          name: html_3.0-de
+          path: src/3.0/de/html_pandoc/grisbi-manuel_3.0-de.html
 
       - name: artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: pdf-de-3.0
-          path: src/3.0/de/pdf_img/00-grisbi-manuel-de-img-3.0.pdf
+          name: pdf_3.0-de
+          path: src/3.0/de/pdf/grisbi-manuel_3.0-de.pdf
 
       - name: "build 2.0 fr"
         shell: bash
