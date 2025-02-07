@@ -14,38 +14,56 @@
 \section{Initial Set-up Wizard\label{start-first}}
 
 
-When Grisbi first starts, the Initial Set-up Wizard is displayed to
-help you configure the application. It consists of two stages, which concern
-management of the  \indexword{account file}\index{account file} (automatic loading and saving,
-encryption and backups).
+After installing Grisbi, the first time the software is launched, it will help you with three consecutive wizards:
+
+\begin{enumerate}
+	\item The first wizard \enquote{Welcome to Grisbi!}, which will only appear once, on first launch, helps you configure the application. It comprises two steps, the second of which concerns management of the \indexword{account file}\index{account file} (automatic loading and saving, encryption and backup copies).
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{image/screenshot/start_first_launch}
+	\end{center}
+	\caption{Configuration initiale du fichier de comptes.}
+	\label{start_first_launch}
+\end{figure}
+
 It is advisable to check the options:
 
-\begin{itemize}
- \item automatic loading of the last used file  ;
- \item automatic save on close ;
- \item make a backup copy before saving the file.
-\end{itemize}
+	\begin{itemize}
+		\item Automatically load last file on startup%chargement automatique du dernier fichier consulté;
+		\item Automatically save on exit;%enregistrer automatiquement en fermant;
+		\item Make a backup copy before saving files (checked by default).%effectuer une copie de sauvegarde avant d'enregistrer les fichiers (coché par défaut).
+	\end{itemize}
 
-This wizard is automatically followed by a second wizard, for creating the \indexword{account file}\index{account file} . Then a third assistant starts, the account creation wizard, to create the first account. All of this is described in detail in section \ref{start-newfile}  below.
+\vspacepdf{5mm}
+\textcolor{red}{\strong{Warning}}: if you check the option \menu{Encrypt Grisbi file}, the loss of the password will render your file unusable.%si vous cochez l'option \menu{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inutilisable.
+\vspacepdf{5mm}
+
+	\item The second wizard, \enquote{Welcome to Grisbi!} (or later \enquote{New file Assistant}), which automatically follows the first, includes six steps to help you create the \indexword{account file}\index{account file}.%Le deuxième assistant \frquote{Bienvenue dans Grisbi !} (ou plus tard \frquote{Aide à la création d'un nouveau fichier de comptes}), qui suit automatiquement le premier, comprend six étapes qui vous aiderons à la création du \indexword{fichier de comptes}\index{fichier de comptes}.
+	\item This is followed automatically by the third wizard, \enquote{Create a new account}, which is used to create the first account and is described in detail in section \ref{start-newfile} below.%Puis vient automatiquement le troisième assistant \frquote{Créer un nouveau compte} qui permet de créer le premier compte et qui est décrit en détail dans la section \ref{start-newfile} ci-dessous.
 
 At any time you can exit any wizard with the \menu{Cancel} button.
 
-If you do not want to use the Set-up Wizard, you can open a sample file instead (see the next section).
+If you do not want to use the Set-up Wizard, you can open a example file instead (see the next section \ref{start-example} below).
 
-\section{Sample file\label{start-example}}
-\strong{Translators Note:} The only sample files currently available are in French only, these can now also be found at \url{https://github.com/LudovicRousseau/grisbi-examples}.
 
-If you want to use Grisbi immediately without having to go through the full set-up, for example to get an idea of the possibilities of this program, you can download the  \file{Example\_1.0.gsb} file, either from Grisbi's website in the Download section{\siteGrisbiTelechargement}, or on the {Sourceforge}{\siteSourceForgeDocumentation} site.
+
+\section{Example file\label{start-example}}
+
+
+If you want to use Grisbi immediately without having to go through the full set-up, for example to get an idea of the possibilities of this program, you can download the  \file{Example\_3.0-en.gsb} file from \lang{Sourceforge.net}\footnote{\urlSourceForgeDocumentation{}} website in the folder \enquote{textsf{examples}}.
 
 % espace avant Attention ou Note  :  mm
-\vspacepdf{3mm}
+\vspacepdf{5mm}
 \textbf{Note} : in this example file, the names of the payees etc are pure invention; any similarity with a real person or business is entirely accidental.
 
 \section{Creation of a new set of accounts\label{start-newfile}}
 
+
 The first time you use Grisbi, you will need to create a first
 \indexword{accounts file}\index{accounts file}. The \gls{extension} of this file will be \file{.gsb} and its name will be \file{your-file-name.gsb}.
 
+% TODO update below
 Immediately afterwards, you will need to create at least one account, and then some other accounts (current accounts, savings, credit, possibly a cash account and some transition accounts) that will contain their respective transactions.
 
 For personal accounting, you will normally have only one account file, as this supports all the links between your different accounts. If you manage a busniess, or another personal account without a financial relationship with the first one, you will create another account file, which will have another name \file{your-second-file.gsb}. Thus \indexword{accounting entities}\index{accounting entity} will remain well separated.
