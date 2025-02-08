@@ -28,17 +28,22 @@ After installing Grisbi, the first time the software is launched, it will help y
 \end{figure}
 
 It is advisable to check the options:
-
 	\begin{itemize}
 		\item Automatically load last file on startup%chargement automatique du dernier fichier consulté;
 		\item Automatically save on exit;%enregistrer automatiquement en fermant;
 		\item Make a backup copy before saving files (checked by default).%effectuer une copie de sauvegarde avant d'enregistrer les fichiers (coché par défaut).
 	\end{itemize}
+\end{enumerate}
 
-\vspacepdf{5mm}
-\textcolor{red}{\strong{Warning}}: if you check the option \menu{Encrypt Grisbi file}, the loss of the password will render your file unusable.%si vous cochez l'option \menu{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inutilisable.
-\vspacepdf{5mm}
+\minisec{\textcolor{red}{\strong{Warning:}}}
+The Grisbi developers recommend that you do not use the \menu{Encrypt Grisbi file} option for the following reasons:
+\begin{itemize}
+	\item there is no method for recovering an encrypted file whose password has been lost;
+	\item For some unknown reason, using this option on Windows can render the accounts file completely unusable.
+\end{itemize}  
+However, if you use it, it is advisable to make regular back-ups of the unencrypted file.
 
+\begin{enumerate}[resume]
 	\item The second wizard, \enquote{Welcome to Grisbi!} (or later \enquote{New file Assistant}), which automatically follows the first, includes six steps to help you create the \indexword{account file}\index{account file}.%Le deuxième assistant \frquote{Bienvenue dans Grisbi !} (ou plus tard \frquote{Aide à la création d'un nouveau fichier de comptes}), qui suit automatiquement le premier, comprend six étapes qui vous aiderons à la création du \indexword{fichier de comptes}\index{fichier de comptes}.
 	\item This is followed automatically by the third wizard, \enquote{Create a new account}, which is used to create the first account and is described in detail in section \ref{start-newfile} below.%Puis vient automatiquement le troisième assistant \frquote{Créer un nouveau compte} qui permet de créer le premier compte et qui est décrit en détail dans la section \ref{start-newfile} ci-dessous.
 \end{enumerate}
@@ -64,7 +69,7 @@ If you want to use Grisbi immediately without having to go through the full set-
 The first time you use Grisbi, you will need to create a first
 \indexword{accounts file}\index{accounts file}. The \gls{extension} of this file will be \file{.gsb} and its name will be \file{your-file-name.gsb}.
 
-TODO update below
+% TODO update below
 
 Immediately afterwards, you will need to create at least one account, and then some other accounts (current accounts, savings, credit, possibly a cash account and some transition accounts) that will contain their respective transactions.
 
