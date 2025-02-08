@@ -38,13 +38,19 @@ Il est conseillé de cocher les options:
 		\item Enregistrer automatiquement en fermant;
 		\item Effectuer une copie de sauvegarde avant d'enregistrer les fichiers (coché par défaut).
 	\end{itemize}
+\end{enumerate}
 
-\vspacepdf{5mm}
-\textcolor{red}{\strong{Attention}}: si vous cochez l'option \menu{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inutilisable.
-\vspacepdf{5mm}
+\minisec{\textcolor{red}{\strong{Attention:}}}
+Les développeurs de Grisbi vous recommandent de ne pas utiliser l'option \menu{Chiffrer le fichier Grisbi} pour les raisons suivantes: 
+	\begin{itemize}
+		\item il n’existe aucune méthode pour récupérer un fichier chiffré dont on a perdu le mot de passe;
+		\item Pour une raison inconnue, l’utilisation de cette option sous Windows peut rendre le fichier de comptes totalement inutilisable.
+	\end{itemize}  
+Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des sauvegardes du fichier non chiffré.
 
-	\item Le deuxième assistant \frquote{Bienvenue dans Grisbi !} (ou plus tard \frquote{Aide à la création d'un nouveau fichier de comptes}), qui suit automatiquement le premier, comprend six étapes qui vous aiderons à la création du \indexword{fichier de comptes}\index{fichier de comptes}. 
-	\item Puis vient automatiquement le troisième assistant \frquote{Créer un nouveau compte} qui permet de créer le premier compte et qui est décrit en détail dans la section \ref{start-newfile} ci-dessous.
+\begin{enumerate}
+	\item[2.] Le deuxième assistant \frquote{Bienvenue dans Grisbi !} (ou plus tard \frquote{Aide à la création d'un nouveau fichier de comptes}), qui suit automatiquement le premier, comprend six étapes qui vous aiderons à la création du \indexword{fichier de comptes}\index{fichier de comptes}. 
+	\item[3.] Puis vient automatiquement le troisième assistant \frquote{Créer un nouveau compte} qui permet de créer le premier compte et qui est décrit en détail dans la section \ref{start-newfile} ci-dessous.
 \end{enumerate}
 À tout moment vous pouvez sortir de n'importe quel assistant par le bouton \menu{Annuler}.
 
@@ -106,10 +112,27 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 			\item saisissez le nom du fichier de comptes avec son arborescence complète; Grisbi vous propose par défaut le même nom que celui de l'entité comptable, mais vous pouvez le modifier,
 			\item cochez la case \menu{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
 			
-			\vspacepdf{1mm}
-			\textcolor{red}{\strong{Attention}}: si vous cochez l'option \menu{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inaccessible.
-			\vspacepdf{2mm}
-			
+			%\vspacepdf{1mm}
+			%\textcolor{red}{\strong{Attention}}: si vous cochez l'option \menu{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inaccessible.
+			%\vspacepdf{2mm}
+
+
+%\noindent
+
+\begin{addmargin}[-45pt]{0pt}
+\vspacepdf{2mm}
+%\noindent
+%\minisec{\textcolor{red}{\strong{Attention:}}}
+\textcolor{red}{\strong{\textsf{Attention:}}}\newline
+Les développeurs de Grisbi vous recommandent de ne pas utiliser l'option \menu{Chiffrer le fichier Grisbi} pour les raisons suivantes: 
+\begin{itemize}
+	\item il n’existe aucune méthode pour récupérer un fichier chiffré dont on a perdu le mot de passe;
+	\item Pour une raison inconnue, l’utilisation de cette option sous Windows peut rendre le fichier de comptes totalement inutilisable.
+\end{itemize}  
+Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des sauvegardes du fichier non chiffré.			
+\vspacepdf{2mm}
+\end{addmargin}			
+%\vspacepdf{2mm}
 			\item sélectionnez le \indexword{format de la date}\index{format de date} avec l'un des quatre boutons:
 			%\begin{addmargin}{-0.2cm}
 				\begin{itemize}	
@@ -198,8 +221,9 @@ Si vous voulez créer maintenant d'autres comptes, sélectionnez le menu \menu{�
 Sinon, vous pouvez commencer à utiliser le compte que vous venez de créer ou celui dont vous venez d'importer les données.
 
 % espace avant Attention ou Note  : 5 mm
-\vspacepdf{5mm}
-\textcolor{red}{\strong{Attention}}: d'une manière générale, il est déconseillé d'avoir des accents ou des espaces dans les noms des répertoires et fichiers utilisés par Grisbi. Si c'est le cas, renommez-les maintenant. Par exemple, les espaces peuvent être remplacées par des tirets bas (\_).
+%\vspacepdf{5mm}
+\minisec{\textcolor{red}{\strong{Attention:}}}
+D'une manière générale, il est déconseillé d'avoir des accents ou des espaces dans les noms des répertoires et fichiers utilisés par Grisbi. Si c'est le cas, renommez-les maintenant. Par exemple, les espaces peuvent être remplacées par des tirets bas (\_).
 
 % saut de page pour titre solidaire
 %\newpage
