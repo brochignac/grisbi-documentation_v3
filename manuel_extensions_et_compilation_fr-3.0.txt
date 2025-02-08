@@ -11,6 +11,7 @@ par la commande \usepackage{extension}, sont installées et en particulier:
 babel (base) (1)(2)=[2024/03],
 ---bigfoot (fourni perpage) (1) (est remplacé par footmisc),
 caption (1)(2)=[2023/10],
+enumitem (1)(2)=[2025/02]
 ---fixfoot (1) (est remplacé par footmisc),
 footmisc (fourni perpage, label et footref) (1)(2)=[2023/07]
 glossaries (1)(2)=[2023/10],
