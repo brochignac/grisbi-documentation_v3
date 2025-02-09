@@ -32,8 +32,7 @@ jobs:
         shell: bash
         run: |
           cd src/3.0/fr
-          make pdf_indexglossary && make pdf
-          make html_pandoc
+          make
 
       - name: artifacts
         uses: actions/upload-artifact@v4
@@ -51,8 +50,7 @@ jobs:
         shell: bash
         run: |
           cd src/3.0/en
-          make pdf_indexglossary && make pdf
-          make html_pandoc
+          make
 
       - name: artifacts
         uses: actions/upload-artifact@v4
