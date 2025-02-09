@@ -1,1 +1,1 @@
-include ../Makefile
+include ../../2.0/Makefile
