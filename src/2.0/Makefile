@@ -1,7 +1,7 @@
 # makefile for v2.0 manual
 # TOP contains the relative path of this Makefile
 TOP := $(dir $(lastword $(MAKEFILE_LIST)))
-TOOL_DIR := $(TOP)tool
+TOOL_DIR := $(TOP)../tool
 
 #TODO overfull, underfull rules...
 
