@@ -27,9 +27,6 @@ all:
 	$(MAKE) html_pandoc
 
 
-English: distclean
-	$(MAKE) FILE=grisbi-manuel-en all
-
 pdf:	$(FILE).pdf
 	test -d pdf || mkdir pdf
 	@echo See copy in pdf/
@@ -61,7 +58,7 @@ pdf_img_indexglossary:	pdf
 html_pandoc:
 	rm -rf html
 	mkdir html
-	pandoc --embed-resources --standalone --toc --output=html/grisbi-manuel.html $(FILE).tex
+	pandoc --embed-resources --standalone --toc --output=html/grisbi-manuel-$(Lang).html $(FILE).tex
 
 $(FILE).pdf:	$(FILE).tex $(INCLUDES)
 	@echo Generating $@...
