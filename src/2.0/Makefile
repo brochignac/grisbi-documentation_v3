@@ -1,19 +1,15 @@
-# makefile for v3.0
+# makefile for v2.0 manual
 # TOP contains the relative path of this Makefile
 TOP := $(dir $(lastword $(MAKEFILE_LIST)))
-TOOL_DIR := $(TOP)tool
+TOOL_DIR := $(TOP)../tool
 
 #TODO overfull, underfull rules...
 
-Lang=$(notdir $(CURDIR))
-FILE=00-grisbi-manuel-$(Lang)
-FILE_MINI=grisbi-manuel
-FILE_OUTPUT=$(FILE_MINI)_$(VERSION)-$(Lang)
-# to have the same format as the 'Example' files in sourceforge.net
-VERSION=3.0
-INCLUDES:=$(wildcard [0-3][0-9]-grisbi-manuel-*.tex) $(wildcard tool/*.pl) Makefile
+FILE=grisbi-manuel
+VERSION=2.0
+INCLUDES:=$(wildcard grisbi-manuel*.tex) $(wildcard tool/*.pl) Makefile
 FIGURES_PNG:=$(wildcard image/screenshot/*.png) $(wildcard image/icon/*.png)
-#FIGURES_EPS:=$(patsubst %.png,%.eps,$(FIGURES_PNG))
+FIGURES_EPS:=$(patsubst %.png,%.eps,$(FIGURES_PNG))
 
 XDVI=xdvi -s 0 -geometry -0+0 -margins 0cm -nopostscript
 XPDF=xpdf -geometry 600x768+0+0 -z page
@@ -64,7 +60,7 @@ English: distclean
 pdf:	$(FILE).pdf
 	test -d pdf || mkdir pdf
 	@echo See copy in pdf/
-	cp $(FILE).pdf pdf/$(FILE_OUTPUT).pdf
+	cp $(FILE).pdf pdf/$(FILE)-$(VERSION).pdf
 
 pdf_indexglossary: $(FILE).pdf
 	texindy -C utf8 $(FILE).idx
@@ -161,10 +157,6 @@ html_txt:	txt html
 	mv $(FILE)-txt-$(VERSION).tar.gz tgz/$(FILE)-txt-$(VERSION).tar.gz
 	mv fr html_txt
 
-html_pandoc: img
-	rm -rf html
-	mkdir html
-	pandoc --embed-resources --standalone --toc --output=html/grisbi-manuel.html $(FILE).tex
 
 ps:	$(FILE).ps
 
