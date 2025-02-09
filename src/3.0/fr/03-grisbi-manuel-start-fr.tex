@@ -99,15 +99,15 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 	\item Configuration
  générale (étape 2/6)\refimage{start_file_create}:
 
-		\begin{figure}[htbp]
-		\begin{center}
-		\includegraphics[width=0.9\textwidth]{image/screenshot/start_file_create}
-		\end{center}
-		\caption{Configuration générale du fichier de comptes}
-		\label{start_file_create}
-		\end{figure}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{image/screenshot/start_file_create}
+\end{center}
+\caption{Configuration générale du fichier de comptes}
+\label{start_file_create}
+\end{figure}
 		
-		\begin{enumerate} 
+		\begin{enumerate}
 		 	\item choisissez le nom de l'entité comptable dont vous gérez la comptabilité, par exemple \frquote{Ma comptabilité}, qui pourra être choisi comme titre de la page d'accueil de l'application Grisbi,
 			\item saisissez le nom du fichier de comptes avec son arborescence complète; Grisbi vous propose par défaut le même nom que celui de l'entité comptable, mais vous pouvez le modifier,
 			\item cochez la case \menu{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
@@ -115,24 +115,18 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 			%\vspacepdf{1mm}
 			%\textcolor{red}{\strong{Attention}}: si vous cochez l'option \menu{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inaccessible.
 			%\vspacepdf{2mm}
+		\end{enumerate}
 
-
-%\noindent
-
-\begin{addmargin}[-45pt]{0pt}
-\vspacepdf{2mm}
-%\noindent
-%\minisec{\textcolor{red}{\strong{Attention:}}}
-\textcolor{red}{\strong{\textsf{Attention:}}}\newline
+\minisec{\textcolor{red}{\strong{Attention:}}}
+%\textcolor{red}{\strong{\textsf{Attention:}}}\newline
 Les développeurs de Grisbi vous recommandent de ne pas utiliser l'option \menu{Chiffrer le fichier Grisbi} pour les raisons suivantes: 
 \begin{itemize}
 	\item il n’existe aucune méthode pour récupérer un fichier chiffré dont on a perdu le mot de passe;
 	\item Pour une raison inconnue, l’utilisation de cette option sous Windows peut rendre le fichier de comptes totalement inutilisable.
 \end{itemize}  
 Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des sauvegardes du fichier non chiffré.			
-\vspacepdf{2mm}
-\end{addmargin}			
-%\vspacepdf{2mm}
+
+		\begin{enumerate}[resume]		% to resume \end{enumerate} above \minisec
 			\item sélectionnez le \indexword{format de la date}\index{format de date} avec l'un des quatre boutons:
 			%\begin{addmargin}{-0.2cm}
 				\begin{itemize}	
@@ -143,8 +137,8 @@ Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des 
 				\end{itemize}
 			%\end{addmargin}
 			\item choisissez le \indexword{séparateur}\index{séparateur} décimal et celui des milliers dans les listes déroulantes,
-			 \item renseignez l'adresse (facultatif),
-			 \item validez par le bouton \menu{Suivant};
+			\item renseignez l'adresse (facultatif),
+			\item validez par le bouton \menu{Suivant};
 		\end{enumerate}
 		
 	\item Sélection de la \indexword{devise}\index{devise} de base (étape 3/6):
