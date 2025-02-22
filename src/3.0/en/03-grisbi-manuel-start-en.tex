@@ -82,96 +82,112 @@ In other words, all your household accounts are recorded in one file created by 
 
 The general procedure for creating an account file is as follows: click on the menu \menu{File - New Account File} or on the New\refimage{start_grisbi} button; the account file creation wizard opens, which includes six steps, as detailed below:
 
-\begin{itemize}
-\item  create a new account, and then follow the account creation wizard, which itself includes five steps, to create the first account (because it is essential to have at least one account);
-\item or to use pre existing data, then use the import wizard, which also includes five steps, to import existing account operations.
-\end{itemize}
-
-After creating this first account or importing existing account transactions, if you want to create other accounts, you will return to the end of the process of creating the account file, which will return you in both cases to the create a new account option.
-
-
-% espace pour changement de thme
-\vspacepdf{5mm}
-To create your accounts file, click the File - New Account File menu; the detailed procedure is as follows:
-enumerate
-welcome window: confirm with the Forward button;
-
-To create your accounts file, click the \menu{File - New Account File} menu: the detailed procedure is as follows:
+%\begin{itemize}
+%\item  create a new account, and then follow the account creation wizard, which itself includes five steps, to create the first account (because it is essential to have at least one account);
+%\item or to use pre existing data, then use the import wizard, which also includes five steps, to import existing account operations.
+%\end{itemize}
 
 \begin{enumerate}
-\item New file assistant welcome window: confirm with the \menu{Forward} button:
-\item General configuration
-générale\refimage{start-file-create-img}:
-
-
-
+	\item Welcome window (step 1/6): confirm by clicking on the \menu{Following} button:%validez par le bouton \menu{Suivant}:
+	\item General configuration (step 2/6)\refimage{start_file_create}:
 
 \begin{figure}[htbp]
-\begin{center}
-\includegraphics[scale=0.5]{image/screenshot/start_file_create}
-\end{center}
-\caption{General configuration of an account file}
-\label{start-file-create-img}
+	\begin{center}
+		\includegraphics[width=0.98\textwidth]{image/screenshot/start_file_create}
+	\end{center}
+	\caption{General configuration of a accounts file}
+	\label{start_file_create}
 \end{figure}
 
 
+%After creating this first account or importing existing account transactions, if you want to create other accounts, you will return to the end of the process of creating the account file, which will return you in both cases to the create a new account option.
 
-\begin{enumerate} 
- \item choose the name of the accounting entity whose accounts you are managing, for example \enquote{My accounts}, which can be chosen as the title of the Grisbi application home page,
-\item enter the name of the accounts file with its complete tree; Grisbi defaults to the same name as the reporting entity, but you can change it
-\item check the  \menu{Encrypt Grisbi} box if you wish \gls{to encrypt} the accounts file,
-\item select the \indexword{date format}\index{date format} with one of the two buttons: dd/mm/yyyy for day/month/year, or  mm/dd/yyyy for month/day/year,
-\item choose the decimal \indexword{separator}\index{separator} and the thousands from the drop-down lists,
- \item fill in the address (optional),
- \item  confirm with the  \menu{Forward} button;
-\end{enumerate}
+		\begin{enumerate}
+			\item choose the name of the accounting entity whose accounts you manage, for example \enquote{My accounts}, which can be chosen as the title of the Grisbi application home page,%choisissez le nom de l'entité comptable dont vous gérez la comptabilité, par exemple \frquote{Ma comptabilité}, qui pourra être choisi comme titre de la page d'accueil de l'application Grisbi,
+			\item enter the name of the accounts file with its complete tree structure; by default, Grisbi suggests the same name as that of the accounting entity, but you can change it,%saisissez le nom du fichier de comptes avec son arborescence complète; Grisbi vous propose par défaut le même nom que celui de l'entité comptable, mais vous pouvez le 	modifier,
+			\item check the \menu{Encrypt Grisbi} box if you wish \gls{to encrypt} the accounts file,%cochez la case \menu{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
+		\end{enumerate}
 
-\item selection of the base \indexword{currency}\index{currency}:
-\begin{enumerate} 
- \item click on the chosen currency in the list,
-\item check the "include obsolete currencies" box if you also want to display old currencies,
-\item confirm with the \menu{Forward} button;
-\end{enumerate}
+\minisec{\textcolor{red}{\strong{Warning:}}}
+The Grisbi developers recommend that you do not use the \menu{Encrypt Grisbi file} option for the following reasons:
+\begin{itemize}
+	\item there is no method for recovering an encrypted file whose password has been lost;
+	\item For some unknown reason, using this option on Windows can render the accounts file completely unusable.
+\end{itemize}  
+However, if you use it, it is advisable to make regular back-ups of the unencrypted file.
 
-\item selection of the  \indexword{list of categories}\index{catgories !types} you will use:
-\begin{enumerate} 
- \item click on your desired category, either the \menu{Standard category list} or the \menu{Empty list} \footnote{\strong{Translators Note:} Users installing the program on a system with a French Language interface will find different categories are offered including some for business users} 
-\item check the \menu{Display foreign category sets} box to check if other categories are available\footnote{\strong{Translators Note:} This option is mainly for the benefit of users of a computer system with the French Language interface who will then be shown the two English categories mentioned in the previous step}
-\item confirm with the \menu{Forward} button;
-\end{enumerate}
+		\begin{enumerate}[resume]		% to resume \end{enumerate} above \minisec
+			\item select the \indexword{date format}\index{date format} with one of the four buttons%sélectionnez le \indexword{format de la date}\index{format de date} avec l'un des quatre boutons:
+			%\begin{addmargin}{-0.2cm}
+				\begin{itemize}	
+				\item[\textopenbullet] "dd/mm/yyyy" for "day/month/year",
+				\item[\textopenbullet] "mm/dd/yyyy" for "month/day/year",
+				\item[\textopenbullet] "dd.mm.yyyy" for "day.month.year",
+				\item[\textopenbullet] "yyyy-mm-dd" for "year-month-day",
+				\end{itemize}
+			%\end{addmargin}
+			\item choose the decimal \indexword{separator}\index{separator} and the thousands from the drop-down lists,%choisissez le \indexword{séparateur}\index{séparateur} décimal et celui des milliers dans les listes déroulantes,
+			\item fill in the address (optional),%renseignez l'adresse (facultatif),
+			\item confirm with the  \menu{Following} button;%validez par le bouton \menu{Suivant};
+		\end{enumerate}
 
-\item Enter details of \indexword{banks}\index{banques !définition} holding your accounts:
-\begin{enumerate} 
- \item click  \menu{Add} to define a bank; fill in the details of the bank (name, bank code, etc.), then confirm with the \menu{Add} to add the bank,
-\item select a bank from the list and click the \menu{Remove} button to delete a bank, then confirm in the window that opens,
-\item repeat actions a and b as many times as necessary,
-\item  confirm with the \menu{Forward}  button to go to the next step, \menu{Creating a new account}:
-\end{enumerate} 
+	\item selection of the base \indexword{currency}\index{currency} (step 3/6):%Sélection de la \indexword{devise}\index{devise} de base (étape 3/6):
+		\begin{enumerate} 
+			\item click on the chosen currency in the list,%cliquez sur la devise choisie dans la liste,
+		\item check the \enquote{Include obsolete currencies} box if you also want to display old currencies,%cochez la case \menu{Afficher les devises obsolètes} si vous voulez aussi afficher d'anciennes devises,
+		\item confirm with the \menu{Following} button;%validez par le bouton \menu{Suivant};
+	\end{enumerate}
 
-\item configuration completed: the configuration of the accounts file is complete, and this window offers you to choose one of the two methods of creating your first account
-compte\refimage{start-account-choice-img}:
+	\item selection of the  \indexword{list of categories}\index{catgories!types} you will use (step 4/6)\refimage{start_category_select}%sélection des \indexword{types de catégories}\index{catégories!types} utilisées (étape 4/6)\refimage{start_category_select}:
 
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.98\textwidth]{image/screenshot/start_category_select}
+	\end{center}
+	\caption{Selection of categories to be used}%Sélection des catégories à utiliser}
+	\label{start_category_select}
+\end{figure}
 
-\begin{figure}[ht]
+		\begin{enumerate} 
+			\item click on your desired category, either the \menu{Standard category list} or the \menu{Empty list}\footnote{\strong{Translators Note:} Users installing the program on a system with a French Language interface will find different categories are offered including some for business users} 
+			\item check the \menu{Display foreign category sets} box to check if other categories are available\footnote{\strong{Translators Note:} This option is mainly for the benefit of users of a computer system with the French Language interface who will then be shown the two English categories mentioned in the previous step}
+			\item confirm with the \menu{Following} button;
+		\end{enumerate}
+%TODO to update
+	\item Enter details of \indexword{banks}\index{banks!definition} holding your accounts (step 5/6):
+		\begin{enumerate} 
+ 			\item click \menu{Add} to define a bank; fill in the details of the bank (name, bank code, etc.), then confirm with the \menu{Add} to add the bank,
+			\item select a bank from the list and click the \menu{Remove} button to delete a bank, then confirm in the window that opens,
+			\item repeat actions a and b as many times as necessary,
+			\item  confirm with the \menu{Forward}  button to go to the next step, \menu{Creating a new account}:
+		\end{enumerate} 
+
+	\item Configuration finished (step 6/6):\par
+
+	The configuration of the accounts file is now complete, and the window below will ask you to choose one of the two methods for creating your first account\refimage{start_account_choice}:
+
+\begin{figure}[htbp]
 \begin{center}
-\includegraphics[scale=0.5]{image/screenshot/start_account_choice}
+\includegraphics[width=0.98\textwidth]{image/screenshot/start_account_choice}
 \end{center}
 \caption{Selecting the first account}
 \label{start-account-choice-img}
 \end{figure}
 
 
-\begin{itemize}
-\item \menu{Create a new empty account}: if you check this line, then if you confirm with the \menu{Close} button, this window closes and the new account creation wizard starts. See  \vref{accounts-new}, \menu{Creating a new account},  which fully describes this procedure, then return to this page:
+		\begin{itemize}
+			\item \menu{Create a new account from scratch}:\par
+			If you check this line, then if you confirm with the \menu{Close} button, this window closes and the \enquote{Create a new account} wizard starts. See  \vref{accounts-new}, \menu{Creating a new account},  which fully describes this procedure, then return to this page;
 
-\item \menu{From data from a bank file or other software}: if you check this line and then confirm with the \menu{Close} button ,  this window closes and the Import Data Wizard of a file account by Grisbi starts. See the \vref{move-import-importinit} section, \menu{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
+			\item \menu{Import data from online bank services or from accounting software}:\par
+			If you check this line and then confirm with the \menu{Close} button, this window closes and the \enquote{New file Assistant to import} Wizard for importing data from an accounts file, starts. See the \vref{move-import-importinit} section, \menu{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
 \end{itemize}
 \end{enumerate}
 
 % tiquette du paragraphe suivant, pour que les liens hypertexte dans account.tex et QIF.tex  arrivent bien dessus
 \label{start-newfile-end}
 
-\textit{\textbf{In one way or another}}, you have now created your accounts file, as well as the first account of this file.
+\textit{\textbf{In one way or another}}, you have now created your Grisbi file, as well as the first account of this file.
 
 %espace pour changement de thme
 \vspacepdf{5mm}
@@ -184,12 +200,12 @@ If you want to create other accounts now, select the \menu{Edit - New Account} t
 Otherwise, you can start using the account you just created or the one from which you just imported the data.
 
 % espace avant Attention ou Note : 5 mm
-\vspacepdf{5mm}
 
-\strong{Warning}: in general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\underline{}).
+\minisec{\textcolor{red}{\strong{Warning:}}}
+In general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\underline{}).
 
 % saut de page pour titre solidaire
-\newpage
+%\newpage
 
 
 \section{Saving your accounts file\label{start-save}}
