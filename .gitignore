@@ -32,10 +32,9 @@
 *.idv
 *.tpt
 *.html
-src/3.0/de/00-grisbi-manuel-boolean-illustration.tex
-src/3.0/de/00-grisbi-manuel-de-boolean-illustration.tex
-src/3.0/en/00-grisbi-manuel-en-boolean-illustration.tex
-src/3.0/fr/00-grisbi-manuel--boolean-illustration.tex
-src/3.0/fr/00-grisbi-manuel-fr-boolean-illustration.tex
-src/3.0/fr/html_pandoc/grisbi-manuel.css
-src/3.0/fr/html_pandoc/grisbi-manuel.html
+*-boolean-illustration.tex
+grisbi-manuel.css
+grisbi-manuel.html
+*.4tc
+*.css.back
+
