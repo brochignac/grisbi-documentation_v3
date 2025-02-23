@@ -60,6 +60,80 @@ Unmittelbar danach müssen Sie mindestens ein Konto (Bank-, Geld-, Passiv- oder 
 
 Bei einer Familienverwaltung haben Sie normalerweise nur eine einzige Kontodatei, da dies den gesamten Austausch zwischen Ihren verschiedenen Konten ermöglicht. Wenn Sie einen Verein oder eine weitere Familie verwalten, die in keinem buchhalterischen Zusammenhang mit der ersten Familie steht, erstellen Sie eine weitere Kontodatei, die einen anderen Namen trägt \file{name-ihrer-zweiten-datei.gsb}. Dadurch bleiben die \indexword{Buchhaltungseinheiten}\index{Buchungsberechtigung} getrennt. %If you are managing a family, you will normally only have one accounts file, as this allows all the exchanges between your different accounts. If you are managing an association, or another family with no accounting relationship with the first, you will create another accounts file, which will have a different name your-second-file-name.gsb. This will keep the \indexword{accounting entities}\index{accounting entity} separate.
 
-Mit anderen Worten: Alle Konten Ihres Haushalts werden in einer Kontendatei erfasst, alle Konten Ihrer Vereinigung in einer anderen Kontendatei.
+Mit anderen Worten: Alle Konten Ihres Haushalts werden in einer Kontendatei erfasst, alle Konten Ihrer Vereinigung in einer anderen Kontendatei.%In other words, all your household accounts are recorded in one file created by Grisbi, and all your association accounts are recorded in another file created by Grisbi.
 
+\vspacepdf{5mm}
+
+Das allgemeine Verfahren zur Erstellung einer Kontodatei ist wie folgt: Klicken Sie auf das \menu{Datei - Neue} oder auf die Schaltfläche Neu\refimage{start_grisbi}; der Assistent zur Erstellung einer Kontodatei wird geöffnet, der sechs Schritte umfasst, die im Folgenden beschrieben werden:
+
+\begin{enumerate}
+	\item Willkommensfenster (step 1/6): bestätigen Sie, indem Sie auf die Schaltfläche \menu{Nachfolgendes Element} klicken:%confirm by clicking on the \menu{Following} button:%validez par le bouton \menu{Suivant}:
+	\item Allgemeine Konfiguration (Stufe 2/6)\refimage{start_file_create}:
+	
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=0.98\textwidth]{image/screenshot/start_file_create}
+		\end{center}
+		\caption{Allgemeine Konfiguration einer Kontendatei}%General configuration of a accounts file}
+		\label{start_file_create}
+	\end{figure}
+
+		\begin{enumerate}
+			\item wählen Sie den Namen der Buchhaltungseinheit, deren Konten Sie verwalten, zum Beispiel \dequote{Meine Konten}, der als Titel der Startseite der Grisbi-Anwendung gewählt werden kann,%choose the name of the accounting entity whose accounts you manage, for example \enquote{My accounts}, which can be chosen as the title of the Grisbi application home page,%choisissez le nom de l'entité comptable dont vous gérez la comptabilité, par exemple \frquote{Ma comptabilité}, qui pourra être choisi comme titre de la page d'accueil de l'application Grisbi,
+			\item Geben Sie den Namen der Kontendatei mit ihrer vollständigen Baumstruktur ein; standardmäßig schlägt Grisbi denselben Namen wie den der Buchhaltungseinheit vor, aber Sie können ihn ändern,%enter the name of the accounts file with its complete tree structure; by default, Grisbi suggests the same name as that of the accounting entity, but you can change it,%saisissez le nom du fichier de comptes avec son arborescence complète; Grisbi vous propose par défaut le même nom que celui de l'entité comptable, mais vous pouvez le 	modifier,
+			\item aktivieren Sie das Kontrollkästchen \menu{Datei verschlüsseln}, wenn Sie die Kontodatei \gls{zu verschlüsseln} möchten,%check the \menu{Encrypt Grisbi} box if you wish \gls{to encrypt} the accounts file,%cochez la case \menu{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
+		\end{enumerate}
+		
+\minisec{\textcolor{red}{\strong{Achtung:}}}
+Die Entwickler von Grisbi empfehlen Ihnen aus den folgenden Gründen, die Option \menu{Datei verschlüsseln} nicht zu verwenden:%The Grisbi developers recommend that you do not use the \menu{Encrypt Grisbi file} option for the following reasons:
+\begin{itemize}
+	\item Es gibt keine Methode zur Wiederherstellung einer verschlüsselten Datei, deren Passwort verloren gegangen ist;%there is no method for recovering an encrypted file whose password has been lost;
+	\item Aus einem unbekannten Grund kann die Verwendung dieser Option unter \gls{Windows} die Kontendatei völlig unbrauchbar machen.%For some unknown reason, using this option on Windows can render the accounts file completely unusable.
+\end{itemize}  
+Es ist jedoch ratsam, regelmäßig Sicherungskopien der unverschlüsselten Datei anzufertigen, wenn Sie sie verwenden.%However, if you use it, it is advisable to make regular back-ups of the unencrypted file.
+
+		\begin{enumerate}[resume]		% to resume \end{enumerate} above \minisec
+			\item wählen Sie das \indexword{Datumsformat}\index{Datumsformat} mit einer der vier Schaltflächen:%select the \indexword{date format}\index{date format} with one of the four buttons%sélectionnez le \indexword{format de la date}\index{format de date} avec l'un des quatre boutons:
+			%\begin{addmargin}{-0.2cm}
+				\begin{itemize}	
+				\item[\textopenbullet] \dequote{dd/mm/yyyy} für \dequote{day/month/year},
+				\item[\textopenbullet] \dequote{mm/dd/yyyy} für \dequote{month/day/year},
+				\item[\textopenbullet] \dequote{dd.mm.yyyy} für \dequote{day.month.year},
+				\item[\textopenbullet] \dequote{yyyy-mm-dd} für \dequote{year-month-day},
+				\end{itemize}
+			%\end{addmargin}
+			\item wählen Sie das Dezimal \indexword{zeichen}\index{zeichen} und die Tausender aus den Dropdown-Listen,%choose the decimal \indexword{separator}\index{separator} and the thousands from the drop-down lists,%choisissez le \indexword{séparateur}\index{séparateur} décimal et celui des milliers dans les listes déroulantes,
+			\item füllen Sie die Hauptadresse aus (optional)%fill in the address (optional),%renseignez l'adresse (facultatif),
+			\item bestätigen Sie, indem Sie auf die Schaltfläche \menu{Nachfolgendes Element} klicken:%confirm with the  \menu{Following} button;%validez par le bouton \menu{Suivant};
+		\end{enumerate}
+
+	\item Auswahl der Basis\indexword{Währung}\index{Währung} (Stufe 3/6):%selection of the base \indexword{currency}\index{currency} (Stufe 3/6):%Sélection de la \indexword{devise}\index{devise} de base (étape 3/6):
+		\begin{enumerate} 
+		\item klicken Sie in der Liste auf die gewünschte Währung,%click on the chosen currency in the list,%cliquez sur la devise choisie dans la liste,
+		\item Markieren Sie das Feld \dequote{Inklusive veralteter Währungen}, wenn Sie auch alte Währungen anzeigen möchten,%check the \enquote{Include obsolete currencies} box if you also want to display old currencies,%cochez la case \menu{Afficher les devises obsolètes} si vous voulez aussi afficher d'anciennes devises,
+		\item bestätigen Sie, indem Sie auf die Schaltfläche \menu{Nachfolgendes Element} klicken:%confirm with the \menu{Following} button;%validez par le bouton \menu{Suivant};
+		\end{enumerate}
+
+	\item Auswahl des Indexwortes \indexword{Vordefinierte Kategorien}\index{Kategorien!Typen} (Stufe 4/6)\refimage{start_category_select}:%selection of the \indexword{list of categories}\index{catgories!types} you will use (step 4/6)\refimage{start_category_select}%sélection des \indexword{types de catégories}\index{catégories!types} utilisées (étape 4/6)\refimage{start_category_select}:
+	
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.98\textwidth]{image/screenshot/start_category_select}
+	\end{center}
+	\caption{Auswahl vordefinierter Kategorien}%Selection of categories to be used}%Sélection des catégories à utiliser}
+\label{start_category_select}
+\end{figure}
+
+	\begin{enumerate} 
+		\item klicken Sie auf die gewünschte Kategorie in der Liste;%cliquez sur la catégorie choisie dans la liste;
+	%		 	\begin{itemize}
+		%		 		\item\menu{Catégories générales},
+		%		 		\item \menu{Liste vide},
+		%		 		\item\menu{Comptabilité libérale},
+		%		 		\item\menu{Plan comptable associatif simplifié}
+		%		 		\item\menu{Plan comptable associatif},
+		%		 	\end{itemize}
+		\item aktivieren Sie das Kontrollkästchen \menu{Fremdkategorien anzeigen}, wenn Sie auch andere Kategorien mit englischem Namen anzeigen möchten,%cochez la case \menu{Afficher l'ensemble des catégories} si vous voulez aussi afficher d'autres catégories libellées en anglais,
+		\item bestätigen Sie, indem Sie auf die Schaltfläche \menu{Nachfolgendes Element} klicken:%validez par le bouton \menu{Suivant};
+	\end{enumerate}
 
