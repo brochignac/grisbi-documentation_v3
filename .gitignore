@@ -37,7 +37,7 @@ grisbi-manuel.css
 grisbi-manuel.html
 *.4tc
 *.css.back
-
+*.cfg
 *.back
 *.html
 *.css
