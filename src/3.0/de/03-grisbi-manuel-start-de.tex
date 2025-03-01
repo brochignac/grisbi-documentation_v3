@@ -124,16 +124,69 @@ Es ist jedoch ratsam, regelmäßig Sicherungskopien der unverschlüsselten Datei
 \label{start_category_select}
 \end{figure}
 
-	\begin{enumerate} 
-		\item klicken Sie auf die gewünschte Kategorie in der Liste;%cliquez sur la catégorie choisie dans la liste;
-	%		 	\begin{itemize}
+		\begin{enumerate} 
+			\item klicken Sie auf die gewünschte Kategorie in der Liste;%cliquez sur la catégorie choisie dans la liste;
+		%		 	\begin{itemize}
 		%		 		\item\menu{Catégories générales},
 		%		 		\item \menu{Liste vide},
 		%		 		\item\menu{Comptabilité libérale},
 		%		 		\item\menu{Plan comptable associatif simplifié}
 		%		 		\item\menu{Plan comptable associatif},
 		%		 	\end{itemize}
-		\item aktivieren Sie das Kontrollkästchen \menu{Fremdkategorien anzeigen}, wenn Sie auch andere Kategorien mit englischem Namen anzeigen möchten,%cochez la case \menu{Afficher l'ensemble des catégories} si vous voulez aussi afficher d'autres catégories libellées en anglais,
-		\item bestätigen Sie, indem Sie auf die Schaltfläche \menu{Nachfolgendes Element} klicken:%validez par le bouton \menu{Suivant};
-	\end{enumerate}
+			\item aktivieren Sie das Kontrollkästchen \menu{Fremdkategorien anzeigen}, wenn Sie auch andere Kategorien mit englischem Namen anzeigen möchten,%cochez la case \menu{Afficher l'ensemble des catégories} si vous voulez aussi afficher d'autres catégories libellées en anglais,
+			\item bestätigen Sie, indem Sie auf die Schaltfläche \menu{Nachfolgendes Element} klicken:%validez par le bouton \menu{Suivant};
+		\end{enumerate}
 
+	\item Geben Sie die Daten der \indexword{Banken}\index{Banken!Definition} ein, bei denen Ihre Konten geführt werden (Stufe 5/6):%Enter details of \indexword{banks}\index{banks!definition} holding your accounts (step 5/6):
+		\begin{enumerate} 
+			\item Klicken Sie auf \menu{Hinzufügen}, um eine Bank zu definieren; füllen Sie die Details der Bank aus (Name, Bankleitzahl usw.),%click \menu{Add} to define a bank; fill in the details of the bank (name, bank code, etc.),
+			\item Wählen Sie eine Bank aus der Liste und klicken Sie auf die Schaltfläche \Menü{Entfernen}, um eine Bank zu löschen, und bestätigen Sie dann im sich öffnenden Fenster,%select a bank from the list and click the \menu{Remove} button to delete a bank, then confirm in the window that opens,
+			\item Bestätigen Sie mit der Schaltfläche \menu{Nachfolgendes Element}, um zum nächsten Schritt zu gelangen, \menu{Ein neues Konto erstellen}%Creating a new account}:%confirm with the \menu{Forward} button to go to the next step, \menu{Creating a new account}:
+		\end{enumerate} 
+
+	\item Konfiguration beendet (Stufe 6/6):\par%Configuration finished (step 6/6):\par
+	Die Konfiguration der Kontendatei ist nun abgeschlossen, und im folgenden Fenster werden Sie aufgefordert, eine der beiden Methoden für die Erstellung Ihres ersten Kontos zu wählen\refimage{start_account_choice}:%The configuration of the accounts file is now complete, and the window below will ask you to choose one of the two methods for creating your first account\refimage{start_account_choice}:
+
+\vspace{2mm}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.98\textwidth]{image/screenshot/start_account_choice}
+	\end{center}
+	\caption{Auswahlmöglichkeiten bei der Erstellung Ihres ersten Kontos}
+	\label{start_account_choice}
+\end{figure}
+
+	\begin{itemize}
+		\item[\textopenbullet] \menu{Ein neues Konto manuell erstellen}:\par%Create a new account from scratch}:\par
+		Wenn Sie diese Zeile ankreuzen und dann mit der Schaltfläche \menu{Schließen} bestätigen, wird dieses Fenster geschlossen und der Assistent \dequote{Ein neues Konto erstellen} gestartet. Siehe \vref{accounts-new}, \menu{Erstellen eines neuen Kontos}, wo dieses Verfahren ausführlich beschrieben wird, und kehren Sie dann zu dieser Seite zurück;%If you check this line, then if you confirm with the \menu{Close} button, this window closes and the \enquote{Create a new account} wizard starts. See \vref{accounts-new}, \menu{Creating a new account}, which fully describes this procedure, then return to this page;
+	
+		\item[\textopenbullet] \menu{Konten und Daten von anderen Finanzprogrammen oder Ihrer Bank importieren}:\par%Import data from online bank services or from accounting software}:\par
+		Wenn Sie diese Zeile ankreuzen und dann mit der Schaltfläche \menu{Schließen} bestätigen, wird dieses Fenster geschlossen und der \dequote{Daten importieren} Assistent zum Importieren von Daten aus einer Buchhaltungsdatei, startet. Siehe den Abschnitt \vref{move-import-importinit}, \menu{Importieren von Kontendateien aus einem anderen Programm in Grisbi}, in dem dieses Verfahren ausführlich beschrieben wird, und kehren Sie dann zu dieser Seite zurück.%If you check this line and then confirm with the \menu{Close} button, this window closes and the \enquote{New file Assistant to import} Wizard for importing data from an accounts file, starts. See the \vref{move-import-importinit} section, \menu{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
+	\end{itemize}
+
+\label{start-newfile-end}
+
+\textit{\textbf{Auf die eine oder andere Weise}} haben Sie nun Ihre Grisbi-Datei sowie das erste Konto für diese Datei erstellt.%{In one way or another}}, you have now created your Grisbi file, as well as the first account of this file.
+
+\vspacepdf{5mm}
+
+Wenn Sie jetzt weitere Konten erstellen möchten, wählen Sie das Menü {Bearbeiten - Konto erstellen}, um ein weiteres Konto zu erstellen (siehe den Abschnitt \vref{accounts-new}, \menu{Ein neues Konto erstellen}).%If you want to create other accounts now, select the \menu{Edit - New Account} to create another account (see the \vref{accounts-new}, \menu{Creating a new account} section).
+
+\vspacepdf{5mm}
+
+Andernfalls können Sie das soeben erstellte Konto oder das Konto, von dem Sie die Daten gerade importiert haben, verwenden.%Otherwise, you can start using the account you just created or the one from which you just imported the data.
+
+\minisec{\textcolor{red}{\strong{Achtung:}}}%Warning
+Im Allgemeinen ist es nicht ratsam, Akzente oder Leerzeichen in den Namen der von Grisbi verwendeten Verzeichnisse und Dateien zu verwenden. Wenn dies der Fall ist, benennen Sie sie jetzt um. Leerzeichen können beispielsweise durch Unterstriche (\underline{}) ersetzt werden.%In general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\underline{}).
+
+\section{Speichern Ihrer Kontendatei\label{start-save}}%Saving your accounts file\label{start-save}}
+
+Ihre Operationen werden nicht wie bei anderen Programmen direkt bei der Eingabe geschrieben, sondern Sie müssen Ihre Kontodatei vor dem Beenden speichern. Keine Sorge, Grisbi warnt Sie, wenn Sie dies nicht getan haben.%Your operations are not written as you enter them as they might be in other software; you must therefore save your account file before exiting. Do not worry, Grisbi warns you if you have not done so.
+
+Sie können die Optionen zum Speichern der Kontodatei im Menü \menu{Bearbeiten - Einstellungen} konfigurieren, siehe den Abschnitt \vref{setup-general-files-manage}, \menu{Verwaltung von Kontodateien}%Managing Account Files}.%You can configure the options for saving the account file in the \menu{Edit - Preferences} menu, see the section \vref{setup-general-files-manage}, \menu{Managing Account Files}.
+
+
+\section{Import aus anderen Buchhaltungssystemen}%Import from other personal accounting software}
+
+Siehe den Abschnitt \vref{move-import-importinit}, um Kontodateien aus einem anderen Programm in Grisbi zu importieren. Im Moment unterstützt Grisbi die Formate \gls{Gnucash}, \gls{OFX}, \GLS{CSV} und \GLS{QIF}.%See the \vref{move-import-importinit} section to import account files from another program into Grisbi. For the moment, Grisbi supports \gls{Gnucash}, \gls{OFX}, \GLS{CSV} and \GLS{QIF} formats.
