@@ -156,29 +156,29 @@ However, if you use it, it is advisable to make regular back-ups of the unencryp
 		\begin{enumerate} 
  			\item click \menu{Add} to define a bank; fill in the details of the bank (name, bank code, etc.),
 			\item select a bank from the list and click the \menu{Remove} button to delete a bank, then confirm in the window that opens,
-			\item confirm with the \menu{Forward} button to go to the next step, \menu{Creating a new account}:
+			\item confirm with the \menu{Following} button to go to the next step, \menu{Create a new account}:
 		\end{enumerate} 
 
 	\item Configuration finished (step 6/6):\par
-
 	The configuration of the accounts file is now complete, and the window below will ask you to choose one of the two methods for creating your first account\refimage{start_account_choice}:
+
+\vspace{2mm}
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.98\textwidth]{image/screenshot/start_account_choice}
 \end{center}
-\caption{Selecting the first account}
-\label{start-account-choice-img}
+\caption{Choices when creating the first account}
+\label{start_account_choice}
 \end{figure}
 
-
 		\begin{itemize}
-			\item \menu{Create a new account from scratch}:\par
+			\item[\textopenbullet] \menu{Create a new account from scratch}:\par
 			If you check this line, then if you confirm with the \menu{Close} button, this window closes and the \enquote{Create a new account} wizard starts. See \vref{accounts-new}, \menu{Creating a new account}, which fully describes this procedure, then return to this page;
 
-			\item \menu{Import data from online bank services or from accounting software}:\par
+			\item[\textopenbullet] \menu{Import data from online bank services or from accounting software}:\par
 			If you check this line and then confirm with the \menu{Close} button, this window closes and the \enquote{New file Assistant to import} Wizard for importing data from an accounts file, starts. See the \vref{move-import-importinit} section, \menu{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
-\end{itemize}
+		\end{itemize}
 \end{enumerate}
 
 % tiquette du paragraphe suivant, pour que les liens hypertexte dans account.tex et QIF.tex arrivent bien dessus
@@ -189,7 +189,7 @@ However, if you use it, it is advisable to make regular back-ups of the unencryp
 %espace pour changement de thme
 \vspacepdf{5mm}
 
-If you want to create other accounts now, select the \menu{Edit - New Account} to create another account (see the \vref{accounts-new}, \menu{ Creating a new account} section).
+If you want to create other accounts now, select the \menu{Edit - New Account} to create another account (see the \vref{accounts-new}, \menu{Creating a new account} section).
 
 %espace pour changement de thme
 \vspacepdf{5mm}
@@ -209,11 +209,9 @@ In general, it is inadvisable to have accents or spaces in the names of director
 
 Your operations are not written as you enter them as they might be in other software; you must therefore save your account file before exiting. Do not worry, Grisbi warns you if you have not done so.
 
-You can configure the options for saving the account file in the \menu{ Edit - Preferences} menu, see the section \vref{setup-general-files-manage}, \menu{Managing Account Files.}.
+You can configure the options for saving the account file in the \menu{Edit - Preferences} menu, see the section \vref{setup-general-files-manage}, \menu{Managing Account Files.}.
 
 
 \section{Import from other personal accounting software}
 
 See the \vref{move-import-importinit} section to import account files from another program into Grisbi. For the moment, Grisbi supports \gls{Gnucash}, \gls{OFX}, \GLS{CSV} and \GLS{QIF} formats.
-
-
