@@ -9,6 +9,10 @@ Vous devrez aussi vous assurer que les extensions appelées dans les fichiers:
 par la commande \usepackage{package}, sont installées et en particulier:
 (pour vérifier si l'extension est présente, faire la commande suivante: kpsewhich -all "package".sty)
 [si seulement "package".dtx présent, taper en ligne de commande: << tex package.dtx >> pour générer package.sty]
+[pour installer, copier dans le:
+- home: ~/texmf/tex/latex/"package"/
+ou
+- systeme: /usr/share/texlive/texmf-dist/tex/latex/"package"/]
 babel (base) (1)(2)=[2024/03],
 ---bigfoot (fourni perpage) (1) (est remplacé par footmisc),
 caption (1)(2)=[2023/10],
