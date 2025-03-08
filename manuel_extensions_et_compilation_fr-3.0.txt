@@ -1,13 +1,14 @@
 Compilation du manuel de l'utilisateur Grisbi :
-[mise à jour: avril 2024 - ]
+[mise à jour: mars 2025 - wrapfig2]
 
 Pour compiler complètement le manuel avec les images dans les formats pdf et html, vous devrez installer une distribution Latex (par ex. texlive) et les paquetages hevea et perl.
 Vous devrez aussi vous assurer que les extensions appelées dans les fichiers:
 - grisbi-manual.tex,
 - macros.sty,
 - hva/macros.hva
-par la commande \usepackage{extension}, sont installées et en particulier:
-(pour vérifier si l'extension est présente, faire la commande suivante: kpsewhich extension.sty)
+par la commande \usepackage{package}, sont installées et en particulier:
+(pour vérifier si l'extension est présente, faire la commande suivante: kpsewhich -all "package".sty)
+[si seulement "package".dtx présent, taper en ligne de commande: << tex package.dtx >> pour générer package.sty]
 babel (base) (1)(2)=[2024/03],
 ---bigfoot (fourni perpage) (1) (est remplacé par footmisc),
 caption (1)(2)=[2023/10],
@@ -23,7 +24,7 @@ picins (2)=[1995] (est remplacé par wrapfig2),
 translator (1),
 ---url (1) (est remplacé par hyperref),
 varioref (tools) (1)(2)=[2023/11], ou cleveref (?)
-wrapfig2 (1)(2)=[2024/001] (remplace picins),
+wrapfig2 (1)(2)=[2025/03-v7.0.2] (remplace picins),
 xindy (2)(3) (verifier si nécessaire).
 (1) contenu dans texlive-latex-base, -extra, -recommanded.
 (2) disponible dans le dépôt du CTAN https://ctan.org/ [date-du-dépôt], plus récent.
