@@ -82,14 +82,19 @@ C'est la page de démarrage du programme; on peut y accéder à tout moment en c
 Grisbi affiche toutes ses pages de la même manière: comme n'importe quel logiciel, il affiche:% une barre de titre, une barre de menus qui donne accès à la plupart des fonctionnalités importantes de Grisbi, et aussi trois zones:
 
 \begin{itemize}%[\large \textcircled{\small 2}]
-	\item[\large\textcircled{\small 1}] la barre de titre;
-	\item[\large\textcircled{\small 2}] la barre de menus qui donne accès à la plupart des fonctionnalités importantes de Grisbi;
+	\item[\large\textcircled{\small 1}] la barre de titre, qui affiche un des noms suivants (disponible dans les préférences);
+		\begin{itemize}
+			\item[\textopenbullet] l'Entité comptable (par défaut),
+			\item[\textopenbullet] le Titulaire du compte,
+			\item[\textopenbullet] le Nom du fichier,
+		\end{itemize}
+	\item[\large\textcircled{\small 2}] la barre de menu, qui donne accès à la plupart des fonctionnalités importantes de Grisbi;
 \end{itemize}
-et aussi trois zones qui sont spécifiques à Grisbi:
+et aussi trois zones qui sont spécifiques à Grisbi;
 \begin{itemize}%[3,4,5]
-	\item[\large\textcircled{\small 3}] la barre d'information, sous la barre de menus;
-	\item[\large\textcircled{\small 4}] le panneau de navigation;
-	\item[\large\textcircled{\small 5}] le panneau des détails
+	\item[\large\textcircled{\small 3}] la barre d'information, sous la barre de menus,
+	\item[\large\textcircled{\small 4}] le panneau de navigation,
+	\item[\large\textcircled{\small 5}] le panneau des détails.
 \end{itemize}
 
 
@@ -97,90 +102,102 @@ et aussi trois zones qui sont spécifiques à Grisbi:
 
 La barre d'information affiche le nom de l'onglet courant affiché, et peut afficher, complètement à droite, certains soldes en rapport avec ce qui est sélectionné dans le panneau des détails.
 
-% espace pour changement de thème
 \vspacepdf{5mm}
 
-%TODO following
+\textbf{Note}: la barre d'information peut être cachée par une case à décocher dans les préférences. Elle est affichée par défaut.
+
+\vspacepdf{3mm}
 
 Elle permet, en cliquant successivement sur l'un des deux petits triangles à sa gauche, de sélectionner l'un des onglets affichés dans le panneau de navigation: \menu{Comptes}, \menu{Échéancier}, \menu{Tiers}, \menu{Simulateur de crédits}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{États}, et aussi l'un des sous-onglets des onglets \menu{Comptes} et \menu{États} s'ils sont déroulés dans le panneau de navigation.
 
 \vspacepdf{5mm}
-% Pas de commande au clavier pour cette fonction
+
 \textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
-% espace pour changement de thème
 \vspacepdf{3mm}
 Le contenu de la sélection s'affiche dans le pavé des détails.
 
-% espace pour changement de thème
 \vspacepdf{3mm}
 Ces fonctionnalités peuvent être utilisées à la place de celles du panneau de navigation lorsque sa largeur est réduite à zéro et que l'on n'y a pas accès directement.
 
 
 \section{Panneau de navigation\label{home-accounting}}
 
+\begin{wrapfigure}{l}{0.3\textwidth}%50mm}
+%\begin{figure}			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
+%	\begin{center}
+	\vspace{-\intextsep}	% removes the white box above the floating
+	\includegraphics[width=0.3\textwidth]{image/screenshot/home_navigation}
+	%	\vspace{-\intextsep}%textfloatsep}
+\vspace{-45pt}			% removes the white box on the following page
+%	\end{center}
+%\caption{Page d'accueil}		% sous-titre/subtitle
+\label{home_navigation}
+%\end{figure}	
+\end{wrapfigure}
 
 Le panneau de navigation affiche en caractères gras la liste des onglets: \menu{Comptes}, \menu{Échéancier}, \menu{Tiers}, \menu{Simulateur de crédits}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{États}. En cliquant sur le petit triangle noir à gauche des onglets \menu{Comptes} ou \menu{États}, on peut dérouler ou enrouler la liste de leurs sous-onglets. Vous pouvez changer l'ordre des onglets et des sous-onglets en cliquant sur l'un d'eux et en le déplaçant plus haut ou plus bas dans la liste.
 
 \vspacepdf{3mm}
 
-\textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\textbf{Note}: ces triangles seront remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Vous pouvez sélectionner un de ces onglets ou sous-onglets en cliquant sur son nom. Vous pouvez aussi déplacer la sélection dans cette liste d'onglets et de sous-onglets avec les touches du clavier \key{Flèche Haut}, \key{Flèche Bas}, \key{Pg. Préc} ou \key{Pg. Suiv}, ou avec la molette de la souris. 
+\vspacepdf{3mm}
+Vous pouvez sélectionner un de ces onglets ou sous-onglets en cliquant sur son nom. Vous pouvez aussi déplacer la sélection dans cette liste d'onglets et de sous-onglets avec les touches du clavier \key{Flèche Haut}, \key{Flèche Bas}, \key{Pg. Préc} ou \key{Pg. Suiv}, ou avec la molette de la souris (option à cocher dans les préférences). 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
+
 Le contenu de la sélection s'affiche dans le pavé des détails. 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 On peut réduire ou agrandir la largeur du panneau de navigation en cliquant sur la fine barre verticale entre ce panneau et le pavé des détails, et en la déplaçant. Si la largeur du panneau a été réduite à zéro, ou agrandie au maximum de la largeur de la fenêtre de Grisbi, il faut retrouver cette barre, respectivement complètement à gauche ou à droite de la fenêtre, et la faire glisser à la place désirée. 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Des \indexword{menus contextuels}\index{menu contextuel}, accessibles par un clic-droit de souris, sont disponibles sur les éléments de ce panneau et proposent les fonctions suivantes:
 
 \begin{itemize}
 	\item sur \menu{Comptes}:
 		\begin{itemize}
 			\item \menu{Nouveau compte};
-			\item sur un compte quelconque: 
-				\begin{itemize}
+			\item sur un compte quelconque; 
+				\begin{itemize}[label=-]
 					\item \menu{Nouveau compte},
-					\item \menu{Supprimer ce compte};
+					\item \menu{Supprimer ce compte},
 				\end{itemize}
 		\end{itemize}
 	\item sur \menu{Tiers}:
 		\begin{itemize}
-			\item \menu{Nouveau tiers},
-			\item \menu{Supprimer le tiers sélectionné},
-			\item \menu{Éditer le tiers sélectionné},
-			\item \menu{Gérer les tiers},
+			\item \menu{Nouveau tiers};
+			\item \menu{Supprimer le tiers sélectionné};
+			\item \menu{Éditer le tiers sélectionné};
+			\item \menu{Gérer les tiers};
 			\item \menu{Supprimer les tiers inutilisés};
 		\end{itemize}
 	\item sur \menu{Catégories}: 
 		\begin{itemize}
-			\item \menu{Nouvelle catégorie},
-			\item \menu{Supprimer la catégorie sélectionnée},
-			\item \menu{Editer la catégorie sélectionnée},
-			\item \menu{Importer un fichier de catégories (.csgb)},
+			\item \menu{Nouvelle catégorie};
+			\item \menu{Supprimer la catégorie sélectionnée};
+			\item \menu{Editer la catégorie sélectionnée};
+			\item \menu{Importer un fichier de catégories (.csgb)};
 			\item \menu{Exporter la liste des catégories (.csgb)};
 		\end{itemize}
 	\item sur \menu{Imputations budgétaires}:
 		\begin{itemize}
-			\item \menu{Nouvelle imputation budgétaire},
-			\item \menu{Supprimer l'imputation sélectionnée},
-			\item \menu{Editer l'imputation sélectionnée},
-			\item \menu{Importer un fichier d'imputations budgétaires (.isgb)},
+			\item \menu{Nouvelle imputation budgétaire};
+			\item \menu{Supprimer l'imputation sélectionnée};
+			\item \menu{Editer l'imputation sélectionnée};
+			\item \menu{Importer un fichier d'imputations budgétaires (.isgb)};
 			\item \menu{Exporter la liste des imputations budgétaires (.isgb)};
 		\end{itemize}
 	\item sur \menu{État}:
 		\begin{itemize}
 			\item \menu{Nouvel état};
-			\item sur un état quelconque: 
-				\begin{itemize}
+			\item sur un état quelconque; 
+				\begin{itemize}[label=-]
 					\item \menu{Nouvel état},
 					\item \menu{Supprimer cet état}.
 				\end{itemize}
@@ -190,9 +207,8 @@ Des \indexword{menus contextuels}\index{menu contextuel}, accessibles par un cli
 % saut de page pour titre solidaire
 %\newpage
 
-
+%TODO following
 \section{Panneau des détails\label{home-details}}
-
 
 Le pavé des détails affiche tous les détails sur les onglets ou sous-onglets sélectionnés par la barre d'information ou le panneau de navigation. C'est la zone de travail principale de Grisbi.
 
