@@ -13,15 +13,15 @@
 
 \section{Sélection d'un fichier\label{select-file}}
 
-\vspacepdf{5mm}			% vertical space = 5 mm
+\vspacepdf{3mm}			% vertical space = 5 mm
 
 Au lancement de l'application, Grisbi affiche la page qui vous permet de démarrer de différentes manières.
 
-\vspacepdf{5mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace : 5 mm
 
 Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage!plein écran}\index{plein écran!affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.			% "!" separates the term from the subterm of the index entry
 
-\vspacepdf{5mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace : 5 mm
 
 %\ifIllustration
 \begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
@@ -44,14 +44,15 @@ En plus de la barre de menu, cette fenêtre affiche plusieurs pavés:
 	\item un ou plusieurs autres pavés, portant le nom de fichiers de comptes que Grisbi a déjà utilisés.
 \end{itemize}
 
+\vspacepdf{5mm}
 
 \textbf{Note}: les pavés portant les noms des fichiers de comptes que Grisbi a déjà utilisés ne sont présents que si ces fichiers existent; si vous voulez les enlever de cette page d'entrée, déplacez-les dans un autre répertoire, ou supprimez-les.
 
-\vspacepdf{5mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace : 5 mm
 
 En bas de page, un bandeau vous appelle à choisir une action en sélectionnant l'un de ces pavés.
 
-\vspacepdf{5mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace : 5 mm
 
 Si vous voulez juste découvrir le logiciel Grisbi pour avoir un aperçu de son aspect et de ses possibilités, vous pouvez à la place utiliser un fichier exemple comme celui présent sur le site de \lang{Sourceforge.net}\footnote{\urlSourceForgeDocumentation{}} dans le dossier \frquote{\textsf{examples}}.		% (voir la section \vref{new-example}).
 
@@ -62,7 +63,7 @@ Si vous voulez juste découvrir le logiciel Grisbi pour avoir un aperçu de son 
 
 \section{Accueil\label{home}}
 
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 
 En ouvrant un fichier de comptes, Grisbi affiche sa page d'accueil\refimage{home_3.0}.
 C'est la page de démarrage du programme; on peut y accéder à tout moment en cliquant sur l'onglet \menu{Comptes}. 
@@ -104,7 +105,7 @@ La barre d'information affiche le nom de l'onglet courant affiché, et peut affi
 
 \vspacepdf{5mm}
 
-\textbf{Note}: la barre d'information peut être cachée par une case à décocher dans les préférences. Elle est affichée par défaut \vref{setup-display-toolbars}
+\textbf{Note}: la barre d'information peut être cachée par une case à décocher dans les préférences \vref{setup-display-toolbars}. Elle est affichée par défaut.
 
 \vspacepdf{3mm}
 
@@ -112,7 +113,7 @@ Elle permet, en cliquant successivement sur l'un des deux petits triangles à sa
 
 \vspacepdf{5mm}
 
-\textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\textbf{Note}: ces triangles sont remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 \vspacepdf{3mm}
 Le contenu de la sélection s'affiche dans le pavé des détails.
@@ -122,15 +123,17 @@ Ces fonctionnalités peuvent être utilisées à la place de celles du panneau d
 
 
 \section{Panneau de navigation\label{home-accounting}}
-%TODO caption edit
+
 \begin{wrapfigure}{l}{0.3\textwidth}%50mm}
-	\vspace{-\intextsep}	% removes the white box above the floating
+	\vspace{-\intextsep}				% removes the white box above the floating
 	\includegraphics[width=0.3\textwidth]{image/screenshot/home_navigation}
-	%	\vspace{-\intextsep}%textfloatsep}
-	\vspace{-80pt}			% removes the white box on the following page
-%	\captionformat{\newline}
-%	singlelinecheck=false
-	\captionsetup{name=Fig.}%,singlelinecheck=false}%,labelsep=newline}
+	\vspace{-65pt}						% decrease the white box below the floating
+	\captionsetup{%						% for a change of options of the caption package
+		format=plain,					% to avoid error message with labelsep option below, default=hang
+		name=Fig.,						% rename label caption, default="Figure" (or "Table")
+		justification=centering,		% centring of text and caption label 
+		labelsep=newline				% define the separator between the label and the caption text
+		}
 	\caption{Panneau de navigation}		% \caption is mandatory to reference a figure in lof
 	\label{home_navigation}
 \end{wrapfigure}
