@@ -82,7 +82,7 @@ C'est la page de démarrage du programme; on peut y accéder à tout moment en c
 Grisbi affiche toutes ses pages de la même manière: comme n'importe quel logiciel, il affiche:% une barre de titre, une barre de menus qui donne accès à la plupart des fonctionnalités importantes de Grisbi, et aussi trois zones:
 
 \begin{itemize}%[\large \textcircled{\small 2}]
-	\item[\large\textcircled{\small 1}] la barre de titre, qui affiche un des noms suivants (disponible dans les préférences);
+	\item[\large\textcircled{\small 1}] la barre de titre, qui affiche un des noms suivants (disponible dans les préférences \vref{setup-dislpay-addresses-titles})
 		\begin{itemize}
 			\item[\textopenbullet] l'Entité comptable (par défaut),
 			\item[\textopenbullet] le Titulaire du compte,
@@ -104,7 +104,7 @@ La barre d'information affiche le nom de l'onglet courant affiché, et peut affi
 
 \vspacepdf{5mm}
 
-\textbf{Note}: la barre d'information peut être cachée par une case à décocher dans les préférences. Elle est affichée par défaut.
+\textbf{Note}: la barre d'information peut être cachée par une case à décocher dans les préférences. Elle est affichée par défaut \vref{setup-display-toolbars}
 
 \vspacepdf{3mm}
 
@@ -122,29 +122,28 @@ Ces fonctionnalités peuvent être utilisées à la place de celles du panneau d
 
 
 \section{Panneau de navigation\label{home-accounting}}
-
+%TODO caption edit
 \begin{wrapfigure}{l}{0.3\textwidth}%50mm}
-%\begin{figure}			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
-%	\begin{center}
 	\vspace{-\intextsep}	% removes the white box above the floating
 	\includegraphics[width=0.3\textwidth]{image/screenshot/home_navigation}
 	%	\vspace{-\intextsep}%textfloatsep}
-\vspace{-45pt}			% removes the white box on the following page
-%	\end{center}
-%\caption{Page d'accueil}		% sous-titre/subtitle
-\label{home_navigation}
-%\end{figure}	
+	\vspace{-80pt}			% removes the white box on the following page
+%	\captionformat{\newline}
+%	singlelinecheck=false
+	\captionsetup{name=Fig.}%,singlelinecheck=false}%,labelsep=newline}
+	\caption{Panneau de navigation}		% \caption is mandatory to reference a figure in lof
+	\label{home_navigation}
 \end{wrapfigure}
 
 Le panneau de navigation affiche en caractères gras la liste des onglets: \menu{Comptes}, \menu{Échéancier}, \menu{Tiers}, \menu{Simulateur de crédits}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{États}. En cliquant sur le petit triangle noir à gauche des onglets \menu{Comptes} ou \menu{États}, on peut dérouler ou enrouler la liste de leurs sous-onglets. Vous pouvez changer l'ordre des onglets et des sous-onglets en cliquant sur l'un d'eux et en le déplaçant plus haut ou plus bas dans la liste.
 
 \vspacepdf{3mm}
 
-\textbf{Note}: ces triangles seront remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\textbf{Note}: ces triangles sont remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Vous pouvez sélectionner un de ces onglets ou sous-onglets en cliquant sur son nom. Vous pouvez aussi déplacer la sélection dans cette liste d'onglets et de sous-onglets avec les touches du clavier \key{Flèche Haut}, \key{Flèche Bas}, \key{Pg. Préc} ou \key{Pg. Suiv}, ou avec la molette de la souris (option à cocher dans les préférences). 
+Vous pouvez sélectionner un de ces onglets ou sous-onglets en cliquant sur son nom. Vous pouvez aussi déplacer la sélection dans cette liste d'onglets et de sous-onglets avec les touches du clavier \key{Flèche Haut}, \key{Flèche Bas}, \key{Pg. Préc} ou \key{Pg. Suiv}, ou avec la molette de la souris (option à cocher dans les préférences \vref{setup-display-toolbars}). 
 
 % espace pour changement de thème
 \vspacepdf{3mm}
