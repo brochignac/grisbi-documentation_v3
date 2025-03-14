@@ -208,34 +208,22 @@ Des \indexword{menus contextuels}\index{menu contextuel}, accessibles par un cli
 		\end{itemize}
 \end{itemize}
 
-% saut de page pour titre solidaire
-%\newpage
-
-%TODO following
 \section{Panneau des détails\label{home-details}}
 
-\begin{wrapfigure}{l}{0.3\textwidth}%50mm}
-\vspace{-\intextsep}				% decreases space above the floating (minus intextsep=separation between the float and the text, in the text)
-\centering							% centering the floating figure in the "wrap"
-\includegraphics[width=0.29\textwidth]{image/screenshot/home_navigation}%
-\vspace{-5pt}						% decreases space between the floating and the caption below the floating
-\captionsetup{%						% for a change of options of the caption package
-	format=plain,					% to avoid error message with labelsep option below, default=hang
-	name=Fig.,						% rename label caption, default="Figure" (or "Table")
-	justification=centering,		% centring of text and caption label 
-	labelsep=newline				% define the separator between the label and the caption text
-}
-\caption{Panneau de navigation}		% \caption is mandatory to reference a figure in lof
-\vspace{-10pt}						% decreases espace below the caption
-\label{home_navigation}
-\end{wrapfigure}
+\begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
+	\begin{center}
+		\includegraphics[width=1\textwidth]{image/screenshot/home\_details.png}
+	\end{center}
+	\caption{Panneau des details}		% sous-titre/subtitle
+	\label{home\_details}
+\end{figure}
 
 Le panneau des détails affiche tous les détails sur les onglets ou sous-onglets sélectionnés par la barre d'information ou le panneau de navigation. C'est la zone de travail principale de Grisbi.
 
 On peut réduire ou agrandir sa largeur en cliquant sur la fine barre verticale entre ce panneau et le panneau de navigation, et en la déplaçant. Si la largeur du panneau a été réduite à zéro ou agrandie au maximum de la largeur de la fenêtre de Grisbi, il faut retrouver cette barre, respectivement complètement à droite ou à gauche de la fenêtre, et la faire glisser à la place désirée. 
- 
-%%TODO%: LA SUITE
- 
+
+%TODO following
+
 \subsection{Affichage de la page d'accueil\label{home-details-homepage}}
 
 Pour afficher la page d'accueil, sélectionnez l'onglet \menu{Comptes}; le panneau des détails affiche, de haut en bas:
@@ -243,7 +231,7 @@ Pour afficher la page d'accueil, sélectionnez l'onglet \menu{Comptes}; le panne
 \begin{itemize}
 	 \item dans un pavé sur fond gris, l'icône \menu{Grisbi} à gauche, et à droite un \indexword{titre}\index{affichage!titre}\index{titre!page d'accueil} qui permet d'identifier sur quelle comptabilité vous travaillez actuellement, sous la forme \frquote{libellé - Grisbi}; vous pouvez définir ce libellé, parmi trois possibilités, dans le menu \menu{Édition - Préférences} (voir le paragraphe \vref{setup-display-addresses-titles}, \menu{Titres}):
 		\begin{itemize}
-			 \item l'\menu{Entité comptable}: c'est le nom du domaine de comptabilité sur lequel vous travaillez, par exemple \frquote{Ma comptabilité} ou \frquote{Association}, et que vous avez saisi à la création du fichier de comptes; vous pouvez le modifier ici dans le champ \menu{Nom de l'entité comptable}; cela peut être utile si vous gérez plusieurs \indexword{entités comptables}\index{entité comptable}, 
+			 \item l'\menu{Entité comptable} (par defaut): c'est le nom du domaine de comptabilité sur lequel vous travaillez, par exemple \frquote{Ma comptabilité} ou \frquote{Association}, et que vous avez saisi à la création du fichier de comptes; vous pouvez le modifier ici dans le champ \menu{Nom de l'entité comptable}; cela peut être utile si vous gérez plusieurs \indexword{entités comptables}\index{entité comptable}, 
 			 \item le \menu{Titulaire du compte}: c'est le nom du titulaire (ou du propriétaire) du dernier compte consulté; si le titulaire n'est pas renseigné dans les propriétés du compte, Grisbi affiche le nom de ce compte,
 			 \item le \menu{Nom du fichier de comptes}: c'est le nom du fichier dans le répertoire courant, sous la forme \file{nom\_de\_votre\_fichier.gsb}, et c'est le choix par défaut;
 		\end{itemize}
