@@ -17,13 +17,12 @@
 
 Au lancement de l'application, Grisbi affiche la page qui vous permet de démarrer de différentes manières.
 
-\vspacepdf{3mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace: 5 mm
 
 Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage!plein écran}\index{plein écran!affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.			% "!" separates the term from the subterm of the index entry
 
-\vspacepdf{3mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace: 5 mm
 
-%\ifIllustration
 \begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
 	\begin{center}					% image centrée
 		\includegraphics[width=0.95\textwidth]{image/screenshot/start_grisbi}		% width=95% as wide as the current text
@@ -31,9 +30,9 @@ Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{aff
 	\caption{Fenêtre de démarrage}			% sous-titre/subtitle
 	\label{start_grisbi}					% figure's ref., use for link in text with \refimage{}
 \end{figure}
-%\fi
 
-\vspacepdf{3mm}			% espace : 5 mm
+
+\vspacepdf{3mm}			% espace: 5 mm
 
 En plus de la barre de menu, cette fenêtre affiche plusieurs pavés:
 
@@ -48,15 +47,15 @@ En plus de la barre de menu, cette fenêtre affiche plusieurs pavés:
 
 \textbf{Note}: les pavés portant les noms des fichiers de comptes que Grisbi a déjà utilisés ne sont présents que si ces fichiers existent; si vous voulez les enlever de cette page d'entrée, déplacez-les dans un autre répertoire, ou supprimez-les.
 
-\vspacepdf{3mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace: 5 mm
 
 En bas de page, un bandeau vous appelle à choisir une action en sélectionnant l'un de ces pavés.
 
-\vspacepdf{3mm}			% espace : 5 mm
+\vspacepdf{3mm}			% espace: 5 mm
 
 Si vous voulez juste découvrir le logiciel Grisbi pour avoir un aperçu de son aspect et de ses possibilités, vous pouvez à la place utiliser un fichier exemple comme celui présent sur le site de \lang{Sourceforge.net}\footnote{\urlSourceForgeDocumentation{}} dans le dossier \frquote{\textsf{examples}}.		% (voir la section \vref{new-example}).
 
-\vspacepdf{5mm}			% espace : 5 mm
+\vspacepdf{5mm}			% espace: 5 mm
 
 \textbf{Note}: en cliquant simplement sur le fichier exemple téléchargé, Grisbi s'exécutera en affichant directement la fenêtre d'accueil\refimage{home_3.0} sans passer par la fenêtre de démarrage.
 
@@ -158,20 +157,16 @@ En cliquant sur le petit triangle noir à gauche des onglets \menu{Comptes} ou \
 
 \textbf{Note}: ces triangles sont remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
-% espace pour changement de thème
 \vspacepdf{3mm}
 Vous pouvez sélectionner un de ces onglets ou sous-onglets en cliquant sur son nom. Vous pouvez aussi déplacer la sélection dans cette liste d'onglets et de sous-onglets avec les touches du clavier \key{Flèche Haut}, \key{Flèche Bas}, \key{Pg. Préc} ou \key{Pg. Suiv}, ou avec la molette de la souris (option à cocher dans les préférences \vref{setup-display-toolbars}). 
 
-% espace pour changement de thème
 \vspacepdf{3mm}
 
 Le contenu de la sélection s'affiche dans le panneau des détails. 
 
-% espace pour changement de thème
 \vspacepdf{3mm}
 On peut réduire ou agrandir la largeur du panneau de navigation en cliquant sur la fine barre verticale entre ce panneau et le panneau des détails, et en la déplaçant. Si la largeur du panneau a été réduite à zéro, ou agrandie au maximum de la largeur de la fenêtre de Grisbi, il faut retrouver cette barre, respectivement complètement à gauche ou à droite de la fenêtre, et la faire glisser à la place désirée. 
 
-% espace pour changement de thème
 \vspacepdf{3mm}
 Des \indexword{menus contextuels}\index{menu contextuel}, accessibles par un clic-droit de souris, sont disponibles sur les éléments de ce panneau et proposent les fonctions suivantes:
 
@@ -237,7 +232,7 @@ On peut réduire ou agrandir sa largeur en cliquant sur la fine barre verticale 
 \subsection{Affichage des détails dans la page d'accueil\label{home-details-homepage}}
 
 En sélectionnant l'onglet \menu{Comptes}, le panneau des détails affiche, de haut en bas:
-
+%TODO following
 \begin{itemize}
 	 \item dans un pavé sur fond gris, à gauche, l'icône de \menu{Grisbi} (qui peut être masquée \vref{setup-display-logo-icon}), et à droite un \indexword{titre}\index{affichage!titre}\index{titre!page d'accueil} qui permet d'identifier sur quelle comptabilité vous travaillez actuellement, sous la forme \frquote{libellé - Grisbi}; vous pouvez définir ce libellé, parmi trois possibilités, dans le menu \menu{Édition - Préférences} (voir le paragraphe \vref{setup-display-addresses-titles}):
 		\begin{itemize}
@@ -248,9 +243,8 @@ En sélectionnant l'onglet \menu{Comptes}, le panneau des détails affiche, de h
 	 \item pour chaque devise séparément, pour tous les comptes et \indexword{groupes de comptes}\index{groupe de comptes}, sous les libellés \menu{Solde rapproché} et \menu{Solde courant}:
 		\begin{itemize}
 			 \item le solde des comptes bancaires et comptes de caisse, le solde partiel des groupes de comptes et leur solde final,
-% saut de ligne pour indentation correcte de la note dans la liste
 		\end{itemize}
-			 \textbf{Note}: vous pouvez ajuster l'ordre d'affichage des soldes partiels des groupes de comptes (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Soldes partiels de la liste des comptes}).			 
+	 \textbf{Note}: vous pouvez ajuster l'ordre d'affichage des soldes partiels des groupes de comptes (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Soldes partiels de la liste des comptes}).			 
 		\begin{itemize}[resume]
 			 \item le solde des comptes de passif et leur solde final,
 			 \item le solde des comptes d'actif et leur solde final;
@@ -260,13 +254,11 @@ En sélectionnant l'onglet \menu{Comptes}, le panneau des détails affiche, de h
 	\item la liste des comptes dont le solde est passé sous le \menu{Solde minimal voulu}.
 \end{itemize}
 
-% espace avant Attention ou Note: 5 mm
 \vspacepdf{5mm}
 
 \textbf{Note}: pour les définitions du \menu{Solde minimal autorisé} et du \menu{Solde minimal voulu}, voir la section \vref{accounts-properties}, \menu{Propriétés d'un compte}.
 
-%TODO following
-% espace pour changement de thème
+
 \vspacepdf{5mm}
 Les libellés des comptes s'affichent en \textcolor{black}{noir}; au passage du pointeur de la souris sur la ligne de l'un d'eux, cette couleur passe au \textcolor{gray}{gris}.
 Un solde supérieur au \menu{Solde minimal voulu} s'affiche en \textcolor{teal}{vert foncé}; au passage du pointeur sur sa ligne, cette couleur passe au \textcolor{lime}{vert clair}.
