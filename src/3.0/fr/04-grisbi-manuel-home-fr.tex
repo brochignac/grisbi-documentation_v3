@@ -72,7 +72,7 @@ C'est la page de démarrage du programme; on peut y accéder à tout moment en c
 
 \begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
 \begin{center}
-\includegraphics[width=1\textwidth]{image/screenshot/home\_3.0.png}
+\includegraphics[width=1\textwidth]{image/screenshot/home_3.0.png}
 \end{center}
 \caption{Page d'accueil}		% sous-titre/subtitle
 \label{home_3.0}
@@ -124,10 +124,10 @@ Ces fonctionnalités peuvent être utilisées à la place de celles du panneau d
 
 \section{Panneau de navigation\label{home-accounting}}
 
-\begin{wrapfigure}{l}{0.3\textwidth}%50mm}
+\begin{wrapfigure}{l}{0.33\textwidth}%50mm}
 	\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
 	\centering							% centering the floating figure in the "wrap"
-	\includegraphics[width=0.29\textwidth]{image/screenshot/home_navigation}
+	\includegraphics[width=0.28\textwidth]{image/screenshot/home_navigation}
 	\vspace{-5pt}						% space between the floating and the caption below the floating
 	\captionsetup{%						% for a change of options of the caption package
 		format=plain,					% to avoid error message with labelsep option below, default=hang
@@ -136,11 +136,23 @@ Ces fonctionnalités peuvent être utilisées à la place de celles du panneau d
 		labelsep=newline				% define the separator between the label and the caption text
 		}
 	\caption{Panneau de navigation}		% \caption is mandatory to reference a figure in lof
-	\vspace{-10pt}						% space below the caption
+	\vspace{-40pt}						% space below the caption
 	\label{home_navigation}
 \end{wrapfigure}
 
-Le panneau de navigation affiche en caractères gras la liste des onglets: \menu{Comptes}, \menu{Échéancier}, \menu{Tiers}, \menu{Simulateur de crédits}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{États}. En cliquant sur le petit triangle noir à gauche des onglets \menu{Comptes} ou \menu{États}, on peut dérouler ou enrouler la liste de leurs sous-onglets. Vous pouvez changer l'ordre des onglets et des sous-onglets en cliquant sur l'un d'eux et en le déplaçant plus haut ou plus bas dans la liste.
+Le panneau de navigation affiche en caractères gras la liste des onglets:
+
+	\begin{itemize}
+		\item \menu{Comptes},
+		\item \menu{Échéancier},
+		\item \menu{Tiers},
+		\item \menu{Simulateur de crédits},
+		\item \menu{Catégories},
+		\item \menu{Imputations budgétaires}
+		\item \menu{États}.
+	\end{itemize}
+	%\menu{Comptes}, \menu{Échéancier}, \menu{Tiers}, \menu{Simulateur de crédits}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{États}.
+En cliquant sur le petit triangle noir à gauche des onglets \menu{Comptes} ou \menu{États}, on peut dérouler ou enrouler la liste de leurs sous-onglets. Vous pouvez changer l'ordre des onglets et des sous-onglets en cliquant sur l'un d'eux et en le déplaçant plus haut ou plus bas dans la liste.
 
 \vspacepdf{3mm}
 
@@ -210,37 +222,36 @@ Des \indexword{menus contextuels}\index{menu contextuel}, accessibles par un cli
 
 \section{Panneau des détails\label{home-details}}
 
-\begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
-	\begin{center}
-		\includegraphics[width=1\textwidth]{image/screenshot/home\_details.png}
-	\end{center}
-	\caption{Panneau des details}		% sous-titre/subtitle
-	\label{home\_details}
-\end{figure}
-
 Le panneau des détails affiche tous les détails sur les onglets ou sous-onglets sélectionnés par la barre d'information ou le panneau de navigation. C'est la zone de travail principale de Grisbi.
 
 On peut réduire ou agrandir sa largeur en cliquant sur la fine barre verticale entre ce panneau et le panneau de navigation, et en la déplaçant. Si la largeur du panneau a été réduite à zéro ou agrandie au maximum de la largeur de la fenêtre de Grisbi, il faut retrouver cette barre, respectivement complètement à droite ou à gauche de la fenêtre, et la faire glisser à la place désirée. 
 
-%TODO following
+\begin{figure}[htbp]			% h=here, t=top, b=bottom, p=page of float to force the figure here, not in a next page.
+	\begin{center}
+		\includegraphics[width=1\textwidth]{image/screenshot/home_details.png}
+	\end{center}
+	\caption{Panneau des details}		% sous-titre/subtitle
+	\label{home_details}
+\end{figure}
 
-\subsection{Affichage de la page d'accueil\label{home-details-homepage}}
+\subsection{Affichage des détails dans la page d'accueil\label{home-details-homepage}}
 
-Pour afficher la page d'accueil, sélectionnez l'onglet \menu{Comptes}; le panneau des détails affiche, de haut en bas:
+En sélectionnant l'onglet \menu{Comptes}, le panneau des détails affiche, de haut en bas:
 
 \begin{itemize}
-	 \item dans un pavé sur fond gris, l'icône \menu{Grisbi} à gauche, et à droite un \indexword{titre}\index{affichage!titre}\index{titre!page d'accueil} qui permet d'identifier sur quelle comptabilité vous travaillez actuellement, sous la forme \frquote{libellé - Grisbi}; vous pouvez définir ce libellé, parmi trois possibilités, dans le menu \menu{Édition - Préférences} (voir le paragraphe \vref{setup-display-addresses-titles}, \menu{Titres}):
+	 \item dans un pavé sur fond gris, à gauche, l'icône de \menu{Grisbi} (qui peut être masquée \vref{setup-display-logo-icon}), et à droite un \indexword{titre}\index{affichage!titre}\index{titre!page d'accueil} qui permet d'identifier sur quelle comptabilité vous travaillez actuellement, sous la forme \frquote{libellé - Grisbi}; vous pouvez définir ce libellé, parmi trois possibilités, dans le menu \menu{Édition - Préférences} (voir le paragraphe \vref{setup-display-addresses-titles}):
 		\begin{itemize}
 			 \item l'\menu{Entité comptable} (par defaut): c'est le nom du domaine de comptabilité sur lequel vous travaillez, par exemple \frquote{Ma comptabilité} ou \frquote{Association}, et que vous avez saisi à la création du fichier de comptes; vous pouvez le modifier ici dans le champ \menu{Nom de l'entité comptable}; cela peut être utile si vous gérez plusieurs \indexword{entités comptables}\index{entité comptable}, 
 			 \item le \menu{Titulaire du compte}: c'est le nom du titulaire (ou du propriétaire) du dernier compte consulté; si le titulaire n'est pas renseigné dans les propriétés du compte, Grisbi affiche le nom de ce compte,
-			 \item le \menu{Nom du fichier de comptes}: c'est le nom du fichier dans le répertoire courant, sous la forme \file{nom\_de\_votre\_fichier.gsb}, et c'est le choix par défaut;
+			 \item le \menu{Nom du fichier}: c'est le nom du fichier dans le répertoire courant, sous la forme \file{nom\_de\_votre\_fichier.gsb};
 		\end{itemize}
 	 \item pour chaque devise séparément, pour tous les comptes et \indexword{groupes de comptes}\index{groupe de comptes}, sous les libellés \menu{Solde rapproché} et \menu{Solde courant}:
 		\begin{itemize}
 			 \item le solde des comptes bancaires et comptes de caisse, le solde partiel des groupes de comptes et leur solde final,
 % saut de ligne pour indentation correcte de la note dans la liste
-
+		\end{itemize}
 			 \textbf{Note}: vous pouvez ajuster l'ordre d'affichage des soldes partiels des groupes de comptes (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Soldes partiels de la liste des comptes}).			 
+		\begin{itemize}[resume]
 			 \item le solde des comptes de passif et leur solde final,
 			 \item le solde des comptes d'actif et leur solde final;
 		\end{itemize}
@@ -254,6 +265,7 @@ Pour afficher la page d'accueil, sélectionnez l'onglet \menu{Comptes}; le panne
 
 \textbf{Note}: pour les définitions du \menu{Solde minimal autorisé} et du \menu{Solde minimal voulu}, voir la section \vref{accounts-properties}, \menu{Propriétés d'un compte}.
 
+%TODO following
 % espace pour changement de thème
 \vspacepdf{5mm}
 Les libellés des comptes s'affichent en \textcolor{black}{noir}; au passage du pointeur de la souris sur la ligne de l'un d'eux, cette couleur passe au \textcolor{gray}{gris}.
