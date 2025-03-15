@@ -96,44 +96,70 @@ sowie drei Grisbi spezifische Bereiche:%as well as three specific Grisbi zones:%
 
 \section{Informationsleiste\label{home-synthesis}}
 
-Die Informationsleiste zeigt den Namen der aktuell angezeigten Registerkarte an und kann ganz rechts bestimmte Bilanzen anzeigen, die sich auf das beziehen, was im Bereich details ausgewählt wurde.%The information bar shows the name of the current tab displayed, and can display, completely to the right, certain balances relating to what is selected in the details panel.
+Die Informationsleiste zeigt den Namen der aktuell ausgewählten Registerkarte an und kann ganz rechts bestimmte Bilanzen anzeigen, die sich auf das beziehen, was im Detailbereich ausgewählt wurde.%The information bar shows the name of the currently selected tab select tab di can display, completely to the right, certain balances relating to what is selected in the details panel.
 
-% espace pour changement de thème
-\vspacepdf{5mm}
+\textbf{Notiz}: die standardmäßig angezeigte Informationsleiste kann durch Deaktivieren eines Kontrollkästchens in den Einstellungen \vref{setup-display-toolbars} ausgeblendet werden.%\textbf{Note}: the information bar, displayed by default, can be hidden by unchecking a box in the preferences \vref{setup-display-toolbars}.
+\vspacepdf{3mm}
 
 %TODO following
 
-To select one of the tabs displayed in the navigation panel click one or more times on one of the two small triangles on the top left of the panel.  The items displayed are : \menu{Accounts}, \menu{Scheduler}, \menu{Payees}, \menu{Credits simulator}, \menu{Categories}, \menu{Budgetary lines} and \menu{Reports}.  If the \menu{Accounts} and \menu{Reports} items have been expanded to display their sub categories these will also be displayed one by one.
+Um eine der in der Navigationsleiste angezeigten Registerkarten auszuwählen, klicken Sie einmal oder mehrmals auf eines der beiden kleinen Dreiecke oben links in der Leiste.  Die angezeigten Elemente sind: \menu{Konten}, \menu{Planer}, \menu{Empfänger}, \menu{Kreditrechner}, \menu{Kategorien}, \menu{Gruppen} und \menu{Berichte}.  Wenn die Elemente \menu{Konten} und \menu{Berichte} erweitert wurden, um ihre Unterkategorien anzuzeigen, werden diese auch einzeln angezeigt.%To select one of the tabs displayed in the navigation panel click one or more times on one of the two small triangles on the top left of the panel.  The items displayed are : \menu{Accounts}, \menu{Scheduler}, \menu{Payees}, \menu{Credits simulator}, \menu{Categories}, \menu{Budgetary lines} and \menu{Reports}.  If the \menu{Accounts} and \menu{Reports} items have been expanded to display their sub categories these will also be displayed one by one.
 
-% Pas de commande au clavier pour cette fonction
-\textbf{Note} : These triangle symbols can be replaced, depending on the theme of the desktop environment or window manager you are using, by other characters such as +, -,>, <, and so on.
+\vspacepdf{5mm}
+
+\textbf{Notiz}: Je nach dem Thema der Desktop-Umgebung oder des Fenstermanagers, die Sie verwenden, können diese dreieckigen Symbole durch andere Zeichen wie +, -, >, < usw. ersetzt werden.%Depending on the theme of the desktop environment or window manager you are using, these triangular symbols might be replaced by other characters such as +, -, >, <, etc.
+
+\vspacepdf{3mm}
+Der Inhalt der Auswahl wird im Bereich details angezeigt.%The content of the selection is displayed in the main screen area.
 
 % espace pour changement de thème
 \vspacepdf{5mm}
-The content of the selection is displayed in the main screen area.
+Diese Funktionen können anstelle des Navigationsbereich verwendet werden, wenn dessen Breite auf Null reduziert ist und Sie keinen direkten Zugang zu ihm haben.%These functions can be used in place of the navigation panel when its width is reduced to zero and you do not have direct access to it.
 
-% espace pour changement de thème
+
+\section{Navigationsbereich\label{home-accounting}}
+
+\begin{wrapfigure}{l}{0.33\textwidth}%50mm}
+\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+\centering							% centering the floating figure in the "wrap"
+\includegraphics[width=0.28\textwidth]{image/screenshot/home_navigation}
+\vspace{-5pt}						% space between the floating and the caption below the floating
+\captionsetup{%						% for a change of options of the caption package
+	format=plain,					% to avoid error message with labelsep option below, default=hang
+	name=Fig.,						% rename label caption, default="Figure" (or "Table")
+	justification=centering,		% centring of text and caption label 
+	labelsep=newline				% define the separator between the label and the caption text
+}
+\caption{Panneau de navigation}		% \caption is mandatory to reference a figure in lof
+\vspace{-40pt}						% space below the caption
+\label{home_navigation}
+\end{wrapfigure}
+
+Im Navigationsbereich wird die Liste der Registerkarten in Fettdruck angezeigt:
+	\begin{itemize}
+		\item \menu{Konten}%Accounts},
+		\item \menu{Planer}%Scheduler},
+		\item \menu{Empfänger}%Payees},
+		\item \menu{Kreditrechner}%Credits simulator},
+		\item \menu{Kategorien}%Categories},
+		\item \menu{Gruppen}%Budgetary lines},
+		\item \menu{Berichte}%Reports}.
+	\end{itemize}
+Wenn Sie auf das kleine schwarze Dreieck links neben den Registerkarten \menu{Konten} oder \menu{Berichte} klicken, können Sie die Liste der Unterregisterkarten durchblättern oder aufrollen. Sie können die Reihenfolge der Registerkarten und Unterregisterkarten ändern, indem Sie auf eine von ihnen klicken und sie in der Liste nach oben oder unten ziehen.%By clicking on the small black triangle to the left of the  \menu{Accounts} or \menu{Reports} tabs,  you can scroll or roll up the list of their sub-tabs. You can change the order of tabs and sub-tabs by clicking on one of them and dragging it up or down the list.
+
 \vspacepdf{5mm}
-These features can be used instead of clicking directly in the navigation panel when the Information Bar window width is reduced to zero and you can not access it directly.
 
+\textbf{Notiz}:  Je nach dem Thema der Desktop-Umgebung oder des Fenstermanagers, die Sie verwenden, können diese dreieckigen Symbole durch andere Zeichen wie +, -, >, < usw. ersetzt werden.%These triangles can be replaced, depending on the theme of the desktop environment or window manager you are using, by other characters such as +, -,>, <, and so on.
 
-\section{Navigation panel\label{home-accounting}}
-
-The navigation pane displays in bold the list of tabs:  \menu{Accounts}, \menu{Scheduler}, \menu{Payees}, \menu{Credits simulator}, \menu{Categories}, \menu{Budgetary lines} and \menu{Reports}. By clicking on the small black triangle to the left of the  \menu{Accounts} or \menu{Reports} tabs,  you can scroll or roll up the list of their sub-tabs. You can change the order of tabs and sub-tabs by clicking on one of them and dragging it up or down the list.
-
-\textbf{Note} : These triangles can be replaced, depending on the theme of the desktop environment or window manager you are using, by other characters such as +, -,>, <, and so on.
-
-% espace pour changement de thème
 \vspacepdf{5mm}
 
-You can select one of these tabs or sub-tabs by clicking on its name. You can also move the selection in this list of tabs and sub-tabs with the \key{Up Arrow}, \key{Down Arrow}, \key{Page Up} ou \key{Page Down} keys, or with the mouse wheel. 
+Sie können eine dieser Registerkarten oder Unterregisterkarten auswählen, indem Sie auf ihren Namen klicken. Sie können die Auswahl in dieser Liste von Registerkarten und Unterregisterkarten auch mit den \key{Pfeiltasten Hinauf}, \key{Pfeiltasten Herunter}, \key{Bild Hinauf} oder \key{Bild Herunter} oder mit dem Mausrad verschieben (diese Option muss in den Voreinstellungen \vref{setup-display-toolbars} aktiviert werden).%You can select one of these tabs or sub-tabs by clicking on its name. You can also move the selection in this list of tabs and sub-tabs with the \key{Up Arrow}, \key{Down Arrow}, \key{Page Up} ou \key{Page Down} keys, or with the mouse wheel (option to be checked in the preferences \vref{setup-display-toolbars}). 
 
-% espace pour changement de thème
-\vspacepdf{5mm}
-The content of the selection is displayed in the main screen area.
+\vspacepdf{3mm}
+Der Inhalt der Auswahl wird im Bereich details angezeigt.%The contents of the selection are displayed in the details panel.
 
-% espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
+
 You can reduce or enlarge the width of the navigation panel by clicking on the thin vertical bar between this panel and the main screen area, and moving it. If the width of the window has been reduced to zero, or enlarged to the maximum of the width of the Grisbi window, the thin vertical bar may be to the left or to the right of the window.  Locate this and slide it back to the desired location.
 
 % espace pour changement de thème
