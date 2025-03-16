@@ -221,37 +221,33 @@ Sie können es verkleinern oder vergrößern, indem Sie auf die dünne vertikale
 \subsection{Anzeige von Details auf der Startseite\label{home-details-homepage}}
 
 Wenn Sie die Registerkarte \menu{Konten} auswählen, wird das Detailfenster von oben nach unten angezeigt:%By selecting the \menu{Accounts} tab, the details panel displays, from top to bottom:
-%TODO following
+
 \begin{itemize}
 	 \item in einem Kasten auf grauem Hintergrund, links, das \menu{Grisbi}-Symbol (das ausgeblendet werden kann, siehe \vref{setup-display-logo-icon}) und auf der rechten Seite den \indexword{Titel}\index{Titelanzeige!Titel}\index{Hauptseite} der aktuell geladenen Buchhaltungsdatei in der Form \dequote{zugewiesener Name - Grisbi}; Sie können diese Bezeichnung unter drei Möglichkeiten im Menü \menu{Bearbeiten - Einstellungen} festlegen (siehe den Abschnitt \vref{setup-display-addresses-titles}, Adressen \& Bezeichnungen):%in a box on a gray background, on the left, the \menu{Grisbi} icon (which can be hidden, see \vref{setup-display-logo-icon}) and on the right the \indexword{title}\index{title display!title}\index{home page} of the accounts file you currently have loaded, in the form \enquote{assigned name - Grisbi}; you can define this label, from among three possibilities, in the \menu{Edit preferences} menu (see the paragraph \vref{setup-display-addresses-titles}):
-
 		\begin{itemize}
 			 \item die \menu{Bezeichnung} (standardmäßig): Dies ist der Name, den Sie zur Identifizierung der Art des Kontos verwenden, z. B. \dequote{Meine Konten} oder \dequote{Business}, den Sie bei der Erstellung der Kontodatei eingegeben haben; Sie können ihn hier im Feld \menu{Bezeichnung} bearbeiten; dies kann nützlich sein, wenn Sie mehrere \indexword{Bezeichnungen}\index{Bezeichnung} verwalten,%the \menu{Accounting entity}: This is the name you use to identify the type of account e.g. \enquote{My Accounts} or \enquote{Business}, which you entered when the account file was created; you can edit it here in the \menu{Name of accounting entity} field; this can be useful if you manage multiple \indexword{accounting entities}\index{accounting entity}, 
 			 \item die \menu{Kontoinhaber}: den Namen des Inhabers (oder des Kontoverwalters) des zuletzt aufgerufenen Kontos; wenn der Inhaber nicht in den Kontoeigenschaften definiert ist, zeigt Grisbi den Namen dieses Kontos an,%the \menu{Account owner name}: the name of the owner (or  account manager) of the last account accessed; if the holder is not defined in the account properties, Grisbi displays the name of this account,
 			 \item die \menu{Dateiname}: Dies ist der Name der Datei im aktuellen Verzeichnis in der Form \file{Name\_deiner\_Datei.gsb};%the \menu{Filename}: this is the name of the file in the current directory, in the form \file{name\_of\_your\_file.gsb};
 		\end{itemize}
-		
-	 \item for each currency separately, for all accounts and \indexword{groups of accounts}\index{groupe de comptes},  under the label \menu{Reconciled balance} and \menu{Current balance}:
+	 \item für jede Währung getrennt, für alle Konten und \indexword{Kontengruppen}\index{Kontengruppe}, unter den Bezeichnungen \menu{abgestimmter Saldo} und \menu{aktueller Saldo}:%for each currency separately, for all accounts and \indexword{groups of accounts}\index{groupe de comptes},  under the label \menu{Reconciled balance} and \menu{Current balance}:
 		\begin{itemize}
-			 \item the balance of the bank and cash accounts, the partial balance of the groups of accounts and their Global balance,
-% saut de ligne pour indentation correcte de la note dans la liste
-
-			 \textbf{Note}: you can adjust the display order of the partial balances of the account groups (see the section \vref{setup-general-home-partBalance}, \menu{Partial balances of the list of accounts}).			 
-			 \item the balance of the liability accounts and their final balance,
-			 \item the balance of the asset accounts and their final balance;
+			\item den Saldo der Bank- und Kassenkonten, den Teilsaldo der Kontengruppen und deren Gesamtsaldo,%the balance of the bank and cash accounts, the partial balance of the groups of accounts and their global balance,
+			\newline
+			\textbf{Notiz}: können Sie die Reihenfolge der Anzeige der Teilsalden der Kontengruppen anpassen (siehe Abschnitt \vref{setup-general-home-partBalance}, Teilweise Salden der Kontenliste)%you can adjust the display order of the partial balances of the account groups (see the section \vref{setup-general-home-partBalance}, \menu{Partial balances of the list of accounts}).			 
+			\item der Saldo der Passivkonten und ihr Endsaldo,%the balance of the liability accounts and their final balance,
+			\item der Saldo der Vermögenskonten und ihr Endsaldo;%the balance of the asset accounts and their final balance;
 		\end{itemize}
-	\item the \indexword{alerts from automatically scheduled entries}\index{alerte !opération planifiée} with their date, wording and amount, according to the choices made in the \menu{Edit - Preferences menu} (see th section \vref{setup-general-planned}, \menu{Timeline});
-	\item the list of accounts whose balance has fallen below the  \menu{minimum authorized balance};
-	\item the list of accounts whose balance has fallen below the  \menu{required Minimum Balance}.
+	\item die \indexword{Warnungen vor automatisch geplanten Einträgen}\index{Warnung!geplanter Eintrag} mit ihrem Datum, entsprechend der im \menu{Bearbeiten - Einstellungen} getroffenen Auswahl (siehe den Abschnitt \vref{Einrichten - Allgemeiner Plan}, \menu{Planer})%the \indexword{alerts from automatically scheduled entries}\index{alert!scheduled entry} with their date, wording and amount, according to the choices made in the \menu{Edit - Preferences} menu (see the section \vref{setup-general-planned}, \menu{Timetable});
+	\item die Liste der Konten, deren Saldo unter den \menu{Mindestsaldo zulässig} gefallen ist;%the list of accounts whose balance has fallen below the \menu{Minimum authorized balance};
+	\item die Liste der Konten, deren Saldo unter den \menu{Mindestsaldo festgelegt} gefallen ist.%the list of accounts whose balance has fallen below the \menu{Minimum desired balance}.
 \end{itemize}
 
-% espace avant Attention ou Note : 5 mm
 \vspacepdf{5mm}
 
-\textbf{Note}: For definitions of \menu{Minimum Allowable Balance} and \menu{Desired  minimum balance}, see the \vref{accounts-properties}, \menu{Account Properties} section.
+\textbf{Notiz}: Definitionen der Begriffe \menu{Mindestsaldo zulässig} und \menu{Mindestsaldo festgelegt} finden Sie im Abschnitt \vref{accounts-properties}, \menu{Konten bearbeiten}.%For definitions of \menu{Minimum authorized balance} and \menu{Minimum desired balance}, see the \vref{accounts-properties}, \menu{Account Properties} section.
 
 \vspacepdf{3mm}
-
+%TODO following
 The account labels are displayed in \textcolor{black}{schwarz}; as the mouse cursor moves over the line of one of these, its colour changes to \textcolor{gray}{grau}.
 A balance greater than the  \menu{desired Minimum Balance}  is displayed in \textcolor{teal}{dunkelgrün}; as the cursor moves over the line, its colour changes to \textcolor{lime}{hellgrün}.
 
