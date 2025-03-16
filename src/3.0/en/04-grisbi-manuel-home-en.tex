@@ -221,7 +221,7 @@ You can reduce or enlarge its width by clicking on the thin vertical bar between
 \subsection{Displaying details on the home page\label{home-details-homepage}}
 
 By selecting the \menu{Accounts} tab, the details panel displays, from top to bottom:
-%TODO following
+
 \begin{itemize}
 	 \item in a box on a gray background, on the left, the \menu{Grisbi} icon (which can be hidden, see \vref{setup-display-logo-icon}) and on the right the \indexword{title}\index{title display!title}\index{home page} of the accounts file you currently have loaded, in the form \enquote{assigned name - Grisbi}; you can define this label, from among three possibilities, in the \menu{Edit preferences} menu (see the \vref{setup-display-addresses-titles} paragraph, Addresses \& titles):
 		\begin{itemize}
@@ -229,29 +229,25 @@ By selecting the \menu{Accounts} tab, the details panel displays, from top to bo
 			 \item the \menu{Account owner name}: the name of the owner (or account manager) of the last account accessed; if the holder is not defined in the account properties, Grisbi displays the name of this account,
 			 \item the \menu{Filename}: this is the name of the file in the current directory, in the form  \file{name\_of\_your\_file.gsb};
 		\end{itemize}
-	 \item for each currency separately, for all accounts and \indexword{groups of accounts}\index{groups of accounts},  under the label \menu{Reconciled balance} and \menu{Current balance}:
+	 \item for each currency separately, for all accounts and \indexword{groups of accounts}\index{group of accounts}, under the label \menu{Reconciled balance} and \menu{Current balance}:
 		\begin{itemize}
-			 \item the balance of the bank and cash accounts, the partial balance of the groups of accounts and their Global balance,
-		\end{itemize}
-	 \textbf{Note}: you can adjust the display order of the partial balances of the account groups (see the section \vref{setup-general-home-partBalance}, \menu{Partial balances of the list of accounts}).			 
-		\begin{itemize}[resume]
+			\item the balance of the bank and cash accounts, the partial balance of the groups of accounts and their global balance,
+			\newline
+			\textbf{Note}: you can adjust the display order of the partial balances of the account groups (see the section \vref{setup-general-home-partBalance}, \menu{Partial balances of the list of accounts}).			 
 			\item the balance of the liability accounts and their final balance,
 			\item the balance of the asset accounts and their final balance;
 		\end{itemize}
-	\item the \indexword{alerts from automatically scheduled entries}\index{alerte!opération planifiée} with their date, wording and amount, according to the choices made in the \menu{Edit - Preferences menu} (see th section \vref{setup-general-planned}, \menu{Timeline}):
-	\item the list of accounts whose balance has fallen below the  \menu{minimum authorized balance}:
-	\item the list of accounts whose balance has fallen below the  \menu{required Minimum Balance}.
+	\item the \indexword{warnings from automatically scheduled entries}\index{alert!scheduled entry} with their date, wording and amount, according to the choices made in the \menu{Edit - Preferences} menu (see the section \vref{setup-general-planned}, \menu{Scheduler});
+	\item the list of accounts whose balance has fallen below the \menu{Minimum authorized balance};
+	\item the list of accounts whose balance has fallen below the \menu{Minimum desired balance}.
 \end{itemize}
 
-% espace avant Attention ou Note : 5 mm
 \vspacepdf{5mm}
 
+\textbf{Note}: For definitions of \menu{Minimum authorized balance} and \menu{Minimum desired balance}, see the \vref{accounts-properties}, \menu{Account Properties} section.
 
-\textbf{Note}: For definitions of \menu{Minimum Allowable Balance} and \menu{Desired  minimum balance}, see the \vref{accounts-properties}, \menu{Account Properties} section.
-
-% espace pour changement de thème
-\vspacepdf{5mm}
-
+\vspacepdf{3mm}
+%TODO following
 The account labels are displayed in \textcolor{black}{black}: as the mouse cursor moves over the line of one of these, its colour changes to \textcolor{gray}{gray}.
 A balance greater than the  \menu{desired Minimum Balance}  is displayed in \textcolor{teal}{dark green}: as the cursor moves over the line, its colour changes to \textcolor{lime}{light green}.
 
