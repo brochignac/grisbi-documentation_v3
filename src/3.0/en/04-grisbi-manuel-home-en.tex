@@ -78,7 +78,7 @@ This is the start page of the programme and can be accessed at any time by click
 
 \vspacepdf{3mm}
 
-Grisbi displays all pages in the same way: Like any software, it displays:
+Grisbi displays all pages in the same way: like any software, it displays:
 
 \begin{itemize}%[\large \textcircled{\small 2}]
 	\item[\large\textcircled{\small 1}] the title bar%une barre de titre;
@@ -223,24 +223,22 @@ You can reduce or enlarge its width by clicking on the thin vertical bar between
 By selecting the \menu{Accounts} tab, the details panel displays, from top to bottom:
 %TODO following
 \begin{itemize}
-	 \item in a box on a gray background, the \menu{Grisbi} icon (which can be hidden \vref{setup-display-logo-icon}) on the left and on the right the \indexword{title}\index{title display!title}\index{home page !page d'accueil} of the accounts file you currently have loaded, in the form \enquote{assigned name - Grisbi}; ??you can define this name in one of three ways the \menu{Edit preferences} menu (see the paragraph \vref{setup-display-addresses-titles}, \menu{Titles})??: this can be useful if you manage multiple accounting entities:
-
+	 \item in a box on a gray background, on the left, the \menu{Grisbi} icon (which can be hidden, see \vref{setup-display-logo-icon}) and on the right the \indexword{title}\index{title display!title}\index{home page} of the accounts file you currently have loaded, in the form \enquote{assigned name - Grisbi}; you can define this label, from among three possibilities, in the \menu{Edit preferences} menu (see the \vref{setup-display-addresses-titles} paragraph, Addresses \& titles):
 		\begin{itemize}
-			 \item The \menu{Accounting Entity}: This is the name you use to identify the type of account e.g.  \enquote{My Accounts} or \enquote{Business}, which you entered when the account file was created; you can edit it here in the \menu{Account Name field}; this can be useful if you manage multiple  \indexword{accounting entities}\index{entité comptable}, 
-			 \item The \menu{Account holder}:the name of the owner (or  account manager) of the last account accessed; if the holder is not defined in the account properties, Grisbi displays the name of this account,
-			 \item le \menu{Accounts file name}:  This is the name of the file in the current directory, in the form  \file{name\_of\_\_your\_file.gsb}, and this is the default choice;
+			 \item the \menu{Accounting entity} (by default): this is the name you use to identify the type of account e.g. \enquote{My Accounts} or \enquote{Business}, which you entered when the account file was created; you can edit it here in the \menu{Name of accounting entity} field; this can be useful if you manage multiple \indexword{accounting entities}\index{accounting entity}, 
+			 \item the \menu{Account owner name}: the name of the owner (or account manager) of the last account accessed; if the holder is not defined in the account properties, Grisbi displays the name of this account,
+			 \item the \menu{Filename}: this is the name of the file in the current directory, in the form  \file{name\_of\_your\_file.gsb};
 		\end{itemize}
-		
-	 \item for each currency separately, for all accounts and \indexword{groups of accounts}\index{groupe de comptes},  under the label \menu{Reconciled balance} and \menu{Current balance}:
+	 \item for each currency separately, for all accounts and \indexword{groups of accounts}\index{groups of accounts},  under the label \menu{Reconciled balance} and \menu{Current balance}:
 		\begin{itemize}
 			 \item the balance of the bank and cash accounts, the partial balance of the groups of accounts and their Global balance,
-% saut de ligne pour indentation correcte de la note dans la liste
-
-			 \textbf{Note}: you can adjust the display order of the partial balances of the account groups (see the section \vref{setup-general-home-partBalance}, \menu{Partial balances of the list of accounts}).			 
-			 \item the balance of the liability accounts and their final balance,
-			 \item the balance of the asset accounts and their final balance;
 		\end{itemize}
-	\item the \indexword{alerts from automatically scheduled entries}\index{alerte !opération planifiée} with their date, wording and amount, according to the choices made in the \menu{Edit - Preferences menu} (see th section \vref{setup-general-planned}, \menu{Timeline}):
+	 \textbf{Note}: you can adjust the display order of the partial balances of the account groups (see the section \vref{setup-general-home-partBalance}, \menu{Partial balances of the list of accounts}).			 
+		\begin{itemize}[resume]
+			\item the balance of the liability accounts and their final balance,
+			\item the balance of the asset accounts and their final balance;
+		\end{itemize}
+	\item the \indexword{alerts from automatically scheduled entries}\index{alerte!opération planifiée} with their date, wording and amount, according to the choices made in the \menu{Edit - Preferences menu} (see th section \vref{setup-general-planned}, \menu{Timeline}):
 	\item the list of accounts whose balance has fallen below the  \menu{minimum authorized balance}:
 	\item the list of accounts whose balance has fallen below the  \menu{required Minimum Balance}.
 \end{itemize}
