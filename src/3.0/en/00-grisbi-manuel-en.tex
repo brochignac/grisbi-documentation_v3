@@ -134,15 +134,8 @@
 \ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
 \ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
 
-
-%% items list environment %%
-\renewenvironment{itemize}{%
-	\begin{list}{\textbullet}{%
-		\setlength{\itemsep}{-3pt}		% modify space between items, default=0 ?, to avoid enumitem package
-		}
-	}{%
-	\end{list}%
-}
+\setlist{parsep=0.5mm}							% modify space between items
+\renewcommand{\labelitemii}{\textopenbullet}	% change 2nd level list marker: "-" to \textopenbullet
 
 %\frenchsetup{ItemLabeli=\textbullet}	% change 1st level list marker of french babel
 %\frenchsetup{ItemLabelii=-}			% change 2nd level list marker of french babel
