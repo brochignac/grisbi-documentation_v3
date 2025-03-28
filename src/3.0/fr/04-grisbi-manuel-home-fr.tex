@@ -225,32 +225,39 @@ On peut réduire ou agrandir sa largeur en cliquant sur la fine barre verticale 
 	\begin{center}
 		\includegraphics[width=1\textwidth]{image/screenshot/home_details.png}
 	\end{center}
-	\caption{Panneau des details}		% sous-titre/subtitle
+	\caption{Panneau des détails personnalisé}		% sous-titre/subtitle
 	\label{home_details}
 \end{figure}
 
 \subsection{Affichage des détails dans la page d'accueil\label{home-details-homepage}}
 
-En sélectionnant l'onglet \menu{Comptes}, le panneau des détails affiche, de haut en bas:
+En sélectionnant l'onglet \menu{Comptes}, le panneau des détails affiche:
 
 \begin{itemize}
-	 \item dans un pavé sur fond gris, à gauche, l'icône de \menu{Grisbi} (qui peut être masquée, voir \vref{setup-display-logo-icon}), et à droite un \indexword{titre}\index{affichage!titre}\index{titre!page d'accueil} qui permet d'identifier sur quelle comptabilité vous travaillez actuellement, sous la forme \frquote{libellé - Grisbi}; vous pouvez définir ce libellé, parmi trois possibilités, dans le menu \menu{Édition - Préférences} (voir le paragraphe \vref{setup-display-addresses-titles}, Adresses et titres):
+	\item en haut, dans un bandeau gris foncé,
 		\begin{itemize}
-			 \item l'\menu{Entité comptable} (par defaut): c'est le nom du domaine de comptabilité sur lequel vous travaillez, par exemple \frquote{Ma comptabilité} ou \frquote{Association}, et que vous avez saisi à la création du fichier de comptes; vous pouvez le modifier ici dans le champ \menu{Nom de l'entité comptable}; cela peut être utile si vous gérez plusieurs \indexword{entités comptables}\index{entité comptable}, 
-			 \item le \menu{Titulaire du compte}: c'est le nom du titulaire (ou du propriétaire) du dernier compte consulté; si le titulaire n'est pas renseigné dans les propriétés du compte, Grisbi affiche le nom de ce compte,
-			 \item le \menu{Nom du fichier}: c'est le nom du fichier dans le répertoire courant, sous la forme \file{nom\_de\_votre\_fichier.gsb};
+	 		\item à gauche, l'icône de \menu{Grisbi} (qui peut être masquée, voir \vref{setup-display-logo-icon}),
+	 		\item et à droite un \indexword{titre}\index{affichage!titre}\index{titre!page d'accueil} qui permet d'identifier sur quelle comptabilité vous travaillez actuellement, sous la forme \frquote{libellé - Grisbi}; vous pouvez définir ce libellé, parmi trois possibilités, dans le menu \menu{Édition - Préférences} (voir le paragraphe \vref{setup-display-addresses-titles}, Adresses et titres):
+				\begin{itemize}[label=-]
+			 		\item l'\menu{Entité comptable} (par defaut): c'est le nom du domaine de comptabilité sur lequel vous travaillez, par exemple \frquote{Ma comptabilité} ou \frquote{Association}, et que vous avez saisi à la création du fichier de comptes; vous pouvez le modifier ici dans le champ \menu{Nom de l'entité comptable}; cela peut être utile si vous gérez plusieurs \indexword{entités comptables}\index{entité comptable}, 
+			 		\item le \menu{Titulaire du compte}: c'est le nom du titulaire (ou du propriétaire) du dernier compte consulté; si le titulaire n'est pas renseigné dans les propriétés du compte, Grisbi affiche le nom de ce compte,
+			 		\item le \menu{Nom du fichier}: c'est le nom du fichier dans le répertoire courant, sous la forme \file{nom\_de\_votre\_fichier.gsb};
+				\end{itemize}
 		\end{itemize}
-	 \item pour chaque devise séparément, pour tous les comptes et \indexword{groupes de comptes}\index{groupe de comptes}, sous les libellés \menu{Solde rapproché} et \menu{Solde courant}:
-		\begin{itemize}
-			 \item le solde des comptes bancaires et comptes de caisse, le solde partiel des groupes de comptes et leur solde final,
-			 \newline
-			 \textbf{Note}: vous pouvez ajuster l'ordre d'affichage des soldes partiels des groupes de comptes (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Position dans la liste des soldes partiels}).			 
-			 \item le solde des comptes de passif et leur solde final,
-			 \item le solde des comptes d'actif et leur solde final;
-		\end{itemize}
-	\item les \indexword{alertes des opérations planifiées}\index{alerte!opération planifiée} à échéance ou clôturées, avec leurs date, libellé et montant, selon les choix faits dans le menu \menu{Édition - Préférences} (voir la section \vref{setup-general-planned}, \menu{Échéancier});
-	\item la liste des comptes dont le solde est passé sous le \menu{Solde minimal autorisé};
-	\item la liste des comptes dont le solde est passé sous le \menu{Solde minimal voulu}.
+	\item dans la partie principale gris clair sous le bandeau,
+		\begin{itemize} 
+			\item pour chaque devise séparément, pour tous les comptes et \indexword{groupes de comptes}\index{groupe de comptes}, sous les libellés \menu{Solde rapproché} et \menu{Solde courant}:
+				\begin{itemize}[label=-]
+					\item le solde des comptes bancaires et comptes de caisse, le solde partiel des groupes de comptes et leur solde final,
+			\newline
+			\textbf{Note}: vous pouvez ajuster l'ordre d'affichage des soldes partiels des groupes de comptes (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Position dans la liste des soldes partiels}).			 
+					\item le solde des comptes de passif et leur solde final,
+					\item le solde des comptes d'actif et leur solde final;
+				\end{itemize}
+			\item les \indexword{alertes des opérations planifiées}\index{alerte!opération planifiée} à échéance ou clôturées, avec leurs date, libellé et montant, selon les choix faits dans le menu \menu{Édition - Préférences} (voir la section \vref{setup-general-planned}, \menu{Échéancier});
+			\item la liste des comptes dont le solde est passé sous le \menu{Solde minimal autorisé};
+			\item la liste des comptes dont le solde est passé sous le \menu{Solde minimal voulu}.
+	\end{itemize}
 \end{itemize}
 
 \vspacepdf{5mm}
@@ -260,13 +267,16 @@ En sélectionnant l'onglet \menu{Comptes}, le panneau des détails affiche, de h
 \vspacepdf{3mm}
 %TODO following
 Les libellés des comptes s'affichent en \textcolor{black}{noir}; au passage du pointeur de la souris sur la ligne de l'un d'eux, cette couleur passe au \textcolor{gray}{gris}.
-Un solde supérieur au \menu{Solde minimal voulu} s'affiche en \textcolor{teal}{vert foncé}; au passage du pointeur sur sa ligne, cette couleur passe au \textcolor{lime}{vert clair}.
-Un solde inférieur au \menu{Solde minimal voulu} et supérieur au \menu{Solde minimal autorisé} s'affiche en \textcolor{orange}{orange}; au passage du pointeur sur sa ligne, cette couleur passe à l'\textcolor{orange}{orange clair}.
-Un solde inférieur au \menu{Solde minimal autorisé} s'affiche en \textcolor{red}{rouge}; au passage du pointeur sur sa ligne, cette couleur passe au \textcolor{red}{rouge clair}.
+
+Un solde supérieur au \menu{Solde minimal voulu} s'affiche en \textcolor[RGB]{0,126,0}{vert}; au passage du pointeur sur sa ligne, cette couleur passe au \textcolor[RGB]{0,227,0}{vert clair}.
+
+Un solde inférieur au \menu{Solde minimal voulu} et supérieur au \menu{Solde minimal autorisé} s'affiche en \textcolor[RGB]{230,155,0}{orange}; au passage du pointeur sur sa ligne, cette couleur passe à l'\textcolor[RGB]{255,200,0}{orange clair}.
+
+Un solde inférieur au \menu{Solde minimal autorisé} s'affiche en \textcolor[RGB]{153,0,0}{rouge foncé}; au passage du pointeur sur sa ligne, cette couleur passe au \textcolor{red}{rouge}.
 
 Au passage du pointeur de la souris sur la ligne d'un compte, tout changement de couleur indique que si l'on clique (droit ou gauche) avec la souris, ce compte s'affiche, comme s'il avait été sélectionné avec la barre d'information ou le panneau de navigation; il affiche alors la page qui contient la ligne d'opération affichant ce solde.
 
-Un solde partiel, qui correspond à un groupe de comptes, s'affiche en \textcolor{black}{noir}. S'il est négatif, il peut s'afficher en \textcolor{red}{rouge foncé}, mais seulement si cela a été configuré ainsi (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Soldes partiels de la liste des comptes}). Une ligne de solde partiel ne change pas de couleur au passage du pointeur de la souris dessus, car on ne peut pas afficher les opérations d'un groupe de comptes.
+Un solde partiel, qui correspond à un groupe de comptes, s'affiche en \textcolor[RGB]{40,40,255}{bleu foncé} (voir la figure \vref{home_details}). S'il est négatif, il peut s'afficher en \textcolor[RGB]{153,0,0}{rouge foncé}, mais seulement si cela a été configuré ainsi (voir le paragraphe \vref{setup-general-home-partBalance}, \menu{Soldes partiels de la liste des comptes}). Une ligne de solde partiel ne change pas de couleur au passage du pointeur de la souris dessus, car on ne peut pas afficher les opérations d'un groupe de comptes.
 
 % espace pour changement de thème
 \vspacepdf{5mm}
