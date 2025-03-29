@@ -317,7 +317,25 @@ Comme dans de nombreuses applications graphiques, la plupart des fonctionnalité
 \subsection{Menu \menu{Fichier}\label{home-menus-file}}
 
 Ce menu comprend les fonctions suivantes:
+
+\begin{wrapfigure}{l}{0.33\textwidth}%50mm}
+%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+\centering							% centering the floating figure in the "wrap"
+\includegraphics[width=0.28\textwidth]{image/screenshot/menubar_file}
+\vspace{-5pt}						% space between the floating and the caption below the floating
+\captionsetup{%						% for a change of options of the caption package
+	format=plain,					% to avoid error message with labelsep option below, default=hang
+	name=Fig.,						% rename label caption, default="Figure" (or "Table")
+	justification=centering,		% centring of text and caption label 
+	labelsep=newline				% define the separator between the label and the caption text
+}
+\caption{Menu fichier}		% \caption is mandatory to reference a figure in lof
+%\vspace{-40pt}						% space below the caption
+\label{menubar_file}
+\end{wrapfigure}
+
 %TODO following
+
 \begin{itemize}
 	\item \menu{Nouveau fichier de comptes}: crée un nouveau fichier de comptes; le fichier courant est donc fermé et un nouveau fichier vide est créé avec un compte vide (raccourci-clavier \key{Ctrl}\key{N}), voir la section \vref{start-newfile}; à ne pas confondre avec la création d'un nouveau compte;
 	\item \menu{Ouvrir}: ouvre un fichier de comptes (raccourci-clavier \key{Ctrl}\key{O});
