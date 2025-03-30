@@ -318,28 +318,29 @@ Comme dans de nombreuses applications graphiques, la plupart des fonctionnalité
 
 Ce menu comprend les fonctions suivantes:
 
-\begin{wrapfigure}{l}{0.33\textwidth}%50mm}
-%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
-\centering							% centering the floating figure in the "wrap"
-\includegraphics[width=0.28\textwidth]{image/screenshot/menubar_file}
-\vspace{-5pt}						% space between the floating and the caption below the floating
-\captionsetup{%						% for a change of options of the caption package
-	format=plain,					% to avoid error message with labelsep option below, default=hang
-	name=Fig.,						% rename label caption, default="Figure" (or "Table")
-	justification=centering,		% centring of text and caption label 
-	labelsep=newline				% define the separator between the label and the caption text
-}
-\caption{Menu \menu{Fichier}}		% \caption is mandatory to reference a figure in lof
-%\vspace{-40pt}						% space below the caption
-\label{menubar_file}
-\end{wrapfigure}
-
+\begin{minipage}{.3\linewidth}
+	\vspace{10pt}				% space above the floating (minus intextsep=separation between float and text in text)
+	\centering							% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/menubar_file}
+	\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%					% define "figure" or "table" type, mandatory
+		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Menu \menu{Fichier}}		% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}						% space below the caption
+	\label{menubar_file}
+\end{minipage}
+\begin{minipage}{.66\linewidth}
+	\vspace{3mm}
+	\begin{itemize}
+		\item \menu{Nouveau fichier de comptes}: crée un nouveau fichier Grisbi d'\gls{extension} \file{.gsb}; le fichier courant est donc fermé et un nouveau fichier vide est créé avec un compte vide (raccourci-clavier \key{Ctrl}\key{N}), voir la section \vref{start-newfile}; à ne pas confondre avec la création d'un nouveau compte;	 
+		\item \menu{Ouvrir}: ouvre votre gestionnaire de fichiers, permettant de rechercher, sélectionner et ouvrir un fichier de comptes d'\gls{extension} \file{.gsb} (raccourci-clavier \key{Ctrl}\key{O});
+		\item \menu{Derniers fichiers}: affiche la liste des n derniers fichiers ouverts avec Grisbi (seulement s'il y en a eu plusieurs); ce nombre est configurable dans le menu \menu{Edition - Préférences}, voir la section \vref{setup-general-files-manage}, \menu{Gestion des fichiers de compte};
+	\end{itemize}
+\end{minipage}
 %TODO following
-
-\begin{itemize}
-	\item \menu{Nouveau fichier de comptes}: crée un nouveau fichier de comptes; le fichier courant est donc fermé et un nouveau fichier vide est créé avec un compte vide (raccourci-clavier \key{Ctrl}\key{N}), voir la section \vref{start-newfile}; à ne pas confondre avec la création d'un nouveau compte;
-	\item \menu{Ouvrir}: ouvre un fichier de comptes (raccourci-clavier \key{Ctrl}\key{O});
-	\item \menu{Derniers fichiers}: affiche la liste des n derniers fichiers ouverts avec Grisbi (seulement s'il y en a eu plusieurs); ce nombre est configurable dans le menu \menu{Edition - Préférences}, voir la section \vref{setup-general-files-manage}, \menu{Gestion des fichiers de compte};
+\begin{itemize}[resume]
 	\item \menu{Enregistrer} enregistre le fichier de comptes en cours (raccourci-clavier \key{Ctrl}\key{S});
 	\item \menu{Enregistrer sous}: ouvre un gestionnaire de fichiers pour enregistrer le fichier de comptes en cours avec le nom et à l'emplacement de 	votre choix; Grisbi vous propose par défaut le répertoire courant, le nom du fichier de comptes en cours, avec l'extension \file{.gsb};
 	\item \menu{Importer un fichier}: démarre l'assistant d'importation de fichiers d'un autre logiciel; voir la section \vref{move-import-importinit};
@@ -353,6 +354,7 @@ Ce menu comprend les fonctions suivantes:
 	\item \menu{Fermer}: ferme le fichier de comptes en cours; Grisbi vous propose de l'enregistrer si ce n'est déjà fait (raccourci-clavier \key{Ctrl}\key{W});
 	\item \menu{Quitter}: ferme Grisbi; Grisbi vous propose auparavant d'enregistrer le fichier de comptes, si ce n'est pas déjà fait (raccourci-clavier \key{Ctrl}\key{Q}).
 \end{itemize}
+%\end{minipage}
 
 
 \subsection{Menu \menu{Édition}\label{home-menus-edit}}
