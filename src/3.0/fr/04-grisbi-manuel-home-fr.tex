@@ -318,19 +318,22 @@ Comme dans de nombreuses applications graphiques, la plupart des fonctionnalité
 
 Ce menu comprend les fonctions suivantes:
 
+\vspace{3mm}
+\begin{itemize}[rightmargin=.6cm]
+	\item \menu{Nouvelle fenêtre}: non fonctionnel (pour l'instant, actif peut-être plus tard?);	%TODO: to update
+\end{itemize}
+
 \noindent
 \begin{minipage}{.7\linewidth}
-	\vspace{3mm}
 	\begin{itemize}[rightmargin=.6cm]
-		\item \menu{Nouvelle fenêtre}: non fonctionnel (pour l'instant?);	%TODO: to update
 		\item \menu{Nouveau fichier de comptes}: crée un nouveau fichier Grisbi d'\gls{extension} \file{.gsb}; le fichier courant est donc fermé et un nouveau fichier vide est créé avec un compte vide (raccourci-clavier \key{Ctrl}\key{N}), voir la section \vref{start-newfile}; à ne pas confondre avec la création d'un nouveau compte;	 
 		\item \menu{Ouvrir}: ouvre votre gestionnaire de fichiers, permettant de rechercher, sélectionner et ouvrir un fichier de comptes d'\gls{extension} \file{.gsb} (raccourci-clavier \key{Ctrl}\key{O});
 		\item \menu{Derniers fichiers}: affiche la liste des n derniers fichiers ouverts avec Grisbi (seulement s'il y en a eu plusieurs); ce nombre est configurable dans le menu \menu{Edition - Préférences}, voir la section \vref{setup-general-files-manage}, \menu{Gestion des fichiers de compte};
 	\end{itemize}
 \end{minipage}
-\hspace{10pt}
+\hspace{10pt}	
 \begin{minipage}{.3\linewidth}
-	\vspace{-15pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\vspace{-10pt}					% space above the floating (minus intextsep=separation between float and text in text)
 	\centering						% centering the floating figure in the "wrap"
 	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_file}
 	\vspace{-10pt}					% space between the floating and the caption below the floating
@@ -343,46 +346,65 @@ Ce menu comprend les fonctions suivantes:
 	\label{home_menubar_file}
 \end{minipage}
 
-%TODO following
-\begin{itemize}[resume]
-	\item \menu{Enregistrer} enregistre le fichier de comptes en cours (raccourci-clavier \key{Ctrl}\key{S});
-	\item \menu{Enregistrer sous}: ouvre un gestionnaire de fichiers pour enregistrer le fichier de comptes en cours avec le nom et à l'emplacement de 	votre choix; Grisbi vous propose par défaut le répertoire courant, le nom du fichier de comptes en cours, avec l'extension \file{.gsb};
-	\item \menu{Importer un fichier}: démarre l'assistant d'importation de fichiers d'un autre logiciel; voir la section \vref{move-import-importinit};
-	\item \menu{Exporter vers un fichier QIF/CSV}: démarre l'assistant d'exportation de fichiers de compte; voir la section \vref{move-export};	
+\begin{itemize}
+	\item \menu{Enregistrer}: enregistre le fichier de comptes en cours (raccourci-clavier \key{Ctrl}\key{S});
+	\item \menu{Enregistrer sous}: ouvre un gestionnaire de fichiers pour enregistrer le fichier de comptes en cours avec le nom et à l'emplacement de votre choix; Grisbi vous propose par défaut le répertoire courant, le nom du fichier de comptes en cours, avec l'\gls{extension} \file{.gsb};
+	\item \menu{Importer un fichier}: démarre l'assistant d'importation de fichiers d'un autre logiciel (raccourci-clavier \key{Ctrl}\key{I}); voir la section \vref{move-import-importinit};
+	\item \menu{Exporter vers un fichier QIF/CSV}: démarre l'assistant d'exportation de fichiers de compte (raccourci-clavier \key{Ctrl}\key{E}); voir la section \vref{move-export};	
 	\item \menu{Créer une archive}: démarre l'assistant de création d'archive; voir la section \vref{datamanagement-history-new};	
 	\item \menu{Exporter une archive vers un fichier GSB/QIF/CSV}: démarre l'assistant d'exportation d'archive; voir la section \vref{datamanagement-history-export};
-	\item \menu{Déboguer le fichier de compte}: démarre l'assistant de 	débogage de ce fichier, qui va vous aider à chercher des incohérences dans votre fichier de comptes; voir la section \vref{maintenance-file-debug};
-	\item \menu{Rendre anonyme le fichier de comptes}: démarre l'assistant qui produit une copie anonymée de votre fichier de comptes; ce fichier pourra être joint à un rapport de bogue; voir la section \vref{maintenance-file-anonymous};	
-	\item \menu{Rendre anonyme le fichier QIF}: démarre l'assistant qui produit une copie anonymée de ce fichier; ce fichier pourra être joint à un rapport de bogue; voir la section \vref{maintenance-QIF-anonymous};	
+	\item \menu{Déboguer le fichier de comptes}: démarre l'assistant de débogage de ce fichier, qui va vous aider à chercher des incohérences dans votre fichier de comptes; voir la section \vref{maintenance-file-debug};
+	\item \menu{Rendre anonyme le fichier de comptes}: démarre l'assistant qui produit une copie anonymée (de manière irréversible) de votre fichier de comptes; ce fichier pourra être joint à un rapport de bogue; voir la section \vref{maintenance-file-anonymous};	
+	\item \menu{Rendre anonyme le fichier QIF}: démarre l'assistant qui produit une copie anonymée (de manière irréversible) de ce fichier; ce fichier pourra être joint à un rapport de bogue; voir la section \vref{maintenance-QIF-anonymous};	
 	\item \menu{Mode de débogage}: met Grisbi en mode de débogage, qui crée un fichier-journal des évènements; voir la section \vref{maintenance-debug-mode}; 	
 	\item \menu{Fermer}: ferme le fichier de comptes en cours; Grisbi vous propose de l'enregistrer si ce n'est déjà fait (raccourci-clavier \key{Ctrl}\key{W});
 	\item \menu{Quitter}: ferme Grisbi; Grisbi vous propose auparavant d'enregistrer le fichier de comptes, si ce n'est pas déjà fait (raccourci-clavier \key{Ctrl}\key{Q}).
 \end{itemize}
-%\end{minipage}
-
 
 \subsection{Menu \menu{Édition}\label{home-menus-edit}}
 
 Ce menu comprend les fonctions suivantes:
 
-\begin{itemize}
-	\item \menu{Editer l'opération}: voir la section \vref{transactions-modify}, \menu{Modification d'une opération};
-	\item \menu{Nouvelle opération}: voir la section \vref{transactions-new}, \menu{Saisie d'une nouvelle opération};
-	\item \menu{Supprimer une opération}: voir la section \vref{transactions-delete}, \menu{Suppression d'une opération};
-	\item \menu{Utiliser l'opération sélectionnée comme modèle}: voir la section \vref{transactions-model}, \menu{Opération sélectionnée comme modèle};
-	\item \menu{Cloner l'opération}: voir la section \vref{transactions-duplicate}, \menu{Clonage d'une opération};
-	\item \menu{Convertir en opération planifiée}: voir la section \vref{transactions-schedule}, \menu{Conversion d'une opération en opération planifiée};
-	\item \menu{Déplacer l'opération vers un autre compte}: voir la section \vref{transactions-move}, \menu{Déplacement d'une opération vers un autre compte};
-	\item \menu{Nouveau compte}: voir la section \vref{accounts-new}, \menu{Création d'un nouveau compte};
-	\item \menu{Supprimer le compte courant}: voir la section \vref{accounts-delete}, \menu{Suppression d'un compte};
-	\item \menu{Préférences}: permet de configurer Grisbi; voir le chapitre \vref{setup}, \menu{Configuration de Grisbi}.
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menu{Éditer l'opération}: permet la rectification d'une opération existante, voir la section \vref{transactions-modify}, \menu{Modification d'une opération};
+		\item \menu{Nouvelle opération}: permet la création d'une nouvelle opération dans un compte (raccourci-clavier \key{Ctrl}\key{T}), voir la section \vref{transactions-new}, \menu{Saisie d'une nouvelle opération};
+		\item \menu{Supprimer une opération}: supprime une opération existante, voir la section \vref{transactions-delete}, \menu{Suppression d'une opération};
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	\vspace{-5pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_edit}
+	\vspace{-15pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%				% define "figure" or "table" type, mandatory
+		name=Fig.,%					% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}			% define the separator between the label and the caption text
+	\caption{Menu \menu{Éditer}}	% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_edit}
+\end{minipage}
+
+\begin{itemize}	
+\item \menu{Utiliser l'opération sélectionnée comme modèle}: voir la section \vref{transactions-model}, \menu{Opération sélectionnée comme modèle};
+\item \menu{Cloner l'opération}: permet de dupliquer une opération existante, voir la section \vref{transactions-duplicate}, \menu{Clonage d'une opération};
+\item \menu{Convertir en opération planifiée}: voir la section \vref{transactions-schedule}, \menu{Conversion d'une opération en opération planifiée};
+\item \menu{Déplacer l'opération vers un autre compte}: voir la section \vref{transactions-move}, \menu{Déplacement d'une opération vers un autre compte};
+\item \menu{Rechercher}: affiche la fenêtre de	création d'un état de recherche, voir le chapitre \vref{reportscreation}, \menu{Création d'un état};
+\item \menu{Nouveau compte}: démarre l'assistant de	création d'un nouveau compte dans votre fichier Grisbi (raccourci-clavier \key{Maj}\key{Ctrl}\key{N}), voir la section \vref{accounts-new}, \menu{Création d'un nouveau compte};
+\item \menu{Supprimer le compte courant}: efface le compte sélectionné de votre fichier Grisbi, voir la section \vref{accounts-delete}, \menu{Suppression d'un compte};
+\item \menu{Préférences}: permet de configurer Grisbi (raccourci-clavier \key{Maj}\key{Ctrl}\key{P}); voir le chapitre \vref{setup}, \menu{Configuration de Grisbi}.
 \end{itemize}
 
 
 \subsection{Menu \menu{Affichage}\label{home-menus-display}}
 
 Ce menu comprend les fonctions suivantes; 
-
+%TODO following
 \begin{itemize}
 	 \item \menu{Montrer le formulaire de saisie d'opérations}; 
 	 \item \menu{Montrer les opérations rapprochées} (raccourci-clavier \key{Alt}\key{R});
