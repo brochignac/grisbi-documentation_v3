@@ -320,7 +320,7 @@ Ce menu comprend les fonctions suivantes:
 
 \vspace{3mm}
 \begin{itemize}[rightmargin=.6cm]
-	\item \menu{Nouvelle fenêtre}: non fonctionnel (pour l'instant, actif peut-être plus tard?);	%TODO: to update
+	\item \menu{Nouvelle fenêtre}: non fonctionnel (dans le futur peut-être?);	%TODO: to update
 \end{itemize}
 
 \noindent
@@ -403,18 +403,39 @@ Ce menu comprend les fonctions suivantes:
 
 \subsection{Menu \menu{Affichage}\label{home-menus-display}}
 
-Ce menu comprend les fonctions suivantes; 
-%TODO following
+Toutes les fonctions de ce menu ne seront accessibles qu'après avoir sélectionner un compte. Il comprend les fonctions suivantes;
+
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menu{Montrer le formulaire de saisie d'opérations}: permet de développer le formulaire de saisie des opérations du compte sélectionné;
+		\item \menu{Montrer les opérations rapprochées}: permet l'affichage des opérations rapprochées du compte sélectionné (raccourci-clavier \key{Alt}\key{R});
+		\item \menu{Montrer les lignes d'archives}: affiche les lignes d'archives du compte sélectionné (raccourci-clavier \key{Altl}\key{L});
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	%\vspace{-10pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_view}
+	\vspace{-20pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%				% define "figure" or "table" type, mandatory
+		name=Fig.,%					% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}			% define the separator between the label and the caption text
+	\caption{Menu \menu{Affichage}}	% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_view}
+\end{minipage} 
 \begin{itemize}
-	 \item \menu{Montrer le formulaire de saisie d'opérations}; 
-	 \item \menu{Montrer les opérations rapprochées} (raccourci-clavier \key{Alt}\key{R});
-	 \item \menu{Montrer les lignes d'archives} (raccourci-clavier \key{Altl}\key{L});
-	 \item \menu{Montrer les \indexword{comptes clos}}\index{compte!clos};
-	 \item \menu{Montrer une ligne par opération};
-	 \item \menu{Montrer deux lignes par opération};
-	 \item \menu{Montrer trois lignes par opération};
-	 \item \menu{Montrer quatre lignes par opération};
-	 \item \menu{Réinitialiser la largeur des colonnes}; permet de remettre les colonnes des listes d'opérations à leur largeur d'origine.
+	\item \menu{Montrer les \indexword{comptes clos}}\index{compte!clos}: affiche le(s) compte(s) clos et non supprimé(s), voir la section \vref{accounts-properties}, \menu{Propriétés d'un compte};
+	\item[] Les quatres fonctions suivantes permettent de configurer l'affichage des opérations du compte sélectionné:
+	\item \menu{Montrer une ligne par opération};
+	\item \menu{Montrer deux lignes par opération};
+	\item \menu{Montrer trois lignes par opération};
+	\item \menu{Montrer quatre lignes par opération};
+	\item \menu{Réinitialiser la largeur des colonnes}: permet de remettre les colonnes des listes d'opérations du compte sélectionné ou de l'échéancier à leur largeur d'origine.
 \end{itemize}
 
 
@@ -422,17 +443,37 @@ Ce menu comprend les fonctions suivantes;
 
 La plupart des choix de ce menu donnent accès à des sites Web. Pour que ces accès fonctionnent, il faut avoir indiqué à Grisbi le logiciel de navigation (ou navigateur) que vous souhaitez utiliser, dans le menu \menu{Édition - Préférences} (voir la section \vref{setup-general-programs}, \menu{Programmes}). Le menu \menu{Aide} comprend les choix suivants;
 
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menu{Manuel}: ouvre votre navigateur à la page \frquote{Manuel de l'Utilisateur de Grisbi} (raccourci-clavier \key{F1});
+		\item \menu{Démarrage rapide}: ouvre votre navigateur à la page \frquote{Démarrage Rapide de Grisbi};
+		\item \menu{À propos}: affiche la fenêtre d'information sur l'application; vous y trouverez des détails sur la version, le lien vers le site de Grisbi, les remerciements (contributeurs au projet) et la licence d'utilisation;
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	%\vspace{-15pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_help}
+	\vspace{-15pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%				% define "figure" or "table" type, mandatory
+		name=Fig.,%					% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}			% define the separator between the label and the caption text
+	\caption{Menu \menu{Aide}}	% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_help}
+\end{minipage} 
+
 \begin{itemize}
-	\item \menu{Manuel}; ouvre votre navigateur à la page \frquote{Manuel de l'Utilisateur de Grisbi} (raccourci-clavier \key{Ctrl}\key{H});
-	\item \menu{Démarrage rapide}; ouvre votre navigateur à la page \frquote{Démarrage Rapide de Grisbi};
-	\item \menu{Traduction}; ouvre votre navigateur à la page \frquote{Traduire Grisbi}, pour vous inviter à nous aider à l'élargissement de 	l'internationalisation de Grisbi;
-	\item \menu{À propos de Grisbi}; affiche la boîte d'information sur l'application; vous y trouverez des détails sur la version, le lien vers le site de Grisbi, les remerciements (contributeurs au projet) et la licence d'utilisation;
 	\item \menu{Site Web de Grisbi}; ouvre votre navigateur à la page du site de \lang{Grisbi}\footnote{\urlGrisbi{}};
 	\item \menu{Signaler une anomalie}; ouvre votre navigateur à la page du \lang{traqueur de bogues de Grisbi}\footnote{\urlBugTracker{}} pour vous permettre de signaler un bogue que vous auriez découvert. Vous pouvez également suivre sur cette page l'évolution des corrections apportées aux bogues signalés;
-	\item \menu{Astuce du jour}; ouvre une boîte de dialogue qui affiche une astuce d'utilisation, différente à chaque démarrage de Grisbi; vous pouvez y 	afficher successivement toutes les astuces, et choisir ou non l'affichage de 	l'astuce du jour au démarrage de Grisbi. Pour supprimer ou réactiver l'astuce du 	jour, voir le paragraphe \vref{setup-display-messages-trick}, \menu{Astuce du jour}.
+	\item \menu{Astuce du jour}; ouvre une boîte de dialogue qui affiche une astuce d'utilisation, différente à chaque démarrage de Grisbi; vous pouvez y afficher successivement toutes les astuces, et choisir ou non l'affichage de l'astuce du jour au démarrage de Grisbi. Pour activer ou supprimer l'astuce du jour, vous pouvez cocher/décocher la case \frquote{\menu{Afficher l'astuce lors du prochain démarrage}}, voir le paragraphe \vref{setup-display-messages-trick}, \menu{Astuce du jour}.
 \end{itemize}
 
-
+%TODO following
 \section{Raccourcis-clavier\label{home-shortcuts}}
 
 
