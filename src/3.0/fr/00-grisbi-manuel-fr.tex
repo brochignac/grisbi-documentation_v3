@@ -202,15 +202,27 @@
 
 
 % Virtualization of fonts
-\newcommand{\lang}[1]{\emph{#1}}				% new command -> \lang = emph (e.g. italic)
-\newcommand{\familyname}[1]{\textsc{#1}}		% new command -> \familynamelang = small caps
-\newcommand{\menu}[1]{\textsl{#1}}				% new command -> \menu = slanted is oblique version of the roman font (e.g. italic)
-\newcommand{\strong}[1]{\textsc{\textbf{#1}}}	% new command -> \strong = small caps + bold
-\newcommand{\key}[1]{\texttt{<#1>}}				% new command -> \key = teletype font
-\newcommand{\cmd}[1]{\texttt{#1}}				% new command -> \cmd = teletype font
-\newcommand{\file}[1]{\textbf{#1}}				% new command -> \file = bold
-\newcommand{\xml}[1]{\texttt{#1}}				% new command -> \xml = teletype font
-\newcommand{\indexword}[1]{\textsf{#1}}			% new command -> \indexword = sans serif, for easy search of each indexed word in the page
+\newcommand{\lang}[1]{\emph{#1}}				% \lang = emph (e.g. italic)
+\newcommand{\familyname}[1]{\textsc{#1}}		% \familynamelang = small caps
+\newcommand{\menu}[1]{\textsl{#1}}				% \menu = slanted is oblique version of the roman font (e.g. italic)
+\newcommand{\strong}[1]{\textsc{\textbf{#1}}}	% \strong = small caps + bold
+\newcommand{\key}[1]{\texttt{<#1>}}				% \key = teletype font
+\newcommand{\cmd}[1]{\texttt{#1}}				% \cmd = teletype font
+\newcommand{\file}[1]{\textbf{#1}}				% \file = bold
+\newcommand{\xml}[1]{\texttt{#1}}				% \xml = teletype font
+\newcommand{\indexword}[1]{\textsf{#1}}			% \indexword = sans serif, for easy search of each indexed word in the page
+\newcommand{\PgUpSymbol}%						% define pageup symbol with vertical up arrow and three horizontal rules
+	{$\uparrow$%								% draw math up-arrow symbol
+	\kern-0.48em\rule[.25em]{.47em}{.7pt}%		% draw top rule
+	\kern-0.48em\rule[.05em]{.47em}{.7pt}%		% draw middle rule
+	\kern-0.48em\rule[-.18em]{.47em}{.7pt}%		% draw bottom rule
+}
+\newcommand{\PgDownSymbol}%						% define pagedown symbol with vertical down arrow and three horizontal rules
+	{$\downarrow$%								% draw math down-arrow symbol
+	\kern-0.48em\rule[.25em]{.47em}{.7pt}%		% draw top rule
+	\kern-0.48em\rule[.05em]{.47em}{.7pt}%		% draw middle rule
+	\kern-0.48em\rule[-.18em]{.47em}{.7pt}%		% draw bottom rule
+}
 
 %\renewcommand*{\footnote}{\centering}
 
