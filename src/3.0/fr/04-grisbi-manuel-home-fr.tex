@@ -430,11 +430,16 @@ Toutes les fonctions de ce menu ne seront accessibles qu'après avoir sélection
 \end{minipage} 
 \begin{itemize}
 	\item \menu{Montrer les \indexword{comptes clos}}\index{compte!clos}: affiche le(s) compte(s) clos et non supprimé(s), voir la section \vref{accounts-properties}, \menu{Propriétés d'un compte};
-	\item[] Les quatres fonctions suivantes permettent de configurer l'affichage des opérations du compte sélectionné:
+\begin{addmargin*}[-10pt]{0cm} 	% modify margin, * : left = right, [] = obligatory argument indentation, {} = optional argument left indentation 
+	Les quatres fonctions suivantes permettent de configurer l'affichage des opérations du compte sélectionné:
+\end{addmargin*}
 	\item \menu{Montrer une ligne par opération};
 	\item \menu{Montrer deux lignes par opération};
 	\item \menu{Montrer trois lignes par opération};
 	\item \menu{Montrer quatre lignes par opération};
+\begin{addmargin*}[-10pt]{0cm} 	% modify margin, * : left = right, [] = obligatory argument indentation, {} = optional argument left indentation 
+	Et enfin la dernière fonction du menu d'affichage:
+\end{addmargin*}	
 	\item \menu{Réinitialiser la largeur des colonnes}: permet de remettre les colonnes des listes d'opérations du compte sélectionné ou de l'échéancier à leur largeur d'origine.
 \end{itemize}
 
@@ -473,43 +478,61 @@ La plupart des choix de ce menu donnent accès à des sites Web. Pour que ces ac
 	\item \menu{Astuce du jour}; ouvre une boîte de dialogue qui affiche une astuce d'utilisation, différente à chaque démarrage de Grisbi; vous pouvez y afficher successivement toutes les astuces, et choisir ou non l'affichage de l'astuce du jour au démarrage de Grisbi. Pour activer ou supprimer l'astuce du jour, vous pouvez cocher/décocher la case \frquote{\menu{Afficher l'astuce lors du prochain démarrage}}, voir le paragraphe \vref{setup-display-messages-trick}, \menu{Astuce du jour}.
 \end{itemize}
 
-%TODO following
+
 \section{Raccourcis-clavier\label{home-shortcuts}}
 
 
 Les raccourcis-clavier facilitent la saisie des données et la navigation dans les fenêtres de Grisbi, en évitant le recours systématique au déplacement et au clic de la souris. En utilisant ceux correspondant aux manipulations les plus courantes pour vous, vous améliorez votre \indexword{ergonomie}\index{ergonomie} en limitant les mouvements importants de vos bras.
  
-Grisbi dispose d'un certain nombre de raccourcis-clavier, présentés ici selon différents thèmes (voir aussi la section \vref{introduction-manual-conventions}, \menu{Conventions typographiques du présent manuel}).
+Grisbi dispose d'un certain nombre de raccourcis-clavier, listés dans les préférences de Grisbi (voir \vref{{setup-display-toolbars}}), présentés ici selon différents thèmes, (voir aussi la section \vref{introduction-manual-conventions}, \menu{Conventions typographiques du présent manuel}).
 
 
 \subsection{Application et fichiers}
 
 \begin{itemize}
-	\item Nouveau fichier de comptes; \key{Ctrl}\key{N}
-	\item Ouvrir un fichier de comptes: \key{Ctrl}\key{O}
-	\item Enregistrer le fichier de comptes: \key{Ctrl}\key{S}
-	\item Fermer le fichier de comptes: \key{Ctrl}\key{W}
-	\item Fermer Grisbi: \key{Ctrl}\key{Q}
+	\item Nouveau fichier de comptes; \key{Ctrl}\key{N};
+	\item Ouvrir un fichier de comptes: \key{Ctrl}\key{O};
+	\item Enregistrer le fichier de comptes: \key{Ctrl}\key{S};
+	\item Importer un fichier: \key{Ctrl}\key{I};
+	\item Exporter vers un fichier \gls{QIF}/\gls{CSV}: \key{Ctrl}\key{E};
+	\item Fermer le fichier de comptes: \key{Ctrl}\key{W};
+	\item Fermer Grisbi: \key{Ctrl}\key{Q}.
 \end{itemize}
 
 
 \subsection{Panneau de navigation}
 
 \begin{itemize}
-	\item Sélectionner un onglet ou un compte: \key{Flèche Haut}, \key{Flèche Bas}, \key{Page Haut} ou \key{Page Bas}
+	\item Sélectionner un onglet ou un compte: \key{Flèche Haut}, \key{Flèche Bas};
+	\item Sur l'onglet Comptes:
+		\begin{itemize}
+			\item Ouvrir la liste des comptes: \key{Flèche Droit};
+			\item Fermer la liste des comptes:  \key{Flèche Gauche};
+		\end{itemize}
+	\item Sur un compte ou sur l'onglet Échéancier:
+		\begin{itemize}
+			\item Bascule vers la liste des opérations ou des opérations planifiées: \key{Flèche Droit};
+			\item Bascule vers le panneau de navigation: \key{Flèche Gauche};
+		\end{itemize}
+	\item Sur un compte/l'onglet Échéancier, ouvrir/fermer la liste des comptes:
+	\item Sélectionner le premier/dernier onglet (Comptes/États): \key{Page Préc} ou \key{Page Suiv}.
 \end{itemize}
 
 
 \subsection{Liste des opérations et des opérations planifiées}
 
 \begin{itemize}
-	\item Sélectionner une opération: \key{Entrée}
 	\item Déplacer la sélection: \key{Flèche Haut} ou \key{Flèche Bas}
-	\item Nouvelle opération: \key{Entrée} sur ligne vide, ou \key{Ctrl}\key{T}
+	\item Sélectionner une opération: \key{Entrée}
+	\item Nouvelle opération:
+		\begin{itemize}
+			\item Sur une ligne vide: \key{Entrée};
+			\item Sur une opération existante: \key{Ctrl}\key{T};
+		\end{itemize}
 	\item Modifier une opération: \key{Entrée}
 	\item Supprimer une opération: \key{Suppr};
 	\item Pointer ou dépointer une opération: \key{Ctrl}\key{P}
-	\item Rapprocher ou dérapprocher une opération: \key{Ctrl}\key{R}
+	\item Rapprocher ou dé-rapprocher une opération: \key{Ctrl}\key{R}
 	\item Montrer ou masquer les opérations rapprochées: \key{Alt}\key{R}
 	\item Montrer ou masquer les lignes d'archives: \key{Altl}\key{L}
 \end{itemize}
@@ -518,25 +541,27 @@ Grisbi dispose d'un certain nombre de raccourcis-clavier, présentés ici selon 
 \subsection{Formulaire de saisie }
 
 \begin{itemize}
-	\item La touche \key{Entrée} est configurable: elle permet soit de se déplacer dans le formulaire de saisie, soit de valider l'entrée
-	\item Se déplacer au champ suivant: \key{Tabulation} (selon votre choix de configuration)
-	\item Annuler la saisie en cours: \key{Échap}
-	\item Accepter l'auto-complètement: \key{Tabulation} ou \key{Entrée} (selon votre choix de configuration)
-	\item Symbole de l'euro: \key{AltGr}\key{e}
+	\item La touche \key{Entrée} est configurable (voir les préférences \vref{setup-form-behaviour-enter}): elle permet soit de se déplacer dans le formulaire de saisie, soit de valider l'entrée;
+	\item Se déplacer au champ suivant: \key{Tabulation} (selon votre choix de configuration);
+	\item Annuler la saisie en cours: \key{Échap};
+	\item Accepter l'auto-complètement: \key{Tabulation} ou \key{Entrée} (selon votre choix de configuration);
+	\item Symbole de l'euro: \key{Alt Gr}\key{E};
 \end{itemize}
 
 
 \subsection{Listes déroulantes}
 
 \begin{itemize}
-	 \item Ouvrir une liste: \key{Page Bas} ou \key{Flèche bas}
-	 \item Se déplacer dans la liste: \key{Flèche haut}, \key{Flèche bas}, \key{Page Haut} ou \key{Page Bas}
-	 \item Valider un choix à l'intérieur d'une liste: \key{Entrée}
-	 \item Devises, exercices et modes de règlement:
+	\item Ouvrir une liste: \key{Page Préc}, \key{Page Suiv} ou \key{Flèche bas};
+	\item Se placer en haut de la liste: \key{Page Préc};
+	\item Se placer en bas de la liste: \key{Page Suiv};
+	\item Se déplacer dans la liste: \key{Flèche haut} ou \key{Flèche bas};
+	\item Valider un choix à l'intérieur d'une liste: \key{Entrée} ou \key{Tabulation} en fonction de votre configuration (ici \vref{setup-form-behaviour-enter});
+	\item Devises, exercices et modes de règlement:
 		\begin{itemize}
-			\item ouvrir la liste: \key{Espace}; 
-			\item se déplacer dans la liste: \key{Flèche Haut} ou \key{Flèche Bas};
-			\item valider l'item de la liste: \key{Espace}.
+			\item Ouvrir la liste: \key{Espace}; 
+			\item Se déplacer dans la liste: \key{Flèche Haut} ou \key{Flèche Bas};
+			\item Valider l'item de la liste: \key{Espace}.
 		\end{itemize}
 \end{itemize}
 
@@ -544,28 +569,43 @@ Grisbi dispose d'un certain nombre de raccourcis-clavier, présentés ici selon 
 \subsection{Dates saisies au calendrier}
 
 \begin{itemize}
-	\item Ouvre un calendrier (sur le champ de date): \key{Ctrl}\key{Entrée}
-	\item Ferme le calendrier sans modifier la date: \key{Échap}
-	\item Valide la date sélectionnée: \key{Entrée}
-	\item Jour suivant ou précédent: \key{+} ou \key{-}, \key{Flèche Droite} ou \key{Flèche Gauche}
-	\item Semaine précédente ou suivante: \key{Flèche Haut} ou \key{Flèche Bas}
-	\item Mois précédent ou suivant: \key{Page Haut} ou \key{Page Bas}
-	\item Premier jour ou dernier jour du mois: \key{Début} ou \key{Fin}
+	\item Ouvre un calendrier mensuel (sur le champ de date): \key{Ctrl}\key{Entrée};
+	\item Ferme le calendrier sans modifier la date: \key{Échap};
+	\item Valide la date sélectionnée: \key{Entrée};
+	\item Jour suivant ou précédent: \key{+} ou \key{-}, \key{Flèche Droite} ou \key{Flèche Gauche};
+	\item Semaine précédente ou suivante: \key{Flèche Haut} ou \key{Flèche Bas};
+	\item Mois précédent ou suivant: \key{Page Préc} ou \key{Page Suiv};
+	\item Premier jour ou dernier jour du mois: \key{Début/Orig/{$\nwarrow$}} ou \key{Fin};
 \end{itemize}
 
 
 \subsection{Dates saisies au clavier}
 
 \begin{itemize}
-	\item Jour suivant ou précédent: \key{+} ou \key{-}
-	\item Semaine précédente ou suivante: \key{Majuscule} \key{+} ou \key{Majuscule} \key{-}
-	\item Mois précédent ou suivant: \key{Page Haut} ou \key{Page Bas}
-	\item Année précédente ou suivante: \key{Majuscule} \key{Page Haut} ou \key{Majuscule} \key{Page Bas}
+	\item Jour suivant ou précédent: \key{+} ou \key{-};
+	\item Semaine précédente ou suivante: \key{Ctrl} \key{+} ou \key{Ctrl} \key{-};
+	\item Mois précédent ou suivant: \key{Page Suiv} ou \key{Page Préc};
+	\item Année précédente ou suivante: \key{Ctrl} \key{Page Suiv} ou \key{Ctrl} \key{Page Préc}
 	\item Valide la date sélectionnée \key{Entrée}
 \end{itemize}
 
-
+%TODO following
 \subsection{Tiers, catégories, imputations budgétaires, simulateur de crédits, données historiques et prévisions}
+
+%\newcommand{\PageUpSymbol}{
+%	\textuparrow \hspace{-0.65em} - \hspace{0.2em\vspace{1em}} - \hspace{0.2em} -
+%}
+%\PageUpSymbol  \uparrow
+
+
+\newcommand{\PageUpSymbol}%
+	{$\uparrow$%
+	\kern-0.48em\rule[.25em]{.47em}{.7pt}%
+	\kern-0.48em\rule[.05em]{.47em}{.7pt}%
+	\kern-0.48em\rule[-.18em]{.47em}{.7pt}%
+	}
+
+\PageUpSymbol
 
 \begin{itemize}
 	\item Déplacer la sélection: \key{Flèche Haut}, \key{Flèche Bas}, \key{Page Haut} ou \key{Page Bas}
