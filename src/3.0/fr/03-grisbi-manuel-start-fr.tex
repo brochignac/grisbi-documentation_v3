@@ -40,7 +40,7 @@ Il est conseillé de cocher les options:
 \end{enumerate}
 
 \minisec{\textcolor{red}{\strong{Attention:}}}
-Les développeurs de Grisbi vous recommandent de ne pas utiliser l'option \menu{Chiffrer le fichier Grisbi} pour les raisons suivantes: 
+Les développeurs de Grisbi vous recommandent de ne pas utiliser l'option \menus{Chiffrer le fichier Grisbi} pour les raisons suivantes: 
 	\begin{itemize}
 		\item il n’existe aucune méthode pour récupérer un fichier chiffré dont on a perdu le mot de passe;
 		\item Pour une raison inconnue, l’utilisation de cette option sous Windows peut rendre le fichier de comptes totalement inutilisable.
@@ -52,7 +52,7 @@ Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des 
 	\item Le deuxième assistant \frquote{Bienvenue dans Grisbi !} (ou plus tard \frquote{Aide à la création d'un nouveau fichier de comptes}), qui suit automatiquement le premier, comprend six étapes qui vous aiderons à la création du \indexword{fichier de comptes}\index{fichier de comptes}. 
 	\item Puis vient automatiquement le troisième assistant \frquote{Créer un nouveau compte} qui permet de créer le premier compte et qui est décrit en détail dans la section \ref{start-newfile} ci-dessous.
 \end{enumerate}
-À tout moment vous pouvez sortir de n'importe quel assistant par le bouton \menu{Annuler}.
+À tout moment vous pouvez sortir de n'importe quel assistant par le bouton \menus{Annuler}.
 
 Si vous ne voulez pas utiliser l'assistant premier démarrage, vous pouvez à la
 place utiliser un fichier exemple (voir la section \ref{start-example} ci-dessous).
@@ -74,7 +74,7 @@ Si vous voulez utiliser Grisbi immédiatement sans être obligé de rentrer tout
 La première fois que vous utiliserez Grisbi, vous devrez d'abord créer un \indexword{fichier
 de comptes}\index{fichier de comptes} qui contiendra votre comptabilité. L'\gls{extension} de ce fichier sera \file{.gsb} et son nom \file{nom-de-votre-fichier.gsb}. 
 
-Immédiatement après, il vous faudra créer au minimum un compte (bancaire, de caisse, de passif ou d'actif, décrits au chapitre \vref{accounts} \menu{Gestion des comptes}), et par la suite quelques autres comptes (comptes courants, d'épargne, de crédit, éventuellement un compte d'espèces et quelques comptes de transition) qui contiendront leurs opérations respectives. 
+Immédiatement après, il vous faudra créer au minimum un compte (bancaire, de caisse, de passif ou d'actif, décrits au chapitre \vref{accounts} \menus{Gestion des comptes}), et par la suite quelques autres comptes (comptes courants, d'épargne, de crédit, éventuellement un compte d'espèces et quelques comptes de transition) qui contiendront leurs opérations respectives. 
 
 Pour une gestion familiale, vous n'aurez normalement qu'un seul fichier de comptes, car cela permet tous les échanges entre vos différents comptes. Si vous gérez une association, ou une autre famille sans rapport comptable avec la première, vous créerez un autre fichier de comptes, qui portera un autre nom \file{nom-de-votre-deuxième-fichier.gsb}. Ainsi les \indexword{entités comptables}\index{entité comptable} resteront bien séparées.
 
@@ -83,7 +83,7 @@ et l’ensemble des comptes de votre association l’est dans un autre fichier c
 
 % espace pour changement de thème
 \vspacepdf{5mm}
-%Le déroulement général de la procédure de création d'un fichier de comptes est le suivant: cliquez sur le menu \menu{Fichier > Nouveau fichier de comptes}; l'assistant \frquote{Aide à la création d'un nouveau fichier de comptes}, qui comprend six étapes, s'ouvre. À la sixième étape, l'assistant vous propose:
+%Le déroulement général de la procédure de création d'un fichier de comptes est le suivant: cliquez sur le menu \menus{Fichier > Nouveau fichier de comptes}; l'assistant \frquote{Aide à la création d'un nouveau fichier de comptes}, qui comprend six étapes, s'ouvre. À la sixième étape, l'assistant vous propose:
 
 %\begin{itemize}
 %	\item soit de créer un nouveau compte vide, et il enchaîne sur l'assistant \frquote{Créer un nouveau compte}, qui comprend lui-même quatre étapes, pour créer le premier compte (car il est indispensable de disposer d'au moins un compte);
@@ -92,10 +92,10 @@ et l’ensemble des comptes de votre association l’est dans un autre fichier c
 
 % espace pour changement de thème
 %\vspacepdf{5mm}
-Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouveau fichier de comptes} ou sur le pavé Nouveau\refimage{start_grisbi}, et la procédure se déroulera en six étapes détaillées comme suit:
+Pour créer votre fichier de comptes, cliquez sur le menu \menus{Fichier > Nouveau fichier de comptes} ou sur le pavé Nouveau\refimage{start_grisbi}, et la procédure se déroulera en six étapes détaillées comme suit:
 
 \begin{enumerate}
-	\item Fenêtre d'accueil (étape 1/6): validez par le bouton \menu{Suivant}:
+	\item Fenêtre d'accueil (étape 1/6): validez par le bouton \menus{Suivant}:
 	\item Configuration générale (étape 2/6)\refimage{start_file_create}:
 
 \begin{figure}[htbp]
@@ -109,16 +109,16 @@ Pour créer votre fichier de comptes, cliquez sur le menu \menu{Fichier > Nouvea
 		\begin{enumerate}
 		 	\item choisissez le nom de l'entité comptable dont vous gérez la comptabilité, par exemple \frquote{Ma comptabilité}, qui pourra être choisi comme titre de la page d'accueil de l'application Grisbi,
 			\item saisissez le nom du fichier de comptes avec son arborescence complète; Grisbi vous propose par défaut le même nom que celui de l'entité comptable, mais vous pouvez le modifier,
-			\item cochez la case \menu{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
+			\item cochez la case \menus{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
 			
 			%\vspacepdf{1mm}
-			%\textcolor{red}{\strong{Attention}}: si vous cochez l'option \menu{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inaccessible.
+			%\textcolor{red}{\strong{Attention}}: si vous cochez l'option \menus{Chiffrer le fichier Grisbi}, la perte du mot de passe rendra votre fichier inaccessible.
 			%\vspacepdf{2mm}
 		\end{enumerate}
 
 \minisec{\textcolor{red}{\strong{Attention:}}}
 %\textcolor{red}{\strong{\textsf{Attention:}}}\newline
-Les développeurs de Grisbi vous recommandent de ne pas utiliser l'option \menu{Chiffrer le fichier Grisbi} pour les raisons suivantes: 
+Les développeurs de Grisbi vous recommandent de ne pas utiliser l'option \menus{Chiffrer le fichier Grisbi} pour les raisons suivantes: 
 \begin{itemize}
 	\item il n’existe aucune méthode pour récupérer un fichier chiffré dont on a perdu le mot de passe;
 	\item Pour une raison inconnue, l’utilisation de cette option sous \gls{Windows} peut rendre le fichier de comptes totalement inutilisable.
@@ -137,14 +137,14 @@ Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des 
 			%\end{addmargin}
 			\item choisissez le \indexword{séparateur}\index{séparateur} décimal et celui des milliers dans les listes déroulantes,
 			\item renseignez l'adresse (facultatif),
-			\item validez par le bouton \menu{Suivant};
+			\item validez par le bouton \menus{Suivant};
 		\end{enumerate}
 		
 	\item Sélection de la \indexword{devise}\index{devise} de base (étape 3/6):
 		\begin{enumerate} 
 		 	\item cliquez sur la devise choisie dans la liste,
-			\item cochez la case \menu{Afficher les devises obsolètes} si vous voulez aussi afficher d'anciennes devises,
-			\item validez par le bouton \menu{Suivant};
+			\item cochez la case \menus{Afficher les devises obsolètes} si vous voulez aussi afficher d'anciennes devises,
+			\item validez par le bouton \menus{Suivant};
 		\end{enumerate}
 
 	\item sélection des \indexword{types de catégories}\index{catégories!types} utilisées (étape 4/6)\refimage{start_category_select}:
@@ -160,21 +160,21 @@ Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des 
 		\begin{enumerate} 
 		 	\item cliquez sur la catégorie choisie dans la liste;
 %		 	\begin{itemize}
-%		 		\item\menu{Catégories générales},
-%		 		\item \menu{Liste vide},
-%		 		\item\menu{Comptabilité libérale},
-%		 		\item\menu{Plan comptable associatif simplifié}
-%		 		\item\menu{Plan comptable associatif},
+%		 		\item\menus{Catégories générales},
+%		 		\item \menus{Liste vide},
+%		 		\item\menus{Comptabilité libérale},
+%		 		\item\menus{Plan comptable associatif simplifié}
+%		 		\item\menus{Plan comptable associatif},
 %		 	\end{itemize}
-			\item cochez la case \menu{Afficher l'ensemble des catégories} si vous voulez aussi afficher d'autres catégories libellées en anglais,
-			\item validez par le bouton \menu{Suivant};
+			\item cochez la case \menus{Afficher l'ensemble des catégories} si vous voulez aussi afficher d'autres catégories libellées en anglais,
+			\item validez par le bouton \menus{Suivant};
 		\end{enumerate}		
 
 	\item Définissez les \indexword{banques}\index{banques!définition} détenant vos comptes (étape 5/6):
 		\begin{enumerate} 
-		 	\item cliquez sur \menu{Ajouter} pour définir une banque; renseignez les détails de la banque (nom, code banque, etc.),
-			\item sélectionnez une banque dans la liste et validez par le bouton \menu{Enlever} pour supprimer une banque, puis confirmez dans la fenêtre qui s'ouvre,
-			\item validez par le bouton \menu{Suivant} pour passer à l'étape suivante, \menu{Créer un nouveau compte};
+		 	\item cliquez sur \menus{Ajouter} pour définir une banque; renseignez les détails de la banque (nom, code banque, etc.),
+			\item sélectionnez une banque dans la liste et validez par le bouton \menus{Enlever} pour supprimer une banque, puis confirmez dans la fenêtre qui s'ouvre,
+			\item validez par le bouton \menus{Suivant} pour passer à l'étape suivante, \menus{Créer un nouveau compte};
 		\end{enumerate}		 	
 
 	\item Configuration terminée (étape 6/6)\refimage{start_account_choice}:\par
@@ -191,13 +191,13 @@ Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des 
 \end{figure}
 
 		\begin{itemize}
-			\item[\textopenbullet] \menu{Créer un nouveau compte vide}:\par
-			Si vous cochez cette ligne, puis si vous validez par le bouton \menu{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Créer un nouveau compte} démarre. Reportez-vous à la section \vref{accounts-new}%8.4
-			, \menu{Création d'un nouveau compte}, qui décrit entièrement cette procédure, puis revenez à cette page;
+			\item[\textopenbullet] \menus{Créer un nouveau compte vide}:\par
+			Si vous cochez cette ligne, puis si vous validez par le bouton \menus{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Créer un nouveau compte} démarre. Reportez-vous à la section \vref{accounts-new}%8.4
+			, \menus{Création d'un nouveau compte}, qui décrit entièrement cette procédure, puis revenez à cette page;
 
-			\item[\textopenbullet] \menu{À partir de données provenant d'un fichier bancaire ou d'un autre logiciel}:\par
-			Si vous cochez cette ligne, puis si vous validez par le bouton \menu{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Importation des opérations par Grisbi}, permettant l'importation de données d'un fichier de comptes, démarre. Reportez-vous à la section \vref{move-import-importinit}%6.1.2
-			, \menu{Import de fichiers de compte d'un autre logiciel dans Grisbi}, qui décrit entièrement cette procédure, puis revenez à cette page.
+			\item[\textopenbullet] \menus{À partir de données provenant d'un fichier bancaire ou d'un autre logiciel}:\par
+			Si vous cochez cette ligne, puis si vous validez par le bouton \menus{Fermer}, cette fenêtre se ferme et l'assistant \frquote{Importation des opérations par Grisbi}, permettant l'importation de données d'un fichier de comptes, démarre. Reportez-vous à la section \vref{move-import-importinit}%6.1.2
+			, \menus{Import de fichiers de compte d'un autre logiciel dans Grisbi}, qui décrit entièrement cette procédure, puis revenez à cette page.
 		\end{itemize}
 \end{enumerate}
 
@@ -208,7 +208,7 @@ Néanmoins, si vous l'utilisez, il est recommandé de faire régulièrement des 
 
 %espace pour changement de thème
 \vspacepdf{5mm}
-Si vous voulez créer maintenant d'autres comptes, sélectionnez le menu \menu{Éditer - Nouveau compte} pour créer un autre compte (voir la section \vref{accounts-new}, \menu{Création d'un nouveau compte}).
+Si vous voulez créer maintenant d'autres comptes, sélectionnez le menu \menus{Éditer - Nouveau compte} pour créer un autre compte (voir la section \vref{accounts-new}, \menus{Création d'un nouveau compte}).
 
 %espace pour changement de thème
 \vspacepdf{5mm}
@@ -228,7 +228,7 @@ D'une manière générale, il est déconseillé d'avoir des accents ou des espac
 
 Vos opérations ne sont pas écrites au fur et à mesure de leur saisie comme elles peuvent l'être dans d'autres logiciels; vous devez donc enregistrer votre fichier de comptes avant de quitter. N'ayez crainte, Grisbi vous prévient si vous ne l'avez pas fait. 
 
-Vous pouvez configurer les options d'enregistrement du fichier de comptes dans le menu \menu{Éditer - Préférences}, voir le paragraphe \vref{setup-general-files-manage}, \menu{Gestion des fichiers de comptes}.
+Vous pouvez configurer les options d'enregistrement du fichier de comptes dans le menu \menus{Éditer - Préférences}, voir le paragraphe \vref{setup-general-files-manage}, \menus{Gestion des fichiers de comptes}.
 
 
 \section{Import à partir d'un autre logiciel de comptabilité personnelle}
