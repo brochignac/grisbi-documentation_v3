@@ -81,7 +81,7 @@ base, sans toutefois exclure la sophistication nécessaire à un usage plus avan
 
 \subsection{Développement et versions}
 
-Grisbi étant un logiciel en plein développement, toute remarque (idée, bogue, documentation\dots{}) est la bienvenue. Vous pouvez l'envoyer aux différentes listes indiquées dans la section \vref{introduction-contacts} \menu{Contacts} ou sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}}.
+Grisbi étant un logiciel en plein développement, toute remarque (idée, bogue, documentation\dots{}) est la bienvenue. Vous pouvez l'envoyer aux différentes listes indiquées dans la section \vref{introduction-contacts} \menus{Contacts} ou sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}}.
 
 Vous pouvez, si vous avez le goût de l'aventure, télécharger et compiler la dernière version en cours de développement sur le système de gestion de contenu \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} utilisant \gls{Git}.
 
@@ -133,7 +133,7 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 	\item Le classement alphabétique prend (enfin) en compte les accents
 	\item Mémorise le dernier répertoire de travail et les derniers fichiers ouverts
 	\item Un numéro unique par opération quel que soit le compte
-	\item Les touches \key{+} (\key{-}) dans un champ de date incrémentent (décrémentent) la date
+	\item Les touches \keys{{+}} (\keys{{-}}) dans un champ de date incrémentent (décrémentent) la date
 	\item Affichage possible de nouveaux champs dans le formulaire de saisie des opérations 
 	\item Échéances paramétrables pour un laps de temps défini
 	\item Affichage du solde courant pointé
@@ -163,11 +163,11 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 	\item La largeur des colonnes de l'échéancier est modifiable
 	\item Harmonisation dans les champs de date:
 		\begin{itemize}
-		\item \key{Ctrl}\key{Entrée} dans un champ de date ouvre un calendrier
+		\item \keys{Ctrl+Entrée \return} dans un champ de date ouvre un calendrier
 		\item les touches fléchées sont actives dans un calendrier
-		\item \key{Ctrl}\key{+} (\key{-}) dans un champ de date augmente (diminue) la date d'environ une semaine
-		\item \key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un mois
-		\item \key{Ctrl}\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un an
+		\item \keys{Ctrl+{+}} (\keys{Ctrl+{-}}) dans un champ de date augmente (diminue) la date d'environ une semaine
+		\item \keys{Pg.Préc} (\keys{Pg.Suiv}) augmente (diminue) la date d'environ un mois
+		\item \keys{Ctrl+Pg.Préc} (\keys{Ctrl+Pg.Suiv}) augmente (diminue) la date d'environ un an
 		\end{itemize}	
 \end{itemize}
 
@@ -238,9 +238,9 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
 	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
 	\item Affichage des tiers inutilisés	
-	\item Commande d'affichage plein écran par la touche de fonction \key{F11}
-	\item Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération
-	\item Accès direct au manuel de l'utilisateur par le menu \menu{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}
+	\item Commande d'affichage plein écran par la touche de fonction \keys{F11}
+	\item Raccourci-clavier \keys{Ctrl+T} pour l'appel d'une nouvelle opération
+	\item Accès direct au manuel de l'utilisateur par le menu \menus{Aide} ou le raccourci-clavier \keys{Ctrl+H}
 \end{itemize}
 
 
@@ -290,9 +290,9 @@ Si vous souhaitez participer au développement de Grisbi, il existe une \lang{li
 Par ailleurs, nous avons décidé d'entreprendre l'internationalisation de Grisbi et, si vous souhaitez nous aider, vous pouvez dans un premier temps nous contacter sur la liste de développement.
 
 Pour vous abonner à l'une de ces listes, rendez vous simplement sur la page \urlListDiffGrisbi{} puis cliquez sur la/les liste(s) qui vous intéresse(nt).
-% Ou bien allez sur le site de {Grisbi}\footnote{\urlGrisbi{}}} dans la rubrique \cmd{Contacts}. % <<Contacts>> non présent sur le site
+% Ou bien allez sur le site de {Grisbi}\footnote{\urlGrisbi{}}} dans la rubrique \cmds{Contacts}. % <<Contacts>> non présent sur le site
 
-Vous pouvez également utiliser les forums de discussions (ou newsgroups) avec un logiciel appelé \frquote{lecteur de nouvelles} (comme Thunderbird par exemple) en renseignant \cmd{listes.grisbi.org} comme nom de serveur de groupes.
+Vous pouvez également utiliser les forums de discussions (ou newsgroups) avec un logiciel appelé \frquote{lecteur de nouvelles} (comme Thunderbird par exemple) en renseignant \cmds{listes.grisbi.org} comme nom de serveur de groupes.
 
 N'hésitez pas de toute façon à consulter régulièrement le site officiel de Grisbi.
 
@@ -338,7 +338,7 @@ Guy \familyname{Lebègue}, d'abord pour la version 0.8, puis avec Michèle \fami
 
 Merci à \lang{TuxFamily}\footnote{\urlTuxFamily{}} qui a longtemps mis à notre disposition tous les outils dont nous avions besoin pour développer Grisbi (site Internet, ftp, CVS, listes de diffusions, etc.). Hélas, les attaques de pirates subies fin 2003 - début 2004 par \lang{TuxFamily} nous ont contraint à chercher un nouvel hébergement. Nous remercions donc aujourd'hui'hui \lang{SourceForge}\footnote{\urlSourceForge{}}, la plateforme sur laquelle nous avons migré, et souhaitons un prompt et rapide rétablissement à \lang{TuxFamily} qui fait cruellement défaut à des centaines de projets libres.
 
-Un grand merci également à tous les contributeurs de la liste de développement qui participent à l'évolution de Grisbi par leurs suggestions, remarques et rapports de bogues, ainsi qu'aux nombreux relecteurs du \menu{Manuel de l'utilisateur}, qui contribuent à en faire un meilleur outil.
+Un grand merci également à tous les contributeurs de la liste de développement qui participent à l'évolution de Grisbi par leurs suggestions, remarques et rapports de bogues, ainsi qu'aux nombreux relecteurs du \menus{Manuel de l'utilisateur}, qui contribuent à en faire un meilleur outil.
 
 
 \section{Licences\label{introduction-licenses}}
@@ -358,17 +358,17 @@ Vous avez sous les yeux la version \actuality{}3.0 du manuel, en date de \actual
 
 \vspacepdf{5mm}			% espace : 5 mm
 
-\textbf{Note}: cette version 3.0 du manuel est une mise à jour de la version 2.0 sauf pour le chapitre \vref{association} \menu{Comptabilité d'association}, qui reste en version 2.0 %TODO to modify when it"ll be updated
+\textbf{Note}: cette version 3.0 du manuel est une mise à jour de la version 2.0 sauf pour le chapitre \vref{association} \menus{Comptabilité d'association}, qui reste en version 2.0 %TODO to modify when it"ll be updated
 
 \vspacepdf{5mm}			% espace : 5 mm
 
 Ce manuel a été écrit avec le \gls{formateur de texte} \gls{LaTeX}\index{latex@\LaTeX}, et il est disponible sous le \gls{format de fichier} \indexword{\gls{PDF}}\index{PDF} ou \indexword{\gls{HTML}}\index{HTML}, avec illustrations (copies d'écran) dans ces deux formats. 
 
-Il est accessible directement dans le logiciel Grisbi par le menu \menu{Aide - Manuel} de la barre de menus, sous le format \gls{HTML} avec illustrations.
+Il est accessible directement dans le logiciel Grisbi par le menu \menus{Aide - Manuel} de la barre de menus, sous le format \gls{HTML} avec illustrations.
 
 Cependant, tous ces différents formats peuvent être téléchargés sur le site de \lang{Sourceforge}\footnote{\urlSourceForgeDocumentation{}}, ainsi que les versions correspondantes du logiciel sur \lang{Sourceforge}\footnote{\urlSourceForge{}} dans les dossiers << \textsf{grisbi stable} >> ou << \textsf{grisbi unstable} >>.
 
-Les outils nécessaires à la lecture de ces différents formats de documentation sont présentés dans la section \vref{introduction-manual-readers} \menu{Logiciels de lecture}.
+Les outils nécessaires à la lecture de ces différents formats de documentation sont présentés dans la section \vref{introduction-manual-readers} \menus{Logiciels de lecture}.
 
 
 \subsection{Présentation\label{introduction-manual-presentation}}
@@ -393,25 +393,25 @@ Bien que le logiciel Grisbi soit conçu pour être le plus intuitif possible et 
 Voici une description succincte des différents chapitres:
 
 \begin{itemize}
-	\item \menu{Préambule} explique l'origine du nom donné à ce logiciel;
-	\item \menu{Introduction} présente le logiciel, le manuel, leurs auteurs et les contacts;
-	\item \menu{Premier démarrage de Grisbi} est le chapitre \emph{indispensable} pour commencer l'utilisation du logiciel;
-	\item \menu{Accueil} décrit les éléments principaux de l'interface graphique et leur manipulation à la souris et au clavier (raccourcis);
-	\item \menu{Export et Import de comptes} décrit comment échanger des données avec les autres logiciels;
-	\item \menu{Gestion des données} présente les options des fichiers de comptes, les sauvegardes et les archives ainsi que leur gestion;
-	\item \menu{Gestion des comptes} décrit les propriétés des comptes, leur gestion et les différents types de comptes avec leur utilisation;
-	\item \menu{Opérations d'un compte} décrit les manipulations sur les opérations, les champs d'information et de saisie utilisés et leur gestion, la création d'opérations et leur gestion;
-	\item \menu{Rapprochement bancaire} détaille la procédure de rapprochement d'un compte et la gestion des rapprochements;		
-	\item \menu{Échéancier} décrit la planification des opérations futures et leur manipulation;
-	\item \menu{Recherches} fait le point sur les possibilités de recherche de données;
-	\item \menu{Tiers}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{Exercices} décrivent la gestion de ces données;
-	\item \menu{Simulation de crédit} décrit les méthodes et la gestion de simulations;
-	\item \menu{Budgets prévisionnels} décrit les outils et les procédures de création de budget et de tableaux d'amortissement, ainsi que leur gestion;
-	\item \menu{Gestion des cartes bancaires et leurs prévisions} décrit la gestion de ces cartes, notamment celles à débit différé, et les méthodes de prévision;	
-	\item \menu{Comptabilité d'association} présente deux introductions pour les trésoriers d'association;
-	\item \menu{États} et \menu{Création d'un état} décrivent la gestion et la création des états;
-	\item \menu{Configuration de Grisbi} détaille toutes les possibilités de réglage du logiciel;
-	\item \menu{Outils de maintenance} donne quelques clés à utiliser en cas d'erreurs ou de bogues.
+	\item \menus{Préambule} explique l'origine du nom donné à ce logiciel;
+	\item \menus{Introduction} présente le logiciel, le manuel, leurs auteurs et les contacts;
+	\item \menus{Premier démarrage de Grisbi} est le chapitre \emph{indispensable} pour commencer l'utilisation du logiciel;
+	\item \menus{Accueil} décrit les éléments principaux de l'interface graphique et leur manipulation à la souris et au clavier (raccourcis);
+	\item \menus{Export et Import de comptes} décrit comment échanger des données avec les autres logiciels;
+	\item \menus{Gestion des données} présente les options des fichiers de comptes, les sauvegardes et les archives ainsi que leur gestion;
+	\item \menus{Gestion des comptes} décrit les propriétés des comptes, leur gestion et les différents types de comptes avec leur utilisation;
+	\item \menus{Opérations d'un compte} décrit les manipulations sur les opérations, les champs d'information et de saisie utilisés et leur gestion, la création d'opérations et leur gestion;
+	\item \menus{Rapprochement bancaire} détaille la procédure de rapprochement d'un compte et la gestion des rapprochements;		
+	\item \menus{Échéancier} décrit la planification des opérations futures et leur manipulation;
+	\item \menus{Recherches} fait le point sur les possibilités de recherche de données;
+	\item \menus{Tiers}, \menus{Catégories}, \menus{Imputations budgétaires} et \menus{Exercices} décrivent la gestion de ces données;
+	\item \menus{Simulation de crédit} décrit les méthodes et la gestion de simulations;
+	\item \menus{Budgets prévisionnels} décrit les outils et les procédures de création de budget et de tableaux d'amortissement, ainsi que leur gestion;
+	\item \menus{Gestion des cartes bancaires et leurs prévisions} décrit la gestion de ces cartes, notamment celles à débit différé, et les méthodes de prévision;	
+	\item \menus{Comptabilité d'association} présente deux introductions pour les trésoriers d'association;
+	\item \menus{États} et \menus{Création d'un état} décrivent la gestion et la création des états;
+	\item \menus{Configuration de Grisbi} détaille toutes les possibilités de réglage du logiciel;
+	\item \menus{Outils de maintenance} donne quelques clés à utiliser en cas d'erreurs ou de bogues.
 \end{itemize}
 
 
@@ -422,22 +422,22 @@ La liste suivante définit et illustre les conventions typographiques utilisées
 \begin{itemize}
 	\item les composants d'interface sont des titres de fenêtre, des noms d'icône et de bouton, des noms de menu et d'autres options qui apparaissent sur l'écran; ils sont présentés ainsi:
 		\newline
-		\hspace*{1.5cm}cliquez sur \menu{Retour};
+		\hspace*{1.5cm}cliquez sur \menus{Retour};
 	\item le libellé des touches du clavier représente ce qui est écrit sur les touches du clavier; il est présenté ainsi:
 		\newline
-		\hspace*{1.5cm}appuyez sur la touche \key{Entrée};	
-	\item les combinaisons de touches sont une série de touches à enfoncer 	simultanément (à moins d'indication contraire) pour réaliser une fonction unique; elles sont présentées ainsi:
+		\hspace*{1.5cm}appuyez sur la touche \keys{Entrée \return};
+	\item les combinaisons de touches sont une série de touches à enfoncer simultanément (à moins d'indication contraire) pour réaliser une fonction unique; elles sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}appuyez sur la combinaison de touches \key{Ctrl}\key{R};
+		\hspace*{1.5cm}appuyez sur la combinaison de touches \keys{Ctrl+R};
 	\item les commandes qui font partie d'une instruction et qui doivent être saisies sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}tapez \cmd{grisbi} pour démarrer le programme;
+		\hspace*{1.5cm}tapez \cmds{grisbi} pour démarrer le programme;
 	\item les noms de fichier et de répertoire sont présentés ainsi:
 		\newline
 		\hspace*{1.5cm}\file{grisbi-n.n.n.rpm} et \file{/usr/local/bin};	
 	\item les lignes de commande consistent en une commande et peuvent inclure un ou plusieurs paramètres possibles de la commande; elles sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}	\cmd{rpm -Uvh grisbi-n.n.n.rpm};
+		\hspace*{1.5cm}	\cmds{rpm -Uvh grisbi-n.n.n.rpm};
 	\item toute suite de caractères alphanumériques en bleu, dans le document au format \gls{PDF} ou \gls{HTML}, est un lien hypertexte, renvoyant soit à une image, une autre partie du document, un mot indexé ou encore au glossaire (pour \gls{PDF} uniquement);
 	\item les mots ou groupes de mots référencés dans l'index sont mis en valeur dans les chapitres ainsi:
 		\newline
