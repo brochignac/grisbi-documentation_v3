@@ -199,9 +199,10 @@
 	menubordercolor=1 1 1,				% color of border around menu links, rgb color
 	urlbordercolor=1 1 1,				% color of border around URL links, rgb color
 	urlcolor=blue,						% color of URL links, color=blue
-	plainpages=true					% do page number anchors as plain Arabic, default=false
+	plainpages=true						% do page number anchors as plain Arabic, default=false
 %	pdfpagelabels=true					% set PDF page labels - Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
 }
+\usepackage[os=win]{menukeys}			% provides keyboard shortcut symbols
 \input{31-grisbi-manuel-urldef-en}		% include the "grisbi-manuel-urldef" file during the compilation
 
 %% Glossary %%
@@ -225,10 +226,10 @@
 % Virtualization of fonts
 \newcommand{\lang}[1]{\emph{#1}}				% new command -> \lang = emph (e.g. italic)
 \newcommand{\familyname}[1]{\textsc{#1}}		% new command -> \familynamelang = small caps
-\newcommand{\menu}[1]{\textsl{#1}}				% new command -> \menu = slanted is oblique version of the roman font (e.g. italic)
+\newcommand{\menus}[1]{\textsl{#1}}				% new command -> \menu = slanted is oblique version of the roman font (e.g. italic)
 \newcommand{\strong}[1]{\textsc{\textbf{#1}}}	% new command -> \strong = small caps + bold
 \newcommand{\key}[1]{\texttt{<#1>}}				% new command -> \key = teletype font
-\newcommand{\cmd}[1]{\texttt{#1}}				% new command -> \cmd = teletype font
+\newcommand{\cmds}[1]{\texttt{#1}}				% new command -> \cmd = teletype font
 \newcommand{\file}[1]{\textbf{#1}}				% new command -> \file = bold
 \newcommand{\xml}[1]{\texttt{#1}}				% new command -> \xml = teletype font
 \newcommand{\indexword}[1]{\textsf{#1}}			% new command -> \indexword = sans serif, for easy search of each indexed word in the page
