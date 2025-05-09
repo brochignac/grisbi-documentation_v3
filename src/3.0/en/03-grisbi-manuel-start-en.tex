@@ -36,7 +36,7 @@ It is advisable to check the options:
 \end{enumerate}
 
 \minisec{\textcolor{red}{\strong{Warning:}}}
-The Grisbi developers recommend that you do not use the \menu{Encrypt Grisbi file} option for the following reasons:
+The Grisbi developers recommend that you do not use the \menus{Encrypt Grisbi file} option for the following reasons:
 \begin{itemize}
 	\item there is no method for recovering an encrypted file whose password has been lost;
 	\item For some unknown reason, using this option on Windows can render the accounts file completely unusable.
@@ -48,7 +48,7 @@ However, if you use it, it is advisable to make regular back-ups of the unencryp
 	\item This is followed automatically by the third wizard, \enquote{Create a new account}, which is used to create the first account and is described in detail in section \ref{start-newfile} below.%Puis vient automatiquement le troisième assistant \frquote{Créer un nouveau compte} qui permet de créer le premier compte et qui est décrit en détail dans la section \ref{start-newfile} ci-dessous.
 \end{enumerate}
 
-At any time you can exit any wizard with the \menu{Cancel} button.
+At any time you can exit any wizard with the \menus{Cancel} button.
 
 If you do not want to use the Set-up Wizard, you can open a example file instead (see the next section \ref{start-example} below).
 
@@ -69,7 +69,7 @@ If you want to use Grisbi immediately without having to go through the full set-
 The first time you use Grisbi, you will need to create a first
 \indexword{accounts file}\index{accounts file}. The \gls{extension} of this file will be \file{.gsb} and its name will be \file{your-file-name.gsb}.
 
-Immediately afterwards, you will need to create at least one account (bank, cash, liability or asset account, described in the chapter \vref{accounts} \menu{Account management}), and then a few other accounts (current, savings, credit, possibly a cash account and a few transition accounts) which will contain their respective transactions.
+Immediately afterwards, you will need to create at least one account (bank, cash, liability or asset account, described in the chapter \vref{accounts} \menus{Account management}), and then a few other accounts (current, savings, credit, possibly a cash account and a few transition accounts) which will contain their respective transactions.
 
 If you are managing a family, you will normally only have one accounts file, as this allows all the exchanges between your different accounts. If you are managing an association, or another family with no accounting relationship with the first, you will create another accounts file, which will have a different name \file{your-second-file-name.gsb}. This will keep the \indexword{accounting entities}\index{accounting entity} separate.
 
@@ -78,7 +78,7 @@ In other words, all your household accounts are recorded in one file created by 
 % espace pour changement de thme
 \vspacepdf{5mm}
 
-The general procedure for creating an account file is as follows: click on the menu \menu{File - New Account File} or on the New\refimage{start_grisbi} button; the account file creation wizard opens, which includes six steps, as detailed below:
+The general procedure for creating an account file is as follows: click on the menu \menus{File - New Account File} or on the New\refimage{start_grisbi} button; the account file creation wizard opens, which includes six steps, as detailed below:
 
 %\begin{itemize}
 %\item create a new account, and then follow the account creation wizard, which itself includes five steps, to create the first account (because it is essential to have at least one account);
@@ -86,7 +86,7 @@ The general procedure for creating an account file is as follows: click on the m
 %\end{itemize}
 
 \begin{enumerate}
-	\item Welcome window (step 1/6): confirm by clicking on the \menu{Following} button:%validez par le bouton \menu{Suivant}:
+	\item Welcome window (step 1/6): confirm by clicking on the \menus{Following} button:%validez par le bouton \menus{Suivant}:
 	\item General configuration (step 2/6)\refimage{start_file_create}:
 
 \begin{figure}[htbp]
@@ -103,11 +103,11 @@ The general procedure for creating an account file is as follows: click on the m
 		\begin{enumerate}
 			\item choose the name of the accounting entity whose accounts you manage, for example \enquote{My accounts}, which can be chosen as the title of the Grisbi application home page,%choisissez le nom de l'entité comptable dont vous gérez la comptabilité, par exemple \frquote{Ma comptabilité}, qui pourra être choisi comme titre de la page d'accueil de l'application Grisbi,
 			\item enter the name of the accounts file with its complete tree structure; by default, Grisbi suggests the same name as that of the accounting entity, but you can change it,%saisissez le nom du fichier de comptes avec son arborescence complète; Grisbi vous propose par défaut le même nom que celui de l'entité comptable, mais vous pouvez le 	modifier,
-			\item check the \menu{Encrypt Grisbi} box if you wish \gls{to encrypt} the accounts file,%cochez la case \menu{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
+			\item check the \menus{Encrypt Grisbi} box if you wish \gls{to encrypt} the accounts file,%cochez la case \menus{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
 		\end{enumerate}
 
 \minisec{\textcolor{red}{\strong{Warning:}}}
-The Grisbi developers recommend that you do not use the \menu{Encrypt Grisbi file} option for the following reasons:
+The Grisbi developers recommend that you do not use the \menus{Encrypt Grisbi file} option for the following reasons:
 \begin{itemize}
 	\item there is no method for recovering an encrypted file whose password has been lost;
 	\item For some unknown reason, using this option on \gls{Windows} can render the accounts file completely unusable.
@@ -126,14 +126,14 @@ However, if you use it, it is advisable to make regular back-ups of the unencryp
 			%\end{addmargin}
 			\item choose the decimal \indexword{separator}\index{separator} and the thousands from the drop-down lists,%choisissez le \indexword{séparateur}\index{séparateur} décimal et celui des milliers dans les listes déroulantes,
 			\item fill in the address (optional),%renseignez l'adresse (facultatif),
-			\item confirm with the \menu{Following} button;%validez par le bouton \menu{Suivant};
+			\item confirm with the \menus{Following} button;%validez par le bouton \menus{Suivant};
 		\end{enumerate}
 
 	\item selection of the base \indexword{currency}\index{currency} (step 3/6):%Sélection de la \indexword{devise}\index{devise} de base (étape 3/6):
 		\begin{enumerate} 
 			\item click on the chosen currency in the list,%cliquez sur la devise choisie dans la liste,
-		\item check the \enquote{Include obsolete currencies} box if you also want to display old currencies,%cochez la case \menu{Afficher les devises obsolètes} si vous voulez aussi afficher d'anciennes devises,
-		\item confirm with the \menu{Following} button;%validez par le bouton \menu{Suivant};
+		\item check the \enquote{Include obsolete currencies} box if you also want to display old currencies,%cochez la case \menus{Afficher les devises obsolètes} si vous voulez aussi afficher d'anciennes devises,
+		\item confirm with the \menus{Following} button;%validez par le bouton \menus{Suivant};
 	\end{enumerate}
 
 	\item selection of the \indexword{list of categories}\index{categories!types} you will use (step 4/6)\refimage{start_category_select}%sélection des \indexword{types de catégories}\index{catégories!types} utilisées (étape 4/6)\refimage{start_category_select}:
@@ -147,16 +147,16 @@ However, if you use it, it is advisable to make regular back-ups of the unencryp
 \end{figure}
 
 		\begin{enumerate} 
-			\item click on your desired category, either the \menu{Standard category list} or the \menu{Empty list}\footnote{\strong{Translators Note:} Users installing the program on a system with a French Language interface will find different categories are offered including some for business users} 
-			\item check the \menu{Display foreign category sets} box to check if other categories are available\footnote{\strong{Translators Note:} This option is mainly for the benefit of users of a computer system with the French Language interface who will then be shown the two English categories mentioned in the previous step}
-			\item confirm with the \menu{Following} button;
+			\item click on your desired category, either the \menus{Standard category list} or the \menus{Empty list}\footnote{\strong{Translators Note:} Users installing the program on a system with a French Language interface will find different categories are offered including some for business users} 
+			\item check the \menus{Display foreign category sets} box to check if other categories are available\footnote{\strong{Translators Note:} This option is mainly for the benefit of users of a computer system with the French Language interface who will then be shown the two English categories mentioned in the previous step}
+			\item confirm with the \menus{Following} button;
 		\end{enumerate}
 
 	\item Enter details of \indexword{banks}\index{banks!definition} holding your accounts (step 5/6):
 		\begin{enumerate} 
- 			\item click \menu{Add} to define a bank; fill in the details of the bank (name, bank code, etc.),
-			\item select a bank from the list and click the \menu{Remove} button to delete a bank, then confirm in the window that opens,
-			\item confirm with the \menu{Following} button to go to the next step, \menu{Create a new account}:
+ 			\item click \menus{Add} to define a bank; fill in the details of the bank (name, bank code, etc.),
+			\item select a bank from the list and click the \menus{Remove} button to delete a bank, then confirm in the window that opens,
+			\item confirm with the \menus{Following} button to go to the next step, \menus{Create a new account}:
 		\end{enumerate} 
 
 	\item Configuration finished (step 6/6):\par
@@ -173,11 +173,11 @@ However, if you use it, it is advisable to make regular back-ups of the unencryp
 \end{figure}
 
 		\begin{itemize}
-			\item[\textopenbullet] \menu{Create a new account from scratch}:\par
-			If you check this line, then if you confirm with the \menu{Close} button, this window closes and the \enquote{Create a new account} wizard starts. See \vref{accounts-new}, \menu{Creating a new account}, which fully describes this procedure, then return to this page;
+			\item[\textopenbullet] \menus{Create a new account from scratch}:\par
+			If you check this line, then if you confirm with the \menus{Close} button, this window closes and the \enquote{Create a new account} wizard starts. See \vref{accounts-new}, \menus{Creating a new account}, which fully describes this procedure, then return to this page;
 
-			\item[\textopenbullet] \menu{Import data from online bank services or from accounting software}:\par
-			If you check this line and then confirm with the \menu{Close} button, this window closes and the \enquote{New file Assistant to import} Wizard for importing data from an accounts file, starts. See the \vref{move-import-importinit} section, \menu{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
+			\item[\textopenbullet] \menus{Import data from online bank services or from accounting software}:\par
+			If you check this line and then confirm with the \menus{Close} button, this window closes and the \enquote{New file Assistant to import} Wizard for importing data from an accounts file, starts. See the \vref{move-import-importinit} section, \menus{Importing Account Files from Another Programme into Grisbi}, which fully describes this procedure, then return to this page.
 		\end{itemize}
 \end{enumerate}
 
@@ -189,7 +189,7 @@ However, if you use it, it is advisable to make regular back-ups of the unencryp
 %espace pour changement de thme
 \vspacepdf{5mm}
 
-If you want to create other accounts now, select the \menu{Edit - New Account} to create another account (see the \vref{accounts-new}, \menu{Creating a new account} section).
+If you want to create other accounts now, select the \menus{Edit - New Account} to create another account (see the \vref{accounts-new}, \menus{Creating a new account} section).
 
 %espace pour changement de thme
 \vspacepdf{5mm}
@@ -209,7 +209,7 @@ In general, it is inadvisable to have accents or spaces in the names of director
 
 Your operations are not written as you enter them as they might be in other software; you must therefore save your account file before exiting. Do not worry, Grisbi warns you if you have not done so.
 
-You can configure the options for saving the account file in the \menu{Edit - Preferences} menu, see the section \vref{setup-general-files-manage}, \menu{Managing Account Files.}.
+You can configure the options for saving the account file in the \menus{Edit - Preferences} menu, see the section \vref{setup-general-files-manage}, \menus{Managing Account Files.}.
 
 
 \section{Import from other personal accounting software}
