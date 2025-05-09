@@ -84,8 +84,8 @@ Grisbi hat sich zum Ziel gesetzt, einfach und effizient für den grundlegenden G
 
 \subsection{Entwicklung und Versionen}Développement et versions
 
-%Grisbi étant un logiciel en plein développement, toute remarque (idée, bogue, documentation\dots{}) est la bienvenue. Vous pouvez l'envoyer aux différentes listes indiquées dans la section \vref{introduction-contacts} \menu{Contacts} ou sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}}.
-Da Grisbi eine Software ist, die sich noch in der Entwicklung befindet, ist jedes Feedback (Ideen, Fehler, Dokumentation\dots{}) willkommen. Sie können sie an die verschiedenen Listen senden, die im Abschnitt \vref{introduction-contacts} \menu{Kontakte} oder auf der Website von \lang{Grisbi}\footnote{urlGrisbi{}} angegeben sind.
+%Grisbi étant un logiciel en plein développement, toute remarque (idée, bogue, documentation\dots{}) est la bienvenue. Vous pouvez l'envoyer aux différentes listes indiquées dans la section \vref{introduction-contacts} \menus{Contacts} ou sur le site de \lang{Grisbi}\footnote{\urlGrisbi{}}.
+Da Grisbi eine Software ist, die sich noch in der Entwicklung befindet, ist jedes Feedback (Ideen, Fehler, Dokumentation\dots{}) willkommen. Sie können sie an die verschiedenen Listen senden, die im Abschnitt \vref{introduction-contacts} \menus{Kontakte} oder auf der Website von \lang{Grisbi}\footnote{urlGrisbi{}} angegeben sind.
 
 %Vous pouvez, si vous avez le goût de l'aventure, télécharger et compiler la dernière version en cours de développement sur le système de gestion de contenu \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} utilisant \gls{Git}.
 Wenn Sie abenteuerlustig sind, können Sie die neueste Version, die derzeit auf dem Content-Management-System \gls{GitHub}\footnote{\urlGitHubGrisbi{}\label{siteGitHubGrisbi}} entwickelt wird, unter Verwendung von \gls{Git} herunterladen und kompilieren.
@@ -141,7 +141,7 @@ Beachten Sie, dass ab Version 0.6 Versionen mit gerader Minor Number (z. B. 0.\u
 	%\item Le classement alphabétique prend (enfin) en compte les accents
 	\item Speichert das letzte Arbeitsverzeichnis und die zuletzt geöffneten Dateien%Mémorise le dernier répertoire de travail et les derniers fichiers ouverts
 	\item Eine eindeutige Nummer pro Buchung unabhängig vom Konto%Un numéro unique par opération quel que soit le compte
-	\item Die Tasten \key{+} (\key{-}) in einem Datumsfeld inkrementieren (dekrementieren) das Datum%Les touches \key{+} (\key{-}) dans un champ de date incrémentent (décrémentent) la date
+	\item Die Tasten \keys{{+}} (\keys{{-}}) in einem Datumsfeld inkrementieren (dekrementieren) das Datum%Les touches \key{+} (\key{-}) dans un champ de date incrémentent (décrémentent) la date
 	\item Mögliche Anzeige neuer Felder im Formular für die Eingabe von Buchungen%Affichage possible de nouveaux champs dans le formulaire de saisie des opérations 
 	\item Einstellbare Fälligkeiten für einen bestimmten Zeitraum%Échéances paramétrables pour un laps de temps défini
 	\item Anzeige des aktuellen gepunkteten Saldos%Affichage du solde courant pointé
@@ -171,11 +171,11 @@ Beachten Sie, dass ab Version 0.6 Versionen mit gerader Minor Number (z. B. 0.\u
 	\item Die Breite der Spalten im Fälligkeitsplan kann geändert werden%La largeur des colonnes de l'échéancier est modifiable
 	\item Harmonisierung in den Datumsfeldern%Harmonisation dans les champs de date:
 		\begin{itemize}
-		\item[\textopenbullet] \key{Strg/Ctrl}\key{Enter} in einem Datumsfeld öffnet einen Kalender%\key{Ctrl}\key{Entrée} dans un champ de date ouvre un calendrier
+		\item[\textopenbullet] \keys{Strg+Enter \return} in einem Datumsfeld öffnet einen Kalender%\key{Ctrl}\key{Entrée} dans un champ de date ouvre un calendrier
 		\item[\textopenbullet] Die Pfeiltasten sind in einem Kalender aktiv%les touches fléchées sont actives dans un calendrier
-		\item[\textopenbullet] \key{Strg/Ctrl}\key{+} (\key{-}) in einem Datumsfeld erhöht (verringert) das Datum um etwa eine Woche%\key{Ctrl}\key{+} (\key{-}) dans un champ de date augmente (diminue) la date d'environ une semaine
-		\item[\textopenbullet] \key{Bild auf} (\key{Bild ab}) erhöht (verringert) das Datum um etwa einen Monat%\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un mois
-		\item[\textopenbullet] \key{Strg/Ctrl}\key{Bild auf} (\key{Bild ab}) erhöht (verringert) das Datum um etwa ein Jahr%\key{Ctrl}\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un an
+		\item[\textopenbullet] \keys{Strg+{+}} (\keys{Strg+{-}}) in einem Datumsfeld erhöht (verringert) das Datum um etwa eine Woche%\key{Ctrl}\key{+} (\key{-}) dans un champ de date augmente (diminue) la date d'environ une semaine
+		\item[\textopenbullet] \keys{Bild auf} (\keys{Bild ab}) erhöht (verringert) das Datum um etwa einen Monat%\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un mois
+		\item[\textopenbullet] \keys{Strg+Bild auf} (\keys{Strg+Bild ab}) erhöht (verringert) das Datum um etwa ein Jahr%\key{Ctrl}\key{Pg.Préc} (\key{Pg.Suiv}) augmente (diminue) la date d'environ un an
 		\end{itemize}	
 \end{itemize}
 
@@ -246,9 +246,9 @@ Beachten Sie, dass ab Version 0.6 Versionen mit gerader Minor Number (z. B. 0.\u
 	\item Berechnung vom Saldo mit Buchung oder Valutadatum%Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
 	\item Zurücksetzen der Betragsfelder bei automatischer Datenbefüllung%Option d'effacement des champs Crédit et Débit pour l'auto-complètement
 	\item Anzeige von unbenutzten Empfängern%Affichage des tiers inutilisés	
-	\item Vollbildanzeige mit Funktionstaste \key{F11}%Commande d'affichage plein écran par la touche de fonction \key{F11}
-	\item Erstellung Buchung mit Kurzbefehl \key{Strg/Ctrl}\key{T}%Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération
-	\item Aufruf der \menu{Hilfe} mit Kurzbefehl \key{Strg/Ctrl}\key{H}%Accès direct au manuel de l'utilisateur par le menu \menu{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}
+	\item Vollbildanzeige mit Funktionstaste \keys{F11}%Commande d'affichage plein écran par la touche de fonction \key{F11}
+	\item Erstellung Buchung mit Kurzbefehl \keys{Strg+T}%Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération
+	\item Aufruf der \menus{Hilfe} mit Kurzbefehl \keys{Strg+H}%Accès direct au manuel de l'utilisateur par le menu \menus{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}
 \end{itemize}
 
 
@@ -304,10 +304,10 @@ Außerdem haben wir beschlossen, die Internationalisierung von Grisbi in Angriff
 %Pour vous abonner à l'une de ces listes, rendez vous simplement sur la page \urlListDiffGrisbi{} puis cliquez sur la/les liste(s) qui vous intéresse(nt).
 Um eine dieser Listen zu abonnieren, gehen Sie einfach auf die Seite \urlListDiffGrisbi{} und klicken Sie auf die Liste(n), die Sie interessieren.
 
-%% Ou bien allez sur le site de {Grisbi}\footnote{\urlGrisbi{}}} dans la rubrique \cmd{Contacts}. % <<Contacts>> non présent sur le site
+%% Ou bien allez sur le site de {Grisbi}\footnote{\urlGrisbi{}}} dans la rubrique \cmds{Contacts}. % <<Contacts>> non présent sur le site
 
-%Vous pouvez également utiliser les forums de discussions (ou newsgroups) avec un logiciel appelé "lecteur de nouvelles" (comme Thunderbird par exemple) en renseignant \cmd{listes.grisbi.org} comme nom de serveur de groupes.
-Sie können auch Diskussionsforen (oder Newsgroups) mit einer Software namens \dequote{Newsreader} (wie z. B. Thunderbird) nutzen, indem Sie \cmd{listes.grisbi.org} als Namen des Gruppenservers angeben.
+%Vous pouvez également utiliser les forums de discussions (ou newsgroups) avec un logiciel appelé "lecteur de nouvelles" (comme Thunderbird par exemple) en renseignant \cmds{listes.grisbi.org} comme nom de serveur de groupes.
+Sie können auch Diskussionsforen (oder Newsgroups) mit einer Software namens \dequote{Newsreader} (wie z. B. Thunderbird) nutzen, indem Sie \cmds{listes.grisbi.org} als Namen des Gruppenservers angeben.
 
 %N'hésitez pas de toute façon à consulter régulièrement le site officiel de Grisbi.
 Zögern Sie auf jeden Fall nicht, regelmäßig die offizielle Website von Grisbi zu besuchen.
@@ -369,8 +369,8 @@ Guy \familyname{Lebègue}, zuerst für die Version 0.8 und dann zusammen mit Mic
 %Merci à \lang{TuxFamily}\footnote{\urlTuxFamily{}} qui a longtemps mis à notre disposition tous les outils dont nous avions besoin pour développer Grisbi (site Internet, ftp, CVS, listes de diffusions, etc.). Hélas, les attaques de pirates subies fin 2003 - début 2004 par \lang{TuxFamily} nous ont contraint à chercher un nouvel hébergement. Nous remercions donc aujourd'hui'hui \lang{SourceForge}\footnote{\urlSourceForge{}}, la plateforme sur laquelle nous avons migré, et souhaitons un prompt et rapide rétablissement à \lang{TuxFamily} qui fait cruellement défaut à des centaines de projets libres.
 Vielen Dank an \lang{TuxFamily}\footnote{\urlTuxFamily{}}, die uns lange Zeit alle Werkzeuge zur Verfügung gestellt hat, die wir für die Entwicklung von Grisbi benötigten (Website, FTP, CVS, Mailinglisten, etc.). Leider haben uns die Hackerangriffe, denen \lang{TuxFamily} Ende 2003 und Anfang 2004 ausgesetzt war, dazu gezwungen, uns nach einem neuen Hosting umzusehen. Wir danken daher heute \lang{SourceForge}, der Plattform, auf die wir umgestiegen sind, und wünschen \lang{TuxFamily} eine schnelle und baldige Genesung, die Hunderte von freien Projekten schmerzlich vermissen.
 
-%Un grand merci également à tous les contributeurs de la liste de développement qui participent à l'évolution de Grisbi par leurs suggestions, remarques et rapports de bogues, ainsi qu'aux nombreux relecteurs du \menu{Manuel de l'utilisateur}, qui contribuent à en faire un meilleur outil.
-Ein herzliches Dankeschön auch an alle Mitwirkenden der Entwicklungsliste, die mit ihren Vorschlägen, Hinweisen und Fehlerberichten zur Weiterentwicklung von Grisbi beitragen, sowie an die vielen Korrekturleser des \menu{Grisbi Handbuch}, die dazu beitragen, Grisbi zu einem besseren Werkzeug zu machen.
+%Un grand merci également à tous les contributeurs de la liste de développement qui participent à l'évolution de Grisbi par leurs suggestions, remarques et rapports de bogues, ainsi qu'aux nombreux relecteurs du \menus{Manuel de l'utilisateur}, qui contribuent à en faire un meilleur outil.
+Ein herzliches Dankeschön auch an alle Mitwirkenden der Entwicklungsliste, die mit ihren Vorschlägen, Hinweisen und Fehlerberichten zur Weiterentwicklung von Grisbi beitragen, sowie an die vielen Korrekturleser des \menus{Grisbi Handbuch}, die dazu beitragen, Grisbi zu einem besseren Werkzeug zu machen.
 
 \section{Lizenzen\label{introduction-licenses}}
 
@@ -393,21 +393,21 @@ Vor Ihnen liegt die Version 3.0 des Handbuchs mit Stand von \actuality{}Anfang 2
 \vspacepdf{5mm}			% espace   : 5 mm
 
 %% ONLY FOR FRENCH MANUEL %%
-%\textbf{Note}: cette version 3.0 du manuel est une mise à jour de la version 2.0 sauf pour le chapitre \vref{association} \menu{Comptabilité d'association}, qui reste en version 2.0 %TODO to modify when it"ll be updated
+%\textbf{Note}: cette version 3.0 du manuel est une mise à jour de la version 2.0 sauf pour le chapitre \vref{association} \menus{Comptabilité d'association}, qui reste en version 2.0 %TODO to modify when it"ll be updated
 
 \vspacepdf{5mm}			% espace   : 5 mm
 
 %Ce manuel a été écrit avec le \gls{formateur de texte} \gls{LaTeX}\index{latex@\LaTeX}, et il est disponible sous le \gls{format de fichier} \gls{PDF} ou \gls{HTML}, avec illustrations (copies d'écran) dans ces deux formats. 
 Dieses Handbuch wurde mit dem Textverarbeitungsprogramm \gls{LaTeX}index{latex@LaTeX} geschrieben und ist als \gls{Dateiformat} \indexword{\gls{PDF}}\index{PDF} oder \indexword{\gls{HTML}}\index{HTML}, mit Illustrationen (Screenshots) in beiden Formaten.
 
-%Il est accessible directement dans le logiciel Grisbi par le menu \menu{Aide - Manuel} de la barre de menus, sous le format \gls{HTML} avec illustrations.
-Es ist direkt in der Grisbi-Software über das Menü \menu{Hilfe - Handbuch} in der Menüleiste im Format \gls{HTML} mit Illustrationen zugänglich.
+%Il est accessible directement dans le logiciel Grisbi par le menu \menus{Aide - Manuel} de la barre de menus, sous le format \gls{HTML} avec illustrations.
+Es ist direkt in der Grisbi-Software über das Menü \menus{Hilfe - Handbuch} in der Menüleiste im Format \gls{HTML} mit Illustrationen zugänglich.
 
 %Cependant, ces différents formats peuvent être téléchargés sur le site de \lang{Sourceforge}\footnote{\urlSourceForgeDocumentation{}}, ainsi que les versions correspondantes du logiciel sur \lang{Sourceforge}\footnote{\urlSourceForge{}} dans les dossiers << \textsf{grisbi stable} >> ou << \textsf{grisbi unstable} >>.
 Diese verschiedenen Formate können jedoch von der \lang{Sourceforge}\footnote{\urlSourceForgeDocumentation{}}-Website heruntergeladen werden, ebenso wie die entsprechenden Versionen der Software auf \lang{Sourceforge}\footnote{\urlSourceForge{}} in den Ordnern \dequote{\textsf{grisbi stable}} oder \dequote{\textsf{grisbi unstable}}.
 
-%Les outils nécessaires à la lecture de ces différents formats de documentation sont présentés dans la section \vref{introduction-manual-readers} \menu{Logiciels de lecture}.
-Die Werkzeuge, die Sie zum Lesen dieser verschiedenen Dokumentationsformate benötigen, werden im Abschnitt \vref{introduction-manual-readers} \menu{Lesesoftware} vorgestellt.
+%Les outils nécessaires à la lecture de ces différents formats de documentation sont présentés dans la section \vref{introduction-manual-readers} \menus{Logiciels de lecture}.
+Die Werkzeuge, die Sie zum Lesen dieser verschiedenen Dokumentationsformate benötigen, werden im Abschnitt \vref{introduction-manual-readers} \menus{Lesesoftware} vorgestellt.
 
 \subsection{Präsentation\label{introduction-manual-presentation}}
 
@@ -432,25 +432,25 @@ Obwohl die Grisbi-Software so intuitiv wie möglich gestaltet wurde und die meis
 Im Folgenden finden Sie eine kurze Beschreibung der einzelnen Kapitel:%Voici une description succincte des différents chapitres:
 
 \begin{itemize}
-	\item \menu{Präambel} erklärt die Herkunft des Namens, der dieser Software gegeben wurde;%{Préambule} explique l'origine du nom donné à ce logiciel;
-	\item \menu{Einleitung} stellt die Software, das Handbuch, die Autoren und die Kontaktpersonen vor;%{Introduction} présente le logiciel, le manuel, leurs auteurs et les contacts;
-	\item \menu{Erster Start von Grisbi} ist das \emph{grundlegende} Kapitel für den Einstieg in die Nutzung der Software;%{Premier démarrage de Grisbi} est le chapitre \emph{indispensable} pour commencer l'utilisation du logiciel;
-	\item \menu{Startseite} beschreibt die wichtigsten Elemente der grafischen Benutzeroberfläche und ihre Bedienung mit Maus und Tastatur (Shortcuts);%décrit les éléments principaux de l'interface graphique et leur manipulation à la souris et au clavier (raccourcis);
-	\item \menu{Kontenexport und -import} beschreibt, wie Sie Daten mit anderer Software austauschen können;%{Export et Import de comptes} décrit comment échanger des données avec les autres logiciels;
-	\item \menu{Datenverwaltung} zeigt Optionen für Kontodateien, Backups und Archive sowie deren Verwaltung;%{Gestion des données} présente les options des fichiers de comptes, les sauvegardes et les archives ainsi que leur gestion;
-	\item \menu{Kontoverwaltung} beschreibt die Eigenschaften von Konten, ihre Verwaltung und die verschiedenen Arten von Konten mit ihrer Verwendung;%{Gestion des comptes} décrit les propriétés des comptes, leur gestion et les différents types de comptes avec leur utilisation;
-	\item \menu{Buchungen eines Kontos} beschreibt die Manipulation von Buchungen, die verwendeten Informations- und Eingabefelder und ihre Verwaltung, das Erstellen von Buchungen und ihre Verwaltung;%{Opérations d'un compte} décrit les manipulations sur les opérations, les champs d'information et de saisie utilisés et leur gestion, la création d'opérations et leur gestion;
-	\item \menu{Buchungen abstimmen} beschreibt detailliert das Verfahren zur Abstimmung eines Kontos und die Verwaltung der Abstimmungen;%{Rapprochement bancaire} détaille la procédure de rapprochement d'un compte et la gestion des rapprochements;		
-	\item \menu{Planer} beschreibt die Planung zukünftiger Buchungen und deren Handhabung;%{Échéancier} décrit la planification des opérations futures et leur manipulation;
-	\item \menu{Suchen} gibt einen Überblick über die Möglichkeiten der Datensuche;%{Recherches} fait le point sur les possibilités de recherche de données;
-	\item \menu{Empfänger}, \menu{Kategorien}, \menu{Gruppen} und \menu{Geschäftsjahre} beschreiben die Verwaltung dieser Daten;%{Tiers}, \menu{Catégories}, \menu{Imputations budgétaires} et \menu{Exercices} décrivent la gestion de ces données;
-	\item \menu{Kreditrechner} beschreibt die Methoden und das Management von Simulationen;%{Simulation de crédit} décrit les méthodes et la gestion de simulations;
-	\item \menu{Prognosen} beschreibt die Werkzeuge und Verfahren zur Erstellung von Budgets und Abschreibungstabellen sowie deren Verwaltung;%{Budgets prévisionnels} décrit les outils et les procédures de création de budget et de tableaux d'amortissement, ainsi que leur gestion;
-	\item \menu{Bankkartenverwaltung und ihre Prognosen} beschreibt die Verwaltung von Bankkarten, insbesondere von Karten mit verzögerter Abbuchung, und die Methoden zur Erstellung von Prognosen;%{Gestion des cartes bancaires et leurs prévisions} décrit la gestion de ces cartes, notamment celles à débit différé, et les méthodes de prévision;	
-	%%\item \menu{Comptabilité d'association} présente deux introductions pour les trésoriers d'association;ONLY FOR FRENCH
-	\item \menu{Berichte} und \menu{Bericht erstellen} beschreiben die Verwaltung und das Erstellen von Berichten;%{États} et \menu{Création d'un état} décrivent la gestion et la création des états;
-	\item \menu{Grisbi-Konfiguration} enthält detaillierte Angaben zu allen Einstellungsmöglichkeiten der Software;%{Configuration de Grisbi} détaille toutes les possibilités de réglage du logiciel;
-	\item \menu{Wartungswerkzeuge} enthält einige Schlüssel, die Sie im Falle von Fehlern oder Bugs verwenden können.%{Outils de maintenance} donne quelques clés à utiliser en cas d'erreurs ou de bogues.
+	\item \menus{Präambel} erklärt die Herkunft des Namens, der dieser Software gegeben wurde;%{Préambule} explique l'origine du nom donné à ce logiciel;
+	\item \menus{Einleitung} stellt die Software, das Handbuch, die Autoren und die Kontaktpersonen vor;%{Introduction} présente le logiciel, le manuel, leurs auteurs et les contacts;
+	\item \menus{Erster Start von Grisbi} ist das \emph{grundlegende} Kapitel für den Einstieg in die Nutzung der Software;%{Premier démarrage de Grisbi} est le chapitre \emph{indispensable} pour commencer l'utilisation du logiciel;
+	\item \menus{Startseite} beschreibt die wichtigsten Elemente der grafischen Benutzeroberfläche und ihre Bedienung mit Maus und Tastatur (Shortcuts);%décrit les éléments principaux de l'interface graphique et leur manipulation à la souris et au clavier (raccourcis);
+	\item \menus{Kontenexport und -import} beschreibt, wie Sie Daten mit anderer Software austauschen können;%{Export et Import de comptes} décrit comment échanger des données avec les autres logiciels;
+	\item \menus{Datenverwaltung} zeigt Optionen für Kontodateien, Backups und Archive sowie deren Verwaltung;%{Gestion des données} présente les options des fichiers de comptes, les sauvegardes et les archives ainsi que leur gestion;
+	\item \menus{Kontoverwaltung} beschreibt die Eigenschaften von Konten, ihre Verwaltung und die verschiedenen Arten von Konten mit ihrer Verwendung;%{Gestion des comptes} décrit les propriétés des comptes, leur gestion et les différents types de comptes avec leur utilisation;
+	\item \menus{Buchungen eines Kontos} beschreibt die Manipulation von Buchungen, die verwendeten Informations- und Eingabefelder und ihre Verwaltung, das Erstellen von Buchungen und ihre Verwaltung;%{Opérations d'un compte} décrit les manipulations sur les opérations, les champs d'information et de saisie utilisés et leur gestion, la création d'opérations et leur gestion;
+	\item \menus{Buchungen abstimmen} beschreibt detailliert das Verfahren zur Abstimmung eines Kontos und die Verwaltung der Abstimmungen;%{Rapprochement bancaire} détaille la procédure de rapprochement d'un compte et la gestion des rapprochements;		
+	\item \menus{Planer} beschreibt die Planung zukünftiger Buchungen und deren Handhabung;%{Échéancier} décrit la planification des opérations futures et leur manipulation;
+	\item \menus{Suchen} gibt einen Überblick über die Möglichkeiten der Datensuche;%{Recherches} fait le point sur les possibilités de recherche de données;
+	\item \menus{Empfänger}, \menus{Kategorien}, \menus{Gruppen} und \menus{Geschäftsjahre} beschreiben die Verwaltung dieser Daten;%{Tiers}, \menus{Catégories}, \menus{Imputations budgétaires} et \menus{Exercices} décrivent la gestion de ces données;
+	\item \menus{Kreditrechner} beschreibt die Methoden und das Management von Simulationen;%{Simulation de crédit} décrit les méthodes et la gestion de simulations;
+	\item \menus{Prognosen} beschreibt die Werkzeuge und Verfahren zur Erstellung von Budgets und Abschreibungstabellen sowie deren Verwaltung;%{Budgets prévisionnels} décrit les outils et les procédures de création de budget et de tableaux d'amortissement, ainsi que leur gestion;
+	\item \menus{Bankkartenverwaltung und ihre Prognosen} beschreibt die Verwaltung von Bankkarten, insbesondere von Karten mit verzögerter Abbuchung, und die Methoden zur Erstellung von Prognosen;%{Gestion des cartes bancaires et leurs prévisions} décrit la gestion de ces cartes, notamment celles à débit différé, et les méthodes de prévision;	
+	%%\item \menus{Comptabilité d'association} présente deux introductions pour les trésoriers d'association;ONLY FOR FRENCH
+	\item \menus{Berichte} und \menus{Bericht erstellen} beschreiben die Verwaltung und das Erstellen von Berichten;%{États} et \menus{Création d'un état} décrivent la gestion et la création des états;
+	\item \menus{Grisbi-Konfiguration} enthält detaillierte Angaben zu allen Einstellungsmöglichkeiten der Software;%{Configuration de Grisbi} détaille toutes les possibilités de réglage du logiciel;
+	\item \menus{Wartungswerkzeuge} enthält einige Schlüssel, die Sie im Falle von Fehlern oder Bugs verwenden können.%{Outils de maintenance} donne quelques clés à utiliser en cas d'erreurs ou de bogues.
 \end{itemize}
 
 
@@ -462,22 +462,22 @@ Die folgende Liste definiert und illustriert typografische Konventionen, die als
 \begin{itemize}
 	\item Schnittstellenkomponenten sind Fenstertitel, Symbol- und Schaltflächennamen, Menünamen und andere Optionen, die auf dem Bildschirm erscheinen; sie werden so dargestellt:%les composants d'interface sont des titres de fenêtre, des noms d'icône et de bouton, des noms de menu et d'autres options qui apparaissent sur l'écran; ils sont présentés ainsi:
 		\newline
-		\hspace*{1.5cm}klicken Sie auf \menu{Enter}%cliquez sur \menu{Retour};
+		\hspace*{1.5cm}klicken Sie auf \menus{Enter}%cliquez sur \menus{Retour};
 	\item Die Tastaturbeschriftung stellt dar, was auf den Tasten der Tastatur geschrieben wird; sie wird so dargestellt:%le libellé des touches du clavier représente ce qui est écrit sur les touches du clavier; il est présenté ainsi:
 		\newline
-		\hspace*{1.5cm}drücken Sie die Taste \key{Enter};%appuyez sur la touche \key{Entrée};	
+		\hspace*{1.5cm}drücken Sie die Taste \keys{Enter \return};%appuyez sur la touche \key{Entrée};	
 	\item Tastenkombinationen sind eine Reihe von Tasten, die (sofern nicht anders angegeben) gleichzeitig gedrückt werden müssen, um eine einzige Funktion auszuführen:%les combinaisons de touches sont une série de touches à enfoncer 	simultanément (à moins d'indication contraire) pour réaliser une fonction unique; elles sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}drücken Sie die Tastenkombination \key{Strg/Ctrl}\key{R}%appuyez sur la combinaison de touches \key{Ctrl}\key{R};
+		\hspace*{1.5cm}drücken Sie die Tastenkombination \keys{Strg+R}%appuyez sur la combinaison de touches \key{Ctrl}\key{R};
 	\item werden Befehle, die Teil einer Anweisung sind und eingegeben werden müssen, so dargestellt:%les commandes qui font partie d'une instruction et qui doivent être saisies sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}geben Sie \cmd{grisbi} ein, um das Programm zu starten%tapez \cmd{grisbi} pour démarrer le programme;
+		\hspace*{1.5cm}geben Sie \cmds{grisbi} ein, um das Programm zu starten%tapez \cmds{grisbi} pour démarrer le programme;
 	\item werden die Datei- und Verzeichnisnamen so dargestellt:%les noms de fichier et de répertoire sont présentés ainsi:
 		\newline
 		\hspace*{1.5cm}\file{grisbi-n.n.n.rpm} und \file{/usr/local/bin};	
 	\item Befehlszeilen bestehen aus einem Befehl und können einen oder mehrere mögliche Parameter des Befehls enthalten; sie werden so dargestellt:%les lignes de commande consistent en une commande et peuvent inclure un ou plusieurs paramètres possibles de la commande ; elles sont présentées ainsi:
 		\newline
-		\hspace*{1.5cm}	\cmd{rpm -Uvh grisbi-n.n.n.rpm}
+		\hspace*{1.5cm}	\cmds{rpm -Uvh grisbi-n.n.n.rpm}
 	\item Jede alphanumerische Zeichenfolge in blauer Farbe in einem Dokument im Format \gls{PDF} oder \gls{HTML} ist ein Hyperlink, der entweder auf ein Bild, einen anderen Teil des Dokuments, ein Indexwort oder das Glossar (nur für \gls{PDF}) verweist;%toute suite de caractères alphanumériques en bleu, dans le document au format \gls{PDF} ou \gls{HTML}, est un lien hypertexte, renvoyant soit à une image, une autre partie du document, un mot indexé ou encore au glossaire (pour \gls{PDF} uniquement);
 	\item Wörter oder Wortgruppen, auf die im Index verwiesen wird, werden in den Kapiteln so hervorgehoben:%les mots ou groupes de mots référencés dans l'index sont mis en valeur dans les chapitres ainsi:
 		\newline
