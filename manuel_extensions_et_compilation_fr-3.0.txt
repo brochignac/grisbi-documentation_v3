@@ -24,6 +24,7 @@ hyperref (1)(2)=[2024/10] (remplace url)
 idxlayout (1),
 imakeidx (1),
 macros-3.0, pointe vers /git/src/macro-3.0.sty,
+menukeys (1)
 picins (2)=[1995] (est remplacé par wrapfig2),
 translator (1),
 ---url (1) (est remplacé par hyperref),
