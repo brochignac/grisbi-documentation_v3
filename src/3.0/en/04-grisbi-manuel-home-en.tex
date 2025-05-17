@@ -333,27 +333,27 @@ This menu includes the following functions:
 	%\vspace{30pt}					% space below the caption
 	\label{home_menubar_file}
 \end{minipage}
-%TODO following
+
 \begin{itemize}
-	\item \menus{Save}: Saves the current account file  (shortcut \keys{Ctrl+S}):
-	\item \menus{Save as...}: opens a file manager to save the current accounts file with the name and location of your choice; Grisbi defaults to the current directory, the name of the current accounts file, with the \file{.gsb} extension:
-	\item \menus{Import file...}: starts the file import wizard of another software; see  \vref{move-import-importinit}:
-	\item \menus{Export accounts as QIF/CSV file...}: starts the Export Account File Wizard; see \vref{move-export}:	
-	\item \menus{Archive transactions...}: starts the archive creation wizard; see \vref{datamanagement-history-new}:	
-	\item \menus{Export an archive as GSB/QIF/CSV file...}: starts the archive export wizard; see \vref{datamanagement-history-export}:
-	\item \menus{Debug account file...}: starts the debug wizard for this file, which will help you look for inconsistencies in your account file; see  \vref{maintenance-file-debug}:
-	\item \menus{Obfuscate account file...}: starts the wizard that produces an anonymous copy of your account file; this file can be attached to a bug report; see \vref{maintenance-file-anonymous}:	
-	\item \menus{Obfuscate QIF file...}: starts the wizard that produces an anonymous copy of this file; this file can be attached to a bug report; see \vref{maintenance-QIF-anonymous}:	
-	\item \menus{Debug mode}: puts Grisbi in debug mode, which creates a log file of events; see \vref{maintenance-debug-mode}: 	
-	\item \menus{Close}: closes the current accounts file; Grisbi offers to save it if you have not already done it (shortcut key \key{Ctrl}\key{W}):
-	\item \menus{Quit}: close Grisbi: Grisbi prompts you to save the account file if you have made any changes (shortcut key \key{Ctrl}\key{Q}).
+	\item \menus{Save}: Saves the current account file (shortcut \keys{Ctrl+S});%\menus{Enregistrer}: enregistre le fichier de comptes en cours (raccourci-clavier \keys{Ctrl+S});
+	\item \menus{Save As}: opens a file manager to save the current accounts file with the name and location of your choice; Grisbi defaults to the current directory, the name of the current accounts file, with the \file{.gsb} extension;%\menus{Enregistrer sous}: ouvre un gestionnaire de fichiers pour enregistrer le fichier de comptes en cours avec le nom et à l'emplacement de votre choix; Grisbi vous propose par défaut le répertoire courant, le nom du fichier de comptes en cours, avec l'\gls{extension} \file{.gsb};
+	\item \menus{Import file}: starts the \enquote{Importing transactions into Grisbi} wizard of another software (shortcut \keys{Ctrl+I}); see \vref{move-import-importinit};%\menus{Importer un fichier}: démarre l'assistant d'importation de fichiers d'un autre logiciel (raccourci-clavier \keys{Ctrl+I}); voir la section \vref{move-import-importinit};
+	\item \menus{Export accounts as \gls{QIF}/\gls{CSV} file}: starts the \enquote{Exporting Grisbi accounts} wizard (shortcut \keys{Ctrl+E}); see \vref{move-export};%\menus{Exporter vers un fichier QIF/CSV}: démarre l'assistant d'exportation de fichiers de compte (raccourci-clavier \keys{Ctrl+E}); voir la section \vref{move-export};	
+	\item \menus{Archive transactions}: starts the archive creation wizard; see \vref{datamanagement-history-new};%\menus{Créer une archive}: démarre l'assistant de création d'archive; voir la section \vref{datamanagement-history-new};	
+	\item \menus{Export an archive as \gls{GSB}/\gls{QIF}/\gls{CSV} file}: starts the archive export wizard; see \vref{datamanagement-history-export};%\menus{Exporter une archive vers un fichier GSB/QIF/CSV}: démarre l'assistant d'exportation d'archive; voir la section \vref{datamanagement-history-export};
+	\item \menus{Debug account file}: starts the debug wizard for this file, which will help you look for inconsistencies in your account file; see \vref{maintenance-file-debug};%\menus{Déboguer le fichier de comptes}: démarre l'assistant de débogage de ce fichier, qui va vous aider à chercher des incohérences dans votre fichier de comptes; voir la section \vref{maintenance-file-debug};
+	\item \menus{Obfuscate account file}: starts the wizard that produces an anonymous copy of your account file; this file can be attached to a bug report; see \vref{maintenance-file-anonymous};%\menus{Rendre anonyme le fichier de comptes}: démarre l'assistant qui produit une copie anonymée (de manière irréversible) de votre fichier de comptes; ce fichier pourra être joint à un rapport de bogue; voir la section \vref{maintenance-file-anonymous};	
+	\item \menus{Obfuscate QIF file}: starts the wizard that produces an anonymous copy of this file; this file can be attached to a bug report; see \vref{maintenance-QIF-anonymous};%\menus{Rendre anonyme le fichier QIF}: démarre l'assistant qui produit une copie anonymée (de manière irréversible) de ce fichier; ce fichier pourra être joint à un rapport de bogue; voir la section \vref{maintenance-QIF-anonymous};	
+	\item \menus{Debug mode}: puts Grisbi in debug mode, which creates a log file of events; see \vref{maintenance-debug-mode};%\menus{Mode de débogage}: met Grisbi en mode de débogage, qui crée un fichier-journal des évènements; voir la section \vref{maintenance-debug-mode}; 	
+	\item \menus{Close}: closes the current accounts file; Grisbi offers to save it if you have not already done it (shortcut \keys{Ctrl+W});%\menus{Fermer}: ferme le fichier de comptes en cours; Grisbi vous propose de l'enregistrer si ce n'est déjà fait (raccourci-clavier \keys{Ctrl+W});
+	\item \menus{Quit}: close Grisbi; Grisbi will first ask you to save the accounts file, if you have not already done so (shortcut \keys{Ctrl+Q});%\menus{Quitter}: ferme Grisbi; Grisbi vous propose auparavant d'enregistrer le fichier de comptes, si ce n'est pas déjà fait (raccourci-clavier \keys{Ctrl+Q}).
 \end{itemize}
 
 
 \subsection{\menus{Edit} menu\label{home-menus-edit}}
 
 This menu includes the following functions:
-
+%TODO following
 \begin{itemize}
 	\item \menus{Edit transaction}: see \vref{transactions-modify}, \menus{Modify a transaction}:
 	\item \menus{New transaction}: see \vref{transactions-new}, \menus{Entering a new transaction}:
