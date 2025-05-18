@@ -354,17 +354,50 @@ This menu includes the following functions:
 
 This menu includes the following functions:
 %TODO following
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{Edit transaction}: allows an existing operation to be rectified, see section \vref{transactions-modify}, \menus{Modification d'une opération};%TODO to translate
+		%\menus{Éditer l'opération}: permet la rectification d'une opération existante, voir la section \vref{transactions-modify}, \menus{Modification d'une opération};
+		\item \menus{Edit transaction}: allows the creation of a new transaction in an account (shortcut \keys{Ctrl+T}), see the section \vref{transactions-new}, \menus{Saisie d'une nouvelle opération};%TODO to translate
+		%\menus{Nouvelle opération}: permet la création d'une nouvelle opération dans un compte (raccourci-clavier \keys{Ctrl+T}), voir la section \vref{transactions-new}, \menus{Saisie d'une nouvelle opération};
+		\item \menus{Remove transaction}: deletes an existing operation, see section \vref{transactions-delete}, \menus{Deleting a transaction};
+		%\menus{Supprimer une opération}: supprime une opération existante, voir la section \vref{transactions-delete}, \menus{Suppression d'une opération};
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	\vspace{-5pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_edit}
+	\vspace{-15pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%				% define "figure" or "table" type, mandatory
+		name=Fig.,%					% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}			% define the separator between the label and the caption text
+	\caption{\menus{Edit} menu}	% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_edit}
+\end{minipage}
+
 \begin{itemize}
-	\item \menus{Edit transaction}: see \vref{transactions-modify}, \menus{Modify a transaction}:
-	\item \menus{New transaction}: see \vref{transactions-new}, \menus{Entering a new transaction}:
-	\item \menus{Remove transaction}: see \vref{transactions-delete}, \menus{Deleting a transaction}:
-	\item \menus{Use selected transaction as a template}: see \vref{transactions-model}, \menus{Selecting a transaction for use as a template}:
-	\item \menus{Clone transaction}: see \vref{transactions-duplicate}, \menus{Clone a transaction}:
-	\item \menus{Convert to scheduled transaction}: see \vref{transactions-schedule}, \menus{Converting a transaction to a scheduled transaction}:
-	\item \menus{Move transaction to another account}: see \vref{transactions-move}, \menus{Moving a transaction to another account}:
-	\item \menus{New account}: see \vref{accounts-new}, \menus{Creating a new account}:
-	\item \menus{Remove current account}: see \vref{accounts-delete}, \menus{Removing the current account}:
-	\item \menus{Preferences}: allows you to configure Grisbi; see the \vref{setup}, \menus{Configuration of Grisbi} chapter.
+	\item \menus{Use selected transaction as a template}: allows you to create a new operation from a selected operation, see \vref{transactions-model}, \menus{Selecting a transaction for use as a template}:
+	%\menus{Utiliser l'opération sélectionnée comme modèle}: permet de créer une nouvelle opération à partir d'une opération sélectionnée, voir la section \vref{transactions-model}, \menus{Opération sélectionnée comme modèle};
+	\item \menus{Clone transaction}: is used to duplicate an existing operation, see section \vref{transactions-duplicate}, \menus{Clone a transaction};
+	%\menus{Cloner l'opération}: permet de dupliquer une opération existante, voir la section \vref{transactions-duplicate}, \menus{Clonage d'une opération};
+	\item \menus{Convert to scheduled transaction}: see section \vref{transactions-schedule}, \menus{Converting a transaction to a scheduled transaction};
+	%\menus{Convertir en opération planifiée}: voir la section \vref{transactions-schedule}, \menus{Conversion d'une opération en opération planifiée};
+	\item \menus{Move transaction to another account}: see section \vref{transactions-move}, \menus{Moving a transaction to another account};
+	%\menus{Déplacer l'opération vers un autre compte}: voir la section \vref{transactions-move}, \menus{Déplacement d'une opération vers un autre compte};
+	\item \menus{Search}: displays the string or amount search box, """see chapter \vref{reportscreation}, \menus{Création d'un état}""";%TODO to modify
+	%\menus{Rechercher}: affiche la fenêtre de	recherche d'une chaîne de caractères ou de montants, """voir le chapitre \vref{reportscreation}, \menus{Création d'un état}""";
+	\item \menus{New account}: starts the wizard for creating a new account in your Grisbi file (shortcut \keys{Shift+Ctrl+N}), see section \vref{accounts-new}, \menus{Creating a new account};
+	%\menus{Nouveau compte}: démarre l'assistant de	création d'un nouveau compte dans votre fichier Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+N}), voir la section \vref{accounts-new}, \menus{Création d'un nouveau compte};
+	\item \menus{Remove current account}: deletes the selected account from your Grisbi file, see section \vref{accounts-delete}, \menus{Removing the current account}:
+	%\menus{Supprimer le compte courant}: efface le compte sélectionné de votre fichier Grisbi, voir la section \vref{accounts-delete}, \menus{Suppression d'un compte};
+	\item \menus{Preferences}: allows you to configure Grisbi (shortcut \keys{Maj \shift+Ctrl+P}); see the chapter \vref{setup}, \menus{Configuration of Grisbi}.
+	%\menus{Préférences}: permet de configurer Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+P}); voir le chapitre \vref{setup}, \menus{Configuration de Grisbi}.
 \end{itemize}
 
 
