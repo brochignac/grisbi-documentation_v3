@@ -354,6 +354,8 @@ Dieses Menü enthält die folgenden Funktionen:%This menu includes the following
 
 \subsection{Menü\label{home-menus-edit} \menus{Bearbeiten}}
 
+\textbf{Notiz}: Im Menü Bearbeiten sind einige Einträge erst aktiv wenn ein Konto oder eine Buchung ausgewählt wird.
+
 Dieses Menü enthält die folgenden Funktionen:%This menu includes the following functions:
 
 \vspace{3mm}
@@ -387,17 +389,23 @@ Dieses Menü enthält die folgenden Funktionen:%This menu includes the following
 \end{minipage}
 
 \begin{itemize}
-	%\item \menus{Edit transaction}: see \vref{transactions-modify}, \menus{Modify a transaction};
-	%\item \menus{New transaction}: see \vref{transactions-new}, \menus{Entering a new transaction};
-	%\item \menus{Remove transaction}: see \vref{transactions-delete}, \menus{Deleting a transaction};
-	\item \menus{Buchung als Vorlage verwenden}: see \vref{transactions-model}, \menus{Selecting a transaction for use as a template};
-	%\item \menus{Use selected transaction as a template}: see \vref{transactions-model}, \menus{Selecting a transaction for use as a template};
-	\item \menus{Clone transaction}: see \vref{transactions-duplicate}, \menus{Clone a transaction};
-	\item \menus{Convert to scheduled transaction}: see \vref{transactions-schedule}, \menus{Converting a transaction to a scheduled transaction};
-	\item \menus{Move transaction to another account}: see \vref{transactions-move}, \menus{Moving a transaction to another account};
-	\item \menus{New account}: see \vref{accounts-new}, \menus{Creating a new account};
-	\item \menus{Remove current account}: see \vref{accounts-delete}, \menus{Removing the current account};
-	\item \menus{Preferences}: allows you to configure Grisbi; see the \vref{setup}, \menus{Configuration of Grisbi} chapter.
+	\item \menus{Buchung als Vorlage verwenden}: 
+	%Use selected transaction as a template}: allows you to create a new operation from a selected operation, see \vref{transactions-model}, \menus{Selecting a transaction for use as a template}:
+	%\menus{Utiliser l'opération sélectionnée comme modèle}: permet de créer une nouvelle opération à partir d'une opération sélectionnée, voir la section \vref{transactions-model}, \menus{Opération sélectionnée comme modèle};
+	\item \menus{Clone transaction}: is used to duplicate an existing operation, see section \vref{transactions-duplicate}, \menus{Clone a transaction};
+	%\menus{Cloner l'opération}: permet de dupliquer une opération existante, voir la section \vref{transactions-duplicate}, \menus{Clonage d'une opération};
+	\item \menus{Convert to scheduled transaction}: see section \vref{transactions-schedule}, \menus{Converting a transaction to a scheduled transaction};
+	%\menus{Convertir en opération planifiée}: voir la section \vref{transactions-schedule}, \menus{Conversion d'une opération en opération planifiée};
+	\item \menus{Move transaction to another account}: see section \vref{transactions-move}, \menus{Moving a transaction to another account};
+	%\menus{Déplacer l'opération vers un autre compte}: voir la section \vref{transactions-move}, \menus{Déplacement d'une opération vers un autre compte};
+	\item \menus{Search}: displays the string or amount search box, """see chapter \vref{reportscreation}, \menus{Création d'un état}""";%TODO to modify
+	%\menus{Rechercher}: affiche la fenêtre de	recherche d'une chaîne de caractères ou de montants, """voir le chapitre \vref{reportscreation}, \menus{Création d'un état}""";
+	\item \menus{New account}: starts the wizard for creating a new account in your Grisbi file (shortcut \keys{Shift+Ctrl+N}), see section \vref{accounts-new}, \menus{Creating a new account};
+	%\menus{Nouveau compte}: démarre l'assistant de	création d'un nouveau compte dans votre fichier Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+N}), voir la section \vref{accounts-new}, \menus{Création d'un nouveau compte};
+	\item \menus{Remove current account}: deletes the selected account from your Grisbi file, see section \vref{accounts-delete}, \menus{Removing the current account}:
+	%\menus{Supprimer le compte courant}: efface le compte sélectionné de votre fichier Grisbi, voir la section \vref{accounts-delete}, \menus{Suppression d'un compte};
+	\item \menus{Preferences}: allows you to configure Grisbi (shortcut \keys{Maj \shift+Ctrl+P}); see the chapter \vref{setup}, \menus{Configuration of Grisbi}.
+	%\menus{Préférences}: permet de configurer Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+P}); voir le chapitre \vref{setup}, \menus{Configuration de Grisbi}.
 \end{itemize}
 
 
