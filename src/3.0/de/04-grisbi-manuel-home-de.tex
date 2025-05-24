@@ -356,10 +356,40 @@ Dieses Menü enthält die folgenden Funktionen:%This menu includes the following
 
 Dieses Menü enthält die folgenden Funktionen:%This menu includes the following functions:
 %TODO following
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{Buchung bearbeiten}: ermöglicht es, einen ausgewählten Vorgang zu korrigieren, siehe Abschnitt \vref{transactions-modify}, \menus{Modification d'une opération};%TODO to translate
+		% allows a selected operation to be rectified, see section \vref{transactions-modify}, \menus{Modification d'une opération};%TODO to translate
+		%\menus{Éditer l'opération}: permet la rectification d'une opération existante, voir la section \vref{transactions-modify}, \menus{Modification d'une opération};
+		\item \menus{Buchung erstellen}: ermöglicht die Erstellung einer neuen Transaktion in einem Konto (Tastaturkürzel {Strg+T}), siehe den Abschnitt \vref{transactions-new}, \menus{Saisie d'une nouvelle opération};%TODO to translate
+		% allows the creation of a new transaction in an account (shortcut \keys{Ctrl+T}), see the section \vref{transactions-new}, \menus{Saisie d'une nouvelle opération};%TODO to translate
+		%\menus{Nouvelle opération}: permet la création d'une nouvelle opération dans un compte (raccourci-clavier \keys{Ctrl+T}), voir la section \vref{transactions-new}, \menus{Saisie d'une nouvelle opération};
+		\item \menus{Buchung löschen}: löscht einen ausgewählten Vorgang, siehe Abschnitt \vref{transactions-delete}, \menus{Deleting a transaction};%TODO to translate
+		% deletes a selected operation, see section \vref{transactions-delete}, \menus{Deleting a transaction};
+		%\menus{Supprimer une opération}: supprime une opération existante, voir la section \vref{transactions-delete}, \menus{Suppression d'une opération};
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	\vspace{-5pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_edit}
+	\vspace{-15pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%				% define "figure" or "table" type, mandatory
+		name=Abb.,%					% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}			% define the separator between the label and the caption text
+	\caption{Menü \menus{Bearbeiten}}	% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_edit}
+\end{minipage}
+
 \begin{itemize}
-	\item \menus{Edit transaction}: see \vref{transactions-modify}, \menus{Modify a transaction};
-	\item \menus{New transaction}: see \vref{transactions-new}, \menus{Entering a new transaction};
-	\item \menus{Remove transaction}: see \vref{transactions-delete}, \menus{Deleting a transaction};
+	%\item \menus{Edit transaction}: see \vref{transactions-modify}, \menus{Modify a transaction};
+	%\item \menus{New transaction}: see \vref{transactions-new}, \menus{Entering a new transaction};
+	%\item \menus{Remove transaction}: see \vref{transactions-delete}, \menus{Deleting a transaction};
 	\item \menus{Use selected transaction as a template}: see \vref{transactions-model}, \menus{Selecting a transaction for use as a template};
 	\item \menus{Clone transaction}: see \vref{transactions-duplicate}, \menus{Clone a transaction};
 	\item \menus{Convert to scheduled transaction}: see \vref{transactions-schedule}, \menus{Converting a transaction to a scheduled transaction};
