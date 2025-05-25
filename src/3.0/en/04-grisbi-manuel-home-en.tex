@@ -403,12 +403,55 @@ This menu includes the following functions:
 	%\menus{Préférences}: permet de configurer Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+P}); voir le chapitre \vref{setup}, \menus{Configuration de Grisbi}.
 \end{itemize}
 
-%TODO following
+
 \subsection{\menus{View} menu\label{home-menus-display}}
 
 \textbf{Note}: in the \menus{View} menu, entries are only active when an account is selected.
 
 This menu includes the following functions: 
+
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{Show transaction form}: expands the Transaction/Scheduled form for the selected account;
+		%Montrer le formulaire de saisie des opérations}: permet de développer le formulaire de saisie des opérations du compte sélectionné;
+		\item \menus{Show reconciled}: displays reconciled transactions for the selected account (shortcut \keys{Alt+R});
+		%Montrer les opérations rapprochées}: permet l'affichage des opérations rapprochées du compte sélectionné (raccourci-clavier \keys{Alt+R});
+		\item \menus{Show lines archives}: displays the archive lines for the selected account (shortcut \keys{Alt+L});
+		%Montrer les lignes d'archives}: affiche les lignes d'archives du compte sélectionné (raccourci-clavier \keys{Alt+L});
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	%\vspace{-10pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_view}
+	\vspace{-20pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%				% define "figure" or "table" type, mandatory
+		name=Fig.,%					% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}			% define the separator between the label and the caption text
+	\caption{\menus{View} Menu}		% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_view}
+\end{minipage} %TODO following
+\begin{itemize}
+	\item \menus{Show \indexword{closed accounts}}\index{closed!account}:
+	\item \menus{Montrer les \indexword{comptes clos}}\index{compte!clos}: affiche le(s) compte(s) clos et non supprimé(s), voir la section \vref{accounts-properties}, \menus{Propriétés d'un compte};
+	\begin{addmargin*}[-10pt]{0cm} 	% modify margin, * : left = right, [] = obligatory argument indentation, {} = optional argument left indentation 
+		Les quatres fonctions suivantes permettent de configurer l'affichage des opérations du compte sélectionné:
+	\end{addmargin*}
+	\item \menus{Montrer une ligne par opération};
+	\item \menus{Montrer deux lignes par opération};
+	\item \menus{Montrer trois lignes par opération};
+	\item \menus{Montrer quatre lignes par opération};
+	\begin{addmargin*}[-10pt]{0cm} 	% modify margin, * : left = right, [] = obligatory argument indentation, {} = optional argument left indentation 
+		Et enfin la dernière fonction du menu d'affichage:
+	\end{addmargin*}	
+	\item \menus{Réinitialiser la largeur des colonnes}: permet de remettre les colonnes des listes d'opérations du compte sélectionné ou de l'échéancier à leur largeur d'origine.
+\end{itemize}
+
 
 \begin{itemize}
 	 \item \menus{Show transaction form}: 
