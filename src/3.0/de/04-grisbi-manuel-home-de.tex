@@ -428,17 +428,51 @@ Dieses Menü enthält die folgenden Funktionen:%This menu includes the following
 
 Dieses Menü enthält die folgenden Funktionen:%This menu includes the following functions: 
 %TODO following
-
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+	\item \menus{Show transaction form}: expands the Transaction/Scheduled form for the selected account;
+	%Montrer le formulaire de saisie des opérations}: permet de développer le formulaire de saisie des opérations du compte sélectionné;
+	\item \menus{Show reconciled}: displays reconciled transactions for the selected account (shortcut \keys{Alt+R});
+	%Montrer les opérations rapprochées}: permet l'affichage des opérations rapprochées du compte sélectionné (raccourci-clavier \keys{Alt+R});
+	\item \menus{Show lines archives}: displays the archive lines for the selected account (shortcut \keys{Alt+L});
+	%Montrer les lignes d'archives}: affiche les lignes d'archives du compte sélectionné (raccourci-clavier \keys{Alt+L});
+	\item \menus{Show \indexword{closed accounts}}\index{closed!account}: displays account(s) that have been closed and not deleted, see section \vref{accounts-properties}, \menus{Account properties?}; %TODO to update
+	%\menus{Montrer les \indexword{comptes clos}}\index{compte!clos}: affiche le(s) compte(s) clos et non supprimé(s), voir la section \vref{accounts-properties}, \menus{Propriétés d'un compte};
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	%\vspace{-10pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_view}
+	\vspace{-20pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+	type=figure,%				% define "figure" or "table" type, mandatory
+	name=Fig.,%					% rename label caption, default="Figure" (or "Table")
+	labelsep=newline}			% define the separator between the label and the caption text
+	\caption{\menus{View} Menu}		% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_view}
+\end{minipage}
+\vspace{2mm}
+\begin{addmargin*}[0pt]{.7cm} 	% modify margin, * : left = right, [] = obligatory argument indentation, {} = optional argument left indentation 
+The following four functions can be used to configure the display of transactions for the selected account:
+%Les quatres fonctions suivantes permettent de configurer l'affichage des opérations du compte sélectionné:
+\end{addmargin*}
+\vspace{-2mm}
 \begin{itemize}
-	 \item \menus{Show transaction form}; 
-	 \item \menus{Show reconciles} (shortcut key \key{Alt}\key{R});
-	 \item \menus{Show lines archives} (shortcut key \key{Altl}\key{L});
-	 \item \menus{Show \indexword{closed accounts}}\index{compte !clos};
-	 \item \menus{Show one line per transaction};
-	 \item \menus{Show two lines per transaction};
-	 \item \menus{Show three lines per transaction};
-	 \item \menus{Show four lines per transaction};
-	 \item \menus{Reset the column width}; allows you to reset the columns of the tranaction lists to their original width.
+	\item \menus{Show one line per transaction}%Montrer une ligne par opération};
+	\item \menus{Show two lines per transaction}%Montrer deux lignes par opération};
+	\item \menus{Show three lines per transaction}%Montrer trois lignes par opération};
+	\item \menus{Show four lines per transaction}%Montrer quatre lignes par opération};
+	\vspace{2mm}
+	\begin{addmargin}[0pt]{-.35cm} 	% modify margin, * : left = right, [] = obligatory argument indentation, {} = optional argument left indentation 
+	And finally, the last function in the view menu:%Et enfin la dernière fonction du menu d'affichage:
+	\end{addmargin}	
+	\item \menus{Reset the column width}: allows you to reset the columns of the tranaction lists to their original width. 
+	%Réinitialiser la largeur des colonnes}: permet de remettre les colonnes des listes d'opérations du compte sélectionné ou de l'échéancier à leur largeur d'origine.
 \end{itemize}
 
 
