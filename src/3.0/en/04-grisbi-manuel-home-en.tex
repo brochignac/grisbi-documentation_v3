@@ -462,37 +462,66 @@ This menu includes the following functions:
 	%Réinitialiser la largeur des colonnes}: permet de remettre les colonnes des listes d'opérations du compte sélectionné ou de l'échéancier à leur largeur d'origine.
 \end{itemize}
 
-%TODO following
 
 \subsection{\menus{Help} menu\label{home-menus-help}}
 
-Most of the choices in this menu give links to websites. In order for these links to work, you must have specified to Grisbi the navigation software (or browser) that you wish to use, in the \menus{Edit - Preferences} (see \vref{setup-general-programs}, \menus{Programmes}). The \menus{Help} menu includes the following choices\footnote{\strong{Translators Note:} A "help us with translation" menu item is mentioned in the French version of the manual but does note appear in the English version of Grisbi at release 1.0}:
+Most of the choices in this menu give links to websites. In order for these links to work, you must have specified to Grisbi the navigation software (or Web browser) that you wish to use, in the \menus{Edit - Preferences} (see \vref{setup-general-programs}, \menus{Programmes}). The \menus{Help} menu includes the following choices:
+%La plupart des choix de ce menu donnent accès à des sites Web. Pour que ces accès fonctionnent, il faut avoir indiqué à Grisbi le logiciel de navigation (ou navigateur) que vous souhaitez utiliser, dans le menu \menus{Édition - Préférences} (voir la section \vref{setup-general-programs}, \menus{Programmes}). Le menu \menus{Aide} comprend les choix suivants:
 
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{User's Manual}:opens your browser to the \enquote{Grisbi User Manual page} (shortcut \keys{F1}); 
+		%Manuel}: ouvre votre navigateur à la page \frquote{Manuel de l'Utilisateur de Grisbi} (raccourci-clavier \keys{F1});
+		\item \menus{Quick start}: opens your browser to the \enquote{Grisbi Quick Start page};
+		%Démarrage rapide}: ouvre votre navigateur à la page \frquote{Démarrage Rapide de Grisbi};
+		\item \menus{About}: displays the program information box: you will find details about the version, the link to Grisbi's site, the acknowledgements page (contributors to the project) and the user license;
+		%À propos}: affiche la fenêtre d'information sur l'application; vous y trouverez des détails sur la version, le lien vers le site de Grisbi, les remerciements (contributeurs au projet) et la licence d'utilisation;
+		\item \menus{Grisbi website}: opens your browser to the \lang{Grisbi}\footnotemark web site
+		%Site Web de Grisbi}; ouvre votre navigateur à la page du site de \lang{Grisbi}\footnote{\urlGrisbi{}};
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+	%\vspace{-15pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\centering						% centering the floating figure in the "wrap"
+	\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_help}
+	\vspace{-15pt}					% space between the floating and the caption below the floating
+	\captionsetup{
+		type=figure,%				% define "figure" or "table" type, mandatory
+		name=Fig.,%					% rename label caption, default="Figure" (or "Table")
+		labelsep=newline}			% define the separator between the label and the caption text
+	\caption{\menus{Help} menu}	% \caption is mandatory to reference a figure in lof
+	%\vspace{30pt}					% space below the caption
+	\label{home_menubar_help}
+\end{minipage} 
+\footnotetext{\urlGrisbi{}}	% to move footnote out of minipage
 \begin{itemize}
-\item \menus{Manual}: opens your browser to the  \enquote{Grisbi User Manual page} (shortcut key  \key{Ctrl}\key{H}):
-\item \menus{Quick start}: opens your browser to the  \enquote{Grisbi Quick Start page}:
-%	\item \menus{Traduction}: opens your browser to the \enquote{Translate Grisbi}, to help us to widen the internationalization of Grisbi:
-\item \menus{About Grisbi...}: displays the program information box: you will find details about the version, the link to Grisbi's site, the acknowledgements page (contributors to the project) and the user license:
-\item \menus{Grisbi website}: opens your browser to the \lang{Grisbi}\footnote{\urlGrisbi{}} web site:
-\item \menus{Report a bug}: opens your browser to the \lang{Grisbi Bug Tracker page}\footnote{\urlBugTracker{}} to allow you to report a bug that you have discovered. You can also follow on this page the evolution of the corrections made to the reported bugs;
-\item \menus{Tip of the day}: opens a dialog box that displays a tip of use, different each time Grisbi starts; you can successively display all the tips, and choose whether or not the display of the tip of the day when starting Grisbi. To remove or reactivate the tip of the day, see \vref{setup-display-messages-trick}, \menus{Tip of the day}.
+	\item \menus{Report a bug}: opens your browser to the \lang{Grisbi Bug Tracker page}\footnote{\urlBugTracker{}} to allow you to report a bug that you have discovered. You can also follow on this page the evolution of the corrections made to the reported bugs;
+	%Signaler une anomalie}; ouvre votre navigateur à la page du \lang{traqueur de bogues de Grisbi}\footnote{\urlBugTracker{}} pour vous permettre de signaler un bogue que vous auriez découvert. Vous pouvez également suivre sur cette page l'évolution des corrections apportées aux bogues signalés;
+	\item \menus{Tip of the day}: opens a dialog box that displays a tip of use, different each time Grisbi starts; you can successively display all the tips, and choose whether or not the display of the tip of the day when starting Grisbi. To remove or reactivate the tip of the day, see \vref{setup-display-messages-trick}, \menus{Tip of the day}.
+	%Astuce du jour}; ouvre une boîte de dialogue qui affiche une astuce d'utilisation, différente à chaque démarrage de Grisbi; vous pouvez y afficher successivement toutes les astuces, et choisir ou non l'affichage de l'astuce du jour au démarrage de Grisbi. Pour activer ou supprimer l'astuce du jour, vous pouvez cocher/décocher la case \frquote{\menus{Afficher l'astuce lors du prochain démarrage}}, voir le paragraphe \vref{setup-display-messages-trick}, \menus{Astuce du jour}.
 \end{itemize}
 
 
 \section{Shortcut keys\label{home-shortcuts}}
 
 
-Keyboard shortcuts make it easy to enter data and navigate through Grisbi's windows, avoiding the need to move and click. By using the ones corresponding to the most common manipulations for you, you improve your \indexword{ergonomics}\index{ergonomie} by limiting the important movements of your arms.
+Keyboard shortcuts make it easy to enter data and navigate through Grisbi's windows, avoiding the need to move and click. By using the ones corresponding to the most common manipulations for you, you improve your \indexword{ergonomics}\index{ergonomics} by limiting the important movements of your arms.
+%Les raccourcis-clavier facilitent la saisie des données et la navigation dans les fenêtres de Grisbi, en évitant le recours systématique au déplacement et au clic de la souris. En utilisant ceux correspondant aux manipulations les plus courantes pour vous, vous améliorez votre \indexword{ergonomie}\index{ergonomie} en limitant les mouvements importants de vos bras.
 
 Grisbi has a number of keyboard shortcuts, presented here according to different themes (see also  \vref{introduction-manual-conventions}, \menus{Typographical conventions in this manual}).
-.
+%Grisbi dispose d'un certain nombre de raccourcis-clavier, listés dans les préférences de Grisbi (voir \vref{{setup-display-toolbars}}), présentés ici selon différents thèmes, (voir aussi la section \vref{introduction-manual-conventions}, \menus{Conventions typographiques du présent manuel}).
 
 \subsection{Application and files}
 
 \begin{itemize}
-\item New accounts file: \key{Ctrl}\key{N}
-\item Open an account file: \key{Ctrl}\key{O}
-\item Register the account file: \key{Ctrl}\key{S}
+\item Create a new Grisbi file: \keys{Ctrl+N};%Créer un Nouveau fichier Grisbi: \keys{Ctrl+N}
+\item Open a Grisbi file: \keys{Ctrl+O};%Ouvrir un fichier Grisbi: \keys{Ctrl+O}
+\item Add a new account to the Grisbi file: \keys{Ctrl+Shift \shift+N};%Ajouter un nouveau compte au fichier Grisbi: \keys{Ctrl+Maj \shift+N}
+%TODO following
+\item Save the Grisbi file: \keys{Ctrl+S}%Enregistrer le fichier Grisbi: \keys{Ctrl+S};
 \item Close the account file: \key{Ctrl}\key{W}
 \item Close Grisbi: \key{Ctrl}\key{Q}
 \end{itemize}
