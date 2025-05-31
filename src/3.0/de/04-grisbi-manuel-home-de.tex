@@ -9,9 +9,9 @@
 % $Id: grisbi-manuel-home.tex, v 1.0 2014/02/12 Jean-Luc Duflot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Eintritt in Grisbi\label{entrance}}%Entrée dans Grisbi%Entering Grisbi
+\chapter{Eintritt in Grisbi\label{entrance}} %Entrée dans Grisbi%Entering Grisbi
 
-\section{Auswahl einer Datei\label{select-file}}%Sélection d'un fichier%Selecting a file
+\section{Auswahl einer Datei\label{select-file}} %Sélection d'un fichier%Selecting a file
 
 \vspacepdf{3mm}			% vertical space = 5 mm
 
@@ -19,7 +19,9 @@ Wenn Sie die Anwendung starten, zeigt Grisbi eine Seite an, die es Ihnen ermögl
 
 \vspacepdf{3mm}			% espace: 5 mm
 
-Sie können das Grisbi-Fenster in \indexword{Vollbild}\index{Anzeige!Vollbild}\index{Vollbild!Anzeige} durch Drücken der Funktionstaste \key{F11} anzeigen und mit derselben Taste zurückgehen.%You can display the Grisbi window in \indexword{full screen}\index{display!full screen}\index{full screen!display} by pressing the function key \key{F11}, and go back using the same key.%Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage!plein écran}\index{plein écran!affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.			% "!" separates the term from the subterm of the index entry
+Sie können das Grisbi-Fenster in \indexword{Vollbild}\index{Anzeige!Vollbild}\index{Vollbild!Anzeige} durch Drücken der Funktionstaste \key{F11} anzeigen und mit derselben Taste zurückgehen.
+%You can display the Grisbi window in \indexword{full screen}\index{display!full screen}\index{full screen!display} by pressing the function key \key{F11}, and go back using the same key.
+%Vous pouvez afficher la fenêtre de Grisbi en \indexword{plein écran}\index{affichage!plein écran}\index{plein écran!affichage} par la touche de fonction \key{F11}, et revenir en arrière par la même touche.			% "!" separates the term from the subterm of the index entry
 
 \vspacepdf{3mm}			% espace: 5 mm
 
@@ -483,20 +485,48 @@ Mit den folgenden vier Funktionen können Sie die Anzeige der Buchungen für das
 \end{itemize}
 
 %TODO following
-\subsection{\menus{Help} menu\label{home-menus-help}}
+\subsection{Menü \menus{Hilfe}\label{home-menus-help}}
 
-Most of the choices in this menu give links to websites. In order for these links to work, you must have specified to Grisbi the navigation software (or browser) that you wish to use, in the \menus{Edit - Preferences} (see \vref{setup-general-programs}, \menus{Programmes}). The \menus{Help} menu includes the following choices\footnote{\strong{Translators Note:} A "help us with translation" menu item is mentioned in the French version of the manual but does note appear in the English version of Grisbi at release 1.0}:
+Die meisten Auswahlmöglichkeiten in diesem Menü enthalten Links zu Websites. Damit diese Links funktionieren, müssen Sie Grisbi die Navigationssoftware (oder den Browser), die Sie verwenden möchten, in den \menus{Bearbeiten - Einstellungen} (see \vref{setup-general-programs}, \menus{Programmen}). Das Menü \menus{Help} enthält die folgenden Optionen:
+%Most of the choices in this menu give links to websites. In order for these links to work, you must have specified to Grisbi the navigation software (or Web browser) that you wish to use, in the \menus{Edit - Preferences} (see \vref{setup-general-programs}, \menus{Programmes}). The \menus{Help} menu includes the following choices:
+%La plupart des choix de ce menu donnent accès à des sites Web. Pour que ces accès fonctionnent, il faut avoir indiqué à Grisbi le logiciel de navigation (ou navigateur) que vous souhaitez utiliser, dans le menu \menus{Édition - Préférences} (voir la section \vref{setup-general-programs}, \menus{Programmes}). Le menu \menus{Aide} comprend les choix suivants:
 
+\vspace{3mm}
+\noindent
+\begin{minipage}{.7\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item
+		%\item \menus{User's Manual}:opens your browser to the \enquote{Grisbi User Manual page} (shortcut \keys{F1}); 
+		%Manuel}: ouvre votre navigateur à la page \frquote{Manuel de l'Utilisateur de Grisbi} (raccourci-clavier \keys{F1});
+		%\item \menus{Quick start}: opens your browser to the \enquote{Grisbi Quick Start page};
+		%Démarrage rapide}: ouvre votre navigateur à la page \frquote{Démarrage Rapide de Grisbi};
+		%\item \menus{About}: displays the program information box: you will find details about the version, the link to Grisbi's site, the acknowledgements page (contributors to the project) and the user license;
+		%À propos}: affiche la fenêtre d'information sur l'application; vous y trouverez des détails sur la version, le lien vers le site de Grisbi, les remerciements (contributeurs au projet) et la licence d'utilisation;
+		%\item \menus{Grisbi website}: opens your browser to the \lang{Grisbi}\footnotemark web site
+		%Site Web de Grisbi}; ouvre votre navigateur à la page du site de \lang{Grisbi}\footnote{\urlGrisbi{}};
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}	
+\begin{minipage}{.3\linewidth}
+%\vspace{-15pt}					% space above the floating (minus intextsep=separation between float and text in text)
+\centering						% centering the floating figure in the "wrap"
+\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_help}
+\vspace{-15pt}					% space between the floating and the caption below the floating
+\captionsetup{
+type=figure,%				% define "figure" or "table" type, mandatory
+name=Abb.,%					% rename label caption, default="Figure" (or "Table")
+labelsep=newline}			% define the separator between the label and the caption text
+\caption{Menü \menus{Hilfe}}	% \caption is mandatory to reference a figure in lof
+%\vspace{30pt}					% space below the caption
+\label{home_menubar_help}
+\end{minipage} 
+\footnotetext{\urlGrisbi{}}	% to move footnote out of minipage
 \begin{itemize}
-	\item \menus{Manual}: opens your browser to the  \dequote{Grisbi User Manual page} (shortcut key  \key{Ctrl}\key{H});
-	\item \menus{Quick start}: opens your browser to the  \dequote{Grisbi Quick Start page};
-%	\item \menus{Traduction}: opens your browser to the \dequote{Translate Grisbi}, to help us to widen the internationalization of Grisbi;
-	\item \menus{About Grisbi...}: displays the program information box: you will find details about the version, the link to Grisbi's site, the acknowledgements page (contributors to the project) and the user license;
-	\item \menus{Grisbi website}: opens your browser to the \lang{Grisbi}\footnote{\urlGrisbi{}} web site;
-	\item \menus{Report a bug}: opens your browser to the \lang{Grisbi Bug Tracker page}\footnote{\urlBugTracker{}} to allow you to report a bug that you have discovered. You can also follow on this page the evolution of the corrections made to the reported bugs;
-	\item \menus{Tip of the day}: opens a dialog box that displays a tip of use, different each time Grisbi starts; you can successively display all the tips, and choose whether or not the display of the tip of the day when starting Grisbi. To remove or reactivate the tip of the day, see \vref{setup-display-messages-trick}, \menus{Tip of the day}.
+\item \menus{Report a bug}: opens your browser to the \lang{Grisbi Bug Tracker page}\footnote{\urlBugTracker{}} to allow you to report a bug that you have discovered. You can also follow on this page the evolution of the corrections made to the reported bugs;
+%Signaler une anomalie}; ouvre votre navigateur à la page du \lang{traqueur de bogues de Grisbi}\footnote{\urlBugTracker{}} pour vous permettre de signaler un bogue que vous auriez découvert. Vous pouvez également suivre sur cette page l'évolution des corrections apportées aux bogues signalés;
+\item \menus{Tip of the day}: opens a dialog box that displays a tip of use, different each time Grisbi starts; you can successively display all the tips, and choose whether or not the display of the tip of the day when starting Grisbi. To remove or reactivate the tip of the day, see \vref{setup-display-messages-trick}, \menus{Tip of the day}.
+%Astuce du jour}; ouvre une boîte de dialogue qui affiche une astuce d'utilisation, différente à chaque démarrage de Grisbi; vous pouvez y afficher successivement toutes les astuces, et choisir ou non l'affichage de l'astuce du jour au démarrage de Grisbi. Pour activer ou supprimer l'astuce du jour, vous pouvez cocher/décocher la case \frquote{\menus{Afficher l'astuce lors du prochain démarrage}}, voir le paragraphe \vref{setup-display-messages-trick}, \menus{Astuce du jour}.
 \end{itemize}
-
 
 \section{Shortcut keys\label{home-shortcuts}}
 
