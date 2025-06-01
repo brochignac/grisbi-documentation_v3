@@ -472,7 +472,7 @@ Most of the choices in this menu give links to websites. In order for these link
 \noindent
 \begin{minipage}{.7\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
-		\item \menus{User's Manual}: opens the \enquote{Grisbi User Manual page} in your browser or in your \gls{PDF}\index{PDF} reader according to your choice (see \vref{setup-general-various-general-display}, \menus{Help display})(shortcut \keys{F1}); 
+		\item \menus{User's Manual}: opens the \enquote{Grisbi Manual} in your browser or in your \gls{PDF}\index{PDF} reader according to your choice (see \vref{setup-general-various-general-display}, \menus{Help display})(shortcut \keys{F1}); 
 		%Manuel}: ouvre le \frquote{Manuel de l'Utilisateur de Grisbi} dans votre navigateur ou dans votre lecteur \gls{PDF}\index{PDF} selon votre choix (voir \vref{setup-general-various-general-display}, \menus{Affichage de l'aide}) (raccourci-clavier \keys{F1});
 		\item \menus{Quick start}: opens your browser to the \enquote{Grisbi Quick Start page};
 		%Démarrage rapide}: ouvre votre navigateur à la page \frquote{Démarrage Rapide de Grisbi};
@@ -594,68 +594,56 @@ Grisbi has a number of keyboard shortcuts, listed in the Grisbi preferences (see
 	%Valider un choix à l'intérieur d'une liste: \keys{Entrée \return} ou \keys{Tab \tab} en fonction de votre configuration (ici \vref{setup-form-behaviour-enter});
 	\item Currencies, financial years and methods of payment:%Devises, exercices et modes de règlement:
 	\begin{itemize}
-		\item open list: \keys{\Space{Space}\Space}%Ouvrir la liste: \keys{\Space{Espace}\Space}
+		\item Open list: \keys{\Space{Space}\Space}%Ouvrir la liste: \keys{\Space{Espace}\Space}
 		%TODO following
-		\item Se déplacer dans la liste: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
-		\item Valider l'item de la liste: \keys{\Space{Espace}\Space}
+		\item Move in the list: \keys{\arrowkeyup} ou \keys{\arrowkeydown}%Se déplacer dans la liste: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
+		\item Validate the item in the list: \keys{\Space{Space}\Space}%Valider l'item de la liste: \keys{\Space{Espace}\Space}
 	\end{itemize}
 \end{itemize}
-\begin{itemize}
-\item Open a list: \key{Page Down} or \key{Down Arrow}
-\item Move in the list: \key{Up Arrow}, \key{Down Arrow}, \key{Page Up} or \key{Page Down}
-\item Validate a choice within a list: \key{Enter}
-\item Currencies, ??exercises?? and methods of payment:
-\begin{itemize}
-\item open list: \key{Space}: 
-\item move in the list: \key{Up Arrow} or \key{Down Arrow}:
-\item validate the item in the list: \key{Space}.
-\end{itemize}
-\end{itemize}
-
 
 \subsection{Dates entered on the calendar}
 
 \begin{itemize}
-\item Opens a calendar (on the date field): \key{Ctrl}\key{Enter}
-\item Closes the calendar without changing the date: \key{Esc}
-\item Validate the selected date: \key{Enter}
-\item Next or previous day: \key{+} or \key{-}, \key{Right Arrow} or \key{Left Arrow}
-\item Previous or next week: \key{Up Arrow} or \key{Down Arrow}
-\item Previous or next month: \key{Page Up} or \key{Page Down}
-\item First day or last day of the month: \key{Start} or \key{End}
+	\item Open a monthly calendar (on the date field): \keys{Ctrl+Enter \return}%Ouvrir un calendrier mensuel (sur le champ de date): \keys{Ctrl+Entrée \return}
+	\item Closes the calendar without changing the date: \keys{Esc}%Fermer le calendrier sans modifier la date: \keys{Ech}
+	\item Validate the selected date: \keys{Enter \return}%Valider la date sélectionnée: \keys{Entrée \return}
+	\item Next or previous day: \keys{{+}} or \keys{{-}}, \keys{\arrowkeyright} or \keys{\arrowkeyleft}%Jour suivant ou précédent: \keys{{+}} ou \keys{{-}}, \keys{\arrowkeyright} ou \keys{\arrowkeyleft}
+	\item Previous or next week: \keys{\arrowkeyup} or \keys{\arrowkeydown}%Semaine précédente ou suivante: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
+	\item Previous or next month: \keys{PageUp} or \keys{PageDown}%Mois précédent ou suivant: \keys{Pg.Préc} ou \keys{Pg.Suiv}
+	\item First day or last day of the month: \keys{Home / \,$\nwarrow$\,} or \keys{End}%Premier jour ou dernier jour du mois: \keys{Début / Orig / \,$\nwarrow$\,} ou \keys{Fin}
 \end{itemize}
 
-
-\subsection{Dates entered on keyboard }
+\subsection{Dates entered by keyboard}
 
 \begin{itemize}
-\item Next or previous day: \key{+} or \key{-}
-\item Previous or next week: \key{Shift} \key{+} or \key{Majuscule} \key{-}
-\item Previous or next month: \key{Page Up} or \key{Page Down}
-\item Previous or Next Year: \key{Shift} \key{Page Up} or \key{Shift} \key{Page Down}
-\item Validate the selected date \key{Enter}
+	\item Next or previous day: \keys{{+}} or \keys{{-}}%Jour suivant ou précédent: \keys{{+}} ou \keys{{-}}
+	\item Previous or next week: \keys{Ctrl+{+}} or \keys{Ctrl+{-}}%Semaine précédente ou suivante: \keys{Ctrl+{+}} ou \keys{Ctrl+{-}}
+	\item Previous or next month: \keys{PageDown} or \keys{PageUp}%Mois précédent ou suivant: \keys{Pg.Suiv} ou \keys{Pg.Préc}
+	\item Previous or Next Year: \keys{Ctrl+PageDown} or \keys{Ctrl+PageUp}%Année précédente ou suivante: \keys{Ctrl+Pg.Suiv} ou \keys{Ctrl+Pg.Préc}
+	\item Validate the selected date: \keys{Enter \return}%Valide la date sélectionnée \keys{Entrée \return}
 \end{itemize}
 
-
-\subsection{Payees, categories, budget allocations, credit simulator, historical data and forecasts}
+\subsection{Payees, categories, budgetary lines, credits simulator, historical data and forecast}
+			%Tiers, catégories, imputations budgétaires, simulateur de crédits, données historiques et prévisions
 
 \begin{itemize}
-\item Move selection: \key{Up Arrow}, \key{Down Arrow}, \key{Page Up} or \key{Page Down}
-%Ces raccourcis ne fonctionnent plus:
-%	\item afficher les sous-catégories ou sous-imputations budgétaires (sur une catégorie ou une imputation budgétaire): \key{Espace}:
-%	\item afficher les opérations des sous-catégories ou sous-imputations budgétaires (sur une sous-catégorie ou une sous-imputation budgétaire): \key{Espace}.
+	\item Move selection: \keys{\arrowkeyup}, \keys{\arrowkeydown}, \keys{PageUp} or \keys{PageDown}
+	%Déplacer la sélection: \keys{\arrowkeyup}, \keys{\arrowkeydown}, \keys{Pg.Préc} ou \keys{Pg.Suiv}
+	\item Display sub-categories or sub-budgetary lines (on a sub-category or a sub-budgetary line): \keys{{+}}
+	%Afficher les sous-catégories ou sous-imputations budgétaires (sur une catégorie ou une imputation budgétaire): \keys{{+}}
+	\item Display the transactions of sub-categories or sub-budgetary lines (on a sub-category or a sub-budgetary line): \keys{Enter \return}
+	%Afficher les opérations des sous-catégories ou sous-imputations budgétaires (sur une sous-catégorie ou une sous-imputation budgétaire): \keys{Entée \return}
 \end{itemize}
 
-
-\subsection{States and Configuration}
+\subsection{Configuration}
 
 \begin{itemize}
-\item Select another tab: \key{Up Arrow}, \key{Down Arrow}, \key{Page Up}, \key{Page Down}
-\item Navigate between the tab panel and the different options in the settings panel: \key{Tab}, \key{Up Arrow}, \key{Down Arrow}, \key{Left Arrow} and \key{Right Arrow}
+	\item Show the Grisbi preferences window: \keys{Ctrl+Shift \shift+P}%Afficher la fenêtre des préférences de Grisbi: \keys{Ctrl+Maj \shift+P}
 \end{itemize}
+
 
 \subsection{Help}
 
 \begin{itemize}
-\item Open your browser on the Grisbi User Manual page \key{Ctrl}\key{H}
+\item Open the Grisbi Manual: \key{Ctrl}\key{H}%Ouvrir le Manuel de Grisbi: \keys{F1}
 \end{itemize}
