@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html_3.0-fr
-          path: src/3.0/fr/html_pandoc/grisbi-manuel_3.0-fr.html
+          path: src/3.0/fr/html/grisbi-manuel_3.0-fr.html
 
       - name: artifacts
         uses: actions/upload-artifact@v4
@@ -58,7 +58,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html_3.0-en
-          path: src/3.0/en/html_pandoc/grisbi-manuel_3.0-en.html
+          path: src/3.0/en/html/grisbi-manuel_3.0-en.html
 
       - name: artifacts
         uses: actions/upload-artifact@v4
@@ -77,7 +77,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html_3.0-de
-          path: src/3.0/de/html_pandoc/grisbi-manuel_3.0-de.html
+          path: src/3.0/de/html/grisbi-manuel_3.0-de.html
 
       - name: artifacts
         uses: actions/upload-artifact@v4
