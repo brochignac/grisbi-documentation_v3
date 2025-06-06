@@ -164,7 +164,7 @@ html_txt:	txt html
 html_pandoc: img
 	rm -rf html
 	mkdir html
-	pandoc --embed-resources --standalone --toc --output=html/grisbi-manuel.html $(FILE).tex
+	pandoc --embed-resources --standalone --toc --output=html/$(FILE_OUTPUT).html $(FILE).tex
 
 ps:	$(FILE).ps
 
