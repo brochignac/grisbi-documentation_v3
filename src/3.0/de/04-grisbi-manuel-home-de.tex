@@ -540,109 +540,251 @@ Tastenkombinationen erleichtern die Eingabe von Daten und die Navigation in den 
 Grisbi verfügt über eine Reihe von Tastenkombinationen, die in den Grisbi-Einstellungen (siehe \vref{setup-display-toolbars}) aufgelistet sind und hier nach verschiedenen Themen geordnet sind (siehe auch \vref{introduction-manual-conventions}, \menus{Typografische Konventionen in diesem Handbuch}).
 %Grisbi has a number of keyboard shortcuts, listed in the Grisbi preferences (see \vref{setup-display-toolbars}), presented here according to different themes (see also  \vref{introduction-manual-conventions}, \menus{Typographical conventions in this manual}).
 %Grisbi dispose d'un certain nombre de raccourcis-clavier, listés dans les préférences de Grisbi (voir \vref{{setup-display-toolbars}}), présentés ici selon différents thèmes, (voir aussi la section \vref{introduction-manual-conventions}, \menus{Conventions typographiques du présent manuel}).
-%TODO following
 
-\subsection{Application and files}
+\subsection{Bewerbung und Dateien}
+	%Application and files}
+	%Applications et fichiers
 
 \begin{itemize}
-	\item New accounts file: \key{Ctrl}\key{N}
-	\item Open an account file: \key{Ctrl}\key{O}
-	\item Register the account file: \key{Ctrl}\key{S}
-	\item Close the account file: \key{Ctrl}\key{W}
-	\item Close Grisbi: \key{Ctrl}\key{Q}
+	\item Erstellen Sie eine neue Grisbi-Datei: \keys{Strg+N}
+	%Create a new Grisbi file: \keys{Ctrl+N}
+	%créer un Nouveau fichier Grisbi: \keys{Ctrl+N};
+	\item Öffnet eine Vorhandene Grisbi Datei: \keys{Strg+O}
+	%Open a Grisbi file: \keys{Ctrl+O}
+	%Ouvrir un fichier Grisbi: \keys{Ctrl+O};
+	\item Fügen Sie der Grisbi-Datei ein neues Konto hinzu: \keys{Strg+Shift \shift+N}
+	%Add a new account to the Grisbi file: \keys{Ctrl+Shift \shift+N}
+	%ajouter un Nouveau compte au fichier Grisbi: \keys{Ctrl+Maj \shift+N};
+	\item Speichert Änderungen in der aktuellen	Grisbi Datei: \keys{Strg+S}
+	%Save the Grisbi file: \keys{Ctrl+S}
+	%Enregistrer le fichier Grisbi: \keys{Ctrl+S};
+	\item Daten importieren: \keys{Strg+I}
+	%Import a file: \keys{Ctrl+I}
+	%Importer un fichier: \keys{Ctrl+I};
+	\item In eine \gls{QIF}/\gls{CSV}-Datei exportieren: \keys{Strg+E}
+	%Export to \gls{QIF}/\gls{CSV} file: \keys{Ctrl+E}
+	%Exporter vers un fichier \gls{QIF}/\gls{CSV}: \keys{Ctrl+E};
+	\item Schließt die Grisbi-Datei: \keys{Strg+W}
+	%Close the Grisbi file: \keys{Ctrl+W}
+	%Fermer le fichier Grisbi: \keys{Ctrl+W};
+	\item Beendet Grisbi: \keys{Strg+Q}
+	%Close Grisbi: \keys{Ctrl+Q}
+	%Fermer Grisbi: \keys{Ctrl+Q}.
 \end{itemize}
 
 
-\subsection{Navigation panel}
+\subsection{Navigationsbereich}
+	%Navigation panel
+	%Panneau de navigation
 
 \begin{itemize}
-	\item Select a tab or account: \key{ Arrow Up}, \key{Arrow Down}, \key{Page Up} ou \key{Page Down}
+	\item Wählen Sie einen Tab oder ein Konto: \keys{\arrowkeyup}, \keys{\arrowkeydown}
+	%Select a tab or an account: \keys{\arrowkeyup}, \keys{\arrowkeydown}
+	%Sélectionner un onglet ou un compte: \keys{\arrowkeyup}, \keys{\arrowkeydown}
+	\item Auf dem Tab Konten:
+	%On the Accounts tab:
+	%Sur l'onglet Comptes:
+	\begin{itemize}
+		\item Öffnet die Kontenliste: \keys{\arrowkeyright}
+		%Opens the accounts list: \keys{\arrowkeyright}
+		%Ouvrir la liste des comptes: \keys{\arrowkeyright}
+		\item Schließen Sie die Kontenliste: \keys{\arrowkeyleft}
+		%Closes the accounts list: \keys{\arrowkeyleft}
+		%Fermer la liste des comptes: \keys{\arrowkeyleft}
+	\end{itemize}
+	\item In einem Konto oder auf der Planer:
+	%On an account or the Scheduler tab:
+	%Sur un compte ou sur l'onglet Échéancier:
+	\begin{itemize}
+		\item Wechselt zur Liste der Buchungen oder der geplanten Buchungen: \keys{\arrowkeyright}
+		%Switches to the list of transactions or planned transactions: \keys{\arrowkeyright}
+		%Bascule vers la liste des opérations ou des opérations planifiées: \keys{\arrowkeyright}
+		\item Wechselt zum Navigationsbereich: \keys{\arrowkeyleft}
+		%Switches to the navigation panel: \keys{\arrowkeyleft}
+		%Bascule vers le panneau de navigation: \keys{\arrowkeyleft}
+	\end{itemize}
+	\item Wählen Sie die erste/letzte Tab (Konten/Berichte): \keys{Bild auf / \arrowkeyup} oder \keys{Bild ab / \arrowkeydown}
+	%Select the first/last tab (Accounts/Reports): \keys{PageUp} or \keys{PageDown}
+	%Sélectionner le premier/dernier onglet (Comptes/États): \keys{Pg.Préc / \PgUpSymbol} ou \keys{Pg.Suiv / \PgDownSymbol}
 \end{itemize}
 
-\subsection{List of transactions and scheduled transactions}
+\subsection{Liste der Transaktionen und geplanten Transaktionen}
+	%List of transactions and scheduled transactions}
+	%Liste des opérations et des opérations planifiées
 
 \begin{itemize}
-	\item Select a transaction: \key{Enter}
-	\item Move selection:\key{Arrow Up} ou \key{Arrow Down}
-	\item New transaction:  \key{Enter} on empty line, or \key{Ctrl}\key{T}
-	\item Modify an transaction: \key{Enter}
-	\item Delete an transaction: \key{Delete};
-	\item Select a transaction for a reconciliation:\key{Ctrl}\key{P}
-	\item Remove a reconciled transaction: \key{Ctrl}\key{R}
-	\item Show or hide archival lines: \key{Altl}\key{L}
+	\item Verschieben der Auswahl: \keys{\arrowkeyup} oder \keys{\arrowkeydown}
+	%Move selection: \keys{\arrowkeyup} or \keys{\arrowkeydown}
+	%Déplacer la sélection: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
+	\item Wählen Sie eine Buchen: \keys{Eingabe \return}
+	%Select a transaction: \keys{Enter \return}
+	%Sélectionner une opération: \keys{Entrée \return}
+	\item Buchung erstellen:%New transaction:%Nouvelle opération:
+	\begin{itemize}
+		\item In einer leeren Zeile: \keys{Eingabe \return}
+		%On an empty line: \keys{Enter \return}
+		%Sur une ligne vide: \keys{Entrée \return}
+		\item Bei einer bestehenden Buchung: \keys{Ctrl+T}
+		%On an existing transaction: \keys{Ctrl+T}
+		%Sur une opération existante: \keys{Ctrl+T}
+	\end{itemize}
+	\item Buchung bearbeiten: \keys{Eingabe \return}
+	%Modify a transaction: \keys{Enter \return}
+	%Modifier une opération: \keys{Entrée \return}
+	\item Buchung löschen: \keys{Suppr}
+	%Delete a transaction: \keys{Delete}
+	%Supprimer une opération: \keys{Suppr}
+	\item Buchung als verrechnet kennzeichnen: \keys{Ctrl+P}
+	%Select or deselect a transaction for a reconciliation: \keys{Ctrl+P}
+	%Pointer ou dépointer une opération: \keys{Ctrl+P}
+	\item Eine Buchung abgleichen oder den Abgleich aufheben: \keys{Ctrl+R}
+	%Reconcile or un-reconcile a transaction: \keys{Ctrl+R}
+	%Rapprocher ou dé-rapprocher une opération: \keys{Ctrl+R}
+	\item Abgestimmte Buchungen anzeigen oder ausblenden: \keys{Alt+R}
+	%Show or hide reconciled transactions: \keys{Alt+R}
+	%Montrer ou masquer les opérations rapprochées: \keys{Alt+R}
+	\item Erstelle Archive anzeigen oder ausblenden: \keys{Alt+L}
+	%Show or hide archival lines: \keys{Alt+L}
+	%Montrer ou masquer les lignes d'archives: \keys{Alt+L}
+\end{itemize}
+
+\subsection{Buchungsformular}
+	%Transaction/Scheduled form}
+	%Formulaire de saisie des opérations
+
+\begin{itemize}
+	\item Die Taste \key{Eingabe \return} ist konfigurierbar (siehe Einstellungen \vref{setup-form-behaviour-enter}): sie ermöglicht es Ihnen, sich entweder im Buchungsformular zu bewegen oder die Eingabe zu bestätigen;
+	%The \key{Enter} key is configurable (see preferences \vref{setup-form-behaviour-enter}) \vref{setup-form-behaviour-enter}): it can be set to either move in the input form, or to validate the entry;
+	%La touche \keys{Entrée \return} est configurable (voir les préférences \vref{setup-form-behaviour-enter}): elle permet soit de se déplacer dans le formulaire de saisie, soit de valider l'entrée;
+	\item In das nächste Feld wechseln: \keys{\tab} (je nach gewählter Konfiguration);
+	%Move to the next field: \keys{Tab \tab} (depending on your configuration choice);
+	%Se déplacer au champ suivant: \keys{Tab \tab} (selon votre choix de configuration);
+	\item Buchung bearbeiten ohne Speichern beenden: \keys{\esc}
+	%Cancel the current entry: \keys{\esc}
+	%Annuler la saisie en cours: \keys{\esc}
+	\item Auto-Vervollständigen akzeptieren: \keys{\tab} ou \keys{Eingabe \return} (je nach gewählter Konfiguration);
+	%Accept auto-complete: \keys{Tab \tab} ou \keys{Entrée \return} (depending on your configuration choice);
+	%Accepter l'auto-complètement: \keys{Tab \tab} ou \keys{Entrée \return} (selon votre choix de configuration);
+	\item Symbol für den Euro: \keys{\AltGr+E}%Euro symbol: \keys{\AltGr+E}%Symbole de l'euro: \keys{\AltGr+E}
+\end{itemize}
+
+\subsection{Dropdown-Listen}
+	%Drop down lists}
+	%Listes déroulantes
+
+\begin{itemize}
+	\item Liste anzeigen: \keys{Bild auf / \arrowkeyup}, \keys{Bild ab / \arrowkeydown} oder \keys{\arrowkeydown}
+	%Open a list: \keys{PageUp}, \keys{PageDown} or \keys{\arrowkeydown}
+	%Ouvrir une liste: \keys{Pg.Préc}, \keys{Pg.Suiv} ou \keys{\arrowkeydown}
+	\item Gehen Sie an den Anfang der Liste: \keys{Bild auf / \arrowkeyup}
+	%Move to the top of the list: \keys{PageUp}
+	%Se placer en haut de la liste: \keys{Pg.Préc}
+	\item Gehen Sie an das Ende der Liste: \keys{Bild ab / \arrowkeydown}
+	%Move to the bottom of the list: \keys{PageDown}
+	%Se placer en bas de la liste: \keys{Pg.Suiv}
+	\item In Liste navigieren: \keys{\arrowkeyup} oder \keys{\arrowkeydown}
+	%Move in the list: \keys{\arrowkeyup} or \keys{\arrowkeydown}
+	%Se déplacer dans la liste: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
+	\item Eine Auswahl innerhalb einer Liste validieren: \keys{\return} oder \keys{\tab} in Abhängigkeit von Ihrer Konfiguration (siehe \vref{setup-form-behaviour-enter});
+	%Validate a choice within a list: \keys{Enter \return} or \keys{Tab \tab} en fonction de votre configuration (see \vref{setup-form-behaviour-enter});
+	%Valider un choix à l'intérieur d'une liste: \keys{Entrée \return} ou \keys{Tab \tab} en fonction de votre configuration (ici \vref{setup-form-behaviour-enter});
+	\item Währungen, Geschäftsjahre und Zahlungsweisen:
+	%Currencies, financial years and methods of payment:%Devises, exercices et modes de règlement:
+	\begin{itemize}
+		\item Liste anzeigen: \keys{\Space{Leertaste}\Space}
+		%Open list: \keys{\Space{Space}\Space}
+		%Ouvrir la liste: \keys{\Space{Espace}\Space}
+		\item In Liste navigieren: \keys{\arrowkeyup} oder \keys{\arrowkeydown}
+		%Move in the list: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
+		%Se déplacer dans la liste: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
+		\item Validieren Sie das Element in der Liste: \keys{\Space{Leertaste}\Space}
+		%Validate the item in the list: \keys{\Space{Space}\Space}
+		%Valider l'item de la liste: \keys{\Space{Espace}\Space}
+	\end{itemize}
+\end{itemize}
+
+\subsection{In den Kalender eingetragene Daten}
+	%Dates entered on the calendar
+	%Dates saisies au calendrier
+
+\begin{itemize}
+	\item Öffnen Sie einen Monatskalender (auf dem Datumsfeld): \keys{Strg+Eingabe \return}
+	%Open a monthly calendar (on the date field): \keys{Ctrl+Enter \return}
+	%Ouvrir un calendrier mensuel (sur le champ de date): \keys{Ctrl+Entrée \return}
+	\item Kalender ohne Datenübernahme schließen: \keys{Esc}
+	%Closes the calendar without changing the date: \keys{Esc}
+	%Fermer le calendrier sans modifier la date: \keys{Ech}
+	\item Validieren Sie das ausgewählte Datum: \keys{Eingabe \return}
+	%Validate the selected date: \keys{Enter \return}
+	%Valider la date sélectionnée: \keys{Entrée \return}
+	\item Nächsten oder vorherigen Tag auswählen: \keys{{+}} oder \keys{{-}}, \keys{\arrowkeyright} oder \keys{\arrowkeyleft}
+	%Next or previous day: \keys{{+}} or \keys{{-}}, \keys{\arrowkeyright} or \keys{\arrowkeyleft}
+	%Jour suivant ou précédent: \keys{{+}} ou \keys{{-}}, \keys{\arrowkeyright} ou \keys{\arrowkeyleft}
+	\item Vorherige oder nächste Woche auswählen: \keys{\arrowkeyup} oder \keys{\arrowkeydown}
+	%Previous or next week: \keys{\arrowkeyup} or \keys{\arrowkeydown}
+	%Semaine précédente ou suivante: \keys{\arrowkeyup} ou \keys{\arrowkeydown}
+	\item Vorherigen oder nächsten Monat auswählen: \keys{Bild auf / \arrowkeyup} oder \keys{Bild ab / \arrowkeydown}
+	%Previous or next month: \keys{PageUp} or \keys{PageDown}%Mois précédent ou suivant: \keys{Pg.Préc} ou \keys{Pg.Suiv}
+	\item Ersten oder letzten Tag von Monat auswählen: \keys{Pos1} oder \keys{Ende}
+	%First day or last day of the month: \keys{Home / \,$\nwarrow$\,} or \keys{End}
+	%Premier jour ou dernier jour du mois: \keys{Début / Orig / \,$\nwarrow$\,} ou \keys{Fin}
+\end{itemize}
+
+\subsection{Über die Tastatur eingegebene Daten}
+	%Dates entered on keyboard
+	%Dates saisies au clavier
+
+\begin{itemize}
+	\item Nächsten oder vorherigen Tag auswählen: \keys{{+}} oder \keys{{-}}
+	%Next or previous day: \keys{{+}} or \keys{{-}}
+	%Jour suivant ou précédent: \keys{{+}} ou \keys{{-}}
+	\item Vorherige oder nächste Woche auswählen: \keys{Strg+{+}} oder \keys{Strg+{-}}
+	%Previous or next week: \keys{Ctrl+{+}} or \keys{Ctrl+{-}}
+	%Semaine précédente ou suivante: \keys{Ctrl+{+}} ou \keys{Ctrl+{-}}
+	\item Vorherigen oder nächsten Monat auswählen: \keys{Bild auf / \arrowkeyup} oder \keys{Bild ab / \arrowkeydown}
+	%Previous or next month: \keys{PageDown} or \keys{PageUp}
+	%Mois précédent ou suivant: \keys{Pg.Suiv} ou \keys{Pg.Préc}
+	\item Vorheriges oder nächstes Jahr auswählen: \keys{Strg+Bild ab / \arrowkeydown} oder \keys{Strg+Bild auf / \arrowkeyup}
+	%Previous or Next Year: \keys{Ctrl+PageDown} or \keys{Ctrl+PageUp}
+	%Année précédente ou suivante: \keys{Ctrl+Pg.Suiv} ou \keys{Ctrl+Pg.Préc}
+	\item Validieren Sie das ausgewählte Datum: \keys{Eingabe \return}
+	%Validate the selected date: \keys{Enter \return}
+	%Valide la date sélectionnée \keys{Entrée \return}
 \end{itemize}
 
 
-\subsection{Entry form}
+\subsection{Empfänger, Kategorien, Gruppen, Kreditrechner, Daten Historie und Prognose}
+	%Payees, categories, budgetary lines, credits simulator, historical data and forecast
+	%Tiers, catégories, imputations budgétaires, simulateur de crédits, données historiques et prévisions
 
 \begin{itemize}
-	\item The \key{Enter} is configurable: it can be set to either move in the input form, or to validate the entry
-	\item Move to the next field: \key{Tab} (depending on your configuration choice)
-	\item Cancel the current entry: \key{Esc}
-	\item Accept auto-complete: \key{Tab} or \key{Enter} (depending on your configuration choice)
-	\item  Euro symbol: \key{AltGr}\key{e}
-\end{itemize}
-
-\subsection{Drop down lists}
-
-\begin{itemize}
-	 \item Open a list: \key{Page Down} or \key{Down Arrow}
-	 \item Move in the list: \key{Up Arrow}, \key{Down Arrow}, \key{Page Up} or \key{Page Down}
-	 \item Validate a choice within a list: \key{Enter}
-	 \item Currencies, ??exercises?? and methods of payment:
-		\begin{itemize}
-			\item open list: \key{Space}; 
-			\item move in the list: \key{Up Arrow} or \key{Down Arrow};
-			\item validate the item in the list: \key{Space}.
-		\end{itemize}
+	\item Verschieben der Auswahl: \keys{\arrowkeyup}, \keys{\arrowkeydown}, \keys{Strg+Bild auf / \arrowkeyup} oder \keys{Strg+Bild ab / \arrowkeydown}
+	%Move selection: \keys{\arrowkeyup}, \keys{\arrowkeydown}, \keys{PageUp} or \keys{PageDown}
+	%Déplacer la sélection: \keys{\arrowkeyup}, \keys{\arrowkeydown}, \keys{Pg.Préc} ou \keys{Pg.Suiv}
+	\item Anzeige von Untergruppen oder Unter-Kategorien (auf einer Untergruppe oder einer Unter-Kategorienlinie): \keys{{+}}
+	%Display sub-categories or sub-budgetary lines (on a sub-category or a sub-budgetary line): \keys{{+}}
+	%Afficher les sous-catégories ou sous-imputations budgétaires (sur une catégorie ou une imputation budgétaire): \keys{{+}}
+	\item Anzeige der Buchungen von Untergruppen oder Unter-Kategorien (auf einer Untergruppe oder einer Unter-Kategorienlinie): \keys{Eingabe \return}
+	%Display the transactions of sub-categories or sub-budgetary lines (on a sub-category or a sub-budgetary line): \keys{Enter \return}
+	%Afficher les opérations des sous-catégories ou sous-imputations budgétaires (sur une sous-catégorie ou une sous-imputation budgétaire): \keys{Entée \return}
 \end{itemize}
 
 
-\subsection{Dates entered on the calendar}
+\subsection{Konfiguration}%Configuration
 
 \begin{itemize}
-	\item Opens a calendar (on the date field): \key{Ctrl}\key{Enter}
-	\item Closes the calendar without changing the date: \key{Esc}
-	\item Validate the selected date: \key{Enter}
-	\item Next or previous day: \key{+} or \key{-}, \key{Right Arrow} or \key{Left Arrow}
-	\item Previous or next week: \key{Up Arrow} or \key{Down Arrow}
-	\item Previous or next month: \key{Page Up} or \key{Page Down}
-	\item First day or last day of the month: \key{Start} or \key{End}
+	\item Zeigt das Grisbi-Einstellungsfenster an: \keys{Strg+Shift \shift+P}
+	%Show the Grisbi preferences window: \keys{Ctrl+Shift \shift+P}
+	%Afficher la fenêtre des préférences de Grisbi: \keys{Ctrl+Maj \shift+P}
 \end{itemize}
 
 
-\subsection{Dates entered on keyboard }
+\subsection{Hilfe}%Help}%Aide
 
 \begin{itemize}
-	\item Next or previous day: \key{+} or \key{-}
-	\item Previous or next week: \key{Shift} \key{+} or \key{Majuscule} \key{-}
-	\item Previous or next month: \key{Page Up} or \key{Page Down}
-	\item Previous or Next Year: \key{Shift} \key{Page Up} or \key{Shift} \key{Page Down}
-	\item Validate the selected date \key{Enter}
-\end{itemize}
-
-
-\subsection{Payees, categories, budget allocations, credit simulator, historical data and forecasts}
-
-\begin{itemize}
-	\item Move selection: \key{Up Arrow}, \key{Down Arrow}, \key{Page Up} or \key{Page Down}
-%Ces raccourcis ne fonctionnent plus:
-%	\item afficher les sous-catégories ou sous-imputations budgétaires (sur une catégorie ou une imputation budgétaire): \key{Espace};
-%	\item afficher les opérations des sous-catégories ou sous-imputations budgétaires (sur une sous-catégorie ou une sous-imputation budgétaire): \key{Espace}.
-\end{itemize}
-
-
-\subsection{States and Configuration}
-
-\begin{itemize}
-	\item Select another tab: \key{Up Arrow}, \key{Down Arrow}, \key{Page Up}, \key{Page Down}
-	\item Navigate between the tab panel and the different options in the settings panel: \key{Tab}, \key{Up Arrow}, \key{Down Arrow}, \key{Left Arrow} and \key{Right Arrow}
-\end{itemize}
-
-\subsection{Help}
-
-\begin{itemize}
-	\item Open your browser on the Grisbi User Manual page \key{Ctrl}\key{H}
+	\item Öffne das Grisbi Handbuch: \keys{F1}
+	%Open the Grisbi Manual: \keys{F1}
+	%Ouvrir le Manuel de Grisbi: \keys{F1}
 \end{itemize}
 
 
