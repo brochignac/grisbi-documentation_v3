@@ -68,5 +68,5 @@ clean:
 distclean: clean
 	@echo -n Cleaning result files...
 	rm -f $(FILE){-img,-txt,}.{pdf,html,shtml}
-	rm -Rf fr html pdf
+	rm -Rf html pdf
 	@echo "  done."
