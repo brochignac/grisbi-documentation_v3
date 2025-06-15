@@ -13,13 +13,14 @@ FILE_OUTPUT=$(FILE_MINI)_$(VERSION)-$(Lang)
 VERSION=3.0
 INCLUDES:=$(wildcard [0-3][0-9]-grisbi-manuel-*.tex) $(wildcard tool/*.pl) Makefile
 
+.PHONY: pdf
+
 all:
 	@echo '********************************************************'
 	@echo '* BUILDING THE IMAGES PDF VERSION'
 	@echo '********************************************************'
 	$(MAKE) clean
-	$(MAKE) pdf_img_indexglossary
-	$(MAKE) pdf_img
+	$(MAKE) pdf
 	@echo '********************************************************'
 	@echo '* BUILDING THE IMAGES HTML VERSION'
 	@echo '********************************************************'
@@ -27,7 +28,9 @@ all:
 	$(MAKE) html_pandoc
 
 
-pdf:	$(FILE).pdf
+pdf: $(FILE).pdf
+	$(MAKE) pdf_indexglossary
+	$(MAKE) $^
 	test -d pdf || mkdir pdf
 	@echo See copy in pdf/
 	cp $(FILE).pdf pdf/$(FILE_OUTPUT).pdf
@@ -39,28 +42,12 @@ pdf_indexglossary: $(FILE).pdf
 	rm $(FILE).pdf
 	@echo Compile again in pdf by make pdf to get index and glossary.
 
-pdf_img:	 pdf
-	test -d pdf_img || mkdir pdf_img
-	@echo That is now different : see copy in pdf_img/
-	mv $(FILE).pdf pdf_img/$(FILE)-img-$(VERSION).pdf
-	rm -R pdf
-
-pdf_img_indexglossary:	pdf
-	test -d pdf_img || mkdir pdf_img
-	mv $(FILE).pdf pdf_img/$(FILE)-img-$(VERSION).pdf
-	texindy -C utf8 $(FILE).idx
-	makeglossaries $(FILE).glo
-	@echo Remove pdf file
-	rm pdf_img/$(FILE)-img-$(VERSION).pdf
-	@echo Compile again in pdf by make pdf_img to get index and glossary.
-
-
 html_pandoc:
 	rm -rf html
 	mkdir html
 	pandoc --embed-resources --standalone --toc --output=html/$(FILE_OUTPUT).html $(FILE).tex
 
-$(FILE).pdf:	$(FILE).tex $(INCLUDES)
+$(FILE).pdf: $(FILE).tex $(INCLUDES)
 	@echo Generating $@...
 	pdflatex --interaction=batchmode $(FILE).tex || \
 	  (grep -A5 '^! ' $(FILE).log; exit 1)
@@ -73,15 +60,13 @@ $(FILE).pdf:	$(FILE).tex $(INCLUDES)
 
 clean:
 	@echo -n Cleaning intermediate files...
+	rm -f $(FILE).pdf
 	#la commande rm -f *.{aux,log,out,toc,tpt,bak,haux,lof,htoc,idx,ind,xdy,glg,glo,gls} ne fonctionne pas
-	rm -f *.aux *.bak *.glg *.glo *.gls *.haux *.htoc *.idx *.ind *.lof *.log *.out *.toc *.tpt *.xdy
-	rm -rf .hevea_tmpdir
-	rm -f thumb*.*
+	rm -f *.aux *.bak *.glg *.glo *.gls *.idx *.ind *.lof *.log *.out *.toc *.tpt *.xdy
 	@echo "  done."
 
-distclean:	clean
+distclean: clean
 	@echo -n Cleaning result files...
-	rm -f $(FILE){-img,-txt,}.{dvi,ps,pdf,html,shtml} $(FIGURES_EPS)
-	rm -f $(FILE).pdf	
-	rm -Rf fr html html_img html_txt shtml shtml_img shtml_txt pdf pdf_img tgz_html tgz_html_img paq
+	rm -f $(FILE){-img,-txt,}.{pdf,html,shtml}
+	rm -Rf fr html pdf
 	@echo "  done."
