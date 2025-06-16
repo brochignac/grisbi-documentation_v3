@@ -12,12 +12,12 @@
 
 Vous ne pouvez pas utiliser directement dans Grisbi des données qui ont été créées par d'autres applications de comptabilité personnelle, et réciproquement. Comme ces applications fonctionnent différemment, leurs données sont structurées différemment: il faut donc convertir leur structure de données avant de pouvoir les utiliser. 
 
-Cette conversion ne peut pas se faire d'un seul coup sur l'ensemble des données, mais doit se faire indépendamment pour chaque compte géré par l'application. Pour convertir chacun de ces comptes, il faut donc d'une part les \og exporter \fg{} de l'application d'origine, puis les \og importer \fg{} dans l'application de destination.
+Cette conversion ne peut pas se faire d'un seul coup sur l'ensemble des données, mais doit se faire indépendamment pour chaque compte géré par l'application. Pour convertir chacun de ces comptes, il faut donc d'une part les \frquote{exporter} de l'application d'origine, puis les \frquote{importer} dans l'application de destination.
 
 % espace avant Attention ou Note  : 5 mm
 \vspacepdf{5mm}
 
-\strong{Attention} : ne pas confondre LE \og fichier de comptes \fg{} qui contient toutes les données de tous les comptes créés pour la gestion d'une entité comptable (dans Grisbi, ce fichier porte l'\gls{extension} \file{.gsb}), et LES \og fichiers de compte \fg{}, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour exporter ou importer ces données d'une application de comptabilité à une autre. Ces \og fichiers de compte \fg{} doivent avoir un \gls{format de fichier} (ou une extension) obligatoirement compatible avec l'application d'origine ET l'application de destination.
+\strong{Attention} : ne pas confondre LE \frquote{fichier de comptes} qui contient toutes les données de tous les comptes créés pour la gestion d'une entité comptable (dans Grisbi, ce fichier porte l'\gls{extension} \file{.gsb}), et LES \frquote{fichiers de compte}, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour exporter ou importer ces données d'une application de comptabilité à une autre. Ces \frquote{fichiers de compte} doivent avoir un \gls{format de fichier} (ou une extension) obligatoirement compatible avec l'application d'origine ET l'application de destination.
 % espace après Attention ou Note  : 5 mm
 \vspacepdf{5mm}
 
@@ -50,7 +50,7 @@ Pour plus de renseignements sur les \indexword{types de compte}\index{types de c
 Vous pouvez définir quelle date sera utilisée pour l'attribution d'un exercice à 
 chaque opération importée, voir le paragraphe \vref{setup-general-import-financialyear}, \menu{Définition de l'exercice}.
 
-Lorsque vous importez un fichier, Grisbi vous permet d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \og loyer \fg{} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menu{Édition - Préférences} (voir la section \vref{setup-general-importLinks}, \menu{Associations pour l'import}).
+Lorsque vous importez un fichier, Grisbi vous permet d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \frquote{loyer} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menu{Édition - Préférences} (voir la section \vref{setup-general-importLinks}, \menu{Associations pour l'import}).
 
 % espace pour changement de thème
 \vspacepdf{5mm}
@@ -72,7 +72,7 @@ fichier}, ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d
 	% image centrée
 	\begin{figure}[htbp]
 	\begin{center}
-	\includegraphics[scale=0.5]{image/screenshot/QIF_import_files_setup}
+	\includegraphics[scale=0.5]{image/screenshot/QIF\import_files_setup}
 	\end{center}
 	\caption{Paramétrage de chaque compte importé}
 	\label{QIF-import-files-setup-img}
