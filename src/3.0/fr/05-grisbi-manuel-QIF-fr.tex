@@ -63,23 +63,22 @@ fichier}, ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d
 		\begin{enumerate}
 			\item cliquez sur le bouton \menu{Ajouter un ou des fichiers} : une fenêtre de gestionnaire de fichiers s'ouvre,	
 			\item cherchez le répertoire où se trouvent ces fichiers de compte,
-			\item sélectionnez un ou plusieurs fichiers de compte (avec la combinaison  \key{Ctrl}\key{Clic} et \key{Majuscule}\key{Clic}) ; vous pouvez aussi changer la \gls{locale} (\gls{encodage des caracteres}) des fichiers à importer dans le menu déroulant \menu{Codage},
+			\item sélectionnez un ou plusieurs fichiers de compte (avec la combinaison  \keys{Ctrl+Clic Gauche} et \keys{Maj \shift+Clic gauche}) ; vous pouvez aussi changer la \gls{locale} (\gls{encodage des caracteres}) des fichiers à importer dans le menu déroulant \menu{Codage},
 			\item validez la fenêtre pour revenir à la fenêtre de sélection des fichiers de compte,
 			\item si les sélections voulues sont bien cochées, vous pouvez valider par le bouton \menu{Suivant} ;
 		\end{enumerate}		  
 	\item fin de la préparation de l'importation des fichiers de compte : si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés ; continuez l'importation en validant par le bouton \menu{Suivant} ;
-	\item création et paramétrage de chaque compte importé dans Grisbi : vous pouvez passer en revue chaque compte et y choisir les actions suivantes \ifIllustration \refimage{QIF-import-files-setup-img} :
+	\item création et paramétrage de chaque compte importé dans Grisbi : vous pouvez passer en revue chaque compte et y choisir les actions suivantes
+	\refimage{QIF-import-files-setup-img} :
 	% image centrée
 	\begin{figure}[htbp]
 	\begin{center}
-	\includegraphics[scale=0.5]{image/screenshot/QIF\import_files_setup}
+	\includegraphics[scale=0.5]{image/screenshot/QIF_import_files_setup}
 	\end{center}
 	\caption{Paramétrage de chaque compte importé}
 	\label{QIF-import-files-setup-img}
 	\end{figure}
 	% image centrée
-	\else  :
-	\fi
 	
 		\begin{itemize}
 			\item créer un nouveau compte,
@@ -111,7 +110,7 @@ Dans le menu \menu{Fichier} choisissez l'option \menu{Exporter vers un fichier Q
 \begin{enumerate}
 	\item accueil de l'assistant ; cette fenêtre indique que, comme les formats de fichier QIF et CSV ne supportent pas les devises, toutes les opérations seront converties dans la devise de leur compte respectif ; validez par le bouton \menu{Suivant} ;
 	\item sélectionnez les comptes à exporter en cliquant dans la case correspondante ; validez par le bouton \menu{Suivant} ;
-	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation, puis validez par le bouton \menu{Suivant} \ifIllustration \refimage{QIF-export-img} ;
+	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation, puis validez par le bouton \menu{Suivant} \refimage{QIF-export-img} ;
 	% image centrée
 	\begin{figure}[t]
 	\begin{center}
@@ -121,8 +120,6 @@ Dans le menu \menu{Fichier} choisissez l'option \menu{Exporter vers un fichier Q
 	\label{QIF-export-img}
 	\end{figure}
 	% image centrée
-	\else  ;
-	\fi
 	
 	\item la fenêtre de fin de l'exportation s'affiche ; validez par le bouton \menu{Fermer}.
 \end{enumerate}
