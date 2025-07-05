@@ -33,10 +33,9 @@ Grisbi supporte actuellement les formats de données de compte de comptabilité 
 Si vous voulez utiliser dans Grisbi des données de comptes qui ont été créés dans une autre application de comptabilité, vous devez d'abord exporter individuellement chacun des comptes de cette application dans un fichier, puis les importer dans Grisbi grâce à ces fichiers.
 
 
-\subsection{Export d'un fichier de compte d'un autre logiciel\label{move-import-exportinit}}
+\subsection{Export d'un compte d'un autre logiciel\label{move-import-exportinit}}
 
-La première étape consiste, dans l'application de comptabilité personnelle
-d'origine, à exporter chaque compte dans un fichier au format choisi. Le format choisi doit être compatible à l'exportation par l'application d'origine \emph{et} compatible à l'importation par Grisbi.
+La première étape consiste, dans l'application de comptabilité personnelle d'origine, à exporter chaque compte dans un fichier au format choisi. Le format choisi doit être compatible à l'exportation par l'application d'origine \emph{et} compatible à l'importation par Grisbi.
 
 La procédure d'exportation est bien évidemment différente pour chaque logiciel, donc référez-vous à sa documentation. Si vous voulez exporter tous les comptes, vous devrez obtenir autant de fichiers que vous avez de comptes gérés par l'application.
 
@@ -55,11 +54,11 @@ Lorsque vous importez un fichier, Grisbi vous permet d'établir une association 
 
 % espace pour changement de thème
 \vspacepdf{5mm}
-Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un fichier}, ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d'un fichier de compte se déroule en cinq étapes, auxquelles il faudra rajouter une étape de plus par compte supplémentaire:
+Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un fichier} ou le raccourci-clavier \keys{Ctrl+I}, ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d'un seul fichier de compte se déroule en cinq étapes, auxquelles il faudra rajouter une étape par compte supplémentaire:
 %TODO: FOLLOWING
 \begin{enumerate}
-	\item accueil de l'assistant d'importation (étape 1/5): validez avec le bouton \menus{Suivant};
-	\item sélection des fichiers de compte à importer (étape 2/5) \refimage{QIF-import-files-select-img}:	
+	\item Accueil de l'assistant d'importation (étape 1/5): validez avec le bouton \menus{Suivant};
+	\item Sélection des fichiers de compte à importer (étape 2/5) \refimage{QIF-import-files-select-img}:	
 		\begin{enumerate}
 			\item cliquez sur le bouton \menus{Ajouter un ou des fichiers...}: une fenêtre de gestionnaire de fichiers s'ouvre,
 			\begin{figure}[htbp]
@@ -76,8 +75,8 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 			\item vous pouvez choisir de ne pas importer les catégories en cochant l'option adéquate,
 			\item si les comptes choisis sont bien cochés, vous pouvez valider par le bouton \menus{Suivant};
 		\end{enumerate}
-	\item fin de la préparation de l'importation des fichiers de compte (étape 3/5): si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
-	\item création et paramétrage de chaque compte importé dans Grisbi (étape 4): vous pouvez passer en revue chaque compte et y choisir les actions suivantes	\refimage{QIF-import-files-setup-img}:
+	\item Fin de la préparation de l'importation des fichiers de compte (étape 3/5): si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
+	\item Création et paramétrage de chaque compte importé dans Grisbi (étape 4): vous pouvez passer en revue chaque compte et y choisir les actions suivantes	\refimage{QIF-import-files-setup-img}:
 	\begin{figure}[htbp]
 		\begin{center}
 		\includegraphics[width=0.95\textwidth]{image/screenshot/QIF_import_files_setup}
@@ -86,15 +85,16 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 		\label{QIF-import-files-setup-img}
 	\end{figure}
 		\begin{itemize}
-			\item créer un nouveau compte,
-			\item ajouter des opérations à un compte: si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}),
-			\item marquer les opérations d'un compte: si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer,
+			\item \menus{Créer un nouveau compte}: cela ajoutera le fichier sélectionné comme nouveau compte dans votre fichier Grisbi,
+			\item \menus{Ajouter des opérations à un compte}: si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}),
+			\item \menus{Marquer les opérations d'un compte}: si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer,
 			\item définir la devise du compte (ou bien en créer une nouvelle),
-			\item inverser le montant de l'opération (utile pour les comptes de carte bancaire de la Banque Postale, par exemple),
-			\item créer une règle d'importation rapide si le fichier est au format QIF ou OFX,
+			\item \menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple,
+			\item créer une règle d'importation rapide si le fichier est au format \gls{QIF} ou \gls{OFX},%TODO A VERIFIER
+			%règle que vous pourrez nommer pour la retrouver facilement,
 			\item quand tout est correct, validez l'importation par le bouton \menus{Suivant};
 		\end{itemize}
-	\item validation de la fin de l'importation: valider par le bouton \menus{Fermer}.
+	\item Validation de la fin de l'importation: valider par le bouton \menus{Fermer}.
 \end{enumerate}
 
 Si, et seulement si vous venez de créer votre fichier de comptes juste avant cette importation de données de comptes, revenez à la fin de la section \vref{start-newfile-end}, \menus{Création d'un nouveau fichier de comptes}. Allez juste après la fin de la procédure de création du fichier de comptes, au paragraphe commençant par \emph{D'une manière ou d'une autre\ldots{ }}, ce qui vous proposera de créer tout de suite d'autres comptes.
