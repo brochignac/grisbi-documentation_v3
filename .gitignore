@@ -17,7 +17,6 @@
 *.synctex.gz
 *.xdy
 *.toc
-*.pdf
 *.synctex(busy)
 *.gls
 *.glg
