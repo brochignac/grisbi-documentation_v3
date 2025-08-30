@@ -9,7 +9,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\chapter{Export et import de comptes\label{move}}
+\chapter{Export et import de comptes\label{importexport}}
 
 Vous ne pouvez pas utiliser directement dans Grisbi des données qui ont été créées par d'autres applications de comptabilité personnelle, et réciproquement. Comme ces applications fonctionnent différemment, leurs données sont structurées différemment: il faut donc convertir leur structure de données avant de pouvoir les utiliser. 
 
@@ -28,20 +28,20 @@ Cette conversion ne peut pas se faire d'un seul coup sur l'ensemble des données
 Grisbi supporte actuellement les formats de données de compte de comptabilité personnelle \gls{Gnucash}, \gls{OFX}, \gls{CSV} et \gls{QIF}.
 
 
-\section{Import de comptes d'un autre logiciel\label{move-import}}
+\section{Import de comptes d'un autre logiciel\label{importexport-import}}
 
 
 Si vous voulez utiliser dans Grisbi des données de comptes qui ont été créés dans une autre application de comptabilité, vous devez d'abord exporter individuellement chacun des comptes de cette application dans un fichier, puis les importer dans Grisbi grâce à ces fichiers.
 
 
-\subsection{Export d'un compte d'un autre logiciel\label{move-import-exportinit}}
+\subsection{Export d'un compte d'un autre logiciel\label{importexport-import-exportinit}}
 
 La première étape consiste, dans l'application de comptabilité personnelle d'origine, à exporter chaque compte dans un fichier au format choisi. Le format choisi doit être compatible à l'exportation par l'application d'origine \emph{et} compatible à l'importation par Grisbi.
 
 La procédure d'exportation est bien évidemment différente pour chaque logiciel, donc référez-vous à sa documentation. Si vous voulez exporter tous les comptes, vous devrez obtenir autant de fichiers que vous avez de comptes gérés par l'application.
 
 
-\subsection{Import de fichiers de compte d'un autre logiciel dans Grisbi\label{move-import-importinit}}
+\subsection{Import de fichiers de compte d'un autre logiciel dans Grisbi\label{importexport-import-importinit}}
 
 \Note{}: Grisbi permet d'importer un ou plusieurs fichiers de compte au cours de la même procédure. Bien que l'on puisse importer les fichiers de compte un par un, il est important de bien importer tous les fichiers de compte simultanément, afin que Grisbi puisse recréer les liens entre les comptes, particulièrement en ce qui concerne les opérations de virement.
 % espace après Attention ou Note : 5 mm
@@ -56,7 +56,7 @@ Lorsque vous importez un fichier, Grisbi vous permet d'établir une association 
 % espace pour changement de thème
 \vspacepdf{5mm}
 Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un fichier} (ou utilisez le raccourci-clavier \keys{Ctrl+I}), ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d'un seul fichier de compte se déroule en cinq étapes, auxquelles il faudra rajouter une étape par compte supplémentaire:
-%TODO: FOLLOWING
+
 \begin{enumerate}
 	\item Accueil de l'assistant d'importation (étape 1/5): validez avec le bouton \menus{Suivant};
 	\item Sélection des fichiers de compte à importer (étape 2/5) \refimage{importexport-import-files-select-img}:	
@@ -77,7 +77,7 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 				\begin{itemize}[label=\textopenbullet]
 					\begin{figure}[htbp]
 						\raggedleft
-						\includegraphics[width=.95\textwidth]{image/screenshot/importexport_import_CSV_setup}%TODO to update
+						\includegraphics[width=.95\textwidth]{image/screenshot/importexport_import_CSV_setup}%TODO to update: english text in fr screenshot
 						\caption{Paramétrage de l'import d'un fichier CSV}
 						\label{importexport-import-CSV-setup-img}
 					\end{figure}
@@ -110,14 +110,14 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 	\item Validation de la fin de l'importation: valider par le bouton \menus{Fermer}.
 \end{enumerate}
 
-Si, et seulement si vous venez de créer votre fichier Grisbi juste avant cette importation de données de comptes, revenez à la fin de la section \vref{start-newfile-end}, \menus{Création d'un nouveau fichier de comptes}. Allez juste après la fin de la procédure de création du fichier de comptes, au paragraphe commençant par \emph{D'une manière ou d'une autre\ldots{ }}, ce qui vous proposera de créer tout de suite d'autres comptes.
+Si, et seulement si, vous venez de créer votre fichier Grisbi juste avant cette importation de données de comptes, revenez à la fin de la section \vref{start-newfile-end}, \menus{Création d'un nouveau fichier de comptes}. Allez juste après la fin de la procédure de création du fichier de comptes, au paragraphe commençant par \textbf{\emph{D'une manière ou d'une autre\ldots{ }}}, ce qui vous proposera de créer tout de suite d'autres comptes.
 
 %espace pour changement de thème
 \vspacepdf{5mm}
 Sinon, vous pouvez commencer à utiliser le compte que vous venez de créer.
 
-
-\section{Export de comptes à partir de Grisbi\label{move-export}}
+%TODO: FOLLOWING
+\section{Export de comptes à partir de Grisbi\label{importexport-export}}
 
 
 Si vous voulez utiliser, dans une autre application de comptabilité, des données de compte qui ont été créées par Grisbi, vous devez d'abord exporter ces données dans des fichiers, puis les importer dans l'autre application grâce à ces fichiers. Le format de fichier choisi doit être compatible à l'exportation par Grisbi \emph{et} compatible à l'importation par l'application de destination.
@@ -131,7 +131,7 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 	% image centrée
 	\begin{figure}[t]
 	\begin{center}
-	\includegraphics[scale=0.5]{image/screenshot/importexport_export}
+	\includegraphics[width=0.95\textwidth]{image/screenshot/importexport_export}
 	\end{center}
 	\caption{Export des comptes}
 	\label{importexport-export-img}
