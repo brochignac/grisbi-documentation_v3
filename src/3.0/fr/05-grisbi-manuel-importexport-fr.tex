@@ -61,7 +61,7 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 	\item Accueil de l'assistant d'importation (étape 1/5): validez avec le bouton \menus{Suivant};
 	\item Sélection des fichiers de compte à importer (étape 2/5) \refimage{importexport-import-files-select-img}:	
 		\begin{enumerate}
-			\item cliquez sur le bouton \menus{Ajouter un ou des fichiers...}: une fenêtre de gestionnaire de fichiers s'ouvre,
+			\item cliquez sur le bouton \menus{Ajouter un ou des fichiers...}: une fenêtre de gestionnaire de fichiers s'ouvre;
 			\begin{figure}[htbp]
 				\raggedleft
 				%\begin{flushleft}
@@ -70,9 +70,9 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 				\caption{Sélection des comptes à importer}
 				\label{importexport-import-files-select-img}
 			\end{figure}
-			\item cherchez le répertoire où se trouvent ce ou ces fichiers de compte,
-			\item sélectionnez un ou plusieurs fichiers de compte (avec la combinaison \keys{Ctrl+Clic Gauche} et \keys{Maj \shift+Clic gauche}); vous pouvez aussi changer la \gls{locale} (\gls{encodage des caracteres}) des fichiers à importer dans le menu déroulant \menus{Codage},
-			\item validez avec le bouton \menus{Ouvrir} pour revenir à la fenêtre de sélection des fichiers de compte,
+			\item cherchez le répertoire où se trouvent ce ou ces fichiers de compte;
+			\item sélectionnez un ou plusieurs fichiers de compte (avec la combinaison \keys{Ctrl+Clic Gauche} et \keys{Maj \shift+Clic gauche}); vous pouvez aussi changer la \gls{locale} (\gls{encodage des caracteres}) des fichiers à importer dans le menu déroulant \menus{Codage};
+			\item validez avec le bouton \menus{Ouvrir} pour revenir à la fenêtre de sélection des fichiers de compte;
 			\item vous pouvez choisir de ne pas importer les catégories en cochant l'option adéquate. Dans le cas d'import d'un fichier \gls{CSV}, une nouvelle fenêtre vous permet de choisir les paramètres d'import \refimage{importexport-import-CSV-setup-img}:
 				\begin{itemize}[label=\textopenbullet]
 					\begin{figure}[htbp]
@@ -81,10 +81,10 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 						\caption{Paramétrage de l'import d'un fichier CSV}
 						\label{importexport-import-CSV-setup-img}
 					\end{figure}
-					\item \textbf{Choisissez le séparateur CSV}: le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier,
-					\item \textbf{Forcer le format de la date}: le format de date peut être forcé en cochant la case idoine et en le sélectionnant dans la liste déroulante,
-					\item \textbf{Sélectionnez les champs}: vous pourrez cocher les lignes de données qui \textit{ne seront pas} importées,
-					\item le bouton \keys{Créer une règle pour cet import.} (en bas) permet de créer une règle d'import que vous devrez nommer pour la valider. Vous la retrouverez dans la barre d'outils du compte  (voir \vref{transactions-functions}).
+					\item \textbf{Choisissez le séparateur CSV}: le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
+					\item \textbf{Forcer le format de la date}: le format de date peut être forcé en cochant la case idoine et en le sélectionnant dans la liste déroulante;
+					\item \textbf{Sélectionnez les champs}: vous pourrez cocher les lignes de données qui \textit{ne seront pas} importées;
+					\item le bouton \frquote{Créer une règle pour cet import.} (en bas) permet de créer une règle d'import que vous devrez nommer pour la valider. Vous la retrouverez dans la barre d'outils du compte  (voir \vref{transactions-functions}).
 				\end{itemize}
 			\item si les comptes choisis sont bien cochés, vous pouvez valider par le bouton \menus{Suivant};
 		\end{enumerate}
@@ -98,12 +98,12 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 		\label{importexport-import-files-setup-img}
 	\end{figure}
 		\begin{itemize}
-			\item \menus{Créer un nouveau compte}: cela ajoutera le fichier sélectionné comme nouveau compte dans votre fichier Grisbi,
-			\item \menus{Ajouter des opérations à un compte}: si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}),
-			\item \menus{Marquer les opérations d'un compte}: si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer,
-			\item définir la devise du compte (ou bien en créer une nouvelle),
-			\item \menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple,
-			\item \menus{Créer une règle pour cet import}: permet de définir une règle d'import rapide si le fichier est au format \gls{QIF}, \gls{Gnucash} ou \gls{OFX} et uniquement si vous ajoutez ou marquez des opérations à un compte. Cette règle est spécifique à chaque compte et devra être nommée pour être validée. Vous pourrez la retrouver dans la barre d'outils du compte (voir \vref{transactions-functions}),
+			\item \menus{Créer un nouveau compte}: cela ajoutera le fichier sélectionné comme nouveau compte dans votre fichier Grisbi. Le menu déroulant \menus{Type de compte}, en dessous, vous permettra de modifier le type de compte;
+			\item \menus{Ajouter des opérations à un compte}: si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}). Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte auquel seront ajoutées les opérations;
+			\item \menus{Marquer les opérations d'un compte}: si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
+			\item définir la devise du compte (ou bien en créer une nouvelle);
+			\item \menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple;
+			\item \menus{Créer une règle pour cet import}: permet de définir une règle d'import rapide si le fichier est au format \gls{QIF}, \gls{Gnucash} ou \gls{OFX} et uniquement si vous ajoutez ou marquez des opérations à un compte. Cette règle est spécifique à chaque compte et devra être nommée pour être validée. Vous pourrez la retrouver dans la barre d'outils du compte (voir \vref{transactions-functions});
 			\item quand tout est correct, validez l'importation par le bouton \menus{Suivant};
 		\end{itemize}
 	\item Validation de la fin de l'importation: valider par le bouton \menus{Fermer}.
@@ -124,7 +124,7 @@ Si vous voulez utiliser, dans une autre application de comptabilité, des donné
 Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichier QIF/CSV}  (ou utilisez le raccourci-clavier \keys{Ctrl+E}) qui ouvre l'assistant Export des comptes. L'exportation des comptes comporte à minima quatre étapes:
 
 \begin{enumerate}
-	\item Accueil de l'assistant (étape 1/3): cette fenêtre indique que, comme les formats de fichier QIF et CSV ne supportent pas les devises, toutes les opérations seront converties dans la devise de leur compte respectif; validez par le bouton \menus{Suivant};
+	\item Accueil de l'assistant (étape 1/3): cette fenêtre indique que, comme les formats de fichier \gls{QIF} et \gls{CSV} ne supportent pas les devises, toutes les opérations seront converties dans la devise de leur compte respectif; validez par le bouton \menus{Suivant};
 	\item Sélection des comptes et des options \refimage{importexport-export-img}:
 		\begin{figure}[htbp]
 			\begin{center}
@@ -134,21 +134,22 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 			\label{importexport-export-img}
 		\end{figure}
 		\begin{itemize}
-			\item \textbf{Sélectionner les comptes à exporter} (étape 2/3): cliquez sur la ou les case correspondantes à chaque compte à exporter ou sur \keys{Sélectionner tout};
+			\item \textbf{Sélectionner les comptes à exporter} (étape 2/3): cliquez sur la ou les cases correspondantes à chaque compte à exporter ou sur le bouton \menus{Sélectionner tout};
 			\item \textbf{Sélectionner les options pour l'export}:
 			\begin{itemize}
-					\item \menus{Format QIF}: exporte le(s) compte(s) coché(s) au format \gls{QIF}; 
+					\item \menus{Format QIF}: exporte le(s) compte(s) coché(s) au format \gls{QIF}; en plus:
 						\begin{itemize}
-							\item en plus, l'option \frquote{Force les dates au format US} enregistre la date au format mois/jour/année (mm/dd/yyyy),
-							\item et l'option \frquote{Force les nombres au format US} utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
+							\item l'option \menus{Force les dates au format US} enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
+							\item l'option \menus{Force les nombres au format US} utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
 						\end{itemize}
-					\item \menus{Format CSV}: exporte le(s) compte(s) coché(s) au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
+					\item \menus{Format CSV}: exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
 						\begin{itemize}
 							\item le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
 							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données;
 						\end{itemize}
-			\end{itemize}%TODO: FOLLOWING
-			\item \menus{Traiter tous les fichiers comme le premier}: ???; validez par le bouton \menus{Suivant};
+			\end{itemize}
+			\item \menus{Traiter tous les fichiers comme le premier}: ???%TODO: FOLLOWING;
+			 validez par le bouton \menus{Suivant};
 		\end{itemize}
 	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation, puis validez par le bouton \menus{Suivant}
 	\item la fenêtre de fin de l'exportation s'affiche; validez par le bouton \menus{Fermer}.
