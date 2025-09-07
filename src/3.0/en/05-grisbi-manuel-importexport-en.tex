@@ -100,8 +100,8 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 				\begin{itemize}[label=\textopenbullet]
 					\begin{figure}[htbp]
 						\raggedleft
-						\includegraphics[width=.95\textwidth]{image/screenshot/importexport_import_CSV_setup}%TODO to update: english text in fr screenshot
-						\caption{Configuring the import of a CSV file+%Paramétrage de l'import d'un fichier CSV}
+						\includegraphics[width=.95\textwidth]{image/screenshot/importexport_import_CSV_setup}
+						\caption{Configuring the import of a CSV file}%Paramétrage de l'import d'un fichier CSV}
 						\label{importexport-import-CSV-setup-img}
 					\end{figure}
 					\item \textbf{Choose CSV separator}: the separator between data can be selected from the drop-down list in the left-hand window and is displayed in the right-hand window, where you can also modify it. 
@@ -116,7 +116,9 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 			\item when the desired files are checked, you can validate the selection with the \menus{Forward} button;
 			%si les comptes choisis sont bien cochés, vous pouvez valider par le bouton \menus{Suivant};
 		\end{enumerate}
-	\item Fin de la préparation de l'importation des fichiers de compte (étape 3/5): si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
+	\item Complete the import of the account files (step 3/5): if everything went well, this window gives the list of the account files which will be imported; continue the import by confirming with the \menus{Forward} button;
+	%Fin de la préparation de l'importation des fichiers de compte (étape 3/5): si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
+	%TODO: FOLLOWING
 	\item Création et paramétrage de chaque compte importé dans Grisbi (étape 4): vous pouvez passer en revue chaque compte et y choisir les actions suivantes	\refimage{importexport-import-files-setup-img}:
 	\begin{figure}[htbp]
 		\begin{center}
@@ -128,7 +130,8 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 		\begin{itemize}
 			\item \menus{Créer un nouveau compte}: cela ajoutera le fichier sélectionné comme nouveau compte dans votre fichier Grisbi. Le menu déroulant \menus{Type de compte}, en dessous, vous permettra de modifier le type de compte;
 			\item \menus{Ajouter des opérations à un compte}: si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}). Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte auquel seront ajoutées les opérations;
-			\item \menus{Marquer les opérations d'un compte}: cela marquera les opérations avec un \frquote{T} dans la colonne \frquote{P/R} (\vref{transactions-list-fields}) du compte concerné. Si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
+			\item
+			%\menus{Marquer les opérations d'un compte}: cela marquera les opérations avec un \frquote{T} dans la colonne \frquote{P/R} (\vref{transactions-list-fields}) du compte concerné. Si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
 			\item définir la devise du compte (ou bien en créer une nouvelle);
 			\item \menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple;
 			\item \menus{Créer une règle pour cet import}: permet de définir une règle d'import rapide si le fichier est au format \gls{QIF}, \gls{Gnucash} ou \gls{OFX} et uniquement si vous ajoutez ou marquez des opérations à un compte. Cette règle est spécifique à chaque compte et devra être nommée pour être validée. Vous pourrez la retrouver dans la barre d'outils du compte (voir \vref{transactions-functions});
@@ -167,8 +170,10 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 			\begin{itemize}
 					\item \menus{Format QIF}: exporte le ou les comptes cochés au format \gls{QIF}; en plus l'option:
 						\begin{itemize}
-							\item \menus{Force les dates au format US}: enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
-							\item \menus{Force les nombres au format US}: utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
+							\item
+							%\menus{Force les dates au format US}: enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
+							\item
+							%\menus{Force les nombres au format US}: utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
 						\end{itemize}
 					\item \menus{Format CSV}: exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
 						\begin{itemize}
@@ -176,7 +181,7 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données;
 						\end{itemize}
 			\end{itemize}
-			\item \menus{Traiter tous les fichiers comme le premier}: ???%TODO: FOLLOWING;
+			\item \menus{Traiter tous les fichiers comme le premier}: ???;
 			 validez par le bouton \menus{Suivant};
 		\end{itemize}
 	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation, puis validez par le bouton \menus{Suivant}
