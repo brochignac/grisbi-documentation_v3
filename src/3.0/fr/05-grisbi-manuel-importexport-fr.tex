@@ -18,7 +18,7 @@ Cette conversion ne peut pas se faire d'un seul coup sur l'ensemble des données
 % espace avant Attention ou Note : 5 mm
 \vspacepdf{5mm}
 
-\Note{}: ne pas confondre le fichier Grisbi, d'\gls{extension} \file{.gsb} et qui contient tous les comptes avec leurs données, et les fichiers de ces mêmes comptes, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour exporter ou importer ces données d'une application de comptabilité à une autre. Ces fichiers de compte doivent avoir un \gls{format de fichier} (ou une extension) obligatoirement compatible avec l'application d'origine ET l'application de destination.
+\Note{}: ne pas confondre le fichier Grisbi, d'\gls{extension} \file{.gsb} et qui contient tous les comptes avec leurs données, et les fichiers de ces mêmes comptes, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour importer ou exporter ces données d'une application de comptabilité à une autre. Ces fichiers de compte doivent avoir un \gls{format de fichier} (ou une \gls{extension}) obligatoirement compatible avec l'application d'origine ET l'application de destination.
 
 
  %ne pas confondre LE \frquote{fichier de comptes} qui contient toutes les données de tous les comptes créés pour la gestion d'une entité comptable (dans Grisbi, ce fichier porte l'\gls{extension} \file{.gsb}), et LES \frquote{fichiers de compte}, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour exporter ou importer ces données d'une application de comptabilité à une autre. Ces \frquote{fichiers de compte} doivent avoir un \gls{format de fichier} (ou une extension) obligatoirement compatible avec l'application d'origine ET l'application de destination.
@@ -100,7 +100,7 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 		\begin{itemize}
 			\item \menus{Créer un nouveau compte}: cela ajoutera le fichier sélectionné comme nouveau compte dans votre fichier Grisbi. Le menu déroulant \menus{Type de compte}, en dessous, vous permettra de modifier le type de compte;
 			\item \menus{Ajouter des opérations à un compte}: si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}). Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte auquel seront ajoutées les opérations;
-			\item \menus{Marquer les opérations d'un compte}: si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
+			\item \menus{Marquer les opérations d'un compte}: cela marquera les opérations avec un \frquote{T} dans la colonne \frquote{P/R} (\vref{transactions-list-fields}) du compte concerné. Si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
 			\item définir la devise du compte (ou bien en créer une nouvelle);
 			\item \menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple;
 			\item \menus{Créer une règle pour cet import}: permet de définir une règle d'import rapide si le fichier est au format \gls{QIF}, \gls{Gnucash} ou \gls{OFX} et uniquement si vous ajoutez ou marquez des opérations à un compte. Cette règle est spécifique à chaque compte et devra être nommée pour être validée. Vous pourrez la retrouver dans la barre d'outils du compte (voir \vref{transactions-functions});
@@ -137,10 +137,10 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 			\item \textbf{Sélectionner les comptes à exporter} (étape 2/3): cliquez sur la ou les cases correspondantes à chaque compte à exporter ou sur le bouton \menus{Sélectionner tout};
 			\item \textbf{Sélectionner les options pour l'export}:
 			\begin{itemize}
-					\item \menus{Format QIF}: exporte le(s) compte(s) coché(s) au format \gls{QIF}; en plus:
+					\item \menus{Format QIF}: exporte le ou les comptes cochés au format \gls{QIF}; en plus l'option:
 						\begin{itemize}
-							\item l'option \menus{Force les dates au format US} enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
-							\item l'option \menus{Force les nombres au format US} utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
+							\item \menus{Force les dates au format US}: enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
+							\item \menus{Force les nombres au format US}: utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
 						\end{itemize}
 					\item \menus{Format CSV}: exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
 						\begin{itemize}
