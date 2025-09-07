@@ -9,16 +9,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\chapter{Import et export de comptes\label{importexport}}
+\chapter{Importing and exporting accounts\label{importexport}}
+%\chapter{Import et export de comptes\label{importexport}}
 
-Vous ne pouvez pas utiliser directement dans Grisbi des données qui ont été créées par d'autres applications de comptabilité personnelle, et réciproquement. Comme ces applications fonctionnent différemment, leurs données sont structurées différemment: il faut donc convertir leur structure de données avant de pouvoir les utiliser. 
+You can not directly use data that has been created by other personal accounting applications in Grisbi, and vice versa. Because these applications work differently, their data is structured differently, so you need to convert their data structure before you can use it.
+%Vous ne pouvez pas utiliser directement dans Grisbi des données qui ont été créées par d'autres applications de comptabilité personnelle, et réciproquement. Comme ces applications fonctionnent différemment, leurs données sont structurées différemment: il faut donc convertir leur structure de données avant de pouvoir les utiliser. 
 
-Cette conversion ne peut pas se faire d'un seul coup sur l'ensemble des données, mais doit se faire indépendamment pour chaque compte géré par l'application. Pour convertir chacun de ces comptes, il faut donc d'une part les \frquote{exporter} de l'application d'origine, puis les \frquote{importer} dans l'application de destination.
+This conversion can not be done at once on all data, but must be done separately for each account managed by the application. To convert each of these accounts, you must first \enquote{export} them from the original application and then \enquote{import} them into the destination application.
+%Cette conversion ne peut pas se faire d'un seul coup sur l'ensemble des données, mais doit se faire indépendamment pour chaque compte géré par l'application. Pour convertir chacun de ces comptes, il faut donc d'une part les \frquote{exporter} de l'application d'origine, puis les \frquote{importer} dans l'application de destination.
 
 % espace avant Attention ou Note : 5 mm
 \vspacepdf{5mm}
 
-\Note{}: ne pas confondre le fichier Grisbi, d'\gls{extension} \file{.gsb} et qui contient tous les comptes avec leurs données, et les fichiers de ces mêmes comptes, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour importer ou exporter ces données d'une application de comptabilité à une autre. Ces fichiers de compte doivent avoir un \gls{format de fichier} (ou une \gls{extension}) obligatoirement compatible avec l'application d'origine ET l'application de destination.
+\Note{}: do not confuse the \enquote{accounts file} which contains all the data of all the accounts created for the management of an accounting entity (in Grisbi, this file has the \gls{extension} \file{.gsb}), and the \enquote{account files}, which are files that contain only data from one account at a time, and created only to export or import that data from one accounting application to another. These \enquote{account files} must have a \gls{file format} (or \gls{extension}) that must be compatible with the original application AND the destination application.
+%\Note{}: ne pas confondre le fichier Grisbi, d'\gls{extension} \file{.gsb} et qui contient tous les comptes avec leurs données, et les fichiers de ces mêmes comptes, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour importer ou exporter ces données d'une application de comptabilité à une autre. Ces fichiers de compte doivent avoir un \gls{format de fichier} (ou une \gls{extension}) obligatoirement compatible avec l'application d'origine ET l'application de destination.
 
 
  %ne pas confondre LE \frquote{fichier de comptes} qui contient toutes les données de tous les comptes créés pour la gestion d'une entité comptable (dans Grisbi, ce fichier porte l'\gls{extension} \file{.gsb}), et LES \frquote{fichiers de compte}, qui sont des fichiers ne contenant que les données d'un seul compte à la fois, et créés uniquement pour exporter ou importer ces données d'une application de comptabilité à une autre. Ces \frquote{fichiers de compte} doivent avoir un \gls{format de fichier} (ou une extension) obligatoirement compatible avec l'application d'origine ET l'application de destination.
