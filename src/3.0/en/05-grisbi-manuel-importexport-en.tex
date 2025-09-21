@@ -62,14 +62,14 @@ The export procedure is obviously different for each accounting application, so 
 For more information on the \indexword{account types}\index{account types} that Grisbi can manage, see the \vref{accounts-type}, \menus{Grisbi account types} section.
 %Pour plus de renseignements sur les \indexword{types de compte}\index{types de compte} que Grisbi sait gérer, voir la section \vref{accounts-type}, \menus{Types de comptes de Grisbi}.
 
-The import can be configured in the menu \menus{Edit - Preferences} (see section \vref{setup-general-import-files}), \menus{Files import} tab.
-%L'import est paramétrable dans le menu \menus{Édition - Préférences} (voir la section \vref{setup-general-importLinks}, onglet \menus{Importation des fichiers}).
+The import can be configured in the menu \menus{Edit - Preferences}, \menus{Files import} tab (see section \vref{setup-general-import-files}).
+%L'import est paramétrable dans le menu \menus{Édition - Préférences}, onglet \menus{Importation des fichiers} (voir la section \vref{setup-general-import-files}).
 
 You can define which date will be used for assigning a financial year to each imported operation, see \vref{setup-general-import-financialyear}, \menus{Definition of Financial Year}.
 %Vous pouvez définir quelle date sera utilisée pour l'attribution d'un exercice à chaque opération importée, voir le paragraphe \vref{setup-general-import-financialyear}, \menus{Définition de l'exercice}.
 
-Grisbi also allows you to establish an association between a string of characters in this file and a payee. For example, all labels containing \enquote{rent} may be associated with a payee that represents your landlord. This must be configured in the \menus{Edit - Preferences} menu (see the \vref{setup-general-importlinks} section), \menus{Associations for import} tab.
-%Grisbi vous permet aussi d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \frquote{loyer} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menus{Édition - Préférences} (voir la section \vref{setup-general-importLinks}, onglet \menus{Associations pour l'importation}).
+Grisbi also allows you to establish an association between a string of characters in this file and a payee. For example, all labels containing \enquote{rent} may be associated with a payee that represents your landlord. This must be configured in the \menus{Edit - Preferences} menu, \menus{Associations for import} tab (see the \vref{setup-general-importlinks} section).
+%Grisbi vous permet aussi d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \frquote{loyer} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menus{Édition - Préférences}, onglet \menus{Associations pour l'importation} (voir la section \vref{setup-general-importlinks}).
 
 % espace pour changement de thème
 \vspacepdf{5mm}
@@ -77,7 +77,7 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 %Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un fichier} (ou utilisez le raccourci-clavier \keys{Ctrl+I}), ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d'un seul fichier de compte se déroule en cinq étapes, auxquelles il faudra rajouter une étape par compte supplémentaire:
 
 \begin{enumerate}
-	\item Launches the import assistant (step 1/5): confirm with the \menus{Forward} button;
+	\item Launches the import assistant (step 1/5): confirm with the \menus{Following} button;
 	%Accueil de l'assistant d'importation (étape 1/5): validez avec le bouton \menus{Suivant};
 	\item Selection of the account files to import (step 2/5) \refimage{importexport-import-files-select-img}:
 	%Sélection des fichiers de compte à importer (étape 2/5) \refimage{importexport-import-files-select-img}:	
@@ -116,10 +116,10 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 					\item The \enquote{Create a rule for this import.} button (at the bottom) allows you to create an import rule that you will need to name in order to validate it. You will find it in the account toolbar (see \vref{transactions-functions}).
 					%le bouton \frquote{Créer une règle pour cet import.} (en bas) permet de créer une règle d'import que vous devrez nommer pour la valider. Vous la retrouverez dans la barre d'outils du compte (voir \vref{transactions-functions}).
 				\end{itemize}
-			\item when the desired files are checked, you can validate the selection with the \menus{Forward} button;
+			\item when the desired files are checked, you can validate the selection with the \menus{Following} button;
 			%si les comptes choisis sont bien cochés, vous pouvez valider par le bouton \menus{Suivant};
 		\end{enumerate}
-	\item Complete the import of the account files (step 3/5): if everything went well, this window gives the list of the account files which will be imported; continue the import by confirming with the \menus{Forward} button;
+	\item Complete the import of the account files (step 3/5): if everything went well, this window gives the list of the account files which will be imported; continue the import by confirming with the \menus{Following} button;
 	%Fin de la préparation de l'importation des fichiers de compte (étape 3/5): si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
 	
 	\item Creating and configuring each account imported into Grisbi (step 4): you can review each account and choose the following actions \refimage{importexport-import-files-setup-img}:
@@ -133,35 +133,45 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 	\end{figure}
 		\begin{itemize}
 			\item \menus{Create a new account}:%Créer un nouveau compte
-			this will add the selected file as a new account in your Grisbi file. The drop-down menu \menus{Account type} below will allow you to change the account type.
+			this will add the selected file as a new account in your Grisbi file. The drop-down menu \menus{Account type} below will allow you to change the account type;
 			% cela ajoutera le fichier sélectionné comme nouveau compte dans votre fichier Grisbi. Le menu déroulant \menus{Type de compte}, en dessous, vous permettra de modifier le type de compte;
 			\item \menus{Add transactions to an account}:%Ajouter des opérations à un compte}:
-			%TODO: FOLLOWING
-			if scheduled operations are found within the specified time interval, a specific window opens to ask what you want to do with them: either merge these scheduled operations with the corresponding imported operations, or add the imported operations in addition to them (see the section \vref{setup-general-import-parameters}, \menus{Import settings}). The \menus{Account name} drop-down menu below will allow you to select the account to which the transactions will be added.
+			if scheduled operations are found within the specified time interval, a specific window opens to ask what you want to do with them: either merge these scheduled operations with the corresponding imported operations, or add the imported operations in addition to them (see the section \vref{setup-general-import-parameters}, \menus{Import settings}). The \menus{Account name} drop-down menu below will allow you to select the account to which the transactions will be added;
 			% si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}). Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte auquel seront ajoutées les opérations;
-			\item
-			%\menus{Marquer les opérations d'un compte}: cela marquera les opérations avec un \frquote{T} dans la colonne \frquote{P/R} (\vref{transactions-list-fields}) du compte concerné. Si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
-			\item définir la devise du compte (ou bien en créer une nouvelle);
-			\item \menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple;
-			\item \menus{Créer une règle pour cet import}: permet de définir une règle d'import rapide si le fichier est au format \gls{QIF}, \gls{Gnucash} ou \gls{OFX} et uniquement si vous ajoutez ou marquez des opérations à un compte. Cette règle est spécifique à chaque compte et devra être nommée pour être validée. Vous pourrez la retrouver dans la barre d'outils du compte (voir \vref{transactions-functions});
-			\item quand tout est correct, validez l'importation par le bouton \menus{Suivant};
+			\item \menus{Mark transactions of an account}:%Marquer les opérations d'un compte
+			this will mark the transactions with a \enquote{T} in the \enquote{P/R} column (\vref{transactions-list-fields}) of the account concerned. If any \indexword{orphan transactions}\index{transaction!orphan} are found, a window will open at the end of the import to ask what you want to do with them: either add them or ignore them. The \menus{Account name} drop-down menu below will allow you to select the account in which the transactions will be marked;
+			% cela marquera les opérations avec un \frquote{T} dans la colonne \frquote{P/R} (\vref{transactions-list-fields}) du compte concerné. Si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
+			\item set the currency of the account (or create a new one);
+			%définir la devise du compte (ou bien en créer une nouvelle);
+			\item \menus{Invert the amount of the imported transactions}: useful for credit card accounts for example;
+			%\menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple;
+			\item \menus{Create a rule for this import}:%Créer une règle pour cet import
+			allows you to define a quick import rule if the file is in \gls{QIF}, \gls{Gnucash}, or \gls{OFX} format and only if you add or mark transactions to an account. This rule is specific to each account and must be named in order to be validated. You can find it in the account toolbar (see \vref{transactions-functions});
+			%\menus{Créer une règle pour cet import}: permet de définir une règle d'import rapide si le fichier est au format \gls{QIF}, \gls{Gnucash} ou \gls{OFX} et uniquement si vous ajoutez ou marquez des opérations à un compte. Cette règle est spécifique à chaque compte et devra être nommée pour être validée. Vous pourrez la retrouver dans la barre d'outils du compte (voir \vref{transactions-functions});
+			\item when everything is correct, confirm the import with the \menu{Following} button;
+			%quand tout est correct, validez l'importation par le bouton \menus{Suivant};
 		\end{itemize}
-	\item Validation de la fin de l'importation: valider par le bouton \menus{Fermer}.
+	\item Confirm the end of the import: confirm with the \menu{Close} button.
+	%Validation de la fin de l'importation: valider par le bouton \menus{Fermer}.
 \end{enumerate}
 
-Si, et seulement si, vous venez de créer votre fichier Grisbi juste avant cette importation de données de comptes, revenez à la fin de la section \vref{start-newfile-end}, \menus{Création d'un nouveau fichier de comptes}. Allez juste après la fin de la procédure de création du fichier de comptes, au paragraphe commençant par \textbf{\emph{D'une manière ou d'une autre\ldots{ }}}, ce qui vous proposera de créer tout de suite d'autres comptes.
+If, and only if you have created your account file just before this account data import, return to the end of the  \vref{start-newfile-end}, \menu{Creation of a new accounts file}. Go directly to the end of the account file creation process, at the paragraph beginning with \emph{In one way or another\ldots{ }}, which will prompt you to create other accounts right away.
+%Si, et seulement si, vous venez de créer votre fichier Grisbi juste avant cette importation de données de comptes, revenez à la fin de la section \vref{start-newfile-end}, \menus{Création d'un nouveau fichier de comptes}. Allez juste après la fin de la procédure de création du fichier de comptes, au paragraphe commençant par \textbf{\emph{D'une manière ou d'une autre\ldots{ }}}, ce qui vous proposera de créer tout de suite d'autres comptes.
 
 %espace pour changement de thème
 \vspacepdf{5mm}
-Sinon, vous pouvez commencer à utiliser le compte que vous venez de créer.
+Otherwise, you can start using the account you just created.
+%Sinon, vous pouvez commencer à utiliser le compte que vous venez de créer.
 
 
-\section{Export de comptes à partir de Grisbi\label{importexport-export}}
+\section{Export accounts from Grisbi\label{importexport-export}}%Export de comptes à partir de Grisbi
+%TODO: FOLLOWING
 
-
-Si vous voulez utiliser, dans une autre application de comptabilité, des données de compte qui ont été créées par Grisbi, vous devez d'abord exporter ces données dans des fichiers, puis les importer dans l'autre application grâce à ces fichiers. Le format de fichier choisi doit être compatible à l'exportation par Grisbi \emph{et} compatible à l'importation par l'application de destination.
+If you want to use account data created by Grisbi in another accounting application, you must first export this data to files and then import them into the other application using these files. The file format chosen must be compatible with the export by Grisbi \emph{and} compatible with the import by the destination application.
+%Si vous voulez utiliser, dans une autre application de comptabilité, des données de compte qui ont été créées par Grisbi, vous devez d'abord exporter ces données dans des fichiers, puis les importer dans l'autre application grâce à ces fichiers. Le format de fichier choisi doit être compatible à l'exportation par Grisbi \emph{et} compatible à l'importation par l'application de destination.
  
-Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichier QIF/CSV}  (ou utilisez le raccourci-clavier \keys{Ctrl+E}) qui ouvre l'assistant Export des comptes. L'exportation des comptes comporte à minima quatre étapes:
+In the \menu{File} menu select the \menu{Export accounts as QIF/CSV file} that opens the Export Accounts Wizard. There are four steps to exporting accounts:
+%Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichier QIF/CSV}  (ou utilisez le raccourci-clavier \keys{Ctrl+E}) qui ouvre l'assistant Export des comptes. L'exportation des comptes comporte à minima quatre étapes:
 
 \begin{enumerate}
 	\item Accueil de l'assistant (étape 1/3): cette fenêtre indique que, comme les formats de fichier \gls{QIF} et \gls{CSV} ne supportent pas les devises, toutes les opérations seront converties dans la devise de leur compte respectif; validez par le bouton \menus{Suivant};
