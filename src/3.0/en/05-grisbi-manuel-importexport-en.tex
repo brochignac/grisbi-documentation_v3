@@ -165,7 +165,7 @@ Otherwise, you can start using the account you just created.
 
 
 \section{Export accounts from Grisbi\label{importexport-export}}%Export de comptes à partir de Grisbi
-%TODO: FOLLOWING
+
 
 If you want to use account data created by Grisbi in another accounting application, you must first export this data to files and then import them into the other application using these files. The file format chosen must be compatible with the export by Grisbi \emph{and} compatible with the import by the destination application.
 %Si vous voulez utiliser, dans une autre application de comptabilité, des données de compte qui ont été créées par Grisbi, vous devez d'abord exporter ces données dans des fichiers, puis les importer dans l'autre application grâce à ces fichiers. Le format de fichier choisi doit être compatible à l'exportation par Grisbi \emph{et} compatible à l'importation par l'application de destination.
@@ -192,17 +192,20 @@ In the \menu{File} menu select the \menu{Export accounts as QIF/CSV file} (ou us
 			\begin{itemize}
 					\item \menus{QIF format}: exporte le ou les comptes cochés au format \gls{QIF}; en plus l'option:
 						\begin{itemize}
-							\item
+							\item \menus{Force US dates}: saves the date in the format \enquote{month/day/year} (mm/dd/yyyy),
 							%\menus{Force les dates au format US}: enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
-							\item
+							\item \menus{Force US numbers}: uses the period \enquote{.} as the decimal separator and the comma \enquote{,} as the thousands separator;
 							%\menus{Force les nombres au format US}: utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
 						\end{itemize}
-					\item \menus{CSV format}: exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
+					\item \menus{CSV format}: exports the selected account(s) in \gls{CSV} format; in addition to the options available in QIF format (above):
+					% exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
 						\begin{itemize}
-							\item le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
-							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données;
+							\item the separator between data can be selected from the drop-down list in the left window and is displayed in the right window, where you can also modify it.
+							%le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
+							\item \menus{Quote the dates}: if checked (default), dates will be enclosed in quotation marks, like other data;
+							% \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données;
 						\end{itemize}
-			\end{itemize}
+			\end{itemize}%TODO: FOLLOWING
 			\item \menus{Traiter tous les fichiers comme le premier}: ???;
 			 validez par le bouton \menus{Suivant};
 		\end{itemize}
