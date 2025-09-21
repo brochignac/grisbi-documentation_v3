@@ -170,31 +170,34 @@ Otherwise, you can start using the account you just created.
 If you want to use account data created by Grisbi in another accounting application, you must first export this data to files and then import them into the other application using these files. The file format chosen must be compatible with the export by Grisbi \emph{and} compatible with the import by the destination application.
 %Si vous voulez utiliser, dans une autre application de comptabilité, des données de compte qui ont été créées par Grisbi, vous devez d'abord exporter ces données dans des fichiers, puis les importer dans l'autre application grâce à ces fichiers. Le format de fichier choisi doit être compatible à l'exportation par Grisbi \emph{et} compatible à l'importation par l'application de destination.
  
-In the \menu{File} menu select the \menu{Export accounts as QIF/CSV file} that opens the Export Accounts Wizard. There are four steps to exporting accounts:
+In the \menu{File} menu select the \menu{Export accounts as QIF/CSV file} (ou use shortcut \keys{Ctrl+E}) that opens the Exporting Grisbi accounts wizard. Exporting accounts involves at least four steps:
 %Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichier QIF/CSV}  (ou utilisez le raccourci-clavier \keys{Ctrl+E}) qui ouvre l'assistant Export des comptes. L'exportation des comptes comporte à minima quatre étapes:
 
 \begin{enumerate}
-	\item Accueil de l'assistant (étape 1/3): cette fenêtre indique que, comme les formats de fichier \gls{QIF} et \gls{CSV} ne supportent pas les devises, toutes les opérations seront converties dans la devise de leur compte respectif; validez par le bouton \menus{Suivant};
-	\item Sélection des comptes et des options \refimage{importexport-export-img}:
+	\item Starting the assistant (step 1/3): this window indicates that, since the \gls{QIF} and \gls{CSV} file formats do not support currency, all transactions will be converted into the currency of their respective account; confirm with the \menu{Following} button;
+	%Accueil de l'assistant (étape 1/3): cette fenêtre indique que, comme les formats de fichier \gls{QIF} et \gls{CSV} ne supportent pas les devises, toutes les opérations seront converties dans la devise de leur compte respectif; validez par le bouton \menus{Suivant};
+	\item Selecting accounts and options \refimage{importexport-export-img}:
+	%Sélection des comptes et des options 
 		\begin{figure}[htbp]
 			\begin{center}
 				\includegraphics[width=0.95\textwidth]{image/screenshot/importexport_export}
 			\end{center}
-			\caption{Export des comptes}
+			\caption{Exporting accounts}%Export des comptes
 			\label{importexport-export-img}
 		\end{figure}
 		\begin{itemize}
-			\item \textbf{Sélectionner les comptes à exporter} (étape 2/3): cliquez sur la ou les cases correspondantes à chaque compte à exporter ou sur le bouton \menus{Sélectionner tout};
-			\item \textbf{Sélectionner les options pour l'export}:
+			\item \textbf{Select accounts to export} (step 2/3): select the accounts to export by clicking in the corresponding box or on the \menu{Select all} button;
+			% \textbf{Sélectionner les comptes à exporter} (étape 2/3): cliquez sur la ou les cases correspondantes à chaque compte à exporter ou sur le bouton \menus{Sélectionner tout};
+			\item \textbf{Select options to export}:%Sélectionner les options pour l'export}:
 			\begin{itemize}
-					\item \menus{Format QIF}: exporte le ou les comptes cochés au format \gls{QIF}; en plus l'option:
+					\item \menus{QIF format}: exporte le ou les comptes cochés au format \gls{QIF}; en plus l'option:
 						\begin{itemize}
 							\item
 							%\menus{Force les dates au format US}: enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
 							\item
 							%\menus{Force les nombres au format US}: utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
 						\end{itemize}
-					\item \menus{Format CSV}: exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
+					\item \menus{CSV format}: exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
 						\begin{itemize}
 							\item le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
 							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données;
