@@ -34,33 +34,38 @@ Grisbi unterstützt derzeit die persönlichen Buchhaltungsdatenformate \gls{Gnuc
 %Grisbi currently supports \gls{Gnucash}, \gls{OFX}, \gls{CSV} and \gls{QIF} personal accounting data formats.
 %Grisbi supporte actuellement les formats de données de compte de comptabilité personnelle \gls{Gnucash}, \gls{OFX}, \gls{CSV} et \gls{QIF}.
 
-%todo:following
-\section{Importing accounts from another accounting application\label{importexport-import}}
+
+\section{Importieren von Konten aus einer anderen Buchhaltungsanwendung\label{importexport-import}}
+%\section{Importing accounts from another accounting application\label{importexport-import}}
 %\section{Import de comptes d'un autre logiciel\label{importexport-import}}
 
-
+Wenn Sie in Grisbi Kontodaten verwenden möchten, die in einer anderen Buchhaltungsanwendung erstellt wurden, müssen Sie zunächst jedes Konto dieser Anwendung einzeln in eine Reihe von Dateien exportieren und diese Dateien anschließend in Grisbi importieren.
 %If you want to use account data that has been created in another accounting application in Grisbi, you must first export each of the accounts of this application individually to a set of files, then import these same files into Grisbi.
 %Si vous voulez utiliser dans Grisbi des données de comptes qui ont été créés dans une autre application de comptabilité, vous devez d'abord exporter individuellement chacun des comptes de cette application dans un fichier, puis les importer dans Grisbi grâce à ces fichiers.
 
-
-\subsection{Export an account file from the other accounting application\label{importexport-import-exportinit}}
+\subsection{Exportieren Sie eine Kontodatei aus der anderen Buchhaltungsanwendung\label{importexport-import-exportinit}}
+%\subsection{Export an account file from the other accounting application\label{importexport-import-exportinit}}
 %\subsection{Export d'un compte d'un autre logiciel\label{importexport-import-exportinit}}
 
+Der erste Schritt besteht darin, in der ursprünglichen persönlichen Buchhaltungsanwendung jedes Konto in eine Datei im gewählten Format zu exportieren. Das gewählte Format muss mit den von der ursprünglichen Anwendung unterstützten Exportformaten kompatibel sein und sich für den Import in Grisbi eignen.
 %The first step is, in the originating personal accounting application, to export each account in a file in the chosen format. The chosen format must be compatible with the export formats supported by the original application \emph{and} compatible with import to Grisbi.
 %La première étape consiste, dans l'application de comptabilité personnelle d'origine, à exporter chaque compte dans un fichier au format choisi. Le format choisi doit être compatible à l'exportation par l'application d'origine \emph{et} compatible à l'importation par Grisbi.
 
-The export procedure is obviously different for each accounting application, so refer to its documentation. If you want to export all accounts, you will need to get as many files as you have accounts managed by the application.
+Das Exportverfahren ist natürlich für jede Buchhaltungsanwendung unterschiedlich, daher sollten Sie die Dokumentation der jeweiligen Anwendung zu Rate ziehen. Wenn Sie alle Konten exportieren möchten, benötigen Sie so viele Dateien, wie Sie Konten in der Anwendung verwalten.
+%The export procedure is obviously different for each accounting application, so refer to its documentation. If you want to export all accounts, you will need to get as many files as you have accounts managed by the application.
 %La procédure d'exportation est bien évidemment différente pour chaque logiciel, donc référez-vous à sa documentation. Si vous voulez exporter tous les comptes, vous devrez obtenir autant de fichiers que vous avez de comptes gérés par l'application.
 
 
-\subsection{Importing account files from another accounting application to Grisbi\label{importexport-import-importinit}}
+\subsection{Importieren von Kontodateien aus einer anderen Buchhaltungsanwendung in Grisbi\label{importexport-import-importinit}}
+%\subsection{Importing account files from another accounting application to Grisbi\label{importexport-import-importinit}}
 %\subsection{Import de fichiers de compte d'un autre logiciel dans Grisbi\label{importexport-import-importinit}}
 
-\Note{}: Grisbi allows you to import one or more account files in one operation. Although you can import the account files one by one, it is important to import all the account files at the same time, so that Grisbi can recreate the links between the accounts, especially with regard to the transfer operations.
+\Note{}: Mit Grisbi können Sie eine oder mehrere Kontodateien in einem Arbeitsgang importieren. Sie können die Kontodateien zwar auch einzeln importieren, es ist jedoch wichtig, alle Kontodateien gleichzeitig zu importieren, damit Grisbi die Verknüpfungen zwischen den Konten wiederherstellen kann, insbesondere im Hinblick auf Überweisungsvorgänge.
+%\Note{}: Grisbi allows you to import one or more account files in one operation. Although you can import the account files one by one, it is important to import all the account files at the same time, so that Grisbi can recreate the links between the accounts, especially with regard to the transfer operations.
 %\Note{}: Grisbi permet d'importer un ou plusieurs fichiers de compte au cours de la même procédure. Bien que l'on puisse importer les fichiers de compte un par un, il est important de bien importer tous les fichiers de compte simultanément, afin que Grisbi puisse recréer les liens entre les comptes, particulièrement en ce qui concerne les opérations de virement.
 % espace après Attention ou Note : 5 mm
 \vspacepdf{5mm}
-
+%todo:following
 For more information on the \indexword{account types}\index{account types} that Grisbi can manage, see the \vref{accounts-type}, \menus{Grisbi account types} section.
 %Pour plus de renseignements sur les \indexword{types de compte}\index{types de compte} que Grisbi sait gérer, voir la section \vref{accounts-type}, \menus{Types de comptes de Grisbi}.
 
@@ -194,33 +199,45 @@ In the \menus{File} menu select the \menus{Export accounts as QIF/CSV file} (ou 
 			% \textbf{Sélectionner les comptes à exporter} (étape 2/3): cliquez sur la ou les cases correspondantes à chaque compte à exporter ou sur le bouton \menus{Sélectionner tout};
 			\item \textbf{Select options to export}:%Sélectionner les options pour l'export}:
 				\begin{itemize}
-					\item \menus{QIF format}: exporte le ou les comptes cochés au format \gls{QIF}; en plus l'option:
+					\item \menus{QIF format}: exports the selected account(s) in \gls{QIF} format; in addition, the option:
+					%exporte le ou les comptes cochés au format \gls{QIF}; en plus l'option:
 						\begin{itemize}
-							\item
-							% \menus{Force US dates}: saves the date in the format \enquote{month/day/year} (mm/dd/yyyy),
+							\item \menus{Force US dates}:
+							%saves the date in the format \enquote{month/day/year} (mm/dd/yyyy),
 							%\menus{Force les dates au format US}: enregistre la date au format \frquote{mois/jour/année} (mm/dd/yyyy),
-							\item
-							% \menus{Force US numbers}: uses the period \enquote{.} as the decimal separator and the comma \enquote{,} as the thousands separator;
-							%\menus{Force les nombres au format US}: utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
+							\item \menus{Force US numbers}: 
+							%uses the period \enquote{.} as the decimal separator and the comma \enquote{,} as the thousands separator;
+						%\menus{Force les nombres au format US}: utilise le point \frquote{.} comme séparateur de décimale et la virgule \frquote{,} comme séparateur des milliers;
 						\end{itemize}
 					\item \menus{CSV format}: exports the selected account(s) in \gls{CSV} format; in addition to the options available in QIF format (above):
 					% exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
 						\begin{itemize}
 							\item the separator between data can be selected from the drop-down list in the left window and is displayed in the right window, where you can also modify it.
-							%le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
-							\item \menus{Quote the dates}: if checked (default), dates will be enclosed in quotation marks, like other data;
-							% \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données;
+						%le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
+							%\item \menus{Quote the dates}: if checked (default), dates will be enclosed in quotation marks, like other data. Hovering over the menu with the mouse opens an information window \enquote{Uncheck to write a date field without quotes};
+						% \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Décocher pour ne pas mettre les dates entre guillemets};
 						\end{itemize}
 				\end{itemize}
-			\item \menus{Treat all files as the first}: this option exports the selected account(s) with the same name as in the list, without the possibility of modification and without choice of destination;
-			%Traiter tous les fichiers comme le premier}: cette option exporte le ou les comptes sélectionnés avec le même nom que dans la liste, sans possibilité de modification et sans choix de la destination;
-			\item confirm with the \menus{Following} button;
-			%validez par le bouton \menus{Suivant};
-		\end{itemize}
-	\item For each account, define the name of the file, the destination directory and the export format; the option \menus{Treat all files as the first} bypasses this step. Then confirm with the \menus{Following} button;
-	%pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation; l'option \menus{Traiter tous les fichiers comme le premier} shunte cette étape. Puis validez par le bouton \menus{Suivant}
+			\item \menus{Name files automatically}: This option automatically exports the selected account(s):
+					%\item \menus{Nommer les fichiers automatiquement}: cette option exporte le ou les comptes sélectionnés automatiquement:
+					\begin{itemize}
+					\item with a file name generated as follows:\newline
+					%avec un nom de fichier généré comme suit:\newline
+					%[name of accounting entity]-[account name].[selected extension]. Hovering over the menu with the mouse opens an information window \enquote{Generated filenames are [accounting entity]-[account name].[extension]},
+					%[nom de l'entité comptable]-[nom du compte].[extension sélectionnée]. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Les noms générés sont [nom de l'entité comptable]-[nom du compte].[extension]},
+					\item and saves it to the folder where the Grisbi file was opened. If the exported file(s) already exist(e), Grisbi will ask you to confirm whether you want to overwrite them;
+					%et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser;
+					\end{itemize}
+					\Note:
+					%it is recommended not to use the character \enquote{\slash{}} in the account name, otherwise an error may occur when exporting to \gls{Linux distributions}.
+					%\Note: il est recommandé de ne pas utiliser le caractère \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur des \gls{distributions Linux}.
+					\item confirm with the \menus{Following} button;
+					%validez par le bouton \menus{Suivant};
+				\end{itemize}
+			\item For each account, define the name of the file, the destination directory and the export format; the option \menus{Name files automatically} bypasses this step. Then confirm with the \menus{Following} button;
+		%pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation; l'option \menus{Nommer les fichiers automatiquement} shunte cette étape. Puis validez par le bouton \menus{Suivant}
 	\item the export completion window appears; confirm with the \menus{Close} button;
-	%la fenêtre de fin de l'exportation s'affiche; validez par le bouton \menus{Fermer}.
+%la fenêtre de fin de l'exportation s'affiche; validez par le bouton \menus{Fermer}.
 \end{enumerate}
 
 \Attention{}: in general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\_).

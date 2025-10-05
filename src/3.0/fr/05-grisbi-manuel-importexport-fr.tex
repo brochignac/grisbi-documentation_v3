@@ -147,13 +147,19 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 					\item \menus{Format CSV}: exporte le ou les comptes cochés au format \gls{CSV}; en plus des options disponibles au format QIF (ci-dessus):
 						\begin{itemize}
 							\item le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
-							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données;
+							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Décocher pour ne pas mettre les dates entre guillemets};
 						\end{itemize}
 			\end{itemize}
-			\item \menus{Traiter tous les fichiers comme le premier}: cette option exporte le ou les comptes sélectionnés avec le même nom que dans la liste, sans possibilité de modification et sans choix de la destination;
+			\item \menus{Nommer les fichiers automatiquement}: cette option exporte le ou les comptes sélectionnés automatiquement:
+				\begin{itemize}
+					\item avec un nom de fichier généré comme suit:\newline
+					[nom de l'entité comptable]-[nom du compte].[extension sélectionnée]. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Les noms générés sont [nom de l'entité comptable]-[nom du compte].[extension]}, 
+					\item et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser;
+				\end{itemize}	
+			\Note{}: il est recommandé de ne pas utiliser le caractère \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur des \gls{distributions Linux}.
 			\item validez par le bouton \menus{Suivant};
 		\end{itemize}
-	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation; l'option \menus{Traiter tous les fichiers comme le premier} shunte cette étape. Puis validez par le bouton \menus{Suivant}
+	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation; l'option \menus{Nommer les fichiers automatiquement} shunte cette étape. Puis validez par le bouton \menus{Suivant}
 	\item la fenêtre de fin de l'exportation s'affiche; validez par le bouton \menus{Fermer}.
 \end{enumerate}
 
