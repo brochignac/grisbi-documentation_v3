@@ -49,19 +49,19 @@ La procédure d'exportation est bien évidemment différente pour chaque logicie
 
 Pour plus de renseignements sur les \indexword{types de compte}\index{types de compte} que Grisbi sait gérer, voir la section \vref{accounts-type}, \menus{Types de comptes de Grisbi}.
 
-L'import est paramétrable dans le menu \menus{Édition - Préférences}, onglet \menus{Importation des fichiers} (voir la section \vref{setup-general-import-files}).
+L'import est paramétrable dans le menu \menus{Éditer - Préférences} (\keys{Ctrl+Maj+P}), menu \menus{Généralités - Importer}, onglet \menus{Importation des fichiers} (voir la section \vref{setup-general-import-files}).
 
 Vous pouvez définir quelle date sera utilisée pour l'attribution d'un exercice à chaque opération importée, voir le paragraphe \vref{setup-general-import-financialyear}, \menus{Définition de l'exercice}.
 
-Grisbi vous permet aussi d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \frquote{loyer} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menus{Édition - Préférences}, onglet \menus{Associations pour l'importation} (voir la section \vref{setup-general-importlinks}).
+Grisbi vous permet aussi d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \frquote{loyer} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menus{Éditer - Préférences} (\keys{Ctrl+Maj+P}), menu \menus{Généralités - Importer}, onglet \menus{Associations pour l'importation} (voir la section \vref{setup-general-importlinks}).
 
 % espace pour changement de thème
 \vspacepdf{5mm}
 Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un fichier} (ou utilisez le raccourci-clavier \keys{Ctrl+I}), ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d'un seul fichier de compte se déroule en cinq étapes, auxquelles il faudra rajouter une étape par compte supplémentaire:
 
 \begin{enumerate}
-	\item Accueil de l'assistant d'importation (étape 1/5): validez avec le bouton \menus{Suivant};
-	\item Sélection des fichiers de compte à importer (étape 2/5) \refimage{importexport-import-files-select-img}:	
+	\item Accueil de l'assistant d'importation (étape 1/4): validez avec le bouton \menus{Suivant};
+	\item Sélection des fichiers de compte à importer (étape 2/4) \refimage{importexport-import-files-select-img}:	
 		\begin{enumerate}
 			\item cliquez sur le bouton \menus{Ajouter un ou des fichiers...}: une fenêtre de gestionnaire de fichiers s'ouvre;
 			\begin{figure}[htbp]
@@ -90,7 +90,7 @@ Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un f
 				\end{itemize}
 			\item si les comptes choisis sont bien cochés, vous pouvez valider par le bouton \menus{Suivant};
 		\end{enumerate}
-	\item Fin de la préparation de l'importation des fichiers de compte (étape 3/5): si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
+	\item Fin de la préparation de l'importation des fichiers de compte: si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
 	\item Création et paramétrage de chaque compte importé dans Grisbi (étape 4): vous pouvez passer en revue chaque compte et y choisir les actions suivantes \refimage{importexport-import-files-setup-img}:
 	\begin{figure}[htbp]
 		\begin{center}
@@ -150,16 +150,19 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Décocher pour ne pas mettre les dates entre guillemets};
 						\end{itemize}
 			\end{itemize}
-			\item \menus{Nommer les fichiers automatiquement}: cette option exporte le ou les comptes sélectionnés automatiquement:
+			\item \menus{Traiter automatiquement le(s) compte(s) sélectionné(s)}: cette option exporte le ou les comptes sélectionnés automatiquement:
 				\begin{itemize}
 					\item avec un nom de fichier généré comme suit:\newline
-					[nom de l'entité comptable]-[nom du compte].[extension sélectionnée]. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Les noms générés sont [nom de l'entité comptable]-[nom du compte].[extension]}, 
-					\item et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser;
+					[nom de l'entité comptable]-[nom du compte].[extension sélectionnée], 
+					\item et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser; le survol du menu avec la souris ouvre la fenêtre d'information suivante:\newline
+					\frquote{Le nom du(es) fichier(s) de compte sera(ont) nommé(s) comme suit:\newline
+					[nom de l'entité comptable]-[nom du compte].[extension]\newline
+					Le dossier d'enregistrement sera le dossier du fichier Grisbi}.
 				\end{itemize}	
-			\Note{}: il est recommandé de ne pas utiliser le caractère \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur des \gls{distributions Linux}.
+			\Note{}: il est recommandé de ne pas utiliser le caractère barre oblique \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur les systèmes \gls{Linux}.
 			\item validez par le bouton \menus{Suivant};
 		\end{itemize}
-	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation; l'option \menus{Nommer les fichiers automatiquement} shunte cette étape. Puis validez par le bouton \menus{Suivant}
+	\item pour chaque compte, définissez le nom du fichier, le répertoire de destination et le format d'exportation; l'option \menus{Traiter automatiquement le(s) compte(s) sélectionné(s)} shunte cette étape. Puis validez par le bouton \menus{Suivant}
 	\item la fenêtre de fin de l'exportation s'affiche; validez par le bouton \menus{Fermer}.
 \end{enumerate}
 

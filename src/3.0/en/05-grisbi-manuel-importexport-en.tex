@@ -62,14 +62,14 @@ The export procedure is obviously different for each accounting application, so 
 For more information on the \indexword{account types}\index{account types} that Grisbi can manage, see the \vref{accounts-type}, \menus{Grisbi account types} section.
 %Pour plus de renseignements sur les \indexword{types de compte}\index{types de compte} que Grisbi sait gérer, voir la section \vref{accounts-type}, \menus{Types de comptes de Grisbi}.
 
-The import can be configured in the menu \menus{Edit - Preferences}, \menus{Files import} tab (see section \vref{setup-general-import-files}).
-%L'import est paramétrable dans le menu \menus{Édition - Préférences}, onglet \menus{Importation des fichiers} (voir la section \vref{setup-general-import-files}).
+The import can be configured in the \menus{Edit - Preferences} menu (\keys{Ctrl+Shift+P}), \menus{Generalities - Import} menu, \menus{Files import} tab (see section \vref{setup-general-import-files}).
+%L'import est paramétrable dans le menu \menus{Édition - Préférences} (\keys{Ctrl+Maj+P}), menu \menus{Généralités - Importer}, onglet \menus{Importation des fichiers} (voir la section \vref{setup-general-import-files}).
 
 You can define which date will be used for assigning a financial year to each imported operation, see \vref{setup-general-import-financialyear}, \menus{Definition of Financial Year}.
 %Vous pouvez définir quelle date sera utilisée pour l'attribution d'un exercice à chaque opération importée, voir le paragraphe \vref{setup-general-import-financialyear}, \menus{Définition de l'exercice}.
 
-Grisbi also allows you to establish an association between a string of characters in this file and a payee. For example, all labels containing \enquote{rent} may be associated with a payee that represents your landlord. This must be configured in the \menus{Edit - Preferences} menu, \menus{Associations for import} tab (see the \vref{setup-general-importlinks} section).
-%Grisbi vous permet aussi d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \frquote{loyer} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menus{Édition - Préférences}, onglet \menus{Associations pour l'importation} (voir la section \vref{setup-general-importlinks}).
+Grisbi also allows you to establish an association between a string of characters in this file and a payee. For example, all labels containing \enquote{rent} may be associated with a payee that represents your landlord. This must be configured in the \menus{Edit - Preferences} menu (\keys{Ctrl+shift+P}), \menus{Généralities - Import} menu, \menus{Associations for import} tab (see the \vref{setup-general-importlinks} section).
+%Grisbi vous permet aussi d'établir une association entre une chaîne de caractères de ce fichier et un tiers. Par exemple, tous les libellés contenant \frquote{loyer} peuvent être associés à un tiers qui représente votre propriétaire. Cela doit être configuré dans le menu \menus{Édition - Préférences} (\keys{Ctrl+Maj+P}), menu \menus{Généralités - Importer}, onglet \menus{Associations pour l'importation} (voir la section \vref{setup-general-importlinks}).
 
 % espace pour changement de thème
 \vspacepdf{5mm}
@@ -77,10 +77,10 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 %Dans le menu \menus{Fichier} de Grisbi, choisissez l'option \menus{Importer un fichier} (ou utilisez le raccourci-clavier \keys{Ctrl+I}), ce qui ouvre la fenêtre de l'assistant d'importation. L'importation d'un seul fichier de compte se déroule en cinq étapes, auxquelles il faudra rajouter une étape par compte supplémentaire:
 
 \begin{enumerate}
-	\item Launches the import assistant (step 1/5): confirm with the \menus{Following} button;
-	%Accueil de l'assistant d'importation (étape 1/5): validez avec le bouton \menus{Suivant};
-	\item Selection of the account files to import (step 2/5) \refimage{importexport-import-files-select-img}:
-	%Sélection des fichiers de compte à importer (étape 2/5) \refimage{importexport-import-files-select-img}:	
+	\item Launches the import assistant (step 1/4): confirm with the \menus{Following} button;
+	%Accueil de l'assistant d'importation (étape 1/4): validez avec le bouton \menus{Suivant};
+	\item Selection of the account files to import (step 2/4) \refimage{importexport-import-files-select-img}:
+	%Sélection des fichiers de compte à importer (étape 2/4) \refimage{importexport-import-files-select-img}:	
 		\begin{enumerate}
 			\item click the button \menus{Add file to import...} button : a file manager window opens;
 			%cliquez sur le bouton \menus{Ajouter un ou des fichiers...}: une fenêtre de gestionnaire de fichiers s'ouvre;
@@ -107,20 +107,20 @@ In the Grisbi \menus{File} menu, choose the option \menus{Import file} (or use t
 						\caption{Configuring the import of a CSV file}%Paramétrage de l'import d'un fichier CSV}
 						\label{importexport-import-CSV-setup-img}
 					\end{figure}
-					\item \textbf{Choose CSV separator}: the separator between data can be selected from the drop-down list in the left-hand window and is displayed in the right-hand window, where you can also modify it. 
+					\item \textbf{Choose CSV separator}: the separator between data can be selected from the drop-down list in the left-hand window and is displayed in the right-hand window, where you can also modify it; 
 					%\textbfChoisissez le séparateur CSV}: le séparateur entre les données peut être sélectionné dans la liste déroulante de la fenêtre de gauche et s'affiche dans la fenêtre de droite, où vous pourrez aussi le modifier;
-					\item \textbf{Force date format}: The date format can be forced by ticking the appropriate box and selecting it from the drop-down list.
+					\item \textbf{Force date format}: the date format can be forced by ticking the appropriate box and selecting it from the drop-down list;
 					%\textbf{Forcer le format de la date}: le format de date peut être forcé en cochant la case idoine et en le sélectionnant dans la liste déroulante;
 					\item \textbf{Select CSV fields}: you can tick the data lines that \textit{will not be} imported;
 					%\textbf{Sélectionnez les champs}: vous pourrez cocher les lignes de données qui \textit{ne seront pas} importées;
-					\item The \enquote{Create a rule for this import.} button (at the bottom) allows you to create an import rule that you will need to name in order to validate it. You will find it in the account toolbar (see \vref{transactions-functions}).
+					\item the \enquote{Create a rule for this import.} button (at the bottom) allows you to create an import rule that you will need to name in order to validate it. You will find it in the account toolbar (see \vref{transactions-functions}).
 					%le bouton \frquote{Créer une règle pour cet import.} (en bas) permet de créer une règle d'import que vous devrez nommer pour la valider. Vous la retrouverez dans la barre d'outils du compte (voir \vref{transactions-functions}).
 				\end{itemize}
 			\item when the desired files are checked, you can validate the selection with the \menus{Following} button;
 			%si les comptes choisis sont bien cochés, vous pouvez valider par le bouton \menus{Suivant};
 		\end{enumerate}
-	\item Complete the import of the account files (step 3/5): if everything went well, this window gives the list of the account files which will be imported; continue the import by confirming with the \menus{Following} button;
-	%Fin de la préparation de l'importation des fichiers de compte (étape 3/5): si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
+	\item Complete the import of the account files: if everything went well, this window gives the list of the account files which will be imported; continue the import by confirming with the \menus{Following} button;
+	%Fin de la préparation de l'importation des fichiers de compte: si tout s'est bien passé, cette fenêtre donne la liste des fichiers de compte qui seront importés; continuez l'importation en validant par le bouton \menus{Suivant};
 	
 	\item Creating and configuring each account imported into Grisbi (step 4): you can review each account and choose the following actions \refimage{importexport-import-files-setup-img}:
 	%Création et paramétrage de chaque compte importé dans Grisbi (étape 4): vous pouvez passer en revue chaque compte et y choisir les actions suivantes \refimage{importexport-import-files-setup-img}:
@@ -217,8 +217,8 @@ In the \menus{File} menu select the \menus{Export accounts as QIF/CSV file} (ou 
 					\item and saves it to the folder where the Grisbi file was opened. If the exported file(s) already exist(e), Grisbi will ask you to confirm whether you want to overwrite them;
 					%et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser;
 				\end{itemize}
-			\Note{}: it is recommended not to use the character \enquote{\slash{}} in the account name, otherwise an error may occur when exporting to \gls{Linux distributions}.
-			%\Note: il est recommandé de ne pas utiliser le caractère \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur des \gls{distributions Linux}.
+			\Note{}: it is recommended not to use the character \enquote{\slash{}} in the account name, otherwise an error may occur when exporting to \gls{Linux} systems.
+			%\Note: il est recommandé de ne pas utiliser le caractère \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur des systemes \gls{Linux}.
 			\item confirm with the \menus{Following} button;
 			%validez par le bouton \menus{Suivant};
 		\end{itemize}
