@@ -170,34 +170,41 @@ Wählen Sie im Menü Grisbi \menus{Datei} die Option \menus{Daten importieren} (
 			% si des opérations planifiées sont trouvées dans l'intervalle de temps spécifié, une fenêtre spécifique s'ouvre pour savoir ce que vous voulez en faire: soit fusionner ces opérations planifiées avec les opérations importées correspondantes, soit ajouter les opérations importées en sus de celles-là (voir la section \vref{setup-general-import-parameters}, \menus{Paramètres pour l'import}). Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte auquel seront ajoutées les opérations;
 			\item \menus{Buchungen einem Konto zuordnen und als verrechnet kennzeichnen}: %Mark transactions of an account}:%Marquer les opérations d'un compte
 			Dadurch werden die Buchungen in der Spalte \dequote{V/A} (\vref{transactions-list-fields}) des betreffenden Kontos mit einem \dequote{A} gekennzeichnet. 
-			%this will mark the transactions with a \enquote{T} in the \enquote{P/R} column (\vref{transactions-list-fields}) of the account concerned.
-			%TODO:following
-			 
+			%this will mark the transactions with a \enquote{T} in the \enquote{C/R} column (\vref{transactions-list-fields}) of the account concerned.
+			%cela marquera les opérations avec un \frquote{T} dans la colonne \frquote{P/R} (\vref{transactions-list-fields}) du compte concerné. 
+			Wenn \indexword{verwaiste Buchungen}\index{Buchung!verwaist} gefunden werden, öffnet sich am Ende des Imports ein Fenster, in dem Sie angeben können, was damit geschehen soll: entweder hinzufügen oder ignorieren. Über das Dropdown-Menü \menus{Kontoname} darunter können Sie das Konto auswählen, in dem die Transaktionen markiert werden sollen.
 			%If any \indexword{orphan transactions}\index{transaction!orphan} are found, a window will open at the end of the import to ask what you want to do with them: either add them or ignore them. The \menus{Account name} drop-down menu below will allow you to select the account in which the transactions will be marked;
-			% cela marquera les opérations avec un \frquote{T} dans la colonne \frquote{P/R} (\vref{transactions-list-fields}) du compte concerné. Si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
-			\item set the currency of the account (or create a new one);
+			%Si des \indexword{opérations orphelines}\index{opération!orpheline} sont trouvées, une fenêtre s'ouvrira en fin d'import pour savoir ce que vous voulez en faire: soit les ajouter, soit les ignorer. Le menu déroulant \menus{Nom du compte}, en dessous, vous permettra de sélectionner le compte dans lequel les opérations seront marquées;
+			\item die Währung des Kontos festlegen (oder ein neues Konto erstellen);
+			%set the currency of the account (or create a new one);
 			%définir la devise du compte (ou bien en créer une nouvelle);
-			\item \menus{Invert the amount of the imported transactions}: useful for credit card accounts for example;
+			\item \menus{Den Betrag der importierten Buchungen invertieren}: nützlich beispielsweise für Kreditkartenkonten;
+			%\menus{Invert the amount of the imported transactions}: useful for credit card accounts for example;
 			%\menus{Inverser le montant de l'opération importée}: utile pour les comptes de carte bancaire de la Banque Postale, par exemple;
-			\item \menus{Create a rule for this import}:%Créer une règle pour cet import
-			allows you to define a quick import rule if the file is in \gls{QIF}, \gls{Gnucash}, or \gls{OFX} format and only if you add or mark transactions to an account. This rule is specific to each account and must be named in order to be validated. You can find it in the account toolbar (see \vref{transactions-functions});
+			\item \menus{Eine Regel für diesen Import erstellen}:%\menus{Create a rule for this import}:%Créer une règle pour cet import
+			ermöglicht es Ihnen, eine Schnellimportregel zu definieren, wenn die Datei im Format \gls{QIF}, \gls{Gnucash} oder \gls{OFX} vorliegt und nur, wenn Sie Buchungen zu einem Konto hinzufügen oder markieren. Diese Regel ist für jedes Konto spezifisch und muss benannt werden, um validiert zu werden. Sie finden sie in der Symbolleiste des Kontos; Sie finden sie in der Werkzeugleiste des Kontos (siehe \vref{transactions-functions});
+			%allows you to define a quick import rule if the file is in \gls{QIF}, \gls{Gnucash}, or \gls{OFX} format and only if you add or mark transactions to an account. This rule is specific to each account and must be named in order to be validated. You can find it in the account toolbar (see \vref{transactions-functions});
 			%\menus{Créer une règle pour cet import}: permet de définir une règle d'import rapide si le fichier est au format \gls{QIF}, \gls{Gnucash} ou \gls{OFX} et uniquement si vous ajoutez ou marquez des opérations à un compte. Cette règle est spécifique à chaque compte et devra être nommée pour être validée. Vous pourrez la retrouver dans la barre d'outils du compte (voir \vref{transactions-functions});
-			\item when everything is correct, confirm the import with the \menu{Following} button;
+			\item Wenn alles korrekt ist, bestätigen Sie den Import mit der Schaltfläche \menu{Nachfolgendes Element};
+			%when everything is correct, confirm the import with the \menu{Following} button;
 			%quand tout est correct, validez l'importation par le bouton \menus{Suivant};
 		\end{itemize}
-	\item Confirm the end of the import: confirm with the \menus{Close} button.
+	\item Bestätigen Sie das Ende des Imports: Bestätigen Sie mit der Schaltfläche \menus{Schließen}.
+	%Confirm the end of the import: confirm with the \menus{Close} button.
 	%Validation de la fin de l'importation: valider par le bouton \menus{Fermer}.
 \end{enumerate}
 
-If, and only if you have created your account file just before this account data import, return to the end of the  \vref{start-newfile-end}, \menu{Creation of a new accounts file}. Go directly to the end of the account file creation process, at the paragraph beginning with \emph{In one way or another\ldots{ }}, which will prompt you to create other accounts right away.
+Wenn Sie Ihre Grisbi-Datei unmittelbar vor dem Importieren der Kontodaten erstellt haben, kehren Sie zum Ende des Abschnitts \vref{start-newfile-end}, \menus{Erstellen einer neuen Kontodatei} zurück. Gehen Sie direkt zum Ende des Vorgangs zur Erstellung der Kontodatei, zum Absatz, der mit \emph{Auf die eine oder andere Weise\ldots{ }} beginnt und Sie auffordert, sofort weitere Konten zu erstellen.
+%If, and only if you have created your account file just before this account data import, return to the end of the  \vref{start-newfile-end}, \menu{Creation of a new accounts file}. Go directly to the end of the account file creation process, at the paragraph beginning with \emph{In one way or another\ldots{ }}, which will prompt you to create other accounts right away.
 %Si, et seulement si, vous venez de créer votre fichier Grisbi juste avant cette importation de données de comptes, revenez à la fin de la section \vref{start-newfile-end}, \menus{Création d'un nouveau fichier de comptes}. Allez juste après la fin de la procédure de création du fichier de comptes, au paragraphe commençant par \textbf{\emph{D'une manière ou d'une autre\ldots{ }}}, ce qui vous proposera de créer tout de suite d'autres comptes.
 
 %espace pour changement de thème
 \vspacepdf{5mm}
-Otherwise, you can start using the account you just created.
+Andernfalls können Sie das soeben erstellte Konto verwenden.
+%Otherwise, you can start using the account you just created.
 %Sinon, vous pouvez commencer à utiliser le compte que vous venez de créer.
 
-
+%TODO:following
 \section{Export accounts from Grisbi\label{importexport-export}}%Export de comptes à partir de Grisbi
 
 
