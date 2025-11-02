@@ -28,14 +28,14 @@ Es ist ratsam, die Optionen zu prüfen:%It is advisable to check the options:
 	\end{itemize}
 \end{enumerate}
 
-\minisec{\Attention{}}
-Die Grisbi-Entwickler empfehlen, die Option \menus{Datei verschlüsseln} aus den folgenden Gründen nicht zu verwenden:%The Grisbi developers recommend that you do not use the \menus{Encrypt Grisbi file} option for the following reasons:
+\Attention{}: Die Grisbi-Entwickler empfehlen, die Option \menus{Datei verschlüsseln} aus den folgenden Gründen nicht zu verwenden:%The Grisbi developers recommend that you do not use the \menus{Encrypt Grisbi file} option for the following reasons:
 \begin{itemize}
 	\item Es gibt keine Methode zur Wiederherstellung einer verschlüsselten Datei, deren Passwort verloren gegangen ist;%there is no method for recovering an encrypted file whose password has been lost;
 	\item Aus einem unbekannten Grund kann die Verwendung dieser Option unter Windows dazu führen, dass die Kontendatei völlig unbrauchbar wird.%For some unknown reason, using this option on Windows can render the accounts file completely unusable.
 \end{itemize}  
 Es ist jedoch ratsam, regelmäßig Sicherungskopien der unverschlüsselten Datei anzufertigen, wenn Sie sie verwenden.%However, if you use it, it is advisable to make regular back-ups of the unencrypted file.
 
+\vspacepdf{3mm}
 \begin{enumerate}[resume]
 	\item Der zweite Assistent, \dequote{Willkommen zu Grisbi} (oder später \dequote{Assistent für eine neue Datei}), der automatisch auf den ersten folgt, umfasst sechs Schritte, die Ihnen bei der Erstellung der \indexword{Kontodatei}\index{Kontodatei} helfen.%The second wizard, \dequote{Willkommen zu Grisbi} (or later \dequote{New file Assistant}), which automatically follows the first, includes six steps to help you create the \indexword{account file}\index{account file}.%Le deuxième assistant \frquote{Bienvenue dans Grisbi !} (ou plus tard \frquote{Aide à la création d'un nouveau fichier de comptes}), qui suit automatiquement le premier, comprend six étapes qui vous aiderons à la création du \indexword{fichier de comptes}\index{fichier de comptes}.
 	\item Darauf folgt automatisch der dritte Assistent, \dequote{Ein neues Konto erstellen}, der zum Erstellen des ersten Kontos verwendet wird und im Abschnitt \ref{start-newfile} unten ausführlich beschrieben wird.%This is followed automatically by the third wizard, \dequote{Create a new account}, which is used to create the first account and is described in detail in section \ref{start-newfile} below.%Puis vient automatiquement le troisième assistant \frquote{Créer un nouveau compte} qui permet de créer le premier compte et qui est décrit en détail dans la section \ref{start-newfile} ci-dessous.
@@ -84,15 +84,15 @@ Das allgemeine Verfahren zur Erstellung einer Kontodatei ist wie folgt: Klicken 
 			\item aktivieren Sie das Kontrollkästchen \menus{Datei verschlüsseln}, wenn Sie die Kontodatei \gls{zu verschlüsseln} möchten,%check the \menus{Encrypt Grisbi} box if you wish \gls{to encrypt} the accounts file,%cochez la case \menus{Chiffrer le fichier Grisbi} si vous voulez \gls{chiffrer} le fichier de comptes,
 		\end{enumerate}
 		
-\minisec{\Attention{}}
-Die Entwickler von Grisbi empfehlen Ihnen aus den folgenden Gründen, die Option \menus{Datei verschlüsseln} nicht zu verwenden:%The Grisbi developers recommend that you do not use the \menus{Encrypt Grisbi file} option for the following reasons:
+\Attention{}: Die Entwickler von Grisbi empfehlen Ihnen aus den folgenden Gründen, die Option \menus{Datei verschlüsseln} nicht zu verwenden:%The Grisbi developers recommend that you do not use the \menus{Encrypt Grisbi file} option for the following reasons:
 \begin{itemize}
 	\item Es gibt keine Methode zur Wiederherstellung einer verschlüsselten Datei, deren Passwort verloren gegangen ist;%there is no method for recovering an encrypted file whose password has been lost;
 	\item Aus einem unbekannten Grund kann die Verwendung dieser Option unter \gls{Windows} die Kontendatei völlig unbrauchbar machen.%For some unknown reason, using this option on Windows can render the accounts file completely unusable.
 \end{itemize}  
 Es ist jedoch ratsam, regelmäßig Sicherungskopien der unverschlüsselten Datei anzufertigen, wenn Sie sie verwenden.%However, if you use it, it is advisable to make regular back-ups of the unencrypted file.
 
-		\begin{enumerate}[resume]		% to resume \end{enumerate} above \minisec
+\vspacepdf{3mm}
+		\begin{enumerate}[resume]		% to resume \end{enumerate} above \Attention
 			\item wählen Sie das \indexword{Datumsformat}\index{Datumsformat} mit einer der vier Schaltflächen:%select the \indexword{date format}\index{date format} with one of the four buttons%sélectionnez le \indexword{format de la date}\index{format de date} avec l'un des quatre boutons:
 			%\begin{addmargin}{-0.2cm}
 				\begin{itemize}	
@@ -176,10 +176,9 @@ Wenn Sie jetzt weitere Konten erstellen möchten, wählen Sie das Menü {Bearbei
 
 \vspacepdf{5mm}
 
-Andernfalls können Sie das soeben erstellte Konto oder das Konto, von dem Sie die Daten gerade importiert haben, verwenden.%Otherwise, you can start using the account you just created or the one from which you just imported the data.
+Andernfalls können Sie das soeben erstellte Konto oder das Konto, von dem Sie die Daten gerade importiert haben, verwenden.\newline%Otherwise, you can start using the account you just created or the one from which you just imported the data.
 
-\minisec{\Attention{}}%Warning
-Im Allgemeinen ist es nicht ratsam, Akzente oder Leerzeichen in den Namen der von Grisbi verwendeten Verzeichnisse und Dateien zu verwenden. Wenn dies der Fall ist, benennen Sie sie jetzt um. Leerzeichen können beispielsweise durch Unterstriche (\underline{}) ersetzt werden.%In general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\underline{}).
+\Attention{}: Im Allgemeinen ist es nicht ratsam, Akzente oder Leerzeichen in den Namen der von Grisbi verwendeten Verzeichnisse und Dateien zu verwenden. Wenn dies der Fall ist, benennen Sie sie jetzt um. Leerzeichen können beispielsweise durch Unterstriche (\underline{}) ersetzt werden.%In general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\underline{}).
 
 \section{Speichern Ihrer Kontendatei\label{start-save}}%Saving your accounts file\label{start-save}}
 
