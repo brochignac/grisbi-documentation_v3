@@ -524,11 +524,11 @@ Grisbi dispose d'un certain nombre de raccourcis-clavier, listés dans les préf
 			\item Bascule vers la liste des opérations ou des opérations planifiées: \keys{\arrowkeyright}
 			\item Bascule vers le panneau de navigation: \keys{\arrowkeyleft}
 		\end{itemize}
-	\item Sur un compte sélectionné:
+	\item Sur un compte sélectionné:%TODO to update
 		\begin{itemize}
 			\item Affiche la fenêtre de recherche de caractères: \keys{Ctrl+F}
 		\end{itemize}
-	\item Sur l'onglet États:
+	\item Sur l'onglet États:%TODO to update
 		\begin{itemize}
 			\item Ouvre la fenêtre des propriétés d'un état de recherche: \keys{Ctrl+F}
 		\end{itemize}	
@@ -548,8 +548,14 @@ Grisbi dispose d'un certain nombre de raccourcis-clavier, listés dans les préf
 		\end{itemize}
 	\item Modifier une opération: \keys{Entrée \return}
 	\item Supprimer une opération: \keys{Suppr}
-	\item Pointer ou dépointer une opération: \keys{Ctrl+P} ou \keys{F12}
-	\item Rapprocher ou dé-rapprocher une opération: \keys{Ctrl+R}
+	\item Pointer ou dépointer une opération:
+		\begin{itemize}
+			\item dans le mode rapprochement: \keys{Ctrl+P}, \keys{F12} ou \keys{Espace},
+			\item hors mode rapprochement: \keys{Ctrl+P} ou \keys{F12}
+		\end{itemize}
+	\item Rapprocher ou dé-rapprocher une opération: \keys{Ctrl+R}\newline
+	\Note: hors mode rapprochement, Grisbi ouvre une fenêtre vous demandant de sélectionner un rapprochement.
+	\item Déplier/replier une opération ventilée: \keys{Espace}
 	\item Montrer ou masquer les opérations rapprochées: \keys{Alt+R}
 	\item Montrer ou masquer les lignes d'archives: \keys{Alt+L}
 	\item Dans la liste des opérations d'un compte:
