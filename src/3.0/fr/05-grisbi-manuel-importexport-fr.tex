@@ -150,13 +150,13 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 							\item \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Décocher pour ne pas mettre les dates entre guillemets};
 						\end{itemize}
 			\end{itemize}
-			\item \menus{Traiter automatiquement le(s) compte(s) sélectionné(s)}: cette option exporte le ou les comptes sélectionnés automatiquement:
+			\item \menus{Traiter automatiquement les comptes sélectionnés}: cette option exporte le ou les comptes sélectionnés automatiquement:
 				\begin{itemize}
 					\item avec un nom de fichier généré comme suit:\newline
 					[nom de l'entité comptable]-[nom du compte].[extension sélectionnée], 
 					\item et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser; le survol du menu avec la souris ouvre la fenêtre d'information suivante:\newline
-					\frquote{Le nom du(es) fichier(s) de compte sera(ont) nommé(s) comme suit:\newline
-					[nom de l'entité comptable]-[nom du compte].[extension]\newline
+					\frquote{Les fichiers générés seront nommés comme suit:\newline
+					[entité comptable]-[nom du compte].[extension]\newline
 					Le dossier d'enregistrement sera le dossier du fichier Grisbi}.
 				\end{itemize}	
 			\Note{}: il est recommandé de ne pas utiliser le caractère barre oblique \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur les systèmes \gls{Linux}.
@@ -166,4 +166,10 @@ Dans le menu \menus{Fichier}, choisissez l'option \menus{Exporter vers un fichie
 	\item la fenêtre de fin de l'exportation s'affiche; validez par le bouton \menus{Fermer}.
 \end{enumerate}
 
-\Attention{}: d'une manière générale, il est déconseillé d'avoir des accents ou des espaces dans les noms des répertoires et fichiers utilisés par Grisbi. Si c'est le cas, renommez-les maintenant. Par exemple, les espaces peuvent être remplacées par des tirets bas (\_).
+\Attention{}: d'une manière générale, il est déconseillé d'avoir des accents, des espaces ou des caractères spéciaux dans les noms des répertoires et fichiers utilisés par Grisbi. Si c'est le cas, renommez-les maintenant. Par exemple, les espaces peuvent être remplacées par des tirets bas (\_).
+
+Eviter les caractères spéciaux tels que & * % $ £ ° { ! @ qui peuvent être réservés pour des tâches spécifiques selon les systèmes d’exploitation
+	Évitez les espaces et les caractères spéciaux tels que : #~! @$^`éèùà&*()’:;<>?.,[]{} «»|%
+	Ne pas utiliser de caractères spéciaux (sauf underscore « _ » ) : % $ ! & / \ : ; « » % & # @ etc.
+	N’employez pas de caractères spéciaux, des signes de ponctuation ou des accents (#~!
+	@$^`éèùà&*()’:;<>?.,[]{} «»|%.).
