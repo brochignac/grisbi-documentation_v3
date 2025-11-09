@@ -207,15 +207,21 @@ In the \menus{File} menu select the \menus{Export accounts as QIF/CSV file} (ou 
 							% \menus{Citer les dates}: si cochée (par défaut), les dates seront mises entre guillemets, comme les autres données. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Décocher pour ne pas mettre les dates entre guillemets};
 						\end{itemize}
 				\end{itemize}
-			\item \menus{Name files automatically}: This option automatically exports the selected account(s):
-			%\item \menus{Nommer les fichiers automatiquement}: cette option exporte le ou les comptes sélectionnés automatiquement:
+			\item \menus{Automatically treat the selected account(s)}: this option automatically exports the selected account(s):
+			%\item \menus{Traiter automatiquement les comptes sélectionnés}: cette option exporte le ou les comptes sélectionnés automatiquement:
 				\begin{itemize}
 					\item with a file name generated as follows:\newline
 					%avec un nom de fichier généré comme suit:\newline
-					[name of accounting entity]-[account name].[selected extension]. Hovering over the menu with the mouse opens an information window \enquote{Generated filenames are [accounting entity]-[account name].[extension]},
-					%[nom de l'entité comptable]-[nom du compte].[extension sélectionnée]. Le survol du menu avec la souris ouvre une fenêtre d'information \frquote{Les noms générés sont [nom de l'entité comptable]-[nom du compte].[extension]},
-					\item and saves it to the folder where the Grisbi file was opened. If the exported file(s) already exist(e), Grisbi will ask you to confirm whether you want to overwrite them;
-					%et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser;
+					[name of accounting entity]-[account name].[selected extension],
+					%[nom de l'entité comptable]-[nom du compte].[extension sélectionnée].
+					\item and saves it to the folder where the Grisbi file was opened; If the exported file(s) already exist(e), Grisbi will ask you to confirm whether you want to overwrite them; hovering over the menu with the mouse opens a following information window:\newline
+					%et dont la destination est le dossier où a été ouvert le fichier Grisbi; si le ou les fichiers exportés existent déjà, Grisbi vous demandera confirmation pour le ou les écraser; Le survol du menu avec la souris ouvre une fenêtre d'information suivante:\newline
+					\enquote{The generated files will be named as follows:\newline
+					[accounting entity]-[account name].[extension]\newline
+					The save folder will be the Grisbi file folder}
+					%\frquote{Les fichiers générés seront nommés comme suit:\newline
+					%[entité comptable]-[nom du compte].[extension]\newline
+					%Le dossier d'enregistrement sera le dossier du fichier Grisbi}.
 				\end{itemize}
 			\Note{}: it is recommended not to use the character \enquote{\slash{}} in the account name, otherwise an error may occur when exporting to \gls{Linux} systems.
 			%\Note: il est recommandé de ne pas utiliser le caractère \frquote{\slash{}} dans le nom du compte sous peine d'avoir une erreur lors de l'export sur des systemes \gls{Linux}.
@@ -228,5 +234,5 @@ In the \menus{File} menu select the \menus{Export accounts as QIF/CSV file} (ou 
 	%la fenêtre de fin de l'exportation s'affiche; validez par le bouton \menus{Fermer}.
 \end{enumerate}
 	
-\Attention{}: in general, it is inadvisable to have accents or spaces in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\_).
+\Attention{}: in general, it is inadvisable to have accents, spaces or special characters in the names of directories and files used by Grisbi. If so, rename them now. For example, spaces can be replaced by underscores (\_).
 %d'une manière générale, il est déconseillé d'avoir des accents ou des espaces dans les noms des répertoires et fichiers utilisés par Grisbi. Si c'est le cas, renommez-les maintenant. Par exemple, les espaces peuvent être remplacées par des tirets bas (\_).
