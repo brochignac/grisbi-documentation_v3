@@ -91,7 +91,7 @@
 
 % For illustrations
 %\usepackage{picins}				% for text around image TODO change to wrapfig2 in the manuel
-\usepackage{wrapfig2}				% TODO change in chapters, for text around image (replace picins)
+\usepackage{wrapfig2}				% for text around image (replace picins)
 \usepackage{caption}				% for good references in table of figures
 
 
@@ -134,6 +134,8 @@
 \cfoot*{\pagemark}				% pagemark in the center of the footer
 \ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
 \ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
+\usepackage[os=win]{menukeys}			% provides keyboard shortcut symbols
+\setcounter{secnumdepth}{3}				% add section number for \subsubsection (i.e. 2.3.1.5)
 
 %% Footnotes %%
 \usepackage[%
@@ -181,7 +183,7 @@
 	plainpages=true						% do page number anchors as plain Arabic, default=false
 %	pdfpagelabels=true					% set PDF page labels - Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
 }
-\usepackage[os=win]{menukeys}			% provides keyboard shortcut symbols
+
 \input{31-grisbi-manuel-urldef-fr}		% include the "grisbi-manuel-urldef" file during the compilation
 
 %% Glossary %%

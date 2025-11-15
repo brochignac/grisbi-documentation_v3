@@ -90,7 +90,7 @@
 
 % For illustrations
 %\usepackage{picins}				% for text around image TODO change to wrapfig2 in the manuel
-\usepackage{wrapfig2}				% TODO change in chapters, for text around image (replace picins)
+\usepackage{wrapfig2}				% for text around image (replace picins)
 \usepackage{caption}				% for good references in table of figures
 
 
@@ -133,32 +133,12 @@
 \cfoot*{\pagemark}				% pagemark in the center of the footer
 \ModifyLayer[addvoffset=-1ex]{scrheadings.foot.above.line}		% shift line up to increase distance between footer text and footerline in normal stylepages
 \ModifyLayer[addvoffset=-1ex]{plain.scrheadings.foot.above.line}	% shift line up to increase distance between footer text and footerline in plain style page (chapter page)
-
 \setlist{parsep=0.5mm}							% modify space between items
 \renewcommand{\labelitemii}{\textopenbullet}	% change 2nd level list marker: "-" to \textopenbullet
 \renewcommand{\labelitemiii}{-}					% change 3rd level list marker: "-"
 \renewcommand{\labelitemiv}{*}					% change 4th level list marker: "*"
-
-%\frenchsetup{ItemLabeli=\textbullet}	% change 1st level list marker of french babel
-%\frenchsetup{ItemLabelii=-}			% change 2nd level list marker of french babel
-
-%\renewenvironment{itemize}%
-%{\begin{itemize}%
-%		\setlength{\itemsep}{-3pt}%
-%		\setlength{\parsep}{0pt}%
-%		\setlength{\parskip}{0pt}%
-%	}%
-%	{\end{itemize}}
-
-%\newenvironment{maliste}{
-%	\begin{list}{--}{
-%		\setlength{\leftmargin}{0cm}
-%		\setlength{\itemindent}{\widthof{--}+\labelsep}
-%		}
-%	}{
-%	\end{list}
-%}
-
+\usepackage[os=win]{menukeys}					% provides keyboard shortcut symbols
+\setcounter{secnumdepth}{3}						% add section number for \subsubsection (i.e. 2.3.1.5)
 
 %% Footnotes %%
 \usepackage[%
@@ -202,7 +182,7 @@
 	plainpages=true						% do page number anchors as plain Arabic, default=false
 %	pdfpagelabels=true					% set PDF page labels - Commenté car élimine  "Package hyperref Warning: Option `pdfpagelabels' has already been used,"
 }
-\usepackage[os=win]{menukeys}			% provides keyboard shortcut symbols
+
 \input{31-grisbi-manuel-urldef-en}		% include the "grisbi-manuel-urldef" file during the compilation
 
 %% Glossary %%
@@ -386,7 +366,7 @@
 \include{05-grisbi-manuel-importexport-en}
 %\cleardoubleemptypage
 
-\include{06-grisbi-manuel-datamanagement-en}	% TODO update screenshots and text "datamanagement", uncomment when finished
+%\include{06-grisbi-manuel-datamanagement-en}	% TODO update screenshots and text "datamanagement", uncomment when finished
 %\cleardoubleemptypage
 
 %\include{08-grisbi-manuel-accounts-en}		% TODO update screenshots and text "accounts", uncomment when finished
