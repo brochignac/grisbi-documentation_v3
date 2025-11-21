@@ -1,188 +1,288 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Contents : The data management chapter
-% $Id : grisbi-manuel-datamanagement.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
-% $Id : grisbi-manuel-datamanagement.tex, v 1.0 2014/02/12 Jean-Luc Duflot
+% $Id: grisbi-manuel-datamanagement.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
+% $Id: grisbi-manuel-datamanagement.tex, v 1.0 2014/02/12 Jean-Luc Duflot
+% $Id: 06-grisbi-manuel-datamanagement-en.tex, v 3.0 2025/11 Dominique Brochard
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Data management\label{datamanagement}}
 
-The data you enter into Grisbi must be carefully preserved and protected against accidental loss. Grisbi provides three tools to address this issue : \menu{Account file management}, \menu{Backups} and \menu{Archives}.
 
-\section{Managing the account files\label{datamanagement-files}}
+The data you enter into Grisbi must be carefully preserved and protected against accidental loss. Grisbi provides three tools to address this issue:
+%Les données que vous avez entrées dans Grisbi et les traitements que vous en avez faits sont en nombre important; de ce fait ils ne doivent en aucun cas être perdus, et leur quantité ne doit pas être un obstacle à leur bonne gestion. Grisbi propose donc trois outils pour faire face à ces problématiques:
+\begin{itemize}
+	\item \menus{Account files handling} created by Grisbi,
+	%la \menus{Gestion des fichiers} créés par Grisbi,
+	\item the \menus{Backups} of these same files,
+	%la \menus{Sauvegarde} de ces mêmes fichiers,
+	\item the \menus{Archiving} of transactions stored in these files.
+	%l'\menus{Archivage} des opérations stockées dans ces fichiers.
+\end{itemize}
 
-You can set the following management options:
+\section{Account files handling\label{datamanagement-files}}
+
+You can set the following management options in the menu \menus{Edit - Preferences}:
+%Vous pouvez définir les options de gestion suivantes dans le menu \menus{Éditer - Préférences}:
 
 \begin{itemize}
 	\item automatically load last file on startup;
-	\item automatically on exit;
-	\item \indexword{Force saving}\index{enregistrement !forçage} of locked files ;
-	\item \indexword{Encrypt}\index{fichier de comptes !chiffrement}\index{chiffrement !fichier de comptes} Grisbi file;
-	\item\indexword{\gls{Compress}} Grisbi file\index{fichier de comptes !compression}\index{compression !fichier de comptes} ;
+	%le chargement automatique du dernier fichier consulté;
+	\item automatic saving when closing on exit;
+	%l'enregistrement automatique lors de la fermeture;
+	\item \indexword{Force saving}\index{saving!force} of locked files;
+	%le \indexword{forçage de l'enregistrement}\index{enregistrement!forçage} des fichiers verrouillés;
+	\item \indexword{Encrypt}\index{file!encrypt}\index{encrypt!file} Grisbi file;
+	%le \indexword{chiffrement du fichier}\index{fichier!chiffrement}\index{chiffrement!fichier};
+	\item \indexword{Compress} Grisbi file\index{file!compression}\index{compression!file} (see \gls{compression});
+	%la \indexword{\gls{compression}} du fichier\index{fichier!compression}\index{compression!fichier};
 	\item Memorise last opened files.
+	%la mémorisation des derniers fichiers ouverts.
 \end{itemize}
 
-All of these options are explained in detail and can be configured in the \menu{Edit - Preferences} menu (see \vref{setup-general-files-manage}, \menu{Managing Account Files}).
+All of these options are explained in detail and can be configured in the \menus{Edit - Preferences} menu (see \vref{setup-general-files-manage}, \menus{Account files handling}).
+%Toutes ces options sont explicitées en détail et peuvent être configurées (voir le paragraphe \vref{setup-general-files-manage}, \menus{Gestion des fichiers de comptes}).
 
-
-\section{Data management-backup\label{datamanagement-backup}}
+\section{Backups\label{datamanagement-backups}}
 
 In general, no matter what data you have on your computer's hard drive, you need to make backups of it, for the simple reason that \emph{any data storage system has a limited lifetime}. Making backups is designed to limit the risk of data loss. 
+%D'une manière générale, quelles que soient les données que vous possédez dans le disque dur de votre ordinateur, vous devez impérativement en faire des sauvegardes, pour la simple raison que \emph{tout système de stockage de données a une durée de vie limitée}. Faire des sauvegardes a pour but de limiter les risques de pertes de données.
 
 Grisbi allows you to make automatic backups of your accounts file. These backups should be stored in a special directory or a special \gls{partition} of your computer's disk, with backups of all your other data, which would then allow you to easily back up this directory or partition, preferably on different types of media, independent of the computer, and put in a safe place.
+%Grisbi vous permet de faire des sauvegardes automatiques de votre fichier de comptes. Ces sauvegardes devraient être stockées dans un répertoire spécial ou une \gls{partition} spéciale du disque de votre ordinateur, avec les sauvegardes de toutes vos autres données, ce qui vous permettrait alors de sauvegarder facilement ce répertoire ou cette partition, de préférence sur des supports de type différents, indépendants de l'ordinateur, et mis en lieu sûr.
 
-% espace avant Attention ou Note  : 5 mm
+% espace avant Attention ou Note: 5 mm
 \vspacepdf{5mm}
-\textbf{Note}:  take these tips seriously and do not take risks with your data, this can save you many setbacks\ldots
-% espace après Attention ou Note  : 5 mm
+\Note{}: take these tips seriously and do not take risks with your data, this can save you many setbacks\ldots
+%\Note{}: vous êtes maintenant prévenu(e), prenez ces conseils au sérieux: ne prenez pas de risques avec vos données, cela peut vous éviter bien des déboires\ldots
+% espace après Attention ou Note: 5 mm
 \vspacepdf{5mm}
 
-Grisbi can automatically save, in a directory to be defined, either a single backup file that is replaced regularly, or backup files that accumulate in this directory.
-The backup files have a name of the form \file{name\_of\_file\_YYYYMMDDTHHMMSS.gsb}, where \emph{name\_of\_file} is the name of your accounts file, \emph{YYYYMMDD} is the date in year-month-days, \emph{T}  is a separator, and \emph{HHMMSS}  is the time in hours- minutes-seconds. This format is based on the ISO 8601 international date format, which permits, among other things, the automatic sorting in alphanumeric and chronological order in your backup directory.
+Grisbi can automatically save, in a directory to be defined, either a single backup file that is replaced regularly with a name of the form \file{name\_of\_file\_backup.gsb} and that is replaced regularly with, or backup files that accumulate in this directory.
+%Grisbi peut enregistrer automatiquement, dans un répertoire à définir, soit un fichier de sauvegarde unique avec un nom de la forme \file{nom\_du\_fichier\_backup.gsb} et qui est mis à jour régulièrement, soit des fichiers de sauvegarde qui s'accumulent dans ce répertoire.
+
+\newpage
+The name of these backup files is of the form \file{name\_of\_file\_YYYYMMDDTHHMMSS.gsb}, where:
+%Le nom de ces fichiers de sauvegarde est de la forme \file{nom\_du\_fichier\_AAAAMMJJTHHMMSS.gsb}, où:
+\begin{itemize}
+	\item \enquote{name\_of\_file} is the name of your Grisbi file,
+	%\frquote{nom\_du\_fichier} est le nom de votre fichier Grisbi,
+	\item \enquote{YYYYMMDD} is the date in year-month-day format
+	%\frquote{AAAAMMJJ} est la date en année-mois-jours,
+	\item \enquote{T} (for \emph{time}) separates the date (left) and time (right) indications,
+	%\frquote{T} (pour \emph{time}) sépare les indications de date (à gauche) et d'heure (à droite),
+	\item \enquote{HHMMSS} is the time in hours-minutes-seconds.
+	%\frquote{HHMMSS} est l'heure en heures-minutes-secondes.
+\end{itemize}
+This format is based on the international ISO 8601 date format, which means, among other things, that your backup directory can be automatically sorted alphanumerically and chronologically.
+%Ce format est basé sur le format international de date ISO 8601, ce qui permet, entre autres, le classement automatique par ordre alphanumérique et chronologique dans votre répertoire de sauvegarde.
 
 %espace pour changement de thème
 \vspacepdf{5mm}
 Grisbi provides you the following backup options:
+%Grisbi vous propose les options de sauvegarde suivantes:
 
 \begin{itemize}
 	\item the creation of a single backup file, otherwise the backup files are added to their directory;
-	\item the \indexword{\gls{compression} of the backup file}\index{fichier de sauvegarde !compression}\index{compression !fichier de sauvegarde}, to occupy less disk space;
-	\item backup after opening the account file; 
-	\item backup before saving the account file; 
+	%la création d'un fichier de sauvegarde unique, sinon les fichiers de sauvegarde s'ajoutent dans leur répertoire;
+	\item the \indexword{\gls{compression} of the backup file}\index{backup file!compression}\index{compression!backup file}, to occupy less disk space;
+	%la \indexword{\gls{compression} du fichier de sauvegarde}\index{fichier de sauvegarde!compression}\index{compression!fichier de sauvegarde}, pour occuper moins d'espace disque;
+	\item backup after opening the Grisbi file;
+	%la sauvegarde après l'ouverture du fichier Grisbi;
+	\item backup before saving the Grisbi file;
+	%la sauvegarde avant l'enregistrement du fichier Grisbi;
 	\item setting the interval between two backups, in minutes;
-	\item setting the \indexword{backup directory}\index{répertoire de sauvegarde}\index{fichier de sauvegarde !répertoire}.
+	%le réglage de l'intervalle entre deux sauvegardes, en minutes;
+	\item setting the deletion of backups according to their age, in months;
+	%le réglage de la suppression des sauvegardes en fonction de leurs ancienneté, en mois;
+	\item setting the \indexword{backup directory}\index{backup directory}\index{backup file!directory}.
+	%la définition du \indexword{répertoire de sauvegarde}\index{répertoire de sauvegarde}\index{fichier de sauvegarde!répertoire}
 \end{itemize}
 
 %espace pour changement de thème
 \vspacepdf{5mm}
-All of these options are described in detail and can be configured in the \menu{Edit - Preferences} menu (see \vref{setup-general-files-backup}, \menu{Backups}).
+All of these options are described in detail and can be configured in the \menus{Edit - Preferences} menu (see \vref{setup-general-files-backups}, \menus{Backups}).
+%Toutes ces options sont décrites en détail et peuvent être configurées dans le menu \menus{Éditer - Préférences} (voir le paragraphe \vref{setup-general-files-backup}, \menus{Sauvegardes}).
 
 
-\section{Archives\label{datamanagement-history}}
+\section{Archiving\label{datamanagement-archive}}
 
-%An archive is a little like \og placing in parentheses \fg{} some of the entries from all the accounts in your account file.
+An archive is a little like \enquote{placing in parentheses} some of the entries from all the accounts in your file created by Grisbi. Entries inside an archive are no longer displayed and can no longer be processed, but are preserved. You can always unarchive an existing archive at any time to access its data.
+%Une archive est une sorte de \frquote{mise entre parenthèses} d'une partie des opérations de tous les comptes de votre fichier créé par Grisbi. Les opérations à l'intérieur d'une archive ne sont plus affichées et ne peuvent plus faire l'objet de traitements, mais elles sont toujours conservées dans ce fichier. Vous pouvez toujours et à tout moment dés-archiver une archive existante pour en afficher les opérations et l'inclure dans un traitement.
 
-Entries inside an archive are no longer displayed and can no longer be processed, but are preserved. You can always unarchive an existing archive at any time to access its data. 
-
+\vspace{.2em}
 When you use Grisbi, you enter transactions into your different accounts. These operations are all stored in the computer's memory and hard disk, and a few of these are displayed on the screen. The display and processing of account entries consumes memory and microprocessor time.
+%Lorsque vous utilisez Grisbi, vous entrez des opérations dans vos différents comptes. Ces opérations sont toutes enregistrées dans la mémoire et sur le disque dur de l'ordinateur, et une petite partie est affichée sur l'écran. L'affichage et le traitement des opérations consomme donc de la mémoire et du temps de microprocesseur.
 
-As time goes by, there are more and more operations recorded, so their display and processing require more and more memory space and microprocessor time. Your computer (depending on its specification) will eventually start to run Grisbi more slowly. 
+\vspace{.2em}
+As time goes by, there are more and more operations recorded, so their display and processing require more and more memory space and microprocessor time. Your computer (depending on its specification) will eventually start to run Grisbi more slowly.
+%Au fur et à mesure que le temps passe, il y a de plus en plus d'opérations enregistrées, donc leur affichage et leurs traitements demandent de plus en plus d'espace mémoire et de temps de microprocesseur. Votre ordinateur devient donc de plus en plus lent, mais évidemment, cela dépend toujours de ses propres caractéristiques.
 
+\vspace{.2em}
 To limit this loss of performance in the display and the processing, in particular in report generation or in the search for information, Grisbi prompts you to choose a portion of your entries and to put them in an archive, that is, to set them apart so that they are not affected by future postings or operation.
+%Pour limiter cette perte de performances dans l'affichage et le traitement, en particulier dans l'établissement d'états ou dans la recherche d'informations, Grisbi vous propose de choisir une partie des opérations et de les mettre dans une archive, c'est-à-dire de les mettre à part pour leur éviter d'être concernées par de futurs affichages ou traitements.
 
 Archiving can be manual or automated. Grisbi considers that beyond three thousand operations in an account, the entries become too slow, so on the one hand it warns you if you exceed this number of transactions and prompts you to manually archive a section of them. Alternatively, it can let you archive these three thousand transactions by automatically launching an assistant.
 
 Whether you do an archiving manually or with the assistant, the counting process is then reset and Grisbi will offer you the same thing again after three thousand additional operations.
 
+\subsection{Creating an archive\label{datamanagement-archive-new}}%Création d'une archive
+
+The creation of an archive can be triggered automatically or manually:
+%La création d'une archive peut être déclenchée automatiquement ou manuellement:
+
+\subsubsection{Automatic triggering of archive creation\label{datamanagement-archive-auto}}
+%Déclenchement automatique de la création d'une archive
+
+When a certain number of registered transactions is reached, Grisbi can warn you that this quantity of operations has not yet been archived. on the other hand automatically start the creation of an archive (see \vref{setup-general-archives-create}, \menus{warning and automatic creation}). To do this, you will need to activate \menus{Automatic check} of archives in the Grisbi preferences (see paragraph \vref{setup-general-archives-create}).
+%Lorsqu'un certain nombre d'opérations enregistrées est atteint, Grisbi peut vous avertir que cette quantité d'opérations n'a pas été encore archivée. Pour cela, il vous faudra activer la \menus{création automatique} des archives dans les préférences de Grisbi (voir le paragraphe \vref{setup-general-archives-create}.
+
+Check the option \menus{Check at opening if creating archive is needed}:
+%Cocher l'option \menus{Créer automatiquement une archive si nécessaire}:
+\begin{itemize}
+	\item will launch the archiving assistant when you open your Grisbi file if the trigger threshold is reached,
+	%lancera l'assistant d'archivage à l'ouverture de votre fichier Grisbi si le seuil de déclenchement est atteint, 
+	\item activates the warning threshold of three thousand transactions (minimum by default), labelled \menus{Warm if more than \ldots{} transactions are not archived}.
+	%active le seuil d'avertissement de trois mille opérations (minimum par défaut), libellé \menus{Avertir si plus de \ldots{} opérations ne sont pas archivées}.
+\end{itemize}
+
+The first window of the \menus{Archive transactions} wizard will inform you of the total number of operations recorded in your file.
+%La première fenêtre de l'assistant \menus{Créer une archive} vous informera du nombre total d'opérations enregistrées dans votre fichier.
+
+Once archiving is complete, the counting process is reset to zero and Grisbi will display the same warning again after three thousand additional operations.
+%A l'issue de l'archivage, le processus de comptage est remis à zéro et Grisbi vous proposera de nouveau le même avertissement après trois mille opérations supplémentaires.
 
 
-\subsection{Archives in the list of transactions\label{datamanagement-history-list}}
+\subsubsection{Manual creation of an archive\label{datamanagement-archive-manu}}%Création manuelle d'une archive
+%\subsection{Archives in the list of transactions\label{datamanagement-archive-list}}
 
-The \indexword{display of an archive}\index{archive !affichage} appears at the top of the list of operations for \emph{each account},  in the form of an operation line on a green{\couleur} background, indicating its date of creation, its name and its creation parameters. (dates and financial year or report name), as well as \ifIllustration the \indexword{ number of archived operations}\index{archive !nombre d'opérations} \emph{for the account displayed}, and the \indexword{total number of transaction}\index{opération !nombre total} in your accounts file\refimage{datamanagement-history-line-img}.
+Manual creation can be performed in addition to or instead of automatic launch. The warning about the number of unarchived operations is not active.
+%La création manuelle peut se faire en plus ou à la place du lancement automatique. L'avertissement du nombre d'opérations non archivées n'est pas actif.
+
+\begin{enumerate}
+	\item in the menu bar, select \menus{File - Archive transactions}: the archive creation wizard window appears; confirm by clicking the \menus{Following} button;
+	%dans la barre de menus, sélectionnez \menus{Fichier - Créer une archive}: la fenêtre de l'assistant de création d'archive s'affiche; validez par le bouton \menus{Suivant};
+	\item in the next window, you can choose from three modes for selecting the operations to be archived \refimage{datamanagement-archive-create-img}:
+	%dans la fenêtre suivante, vous pouvez choisir parmi les trois modes de sélection des opérations à archiver \refimage{datamanagement-archive-create-img}:
+	% image centrée
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=0.95\textwidth]{image/screenshot/datamanagement_archive_create}
+		\end{center}
+		\caption{Creating an archive}%Création d'une archive}
+		\label{datamanagement-archive-create-img}
+	\end{figure}
+	% image centrée
+	\begin{itemize}
+		\item \menus{Archive by date}: enter the \menus{Initial date} and \menus{Final date} in the appropriate fields.
+		%\menus{Tri par date}: saisissez la \menus{Date initiale} et la \menus{Date finale} dans les champs adéquats,
+		\item \menus{Archive by financial year}: select a financial year available from the drop-down list,
+		%\menus{Archiver les opérations par exercice}: sélectionnez un exercice disponible dans la liste déroulante,
+		\item \menus{Archive by report}: select a report available from the drop-down list;
+		%\menus{Archiver les opérations appartenant à l'état}: sélectionnez un état disponible dans la liste déroulante;
+% saut de ligne pour indentation correcte de la note dans la liste
+
+
+		\Note{}: the last line of the window indicates either an error in entering these parameters (in red) or the number of transactions that will be archived (all accounts combined) out of the total number of transactions in your Grisbi file.
+		%la dernière ligne dans la fenêtre indique soit une erreur de saisie de ces paramètres (en rouge), soit le nombre d'opérations qui seront archivées (tous comptes confondus) sur le nombre total d'opérations de votre fichier Grisbi. 
+	\end{itemize}
+	\item confirm by clicking the \menus{Following} button;
+	%validez par le bouton \menus{Suivant};
+	\item in the next window, enter the name you want to give to this archive; confirm with the \menus{Apply} button;
+	%dans la fenêtre suivante, saisissez le nom que vous voulez donner à cette archive; validez avec le bouton \menus{Appliquer};
+	\item the last window informs you that the archive has been created and displays the name of the archive as well as the \indexword{number of archived transactions}\index{archive!number of transactions} \emph{all accounts combined} out of the total number of transactions in your Grisbi file; confirm with the \menus{Close} button or click on the \menus{Previous} button to create another archive.
+	%la dernière fenêtre vous informe que l'archive a été créée, et affiche le nom de l'archive ainsi que le \indexword{nombre d'opérations archivées}\index{archive!nombre d'opérations} \emph{tous comptes confondus} sur le nombre total d'opérations de votre fichier Grisbi; validez avec le bouton \menus{Fermer} ou cliquer sur le bouton \menus{Précédent} pour créer une autre archive.
+\end{enumerate}
+
+\vspacepdf{5mm}
+\Note{}: in case Grisbi has become slower after creating an archive, you can configure it to not load the close transactions (R) on startup, in order to increase its speed, (see the \ref{transactions-functions}, \menus{Tools bar}).
+%\Note{}: au cas où Grisbi serait devenu plus lent après avoir créé une archive, vous pouvez le configurer pour ne pas charger les opérations rapprochées (R) au démarrage, afin d'augmenter sa rapidité (voir la section \ref{transactions-functions}, \menus{Barre d'outils}).
+\vspacepdf{5mm}
+
+\subsection{Displaying archives\label{datamanagement-archive-display}}%Affichage des archives
+
+The \indexword{display of an archive}\index{archive!display} appears at the top of the list of operations for \emph{each account}, in the form of an operation line on a \textcolor[RGB]{60,120,40}{green background}, indicating the start date of the archive%its creation date.
+%TODO to fix
+, its name and creation parameters (dates, financial year or report name), as well as the \indexword{number of archived transactions}\index{archive!number of transactions} \emph{for the account displayed} \refimage{datamanagement-archive-line-img}.
+%L'\indexword{affichage d'une archive}\index{archive!affichage} apparaît tout en haut de la liste des opérations \emph{de chaque compte}, sous la forme d'une ligne d'opération sur \textcolor[RGB]{60,120,40}{fond vert}, indiquant la date de début de l'archive%sa date de création
+%, son nom et ses paramètres de création (dates, exercice ou état), ainsi que le \indexword{nombre d'opérations archivées}\index{archive!nombre d'opérations} \emph{pour le compte affiché} \refimage{datamanagement-archive-line-img}.
 
 % image centrée
 \begin{figure}[htbp]
-\begin{center}
-\includegraphics[scale=0.5]{image/screenshot/datamanagement_history_line}
-\end{center}
-\caption{Archive line displayed}
-\label{datamanagement-history-line-img}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/datamanagement_archive_line}
+	\end{center}
+	\caption{Archive line displayed}%Ligne d'une archive
+	%\label{datamanagement-archive-line-img}
 \end{figure}
 % image centrée
-\else the \indexword{ number of archived operations}\index{archive !nombre d'opérations} \emph{for the account displayed}, and the \indexword{total number of transactions}\index{opération !nombre total} in your accounts file.
-\fi
+the \indexword{number of archived operations}\index{archive!nombre d'opérations} \emph{for the account displayed}, and the \indexword{total number of transactions}\index{opération!nombre total} in your accounts file.
 
+You can display (or hide) the archive line for all accounts by selecting (or deselecting) the box in the \menus {View - Show lines archives} menu, or by clicking on \menus{View} in the menu bar, then checking (or unchecking) \menus{Show lines archives} (\keys{Alt+L}) in the drop-down list.
+%Vous pouvez afficher (ou masquer) la ligne d'archive pour tous les comptes en cochant (ou décochant) la case du menu \menus{Affichage - Montrer les lignes d'archives}, ou en cliquant sur \menus{Affichage} de la barre de menu, puis en cochant (ou décochant) \menus{Montrer les lignes d'archives} (\keys{Alt+L}) dans la liste déroulante.
 
-You can show or hide all archive rows in the list of operations for all accounts by selecting the \menu{View - Show Lines Archive}, or by clicking the \menu{View} tool on the toolbar, and then click selecting \menu{Show Archive Lines} from its drop-down list.
+If you want to view the transactions within an archive, you can open this archive by double-clicking on its line: after confirmation in the window that appears, the operations are displayed in the list.
+%Si vous voulez consulter les opérations à l'intérieur d'une archive, vous pouvez ouvrir cette archive en double-cliquant sur sa ligne: après validation dans la fenêtre qui apparaît, les opérations sont affichées dans la liste.
 
-If you want to view the operations inside an archive, you can open this archive by double-clicking on its line: after validation in the window that appears, the operations are displayed in the list.
-
-\textbf{Note}: this is only an opening of the archive for display, and in no case this archive is deleted. The next time Grisbi is used, the green line of the archive will reappear at the top of the list for each account. For a true deletion of the archive, see the \vref{datamanagement-history-remove}, \menu{Deleting an archive} section.
-
-
-
-\subsection{Creating and archive\label{datamanagement-history-new}}
-
-To create an archive, follow these steps:
-
-\begin{enumerate}
-	\item in the menu bar, select \menu{File - Archive transactions\ldots{}} : The Archive Creation Wizard window is displayed; confirm with the \menu{Forward} button;
-	\item in the following window, you can choose the operation selection mode to archive  \ifIllustration archiver\refimage{datamanagement-history-create-img}:
-	% image centrée
-	\begin{figure}[htbp]
-	\begin{center}
-	\includegraphics[scale=0.5]{image/screenshot/datamanagement_history_create}
-	\end{center}
-	\caption{Creating an archive}
-	\label{datamanagement-history-create-img}
-	\end{figure}
-	% image centrée
-	\else archiver :
-	\fi
-	
-		\begin{itemize}
-			\item \menu{Archive by Date}: enter the \menu{Initial date} and \menu{Final date} in the appropriate fields,
-			\item \menu{Archive transactions by financial year}: Select an available year from the drop-down list,
-			\item \menu{Archive transactions by report}: Select an available report from the drop-down list;
-% saut de ligne pour indentation correcte de la note dans la liste
-
-			\textbf{Note}: the last line in the window indicates either an error in entering these parameters, the number of transactions that will be archived and the total number of operations in your accounts file.  
-		\end{itemize}
-	\item confirm with the \menu{Forward} btton;
-	\item in the next window, enter the name you want for this archive; confirm with the  \menu{Apply} button;
-	\item the last window informs you that the archive has been created, and displays the \indexword{number of archived transactions}\index{archive !nombre d'opérations}, number of transactions and the total number of transactions of your accounts file;  \emph{all accounts taken together};  validate with the \menu{Back} button to create another archive, otherwise by the \menu{Close} button.
-\end{enumerate}
-
-\textbf{Note}: In case Grisbi has become slower after creating an archive, you can configure it to not load the close operations (R) on startup, in order to increase its speed, see the \ref{transactions-functions}, \menu{tool bar}).
-
-% espace après Attention ou Note  : 5 mm
 \vspacepdf{5mm}
-The archive appears at the very top of the list of operations \emph{for each account} (see the \vref{datamanagement-history-list} section, \menu{Archives in the list of transactions}).
+\Note{}: this is only opening the archive for display, the archive is not deleted. The next time you use Grisbi, the green line of the archive will reappear at the top of each account list. To permanently delete the archive, see the section \vref{datamanagement-archive-remove}, \menus{Deleting an archive}.
+%\Note{}: il ne s'agit que d'une ouverture de l'archive pour affichage, et en aucun cas cette archive n'est supprimée. À la prochaine utilisation de Grisbi, la ligne verte de l'archive réapparaîtra en haut de la liste de chaque compte. Pour une véritable suppression de l'archive, voir la section \vref{datamanagement-archive-remove}, \menus{Suppression d'une archive}.
+\vspacepdf{5mm}
 
 
-\subsection{Creation warning and automatic creation of archives\label{datamanagement-history-auto}}
+\subsection{Parameters of an archive\label{datamanagement-archive-parameters}}%Paramètres d'une archive
 
-When a certain number of registered transactions is reached, Grisbi can first of all warn you that this quantity of operations has not yet been archived, on the other hand automatically start the creation of an archive (see \vref{setup-general-archives-create}, \menu{warning and automatic creation}).
-
-By clicking on the box labelled \menu{Automatically create an archive if necessary}, you enable the automatic archiving function.
-
-With the label \menu{Warn if more transactions \ldots{ } are not archived}, you can set this number of operations. The default value is 3000.
-
-
-\subsection{Parameters of an archive\label{datamanagement-history-parameters}}
 You can consult the parameters that were defined during the creation of an archive, in the 
-\menu{Edit - Preferences - Archives} menu. For this see the \vref{setup-general-archives-existing}, \menu{Existing Archives}.
+\menus{Edit - Preferences - Archives} menu. For this see the \vref{setup-general-archives-existing}, \menus{Known Archives}.
+%Vous pouvez consulter les paramètres qui ont été définis pendant la création d'une archive, dans le menu \menus{Édition - Préférences - Archives}. Pour cela, voir la section \vref{setup-general-archives-existing}, \menus{Archives existantes}.
 
+\subsection{Editing an archive\label{datamanagement-archive-modify}}%Modification d'une archive
 
-\subsection{Editing an archive\label{datamanagement-history-modify}}
+You can only \indexword{change the name of an archive}\index{archive!modification} in the \menus{Edit - Preferences} menu. For this see the \vref{setup-general-archives-remove}, \menus{Archive modification} section.
+%Vous pouvez uniquement \indexword{modifier le nom d'une archive}\index{archive!modification} dans le menu \menus{Édition - Préférences}. Pour cela, voir le paragraphe \vref{setup-general-archives-remove}, \menus{Modifier l'archive}.
 
-You can only \indexword{change the name of an archive}\index{archive !modification} in the \menu{Edit - Preferences } menu. For this see the \vref{setup-general-archives-remove}, \menu{Edit the archive} section.
+\subsection{Deleting an archive\label{datamanagement-archive-remove}}%Suppression d'une archive
 
+You can \indexword{delete an existing archive}\index{archive!delete} , in the menu \menus{Edit - Preferences} menu. There are two separate delete functions: deleting an archive while \emph{retaining} its transactions,and deleting an archive while \emph{deleting} all its operations. For this see \vref{setup-general-archives-remove}, \menus{Archive modification} section. 
+%Vous pouvez \indexword{supprimer une archive}\index{archive!suppression} existante, dans le menu \menus{Édition - Préférences}. Il y a deux fonctions de suppression distinctes: la suppression d'une archive tout en \emph{conservant} ses opérations, et la suppression d'une archive tout en \emph{supprimant} toutes ses opérations. Pour cela, voir le paragraphe \vref{setup-general-archives-remove}, \menus{Modifier l'archive}.
 
-\subsection{Deleting an archive\label{datamanagement-history-remove}}
+\subsection{Export an archive\label{datamanagement-archive-export}}
 
-You can \indexword{delete an existing archive}\index{archive !suppression} , in the menu \menu{Edit - Preferences} menu. There are two separate delete functions: deleting an archive while  \emph{retaining} its transactions,and deleting an archive while  \emph{deleting}  all its operations. For this see \vref{setup-general-archives-remove}, \menu{Edit the archive}. 
+Exporting an archive creates a file containing a copy of the archive, so that you can store it or use it in another Grisbi account file or in another accounting application. Exporting can only be done using the file formats \indexword{\gls{GSB}}\index{gsb}, \indexword{\gls{QIF}}\index{qif} or \indexword{\gls{CSV}}\index{csv}.
+%Exporter une archive permet de créer un fichier contenant une copie de l'archive, afin de la stocker, ou de l'utiliser dans un autre fichier de comptes de Grisbi ou dans une autre application de comptabilité. L'exportation ne peut se faire qu'à travers les formats de fichiers \indexword{\gls{GSB}}\index{gsb}, \indexword{\gls{QIF}}\index{qif} ou \indexword{\gls{CSV}}\index{csv}.
 
-
-\subsection{Export an archive\label{datamanagement-history-export}}
-
-Allows you to create a file containing the archive, in order to store it, or to use it in another Grisbi account file or in another accounting application. Exporting can only be done through \indexword{\gls{GSB}}\index{gsb}, \indexword{\gls{QIF}}\index{qif} or \indexword{\gls{CSV}}\index{csv}.
-
-% espace avant Attention ou Note  : 5 mm
+% espace avant Attention ou Note: 5 mm
 \vspacepdf{5mm}
-\strong{Caution}: QIF and CSV file formats do not support currency, and all transactions will be converted to the currency of their respective account.
-% espace après Attention ou Note  : 5 mm
+\Attention{}: QIF and CSV file formats do not support currency, and all transactions will be converted to the currency of their respective account.
+%les formats de fichiers QIF et CSV ne supportent pas les devises, et toutes les opérations seront converties dans la devise de leur compte respectif.
+% espace après Attention ou Note: 5 mm
 \vspacepdf{5mm}
 
 
 
 To export an archive, follow these steps:
+%Pour exporter une archive, procédez comme suit:
 
 \begin{enumerate}
-	\item in the menu bar, select \menu{Export an archive to a GSB, QIF or CSV file ... } : the archive export wizard window is displayed; confirm with the \menu{Forward} button;
-	\item a table displays the list of existing archives with their name and, as the case may be, their initial and final dates, their exercise or the name of the report; select the archive to export by checking the box in its line; confirm with the \menu{Forward} button;
-	\item a file manager window is displayed; optionally modify the name of the file under which the archive will be exported, the folder where it will be saved and the format of the export file; confirm with the \menu{Forward} button;
-	\item the last window informs you that the archive has been exported; confirm with the \menu{Close} button.
+	\item in the menu bar, select \menus{File - Export an archive as a GSB/QIF/CSV file}: the archive export wizard window is displayed; confirm with the \menus{Following} button;
+	%dans la barre de menus, sélectionnez \menus{Fichier - Exporter une archive vers un fichier GSB/QIF/CSV}: la fenêtre de l'assistant d'exportation d'archive s'affiche; validez par le bouton \menus{Suivant};
+	\item a table displays the list of existing archives with their names and, where applicable, their initial and final dates, their financial year or the name of the report; select the archive to be exported by ticking the box in its row; confirm by clicking the \menus{Following} button.
+	%un tableau affiche la liste des archives existantes avec leur nom et, selon le cas, leurs dates initiale et finale, leur exercice ou le nom de l'état; sélectionnez l'archive à exporter en cochant la case dans sa ligne; validez par le bouton \menus{Suivant};
+	\item a file manager window will appear; you can modify:
+	%une fenêtre de gestionnaire de fichiers s'affiche; vous pourrez modifier:
+		\begin{itemize}
+			\item the name of the file under which the archive will be exported,
+			%le nom du fichier sous lequel l'archive sera exportée,
+			\item the folder where it will be saved,
+			%le dossier où elle sera enregistrée,
+			\item the format of the export file between Grisbi (GSB), QIF or CSV formats.
+			%le format du fichier d'exportation entre les formats Grisbi(GSB),QIF ou CSV.
+		\end{itemize}   
+	Confirm by clicking the \menus{Following} button;
+	%Validez par le bouton \menus{Suivant};
+	\item the last window informs you that the archive has been exported; confirm by clicking the \menus{Close} button.
+	%la dernière fenêtre vous informe que l'archive a été exportée; validez par le bouton \menus{Fermer}.
 \end{enumerate}
+
 
 
 
