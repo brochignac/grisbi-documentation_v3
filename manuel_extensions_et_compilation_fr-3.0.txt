@@ -1,59 +1,56 @@
 Compilation du manuel de l'utilisateur Grisbi :
 [mise à jour: mars 2025 - wrapfig2]
+[mise à jour: novembre 2025 - babel, glossaries, glossaries-extra, hyperref, mfirstuc,
+suppression: macros.sty, hva/macros.hva]
 
-Pour compiler complètement le manuel avec les images dans les formats pdf et html, vous devrez installer une distribution Latex (par ex. texlive) et les paquetages hevea et perl.
-Vous devrez aussi vous assurer que les extensions appelées dans les fichiers:
-- grisbi-manual.tex,
-- macros.sty,
-- hva/macros.hva
-par la commande \usepackage{package}, sont installées et en particulier:
-(pour vérifier si l'extension est présente, faire la commande suivante: kpsewhich -all "package".sty)
-[si seulement "package".dtx présent, taper en ligne de commande: << tex package.dtx >> pour générer package.sty]
+Pour compiler complètement le manuel dans les formats pdf et html, vous devrez installer une distribution Latex (par ex. texlive).
+Vous devrez aussi vous assurer que les extensions appelées dans le fichier :
+- 00-grisbi-manual-$LANG.tex,
+par la commande \usepackage{package}, sont installées et en particulier :
+(pour vérifier si l'extension est présente, faire la commande suivante : kpsewhich -all "package".sty)
+[si seulement "package".dtx présent, taper en ligne de commande: << tex package.dtx >> ou << tex package.ins >>
+pour générer package.sty]
+
 [pour installer, copier dans le:
 - home: ~/texmf/tex/latex/"package"/
 ou
 - systeme: /usr/share/texlive/texmf-dist/tex/latex/"package"/]
-babel (base) (1)(2)=[2024/03],
+
+babel (base) (1)(2)=[v25.15-2025/11](requiert docstrip v2.3c ou sup.),
 ---bigfoot (fourni perpage) (1) (est remplacé par footmisc),
 caption (1)(2)=[2023/10],
-enumitem (1)(2)=[2025/02]
+enumitem (1)(2)=[v3.11-2025/02]
 ---fixfoot (1) (est remplacé par footmisc),
-footmisc (fourni perpage, label et footref) (1)(2)=[2023/07]
-glossaries (1)(2)=[2023/10],
-hyperref (1)(2)=[2024/10] (remplace url)
-idxlayout (1),
+footmisc (fourni perpage, label et footref) (1)(2)=[v7.0b-2025/05]
+glossaries (1)(2)=[v4.9-2025/11](ne fournit plus glossaries-extra ni mfirstuc),
+glossaries-extra (2)=[v1.9-2025/11]
+glossaries-english (2)=[v1-2014/11] (non obligatoire)
+glossaries-french (2)=[v1-2014/11] (non obligatoire)
+glossaries-german (2)=[v1-2014/11] (non obligatoire)
+hyperref (1)(2)=[v7.01o-2025/07 > casse la compilation pdf] (remplace url)
+idxlayout (1) (for KOMA-Script),
 imakeidx (1),
-macros-3.0, pointe vers /git/src/macro-3.0.sty,
-menukeys (1)
+menukeys (1)(2)=[v1.6.2-2022/07]
+mfirstuc (2)=[v2.09-2025/04](requit par glossaries)
 picins (2)=[1995] (est remplacé par wrapfig2),
 translator (1),
 ---url (1) (est remplacé par hyperref),
-varioref (tools) (1)(2)=[2023/11], ou cleveref (?)
-wrapfig2 (1)(2)=[2025/03-v7.0.2] (remplace picins),
+varioref (tools) (1)(2)=[v1.6g-2025/01], ou cleveref (?)
+wrapfig2 (1)(2)=[v7.0.2-2025/03] (remplace picins),
 xindy (2)(3) (verifier si nécessaire).
 (1) contenu dans texlive-latex-base, -extra, -recommanded.
 (2) disponible dans le dépôt du CTAN https://ctan.org/ [date-du-dépôt], plus récent.
 (3) xindy.deb package
 
+mktexlsr /...somewhere.../texmf
+
 La compilation se fait avec les commandes suivantes, dans le répertoire src/3.0/$LANG :
 
-# compile au format PDF sans images :
+# compile au format PDF avec images, index et glossaire :
 $ make pdf
 
-# compile au format PDF sans images, avec index et glossaire :
-$ make pdf_indexglossary ; make pdf
-
-# compile au format PDF avec images :
-$ make pdf_img
-
-# compile au format PDF avec images, avec index et glossaire :
-$ make pdf_img_indexglossary ; make pdf_img
-
-# compile au format HTML sans images, avec index :
-$ make html
-
-# compile au format HTML avec images, avec index :
-$ make html_img
+# compile au format HTML :
+$ make html_pandoc
 
 
 Pour nettoyer le répertoire src/ en supprimant TOUS les fichiers
@@ -61,23 +58,11 @@ auxiliaires créés par une compilation précédente (.aux, .log, etc.) :
 $ make clean
 
 Ou bien supprimer ces mêmes fichiers et TOUS les fichiers créés par le
-Makefile (c'est ce qui est recommandé de faire avant chaque compilation)
-:
+Makefile (c'est ce qui est recommandé de faire avant chaque compilation) :
 $ make distclean
 
-
 Après compilation:
-- le fichier grisbi-manuel-xxx.pdf (sans images) se trouve dans src/pdf/
-- le fichier grisbi-manuel-img-xxx.pdf (avec images) se trouve dans
-  src/pdf_img/
-- les fichiers html sans images  se trouvent dans src/html/ et l'archive
-  dans src/tgz_html/
-- les fichiers html avec images  se trouvent dans src/html_img/ et
-  l'archive dans src/tgz_html_img/
+- le fichier grisbi-manuel_3.0-$LANG.pdf se trouve dans src/3.0/$LANG/pdf/
+- le fichier grisbi-manuel_3.0-$LANG.html se trouve dans src/3.0/$LANG/html/
 
-En html, le manuel est disponible sous deux formes:
-- grisbi-manuel.html pour la page d'en-tête avec sommaire et index, avec
-  liens vers les chapitres, en autant de fichiers que de chapitres
-- grisbi-manuel-1page.html pour le manuel en une seule page et en un
-  seul gros fichier
 
