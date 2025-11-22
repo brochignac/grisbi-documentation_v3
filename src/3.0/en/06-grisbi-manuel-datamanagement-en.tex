@@ -257,8 +257,6 @@ Exporting an archive creates a file containing a copy of the archive, so that yo
 % espace après Attention ou Note: 5 mm
 \vspacepdf{5mm}
 
-
-
 To export an archive, follow these steps:
 %Pour exporter une archive, procédez comme suit:
 
@@ -276,6 +274,9 @@ To export an archive, follow these steps:
 			%le dossier où elle sera enregistrée,
 			\item the format of the export file between Grisbi (GSB), QIF or CSV formats.
 			%le format du fichier d'exportation entre les formats Grisbi(GSB),QIF ou CSV.
+			
+			\Note{}: the QIF format only accepts one file per account; Grisbi will therefore create as many QIF files as there are accounts.
+			%\Note{}: le format QIF n'accepte qu'un fichier par compte; Grisbi créera donc autant de fichiers QIF que de comptes.
 		\end{itemize}   
 	Confirm by clicking the \menus{Following} button;
 	%Validez par le bouton \menus{Suivant};

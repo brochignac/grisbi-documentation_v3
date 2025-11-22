@@ -168,7 +168,7 @@ Si vous voulez consulter les opérations à l'intérieur d'une archive, vous pou
 
 \vspacepdf{5mm}
 \Note{}: il ne s'agit que d'une ouverture de l'archive pour affichage, et en aucun cas cette archive n'est supprimée. À la prochaine utilisation de Grisbi, la ligne verte de l'archive réapparaîtra en haut de la liste de chaque compte. Pour une véritable suppression de l'archive, voir la section \vref{datamanagement-archive-remove}, \menus{Suppression d'une archive}.
-\vspacepdf{5mm}
+%\vspacepdf{5mm}
 
 \subsection{Paramètres d'une archive\label{datamanagement-archive-parameters}}
 
@@ -192,7 +192,7 @@ Exporter une archive permet de créer un fichier contenant une copie de l'archiv
 
 % espace avant Attention ou Note : 5 mm
 \vspacepdf{5mm}
-\strong{Attention}: les formats de fichiers QIF et CSV ne supportent pas les devises, et toutes les opérations seront converties dans la devise de leur compte respectif.
+\Attention{}: les formats de fichiers QIF et CSV ne supportent pas les devises, et toutes les opérations seront converties dans la devise de leur compte respectif.
 % espace après Attention ou Note : 5 mm
 \vspacepdf{5mm}
 
@@ -206,6 +206,8 @@ Pour exporter une archive, procédez comme suit:
 			\item le nom du fichier sous lequel l'archive sera exportée,
 			\item le dossier où elle sera enregistrée,
 			\item le format du fichier d'exportation entre les formats Grisbi(GSB),QIF ou CSV.
+			
+			\Note{}: le format QIF n'accepte qu'un fichier par compte; Grisbi créera donc autant de fichiers QIF que de comptes.
 		\end{itemize}   
 	 Validez par le bouton \menus{Suivant};
 	\item la dernière fenêtre vous informe que l'archive a été exportée; validez par le bouton \menus{Fermer}.
