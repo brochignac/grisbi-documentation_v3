@@ -80,7 +80,7 @@ Toutes ces options sont décrites en détail et peuvent être configurées dans 
 \section{Archivage\label{datamanagement-archive}}
 
 
-Une archive est une sorte de \frquote{mise entre parenthèses} d'une partie des opérations de tous les comptes de votre fichier créé par Grisbi. Les opérations à l'intérieur d'une archive ne sont plus affichées et ne peuvent plus faire l'objet de traitements, mais elles sont toujours conservées dans ce fichier. Vous pouvez toujours et à tout moment dés-archiver une archive existante pour en afficher les opérations et l'inclure dans un traitement.
+Une archive est une sorte de \frquote{mise entre parenthèses} d'une partie des opérations de \textit{\textbf{tous}} les comptes de votre fichier créé par Grisbi. Les opérations à l'intérieur d'une archive ne sont plus affichées et ne peuvent plus faire l'objet de traitements, mais elles sont toujours conservées dans ce fichier. Vous pouvez toujours et à tout moment dés-archiver une archive existante pour en afficher les opérations et l'inclure dans un traitement.
 
 \vspace{.2em}
 Lorsque vous utilisez Grisbi, vous entrez des opérations dans vos différents comptes. Ces opérations sont toutes enregistrées dans la mémoire et sur le disque dur de l'ordinateur, et une petite partie est affichée sur l'écran. L'affichage et le traitement des opérations consomme donc de la mémoire et du temps de microprocesseur.
@@ -114,7 +114,7 @@ A l'issue de l'archivage, le processus de comptage est remis à zéro et Grisbi 
 
 \subsubsection{Création manuelle d'une archive\label{datamanagement-archive-manu}}
 
-La création manuelle peut se faire en plus ou à la place du lancement automatique. L'avertissement du nombre d'opérations non archivées n'est pas actif. %TODO to verify
+La création manuelle peut se faire en plus ou à la place du lancement automatique. L'avertissement du nombre d'opérations non archivées n'est pas actif.
 
 \begin{enumerate}
 	\item dans la barre de menus, sélectionnez \menus{Fichier - Créer une archive}: la fenêtre de l'assistant de création d'archive s'affiche; validez par le bouton \menus{Suivant};
@@ -122,12 +122,12 @@ La création manuelle peut se faire en plus ou à la place du lancement automati
 	% image centrée
 	\begin{figure}[htbp]
 	\begin{center}
-	\vspace{-5pt}
+	%\vspace{-5pt}
 	\includegraphics[width=0.95\textwidth]{image/screenshot/datamanagement_archive_create}
 	\end{center}
-	\vspace{-10pt}
+	%\vspace{-10pt}
 	\caption{Création d'une archive}
-	\vspace{-20pt}
+	%\vspace{-10pt}
 	\label{datamanagement-archive-create-img}
 	\end{figure}
 	% image centrée
@@ -150,9 +150,7 @@ La création manuelle peut se faire en plus ou à la place du lancement automati
 
 \subsection{Affichage des archives\label{datamanagement-archive-display}}
 
-L'\indexword{affichage d'une archive}\index{archive!affichage} apparaît tout en haut de la liste des opérations \emph{de chaque compte}, sous la forme d'une ligne d'opération sur \textcolor[RGB]{60,120,40}{fond vert}, indiquant la date de début de l'archive%sa date de création
-%TODO to fix
-, son nom et ses paramètres de création (dates, exercice ou état), ainsi que le \indexword{nombre d'opérations archivées}\index{archive!nombre d'opérations} \emph{pour le compte affiché} \refimage{datamanagement-archive-line-img}.
+L'\indexword{affichage d'une archive}\index{archive!affichage} apparaît tout en haut de la liste des opérations \emph{de chaque compte}, sous la forme d'une ligne d'opération sur \textcolor[RGB]{60,120,40}{fond vert}, indiquant la date de début de l'archive (pour une archive par dates), son nom et ses paramètres de création (dates, exercice ou état), ainsi que le \indexword{nombre d'opérations archivées}\index{archive!nombre d'opérations} \emph{pour le compte affiché} \refimage{datamanagement-archive-line-img}.
 
 % image centrée
 \begin{figure}[htbp]
@@ -175,17 +173,17 @@ Si vous voulez consulter les opérations à l'intérieur d'une archive, vous pou
 \subsection{Paramètres d'une archive\label{datamanagement-archive-parameters}}
 
 Vous pouvez consulter les paramètres qui ont été définis pendant la création d'une archive, dans le menu
-\menus{Édition - Préférences - Archives}. Pour cela, voir la section \vref{setup-general-archives-existing}, \menus{Archives existantes}.
+\menus{Éditer - Préférences - Généralités - Archives}. Pour cela, voir la section \vref{setup-general-archives-existing}, \menus{Archives existantes}.
 
 
 \subsection{Modification d'une archive\label{datamanagement-archive-modify}}
 
-Vous pouvez uniquement \indexword{modifier le nom d'une archive}\index{archive!modification} dans le menu \menus{Édition - Préférences}. Pour cela, voir le paragraphe \vref{setup-general-archives-remove}, \menus{Modifier l'archive}.
+Vous pouvez uniquement \indexword{modifier le nom d'une archive}\index{archive!modification} dans le menu \menus{Édition - Préférences}. Pour cela, voir le paragraphe \vref{setup-general-archives-modify}, \menus{Modifier l'archive}.
 
 
 \subsection{Suppression d'une archive\label{datamanagement-archive-remove}}
 
-Vous pouvez \indexword{supprimer une archive}\index{archive!suppression} existante, dans le menu \menus{Édition - Préférences}. Il y a deux fonctions de suppression distinctes: la suppression d'une archive tout en \emph{conservant} ses opérations, et la suppression d'une archive tout en \emph{supprimant} toutes ses opérations. Pour cela, voir le paragraphe \vref{setup-general-archives-remove}, \menus{Modifier l'archive}. 
+Vous pouvez \indexword{supprimer une archive}\index{archive!suppression} existante, dans le menu \menus{Édition - Préférences}. Il y a deux fonctions de suppression distinctes: la suppression d'une archive tout en \emph{conservant} ses opérations, et la suppression d'une archive tout en \emph{supprimant} toutes ses opérations. Pour cela, voir le paragraphe \vref{setup-general-archives-modify}, \menus{Modifier l'archive}. 
 
 
 \subsection{Export d'une archive\label{datamanagement-archive-export}}
@@ -214,12 +212,3 @@ Pour exporter une archive, procédez comme suit:
 	 Validez par le bouton \menus{Suivant};
 	\item la dernière fenêtre vous informe que l'archive a été exportée; validez par le bouton \menus{Fermer}.
 \end{enumerate}
-
-
-
-
-
-
-
-
-

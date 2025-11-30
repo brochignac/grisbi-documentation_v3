@@ -111,7 +111,7 @@ All of these options are described in detail and can be configured in the \menus
 
 \section{Archiving\label{datamanagement-archive}}
 
-An archive is a little like \enquote{placing in parentheses} some of the entries from all the accounts in your file created by Grisbi. Entries inside an archive are no longer displayed and can no longer be processed, but are preserved. You can always unarchive an existing archive at any time to access its data.
+An archive is a little like \enquote{placing in parentheses} some of the entries from \textit{\textbf{all}} the accounts in your file created by Grisbi. Entries inside an archive are no longer displayed and can no longer be processed, but are preserved. You can always unarchive an existing archive at any time to access its data.
 %Une archive est une sorte de \frquote{mise entre parenthèses} d'une partie des opérations de tous les comptes de votre fichier créé par Grisbi. Les opérations à l'intérieur d'une archive ne sont plus affichées et ne peuvent plus faire l'objet de traitements, mais elles sont toujours conservées dans ce fichier. Vous pouvez toujours et à tout moment dés-archiver une archive existante pour en afficher les opérations et l'inclure dans un traitement.
 
 \vspace{.2em}
@@ -123,12 +123,9 @@ As time goes by, there are more and more operations recorded, so their display a
 %Au fur et à mesure que le temps passe, il y a de plus en plus d'opérations enregistrées, donc leur affichage et leurs traitements demandent de plus en plus d'espace mémoire et de temps de microprocesseur. Votre ordinateur devient donc de plus en plus lent, mais évidemment, cela dépend toujours de ses propres caractéristiques.
 
 \vspace{.2em}
-To limit this loss of performance in the display and the processing, in particular in report generation or in the search for information, Grisbi prompts you to choose a portion of your entries and to put them in an archive, that is, to set them apart so that they are not affected by future postings or operation.
+To limit this loss of performance in the display and the processing, in particular in report generation or in the search for information, Grisbi prompts you to choose a portion of your transactions and to put them in an archive, that is, to set them apart so that they are not affected by future postings or operations.
 %Pour limiter cette perte de performances dans l'affichage et le traitement, en particulier dans l'établissement d'états ou dans la recherche d'informations, Grisbi vous propose de choisir une partie des opérations et de les mettre dans une archive, c'est-à-dire de les mettre à part pour leur éviter d'être concernées par de futurs affichages ou traitements.
 
-Archiving can be manual or automated. Grisbi considers that beyond three thousand operations in an account, the entries become too slow, so on the one hand it warns you if you exceed this number of transactions and prompts you to manually archive a section of them. Alternatively, it can let you archive these three thousand transactions by automatically launching an assistant.
-
-Whether you do an archiving manually or with the assistant, the counting process is then reset and Grisbi will offer you the same thing again after three thousand additional operations.
 
 \subsection{Creating an archive\label{datamanagement-archive-new}}%Création d'une archive
 
@@ -138,7 +135,7 @@ The creation of an archive can be triggered automatically or manually:
 \subsubsection{Automatic triggering of archive creation\label{datamanagement-archive-auto}}
 %Déclenchement automatique de la création d'une archive
 
-When a certain number of registered transactions is reached, Grisbi can warn you that this quantity of operations has not yet been archived. on the other hand automatically start the creation of an archive (see \vref{setup-general-archives-create}, \menus{warning and automatic creation}). To do this, you will need to activate \menus{Automatic check} of archives in the Grisbi preferences (see paragraph \vref{setup-general-archives-create}).
+When a certain number of registered transactions is reached, Grisbi can warn you that this quantity of operations has not yet been archived. To do this, you will need to activate \menus{Automatic check} of archives in the Grisbi preferences (see paragraph \vref{setup-general-archives-create}).
 %Lorsqu'un certain nombre d'opérations enregistrées est atteint, Grisbi peut vous avertir que cette quantité d'opérations n'a pas été encore archivée. Pour cela, il vous faudra activer la \menus{création automatique} des archives dans les préférences de Grisbi (voir le paragraphe \vref{setup-general-archives-create}.
 
 Check the option \menus{Check at opening if creating archive is needed}:
@@ -146,27 +143,27 @@ Check the option \menus{Check at opening if creating archive is needed}:
 \begin{itemize}
 	\item will launch the archiving assistant when you open your Grisbi file if the trigger threshold is reached,
 	%lancera l'assistant d'archivage à l'ouverture de votre fichier Grisbi si le seuil de déclenchement est atteint, 
-	\item activates the warning threshold of three thousand transactions (minimum by default), labelled \menus{Warm if more than \ldots{} transactions are not archived}.
+	\item activates the warning threshold of three thousand transactions (minimum by default), labelled \menus{Warn if more than \ldots{} transactions are not archived}.
 	%active le seuil d'avertissement de trois mille opérations (minimum par défaut), libellé \menus{Avertir si plus de \ldots{} opérations ne sont pas archivées}.
 \end{itemize}
 
-The first window of the \menus{Archive transactions} wizard will inform you of the total number of operations recorded in your file.
+The first window of the \menus{Archive transactions} wizard will inform you of the total number of transactions recorded in your file.
 %La première fenêtre de l'assistant \menus{Créer une archive} vous informera du nombre total d'opérations enregistrées dans votre fichier.
 
-Once archiving is complete, the counting process is reset to zero and Grisbi will display the same warning again after three thousand additional operations.
+Once archiving is complete, the counting process is reset to zero and Grisbi will display the same warning again after three thousand additional transactions.
 %A l'issue de l'archivage, le processus de comptage est remis à zéro et Grisbi vous proposera de nouveau le même avertissement après trois mille opérations supplémentaires.
 
 
 \subsubsection{Manual creation of an archive\label{datamanagement-archive-manu}}%Création manuelle d'une archive
 %\subsection{Archives in the list of transactions\label{datamanagement-archive-list}}
 
-Manual creation can be performed in addition to or instead of automatic launch. The warning about the number of unarchived operations is not active.
+Manual creation can be performed in addition to or instead of automatic launch. The warning about the number of unarchived transactions is not active.
 %La création manuelle peut se faire en plus ou à la place du lancement automatique. L'avertissement du nombre d'opérations non archivées n'est pas actif.
 
 \begin{enumerate}
 	\item in the menu bar, select \menus{File - Archive transactions}: the archive creation wizard window appears; confirm by clicking the \menus{Following} button;
 	%dans la barre de menus, sélectionnez \menus{Fichier - Créer une archive}: la fenêtre de l'assistant de création d'archive s'affiche; validez par le bouton \menus{Suivant};
-	\item in the next window, you can choose from three modes for selecting the operations to be archived \refimage{datamanagement-archive-create-img}:
+	\item in the next window, you can choose from three modes for selecting the transactions to be archived \refimage{datamanagement-archive-create-img}:
 	%dans la fenêtre suivante, vous pouvez choisir parmi les trois modes de sélection des opérations à archiver \refimage{datamanagement-archive-create-img}:
 	% image centrée
 	\begin{figure}[htbp]
@@ -178,7 +175,7 @@ Manual creation can be performed in addition to or instead of automatic launch. 
 	\end{figure}
 	% image centrée
 	\begin{itemize}
-		\item \menus{Archive by date}: enter the \menus{Initial date} and \menus{Final date} in the appropriate fields.
+		\item \menus{Archive by date}: enter the \menus{Initial date} and \menus{Final date} in the appropriate fields,
 		%\menus{Tri par date}: saisissez la \menus{Date initiale} et la \menus{Date finale} dans les champs adéquats,
 		\item \menus{Archive by financial year}: select a financial year available from the drop-down list,
 		%\menus{Archiver les opérations par exercice}: sélectionnez un exercice disponible dans la liste déroulante,
@@ -205,11 +202,8 @@ Manual creation can be performed in addition to or instead of automatic launch. 
 
 \subsection{Displaying archives\label{datamanagement-archive-display}}%Affichage des archives
 
-The \indexword{display of an archive}\index{archive!display} appears at the top of the list of operations for \emph{each account}, in the form of an operation line on a \textcolor[RGB]{60,120,40}{green background}, indicating the start date of the archive%its creation date.
-%TODO to fix
-, its name and creation parameters (dates, financial year or report name), as well as the \indexword{number of archived transactions}\index{archive!number of transactions} \emph{for the account displayed} \refimage{datamanagement-archive-line-img}.
-%L'\indexword{affichage d'une archive}\index{archive!affichage} apparaît tout en haut de la liste des opérations \emph{de chaque compte}, sous la forme d'une ligne d'opération sur \textcolor[RGB]{60,120,40}{fond vert}, indiquant la date de début de l'archive%sa date de création
-%, son nom et ses paramètres de création (dates, exercice ou état), ainsi que le \indexword{nombre d'opérations archivées}\index{archive!nombre d'opérations} \emph{pour le compte affiché} \refimage{datamanagement-archive-line-img}.
+The \indexword{display of an archive}\index{archive!display} appears at the top of the list of transactions for \emph{each account}, in the form of a transaction line on a \textcolor[RGB]{60,120,40}{green background}, indicating the start date of the archive (for an archive by date), its name and creation parameters (dates, financial year or report name), as well as the \indexword{number of archived transactions}\index{archive!number of transactions} \emph{for the account displayed} \refimage{datamanagement-archive-line-img}.
+%L'\indexword{affichage d'une archive}\index{archive!affichage} apparaît tout en haut de la liste des opérations \emph{de chaque compte}, sous la forme d'une ligne d'opération sur \textcolor[RGB]{60,120,40}{fond vert}, indiquant la date de début de l'archive (pour une archive par dates), son nom et ses paramètres de création (dates, exercice ou état), ainsi que le \indexword{nombre d'opérations archivées}\index{archive!nombre d'opérations} \emph{pour le compte affiché} \refimage{datamanagement-archive-line-img}.
 
 % image centrée
 \begin{figure}[htbp]
@@ -220,7 +214,6 @@ The \indexword{display of an archive}\index{archive!display} appears at the top 
 	%\label{datamanagement-archive-line-img}
 \end{figure}
 % image centrée
-the \indexword{number of archived operations}\index{archive!nombre d'opérations} \emph{for the account displayed}, and the \indexword{total number of transactions}\index{opération!nombre total} in your accounts file.
 
 You can display (or hide) the archive line for all accounts by selecting (or deselecting) the box in the \menus {View - Show lines archives} menu, or by clicking on \menus{View} in the menu bar, then checking (or unchecking) \menus{Show lines archives} (\keys{Alt+L}) in the drop-down list.
 %Vous pouvez afficher (ou masquer) la ligne d'archive pour tous les comptes en cochant (ou décochant) la case du menu \menus{Affichage - Montrer les lignes d'archives}, ou en cliquant sur \menus{Affichage} de la barre de menu, puis en cochant (ou décochant) \menus{Montrer les lignes d'archives} (\keys{Alt+L}) dans la liste déroulante.
@@ -237,20 +230,21 @@ If you want to view the transactions within an archive, you can open this archiv
 \subsection{Parameters of an archive\label{datamanagement-archive-parameters}}%Paramètres d'une archive
 
 You can consult the parameters that were defined during the creation of an archive, in the 
-\menus{Edit - Preferences - Archives} menu. For this see the \vref{setup-general-archives-existing}, \menus{Known Archives}.
+\menus{Edit - Preferences - Generalities - Archives} menu. For this see the \vref{setup-general-archives-existing}, \menus{Known Archives}.
 %Vous pouvez consulter les paramètres qui ont été définis pendant la création d'une archive, dans le menu \menus{Édition - Préférences - Archives}. Pour cela, voir la section \vref{setup-general-archives-existing}, \menus{Archives existantes}.
 
 \subsection{Editing an archive\label{datamanagement-archive-modify}}%Modification d'une archive
 
-You can only \indexword{change the name of an archive}\index{archive!modification} in the \menus{Edit - Preferences} menu. For this see the \vref{setup-general-archives-remove}, \menus{Archive modification} section.
-%Vous pouvez uniquement \indexword{modifier le nom d'une archive}\index{archive!modification} dans le menu \menus{Édition - Préférences}. Pour cela, voir le paragraphe \vref{setup-general-archives-remove}, \menus{Modifier l'archive}.
+You can only \indexword{change the name of an archive}\index{archive!modification} in the \menus{Edit - Preferences} menu. For this see the \vref{setup-general-archives-modify}, \menus{Archive modification} section.
+%Vous pouvez uniquement \indexword{modifier le nom d'une archive}\index{archive!modification} dans le menu \menus{Édition - Préférences}. Pour cela, voir le paragraphe \vref{setup-general-archives-modify}, \menus{Modifier l'archive}.
 
 \subsection{Deleting an archive\label{datamanagement-archive-remove}}%Suppression d'une archive
 
-You can \indexword{delete an existing archive}\index{archive!delete} , in the menu \menus{Edit - Preferences} menu. There are two separate delete functions: deleting an archive while \emph{retaining} its transactions,and deleting an archive while \emph{deleting} all its operations. For this see \vref{setup-general-archives-remove}, \menus{Archive modification} section. 
-%Vous pouvez \indexword{supprimer une archive}\index{archive!suppression} existante, dans le menu \menus{Édition - Préférences}. Il y a deux fonctions de suppression distinctes: la suppression d'une archive tout en \emph{conservant} ses opérations, et la suppression d'une archive tout en \emph{supprimant} toutes ses opérations. Pour cela, voir le paragraphe \vref{setup-general-archives-remove}, \menus{Modifier l'archive}.
+You can \indexword{delete an existing archive}\index{archive!delete}, in the \menus{Edit - Preferences} menu. There are two separate delete functions: deleting an archive while \emph{retaining} its transactions,and deleting an archive while \emph{deleting} all its transactions. For this see \vref{setup-general-archives-modify}, \menus{Archive modification} section. 
+%Vous pouvez \indexword{supprimer une archive}\index{archive!suppression} existante, dans le menu \menus{Édition - Préférences}. Il y a deux fonctions de suppression distinctes: la suppression d'une archive tout en \emph{conservant} ses opérations, et la suppression d'une archive tout en \emph{supprimant} toutes ses opérations. Pour cela, voir le paragraphe \vref{setup-general-archives-modify}, \menus{Modifier l'archive}.
 
 \subsection{Export an archive\label{datamanagement-archive-export}}
+%Export d'une archive
 
 Exporting an archive creates a file containing a copy of the archive, so that you can store it or use it in another Grisbi account file or in another accounting application. Exporting can only be done using the file formats \indexword{\gls{GSB}}\index{gsb}, \indexword{\gls{QIF}}\index{qif} or \indexword{\gls{CSV}}\index{csv}.
 %Exporter une archive permet de créer un fichier contenant une copie de l'archive, afin de la stocker, ou de l'utiliser dans un autre fichier de comptes de Grisbi ou dans une autre application de comptabilité. L'exportation ne peut se faire qu'à travers les formats de fichiers \indexword{\gls{GSB}}\index{gsb}, \indexword{\gls{QIF}}\index{qif} ou \indexword{\gls{CSV}}\index{csv}.
@@ -266,7 +260,7 @@ To export an archive, follow these steps:
 %Pour exporter une archive, procédez comme suit:
 
 \begin{enumerate}
-	\item in the menu bar, select \menus{File - Export an archive as a GSB/QIF/CSV file}: the archive export wizard window is displayed; confirm with the \menus{Following} button;
+	\item in the menu bar, select \menus{File - Export an archive as GSB/QIF/CSV file}: the archive export wizard window is displayed; confirm with the \menus{Following} button;
 	%dans la barre de menus, sélectionnez \menus{Fichier - Exporter une archive vers un fichier GSB/QIF/CSV}: la fenêtre de l'assistant d'exportation d'archive s'affiche; validez par le bouton \menus{Suivant};
 	\item a table displays the list of existing archives with their names and, where applicable, their initial and final dates, their financial year or the name of the report; select the archive to be exported by ticking the box in its row; confirm by clicking the \menus{Following} button.
 	%un tableau affiche la liste des archives existantes avec leur nom et, selon le cas, leurs dates initiale et finale, leur exercice ou le nom de l'état; sélectionnez l'archive à exporter en cochant la case dans sa ligne; validez par le bouton \menus{Suivant};
@@ -288,13 +282,3 @@ To export an archive, follow these steps:
 	\item the last window informs you that the archive has been exported; confirm by clicking the \menus{Close} button.
 	%la dernière fenêtre vous informe que l'archive a été exportée; validez par le bouton \menus{Fermer}.
 \end{enumerate}
-
-
-
-
-
-
-
-
-
-
