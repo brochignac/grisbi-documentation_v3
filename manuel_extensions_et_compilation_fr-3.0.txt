@@ -1,9 +1,12 @@
-Compilation du manuel de l'utilisateur Grisbi :
+Compilation du manuel de Grisbi :
 [mise à jour: mars 2025 - wrapfig2]
 [mise à jour: novembre 2025 - babel, glossaries, glossaries-extra, hyperref, mfirstuc,
-suppression: macros.sty, hva/macros.hva]
+ suppression: macros.sty, hva/macros.hva]
+[mise à jour: décembre 2025 - ajout package "tools", logiciel "pandoc"]
 
-Pour compiler complètement le manuel dans les formats pdf et html, vous devrez installer une distribution Latex (par ex. texlive).
+Pour compiler complètement le manuel dans les formats :
+- html : installez "pandoc"
+- pdf et html : vous devrez installer une distribution Latex (par ex. texlive).
 Vous devrez aussi vous assurer que les extensions appelées dans le fichier :
 - 00-grisbi-manual-$LANG.tex,
 par la commande \usepackage{package}, sont installées et en particulier :
@@ -33,6 +36,7 @@ imakeidx (1),
 menukeys (1)(2)=[v1.6.2-2022/07]
 mfirstuc (2)=[v2.09-2025/04](requit par glossaries)
 picins (2)=[1995] (est remplacé par wrapfig2),
+tools (2)=[2025/11/01] ,collection d'outils dont le package array,
 translator (1),
 ---url (1) (est remplacé par hyperref),
 varioref (tools) (1)(2)=[v1.6g-2025/01], ou cleveref (?)
