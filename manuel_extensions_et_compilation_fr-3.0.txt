@@ -36,6 +36,7 @@ imakeidx (1),
 menukeys (1)(2)=[v1.6.2-2022/07]
 mfirstuc (2)=[v2.09-2025/04](requit par glossaries)
 picins (2)=[1995] (est remplacé par wrapfig2),
+tabularray (1)(2)=[v2025C=2025/11/27] (remplace tabular et array),
 tools (2)=[2025/11/01] ,collection d'outils dont le package array,
 translator (1),
 ---url (1) (est remplacé par hyperref),
