@@ -487,45 +487,48 @@ Par exemple, quand l'organisme de crédit Crédit Bitoire vous verse le montant 
 \vspacepdf{3mm}
 À chaque fois que vous versez une échéance de votre \indexword{emprunt}\index{emprunt}, vous enregistrez un virement de votre compte courant vers le compte \emph{Emprunt}, du montant du capital remboursé, en catégorie \emph{Virement: Emprunt}, et une dépense sur ce compte courant, du montant des intérêts, en catégorie \emph{Frais financiers: Charges d'emprunts}. Éventuellement, ajoutez-y une dépense pour l'assurance, en catégorie \emph{Assurances}. De cette façon, vous saurez à tout moment le montant du capital restant à rembourser, mais aussi le coût de l'emprunt.
 
-Par exemple, à chaque échéance, vous saisissez une opération ventilée sur votre compte courant:
+Par exemple, à chaque échéance, vous saisissez une opération ventilée sur votre compte courant pour obtenir une opération celle-ci:
 
-%TODO
 %\vspacepdf{2mm}
 %\noindent
 \begin{tblr}{
-		vspan=even,
-		hspan=minimal,
-		hline{2-10},
-		vline{1,2,3,4,5}={2,3,5,7,9}{solid},
+		%vspan=even,
+		%hspan=minimal,
+		hline{2-3}={2-4}{lightgray,solid},
+		%hline{4}={2-3}{solid},
+		%hline{4}={4-5}{1pt},
+		%hline{5-7}={4,5}{solid},
+		vline{2,3,4,5}={2}{lightgray,solid},
 		%width=0.95\textwidth,
-		colspec={Q[1.5cm,c] Q[3cm,c] Q[c] Q[7.6cm,c]},
+		colspec={Q[2cm,l] Q[2.5cm,r] Q[7cm,l] Q[1.5cm,c]},
 		cell{1}{1}={c=4}{l},
-		cell{4}{1}={c=4}{l},
-		cell{6}{1}={c=4}{l},
-		cell{8}{1}={c=4}{l},
+		%cell{2}{2}={leftsep=2pt},
+		cell{5}{1}={c=2}{l},
+		cell{6}{1}={c=2}{l},
+		cell{7}{1}={c=2}{l},
+		cell{3,4}{2-4}={bg=blue!10!white},
+		cell{5-7}{2-4}={bg=pink!80!white},
 		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4.5pt,
-		leftsep=4pt,							%default=6
-		rightsep=4pt,							%default=6
+		%leftsep=4pt,							%default=6
+		%rightsep=4pt,							%default=6
 		abovesep=6pt,							%default=2
 		%belowsep=2pt,							%default=2
-		row{1,4,6}=l
+		%row{1,4,6}=l
 		%hlines
 		%hline{2-8},
 		%vlines
-		}
-	\textbullet{} Opération maître:																											  \\
-	\menus{Date}				& \menus{Tiers} 	& \menus{Débit}		 & \menus{Catégories}									  \\
-	jj/mm/aa					& \SetCell{l}Crédit Bitoire	& \SetCell{r} 350.00 & \SetCell{l}\emph{Opération ventilée}					  \\
-	\textopenbullet{} 1\up{re} opération ventilée:																								  \\
-								&					& \SetCell{r} 300.00 & \SetCell{l}\emph{Virement: Banque Yze}				  \\
-	\textopenbullet{} 2\up{e} opération ventilée:																			  						  \\
-								&					& \SetCell{r} 49.50	 & \SetCell{l}\emph{Frais financiers: Charges d'emprunts} \\
-	\textopenbullet{} 3\up{e} opération ventilée:																			  						  \\
-								&					& \SetCell{r} 0.50	 & \SetCell{l}\emph{Assurances}							  \\
+	}
+	\textbullet{} Opération maître:	&				&					& 			   \\
+									& $\blacktriangledown$ \hspace{11mm} Date			& Tiers				& Débit \\
+									& jj/mm/aaaa		& Crédit Bitoire	& 350.00 	\\
+									& 				& \emph{Opération ventilée} & \\
+	\hspace{.3cm} \textopenbullet{} 1\up{re} opération ventilée: & & \emph{Virement: Banque Yze} &  300.00 \\
+	\hspace{.3cm} \textopenbullet{} 2\up{e} opération ventilée: & & \emph{Frais financiers: Charges d'emprunts} & \SetCell{c} 48.80 \\
+	\hspace{.3cm} \textopenbullet{} 3\up{e} opération ventilée: & & \emph{Assurances} & 1.20 \\
 \end{tblr}
-	
+
 %espace pour changement de thème
 \vspacepdf{3mm}
 N'oubliez pas que, si le montant de l'échéance est constant, à l'intérieur de chaque échéance suivante, le capital remboursé augmente et l'intérêt versé diminue (voir le tableau d'amortissement de l'emprunt). 
@@ -536,7 +539,9 @@ Vous pourrez donc parfaitement utiliser un compte de passif pour gérer vos empr
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Lorsqu'un compte de passif est soldé, ce qui signifie que vous avez remboursé la dette correspondante, Grisbi vous prévient en affichant un message dans la partie inférieure du panneau des détails de la page d'accueil (voir le chapitre \vref{home}, Accueil). 
+Lorsqu'un compte de passif est soldé, ce qui signifie que vous avez remboursé la dette correspondante, Grisbi vous prévient en affichant un message dans la partie inférieure du panneau des détails de la page d'accueil (voir le chapitre \vref{home}, Accueil). %todo à tester
+
+
 
 
 \subsubsection{Compte de carte bancaire à débit différé\label{accounts-type-cash-deferredCards}}
@@ -551,55 +556,120 @@ Vous trouverez tous les détails pour gérer correctement ces cartes bancaires d
 Le type de compte \emph{compte d'actif} est un compte qui représente un bien, par exemple une voiture. Son solde initial est nul, mais il devient positif dès que vous possédez ce bien, d'un montant égal à sa valeur, puis il diminue avec le temps à mesure de sa dépréciation, pour finir à une valeur nulle. Les opérations se font par virement. On peut le considérer comme le contraire d'un compte de passif.
 
 %espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 En pratique, le solde initial de ce compte est nul, mais il devient (fortement) positif dès la première opération, à savoir l'achat de ce bien. Vous enregistrez à ce moment-là un virement de votre compte courant vers ce \indexword{compte d'actif}\index{actif!compte}, égal au prix d'achat du bien, ce qui vous permet de procéder à votre achat.
 
 Par exemple, quand vous achetez la voiture à 25 000 chez Auto Matique, vous créez un compte d'actif appelé \emph{Compte Immobilisation}, et dans votre compte courant, vous saisissez l'opération suivante: 
 
-\begin{itemize}
-	\item \menus{Date}: jj/mm/aa \menus{Tiers}: Auto Matique \menus{Débit}: 25 000 \menus{Catégorie}: \menus{Virement: Compte Immobilisation} \menus{Remarques}: Actif achat voiture
-\end{itemize}
+\vspacepdf{3mm}
+\noindent
+\begin{tblr}{
+		%width=0.95\textwidth,
+		colspec={Q[c] Q[2.7cm,c] Q[c] Q[4.6cm,c] Q[4cm,c]},
+		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
+		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
+		%rowsep=4.5pt,
+		leftsep=4pt,							%default=6
+		rightsep=4pt,							%default=6
+		abovesep=6pt,							%default=2
+		%belowsep=2pt,							%default=2
+		row{2}=l,
+		hlines,
+		vlines
+	}
+	\menus{Date} & \menus{Tiers} & \menus{Débit} & \menus{Catégories}		  			     & \menus{Remarques}   \\
+	jj/mm/aa 	 & Auto Matique  & 25 000.00	 & \menus{Virement:\\} Compte Immobilisation & Actif achat voiture \\
+\end{tblr}
 
+\vspacepdf{3mm}
 Votre compte \emph{Immobilisation} enregistre donc une opération en crédit, du montant de cette voiture.
 
 %espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 À chaque fois que vous constatez une \indexword{dépréciation}\index{dépréciation!actif}\index{actif!dépréciation} de ce bien, vous enregistrez un retrait du compte d'actif, du montant de la dépréciation, dans la catégorie \emph{Amortissements: Dépréciation}. Ces retraits pourront être faits jusqu'à ce que le solde du compte soit nul. De cette façon vous connaîtrez en permanence la valeur de votre bien.
 
 Par exemple, au bout d'un an la cotation de votre voiture (par ex. dans votre journal préféré) a perdu une certaine valeur; dans votre compte \emph{Immobilisation}, vous saisissez l'opération suivante: 
 
-\begin{itemize}
-	\item \menus{Date}: 31/12/2012 \menus{Tiers}: Dépréciation Voiture \menus{Débit}: 5000 \menus{Catégorie}: Amortissements: Dépréciation
-\end{itemize}
+\vspacepdf{3mm}
+\noindent
+\begin{tblr}{
+		%width=0.95\textwidth,
+		colspec={Q[c] Q[2.6cm,c] Q[c] Q[4.5cm,c] Q[4cm,c]},
+		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
+		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
+		%rowsep=4.5pt,
+		leftsep=4pt,							%default=6
+		rightsep=4pt,							%default=6
+		abovesep=6pt,							%default=2
+		%belowsep=2pt,							%default=2
+		row{2}=l,
+		hlines,
+		vlines
+	}
+	\menus{Date} & \menus{Tiers} & \menus{Débit} & \menus{Catégories}		  			     & \menus{Remarques}   \\
+	31/12/2025 	 & Dépréciation Voiture  & 5 000.00	 & \menus{Virement:\\} Compte Immobilisation & Amortissements: Dépréciation \\
+\end{tblr}
 
 %espace pour changement de thème
 \vspacepdf{5mm}
 Lors de l'achat, le montant que vous possédez réellement est votre apport personnel. Au cours du temps, vous remboursez les mensualités de votre emprunt, tandis que votre bien se déprécie. Le solde des comptes d'actif et de passif vous donnera à tout moment le montant que vous possédez globalement.
 
 
-\section{Conversion d'un compte en euros\label{accounts-switcheuro}}
+%todo modèle formulaire à améliorer
+\begin{tblr}{
+		width=0.95\textwidth,
+		colspec={Q[.1pt,c] Q[18mm,l] Q[colsep=1pt,.1em] Q[6cm,l] Q[5mm,c] Q[colsep=1pt,.1em] Q[18mm,l] Q[colsep=1pt,.1em] Q[18mm,l] Q[.1pt]},
+		cell{1-7}{1-10}={bg=lightgray!20!white},
+		hlines={lightgray!20!white},
+		vlines={lightgray!20!white},
+		row{1,7}={rowsep=0pt,cmd=\fontsize{1}{1}},
+		row{3,5}={rowsep=0pt},
+		hline{2,3}={2,2}{lightgray,solid}, vline{2,3}={2,2}{gray!50!white,solid},	%date
+		hline{2,3}={4,4}{lightgray,solid}, vline{4,5}={2,2}{gray!50!white,solid},	%tiers
+		hline{2,3}={7,7}{lightgray,solid}, vline{7,8}={2,2}{gray!50!white,solid},	%débit
+		hline{2,3}={9,9}{lightgray,solid}, vline{9,10}={2,2}{gray!50!white,solid},	%credit
+		hline{4,5}={4,4}{lightgray,solid}, vline{4,5}={4,4}{gray!50!white,solid},	%catégories
+		hline{4,5}={7,7}{lightgray,solid}, vline{7,8}={4,4}{gray!50!white,solid},	%carte
+		hline{6,7}={4,5}{lightgray,solid}, vline{4,6}={6,6}{gray!50!white,solid},	%remarques
+		vline{5}={6}{white},
+		cell{2,2}{2,4,7,9}={cmd=\textsf,bg=white},
+		cell{4,4}{4,7}={cmd=\textsf,bg=white},
+		cell{6,6}{4,5}={cmd=\textsf,bg=white},
+		abovesep=5pt,							%default=2
+		stretch=0							
+	}
+	&		& & 								& 						& &		  & &		 & \\
+	& Date	& & Tiers							& $\blacktriangledown$ 	& & Débit & & Crédit & \\
+	&		& &									&						& &		  & &		 & \\
+	& 		& & Catégories : Sous-catégories	& $\blacktriangledown$	& & Carte & &		 & \\
+	& 		& & 								& 						& & 	  & &		 & \\
+	& 		& & Remarques 						& 						& & 	  & &		 & \\
+	& 		& & 								& 						& & 	  & &		 & \\
+\end{tblr}
+
+%\section{Conversion d'un compte en euros\label{accounts-switcheuro}}
 
 
-Cette section devient de plus en plus obsolète au fur et à mesure que le temps passe, mais nous la maintenons encore pour vous permettre l'éventuel import de vieux fichiers de compte.
+%Cette section devient de plus en plus obsolète au fur et à mesure que le temps passe, mais nous la maintenons encore pour vous permettre l'éventuel import de vieux fichiers Grisbi.
 
-Cette fonction n'existe plus à partir de la version 0.8 de Grisbi. Donc, si vous avez absolument besoin de réaliser cette opération, le seul moyen serait de la faire en utilisant une version précédente, de la manière suivante:
+%Cette fonction n'existe plus à partir de la version 0.8 de Grisbi. Donc, si vous avez absolument besoin de réaliser cette opération, le seul moyen serait de la faire en utilisant une version précédente, de la manière suivante:
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{5mm}
-\Attention{}: cette procédure n'est qu'une proposition, et n'a pas été testée avec toutes les versions précédentes de Grisbi. C'est pour cela qu'il est de la plus haute importance de sauvegarder auparavant votre fichier de comptes en lieu sûr.
+%\vspacepdf{5mm}
+%\Attention{}: cette procédure n'est qu'une proposition, et n'a pas été testée avec toutes les versions précédentes de Grisbi. C'est pour cela qu'il est de la plus haute importance de sauvegarder auparavant votre fichier de comptes en lieu sûr.
 
-\begin{enumerate}
-	 \item avant tout, faites une copie de votre fichier de comptes actuel, renommez-le (par ex. en \file{comptesSauvegarde.gsb)} et placez-le en lieu sûr;
-	 \item choisissez une version ancienne de Grisbi, la moins ancienne possible et qui dispose de la fonction de conversion en euros; vous devriez pouvoir la trouver, ainsi que son manuel, à la page du site de \lang{Grisbi}\footnote{\urlGrisbi{}}; installez-la;
-	 \item importez le compte voulu en suivant les instructions du manuel de cette ancienne version de Grisbi que vous venez d'installer;
-	 \item procédez à la conversion de ce compte en euros;
-	 \item exportez ce compte en suivant les instructions du même manuel; vous obtenez alors un fichier d'export;
-	 \item redémarrez votre nouvelle version de Grisbi et ouvrez votre fichier de comptes habituel (pas la sauvegarde, évidemment!);
-	 \item procédez à l'importation du fichier d'export;
-	 \item si tout se passe bien, vous disposez maintenant de votre compte converti en euros.
-\end{enumerate}
+%\begin{enumerate}
+	 %\item avant tout, faites une copie de votre fichier de comptes actuel, renommez-le (par ex. en \file{comptesSauvegarde.gsb)} et placez-le en lieu sûr;
+	 %\item choisissez une version ancienne de Grisbi, la moins ancienne possible et qui dispose de la fonction de conversion en euros; vous devriez pouvoir la trouver, ainsi que son manuel, à la page du site de \lang{Grisbi}\footnote{\urlGrisbi{}}; installez-la;
+	 %\item importez le compte voulu en suivant les instructions du manuel de cette ancienne version de Grisbi que vous venez d'installer;
+	 %\item procédez à la conversion de ce compte en euros;
+	 %\item exportez ce compte en suivant les instructions du même manuel; vous obtenez alors un fichier d'export;
+	 %\item redémarrez votre nouvelle version de Grisbi et ouvrez votre fichier de comptes habituel (pas la sauvegarde, évidemment!);
+	 %\item procédez à l'importation du fichier d'export;
+	 %\item si tout se passe bien, vous disposez maintenant de votre compte converti en euros.
+%\end{enumerate}
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{5mm}
-\Attention{}: d'une manière générale, il est déconseillé d'avoir des accents ou des espaces dans les noms des répertoires et fichiers utilisés par Grisbi. Si c'est le cas, renommez-les maintenant. Par exemple, les espaces peuvent être remplacées par des tirets bas (\_). 
+%\vspacepdf{5mm}
+%\Attention{}: d'une manière générale, il est déconseillé d'avoir des accents ou des espaces dans les noms des répertoires et fichiers utilisés par Grisbi. Si c'est le cas, renommez-les maintenant. Par exemple, les espaces peuvent être remplacées par des tirets bas (\_). 
 
