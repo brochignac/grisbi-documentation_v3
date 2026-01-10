@@ -15,6 +15,17 @@
 % - texlive-extra-utils -> make4ht
 % 2024/11
 % - simplification of \usepackage{graphicx} when pdf
+% 2024/12
+% - add "french" in scrbook \documentclass
+% - include macro-3.0.tex packages
+% - modify depth of toc
+% - add/cleaning comments
+% 2025/09
+% - change "color" to "xcolor" package
+% 2025/12
+% - add package "tabularray" in place of packages "tabularx" & "array"
+% 2026/01
+% - update this history
 
 
 %\ifx\pdfoutput\undefined		% if no pdfLaTeX outputting
@@ -98,8 +109,8 @@
 
 %\usepackage{scrlayer-fancyhdr}		% facilities for constructing headers and footers, replace fancyhdr
 									% change to scrlayer-scrpage here and in macros.sty
-\usepackage{tabularray}				% replace \tabular and \array
-\usepackage{array}					% improve \tabular
+\usepackage{tabularray}				% replace \tabularx and \array
+%\usepackage{array}					% improve \tabular
 %\pagestyle{fancyplain}
 %\usepackage{tabularx}
 %\usepackage{hhline}				% produce single or double line
@@ -307,7 +318,7 @@
 }
 \addtokomafont{date}{\large}						% modify date font size, default=Large
 \date{%
-	Version 3.0 de 2025 (provisoire)
+	Version 3.0 de 2026 (provisoire)
 }
 %\else
 %\title{Manuel de Grisbi}
