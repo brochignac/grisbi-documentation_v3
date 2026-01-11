@@ -11,11 +11,11 @@
 % $Id: grisbi-manuel-accounts.tex, v 1.0 2014/02/12 Jean-Luc Duflot
 % some of its content was in transactions chapter:
 % $Id: grisbi-manuel-transactions.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
-% $Id: 07-grisbi-manuel-account-fr.tex, v 3.0 2025/12 Dominique Brochard
+% $Id: 07-grisbi-manuel-account-fr.tex, v 3.0 2026/01 Dominique Brochard
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Gestion des comptes\label{accounts} }
+\chapter{Gestion des comptes\label{accounts}}
 
 Grisbi sait gérer quatre types de compte, dont l'utilisation est décrite précisément dans la section \vref{accounts-type}, \menus{Types de compte de Grisbi}:
 \begin{itemize}
@@ -334,9 +334,11 @@ Par exemple, si vous avez reçu deux chèques, vous enregistrez deux opérations
 
 \vspacepdf{3mm}
 \noindent
+%\begin{center}
+%\setlength{\parskip}{-15pt}
 \begin{tblr}{
 	%width=0.95\textwidth,
-	colspec={Q[c] Q[3.2cm,c] Q[c] Q[5.5cm,c] Q[3.2cm,c]},
+	colspec={Q[c] Q[3.2cm,c] Q[c] Q[5cm,c] Q[3.2cm,c]},
 	%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 	%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 	%rowsep=4pt,							%vertical space above and below rows, default=2
@@ -345,15 +347,19 @@ Par exemple, si vous avez reçu deux chèques, vous enregistrez deux opérations
 	%rightsep=4pt,							%default=6
 	abovesep=6pt,							%default=2
 	%belowsep=2pt,							%default=2
+	row{1}={bg=cyan!10},				%background of row 1 = 20% lightgray
+	%row{1}={bg=cyan!8},					%background of row 1 = 8% cyan
 	row{2,3}=l,
-	hlines,
-	vlines
+	hlines={lightgray},
+	vlines={lightgray}
 	}
 	\menus{Date} & \menus{Tiers} & \menus{Crédit} & \menus{Catégories} & \menus{Mode de  règlement} \\
-	jj/mm/aa 	 & Dupond		 & 20,00		  & Cotisations		   & \menus{Chèque}				\\
-	jj/mm/aa	 & Durant		 & 40,00		  & Cotisations		   & \menus{Chèque}				\\
+	02/12/2024 	 & Dupond		 & 20,00		  & Cotisations		   & \menus{Chèque}				\\
+	04/12/2024	 & Durant		 & 40,00		  & Cotisations		   & \menus{Chèque}				\\
 \end{tblr}
+%\end{center}
 
+%\setlength{\parskip}{-3pt}
 \vspacepdf{3mm}
 Puis lors de la remise des deux chèques à la banque, dans votre compte bancaire, vous enregistrez l'opération:
 
@@ -361,25 +367,28 @@ Puis lors de la remise des deux chèques à la banque, dans votre compte bancair
 \noindent
 \begin{tblr}{
 	%width=0.95\textwidth,
-	colspec={Q[c] Q[3.2cm,c] Q[c] Q[5.5cm,c] Q[3.2cm,c]},
+	colspec={Q[c] Q[3.2cm,c] Q[c] Q[5cm,c] Q[3.2cm,c]},
 	%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 	%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 	%rowsep=4.5pt,
-	leftsep=4pt,							%default=6
-	rightsep=4pt,							%default=6
+	colsep=4pt,							%horizontal space on both sides of columns, default=6
+	%leftsep=4pt,							%default=6
+	%rightsep=4pt,							%default=6
 	abovesep=6pt,							%default=2
 	%belowsep=2pt,							%default=2
+	row{1}={bg=cyan!10},				%background of row 1 = 30% lightgray
 	row{2}=l,
-	hlines,
-	vlines
+	hlines={lightgray},
+	vlines={lightgray}
 	}
 	\menus{Date} & \menus{Tiers}	 & \menus{Crédit} & \menus{Catégories}					 & \menus{Mode de  règlement} \\
-	jj/mm/aa 	 & Remise de chèques & 60,00		  & \emph{Virement: Chèques à encaisser} & \menus{Chèque}			  \\
+	15/12/2024 	 & Remise de chèques & 60,00		  & \emph{Virement:\\} Chèques à encaisser & \menus{Chèque}			  \\
 \end{tblr}
 
 \vspacepdf{3mm}
 \Note{}: vous pouvez enregistrer cette opération soit dans votre compte bancaire en \menus{Crédit} et \menus{Catégorie}: \emph{Virement: Chèques à encaisser}, soit dans votre compte \emph{Chèques à encaisser} en \menus{Débit} et \menus{Catégorie}: \emph{Virement: Compte bancaire}; dans les deux cas, Grisbi crée automatiquement la contre-opération dans l'autre compte.
 
+\vspacepdf{3mm}
 \Note{}: vous pouvez ajouter à votre convenance des modes de règlement, au débit comme au crédit, et qui ne sont pas nativement inclus dans Grisbi (par exemple Espèces, TIP (Titre interbancaire de paiement), \ldots). Cet ajout est à effectuer dans les préférences de Grisbi (voir la section \vref{setup-resources-modes-details}).
 
 \vspacepdf{3mm}
@@ -463,22 +472,25 @@ Par exemple, quand l'organisme de crédit Crédit Bitoire vous verse le montant 
 \vspacepdf{3mm}
 \noindent
 \begin{tblr}{
-	%width=0.95\textwidth,
-	colspec={Q[c] Q[2.7cm,c] Q[c] Q[3.8cm,c] Q[4.8cm,c]},
-	%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
-	%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
-	%rowsep=4.5pt,
-	leftsep=4pt,							%default=6
-	rightsep=4pt,							%default=6
-	abovesep=6pt,							%default=2
-	%belowsep=2pt,							%default=2
-	row{2}=l,
-	hlines,
-	vlines
+		%width=0.95\textwidth,
+		colsep=4pt,							%horizontal space on both sides of columns, default=6
+		colspec={Q[colsep=3pt,c] Q[colsep=3pt,2.4cm,c] Q[c] Q[3.8cm,c] Q[4.8cm,c]},
+		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
+		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
+		%rowsep=4.5pt,
+		%leftsep=4pt,							%default=6
+		%rightsep=4pt,							%default=6
+		abovesep=6pt,							%default=2
+		%belowsep=2pt,							%default=2
+		row{1}={bg=cyan!10},				%background of row 1 = 30% lightgray
+		row{2}=l,
+		hlines={lightgray},
+		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Tiers}	& \menus{Débit} & \menus{Catégories}		  & \menus{Remarques}			 \\
-	jj/mm/aa 	 & Crédit Bitoire	& 20 000.00		& \emph{Virement: Banque Yze} & Dette emprunt Crédit Bitoire \\
+	\menus{Date} & \menus{Tiers}  & \menus{Crédit} & \menus{Catégories}			  & \menus{Remarques} \\
+	01/06/2025 	 & Crédit Bitoire & 20 000,00	   & \menus{Virement: Banque Yze} & Dette emprunt Crédit Bitoire			  \\
 \end{tblr}
+
 
 \vspacepdf{5mm}
 \Note{}: si ce virement est fait directement par l'organisme de crédit sur le compte du vendeur, la catégorie devra être, par exemple, \emph{Virement: Compte Immobilisation}; vous pouvez n'avoir qu'un seul compte d'immobilisation pour tous vos biens, ou bien un compte par bien acheté.
@@ -487,46 +499,44 @@ Par exemple, quand l'organisme de crédit Crédit Bitoire vous verse le montant 
 \vspacepdf{3mm}
 À chaque fois que vous versez une échéance de votre \indexword{emprunt}\index{emprunt}, vous enregistrez un virement de votre compte courant vers le compte \emph{Emprunt}, du montant du capital remboursé, en catégorie \emph{Virement: Emprunt}, et une dépense sur ce compte courant, du montant des intérêts, en catégorie \emph{Frais financiers: Charges d'emprunts}. Éventuellement, ajoutez-y une dépense pour l'assurance, en catégorie \emph{Assurances}. De cette façon, vous saurez à tout moment le montant du capital restant à rembourser, mais aussi le coût de l'emprunt.
 
-Par exemple, à chaque échéance, vous saisissez une opération ventilée sur votre compte courant pour obtenir une opération celle-ci:
+Par exemple, à chaque échéance, vous saisissez une opération ventilée (plus d'informations dans le chapitre \vref{transactions-breakdown}) sur votre compte courant pour obtenir une opération comme celle-ci:
 
-%\vspacepdf{2mm}
+\vspacepdf{3mm}
 %\noindent
 \begin{tblr}{
-		%vspan=even,
-		%hspan=minimal,
-		hline{2-3}={2-4}{lightgray,solid},
-		%hline{4}={2-3}{solid},
-		%hline{4}={4-5}{1pt},
-		%hline{5-7}={4,5}{solid},
-		vline{2,3,4,5}={2}{lightgray,solid},
 		%width=0.95\textwidth,
-		colspec={Q[2cm,l] Q[2.5cm,r] Q[7cm,l] Q[1.5cm,c]},
-		cell{1}{1}={c=4}{l},
-		%cell{2}{2}={leftsep=2pt},
-		cell{5}{1}={c=2}{l},
-		cell{6}{1}={c=2}{l},
-		cell{7}{1}={c=2}{l},
-		cell{3,4}{2-4}={bg=blue!10!white},
-		cell{5-7}{2-4}={bg=pink!80!white},
+		vspan=even,	hspan=minimal,				%for merging cells
+		%colsep=4pt,							%horizontal space on both sides of columns, default=6
+		abovesep=6pt,							%default=2
+		colspec={Q[2cm,c] Q[3.8cm,c] S Q[6.5cm,c]},	% S (instead of Q) for using siunitx package
 		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4.5pt,
 		%leftsep=4pt,							%default=6
 		%rightsep=4pt,							%default=6
-		abovesep=6pt,							%default=2
 		%belowsep=2pt,							%default=2
-		%row{1,4,6}=l
-		%hlines
-		%hline{2-8},
-		%vlines
-	}
-	\textbullet{} Opération maître:	&				&					& 			   \\
-									& $\blacktriangledown$ \hspace{11mm} Date			& Tiers				& Débit \\
-									& jj/mm/aaaa		& Crédit Bitoire	& 350.00 	\\
-									& 				& \emph{Opération ventilée} & \\
-	\hspace{.3cm} \textopenbullet{} 1\up{re} opération ventilée: & & \emph{Virement: Banque Yze} &  300.00 \\
-	\hspace{.3cm} \textopenbullet{} 2\up{e} opération ventilée: & & \emph{Frais financiers: Charges d'emprunts} & \SetCell{c} 48.80 \\
-	\hspace{.3cm} \textopenbullet{} 3\up{e} opération ventilée: & & \emph{Assurances} & 1.20 \\
+		hline{2-4}={1-4}{lightgray},
+		vline{1-6}={2,3}{lightgray},
+		hline{5-8}={3-4}{lightgray},
+		vline{3-5}={5-7}{lightgray},
+		row{3}=l,
+		row{4}={rowsep=0pt},
+		cell{2}{1-4}={bg=red!10},				%background of row 2, colums 1 to 4 = 7% red
+		%cell{3-7}{3}={cmd=\num},
+		cell{5-7}{4}={l},
+		cell{1}{1}={c=4}{l},					%merging cell r1,c1 across 4 columns
+		cell{5}{1}={c=2}{l},					%merging cell r5,c1 across 2 columns
+		cell{6}{1}={c=2}{l},					%merging cell r6,c1 across 2 columns
+		cell{7}{1}={c=2}{l}						%merging cell r7,c1 across 2 columns
+		%stretch=0
+		}
+	\hspace{-10pt}\textbullet{} Opération mère:	  			&				 &					   &							  \\
+	\menus{Date}								 			& \menus{Tiers}  & \menus{Débit}	   & \menus{Catégories}		  	  \\
+	01/07/2025   											& Crédit Bitoire & 350,00			   & \menus{Opération ventilée}	  \\
+												  			&				 &					   &							  \\
+	\hspace{5mm}\textopenbullet{} 1\up{re} opération fille: &				 & 300,00			   & \menus{Virement: Banque Yze} \\
+	\hspace{5mm}\textopenbullet{} 2\up{e} opération fille:  &				 & 48,80			   & \menus{Frais financiers: Charges d'emprunts} \\
+	\hspace{5mm}\textopenbullet{} 3\up{e} opération fille:	&				 & 1,20				   & \menus{Assurances}			  \\
 \end{tblr}
 
 %espace pour changement de thème
@@ -559,26 +569,31 @@ Le type de compte \emph{compte d'actif} est un compte qui représente un bien, p
 \vspacepdf{3mm}
 En pratique, le solde initial de ce compte est nul, mais il devient (fortement) positif dès la première opération, à savoir l'achat de ce bien. Vous enregistrez à ce moment-là un virement de votre compte courant vers ce \indexword{compte d'actif}\index{actif!compte}, égal au prix d'achat du bien, ce qui vous permet de procéder à votre achat.
 
-Par exemple, quand vous achetez la voiture à 25 000 chez Auto Matique, vous créez un compte d'actif appelé \emph{Compte Immobilisation}, et dans votre compte courant, vous saisissez l'opération suivante: 
+Par exemple, quand vous achetez une voiture d'une valeur de 25 000 \texteuro chez Auto Matique, vous créez un compte d'actif appelé \emph{Compte Immobilisation}, et dans votre compte courant, vous saisissez l'opération suivante: 
+
+\vspacepdf{3mm}
+\noindent
 
 \vspacepdf{3mm}
 \noindent
 \begin{tblr}{
 		%width=0.95\textwidth,
-		colspec={Q[c] Q[2.7cm,c] Q[c] Q[4.6cm,c] Q[4cm,c]},
+		%colsep=4pt,							%horizontal space on both sides of columns, default=6
+		colspec={Q[colsep=3pt,c] Q[colsep=3pt,2.4cm,c] Q[c] Q[4.4cm,c] Q[3.8cm,c]},
 		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4.5pt,
-		leftsep=4pt,							%default=6
-		rightsep=4pt,							%default=6
+		%leftsep=4pt,							%default=6
+		%rightsep=4pt,							%default=6
 		abovesep=6pt,							%default=2
 		%belowsep=2pt,							%default=2
+		row{1}={bg=red!10},				%background of row 1 = 10% red
 		row{2}=l,
-		hlines,
-		vlines
+		hlines={lightgray},
+		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Tiers} & \menus{Débit} & \menus{Catégories}		  			     & \menus{Remarques}   \\
-	jj/mm/aa 	 & Auto Matique  & 25 000.00	 & \menus{Virement:\\} Compte Immobilisation & Actif achat voiture \\
+	\menus{Date} & \menus{Tiers}  & \menus{Débit} & \menus{Catégories}			  & \menus{Remarques} \\
+	01/06/2024 	 & Auto Matique & 25 000,00	   & \menus{Virement:\\} Compte Immobilisation & Actif achat voiture	\\
 \end{tblr}
 
 \vspacepdf{3mm}
@@ -586,7 +601,7 @@ Votre compte \emph{Immobilisation} enregistre donc une opération en crédit, du
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-À chaque fois que vous constatez une \indexword{dépréciation}\index{dépréciation!actif}\index{actif!dépréciation} de ce bien, vous enregistrez un retrait du compte d'actif, du montant de la dépréciation, dans la catégorie \emph{Amortissements: Dépréciation}. Ces retraits pourront être faits jusqu'à ce que le solde du compte soit nul. De cette façon vous connaîtrez en permanence la valeur de votre bien.
+À chaque fois que vous constatez une \indexword{dépréciation}\index{dépréciation!actif}\index{actif!dépréciation} de ce bien, vous enregistrez un retrait sur le compte d'actif, du montant de la dépréciation, dans la catégorie \emph{Amortissements: Dépréciation}. Ces retraits pourront être faits jusqu'à ce que le solde du compte soit nul. De cette façon vous connaîtrez en permanence la valeur de votre bien.
 
 Par exemple, au bout d'un an la cotation de votre voiture (par ex. dans votre journal préféré) a perdu une certaine valeur; dans votre compte \emph{Immobilisation}, vous saisissez l'opération suivante: 
 
@@ -594,58 +609,27 @@ Par exemple, au bout d'un an la cotation de votre voiture (par ex. dans votre jo
 \noindent
 \begin{tblr}{
 		%width=0.95\textwidth,
-		colspec={Q[c] Q[2.6cm,c] Q[c] Q[4.5cm,c] Q[4cm,c]},
+		%colsep=4pt,							%horizontal space on both sides of columns, default=6
+		colspec={Q[colsep=3pt,c] Q[colsep=3pt,2.4cm,c] Q[c] Q[4.4cm,c] Q[3.8cm,c]},
 		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4.5pt,
-		leftsep=4pt,							%default=6
-		rightsep=4pt,							%default=6
+		%leftsep=4pt,							%default=6
+		%rightsep=4pt,							%default=6
 		abovesep=6pt,							%default=2
 		%belowsep=2pt,							%default=2
+		row{1}={bg=red!10},				%background of row 1 = 10% red
 		row{2}=l,
-		hlines,
-		vlines
+		hlines={lightgray},
+		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Tiers} & \menus{Débit} & \menus{Catégories}		  			     & \menus{Remarques}   \\
-	31/12/2025 	 & Dépréciation Voiture  & 5 000.00	 & \menus{Virement:\\} Compte Immobilisation & Amortissements: Dépréciation \\
+	\menus{Date} & \menus{Tiers}		& \menus{Débit} & \menus{Catégories}						& \menus{Remarques}			   \\
+	01/06/2025 	 & Dépréciation Voiture & 5 000,00	    & \menus{Virement:\\} Compte Immobilisation & Amortissements: Dépréciation \\
 \end{tblr}
 
 %espace pour changement de thème
 \vspacepdf{5mm}
 Lors de l'achat, le montant que vous possédez réellement est votre apport personnel. Au cours du temps, vous remboursez les mensualités de votre emprunt, tandis que votre bien se déprécie. Le solde des comptes d'actif et de passif vous donnera à tout moment le montant que vous possédez globalement.
-
-
-%todo modèle formulaire à améliorer
-\begin{tblr}{
-		width=0.95\textwidth,
-		colspec={Q[.1pt,c] Q[18mm,l] Q[colsep=1pt,.1em] Q[6cm,l] Q[5mm,c] Q[colsep=1pt,.1em] Q[18mm,l] Q[colsep=1pt,.1em] Q[18mm,l] Q[.1pt]},
-		cell{1-7}{1-10}={bg=lightgray!20!white},
-		hlines={lightgray!20!white},
-		vlines={lightgray!20!white},
-		row{1,7}={rowsep=0pt,cmd=\fontsize{1}{1}},
-		row{3,5}={rowsep=0pt},
-		hline{2,3}={2,2}{lightgray,solid}, vline{2,3}={2,2}{gray!50!white,solid},	%date
-		hline{2,3}={4,4}{lightgray,solid}, vline{4,5}={2,2}{gray!50!white,solid},	%tiers
-		hline{2,3}={7,7}{lightgray,solid}, vline{7,8}={2,2}{gray!50!white,solid},	%débit
-		hline{2,3}={9,9}{lightgray,solid}, vline{9,10}={2,2}{gray!50!white,solid},	%credit
-		hline{4,5}={4,4}{lightgray,solid}, vline{4,5}={4,4}{gray!50!white,solid},	%catégories
-		hline{4,5}={7,7}{lightgray,solid}, vline{7,8}={4,4}{gray!50!white,solid},	%carte
-		hline{6,7}={4,5}{lightgray,solid}, vline{4,6}={6,6}{gray!50!white,solid},	%remarques
-		vline{5}={6}{white},
-		cell{2,2}{2,4,7,9}={cmd=\textsf,bg=white},
-		cell{4,4}{4,7}={cmd=\textsf,bg=white},
-		cell{6,6}{4,5}={cmd=\textsf,bg=white},
-		abovesep=5pt,							%default=2
-		stretch=0							
-	}
-	&		& & 								& 						& &		  & &		 & \\
-	& Date	& & Tiers							& $\blacktriangledown$ 	& & Débit & & Crédit & \\
-	&		& &									&						& &		  & &		 & \\
-	& 		& & Catégories : Sous-catégories	& $\blacktriangledown$	& & Carte & &		 & \\
-	& 		& & 								& 						& & 	  & &		 & \\
-	& 		& & Remarques 						& 						& & 	  & &		 & \\
-	& 		& & 								& 						& & 	  & &		 & \\
-\end{tblr}
 
 %\section{Conversion d'un compte en euros\label{accounts-switcheuro}}
 
