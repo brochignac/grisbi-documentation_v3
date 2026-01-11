@@ -133,20 +133,29 @@ Les différentes informations qu'un compte peut contenir sont divisées en cinq 
 
 \Note{}: avant de commencer la création d'un nouveau compte, il est conseillé de consulter la section \vref{accounts-type}, \menus{Types de compte de Grisbi}, et la section \vref{setup-resources-modes}, \menus{Modes de règlement}, qui donnent beaucoup plus de détails sur les possibilités que Grisbi vous propose.
 % espace après Attention ou Note: 5 mm
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 
 Vous pouvez créer un nouveau compte de deux façons:
 \begin{itemize}
 	\item soit en cliquant sur le menu \menus{Éditer - Nouveau compte} (ou avec \keys{Ctrl+Maj+N});
 	\item soit en faisant un clic droit dans le panneau de navigation, sur l'onglet \menus{Comptes} ou sur un compte existant et en cliquant sur \menus{Nouveau compte} dans le menu contextuel.
 \end{itemize}
-
-L'assistant \menus{Créer un nouveau compte} comprenant quatre étapes, s'ouvre:
+	L'assistant \menus{Créer un nouveau compte} comprenant quatre étapes, s'ouvre:
 \begin{enumerate}
 	\item accueil de l'assistant (étape 1/4); validez par le bouton \menus{Suivant};
-	\item \menus{Sélection du type de compte} (étape 2/4): faites votre choix parmi les quatre types de compte proposés, puis validez par le bouton \menus{Suivant};
+	\item \menus{Sélection du type de compte}\refimage{account-new-type-img} (étape 2/4): 
+		\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=0.95\textwidth]{image/screenshot/account_new_type}
+		\end{center}
+		\caption{Choix du type du nouveau compte}
+		\label{account-new-type-img}
+		\end{figure}
+		
+	Faites votre choix parmi les quatre types de compte proposés, puis validez par le bouton \menus{Suivant};
 	% espace pour Note ou Attention à la ligne dans une liste
-
+	
+	%\vspacepdf{3mm}
 	\Note{}: lorsque vous créez un nouveau compte, faites attention à choisir un type de compte correct, sinon vous pourriez être amené, plus tard, à transférer toutes les opérations que vous y auriez saisies dans un nouveau compte plus adéquat.
 	
 	\item la fenêtre suivante vous permet de paramétrer ce nouveau compte \refimage{account-new-creation-img}:
@@ -435,6 +444,7 @@ Un compte d'avances vous permet donc de vérifier facilement si vos créances ou
 \vspacepdf{3mm}
 \Note{}: lorsque vous créez un nouveau compte, choisissez donc de préférence le type de compte \emph{compte bancaire}, sauf si votre nouveau compte doit avoir une utilisation plus spécifique comme celles décrites dans les paragraphes ci-dessous.
 
+\newpage
 
 \subsection{Type \emph{compte de caisse}\label{accounts-type-cash}}
 
@@ -498,6 +508,7 @@ Par exemple, quand l'organisme de crédit Crédit Bitoire vous verse le montant 
 %espace pour changement de thème
 \vspacepdf{3mm}
 À chaque fois que vous versez une échéance de votre \indexword{emprunt}\index{emprunt}, vous enregistrez un virement de votre compte courant vers le compte \emph{Emprunt}, du montant du capital remboursé, en catégorie \emph{Virement: Emprunt}, et une dépense sur ce compte courant, du montant des intérêts, en catégorie \emph{Frais financiers: Charges d'emprunts}. Éventuellement, ajoutez-y une dépense pour l'assurance, en catégorie \emph{Assurances}. De cette façon, vous saurez à tout moment le montant du capital restant à rembourser, mais aussi le coût de l'emprunt.
+
 
 Par exemple, à chaque échéance, vous saisissez une opération ventilée (plus d'informations dans le chapitre \vref{transactions-breakdown}) sur votre compte courant pour obtenir une opération comme celle-ci:
 
@@ -579,7 +590,7 @@ Par exemple, quand vous achetez une voiture d'une valeur de 25 000 \texteuro che
 \begin{tblr}{
 		%width=0.95\textwidth,
 		%colsep=4pt,							%horizontal space on both sides of columns, default=6
-		colspec={Q[colsep=3pt,c] Q[colsep=3pt,2.4cm,c] Q[c] Q[4.4cm,c] Q[3.8cm,c]},
+		colspec={Q[colsep=3pt,c] Q[colsep=3pt,2.4cm,c] Q[colsep=3pt,1.7cm,c] Q[4.4cm,c] Q[3.8cm,c]},
 		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4.5pt,
@@ -610,7 +621,7 @@ Par exemple, au bout d'un an la cotation de votre voiture (par ex. dans votre jo
 \begin{tblr}{
 		%width=0.95\textwidth,
 		%colsep=4pt,							%horizontal space on both sides of columns, default=6
-		colspec={Q[colsep=3pt,c] Q[colsep=3pt,2.4cm,c] Q[c] Q[4.4cm,c] Q[3.8cm,c]},
+		colspec={Q[colsep=3pt,c] Q[colsep=3pt,2.4cm,c] Q[colsep=4pt,1.7cm,c] Q[4.4cm,c] Q[3.8cm,c]},
 		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4.5pt,
