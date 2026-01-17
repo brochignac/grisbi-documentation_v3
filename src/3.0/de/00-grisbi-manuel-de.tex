@@ -15,6 +15,11 @@
 % - texlive-extra-utils -> make4ht
 % 2024/11
 % - simplification of \usepackage{graphicx} when pdf
+% 2025/09
+% - change "color" to "xcolor" package
+% 2026/01
+% - add package "tabularray" in place of packages "tabularx" & "array"
+% - update this history
 
 %\ifx\pdfoutput\undefined		% if no pdfLaTeX outputting
 % test KOMA-script with "scrbook" instead of "book"
@@ -95,9 +100,13 @@
 
 %\usepackage{scrlayer-fancyhdr}		% facilities for constructing headers and footers, replace fancyhdr
 % change to scrlayer-scrpage here and in macros.sty
-
-
 %\pagestyle{fancyplain}
+\usepackage{tabularray}				% replace \tabularx and \array
+\UseTblrLibrary{siunitx}			% to align decimal separator of number in table, using "siunitx" package
+\sisetup{%							% "siunitx" control options
+	locale=DE,					% define locate to obtain comma as decimal separator
+	mode=match					% to keep manual default font for number (instead of default=math)
+}
 %\usepackage{tabularx}
 %\usepackage{hhline}				% produce single or double line
 %\usepackage{layout}				% TODO: Only if DE mode
@@ -286,7 +295,7 @@
 	Copyright © 2011-2014 Jean-Luc \familyname{Duflot}\\
 	Copyright © 2018 Bob \familyname{Anderson} (en)\\
 	Copyright © 2018-2020 Martin \familyname{Stromberger} (de)\\
-	Copyright © 2024-2025 Dominique \familyname{Brochard}\\
+	Copyright © 2024-202x Dominique \familyname{Brochard}\\
 	\rule{2.5cm}{0.4pt}							% insert horizontal line, first argument width, second thickness
 }
 \addtokomafont{date}{\large}					% modify date font size, default=Large
@@ -364,7 +373,7 @@
 \include{05-grisbi-manuel-importexport-de}
 %\cleardoubleemptypage
 
-\include{06-grisbi-manuel-datamanagement-de}	% TODO update screenshots and text "datamanagement", uncomment when finished
+\include{06-grisbi-manuel-datamanagement-de}
 %\cleardoubleemptypage
 
 %\include{08-grisbi-manuel-accounts-de}		% TODO update screenshots and text "accounts", uncomment when finished
