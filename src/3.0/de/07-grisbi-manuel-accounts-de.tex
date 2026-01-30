@@ -142,7 +142,7 @@ Die verschiedenen Informationen, die ein Konto enthalten kann, sind in fünf Abs
 %Les différentes informations qu'un compte peut contenir sont divisées en cinq rubriques:
 
 \begin{enumerate}
-	\item \menus{Konto detail N° x}
+	\item \menus{Konto detail N° x}:
 	%\menus{Account details No. x}:
 	%\menus{Details du compte N°x}:
 	\begin{itemize}
@@ -334,7 +334,7 @@ Sie können die Zahlungsmethoden für dieses Konto auch im Menü \menus{Bearbeit
 %Vous pouvez aussi configurer précisément les modes de règlement des opérations de ce compte dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-resources-modes}, \menus{Modes de règlement}).
 
 
-\section{Konto bearbeiten}%Editing an account\label{accounts-modify}}%Modification d'un compte
+\section{Konto bearbeiten\label{accounts-modify}}%Editing an account%Modification d'un compte
 
 Um ein Konto zu bearbeiten, wählen Sie das Konto im Navigationsbereich oder über die Informationsleiste aus und klicken Sie dann im Bereich Details auf die Registerkarte \menus{Eigenschaften}\refimage{account-new-properties-img}.
 %To edit an account, select the account in the navigation panel or using the information bar, then click the \menus{Properties}\refimage{account-new-properties-img} tab in the details panel.
@@ -382,23 +382,23 @@ Die Felder \menus{Kontoart}, \menus{Kontowährung} und \menus{Finanzinstitut} bi
 Die weißen Textfelder (im Gegensatz zu den grauen Feldern) können über die Tastatur ausgefüllt werden. Über ein Kontextmenü, das durch einen Rechtsklick in einem Eingabefeld aufgerufen wird, können Sie folgende Aktionen ausführen:
 %The white text fields (as opposed to the grey fields) can be filled in using the keyboard, and a context menu accessible by right-clicking in an input field allows you to perform the following actions:
 %Les champs blancs de texte (à l'opposé des champs gris) peuvent être remplis au clavier, et un menu contextuel accessible par un clic-droit dans un champ de saisie permet d'effectuer les actions suivantes:
-\begin{itemize}%TODO following
-	\item 
+\begin{itemize}
+	\item \menus{Ausschneiden} (die Auswahl);
 	%\item \menus{Cut} (the selection);
 	%\menus{Couper} (la sélection);
-	\item 
+	\item \menus{Copieren} (die Auswahl);
 	%\item \menus{Copy} (the selection);
 	%\menus{Copier} (la sélection);
-	\item 
+	\item \menus{Einfügen} (die Auswahl);
 	%\item \menus{Paste} (the selection);
 	%\menus{Coller} (la sélection);
-	\item 
+	\item \menus{Löschen} (die Auswahl);
 	%\item \menus{Delete} (the selection);
 	%\menus{Supprimer} (la sélection);
-	\item 
+	\item \menus{Alles auswählen} in das dafür vorgesehene Feld;
 	%\item \menus{Select all} in the field provided;
 	%\menus{Tout sélectionner} dans le champ renseigné;
-	\item 
+	\item \menus{Emoji einfügen}\index{emoji}: öffnet ein Fenster, über das Sie auf alle Arten von Emoticons und Symbolen zugreifen können.
 	%\item \menus{Insert emoji}\index{emoji}: opens a window giving access to all kinds of emoticons and icons.
 	%\menus{Insérer un émoji}\index{émoji}: ouvre une fenêtre donnant accès à toutes sortes d'émoticônes et d'icônes.
 \end{itemize}
@@ -406,142 +406,186 @@ Die weißen Textfelder (im Gegensatz zu den grauen Feldern) können über die Ta
 
 % espace avant Attention ou Note: 5 mm
 \vspacepdf{3mm}
-\Attention{}: If you change certain properties such as the account type, you will need to adapt all operations already entered to the new account properties \emph{individually}. In any case, before making any changes to the accounts, you \textbf{must} back up your account file.
+\Attention{}: Wenn Sie bestimmte Eigenschaften wie den Kontotyp ändern, müssen Sie alle bereits eingegebenen Vorgänge \emph{einzeln} an die neuen Kontoeigenschaften anpassen. In jedem Fall \textbf{müssen} Sie vor jeder Änderung an den Konten eine Sicherungskopie Ihrer Kontodatei erstellen.
+%If you change certain properties such as the account type, you will need to adapt all operations already entered to the new account properties \emph{individually}. In any case, before making any changes to the accounts, you \textbf{must} back up your account file.
 %\Attention{}: si vous modifiez certaines propriétés comme le type du compte, cela nécessitera d'adapter, \emph{individuellement}, toutes les opérations déjà saisies aux nouvelles propriétés du compte. Dans tous les cas, avant de procéder à une quelconque modification des comptes, faites \textbf{impérativement} une sauvegarde de votre fichier de comptes.
 
 % saut de page pour titre solidaire
-\section{Closing an account\label{accounts-closure}}%Clôture d'un compte
+\section{Konto schließen\label{accounts-closure}}%Closing an account%Clôture d'un compte
 
-This allows you to hide an account without deleting it (see the procedure in the \menus{Account properties}\vref{accounts-properties}, paragraph \menus{1. Account details No. x}, option \menus{Closed account}).
+Auf diese Weise können Sie ein Konto ausblenden, ohne es zu löschen (siehe Vorgehensweise unter \menus{Kontodaten}\vref{accounts-properties}, Absatz {1. Konto detail N° x}, Option {Geschlossenes Konto}).
+%This allows you to hide an account without deleting it (see the procedure in the \menus{Account properties}\vref{accounts-properties}, paragraph \menus{1. Account details No. x}, option \menus{Closed account}).
 %Cela vous permet de masquer un compte sans le supprimer (voir la procédure dans les \menus{Propriétés d'un compte} \vref{accounts-properties}, paragraphe \menus{1. Détails du compte N°x}, option \menus{Compte clos}).
 
 
-\section{Deleting an account\label{accounts-delete}}%Suppression d'un compte
+\section{Konto löschen\label{accounts-delete}}%Deleting an account%Suppression d'un compte
 
-There are two ways to delete an account:
+Es gibt zwei Möglichkeiten, ein Konto zu löschen:
+%There are two ways to delete an account:
 %Vous pouvez supprimer un compte de deux façons:
 \begin{itemize}
-	\item either by selecting an account, with the \menus{Operations} tab displayed in the details panel, then clicking on the \menus{Edit - Remove current account} menu in the menu bar,
+	\item entweder durch Auswahl eines Kontos, wobei die Registerkarte \menus{Buchungen} im Bereich details angezeigt wird, und anschließendes Klicken auf das Menü \menus{Bearbeiten – Konto löschen} in der Menüleiste,
+	%either by selecting an account, with the \menus{Operations} tab displayed in the details panel, then clicking on the \menus{Edit - Remove current account} menu in the menu bar,
 	%soit en sélectionnant un compte, avec l'onglet \menus{Opérations} affiché dans le panneau des détails, puis en cliquant sur le menu \menus{Éditer - Supprimer le compte courant} de la barre de menu,
-	\item either by right-clicking on an account in the navigation panel, which opens a context menu giving access to the \menus{Remove this account} option.
+	\item entweder durch einen Rechtsklick auf ein Konto im Navigationsbereich, wodurch ein Kontextmenü geöffnet wird, über das Sie auf die Option \menus{Konto löschen} zugreifen können.
+	%either by right-clicking on an account in the navigation panel, which opens a context menu giving access to the \menus{Remove this account} option.
 	%soit par un clic droit sur un compte dans le panneau de navigation qui ouvre un menu contextuel donnant accès à l'option \menus{Supprimer ce compte}.
 \end{itemize}
 
-A confirmation dialogue box will open; if this is what you want, confirm the deletion by clicking the \menus{Yes} button.
+Es öffnet sich ein Bestätigungsdialogfeld. Wenn Sie den Löschvorgang bestätigen möchten, klicken Sie auf die Schaltfläche \menus{Ja}.
+%A confirmation dialogue box will open; if this is what you want, confirm the deletion by clicking the \menus{Yes} button.
 %Une boîte de dialogue de confirmation s'ouvre; si c'est vraiment ce que vous voulez, validez la suppression avec le bouton \menus{Oui}.
 % espace avant Attention ou Note: 5 mm
 
 \vspacepdf{3mm}
-\Attention{}: there will be no further warning, and the account, along with all its transactions, will be deleted. This action is \indexword{\textbf{irreversible}}\index{action!irréversible}!
+\Attention{}: Es wird keine weitere Warnung erfolgen, und das Konto wird zusammen mit allen Transaktionen gelöscht. Diese Maßnahme ist \indexword{\textbf{unumkehrbar}}\index{Maßnahme!unumkehrbar}!
+%there will be no further warning, and the account, along with all its transactions, will be deleted. This action is \indexword{\textbf{irreversible}}\index{action!irréversible}!
 %\Attention{}: il n'y aura pas d'autre avertissement, et le compte, ainsi que toutes ses opérations, sera supprimé. Cette action est \indexword{\textbf{irreversible}}\index{action!irreversible}!
 
 
-\section{Types of Grisbi accounts\label{accounts-type}}%Types de compte de Grisbi
+\section{Arten von Grisbi-Konten\label{accounts-type}}%Types of Grisbi accounts%Types de compte de Grisbi
 
-As stated at the beginning of this chapter, Grisbi can manage four \indexword{types of accounts}\index{types of accounts}:
+Wie zu Beginn dieses Kapitels erwähnt, kann Grisbi vier \indexword{Arten von Konten}\index{Arten von Konten} verwalten:
+%As stated at the beginning of this chapter, Grisbi can manage four \indexword{types of accounts}\index{types of accounts}:
 %Comme énoncé en début de chapitre, Grisbi sait gérer quatre \indexword{types de compte}\index{types de compte}:
 
 \begin{itemize}
-	\item bank account: it allows you to perform all types of transactions (see \vref{accounts-type-bank});
+	\item Bankkonto: Es ermöglicht Ihnen, jede Art von Buchhaltungsvorgang durchzuführen (siehe \vref{accounts-type-bank});
+	%bank account: it allows you to perform all types of transactions (see \vref{accounts-type-bank});
 	%compte bancaire: il permet de faire tout type d'opération (voir \vref{accounts-type-bank});
-	\item cash account: it only allows you to manage cash (see \vref{accounts-type-cash});
+	\item Bargeldkonto: Es ermöglicht Ihnen lediglich die Verwaltung von Bargeld (siehe \vref{accounts-type-cash});
+	%cash account: it only allows you to manage cash (see \vref{accounts-type-cash});
 	%compte de caisse: il ne permet de gérer que des espèces (voir \vref{accounts-type-cash});
-	\item liability account: this allows you to manage a debt that you are repaying (see \vref{accounts-type-liabilities});
+	\item Kreditkonto: Es ermöglicht Ihnen, eine Schuld zu verwalten, die Sie zurückzahlen (siehe \vref{accounts-type-liabilities});
+	%liability account: this allows you to manage a debt that you are repaying (see \vref{accounts-type-liabilities});
 	%compte de passif: il permet de gérer une dette que vous remboursez (voir \vref{accounts-type-liabilities}); 
-	\item asset account: this allows you to manage an asset that depreciates over time (see \vref{accounts-type-assets}).
+	\item Anlagekonto: Es ermöglicht Ihnen die Verwaltung eines Vermögenswerts, der im Laufe der Zeit an Wert verliert (siehe \vref{accounts-type-assets}).
+	%asset account: this allows you to manage an asset that depreciates over time (see \vref{accounts-type-assets}).
 	%compte d'actif: il permet de gérer un bien qui se déprécie avec le temps (voir \vref{accounts-type-assets}).
 \end{itemize}
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-This section describes the features and usage of each of these account types.
+In diesem Abschnitt werden die Funktionen und die Verwendung der einzelnen Kontotypen beschrieben.
+%This section describes the features and usage of each of these account types.
 %Cette section décrit les fonctionnalités et l'utilisation de chacun de ces types de compte.
+\newline
 
-\subsection{Type \emph{bank account}\label{accounts-type-bank}}%Type \emph{compte bancaire}
+\noindent
+\underline{\textbf{Übersetzungshinweis}}: \textbf{der Verfasser der folgenden Abschnitte verfügt nicht über die erforderlichen Sprach- und Buchhaltungskenntnisse und kann daher keine Gewähr für die Richtigkeit der verwendeten Begriffe übernehmen. Korrekturen sind willkommen}.
+%Note de traduction: l'auteur des sections suivantes, n'ayant pas les compétences linguistiques et comptables allemandes, ne garantit pas l'exactitude des termes employés. Un correcteur sera le bienvenu.
 
-The account type \emph{bank account} allows all types of transactions, whether debit or credit. Therefore, it must be used for all of the following accounts:
+\subsection{Typ \emph{Bankkonto}\label{accounts-type-bank}}%Type \emph{bank account}%Type \emph{compte bancaire}
+
+Der Kontotyp \emph{Bankkonto} erlaubt alle Arten von Transaktionen, egal ob Soll oder Haben. Daher muss er für alle folgenden Konten verwendet werden:
+%The account type \emph{bank account} allows all types of transactions, whether debit or credit. Therefore, it must be used for all of the following accounts:
 %Le type de compte \emph{compte bancaire} admet tous les types d'opérations, en débit ou en crédit. De ce fait, il doit être utilisé pour tous les comptes suivants:
 \begin{itemize}
-	\item bank account or current account;
+	\item Bankkonto oder Girokonto;
+	%bank account or current account;
 	%compte bancaire ou compte courant;
-	\item savings account;
+	\item Sparkonto;
+	%savings account;
 	%compte d'épargne;
-	\item account for \indexword{debit bank card}\index{card!debit};
+	\item Konto für \indexword{Debit-Bankkarte}\index{Bankkarte!Debit};
+	%account for \indexword{debit bank card}\index{card!debit};
 	%compte de \indexword{carte bancaire à débit immédiat}\index{carte bancaire!débit immédiat};
-	\item \indexword{credit card}\index{card!credit} account;
+	\item \indexword{Kreditkartenkonto}\index{Kreditkartenkonto};
+	%\indexword{credit card}\index{card!credit} account;
 	%compte de \indexword{carte de crédit}\index{carte bancaire!de crédit};		
-	\item suspense account;
+	\item Zwischenkonto;
+	%suspense account;
 	%compte d'attente;
-	\item advance account.
+	\item Vorschusskonto.
+	%advance account.
 	%compte d'avances. 
 \end{itemize}
 
-The following paragraphs describe these accounts, which must use the account type \emph{bank account}.
+In den folgenden Abschnitten werden diese Konten beschrieben, die den Kontotyp \emph{Bankkonto} verwenden müssen.
+%The following paragraphs describe these accounts, which must use the account type \emph{bank account}.
 %Les paragraphes suivants décrivent ces comptes qui doivent utiliser le type de compte \emph{compte bancaire}.
 
 
-\subsubsection{Bank account, current account, savings account or debit card account\label{accounts-type-bank-misc}}
+\subsubsection{Bankkonto, Girokonto, Sparkonto oder Debitkartenkonto\label{accounts-type-bank-misc}}
+	%Bank account, current account, savings account or debit card account
 	%Compte bancaire, courant, d'épargne ou de carte bancaire à débit immédiat\label{accounts-type-bank-misc}}
 
-These accounts are used to record all the transactions you can carry out with your bank:
+Diese Konten dienen zur Erfassung aller Transaktionen, die Sie mit Ihrer Bank durchführen können:
+%These accounts are used to record all the transactions you can carry out with your bank:
 %Ces comptes servent à enregistrer toutes les opérations que vous pouvez faire avec votre banque: 
 
 \begin{itemize}
-	\item account-to-account transfer;
+	\item Überweisung von Konto zu Konto;
+	%account-to-account transfer;
 	%virement de compte à compte;
-	\item debit from the account;
+	\item Abbuchung vom Konto;
+	%debit from the account;
 	%prélèvement sur le compte;
-	\item issuing and depositing cheques;
+	\item Ausstellen und Einreichen von Schecks;
+	%issuing and depositing cheques;
 	%émission et dépôt de chèques; 
-	\item purchase, refund, withdrawal and deposit with an \indexword{debit bank card}\index{card!debit}.
+	\item Kauf, Rückerstattung, Abhebung und Einzahlung mit einer \indexword{Debitkarte}\index{Debitkarte}.
+	%purchase, refund, withdrawal and deposit with an \indexword{debit bank card}\index{card!debit}.
 	%achat, remboursement, retrait et dépôt avec une \indexword{carte bancaire à débit immédiat}\index{carte bancaire!débit immédiat}. 
 \end{itemize}
 
 
-\subsubsection{Credit card account\label{accounts-type-bank-creditcard}}
+\subsubsection{Kreditkartenkonto\label{accounts-type-bank-creditcard}}
+	%Credit card account\label{accounts-type-bank-creditcard}}
 	%Compte de carte de crédit\label{accounts-type-bank-creditcard}}
 
-A credit card account is a bank card account that can receive debits as well as credits, either in the form of transfers or loans (e.g. revolving credit). Its balance can therefore be positive or negative.
+Ein Kreditkartenkonto ist ein Bankkartenkonto, auf das sowohl Lastschriften als auch Gutschriften in Form von Überweisungen oder Darlehen (z. B. revolvierender Kredit) eingehen können. Sein Saldo kann daher positiv oder negativ sein.
+%A credit card account is a bank card account that can receive debits as well as credits, either in the form of transfers or loans (e.g. revolving credit). Its balance can therefore be positive or negative.
 %Un compte de carte de crédit est un compte de carte bancaire qui peut recevoir du débit, mais aussi du crédit, soit sous forme de virement, soit sous forme de prêt (par ex. un crédit renouvelable). Son solde peut donc être positif ou négatif.
 
 
-\subsubsection{Suspense account\label{accounts-type-bank-waiting}}
+\subsubsection{Zwischenkonto\label{accounts-type-bank-waiting}}
+	%Suspense account\label{accounts-type-bank-waiting}}
 	%Compte d'attente\label{accounts-type-bank-waiting}}
 
-A suspense account is used to record transactions (usually receipts) pending transfer to a bank or cash account. It is normally credited until the transfer to the bank or cash account, which brings it back to a zero balance.
+Ein Zwischenkonto dient zur Erfassung von Transaktionen (in der Regel Einnahmen), die noch auf die Überweisung auf ein Bank- oder Bargeldkonto warten. Es wird normalerweise bis zur Überweisung auf das Bank- oder Bargeldkonto gutgeschrieben, wodurch es wieder einen Saldo von Null aufweist.
+%A suspense account is used to record transactions (usually receipts) pending transfer to a bank or cash account. It is normally credited until the transfer to the bank or cash account, which brings it back to a zero balance.
 %Un compte d'attente sert à enregistrer des opérations (normalement des recettes) en attendant de les virer vers un compte bancaire ou de caisse. Il est normalement créditeur, jusqu'au moment du virement vers le compte bancaire ou de caisse, qui le ramène à un solde nul.
 
-The \indexword{deposit of cheques}\index{deposit!cheques} and the \indexword{deposit of cash}\index{deposit!cash} are typical examples of the usefulness of the suspense account.
+Die \indexword{Einzahlung von Schecks}\index{Einzahlung!Schecks} und die \indexword{Einzahlung von Bargeld}\index{Einzahlung!Bargeld} sind typische Beispiele für die Nützlichkeit des Zwischenkontos.
+%The \indexword{deposit of cheques}\index{deposit!cheques} and the \indexword{deposit of cash}\index{deposit!cash} are typical examples of the usefulness of the suspense account.
 %La \indexword{remise de chèques}\index{remise!chèques} et la \indexword{remise d'espèces}\index{remise!espèces} sont des exemples-type de l'utilité du compte d'attente. 
 
-\paragraph{\textsl{Delivery of cheques or cash:}\label{accounts-type-bank-waiting-remittance}}
-	%\textsl{Remise de chèques ou d'espèces:}\label{accounts-type-bank-waiting-remittance}}
+\paragraph{\textsl{Lieferung von Schecks oder Bargeld:}\label{accounts-type-bank-waiting-remittance}}
+	%\textsl{Delivery of cheques or cash:}\label{accounts-type-bank-waiting-remittance}
+	%\textsl{Remise de chèques ou d'espèces:}\label{accounts-type-bank-waiting-remittance}
 
-If you receive few cheques or cash, the simplest thing to do is to enter them directly into your bank account (or cash account). In this case, refer to the section \vref{transactions-new-cheque}, \menus{Depositing cheques or cash}.
+Wenn Sie nur wenige Schecks oder Bargeld erhalten, ist es am einfachsten, diese direkt in Ihr Bankkonto (oder Bargeldkonto) einzutragen. In diesem Fall lesen Sie bitte den Abschnitt \vref{transactions-new-cheque}, \menus{Einzahlung von Schecks oder Bargeld}.
+%If you receive few cheques or cash, the simplest thing to do is to enter them directly into your bank account (or cash account). In this case, refer to the section \vref{transactions-new-cheque}, \menus{Depositing cheques or cash}.
 %Si vous recevez peu de chèques ou d'espèces, le plus simple est de les saisir directement dans votre compte bancaire (ou dans votre compte de caisse). Dans ce cas, reportez-vous à la section \vref{transactions-new-cheque}, \menus{Remise de chèques ou d'espèces}.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-However, if you receive a large number of cheques (for example, because you manage an association and your members pay their membership fees by cheque), the most efficient solution is to use a suspense account.
+Wenn Sie jedoch eine große Anzahl von Schecks erhalten (z. B. weil Sie einen Verein verwalten und Ihre Mitglieder ihre Mitgliedsbeiträge per Scheck bezahlen), ist die effizienteste Lösung die Verwendung eines Zwischenkontos.
+%However, if you receive a large number of cheques (for example, because you manage an association and your members pay their membership fees by cheque), the most efficient solution is to use a suspense account.
 %Mais si vous recevez beaucoup de chèques (par exemple parce que vous gérez une association et que vos adhérents payent leur cotisation par chèque), le plus efficace est d'utiliser un compte d'attente.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-The method therefore consists of creating a \emph{suspense account}, which you could name, for example, \emph{Cheques to be cashed}. As you receive cheques, you record them individually in this account, with each cheque corresponding to a \menus{Payee}. When you deposit the cheques at the bank, you make a transfer from this \emph{Cheques to be cashed} account to your bank account for the total amount of these cheques, i.e. the balance of the \emph{Cheques to be cashed} account. Create a payee called \emph{Cheque Deposit}, select \menus{Transfer} as the \menus{method of payment} and enter the number of your deposit slip in the \menus{Cheque/Transfer Number} field.
+Die Methode besteht daher darin, ein \emph{Zwischenkonto} anzulegen, das Sie beispielsweise \emph{Einzulösende Schecks} nennen könnten. Wenn Sie Schecks erhalten, verbuchen Sie diese einzeln in diesem Konto, wobei jeder Scheck einem \menus{Empfänger} entspricht. Wenn Sie die Schecks bei der Bank einreichen, tätigen Sie eine Überweisung von diesem Konto \emph{Einzulösende Schecks} auf Ihr Bankkonto in Höhe des Gesamtbetrags dieser Schecks, d. h. des Saldos des Kontos \emph{Einzulösende Schecks}. Erstellen Sie einen Zahlungsempfänger mit dem Namen \emph{Scheckeinzahlung}, wählen Sie \menus{Zahlung} als \menus{Zahlungsweisen} und geben Sie die Nummer Ihres Einzahlungsbelegs in das Feld \menus{Schecknummer} ein.
+%The method therefore consists of creating a \emph{suspense account}, which you could name, for example, \emph{Cheques to be cashed}. As you receive cheques, you record them individually in this account, with each cheque corresponding to a \menus{Payee}. When you deposit the cheques at the bank, you make a transfer from this \emph{Cheques to be cashed} account to your bank account for the total amount of these cheques, i.e. the balance of the \emph{Cheques to be cashed} account. Create a payee called \emph{Cheque Deposit}, select \menus{Transfer} as the \menus{method of payment} and enter the number of your deposit slip in the \menus{Cheque/Transfer Number} field.
 %La méthode consiste donc à créer un \emph{compte d'attente}, que vous nommez par exemple \emph{Chèques à encaisser}. Au fur et à mesure de la réception des chèques, vous les enregistrez individuellement dans ce compte, dont chaque chèque correspond à un \menus{Tiers}. Quand vous déposez les chèques à la banque, vous faites un virement de ce compte \emph{Chèques à encaisser} vers votre compte bancaire, du montant de l'ensemble de ces chèques, donc du solde du compte \emph{Chèques à encaisser}. Créez pour l'occasion un tiers \emph{Remise de chèques}, sélectionnez \menus{Virement} comme \menus{choix du mode de règlement} et dans le champ \menus{N° Chèque/Virement}, saisissez le numéro de votre bordereau de remise.
 % (ce bordereau sera généré directement par Grisbi dans une prochaine version). 
 
-The balance of the \emph{Cheques to be cashed} account is then reset to zero, and the bank account is credited with the amount of the deposit, exactly as it will appear on your bank statement. This allows you to keep track of both the third-party information for each cheque and the overall deposit information.
+Der Saldo des Kontos \emph{Einzulösende Schecks} wird dann auf Null zurückgesetzt, und der Betrag der Einzahlung wird dem Bankkonto gutgeschrieben, genau so, wie er auf Ihrem Kontoauszug erscheint. Auf diese Weise können Sie sowohl die Informationen von Dritten zu jedem Scheck als auch die gesamten Einzahlungsinformationen nachverfolgen.
+%The balance of the \emph{Cheques to be cashed} account is then reset to zero, and the bank account is credited with the amount of the deposit, exactly as it will appear on your bank statement. This allows you to keep track of both the third-party information for each cheque and the overall deposit information.
 %Le solde du compte \emph{Chèques à encaisser} revient alors à zéro, et le compte bancaire est crédité du montant de la remise, exactement comme le sera votre relevé bancaire. Ainsi vous gardez et l'information du tiers pour chaque chèque, et celle de la remise globale.
 
-You then perform a pseudo-reconciliation of the \emph{Cheques to be cashed} account by simulating a zero balance statement before the next cheque is received: check that this reconciliation has a number, or give it one, for example DEP-01, which will allow you to later find which cheque was part of which deposit.
+Anschließend führen Sie eine Pseudo-Abstimmung des Kontos \emph{Einzulösende Schecks} durch, indem Sie einen Nullsaldo vor dem Eingang des nächsten Schecks simulieren: Überprüfen Sie, ob diese Abstimmung eine Nummer hat, oder vergeben Sie eine Nummer, z. B. ÜBE-01, damit Sie später feststellen können, welcher Scheck zu welcher Einzahlung gehörte.
+%You then perform a pseudo-reconciliation of the \emph{Cheques to be cashed} account by simulating a zero balance statement before the next cheque is received: check that this reconciliation has a number, or give it one, for example DEP-01, which will allow you to later find which cheque was part of which deposit.
 %Vous faites ensuite un pseudo-rapprochement du compte \emph{Chèques à encaisser} en simulant un relevé de solde nul avant la prochaine réception d'un chèque: vérifiez que ce rapprochement a bien un numéro, ou donnez-en lui un, par exemple REM-01, ce qui vous permettra ultérieurement de retrouver quel chèque faisait partie de quelle remise. Ce pseudo-rapprochement est appelé \emph{\indexword{lettrage}}\index{lettrage}.
 
 % l'édition du bordereau de remise comportant \textbf{toutes} les opérations non-rapprochées (\emph{non fonctionnel pour l'instant, vous devrez créer ce bordereau à la main ou avec un logiciel de traitement de texte}).
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-For example, if you have received two cheques, you record two transactions in your \emph{Cheques to be cashed} account:
+Wenn Sie beispielsweise zwei Schecks erhalten haben, verbuchen Sie zwei Transaktionen in Ihrem Konto \emph{Einzulösende Schecks}:
+%For example, if you have received two cheques, you record two transactions in your \emph{Cheques to be cashed} account:
 %Par exemple, si vous avez reçu deux chèques, vous enregistrez deux opérations dans votre compte \emph{Chèques à encaisser}:
 
 \vspacepdf{3mm}
@@ -550,8 +594,8 @@ For example, if you have received two cheques, you record two transactions in yo
 %\setlength{\parskip}{-15pt}
 \begin{tblr}{
 		%width=0.95\textwidth,
-		colspec={Q[c] Q[3.2cm,c] Q[c] Q[4.8cm,c] Q[3.2cm,c]},
-		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
+		colspec={Q[c] Q[3cm,c] Q[1.9cm,c] Q[4.4cm,c] Q[3cm,c]},
+		%colspec={Q[1cm,r]0Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4pt,							%vertical space above and below rows, default=2
 		colsep=4pt,								%horizontal space on both sides of columns, default=6
@@ -562,24 +606,26 @@ For example, if you have received two cheques, you record two transactions in yo
 		row{1}={bg=cyan!10},				%background of row 1 = 20% lightgray
 		%row{1}={bg=cyan!8},					%background of row 1 = 8% cyan
 		row{2,3}=l,
+		cell{2,3}{3}=c,
 		hlines={lightgray},
 		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Payee} & \menus{Credit} & \menus{Categories} & \menus{Method of payment} \\
-	12/02/2024 	 & Smith		 & \textsterling 20.00		  & Contributions		   & \menus{Cheque}				\\
-	12/04/2024	 & Jones		 & \textsterling 40.00		  & Contributions		   & \menus{Cheque}				\\
+	\menus{Datum} & \menus{Empfänger} & \menus{Einnahmen} & \menus{Kategorien} & \menus{Zahlungsweisen} \\
+	12/02/2024 	  & Albrecht		  & 20.00		  	  & Beiträge		   & \menus{Scheck}			\\
+	12/04/2024	  & Arnold		 	  & 40.00		  	  & Beiträge		   & \menus{Scheck}			\\
 \end{tblr}
 %\end{center}
 
 %\setlength{\parskip}{-3pt}
 \vspacepdf{3mm}
-Puis lors de la remise des deux chèques à la banque, dans votre compte bancaire, vous enregistrez l'opération:
+Wenn Sie dann die beiden Schecks bei der Bank einreichen, verbuchen Sie den Vorgang auf Ihrem Bankkonto wie folgt:
+%Puis lors de la remise des deux chèques à la banque, dans votre compte bancaire, vous enregistrez l'opération:
 
 \vspacepdf{3mm}
 \noindent
 \begin{tblr}{
 		%width=0.95\textwidth,
-		colspec={Q[c] Q[3.2cm,c] Q[c] Q[4.8cm,c] Q[3.2cm,c]},
+		colspec={Q[c] Q[3cm,c] Q[1.9cm,c] Q[4.4cm,c] Q[3cm,c]},
 		%colspec={Q[1cm,r] Q[1.5cm,c] Q[1cm,l]},
 		%rowspec={Q[m] Q[m] Q[m] Q[m] Q[m]},
 		%rowsep=4.5pt,
@@ -590,83 +636,102 @@ Puis lors de la remise des deux chèques à la banque, dans votre compte bancair
 		%belowsep=2pt,							%default=2
 		row{1}={bg=cyan!10},				%background of row 1 = 30% lightgray
 		row{2}=l,
+		cell{2}{3}=c,
 		hlines={lightgray},
 		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Payee}	 & \menus{Credit} & \menus{Categories}					 & \menus{Mode de  règlement} \\
-	12/15/2024 	 & Cheque deposit & \textsterling 60.00		  & \emph{Transfer:\\} Cheques to be cashed & \menus{Cheque}			  \\
+	\menus{Datum} & \menus{Empfänger} & \menus{Einnahmen} & \menus{Kategorien}						 & \menus{Zahlungsweisen} \\
+	12/15/2024 	  & Scheckübergabe	  & 60.00		  	  & \emph{Umbuchung:\\} Schecks zum Einlösen & \menus{Scheck}		   \\
 \end{tblr}
 
 \vspacepdf{3mm}
-\Note{}: you can record this transaction either in your bank account under \menus{Credit} and \menus{Category}: \emph{Transfer: Cheques to be cashed}, or in your \emph{Cheques to be cashed} account under \menus{Debit} and \menus{Category}: \emph {Transfer: Bank account}; in both cases, Grisbi automatically creates the counter-transaction in the other account.
+\Note{}: Sie können diese Transaktion entweder in Ihrem Bankkonto unter \menus{Einnahmen} und \menus{Kategorie}: \emph{Umbuchung: Schecks zum Einlösen} oder in Ihrem Konto \emph{Einzulösende Schecks} unter \menus{Ausgaben} und \menus{Kategorie}: \emph {Überweisung: Bankkonto} erfassen. In beiden Fällen erstellt Grisbi automatisch die Gegenbuchung auf dem anderen Konto.
+%\Note{}: you can record this transaction either in your bank account under \menus{Credit} and \menus{Category}: \emph{Transfer: Cheques to be cashed}, or in your \emph{Cheques to be cashed} account under \menus{Debit} and \menus{Category}: \emph {Transfer: Bank account}; in both cases, Grisbi automatically creates the counter-transaction in the other account.
 %\Note{}: vous pouvez enregistrer cette opération soit dans votre compte bancaire en \menus{Crédit} et \menus{Catégorie}: \emph{Virement: Chèques à encaisser}, soit dans votre compte \emph{Chèques à encaisser} en \menus{Débit} et \menus{Catégorie}: \emph{Virement: Compte bancaire}; dans les deux cas, Grisbi crée automatiquement la contre-opération dans l'autre compte.
 
 \vspacepdf{3mm}
-\Note{}: you can add payment methods, both debit and credit, that are not natively included in Grisbi (e.g. Cash, Documentary collection, etc.) as you see fit. This can be done in the Grisbi preferences (see the section \vref{setup-resources-modes-details}).
+\Note{}: Sie können Zahlungsmethoden, sowohl Debit- als auch Kreditkarten, die nicht standardmäßig in Grisbi enthalten sind (z. B. Barzahlung, Zahlungssystemen usw.), nach Belieben hinzufügen. Dies kann in den Grisbi-Einstellungen vorgenommen werden (siehe Abschnitt \vref{setup-resources-modes-details}).
+%\Note{}: you can add payment methods, both debit and credit, that are not natively included in Grisbi (e.g. Cash, Documentary collection, etc.) as you see fit. This can be done in the Grisbi preferences (see the section \vref{setup-resources-modes-details}).
 %\Note{}: vous pouvez ajouter à votre convenance des modes de règlement, au débit comme au crédit, et qui ne sont pas nativement inclus dans Grisbi (par exemple Espèces, TIP (Titre interbancaire de paiement), \ldots). Cet ajout est à effectuer dans les préférences de Grisbi (voir la section \vref{setup-resources-modes-details}).
 
 \vspacepdf{3mm}
-The \emph{Cheques to be cashed} account is then balanced at zero, but it keeps track of the cheques deposited at the bank, and only the total amount of the deposit slip appears in your bank account, which you can check against your bank statement.
+Das Konto \emph{Einzulösende Schecks} wird dann auf Null ausgeglichen, aber es werden die bei der Bank eingereichten Schecks erfasst, und nur der Gesamtbetrag des Einzahlungsbelegs erscheint auf Ihrem Bankkonto, den Sie mit Ihrem Kontoauszug abgleichen können.
+%The \emph{Cheques to be cashed} account is then balanced at zero, but it keeps track of the cheques deposited at the bank, and only the total amount of the deposit slip appears in your bank account, which you can check against your bank statement.
 %Le compte \emph{Chèques à encaisser} est alors soldé à zéro, mais il garde la trace des chèques déposés à la banque, et dans votre compte bancaire n'apparaît que le montant global du bordereau de remise, que vous pourrez pointer avec votre relevé de compte de la banque.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Of course, if some of your members pay you in cash, you can use an account named, for example, \emph{Cash deposits} in the same way.
+Wenn einige Ihrer Mitglieder Sie bar bezahlen, können Sie natürlich ein Konto mit dem Namen beispielsweise \emph{Bareinzahlungen} auf die gleiche Weise verwenden.
+%Of course, if some of your members pay you in cash, you can use an account named, for example, \emph{Cash deposits} in the same way.
 %Bien entendu, si une partie de vos adhérents vous paye en espèces, vous pouvez utiliser de la même façon un compte nommé par exemple \emph{Remise d'espèces}.
 
 
-\subsubsection{Advance account\label{accounts-type-bank-advance}}
+\subsubsection{Vorschusskonto\label{accounts-type-bank-advance}}
+	%Advance account\label{accounts-type-bank-advance}}
 	%Compte d'avances\label{accounts-type-bank-advance}}
 
-An advance account is used to record both advances you receive and advances you grant. These may include, for example, an advance on your salary or a purchase you make on behalf of a friend.
+Ein Vorschusskonto dient zur Erfassung sowohl der erhaltenen als auch der gewährten Vorschüsse. Dazu können beispielsweise ein Vorschuss auf Ihr Gehalt oder ein Kauf gehören, den Sie für einen Freund tätigen.
+%An advance account is used to record both advances you receive and advances you grant. These may include, for example, an advance on your salary or a purchase you make on behalf of a friend.
 %Un compte d'avances sert à enregistrer à la fois les avances que vous recevez et celles que vous consentez. Il peut s'agir, par exemple, d'une avance sur votre salaire ou d'un achat que vous faites pour le compte d'un de vos amis.
 
 % espace avant Attention ou Note: 5 mm
 \vspacepdf{3mm}
-\Note{}: the advances account can be confusing for beginners, as it works in reverse, as you will discover later. To make things easier, you can think of the advances account as a third party who gives you money or to whom you give money.
+\Note{}: Das Vorschusskonto kann für Anfänger verwirrend sein, da es umgekehrt funktioniert, wie Sie später erfahren werden. Um die Sache zu vereinfachen, können Sie sich das Vorschusskonto als einen Dritten vorstellen, der Ihnen Geld gibt oder dem Sie Geld geben.
+%\Note{}: the advances account can be confusing for beginners, as it works in reverse, as you will discover later. To make things easier, you can think of the advances account as a third party who gives you money or to whom you give money.
 %\Note{}: le compte d'avances peut être déroutant pour le novice, puisqu'il fonctionne à l'envers, comme vous le découvrirez plus loin. Pour vous faciliter les choses, vous pouvez considérer que le compte d'avances se comporte comme un tiers qui vous donne ou à qui vous donnez de l'argent.
 
-\paragraph{\textsl{Receipt of an advance:}} when you \indexword{receive an advance}\index{avance!receive}, you record the transaction by transferring funds from the advances account to a bank account. The payee will be the person or organisation from whom you receive the advance, and the category will be \emph{Transfer: Bank account}. In the \menus{Notes} field, you indicate the reason for the advance. The advances account is therefore in debit when you owe money. When you repay this advance, you make a transfer from the bank account, with the same payee and the same note, to the advances account, whose balance returns to zero.
+\paragraph{\textsl{Erhalt einer Vorauszahlung:}} Wenn Sie \indexword{einen Vorauszahlung erhalten}\index{Vorauszahlung!erhalten}, erfassen Sie die Buchung, indem Sie Geld vom Vorschusskonto auf ein Bankkonto überweisen. Der Empfänger ist die Person oder Organisation, von der Sie den Vorschuss erhalten, und die Kategorie lautet \emph{Überweisung: Bankkonto}. Im Feld \menus{Notizen} geben Sie den Grund für den Vorschuss an. Das Vorschusskonto ist daher im Soll, wenn Sie Geld schulden. Wenn Sie diesen Vorschuss zurückzahlen, nehmen Sie eine Überweisung vom Bankkonto mit demselben Empfänger und derselben Notiz auf das Vorschusskonto vor, dessen Saldo sich wieder auf Null beläuft.
+%\paragraph{\textsl{Receipt of an advance:}} when you \indexword{receive an advance}\index{avance!receive}, you record the transaction by transferring funds from the advances account to a bank account. The payee will be the person or organisation from whom you receive the advance, and the category will be \emph{Transfer: Bank account}. In the \menus{Notes} field, you indicate the reason for the advance. The advances account is therefore in debit when you owe money. When you repay this advance, you make a transfer from the bank account, with the same payee and the same note, to the advances account, whose balance returns to zero.
 %\paragraph{\textsl{Réception d'une avance:}} quand vous \indexword{recevez une avance}\index{avance!réception}, vous enregistrez l'opération par un virement du compte d'avances vers un compte bancaire. Le tiers sera la personne ou l'organisation de qui vous recevez l'avance, et la catégorie sera \emph{Virement: Compte bancaire}. Dans le champ \menus{Notes}, vous indiquez le motif de l'avance. Le compte d'avances est donc débiteur quand vous devez de l'argent. Lorsque vous remboursez cette avance, vous faites un virement du compte bancaire, avec le même tiers et la même remarque, vers le compte d'avances, dont le solde redevient nul.
 
-For a cash advance, replace the bank account with a cash account.
+Für einen Barvorschuss ersetzen Sie das Bankkonto durch ein Bargeldkonto.
+%For a cash advance, replace the bank account with a cash account.
 %Pour une avance en espèces, remplacez le compte bancaire par un compte de caisse.
 
-If the advance is paid to you by cheque, and if you have created a \emph{Cheques to be cashed} suspense account, you must first record the cheque in the advances account, then transfer the amount of the cheque from the advances account to this \emph{Cheques to be cashed} account, and then make your cheque deposit transfer from this \emph{Cheques to be cashed} account to your bank account (see the paragraph \vref{accounts-type-bank-waiting}, \menus{Suspense account}).
+Wenn Ihnen der Vorschuss per Scheck ausgezahlt wird und Sie ein Zwischenkonto \emph{Einzulösende Schecks} eingerichtet haben, müssen Sie den Scheck zunächst im Vorschusskonto verbuchen, dann den Scheckbetrag vom Vorschusskonto auf dieses Konto \emph{Einzulösende Schecks} überweisen und anschließend die Scheckeinzahlung von diesem Konto \emph{Einzulösende Schecks} auf Ihr Bankkonto vornehmen (siehe Absatz \vref{accounts-type-bank-waiting}, \menus{Zwischenkonto}).
+%If the advance is paid to you by cheque, and if you have created a \emph{Cheques to be cashed} suspense account, you must first record the cheque in the advances account, then transfer the amount of the cheque from the advances account to this \emph{Cheques to be cashed} account, and then make your cheque deposit transfer from this \emph{Cheques to be cashed} account to your bank account (see the paragraph \vref{accounts-type-bank-waiting}, \menus{Suspense account}).
 %Dans le cas où l'avance vous est versée par chèque, et si vous avez créé un compte d'attente \emph{Chèques à encaisser}, vous devrez d'abord enregistrer le chèque dans le compte d'avances, puis faire un virement du montant du chèque, du compte d'avances vers ce compte \emph{Chèques à encaisser}, et ensuite faire votre virement de remise de chèque, de ce compte \emph{Chèques à encaisser} vers votre compte bancaire (voir le paragraphe \vref{accounts-type-bank-waiting}, \menus{Compte d'attente}). 
 
-You will then reconcile the advances account to remove these transactions.
+Anschließend gleichen Sie das Vorschusskonto ab, um diese Buchungen zu entfernen.
+%You will then reconcile the advances account to remove these transactions.
 %Vous ferez ensuite un rapprochement du compte d'avances pour faire disparaître ces opérations.
 
-\paragraph{\textsl{Consent to an advance:}} conversely, if you \indexword{consent an advance}\index{advance!consent}, you record the transaction as a transfer from a bank account to the advances account. The payee will be the person or organisation to whom you are granting the advance, and the category will be \emph{Transfer: Advances account}. In the \menus{Notes} field, you will indicate the reason for the advance. The advance account is therefore credited when you are owed money. When this advance is repaid to you, you record the transaction by transferring the amount from the advance account to the bank account, with the same payee and the same note, and the category will be \menus{Transfer: Bank account}. The balance of your advances account will then return to zero. 
+\paragraph{\textsl{Zustimmung zu einer Vorauszahlung:}} Umgekehrt, wenn Sie \indexword{einer Vorauszahlung zustimmen}\index{Vorauszahlung!zustimmen}, verbuchen Sie die Buchung als Überweisung von einem Bankkonto auf das Vorauszahlungskonto. Der Empfänger ist die Person oder Organisation, der Sie die Vorauszahlung gewähren, und die Kategorie lautet \emph{Überweisung: Vorauszahlungskonto}. Im Feld \menus{Notizen} geben Sie den Grund für die Vorauszahlung an. Das Vorschusskonto wird also gutgeschrieben, wenn Ihnen Geld geschuldet wird. Wenn dieser Vorschuss an Sie zurückgezahlt wird, erfassen Sie die Buchung, indem Sie den Betrag vom Vorschusskonto auf das Bankkonto überweisen, mit demselben Empfänger und derselben Notiz, und die Kategorie lautet \menus{Überweisung: Bankkonto}. Der Saldo Ihres Vorschusskontos wird dann wieder auf Null gesetzt.
+%\paragraph{\textsl{Consent to an advance:}} conversely, if you \indexword{consent an advance}\index{advance!consent}, you record the transaction as a transfer from a bank account to the advances account. The payee will be the person or organisation to whom you are granting the advance, and the category will be \emph{Transfer: Advances account}. In the \menus{Notes} field, you will indicate the reason for the advance. The advance account is therefore credited when you are owed money. When this advance is repaid to you, you record the transaction by transferring the amount from the advance account to the bank account, with the same payee and the same note, and the category will be \menus{Transfer: Bank account}. The balance of your advances account will then return to zero.
 %\paragraph{\textsl{Consentement d'une avance:}} inversement, si vous \indexword{consentez une avance}\index{avance!consentement}, vous enregistrez l'opération par un virement d'un compte bancaire vers le compte d'avances. Le tiers sera la personne ou l'organisation à qui vous faites l'avance, et la catégorie sera \emph{Virement: Compte d'avances}. Dans le champ \menus{Remarques}, vous indiquerez le motif de l'avance. Le compte d'avances est donc créditeur quand on vous doit de l'argent. Lorsque cette avance vous est remboursée, vous enregistrez l'opération par un virement du compte d'avances vers le compte bancaire, avec le même tiers et la même remarque, et la catégorie sera \menus{Virement: Compte bancaire}. Le solde de votre compte d'avances redevient nul.
 
-For a cash advance, replace the bank account with a cash account.
+Für einen Barvorschuss ersetzen Sie das Bankkonto durch ein Bargeldkonto.
+%For a cash advance, replace the bank account with a cash account.
 %Pour une avance en espèces, remplacez le compte bancaire par un compte de caisse.
 
-If the advance is reimbursed to you by cheque, and if you have created a \emph{Cheques to be cashed} suspense account, you must first record the cheque in the advances account, then transfer the amount of the cheque from the advances account to this \emph{Cheques to be cashed} account, and then make your cheque deposit transfer from this \emph{Cheques to be cashed} account to your bank account (see the paragraph \vref{accounts-type-bank-waiting}, \menus{Suspense account}).
+Wenn Ihnen der Vorschuss per Scheck zurückerstattet wird und Sie ein Zwischenkonto \emph{Einzulösende Schecks} angelegt haben, müssen Sie den Scheck zunächst im Vorschusskonto verbuchen, dann den Scheckbetrag vom Vorschusskonto auf dieses Konto \emph{Einzulösende Schecks} überweisen und anschließend die Scheckeinzahlung von diesem Konto \emph{Einzulösende Schecks} auf Ihr Bankkonto vornehmen (siehe Absatz \vref{accounts-type-bank-waiting}, \menus{Zwischenkonto}).
+%If the advance is reimbursed to you by cheque, and if you have created a \emph{Cheques to be cashed} suspense account, you must first record the cheque in the advances account, then transfer the amount of the cheque from the advances account to this \emph{Cheques to be cashed} account, and then make your cheque deposit transfer from this \emph{Cheques to be cashed} account to your bank account (see the paragraph \vref{accounts-type-bank-waiting}, \menus{Suspense account}).
 %Dans le cas où l'avance vous est remboursée par chèque, et si vous avez créé un compte d'attente \emph{Chèques à encaisser}, vous devrez d'abord enregistrer le chèque dans le compte d'avances, puis faire un virement du montant du chèque, du compte d'avances vers ce compte \emph{Chèques à encaisser}, et ensuite faire votre virement de remise de chèque, de ce compte \emph{Chèques à encaisser} vers votre compte bancaire (voir le paragraphe \vref{accounts-type-bank-waiting}, \menus{Compte d'attente}). 
 
-You will then reconcile the advances account to remove these transactions.
+Anschließend gleichen Sie das Vorschusskonto ab, um diese Buchungen zu entfernen.
+%You will then reconcile the advances account to remove these transactions.
 %Vous ferez ensuite un rapprochement du compte d'avances pour faire disparaître ces opérations.
 
 %espace pour changement de thème
 \vspacepdf{5mm}
-An advance account therefore allows you to easily check whether your receivables or payables have been settled. Without this method, such verification is difficult, if not impossible.
+Mit einem Vorschusskonto können Sie daher ganz einfach überprüfen, ob Ihre Forderungen oder Verbindlichkeiten beglichen wurden. Ohne diese Methode ist eine solche Überprüfung schwierig, wenn nicht sogar unmöglich.
+%An advance account therefore allows you to easily check whether your receivables or payables have been settled. Without this method, such verification is difficult, if not impossible.
 %Un compte d'avances vous permet donc de vérifier facilement si vos créances ou vos dettes sont éteintes. Sans cette méthode cette vérification est difficile, sinon impossible.
 
 % espace avant Attention ou Note: 5 mm
 \vspacepdf{3mm}
-\Note{}: when you draw up a report of incomes and outgoings, these transactions should be transparent, as they cancel each other out when each advance is repaid. In practice, when editing this type of report, you will need to configure it so that it does not take into account transfers between accounts, and thus these transactions will be completely invisible (see the section \vref{reportscreation-selection-transfer}, \menus{Transfers}).
+\Note{}: Wenn Sie einen Bericht über Einnahmen und Ausgaben erstellen, sollten diese Buchungen transparent sein, da sie sich bei der Rückzahlung jedes Vorschusses gegenseitig aufheben. In der Praxis müssen Sie bei der Bearbeitung dieser Art von Bericht die Einstellung so vornehmen, dass Überweisungen zwischen Konten nicht berücksichtigt werden, sodass diese Buchungen vollständig unsichtbar sind (siehe Abschnitt \vref{reportscreation-selection-transfer}, \menus{Umbuchungen}).
+%\Note{}: when you draw up a report of incomes and outgoings, these transactions should be transparent, as they cancel each other out when each advance is repaid. In practice, when editing this type of report, you will need to configure it so that it does not take into account transfers between accounts, and thus these transactions will be completely invisible (see the section \vref{reportscreation-selection-transfer}, \menus{Transfers}).
 %\Note{}: lorsque vous faites un état des recettes et dépenses, ces opérations devraient être \emph{transparentes}, puisqu'elles s'annulent deux à deux quand chaque avance est remboursée. En pratique, lors de l'édition de ce genre d'état, vous devrez le configurer pour qu'il ne prenne pas en compte les virements entre comptes, et ainsi ces opérations seront totalement invisibles (voir la section \vref{reportscreation-selection-transfer}, \menus{Virements}).
 
 % espace avant Attention ou Note: 5 mm
 \vspacepdf{3mm}
-\Note{}: when creating a new account, it is best to choose the \emph{bank account} account type, unless your new account is to be used for a more specific purpose, such as those described in the paragraphs below.
+\Note{}: Wenn Sie ein neues Konto erstellen, wählen Sie am besten den Kontotyp \emph{Bankkonto}, es sei denn, Ihr neues Konto soll für einen spezifischeren Zweck verwendet werden, wie beispielsweise in den folgenden Absätzen beschrieben. 
+%\Note{}: when creating a new account, it is best to choose the \emph{bank account} account type, unless your new account is to be used for a more specific purpose, such as those described in the paragraphs below.
 %\Note{}: lorsque vous créez un nouveau compte, choisissez donc de préférence le type de compte \emph{compte bancaire}, sauf si votre nouveau compte doit avoir une utilisation plus spécifique comme celles décrites dans les paragraphes ci-dessous.
 
-\newpage
-
+%\newpage
+%TODO following
 \subsection{Type \emph{cash account}\label{accounts-type-cash}}
 	%Type \emph{compte de caisse}\label{accounts-type-cash}}
 
@@ -730,8 +795,8 @@ For example, when the credit institution Ameri Credit pays you £20,000.00 to bu
 		hlines={lightgray},
 		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Payee} & \menus{Credit} & \menus{Categories}			  & \menus{Notes} \\
-	06/01/2025 	 & Ameri Credit  & £20,000.00	  & \menus{Transfer: Bank Ruptcy} & Debt borrowed Ameri Credit \\
+	\menus{Datum} & \menus{Empfänger} & \menus{Einnahmen} & \menus{Kategorien}			  & \menus{Notizen} \\
+	06/01/2025 	 & Ameri Credit  & 20,000.00	  & \menus{Transfer: Bank Ruptcy} & Debt borrowed Ameri Credit \\
 \end{tblr}
 
 
@@ -769,7 +834,7 @@ For example, at each due date, you enter a breakdown transaction (more informati
 		row{3}=l,
 		row{4}={rowsep=0pt},
 		cell{2}{1-4}={bg=red!10},				%background of row 2, colums 1 to 4 = 7% red
-		%cell{3-7}{3}={cmd=\num},
+		cell{3}{3}=c,
 		cell{5-7}{4}={l},
 		cell{1}{1}={c=4}{l},					%merging cell r1,c1 across 4 columns
 		cell{5}{1}={c=2}{l},					%merging cell r5,c1 across 2 columns
@@ -777,13 +842,13 @@ For example, at each due date, you enter a breakdown transaction (more informati
 		cell{7}{1}={c=2}{l}						%merging cell r7,c1 across 2 columns
 		%stretch=0
 	}
-	\hspace{-10pt}\textbullet{} Parent transaction:	  			&				 &					   &							  \\
-	\menus{Date}								 			& \menus{Payee}  & \menus{Debit}	   & \menus{Categories}		  	  \\
-	07/01/2025   											& Ameri Credit & £350.00			   & \menus{Split of transaction}	  \\
+	\hspace{-10pt}\textbullet{} Übergeordnete Buchung:	  			&				 &					   &							  \\
+	\menus{Datum}								 			& \menus{Empfänger}  & \menus{Ausgaben}	   & \menus{Kategorien}		  	  \\
+	07/01/2025   											& Ameri Credit & 350.00			   & \menus{Splittbuchungen}	  \\
 	&				 &					   &							  \\
-	\hspace{5mm}\textopenbullet{} 1st child transaction: &				 & £300.00			   & \menus{Transfer: Bank Ruptcy} \\
-	\hspace{5mm}\textopenbullet{} 2nd child transaction:  &				 & £48.80			   & \menus{Financial expenses: Borrowing costs} \\
-	\hspace{5mm}\textopenbullet{} 3rd child transaction:	&			 & £1.20				   & \menus{Insurances}			  \\
+	\hspace{3mm}\textopenbullet{} erste untergeordnete Buchung: &				 & 300.00			   & \menus{Transfer: Bank Ruptcy} \\
+	\hspace{3mm}\textopenbullet{} zweite untergeordnete Buchung:  &				 & 48.80			   & \menus{Financial expenses: Borrowing costs} \\
+	\hspace{3mm}\textopenbullet{} dritte untergeordnete Buchung:	&			 & 1.20				   & \menus{Insurances}			  \\
 \end{tblr}
 
 %espace pour changement de thème
@@ -847,8 +912,8 @@ For example, when you purchase a car worth £25,000 from Auto Matic, you create 
 		hlines={lightgray},
 		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Payee} & \menus{Debit} & \menus{Categories}			  	& \menus{Notes} 	 \\
-	06/01/2024 	 & Auto Matic	 & £25,000.00	 & \menus{Transfer:\\} Fixed Assets & Car purchase asset \\
+	\menus{Datum} & \menus{Empfänger} & \menus{Ausgaben} & \menus{Kategorien}			  	& \menus{Notizen} 	 \\
+	06/01/2024 	 & Auto Matisch	 & 25000.00	 & \menus{Transfer:\\} Fixed Assets & Car purchase asset \\
 \end{tblr}
 
 \vspacepdf{3mm}
@@ -881,8 +946,8 @@ For example, after one year, the value of your car has decreased; in your \emph{
 		hlines={lightgray},
 		vlines={lightgray}
 	}
-	\menus{Date} & \menus{Payee}		& \menus{Debit} & \menus{Categories}			   & \menus{Notes} \\
-	06/01/2025 	 & Car depreciation		& £5,000.00	    & \menus{Transfer:\\} Fixed Assets & Depreciation: Devaluation \\
+	\menus{Datum} & \menus{Empfänger}		& \menus{Ausgaben} & \menus{Kategorien}			   & \menus{Notizen} \\
+	06/01/2025 	 & Car depreciation		& 5000.00	    & \menus{Transfer:\\} Fixed Assets & Depreciation: Devaluation \\
 \end{tblr}
 
 %espace pour changement de thème
