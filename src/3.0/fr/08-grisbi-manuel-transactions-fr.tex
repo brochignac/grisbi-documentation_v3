@@ -196,7 +196,7 @@ Pour \indexword{supprimer un champ d'information}\index{champ d'information!supp
 
 Pour \indexword{déplacer un champ d'information}\index{champ d'information!déplacer}, vous pouvez le supprimer puis l'ajouter dans un autre champ vide, mais vous pouvez aussi le faire dans le menu \menus{Éditer - Préférences - Opérations - Cellules de la liste des opérations} (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}).
 
-%TODO following
+
 \subsection{Tris\label{transactions-list-sorts}}
 
 Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexword{tri sur les opérations}\index{tri!opérations} sur un des champs d'information; procédez comme suit:
@@ -205,7 +205,7 @@ Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexwor
 	 \item cliquez-droit sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri};
 	 \item un menu contextuel affiche la liste des champs de cette colonne; sélectionnez le champ choisi comme critère de tri;
 	 \item toutes les opérations s'affichent, triées selon le critère choisi;
-	 \item un petit triangle noir apparaît à droite du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
+	 \item un petit triangle noir apparaît à droite ou à gauche du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
 % saut de ligne pour indentation correcte de la note dans la liste
 
 	 \textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
@@ -232,7 +232,7 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 \begin{center}
 \includegraphics[width=0.95\textwidth]{image/screenshot/transactions_form}
 \end{center}
-\caption{Formulaire de saisie des opérations}
+\caption{Formulaire de saisie des opérations personnalisé}
 \label{transactions-form-img}
 \end{figure}
 % image centrée 
@@ -240,12 +240,27 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 
 \textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
-Le formulaire de saisie comprend par défaut les sept champs suivants: \menus{Date de l'opération}, \menus{Tiers}, \menus{Débit}, \menus{Crédit}, \menus{Catégorie}, \menus{Moyen de paiement} et \menus{Remarques}. Vous pouvez avoir besoin de champs supplémentaires, par exemple \menus{Exercice}, \menus{Imputation budgétaire} ou autre. Pour cela, allez dans le menu \menus{Éditer - Préférences - Formulaire des opérations - Contenu}, ou cliquez-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, sélectionnez \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}).
-
+Le formulaire de saisie comprend par défaut les sept champs suivants:
+\begin{itemize}
+	\item \menus{Date de l'opération},
+	\item \menus{Tiers},
+	\item \menus{Débit},
+	\item \menus{Crédit},
+	\item \menus{Catégorie},
+	\item \menus{Moyen de paiement},
+	\item \menus{Remarques}.
+\end{itemize}
+Vous pouvez avoir besoin de champs supplémentaires, par exemple \menus{Exercice}, \menus{Imputation budgétaire} ou autre. Vous pouvez procéder de deux façons: 
+\begin{itemize}
+	\item soit par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, puis en cliquant sur le bouton \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}),
+	\item soit en allant dans le menu \menus{Éditer - Préférences - Formulaire des opérations - Contenu} pour modifier les champs à votre convenance.
+.
+\end{itemize}
 %espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Pour connaître l'ensemble des champs que peut gérer Grisbi, voir la section \vref{transactions-list-fields}, \menus{Champs d'information et de saisie}.
 
+\vspacepdf{3mm}
 Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit dans un champ de saisie permet d'effectuer les actions suivantes:
 
 \begin{itemize}
@@ -253,28 +268,28 @@ Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit
 	 \item \menus{Copier} (la sélection);
 	 \item \menus{Coller} (la sélection);
 	 \item \menus{Supprimer} (la sélection);
+	 \item[]\hspace{-12pt} puis
 	 \item \menus{Tout sélectionner} (dans le champ de saisie);
-	 \item \menus{Méthodes de saisie}\index{méthodes de saisie};
-	 \item \menus{Insérer un caractère de contrôle Unicode}\index{caractère de contrôle Unicode}.
+	 \item \menus{Insérer un émoji}\index{émoji}.
 \end{itemize}
 
 %espace pour changement de thème
-\vspacepdf{5mm}
-Le choix \menus{\gls{methodes de saisie}} permet de changer les caractères accentués.
+%\vspacepdf{5mm}
 
-Le choix \menus{Insérer un \gls{caractere de controle Unicode}} permet d'insérer un code Unichar qui modifie la présentation; par exemple RLO (forçage droite-à-gauche) renverse l'ordre des lettres et la position du texte.
-
-De plus, un autre menu contextuel, accessible par un clic-droit en dehors d'un champ de saisie, permet d'accéder à la \indexword{configuration du formulaire}\index{formulaire de saisie!configuration}: vous pouvez en configurer précisément le contenu, la présentation, le comportement, ainsi que les paramètres d'aide à la saisie, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}).
+%De plus, un autre menu contextuel, accessible par un clic-droit en dehors d'un champ de saisie, permet d'accéder à la \indexword{configuration du formulaire}\index{formulaire de saisie!configuration}: vous pouvez en configurer précisément le contenu, la présentation, le comportement, ainsi que les paramètres d'aide à la saisie, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}).
 
 
 \section{Solde pointé\label{transactions-balance}}
 
 
-En-dessous de la liste des opérations, sur la même ligne que le formulaire de saisie, s'affichent à droite deux informations: la date du dernier relevé bancaire rapproché et le \indexword{solde pointé}\index{solde!pointé} correspondant à ce dernier rapprochement, à moins que vous ne pointiez très régulièrement vos opérations, auquel cas il correspond au solde tel que le connaît votre banque (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}).
+En-dessous de la liste des opérations, sur la même ligne que le formulaire de saisie, s'affichent à droite deux informations:
+\begin{itemize}
+	\item la date du dernier relevé bancaire rapproché,
+	\item le \indexword{solde pointé}\index{solde!pointé} correspondant à ce dernier rapprochement, à moins que vous ne pointiez très régulièrement vos opérations, auquel cas il correspond au solde tel que le connaît votre banque (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}).
+\end{itemize}
 
 
 \section{Sélection d'une opération \label{transactions-selection}}
-
 
 Pour sélectionner une opération, vous avez deux moyens:
 
@@ -283,38 +298,42 @@ Pour sélectionner une opération, vous avez deux moyens:
 	 \item déplacez la sélection avec les touches du clavier \keys{\arrowkeyup} et \keys{\arrowkeydown}.
 \end{itemize}
 
-L'opération apparaît alors sur fond rouge{couleur} et ses détails s'affichent dans le formulaire.
+L'opération apparaît alors sur \colorbox[RGB]{245,155,155}{fond rouge} et ses détails s'affichent dans le formulaire.
 
-% espace pour changement de thème
-\vspacepdf{5mm}
-Un menu contextuel est disponible sur la liste des opérations. Un clic-droit sur la ligne d'une opération permet les fonctions suivantes, selon le contexte:
-% espace avant image 5mm
-\vspacepdf{3mm}
+\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+%\centering							% centering the floating figure in the "wrap"
+\raggedleft
+\includegraphics[width=0.4\textwidth]{image/screenshot/transactions_contextMenu}
+\vspace{-10pt}						% space between the floating and the caption below the floating
+\captionsetup{%						% for a change of options of the caption package
+	format=plain,					% to avoid error message with labelsep option below, default=hang
+	name=Fig.,						% rename label caption, default="Figure" (or "Table")
+	justification=centering,		% centring of text and caption label 
+	labelsep=newline				% define the separator between the label and the caption text
+}
+\caption{Menu contextuel d'une opération}		% \caption is mandatory to reference a figure in lof
+\vspace{-10pt}						% space below the caption
+\label{transactions-contextMenu-img}
+\end{wrapfigure}
+
+Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, selon le contexte, les fonctions suivantes:
 
 \begin{itemize}
-	% image entourée par une liste (picins)
-	% Pas de référence à l'illustration car erreur de numéro de figure avec picins
-	%supprimé car en html les figures entourées ne sont pas numérotées, et la numérotation des figures centrées décalée par rapport au pdf
-	%\piccaption{Menu contextuel de la liste des opérations}
-	\begin{figure}[htbp]
-	\label{transactions-contextMenu-img}
-	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_contextMenu}
-	% image entourée par une liste (picins)
-	\end{figure}
-	 \item \menus{Afficher la contre-opération}\index{contre-opération!afficher}: ce choix est présent seulement si l'opération est un virement;
-	 \item \menus{Éditer l'opération};
-	 \item \menus{Nouvelle opération};
-	 \item \menus{Supprimer l'opération};
-	 \item \menus{Utiliser l'opération sélectionnée comme modèle};
-	 \item \menus{Cloner l'opération};
-	 \item \menus{Convertir l'opération en opération planifiée}: cela permet de créer facilement des échéances après coup;
-	 \item \menus{Déplacer l'opération vers un autre compte};
-	 \item \menus{Modifier le contenu de la cellule}.
+	\item \menus{Afficher la contre-opération}\index{contre-opération!afficher}: ce choix est présent seulement si l'opération est un virement;
+	\item \menus{Éditer l'opération};
+	\item \menus{Nouvelle opération};
+	\item \menus{Supprimer l'opération};
+	\item \menus{Utiliser l'opération sélectionnée comme modèle};
+	\item \menus{Cloner l'opération};
+	\item \menus{Convertir l'opération en opération planifiée}: cela permet de créer facilement des échéances après coup;
+	\item \menus{Déplacer l'opération vers un autre compte};
+	\item \menus{Rechercher};
+	\item \menus{Modifier le contenu de la cellule}.
 \end{itemize}
 
-
+%TODO following
 \section{Saisie d'une nouvelle opération\label{transactions-new}}
-
 
 La saisie d'une opération se fait dans le formulaire de saisie, situé en-dessous de la liste des opérations.
 
