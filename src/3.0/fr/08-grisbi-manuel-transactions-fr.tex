@@ -21,10 +21,10 @@ Les différents comptes que vous avez créés contiennent les opérations. Pour 
 Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste: l'onglet \menus{Opérations} s'affiche par défaut. Il possède quatre éléments principaux:
 
 \begin{enumerate}
-	 \item la barre d'outils;
-	 \item la liste des opérations;
-	 \item le formulaire de saisie des opérations;
-	 \item le \indexword{solde pointé}\index{solde!pointé}.
+	\item la barre d'outils;
+	\item la liste des opérations;
+	\item le formulaire de saisie des opérations;
+	\item le \indexword{solde pointé}\index{solde!pointé}.
 \end{enumerate}
 
 % espace avant Attention ou Note: 5 mm
@@ -38,13 +38,13 @@ Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste
 La barre d'outils est présente en haut du panneau des détails et présente les fonctions suivantes: 
 
 \begin{itemize}
-	 \item \menus{Nouvelle Opération}: va à la fin de la liste des opérations et ouvre le formulaire de saisie vierge;
-	 \item \menus{Supprimer}: supprime l'opération sélectionnée;
-	 \item \menus{Éditer}: ouvre le formulaire de saisie pour l'opération sélectionnée et permet de la modifier;
-	 \item \menus{Rapprocher}: ouvre la page de rapprochement du compte sélectionné (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire});
-	 \item \menus{Imprimer}: ouvre la fenêtre de sélection de l'imprimante et de ses options;
-	 \item \menus{Affichage}: ouvre un menu déroulant; vous pouvez choisir l'\indexword{affichage des opérations}\index{affichage!opérations} parmi quatre possibilités:
-	 	\begin{itemize} 
+	\item \menus{Nouvelle Opération}: va à la fin de la liste des opérations et ouvre le formulaire de saisie vierge;
+	\item \menus{Supprimer}: supprime l'opération sélectionnée;
+	\item \menus{Éditer}: ouvre le formulaire de saisie pour l'opération sélectionnée et permet de la modifier;
+	\item \menus{Rapprocher}: ouvre la page de rapprochement du compte sélectionné (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire});
+	\item \menus{Imprimer}: ouvre la fenêtre de sélection de l'imprimante et de ses options;
+	\item \menus{Affichage}: ouvre un menu déroulant; vous pouvez choisir l'\indexword{affichage des opérations}\index{affichage!opérations} parmi quatre possibilités:
+		\begin{itemize} 
 	 		\item \menus{Vue simple},
 	 		\item \menus{Mode \frquote{deux lignes}},
 	 		\item \menus{Mode \frquote{trois lignes}},
@@ -72,11 +72,11 @@ La liste des opérations s'affiche dans le panneau des détails\refimage{transac
 
 % image centrée 
 \begin{figure}[ht]
-\begin{center}
-\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_list}
-\end{center}
-\caption{Liste des opérations}
-\label{transactions-list-img}
+	\begin{center}
+	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_list}
+	\end{center}
+	\caption{Liste des opérations}
+	\label{transactions-list-img}
 \end{figure}
 % image centrée 
 
@@ -86,7 +86,7 @@ Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword
 Vous pouvez déplacer la liste des opérations vers le haut ou vers le bas avec la molette de la souris, ou bien avec la souris et l'ascenseur vertical. Le déplacement vers la gauche ou la droite se fait avec la souris et l'ascenseur horizontal.
 
 Vous pouvez choisir d'afficher ou non:
-	\begin{itemize}
+\begin{itemize}
 	\item les \indexword{opérations rapprochées}\index{affichage!opérations rapprochées} en sélectionnant:
 		\begin{itemize}
 			\item dans la barre de menu \menus{Affichage - Montrer les opérations rapprochées} (\keys{Alt+R}) (voir la section \vref{home-menus-display}),
@@ -97,7 +97,7 @@ Vous pouvez choisir d'afficher ou non:
 			\item dans la barre de menu \menus{Affichage - Montrer les lignes d'archives} (\keys{Alt+L}) (voir la section \vref{home-menus-display}),
 			\item dans la barre d'outils \menus{Affichage - Montrer les lignes d'archives} (section \vref{transactions-functions}).
 		\end{itemize}
-	\end{itemize}
+\end{itemize}
 
 
 % espace pour changement de thème
@@ -110,7 +110,7 @@ Vous pouvez aussi configurer le contenu de ces lignes, ainsi que la mémorisatio
 
 Le \indexword{libellé d'une colonne}\index{colonne!libellé} est toujours le nom du champ d'information affiché dans la première ligne des opérations.
 
-Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de fond \colorbox[RGB]{215,215,255}{violet} et blanc à chaque ligne.
+Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
 
 
 \subsection{Champs d'information et de saisie\label{transactions-list-fields}}
@@ -145,10 +145,10 @@ Grisbi sait gérer, pour chaque opération, une liste complète de champs d'info
 % espace pour changement de thème
 \vspacepdf{3mm}
 La liste des opérations et le formulaire de saisie utilisent chacun un sous-ensemble de ces champs. Vous pouvez voir les deux listes complètes dans les tableaux du menu \menus{Éditer - Préférences}:
-	\begin{itemize}
-		\item section \menus{Opérations - Cellules de la liste des opérations} (voir la section \vref{setup-operations-cells} \menus{Cellules de la liste des opérations});
-		\item section \menus{Formulaire des opérations - Contenu} (voir la section \vref{setup-form-content} \menus{Contenu}).
-	\end{itemize}
+\begin{itemize}
+	\item section \menus{Opérations - Cellules de la liste des opérations} (voir la section \vref{setup-operations-cells} \menus{Cellules de la liste des opérations});
+	\item section \menus{Formulaire des opérations - Contenu} (voir la section \vref{setup-form-content} \menus{Contenu}).
+\end{itemize}
 
 
 \subsection{Gestion des champs d'information\label{transactions-list-fields-manage}}
@@ -162,10 +162,10 @@ Vous pouvez soit faire ces manipulations dans le menu \menus{Éditer - Préfére
 Pour \indexword{ajouter un champ d'information}\index{champ d'information!ajouter} dans une cellule, procédez comme suit:
 
 \begin{enumerate}
-	 \item sélectionnez dans la barre d'outils \menus{Affichage - Vue complète} ou dans la barre de menu \menus{Affichage - Montrer quatre lignes par opération}, pour vous assurer de voir toutes les vingt-huit cellules;
-	 \item cliquez-droit dans une des cellules vides de la colonne où vous voulez ajouter ce champ: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
-	 \item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; vérifiez qu'il n'y a pas déjà de champ d'information dans cette cellule, en constatant qu'aucun champ de la liste déroulante n'a de coche à gauche de son nom;
-	 \item choisissez un champ d'information proposé dans la liste; ce champ s'ajoute dans la cellule choisie, et toutes les opérations de la liste l'affichent.
+	\item sélectionnez dans la barre d'outils \menus{Affichage - Vue complète} ou dans la barre de menu \menus{Affichage - Montrer quatre lignes par opération}, pour vous assurer de voir toutes les vingt-huit cellules;
+	\item cliquez-droit dans une des cellules vides de la colonne où vous voulez ajouter ce champ: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
+	\item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; vérifiez qu'il n'y a pas déjà de champ d'information dans cette cellule, en constatant qu'aucun champ de la liste déroulante n'a de coche à gauche de son nom;
+	\item choisissez un champ d'information proposé dans la liste; ce champ s'ajoute dans la cellule choisie, et toutes les opérations de la liste l'affichent.
 \end{enumerate}
 
 
@@ -174,10 +174,10 @@ Pour \indexword{ajouter un champ d'information}\index{champ d'information!ajoute
 Pour \indexword{modifier un champ d'information}\index{champ d'information!modifier} dans une cellule, procédez comme suit:
 
 \begin{enumerate}
-	 \item sélectionnez \menus{Affichage - Vue complète} dans la barre d'outils ou \menus{Affichage - Montrer quatre lignes par opération} dans la barre de menu, pour vous assurer de voir toutes les vingt-huit cellules;
-	 \item cliquez-droit dans une des cellules de la colonne dont vous voulez modifier le champ: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
-	 \item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; le champ d'information actuel dans cette cellule est indiqué par une coche à gauche de son nom;
-	 \item choisissez un autre champ d'information proposé dans la liste; ce champ remplace le précédent dans la cellule choisie, et toutes les opérations de la liste l'affichent.
+	\item sélectionnez \menus{Affichage - Vue complète} dans la barre d'outils ou \menus{Affichage - Montrer quatre lignes par opération} dans la barre de menu, pour vous assurer de voir toutes les vingt-huit cellules;
+	\item cliquez-droit dans une des cellules de la colonne dont vous voulez modifier le champ: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
+	\item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; le champ d'information actuel dans cette cellule est indiqué par une coche à gauche de son nom;
+	\item choisissez un autre champ d'information proposé dans la liste; ce champ remplace le précédent dans la cellule choisie, et toutes les opérations de la liste l'affichent.
 \end{enumerate}
 
 
@@ -186,10 +186,10 @@ Pour \indexword{modifier un champ d'information}\index{champ d'information!modif
 Pour \indexword{supprimer un champ d'information}\index{champ d'information!supprimer} dans une cellule, procédez comme suit:
 
 \begin{enumerate}
-	 \item sélectionnez \menus{Affichage - Vue complète} dans la barre d'outils ou \menus{Affichage - Montrer quatre lignes par opération} dans la barre de menu, pour vous assurer de voir toutes les vingt-huit cellules;
-	 \item cliquez-droit dans la cellule du champ à supprimer: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
-	 \item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; le champ d'information actuel dans cette cellule est indiqué par une coche à gauche de son nom;
-	 \item choisissez \menus{Effacer la cellule} dans la liste; le champ d'information actuel disparaît pour toutes les opérations de la liste (mais les informations ne sont en aucun cas supprimées de votre fichier de comptes).
+	\item sélectionnez \menus{Affichage - Vue complète} dans la barre d'outils ou \menus{Affichage - Montrer quatre lignes par opération} dans la barre de menu, pour vous assurer de voir toutes les vingt-huit cellules;
+	\item cliquez-droit dans la cellule du champ à supprimer: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
+	\item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; le champ d'information actuel dans cette cellule est indiqué par une coche à gauche de son nom;
+	\item choisissez \menus{Effacer la cellule} dans la liste; le champ d'information actuel disparaît pour toutes les opérations de la liste (mais les informations ne sont en aucun cas supprimées de votre fichier de comptes).
 \end{enumerate}
 
 \subsubsection{Déplacement d'un champ d'information\label{transactions-list-fields-move}}
@@ -202,14 +202,14 @@ Pour \indexword{déplacer un champ d'information}\index{champ d'information!dép
 Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexword{tri sur les opérations}\index{tri!opérations} sur un des champs d'information; procédez comme suit:
 
 \begin{enumerate}
-	 \item cliquez-droit sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri};
-	 \item un menu contextuel affiche la liste des champs de cette colonne; sélectionnez le champ choisi comme critère de tri;
-	 \item toutes les opérations s'affichent, triées selon le critère choisi;
-	 \item un petit triangle noir apparaît à droite ou à gauche du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
-% saut de ligne pour indentation correcte de la note dans la liste
+	\item cliquez-droit sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri};
+	\item un menu contextuel affiche la liste des champs de cette colonne; sélectionnez le champ choisi comme critère de tri;
+	\item toutes les opérations s'affichent, triées selon le critère choisi;
+	\item un petit triangle noir apparaît à droite ou à gauche du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
 
-	 \textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-	 \item cliquez sur ce triangle pour changer l'ordre du tri.
+% saut de ligne pour indentation correcte de la note dans la liste
+	\textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+	\item cliquez sur ce triangle pour changer l'ordre du tri.
 \end{enumerate}
 
 \textbf{Note}: un tri sur l'affichage réalisé ainsi n'affecte en aucun cas le solde à chaque ligne, qui est calculé après chaque opération; suivant le tri et les options d'affichage que vous avez choisi, le solde à chaque ligne peut présenter une évolution non chronologique. 
@@ -229,11 +229,11 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 
 % image centrée 
 \begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_form}
-\end{center}
-\caption{Formulaire de saisie des opérations personnalisé}
-\label{transactions-form-img}
+	\begin{center}
+	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_form}
+	\end{center}
+	\caption{Formulaire de saisie des opérations personnalisé}
+	\label{transactions-form-img}
 \end{figure}
 % image centrée 
 
@@ -264,13 +264,13 @@ Pour connaître l'ensemble des champs que peut gérer Grisbi, voir la section \v
 Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit dans un champ de saisie permet d'effectuer les actions suivantes:
 
 \begin{itemize}
-	 \item \menus{Couper} (la sélection);
-	 \item \menus{Copier} (la sélection);
-	 \item \menus{Coller} (la sélection);
-	 \item \menus{Supprimer} (la sélection);
-	 \item[]\hspace{-12pt} puis
-	 \item \menus{Tout sélectionner} (dans le champ de saisie);
-	 \item \menus{Insérer un émoji}\index{émoji}.
+	\item \menus{Couper} (la sélection);
+	\item \menus{Copier} (la sélection);
+	\item \menus{Coller} (la sélection);
+	\item \menus{Supprimer} (la sélection);
+	\item[]\hspace{-12pt} puis
+	\item \menus{Tout sélectionner} (dans le champ de saisie);
+	\item \menus{Insérer un émoji}\index{émoji}.
 \end{itemize}
 
 %espace pour changement de thème
@@ -298,28 +298,14 @@ Pour sélectionner une opération, vous avez deux moyens:
 	 \item déplacez la sélection avec les touches du clavier \keys{\arrowkeyup} et \keys{\arrowkeydown}.
 \end{itemize}
 
-L'opération apparaît alors sur \colorbox[RGB]{245,155,155}{fond rouge} et ses détails s'affichent dans le formulaire.
-
-\begin{wrapfigure}{R}{0.4\textwidth}%50mm
-%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
-%\centering							% centering the floating figure in the "wrap"
-\raggedleft
-\includegraphics[width=0.4\textwidth]{image/screenshot/transactions_contextMenu}
-\vspace{-10pt}						% space between the floating and the caption below the floating
-\captionsetup{%						% for a change of options of the caption package
-	format=plain,					% to avoid error message with labelsep option below, default=hang
-	name=Fig.,						% rename label caption, default="Figure" (or "Table")
-	justification=centering,		% centring of text and caption label 
-	labelsep=newline				% define the separator between the label and the caption text
-}
-\caption{Menu contextuel d'une opération}		% \caption is mandatory to reference a figure in lof
-\vspace{-10pt}						% space below the caption
-\label{transactions-contextMenu-img}
-\end{wrapfigure}
+L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
 
 Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, selon le contexte, les fonctions suivantes:
 
-\begin{itemize}
+\vspace{3mm}
+\noindent
+\begin{minipage}{.65\linewidth}
+\begin{itemize}[rightmargin=.6cm]
 	\item \menus{Afficher la contre-opération}\index{contre-opération!afficher}: ce choix est présent seulement si l'opération est un virement;
 	\item \menus{Éditer l'opération};
 	\item \menus{Nouvelle opération};
@@ -328,11 +314,32 @@ Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, sel
 	\item \menus{Cloner l'opération};
 	\item \menus{Convertir l'opération en opération planifiée}: cela permet de créer facilement des échéances après coup;
 	\item \menus{Déplacer l'opération vers un autre compte};
-	\item \menus{Rechercher};
+	\item \menus{Rechercher} (voir le chapitre \vref{search});
 	\item \menus{Modifier le contenu de la cellule}.
 \end{itemize}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{.35\linewidth}
+%\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+	\vspace{-25pt}
+	\centering							% centering the floating figure in the "wrap"
+%\raggedleft
+	\includegraphics[width=1\textwidth]{image/screenshot/transactions_contextMenu}
+	\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{%						% for a change of options of the caption package
+	format=plain,					% to avoid error message with labelsep option below, default=hang
+	type=figure,%
+	name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+	justification=centering,		% centring of text and caption label 
+	labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Menu contextuel d'une opération}		% \caption is mandatory to reference a figure in lof
+	\vspace{-10pt}						% space below the caption
+	\label{transactions-contextMenu-img}
+%\end{wrapfigure}
+\end{minipage}
 
-%TODO following
+
 \section{Saisie d'une nouvelle opération\label{transactions-new}}
 
 La saisie d'une opération se fait dans le formulaire de saisie, situé en-dessous de la liste des opérations.
@@ -340,33 +347,33 @@ La saisie d'une opération se fait dans le formulaire de saisie, situé en-desso
 Pour saisir une nouvelle opération, ouvrez ou affichez le formulaire de saisie avec l'une de ces méthodes:
 
 \begin{itemize}
-	 \item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
-	 \item appuyez sur la combinaison de touches \keys{Ctrl+T};
-	 \item double-cliquez sur la ligne vide;
-	 \item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération};
-	 \item dans la barre de menu, sélectionnez \menus{Montrer le formulaire de saisie d'opérations};
-	 \item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
-	 \item dans le menu contextuel, sélectionnez \menus{Nouvelle opération};
-	 \item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
-% saut de ligne pour indentation correcte de la note dans la liste
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération} si un compte est sélectionné;
+	\item dans la barre de menu, sélectionnez \menus{Affichage - Montrer le formulaire de saisie des opérations};
+	\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
+	\item double-cliquez sur la ligne vide;
+	\item appuyez sur la combinaison de touches \keys{Ctrl+T};
+	\item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
+	\item dans le menu contextuel, sélectionnez \menus{Nouvelle opération};
+	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
 
-	 \textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+% saut de ligne pour indentation correcte de la note dans la liste
+	\textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
 % espace après Attention ou Note: 5 mm
-\vspacepdf{5mm}
-La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur fond rouge{couleur}, le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, sur fond bleu{couleur}.
+\vspacepdf{3mm}
+La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur {\fboxsep=3pt\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée,  {\fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{en blanc sur fond bleu}}}}.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Saisissez les différentes informations concernant votre opération dans les différents champs du formulaire. Certains champs peuvent être renseignés soit avec le clavier, soit avec une liste déroulante. Si vous utilisez le clavier, cette saisie sera automatiquement enregistrée dans la liste déroulante de ce champ. Si vous le voulez, vous pourrez toujours supprimer plus tard ce choix dans la liste: reportez-vous aux différents chapitres traitant de ces listes (\menus{Tiers}, \menus{Catégories}, \menus{Imputations budgétaires} et les différents onglets de la section \menus{Ressources} du menu \menus{Éditer - Préférences}.
 
-Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon l'arrière-plan du champ deviendra rouge{couleur}. 
+Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}. 
 
-Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, en rouge{couleur}, passe à la dernière ligne vide de la liste.
+Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur {\fboxsep=3pt\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Les sous-sections suivantes donnent les différentes méthodes de saisie disponibles.
 
 
@@ -379,35 +386,35 @@ La touche \keys{Entrée \return} permet soit de se déplacer dans le formulaire 
 La touche \keys{Échap} permet d'annuler la saisie en cours.
 
 
-\subsection{Saisie de date au clavier\label{transactions-new-dates}}
+\subsection{Saisie de la date au clavier\label{transactions-new-dates}}
 
 La date du jour ou la dernière date entrée s'affiche automatiquement à l'ouverture du formulaire.
 
 %espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Vous pouvez saisir la date avec l'un de ces formats:
 
 \begin{itemize}
-	 \item jj/mm/aa (avec délimiteur);
-	 \item jjmmaa ou jjmm (sans délimiteur); dans ce cas, vous devrez bien utiliser deux chiffres pour les jour, mois et année;
-	 \item j/m/a si le jour, le mois ou l'année ne comportent qu'un seul chiffre (par ex.: 1/1/1 pour le premier janvier 2001).
+	\item jj/mm/aa (avec délimiteur entre le jour, mois et année);
+	\item jjmmaa ou jjmm (sans délimiteur); dans ce cas, vous devrez bien utiliser deux chiffres pour les jour, mois et année;
+	\item j/m/a si le jour, le mois ou l'année ne comportent qu'un seul chiffre (par ex.: 1/1/1 pour le premier janvier 2001).
 \end{itemize}
 
 De plus, il n'est pas nécessaire de saisir l'année si celle-ci est identique à l'année en cours, ni le mois si celui-ci est le mois en cours, car Grisbi complétera automatiquement.
 
 %espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Enfin, vous pouvez incrémenter ou décrémenter la date affichée:
 
 \begin{itemize}
-	 \item par jour avec les touches \keys{{+}} ou \keys{{-}};
-	 \item par semaine avec les touches \keys{Maj \shift+{+}}ou \keys{Maj \shift+{-}};
-	 \item par mois avec les touches\keys{Pg.Préc} ou \keys{Pg.Suiv};
-	 \item par année avec les combinaisons de touches \keys{Maj \shift+Pg.Préc} ou \keys{Maj \shift+Pg.Suiv}.
+	\item par jour avec les touches \keys{{+}} ou \keys{{-}};
+	\item par semaine avec les touches \keys{Maj \shift+{+}}ou \keys{Maj \shift+{-}};
+	\item par mois avec les touches\keys{Pg.Préc} ou \keys{Pg.Suiv};
+	\item par année avec les combinaisons de touches \keys{Maj \shift+Pg.Préc} ou \keys{Maj \shift+Pg.Suiv}.
 \end{itemize}
 
 
-\subsection{Saisie de date au calendrier\label{transactions-new-calendar}}
+\subsection{Saisie de la date au calendrier\label{transactions-new-calendar}}
 
 Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \return}, affiche un calendrier permettant de sélectionner la date.
 
@@ -416,40 +423,62 @@ Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \ret
 Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
 % espace avant image 5mm
 \vspacepdf{3mm}
-\begin{itemize}
-	% image entourée par une liste ( picins)
-	% Pas de référence à l'illustration car erreur de numéro de figure avec picins.
-	% supprimé car en html les figures entourées ne sont pas numérotées, et la numérotation des figures centrées décalée par rapport au pdf
-	%\piccaption{Calendrier de sélection de date}
-	\begin{figure}[htbp]
+
+\noindent
+\begin{minipage}{.65\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item les touches \keys{{+}} ou \keys{{-}}, de même que \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
+		\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
+		\item les touches \keys{Pg.préc} ou \keys{Pg.Suiv} permettent de passer au mois précédent ou suivant;
+		\item les touches \keys{Début} ou \keys{Fin} permettent de passer au premier jour ou au dernier jour du mois.
+		\item un clic sur le bouton \menus{Annuler} ou l'appui sur la touche \keys{Échap} ferme le calendrier sans modifier la date;
+		\item un double-clic ou l'appui sur la touche \keys{Entrée \return} valide la date sélectionnée.
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{.35\linewidth}
+	%\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+	%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+	\vspace{-5pt}
+	\centering							% centering the floating figure in the "wrap"
+	%\raggedleft
+	\includegraphics[width=1\textwidth]{image/screenshot/transactions_calendar}
+	\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{%						% for a change of options of the caption package
+		format=plain,					% to avoid error message with labelsep option below, default=hang
+		type=figure,%
+		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+		justification=centering,		% centring of text and caption label 
+		labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Calendrier}		% \caption is mandatory to reference a figure in lof
+	\vspace{-10pt}						% space below the caption
 	\label{transactions-calendar-img}
-	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_calendar}
-	% image entourée par une liste ( picins)
-	\end{figure}
-	\item les touches \keys{{+}} ou \keys{{-}}, de même que \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
-	\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
-	\item les touches \keys{Pg.préc} ou \keys{Pg.Suiv} permettent de passer au mois précédent ou suivant;
-	\item les touches \keys{Début} ou \keys{Fin} permettent de passer au premier jour ou au dernier jour du mois.
-	\item un clic sur le bouton \menus{Annuler} ou l'appui sur la touche \keys{Échap} ferme le calendrier sans modifier la date;
-	\item un double-clic ou l'appui sur la touche \keys{Entrée \return} valide la date sélectionnée.
-\end{itemize}
+	%\end{wrapfigure}
+\end{minipage}
 
-
+21/02/2026
 \subsection{Listes déroulantes\label{transactions-new-lists}}
 
 Certains champs disposent d'une liste déroulante de choix déjà définis. Vous pouvez y sélectionner un libellé avec la souris, ou préférer saisir les données au clavier dans le champ de saisie.
 
-L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur le petit triangle à droite du champ, ou avec les touches du clavier \keys{Pg.Suiv} ou \keys{\arrowkeydown}, le déplacement dans cette liste peut se faire avec la souris, ou avec les touches \keys{Pg.Préc}, \keys{Pg.Suiv}, \keys{\arrowkeyup} ou \keys{\arrowkeydown}, et la validation d'un choix à l'intérieur d'une liste déroulante se fait avec la touche \keys{Entrée \return}.
+L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur le petit triangle à droite du champ, ou avec les touches du clavier \keys{Pg.Suiv} ou \keys{\arrowkeydown}, le déplacement dans cette liste peut se faire avec:
+\begin{itemize}
+	\item la souris,
+	\item la molette de la souris,
+	\item les touches \keys{Pg.Préc}, \keys{Pg.Suiv}, \keys{\arrowkeyup} ou \keys{\arrowkeydown},
+\end{itemize}
+	et la validation d'un choix à l'intérieur d'une liste déroulante se fait avec la touche \keys{Entrée \return}.
 
+\vspacepdf{3mm}
 \textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 %espace pour changement de thème
-\vspacepdf{5mm}
-Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complètement}\index{champ de saisie!auto-complètement} apparaît sur fond bleu{couleur}. Pour accepter celui proposé, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
+\vspacepdf{3mm}
+Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complètement}\index{champ de saisie!auto-complètement} sélectionné apparaît sur {\fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
 
-Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace}; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}.
+Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
 
-
+%TODO following
 \subsection{Saisie de formules\label{transactions-new-numbers}}
 
 Dans le formulaire de saisie, vous pouvez saisir les nombres, avec ou sans décimales, dans les champs tels que \menus{Débit} et \menus{Crédit}, à l'aide du clavier.
