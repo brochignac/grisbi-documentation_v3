@@ -344,19 +344,28 @@ Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, sel
 
 La saisie d'une opération se fait dans le formulaire de saisie, situé en-dessous de la liste des opérations.
 
-Pour saisir une nouvelle opération, ouvrez ou affichez le formulaire de saisie avec l'une de ces méthodes:
+Pour ouvrir ou affichez le formulaire de saisie, utilisez une des méthodes suivantes:
 
 \begin{itemize}
 	\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération} si un compte est sélectionné;
-	\item dans la barre de menu, sélectionnez \menus{Affichage - Montrer le formulaire de saisie des opérations};
+	\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
 	\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
-	\item double-cliquez sur la ligne vide;
+	\item double-cliquez sur la ligne vide en bas de la liste des opérations;
 	\item appuyez sur la combinaison de touches \keys{Ctrl+T};
 	\item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
 	\item dans le menu contextuel, sélectionnez \menus{Nouvelle opération};
 	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
 
 % saut de ligne pour indentation correcte de la note dans la liste
+	\textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\end{itemize}
+
+Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
+
+\begin{itemize}
+	\item dans la barre de menu, sélectionnez \menus{Affichage} et décochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
 	\textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
@@ -463,7 +472,7 @@ Certains champs disposent d'une liste déroulante de choix déjà définis. Vous
 
 L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur le petit triangle à droite du champ, ou avec les touches du clavier \keys{Pg.Suiv} ou \keys{\arrowkeydown}, le déplacement dans cette liste peut se faire avec:
 \begin{itemize}
-	\item la souris,
+	\item la souris et l'ascenseur à droite de la liste,
 	\item la molette de la souris,
 	\item les touches \keys{Pg.Préc}, \keys{Pg.Suiv}, \keys{\arrowkeyup} ou \keys{\arrowkeydown},
 \end{itemize}
@@ -478,14 +487,16 @@ Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en a
 
 Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
 
-%TODO following
+
 \subsection{Saisie de formules\label{transactions-new-numbers}}
 
 Dans le formulaire de saisie, vous pouvez saisir les nombres, avec ou sans décimales, dans les champs tels que \menus{Débit} et \menus{Crédit}, à l'aide du clavier.
 
 Vous pouvez aussi y saisir des \indexword{formules arithmétiques}\index{champ de saisie!formule arithmétique}\index{formule arithmétique!champ de saisie} simples, à l'aide des quatre opérateurs d'addition, soustraction, multiplication et division. Cela remplace la \indexword{calculatrice}\index{calculatrice} sur votre bureau.
+%TODO following
+Pour saisir une formule arithmétique, saisissez-la comme si c'était un texte, par exemple \frquote{3,40-2,10} , puis continuez normalement la saisie des autres champs de votre opération; si elle est mal écrite, elle s'affiche en \textcolor{red}{rouge}. Lorsque vous cliquez sur le bouton \menus{Valider} et pour une nouvelle opération, le résultat \frquote{1,30} s'affiche dans la liste des opérations, sinon le résultat s'affiche, en plus, dans le champ de saisie. Et si la formule est toujours mal écrite, le message \frquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}} s'affiche à la place et vous ne pourrez pas valider l'opération financière.
 
-Pour saisir une formule, saisissez-la comme si c'était un texte, par exemple \frquote{3,40-2,10} , puis continuez normalement la saisie des autres champs de votre opération; si elle est mal écrite, elle s'affiche sur fond rouge{couleur}. Lorsque vous la validez, le résultat \frquote{1,30} s'affiche dans le champ de saisie, et si la formule est toujours mal écrite, le message \frquote{\#\#\#ERR\#\#\#} s'affiche à la place et sur fond rouge{couleur}.
+Cette calculatrice accepte le mélange des points et des virgules comme séparateur décimal, par exemple \frquote{1.2+2,3}, et Grisbi effectuera le calcul.  
 
 Cette calculatrice accepte la multiplication ou la division, mais de manière exclusive de l'addition ou de la soustraction; c'est-à-dire qu'on peut mélanger additions et soustractions dans une saisie mais pas une multiplication (ou une division) et un quelconque autre opérateur: on ne peut pas mettre de parenthèses pour indiquer un ordre de priorité d'opération.
 
@@ -508,7 +519,7 @@ Si vous recevez beaucoup de chèques (par exemple parce que vous gérez une asso
 \end{itemize} 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Si aucune de ces méthodes ne vous convient, une meilleure solution consiste à utiliser un \emph{compte d'attente}. Pour cela, la méthode est explicitée en détails au paragraphe \vref{accounts-type-bank-waiting-remittance}, \menus{Remise de chèques ou d'espèces}. 
 
 
@@ -537,14 +548,15 @@ Les \indexword{virements internes}\index{virement!interne} sont des transferts e
 
 Par contre, si vous n'utilisez aucun de ces comptes et que votre fichier de comptes contient uniquement un compte courant et un compte d'épargne, alors les virements internes correspondent à des virements d'un compte vers l'autre. Ce seront bien des opérations de type \menus{Virement}, et vous les enregistrerez dans la catégorie \menus{Virement: Compte d'épargne} ou \menus{Virement: Compte courant}, selon le cas. 
 
-Vous pouvez réaliser des virements entre comptes en sélectionnant la catégorie \emph{Virement: le\_compte\_ à\_virer}. Selon que vous saisissez son montant en \menus{Débit} ou en \menus{Crédit}, ce sera un virement \emph{vers le compte} ou un virement \emph{à partir du compte}. Il est bien sûr nécessaire que les deux comptes se trouvent dans le même fichier de comptes.
+Vous pouvez réaliser des virements entre comptes en sélectionnant la catégorie \emph{Virement: le\_compte\_ à\_virer}. Selon que vous saisissez son montant en \menus{Débit} ou en \menus{Crédit}, ce sera un virement \emph{vers le compte} ou un virement \emph{à partir du compte}. Il est bien sûr nécessaire que les deux comptes se trouvent dans le même fichier crée par Grisbi.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si vous faites un virement d'un compte en euros vers un compte en yens, dans le compte en yens le virement apparaîtra en yens dans le champ \menus{Crédit}, et son solde en yens sera correct, et dans le compte en euros le débit apparaîtra en yens dans le champ \menus{Débit} et en euros dans le champ \menus{Montant}.
+\vspacepdf{3mm}
+Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si vous faites une opération de virement dans votre compte en yens à partir d'un compte en euros, dans le compte en yens le virement apparaîtra en yens dans le champ \menus{Crédit}, et son solde en yens sera correct, et dans le compte en euros le débit apparaîtra en yens dans le champ \menus{Débit} et en euros dans le champ \menus{Montant}.
 
 \textbf{Note}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations et ajuster le nombre de lignes affichées dans la liste des opérations (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}).
 
+\textbf{Note}: si vous affichez une opération existante dans le formulaire de saisie, vous devrait configurer le contenu du formulaire de saisie en y ajoutant le champ \menus{Devise} pour visualiser la devise associée à l'opération en débit ou en crédit (voir la section \vref{setup-form-content}, \menus{Contenu}).
 
 \subsubsection{Contre-opération d'un virement\label{transactions-new-transfer-associatedOperation}}
 
@@ -553,8 +565,8 @@ Lorsque vous saisissez une opération de type virement interne, d'un compte vers
 S'il s'agit d'un virement en devises, il créera aussi la contre-opération dans la devise du compte de destination de façon automatique si le taux de change de la devise est fixe, sinon il vous le demandera avant de passer l'écriture. 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher} d'un virement, cliquez-droit sur sa ligne dans un des deux comptes, et dans le menu contextuel, sélectionnez \menus{Afficher la contre-opération}: l'autre compte s'affiche et l'opération est sélectionnée (sur fond rouge{couleur}). Si vous refaites exactement la même manipulation dans ce même compte, le compte d'origine et son virement se ré-affichent.
+\vspacepdf{3mm}
+Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher} d'un virement, cliquez-droit sur sa ligne dans un des deux comptes, et dans le menu contextuel, sélectionnez \menus{Afficher la contre-opération}: l'autre compte s'affiche et l'opération est sélectionnée (sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}). Si vous refaites exactement la même manipulation dans ce même compte, le compte d'origine et son virement se ré-affichent.
 
 
 \subsection{Avances: consentement et réception\label{transactions-new-advance}}
@@ -562,13 +574,16 @@ Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher}
 Vous pouvez être amené à \indexword{consentir ou recevoir une avance}\index{avance!consentement}\index{avance!réception} de fonds: il peut s'agir, par exemple, d'une avance sur votre salaire ou d'un achat que vous faites pour le compte d'un de vos amis. 
 
 %espace pour changement de thème
-\vspacepdf{5mm}
-Vous pouvez gérer cela de deux manières: la plus simple est de créer une catégorie dédiée, et d'y affecter les opérations de débit et de crédit; quand toutes les avances sont remboursées, le solde de cette catégorie, affiché dans la liste des catégories, doit être égal à zéro (voir la section \vref{categories-list}, \menus{Liste des catégories et des sous-catégories}). Une manière plus intéressante est de créer un compte d'avances, qui permet une vision plus immédiate de l'état des avances en cours: elle est décrite en détails dans le paragraphe \vref{accounts-type-bank-advance}, \menus{Compte d'avances}.
-
+\vspacepdf{3mm}
+Vous pouvez gérer cela de deux manières:
+\begin{itemize}
+	\item la plus simple est de créer une catégorie dédiée, et d'y affecter les opérations de débit et de crédit; quand toutes les avances sont remboursées, le solde de cette catégorie, affiché dans la liste des catégories, doit être égal à zéro (voir la section \vref{categories-list}, \menus{Liste des catégories et des sous-catégories}); 
+	\item une manière plus intéressante est de créer un compte d'avances, qui permet une vision plus immédiate de l'état des avances en cours: elle est décrite en détails dans le paragraphe \vref{accounts-type-bank-advance}, \menus{Compte d'avances}.
+\end{itemize}
 
 \subsection{Rappel automatique d'une opération\label{transactions-new-recall}}
 
-Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier de comptes: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération. 
+Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération, si vous avez activé l'option de \menus{Remplissage automatique des opérations} dans les préférences, vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération. 
 
 Vous pouvez ajuster finement ce comportement dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form-input}, \menus{Aide à la saisie du formulaire}).
 
@@ -576,14 +591,14 @@ Vous pouvez ajuster finement ce comportement dans le menu \menus{Éditer - Préf
 \vspacepdf{5mm}
 \Note{}: si vous ne modifiez aucun champ et que vous validez l'opération, vous obtiendrez une opération purement et simplement dupliquée, mais qui portera la date du jour courant.
 
-
+%TODO following
 \section{Saisie d'une opération en devises\label{transactions-currencies}}
 
 
 Grisbi peut gérer des opérations saisies avec une \indexword{devise différente}\index{devise!différente} de celle du compte, avec ou sans frais de change.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Pour utiliser une devise différente, vous devez d'abord procéder aux configurations suivantes:
 \begin{enumerate}
 	 \item créez la devise, si elle ne l'est pas déjà, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-resources-currencies}, \menus{Devises});
@@ -596,8 +611,8 @@ Pour utiliser une devise différente, vous devez d'abord procéder aux configura
 \end{enumerate}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Lors de la saisie de l'\indexword{opération en devise}\index{opération!en devise}\index{devise!opération} dans le formulaire de saisie, choisissez dans la liste déroulante la devise dans laquelle l'opération doit être enregistrée. Plusieurs questions peuvent se poser\refimage{transactions-changeRate-img}:
+\vspacepdf{3mm}
+Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}\index{devise!opération} dans le formulaire de saisie, choisissez dans la liste déroulante la devise dans laquelle l'opération doit être enregistrée. Plusieurs questions peuvent se poser\refimage{transactions-changeRate-img}:
 
 % image centrée 
 \begin{figure}[htbp]
