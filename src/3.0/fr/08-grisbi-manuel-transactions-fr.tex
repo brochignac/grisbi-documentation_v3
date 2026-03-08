@@ -34,7 +34,6 @@ Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste
 
 \section{Barre d'outils\label{transactions-functions}}
 
-
 La barre d'outils est présente en haut du panneau des détails et présente les fonctions suivantes: 
 
 \begin{itemize}
@@ -62,6 +61,7 @@ Les options du menu \menus{Affichage} influent par défaut sur l'affichage de to
 %Obsolete
 %La \indexword{barre d'outils}\index{barre d'outils!déplacement} peut être déplacée dans l'écran en cliquant sur sa poignée (petit rectangle vertical à gauche de la barre) et en la déplaçant. Pour la ré-attacher à son emplacement d'origine dans le pavé des détails, la remettre en haut de la fenêtre, le haut de la poignée sur le petit trait qui visualise sa place d'origine.
 %Obsolete
+
 
 \section{Liste des opérations\label{transactions-list}}
 
@@ -192,6 +192,7 @@ Pour \indexword{supprimer un champ d'information}\index{champ d'information!supp
 	\item choisissez \menus{Effacer la cellule} dans la liste; le champ d'information actuel disparaît pour toutes les opérations de la liste (mais les informations ne sont en aucun cas supprimées de votre fichier de comptes).
 \end{enumerate}
 
+
 \subsubsection{Déplacement d'un champ d'information\label{transactions-list-fields-move}}
 
 Pour \indexword{déplacer un champ d'information}\index{champ d'information!déplacer}, vous pouvez le supprimer puis l'ajouter dans un autre champ vide, mais vous pouvez aussi le faire dans le menu \menus{Éditer - Préférences - Opérations - Cellules de la liste des opérations} (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}).
@@ -223,7 +224,6 @@ Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Édi
 
 
 \section{Formulaire de saisie\label{transactions-form}}
-
 
 Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher ou de masquer}\index{formulaire de saisie!masquer-afficher} ce formulaire\refimage{transactions-form-img}.
 
@@ -280,7 +280,6 @@ Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit
 
 
 \section{Solde pointé\label{transactions-balance}}
-
 
 En-dessous de la liste des opérations, sur la même ligne que le formulaire de saisie, s'affichent à droite deux informations:
 \begin{itemize}
@@ -371,7 +370,7 @@ Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
 
 % espace après Attention ou Note: 5 mm
 \vspacepdf{3mm}
-La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur {\fboxsep=3pt\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée,  {\fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{en blanc sur fond bleu}}}}.
+La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
@@ -379,7 +378,7 @@ Saisissez les différentes informations concernant votre opération dans les dif
 
 Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}. 
 
-Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur {\fboxsep=3pt\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
+Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
@@ -465,7 +464,7 @@ Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
 	%\end{wrapfigure}
 \end{minipage}
 
-21/02/2026
+
 \subsection{Listes déroulantes\label{transactions-new-lists}}
 
 Certains champs disposent d'une liste déroulante de choix déjà définis. Vous pouvez y sélectionner un libellé avec la souris, ou préférer saisir les données au clavier dans le champ de saisie.
@@ -483,7 +482,7 @@ L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complètement}\index{champ de saisie!auto-complètement} sélectionné apparaît sur {\fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
+Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complètement}\index{champ de saisie!auto-complètement} sélectionné apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
 
 Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
 
@@ -525,8 +524,8 @@ Si aucune de ces méthodes ne vous convient, une meilleure solution consiste à 
 
 \subsection{Virements\label{transactions-new-transfer}}
 
-
 Le terme \indexword{virement}\index{opération!virement} recouvre deux notions différentes: les virements externes et les virements internes. Voici dans chaque cas les méthodes de saisie conseillées.
+
 
 \subsubsection{Virements externes\label{transactions-new-transfer-external}}
 
@@ -558,6 +557,7 @@ Si vous faites un \indexword{virement entre deux comptes de devises différentes
 
 \textbf{Note}: si vous affichez une opération existante dans le formulaire de saisie, vous devrait configurer le contenu du formulaire de saisie en y ajoutant le champ \menus{Devise} pour visualiser la devise associée à l'opération en débit ou en crédit (voir la section \vref{setup-form-content}, \menus{Contenu}).
 
+
 \subsubsection{Contre-opération d'un virement\label{transactions-new-transfer-associatedOperation}}
 
 Lorsque vous saisissez une opération de type virement interne, d'un compte vers un autre, ou sur un compte à partir d'un autre, Grisbi crée automatiquement la \indexword{contre-opération}\index{contre-opération}\index{opération!contre-opération}\index{virement!contre-opération} dans l'autre compte, c'est-à-dire le virement correspondant dans le compte destinataire ou dans le compte origine.
@@ -581,6 +581,7 @@ Vous pouvez gérer cela de deux manières:
 	\item une manière plus intéressante est de créer un compte d'avances, qui permet une vision plus immédiate de l'état des avances en cours: elle est décrite en détails dans le paragraphe \vref{accounts-type-bank-advance}, \menus{Compte d'avances}.
 \end{itemize}
 
+
 \subsection{Rappel automatique d'une opération\label{transactions-new-recall}}
 
 Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération, si vous avez activé l'option de \menus{Remplissage automatique des opérations} dans les préférences, vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération. 
@@ -593,7 +594,6 @@ Vous pouvez ajuster finement ce comportement dans le menu \menus{Éditer - Préf
 
 %TODO following
 \section{Saisie d'une opération en devises\label{transactions-currencies}}
-
 
 Grisbi peut gérer des opérations saisies avec une \indexword{devise différente}\index{devise!différente} de celle du compte, avec ou sans frais de change.
 
@@ -637,7 +637,6 @@ Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}
 
 \section{Saisie d'une opération avec tiers virtuel\label{transactions-virtualThird}}
 
-
 Grisbi vous permet d'utiliser des tiers virtuels: un tiers virtuel est un \emph{état} qui représente une liste de plusieurs tiers.
 
 Lorsque vous saisissez une opération avec pour tiers un tiers virtuel, Grisbi enregistre, au moment de sa validation, une opération identique (montant, catégorie, imputation budgétaire, moyen de paiement etc.) pour \emph{chacun} des tiers représentés par ce tiers virtuel. Par exemple, vous pouvez saisir en une seule fois un appel à cotisation pour 200 adhérents d'une association, ce qui représente un gain de temps très appréciable\ldots
@@ -665,7 +664,6 @@ Pour supprimer un tiers virtuel, vous avez deux possibilités:
 
 
 \section{Ventilation d'une opération\label{transactions-breakdown}}
-
 
 \indexword{Ventiler une opération}\index{ventiler!opération} signifie répartir son montant entre plusieurs lignes (par exemple, vos achats au supermarché peuvent se répartir entre les catégories \emph{Alimentation} et \emph{Soins: Habillement}). Vous pouvez aussi répartir une somme sur la même catégorie, mais avec des informations différentes dans le champ \menus{Remarques} (par exemple pour mémoriser le détail d'une opération).
 
@@ -791,7 +789,6 @@ Cependant, pour une opération ventilée, un champ supplémentaire \menus{Restau
 
 \section{Modification d'une opération\label{transactions-modify}}
 
-
 Pour modifier une opération ou une sous-opération ventilée, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis passez en mode édition par l'une de ces méthodes:
 
 \begin{itemize}
@@ -824,7 +821,6 @@ Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliatio
 
 \section{Suppression d'une opération\label{transactions-delete}}
 
-
 Pour supprimer une opération, sélectionnez-la, et utilisez l'une de ces
 méthodes:
 \begin{itemize}
@@ -855,7 +851,6 @@ La suppression n'est pas possible si:
 
 \section{Opération sélectionnée comme modèle\label{transactions-model}}
 
-
 Pour utiliser une \indexword{opération comme modèle}\index{opération!modèle}, sélectionnez-la, et utilisez l'une de ces méthodes:
 \begin{itemize}
 	 \item dans la barre de menu, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle};
@@ -870,7 +865,6 @@ Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant sa
 
 
 \section{Clonage d'une opération\label{transactions-duplicate}}
-
 
 Pour cloner une opération, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis utilisez l'une de ces deux méthodes:
 
@@ -888,7 +882,6 @@ Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant la
 
 \section{Conversion d'une opération en opération planifiée\label{transactions-schedule}}
 
-
 Pour convertir une opération en opération planifiée, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis utilisez l'une de ces deux méthodes:
 \begin{itemize}
 	 \item dans la barre de menu, sélectionnez \menus{Éditer - Convertir en opération planifiée};
@@ -901,7 +894,6 @@ L'onglet \menus{Échéancier} s'affiche. La nouvelle opération apparaît dans l
 
 
 \section{Déplacement d'une opération vers un autre compte\label{transactions-move}}
-
 
 Pour déplacer une opération dans un autre compte, sélectionnez-la, puis utilisez l'une de ces deux méthodes:
 
@@ -919,7 +911,6 @@ Il est bien entendu que les deux comptes doivent se trouver dans le même fichie
 
 \section{Nouveau tiers, catégorie ou imputation budgétaire\label{transactions-fillcombo}}
 
-
 Il peut arriver que vous ayez besoin d'un nouveau tiers, d'une nouvelle catégorie ou d'une nouvelle imputation budgétaire pendant une saisie d'opération. Dans ce cas, Grisbi permet d'en faire la création \frquote{à la volée}: saisissez le nouveau nom dans la zone de liste déroulante, et Grisbi l'ajoutera automatiquement à la liste. Vous pourrez ultérieurement faire toutes les modifications nécessaires dans les onglets \menus{Tiers} (voir la section \vref{thirdparties-modify}, \menus{Modification d'un tiers}), \menus{Catégories} (voir la section \vref{categories-modify}, \menus{Modification d'une catégorie ou d'une sous-catégorie}) ou \menus{Imputations budgétaires} (voir la section \vref{budgetarylines-modify}, \menus{Modification d'une (sous-)imputation budgétaire}).
  
 % espace avant Attention ou Note: 5 mm
@@ -933,7 +924,6 @@ Vous pouvez également créer un tiers, une catégorie ou une imputation budgét
 
 
 \section{Impression de la liste des opérations\label{transactions-print}}
-
 
 Pour imprimer la liste des opérations, cliquez sur le bouton \menus{Imprimer} de la barre d'outils; une fenêtre d'impression s'ouvre, dont l'aspect et les fonctions dépendent de votre gestionnaire d'impression; vous aurez le plus souvent les choix suivants:
 
