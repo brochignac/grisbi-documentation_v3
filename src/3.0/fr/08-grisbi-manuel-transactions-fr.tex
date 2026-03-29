@@ -29,7 +29,7 @@ Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste
 
 % espace avant Attention ou Note: 5 mm
 \vspacepdf{3mm}
-\textbf{Note}: si vous n'avez jamais fait de rapprochement, donc pas de pointages, Grisbi ne peut ni calculer ni afficher de solde pointé.
+\Note{}: si vous n'avez jamais fait de rapprochement, donc pas de pointages, Grisbi ne peut ni calculer ni afficher de solde pointé.
 
 
 \section{Barre d'outils\label{transactions-functions}}
@@ -101,7 +101,7 @@ Vous pouvez choisir d'afficher ou non:
 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 Du point de vue de la base de données de Grisbi, une opération est constituée de ses \indexword{champs d'information}\index{champ d'information!définition}. Les champs d'information de chaque opération s'affichent dans les différentes \indexword{cellules}\index{cellule!champ d'information} définies par l'intersection des lignes et des colonnes. Il ne peut y avoir au maximum que quatre lignes et sept colonnes, ce qui définit un maximum de vingt-huit champs d'information pour chaque opération.
 
 Chaque opération peut être affichée sur 1, 2, 3 ou 4 lignes, suivant le mode d'affichage sélectionné (voir la section \vref{home-menus-display}, menu \menus{Affichage} dans la barre de menu ou la fonction \menus{Affichage} dans la section \vref{transactions-functions}, \menus{Barre d'outils}). L'affichage courant y est indiqué par une coche. 
@@ -209,18 +209,18 @@ Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexwor
 	\item un petit triangle noir apparaît à droite ou à gauche du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
 
 % saut de ligne pour indentation correcte de la note dans la liste
-	\textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+	\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 	\item cliquez sur ce triangle pour changer l'ordre du tri.
 \end{enumerate}
 
-\textbf{Note}: un tri sur l'affichage réalisé ainsi n'affecte en aucun cas le solde à chaque ligne, qui est calculé après chaque opération; suivant le tri et les options d'affichage que vous avez choisi, le solde à chaque ligne peut présenter une évolution non chronologique. 
+\Note{}: un tri sur l'affichage réalisé ainsi n'affecte en aucun cas le solde à chaque ligne, qui est calculé après chaque opération; suivant le tri et les options d'affichage que vous avez choisi, le solde à chaque ligne peut présenter une évolution non chronologique. 
 
 %espace pour changement de thème
 \vspacepdf{3mm}
 Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-operations-list-modes}, \menus{Modes d'affichage}).
 
 \vspacepdf{3mm}
-\textbf{Note}: le choix du critère de \gls{tri primaire} (date d'opération ou date de valeur) qui peut y avoir été fait modifie nécessairement le solde affiché à chaque ligne d'opération, puisque Grisbi calcule et affiche le solde à chaque ligne.
+\Note{}: le choix du critère de \gls{tri primaire} (date d'opération ou date de valeur) qui peut y avoir été fait modifie nécessairement le solde affiché à chaque ligne d'opération, puisque Grisbi calcule et affiche le solde à chaque ligne.
 
 
 \section{Formulaire de saisie\label{transactions-form}}
@@ -232,13 +232,13 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 	\begin{center}
 	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_form}
 	\end{center}
-	\caption{Formulaire de saisie des opérations personnalisé}
+	\caption{Formulaire personnalisé de saisie des opérations}
 	\label{transactions-form-img}
 \end{figure}
 % image centrée 
 
 
-\textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 Le formulaire de saisie comprend par défaut les sept champs suivants:
 \begin{itemize}
@@ -274,7 +274,7 @@ Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit
 \end{itemize}
 
 %espace pour changement de thème
-%\vspacepdf{5mm}
+% \vspacepdf{3mm}
 
 %De plus, un autre menu contextuel, accessible par un clic-droit en dehors d'un champ de saisie, permet d'accéder à la \indexword{configuration du formulaire}\index{formulaire de saisie!configuration}: vous pouvez en configurer précisément le contenu, la présentation, le comportement, ainsi que les paramètres d'aide à la saisie, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}).
 
@@ -356,7 +356,7 @@ Pour ouvrir ou affichez le formulaire de saisie, utilisez une des méthodes suiv
 	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
 
 % saut de ligne pour indentation correcte de la note dans la liste
-	\textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
 Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
@@ -365,7 +365,7 @@ Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
 	\item dans la barre de menu, sélectionnez \menus{Affichage} et décochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
 	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
 	
-	\textbf{Note}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
 % espace après Attention ou Note: 5 mm
@@ -427,7 +427,7 @@ Enfin, vous pouvez incrémenter ou décrémenter la date affichée:
 Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \return}, affiche un calendrier permettant de sélectionner la date.
 
 %espace pour changement de thème
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
 % espace avant image 5mm
 \vspacepdf{3mm}
@@ -478,7 +478,7 @@ L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur
 	et la validation d'un choix à l'intérieur d'une liste déroulante se fait avec la touche \keys{Entrée \return}.
 
 \vspacepdf{3mm}
-\textbf{Note}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
@@ -509,7 +509,7 @@ Pour enregistrer une \indexword{remise de chèques}\index{remise!chèques}, vous
 Pour enregistrer une \indexword{remise d'espèces}\index{remise!espèces}, vous les déposez d'abord soit sur votre compte bancaire à la banque qui vous remet un bordereau de remise, soit dans votre porte-monnaie, puis vous saisissez l'opération de remise, en crédit sur votre compte de caisse. 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 Si vous recevez beaucoup de chèques (par exemple parce que vous gérez une association et que vos adhérents payent leur cotisation par chèque), vous avez deux méthodes de gestion:
 
 \begin{itemize}
@@ -553,9 +553,9 @@ Vous pouvez réaliser des virements entre comptes en sélectionnant la catégori
 \vspacepdf{3mm}
 Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si vous faites une opération de virement dans votre compte en yens à partir d'un compte en euros, dans le compte en yens le virement apparaîtra en yens dans le champ \menus{Crédit}, et son solde en yens sera correct, et dans le compte en euros le débit apparaîtra en yens dans le champ \menus{Débit} et en euros dans le champ \menus{Montant}.
 
-\textbf{Note}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations et ajuster le nombre de lignes affichées dans la liste des opérations (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}).
+\Note{}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations et ajuster le nombre de lignes affichées dans la liste des opérations (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}).
 
-\textbf{Note}: si vous affichez une opération existante dans le formulaire de saisie, vous devrait configurer le contenu du formulaire de saisie en y ajoutant le champ \menus{Devise} pour visualiser la devise associée à l'opération en débit ou en crédit (voir la section \vref{setup-form-content}, \menus{Contenu}).
+\Note{}: si vous affichez une opération existante dans le formulaire de saisie, vous devrait configurer le contenu du formulaire de saisie en y ajoutant le champ \menus{Devise} pour visualiser la devise associée à l'opération en débit ou en crédit (voir la section \vref{setup-form-content}, \menus{Contenu}).
 
 
 \subsubsection{Contre-opération d'un virement\label{transactions-new-transfer-associatedOperation}}
@@ -584,15 +584,15 @@ Vous pouvez gérer cela de deux manières:
 
 \subsection{Rappel automatique d'une opération\label{transactions-new-recall}}
 
-Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération, si vous avez activé l'option de \menus{Remplissage automatique des opérations} dans les préférences, vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération. 
+Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération, si vous avez activé l'option de \menus{Remplissage automatique des opérations} (menu \menus{Éditer - Préférences - Formulaire des opérations - Aide à la saisie}), vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération. 
 
-Vous pouvez ajuster finement ce comportement dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form-input}, \menus{Aide à la saisie du formulaire}).
+Vous pouvez ajuster finement ce comportement dans les \menus{Préférences} (voir la section \vref{setup-form-input}, \menus{Aide à la saisie du formulaire}).
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 \Note{}: si vous ne modifiez aucun champ et que vous validez l'opération, vous obtiendrez une opération purement et simplement dupliquée, mais qui portera la date du jour courant.
 
-%TODO following
+
 \section{Saisie d'une opération en devises\label{transactions-currencies}}
 
 Grisbi peut gérer des opérations saisies avec une \indexword{devise différente}\index{devise!différente} de celle du compte, avec ou sans frais de change.
@@ -601,18 +601,18 @@ Grisbi peut gérer des opérations saisies avec une \indexword{devise différent
 \vspacepdf{3mm}
 Pour utiliser une devise différente, vous devez d'abord procéder aux configurations suivantes:
 \begin{enumerate}
-	 \item créez la devise, si elle ne l'est pas déjà, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-resources-currencies}, \menus{Devises});
-	 \item dans le même menu, créez le ou les liens dont vous avez besoin entre la nouvelle devise et les autres déjà enregistrées (voir la section \vref{setup-resources-rate}, \menus{Liens entre devises});
-	 \item configurez l'affichage du champ \menus{Devise} dans le formulaire de saisie des opérations (voir la section \vref{setup-form-content}, \menus{Contenu});
-	 % saut de ligne pour alignement de la note sur l'item
+	\item créez la devise, si elle ne l'est pas déjà, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-resources-currencies}, \menus{Devises});
+	\item dans le même menu, créez le ou les liens dont vous avez besoin entre la nouvelle devise et les autres déjà enregistrées (voir la section \vref{setup-resources-rate}, \menus{Liens entre devises});
+	\item configurez l'affichage du champ \menus{Devise} dans le formulaire de saisie des opérations (voir la section \vref{setup-form-content}, \menus{Contenu});
+	% saut de ligne pour alignement de la note sur l'item
 	 
-	 \Note{}: les champs \menus{Devise} et \menus{Change} sont liés dans le formulaire de saisie: la configuration de l'affichage du champ \menus{Devise} dans le formulaire y positionne automatiquement le champ \menus{Change}, et inversement; vous pouvez ensuite les déplacer dans les cellules voulues.
-	 \item configurez l'affichage du champ \menus{Montant} dans la liste des opérations (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}).
+	\Note{}: les champs \menus{Devise} et \menus{Change} sont liés dans le formulaire de saisie: la configuration de l'affichage du champ \menus{Devise} dans le formulaire y positionne automatiquement le champ \menus{Change}, et inversement; vous pouvez ensuite les déplacer dans les cellules voulues.
+	\item configurez l'affichage du champ \menus{Montant} dans la liste des opérations (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}).
 \end{enumerate}
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}\index{devise!opération} dans le formulaire de saisie, choisissez dans la liste déroulante la devise dans laquelle l'opération doit être enregistrée. Plusieurs questions peuvent se poser\refimage{transactions-changeRate-img}:
+Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}\index{devise!opération} dans le formulaire de saisie, choisissez dans la liste déroulante la devise dans laquelle l'opération doit être enregistrée. Plusieurs questions peuvent se poser:
 
 % image centrée 
 \begin{figure}[htbp]
@@ -625,13 +625,13 @@ Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}
 % image centrée 
 
 \begin{itemize}
-	 \item si vous n'avez pas créé de lien (taux de change) pour cette devise, Grisbi affiche la fenêtre de frais et taux de change \refimage{transactions-changeRate-img}: saisissez-y le taux de change, validez la fenêtre puis validez l'opération: le montant en devise s'affiche dans le champ \menus{Débit} et celui dans la devise du compte dans le champ \menus{Montant};
+	\item si vous n'avez pas créé de lien (taux de change) pour cette devise, Grisbi affiche la fenêtre de frais et taux de change \refimage{transactions-changeRate-img}: saisissez-y le taux de change, validez la fenêtre puis validez l'opération: le montant en devise s'affiche dans le champ \menus{Débit} et celui dans la devise du compte dans le champ \menus{Montant};
 	 % espace pour notte alignée avec l'item
 	 
-	 \Note{}: vous pouvez inverser le sens de la conversion (un euro vaut X Devise, ou bien une Devise vaut Y euros) en inversant le nom des devises dans les deux listes déroulantes; vous pouvez ainsi entrer exactement le taux de change tel qu'il vous est communiqué; ce taux peut être ajusté à tout moment après la création de l'opération.
-	 \item si vous voulez modifier le taux de change, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, cochez la case de libellé \menus{Modifier le taux de change} si elle ne l'est pas, puis modifiez-le, et validez la fenêtre puis l'opération;
-	 \item si vous avez des \indexword{frais de change}\index{frais de change}, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, saisissez les frais en devise du compte dans le champ \menus{Frais de change}, et validez la fenêtre puis l'opération; ces frais sont alors ajoutés au contenu du champ \menus{Montant}; mais vous pouvez à la place les saisir dans une opération indépendante, en utilisant une catégorie dédiée, par exemple \emph{Frais financiers: Frais bancaires}: cela peut vous permettre de les comptabiliser à part;
-	 \item si vous voulez que le taux de change soit fixe: voir la section \vref{setup-resources-rate}, \menus{Liens entre devises}.
+	\Note{}: vous pouvez inverser le sens de la conversion (un euro vaut X Devise, ou bien une Devise vaut Y euros) en inversant le nom des devises dans les deux listes déroulantes; vous pouvez ainsi entrer exactement le taux de change tel qu'il vous est communiqué; ce taux peut être ajusté à tout moment après la création de l'opération.
+	\item si vous voulez modifier le taux de change, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, cochez la case de libellé \menus{Modifier le taux de change} si elle ne l'est pas, puis modifiez-le, et validez la fenêtre puis l'opération;
+	\item si vous avez des \indexword{frais de change}\index{frais de change}, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, saisissez les frais en devise du compte dans le champ \menus{Frais de change}, et validez la fenêtre puis l'opération; ces frais sont alors ajoutés au contenu du champ \menus{Montant}; mais vous pouvez à la place les saisir dans une opération indépendante, en utilisant une catégorie dédiée, par exemple \emph{Frais financiers: Frais bancaires}: cela peut vous permettre de les comptabiliser à part;
+	\item si vous voulez que le taux de change soit fixe: voir la section \vref{setup-resources-rate}, \menus{Liens entre devises}.
 \end{itemize}
 
 
@@ -642,30 +642,30 @@ Grisbi vous permet d'utiliser des tiers virtuels: un tiers virtuel est un \emph{
 Lorsque vous saisissez une opération avec pour tiers un tiers virtuel, Grisbi enregistre, au moment de sa validation, une opération identique (montant, catégorie, imputation budgétaire, moyen de paiement etc.) pour \emph{chacun} des tiers représentés par ce tiers virtuel. Par exemple, vous pouvez saisir en une seule fois un appel à cotisation pour 200 adhérents d'une association, ce qui représente un gain de temps très appréciable\ldots
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme \frquote{État: nom\_du\_tiers\_virtuel}. 
+\vspacepdf{3mm}
+Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme \frquote{État : nom\_du\_tiers\_virtuel}. 
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Pour créer un tiers virtuel, créez un état contenant une liste de tiers: voir le paragraphe \vref{reportscreation-display-general-virtualThird}, \menus{Tiers virtuel}.
+\vspacepdf{3mm}
+Pour créer un tiers virtuel, créez un état de type \menus{État vierge} contenant une liste de tiers: voir le paragraphe \vref{reportscreation-display-general-virtualThird}, \menus{Tiers virtuel}.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Pour modifier un tiers virtuel, modifiez l'état qui l'a créé: voir la section \vref{reports-modify}, \menus{Modification d'un état}.
 
 %espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Pour supprimer un tiers virtuel, vous avez deux possibilités:
 
 \begin{itemize}
-	\item décochez la case \menus{Considérer les tiers de ce rapport comme un tiers virtuel} dans l'état qui le définit, puis validez (voir la section \vref{reports-modify}, \menus{Modification d'un état});
+	\item décochez la case \menus{Considérer les tiers de cet état comme un tiers virtuel} dans les \menus{Généralités} de l'état qui le définit, puis validez (voir la section \vref{reports-modify}, \menus{Modification d'un état});
 	\item supprimez l'état qui le définit (voir la section \vref{reports-delete}, \menus{Suppression d'un état}).
 \end{itemize}
 
 
 \section{Ventilation d'une opération\label{transactions-breakdown}}
 
-\indexword{Ventiler une opération}\index{ventiler!opération} signifie répartir son montant entre plusieurs lignes (par exemple, vos achats au supermarché peuvent se répartir entre les catégories \emph{Alimentation} et \emph{Soins: Habillement}). Vous pouvez aussi répartir une somme sur la même catégorie, mais avec des informations différentes dans le champ \menus{Remarques} (par exemple pour mémoriser le détail d'une opération).
+\indexword{Ventiler une opération}\index{ventiler!opération} signifie répartir son montant entre plusieurs lignes (par exemple, vos achats au supermarché peuvent se répartir entre les catégories \emph{Alimentation : Épicerie} et \emph{Soins : Habillement}). Vous pouvez aussi répartir une somme sur la même catégorie, mais avec des informations différentes dans le champ \menus{Remarques} (par exemple pour mémoriser le détail d'une opération).
 
 
 \subsection{Saisie de l'opération ventilée\label{transactions-breakdown-master}}
@@ -673,147 +673,203 @@ Pour supprimer un tiers virtuel, vous avez deux possibilités:
 Pour \indexword{saisir une opération ventilée}\index{opération!ventilée}, procédez comme suit:
 	 
 \begin{enumerate}
-	 \item dans le formulaire, commencez la saisie de votre opération comme une opération normale jusqu'au champ \menus{Catégories}, où vous choisissez la catégorie \menus{Opération ventilée} (vers la fin du menu déroulant, mais il est plus simple de taper \frquote{O});
-	 \item continuez à saisir les autres données, puis validez:
-	 \item dans la liste des opérations, apparaissent la première ligne de la nouvelle opération en caractères rouges sur fond bleu{couleur}, et en-dessous une nouvelle ligne, sur fond rouge{couleur} donc sélectionnée, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
+	\item dans le formulaire, commencez la saisie de votre opération comme une opération normale jusqu'au champ \menus{Catégories}, où vous choisissez la catégorie \menus{Opération ventilée} (vers la fin du menu déroulant, mais il est plus simple de taper la lettre \frquote{o});
+	\item continuez à saisir les autres données, puis validez:
+	\item dans la liste des opérations, apparaissent:
+	\begin{itemize}
+		\item la première ligne de la nouvelle opération écrite en %\fboxsep=2pt{\colorbox[RGB]{215,215,255}{\textcolor{red}{\textsf{caractères rouges sur fond bleu}}}},
+		\textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
+		\item et en-dessous une nouvelle ligne, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
+	\end{itemize}
 
-	% image centrée 
-	\begin{figure}[htbp]
-	\begin{center}
-%	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown}
-	\end{center}
-	\caption{Saisie de l'opération ventilée}
-	\label{transactions-breakdown-img}
-	\end{figure}
-	% image centrée 
+		% image centrée 
+		\begin{figure}[htbp]
+		\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown}
+		\end{center}
+		\vspace{-15pt}
+		\caption{Saisie de l'opération ventilée}
+		\label{transactions-breakdown-img}
+		\vspace{-5pt}
+		\end{figure}
+		% image centrée
 
-	 \item dans le formulaire, le curseur est dans le champ \menus{Débit}, et les champs \menus{Date}, \menus{Tiers} et \menus{Moyen de paiement} sont grisés, ce qui signifie qu'on ne peut plus les modifier: il s'agit du formulaire de sous-opération, qui est prêt pour la saisie des sous-opérations;
-	 \item passez à la sous-section suivante \menus{Saisie des sous-opérations ventilées}.
+	\item dans le formulaire de saisie, le curseur est dans le champ \menus{Débit}, et les champs \menus{Date}, \menus{Tiers} et \menus{Moyen de paiement} sont grisés, ce qui signifie qu'on ne peut plus les modifier: il s'agit du formulaire de sous-opération, qui est prêt pour la saisie des sous-opérations;
+	\item passez à la sous-section suivante \menus{Saisie des sous-opérations ventilées}.
 \end{enumerate}
 
 
 \subsection{Saisie des sous-opérations ventilées\label{transactions-breakdown-slave}}
 
-Pour saisir les \indexword{sous-opérations ventilées}\index{sous-opération!ventilée}, continuez la saisie comme suit:
-
 \Note{}: le montant d'une sous-opération peut-être le résultat d'une opération portant sur plusieurs achats ou dépenses inscrites sur un ticket de caisse ou une facture; vous pouvez donc utiliser la \indexword{calculatrice}\index{calculatrice} dans les champs de saisie \menus{Débit} ou \menus{Crédit} pour obtenir plus facilement les montants des sous-opérations (voir la section \vref{transactions-new-numbers}, \menus{Saisie de formules}).
 
+\vspacepdf{3mm}
+Pour saisir les \indexword{sous-opérations ventilées}\index{sous-opération!ventilée}, continuez la saisie comme suit:
+%\vspacepdf{3mm}
 \begin{enumerate}
-	 \item dans ce formulaire de sous-opération, saisissez les champs libres (non grisés), puis validez votre première sous-opération;
-	 \item dans la liste des opérations, cette sous-opération s'affiche sur fond rose{couleur}, et une nouvelle ligne apparaît, sur fond rouge{couleur} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
+	\item dans ce formulaire de sous-opération, saisissez les champs libres (non grisés), puis validez votre première sous-opération;
 
-	% image centrée 
-	\begin{figure}[htp]
-	\begin{center}
-%	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub1}
-	\end{center}
-	\caption{Saisie de la première sous-opération ventilée}
-	\label{transactions-breakdown-sub1-img}
-	\end{figure}
-	% image centrée 
-
-	 \item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur fond rose{couleur} et une nouvelle ligne apparaît, sur fond rouge{couleur} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img};
+		% image centrée 
+		\begin{figure}[htp]
+		\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub1}
+		\end{center}
+		\vspace{-15pt}
+		\caption{Saisie de la première sous-opération ventilée}
+		\label{transactions-breakdown-sub1-img}
+		\vspace{-5pt}
+		\end{figure}
+		% image centrée
+ 
+	\item dans la liste des opérations, cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}}, et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
+	\item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}} et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img};
 	le total des sous-opérations a augmenté (en négatif) du montant de cette deuxième sous-opération, tandis que l'écart a diminué (en négatif) du même montant; 
 
 	% image centrée 
 	\begin{figure}[htp]
 	\begin{center}
-%	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub2}
+	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub2}
 	\end{center}
+	\vspace{-10pt}
 	\caption{Saisie de la deuxième sous-opération ventilée}
 	\label{transactions-breakdown-sub2-img}
+	\vspace{-5pt}
 	\end{figure}
 	% image centrée 
 
 
-	 \item si l'écart n'est pas nul, on peut alors saisir une troisième sous-opération de la même manière\refimage{transactions-breakdown-sub3-img},
+	\item si l'écart n'est pas nul, on peut alors saisir une troisième sous-opération de la même manière\refimage{transactions-breakdown-sub3-img},
 	
 	% image centrée 
 	\begin{figure}[htp]
 	\begin{center}
-%	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub3}
+	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub3}
 	\end{center}
+	\vspace{-10pt}
 	\caption{Saisie de la troisième sous-opération ventilée}
 	\label{transactions-breakdown-sub3-img}
+	\vspace{-5pt}
 	\end{figure}
 	% image centrée 
 
-	et ainsi de suite jusqu'à ce que le montant de votre dernière sous-opération soit exactement égal à l'écart affiché; validez celle-ci: la dernière sous-opération s'affiche sur fond rose{couleur} et une nouvelle ligne sur fond rose{couleur} apparaît, vide, ce qui indique qu'il n'y a plus d'écart et que la somme des sous-opérations est bien égale à la valeur totale de l'opération ventilée\refimage{transactions-breakdown-complete-img}.
+	\item et ainsi de suite jusqu'à ce que le montant saisi de votre dernière sous-opération dans le formulaire soit exactement égal à l'écart affiché.
+	
+	\Note{}: tant que l'opération n'est pas complète, celle-çi reste écrite en \textcolor{red}{rouge}. %validez celle-ci: l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
+	
+	
+%	la dernière sous-opération s'affiche sur fond rose{couleur} et une nouvelle ligne sur fond rose{couleur} apparaît, vide, ce qui indique qu'il n'y a plus d'écart et que la somme des sous-opérations est bien égale à la valeur totale de l'opération ventilée\refimage{transactions-breakdown-complete-img}.
+
+%La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
+
+%Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
 	% image centrée 
-	\begin{figure}[htp]
-	\begin{center}
+%	\begin{figure}[htp]
+%	\begin{center}
 %	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_complete}
-	\end{center}
-	\caption{Saisie de la dernière sous-opération ventilée}
-	\label{transactions-breakdown-complete-img}
-	\end{figure}
+%	\end{center}
+%	\vspace{-10pt}
+%	\caption{Saisie de la dernière sous-opération ventilée}
+%	\label{transactions-breakdown-complete-img}
+%	\end{figure}
 	% image centrée 
-	 
-		 \item passez à la sous-section suivante \menus{Validation de l'opération ventilée}.
+	
+%	\item passez à la sous-section suivante \menus{Validation de l'opération ventilée}.
 \end{enumerate}
 
 
 \subsection{Validation de l'opération ventilée\label{transactions-breakdown-validation}}
 
-À ce moment, toutes les sous-opérations sont entrées et validées et, dans la liste des opérations, la ligne de l'opération ventilée est affichée sur fond rouge{couleur}, donc sélectionnée. Le formulaire réaffiche les données que vous y avez saisies. Toutes les sous-opérations étant correctes, validez l'opération ventilée, qui s'affiche alors dans la liste des opérations, en caractères noirs et sur fond rouge{couleur}, sans les sous-opérations\refimage{transactions-breakdown-oneLine-img}.
+À la validation de cette dernière sous-opération, votre opération ventilée s'affiche alors dans la liste des opérations comme pour une opération normale, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
-% image centrée 
-\begin{figure}[htp]
-\begin{center}
-\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_oneLine}
-\end{center}
-\caption{Opération ventilée validée}
-\label{transactions-breakdown-oneLine-img}
+Dans la liste des opérations, vous pourrez reconnaitre votre opération ventilée par la présence d'un triangle à gauche de la première colonne \refimage{transactions-breakdown-display-img}.
+
+\begin{figure}[!htbp]
+	%\vspace{-15pt}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_display}
+	\end{center}
+	\vspace{-10pt}
+	\caption{Opération ventilée dans la liste des opérations}
+	\label{transactions-breakdown-display-img}
+	\vspace{-5pt}
 \end{figure}
+
+
+%À ce moment, toutes les sous-opérations sont entrées et validées et, dans la liste des opérations, la ligne de l'opération ventilée est affichée sur fond rouge{couleur}, donc sélectionnée. Le formulaire réaffiche les données que vous y avez saisies. Toutes les sous-opérations étant correctes, validez l'opération ventilée, qui s'affiche alors dans la liste des opérations, en caractères noirs et sur fond rouge{couleur}, sans les sous-opérations\refimage{transactions-breakdown-oneLine-img}.
+
+% image centrée 
+%\begin{figure}[htp]
+%\begin{center}
+%\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_oneLine}
+%\end{center}
+%\vspace{-10pt}
+%\caption{Opération ventilée validée}
+%\label{transactions-breakdown-oneLine-img}
+%\end{figure}
 % image centrée 
 
-Une fois le dernier champ du formulaire saisi et validé, la ligne active, en rouge{couleur}, passe à la dernière ligne vide de la liste, comme pour une opération normale.
+%Une fois le dernier champ du formulaire saisi et validé, la ligne active, en rouge{couleur}, passe à la dernière ligne vide de la liste, comme pour une opération normale.
 
-Vous pouvez vérifier tout le contenu de cette opération ventilée, en cliquant sur le petit triangle à gauche de sa ligne pour dérouler l'opération\refimage{transactions-breakdown-complete-img}. 
+%Vous pouvez vérifier tout le contenu de cette opération ventilée, en cliquant sur le petit triangle à gauche de sa ligne pour dérouler l'opération\refimage{transactions-breakdown-complete-img}. 
 
-\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+%\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 % espace après Attention ou Note: 5 mm
-\vspacepdf{5mm}
-Vous pouvez alors modifier les sous-opérations en les sélectionnant et en modifiant leurs champs de la même manière, et de façon à ce que finalement leur somme soit égale à la valeur de l'opération ventilée.
+%\vspacepdf{3mm}
+%Vous pouvez alors modifier les sous-opérations en les sélectionnant et en modifiant leurs champs de la même manière, et de façon à ce que finalement leur somme soit égale à la valeur de l'opération ventilée.
 
+
+\subsection{Affichage de l'opération ventilée\label{transactions-breakdown-display}}
+
+En cliquant sur le triangle à gauche de l'opération ventilée, vous sélectionnez cette opération et vous affichez le détail de ses sous-opérations \refimage{transactions-breakdown-fulldisplay-img}.
+
+\begin{figure}[htbp]
+	%\vspace{-15pt}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_fulldisplay}
+	\end{center}
+	\vspace{-10pt}
+	\caption{Affichage complet de l'opération ventilée}
+	\label{transactions-breakdown-fulldisplay-img}
+	\vspace{-5pt}
+\end{figure}
 
 \subsection{Rappel automatique d'une opération ventilée\label{transactions-breakdown-recall}}
 
 Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération ventilée 
 fonctionne comme celui d'une opération normale (voir la section \vref{transactions-new-recall}, \menus{Rappel automatique d'une opération}). 
 
-Cependant, pour une opération ventilée, un champ supplémentaire \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche des boutons \menus{Annuler} et \menus{Valider}, et vous pouvez cocher la case correspondante en cliquant dessus ou sur le champ, et selon votre besoin.
+Cependant, pour une opération ventilée, une case à cocher intitulée \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche du bouton \menus{Annuler}, et vous pouvez cocher cette case selon votre besoin.
 
 
 \section{Modification d'une opération\label{transactions-modify}}
 
-Pour modifier une opération ou une sous-opération ventilée, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis passez en mode édition par l'une de ces méthodes:
+Pour modifier une opération ou une sous-opération ventilée, sélectionnez-la dans la liste des opérations; elle s'affichera alors dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un clic-gauche et modifier les valeurs à votre convenance.%passez en mode édition par l'une de ces méthodes:
 
+Si le formulaire de saisie n'est pas affiché, procédez d'une des manières suivantes: 
 \begin{itemize}
-	 \item appuyez sur la touche du clavier \keys{Entrée \return};
-	 \item dans la barre de menu, sélectionnez \menus{Éditer - Éditer l'opération};
-	 \item dans la barre d'outils, cliquez sur \menus{Éditer};
-	 \item dans le menu contextuel, sélectionnez \menus{Éditer l'opération};
-	 \item dans l'un des champs du formulaire, cliquez-gauche.
+	\item appuyez sur la touche du clavier \keys{Entrée \return};
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Éditer l'opération};
+	\item dans la barre d'outils, cliquez sur \menus{Éditer};
+	\item avec un clic droit sur une opération, dans le menu contextuel, sélectionnez \menus{Éditer l'opération};
 \end{itemize}
  
-Si le formulaire de saisie n'était pas affiché, il s'affiche. La date s'affiche sur fond bleu{couleur} dans le formulaire.
+A l'issue, la date s'affiche \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} dans le formulaire.
 
 Il est alors possible de modifier toutes les informations désirées, en se déplaçant dans les champs de saisie. 
 
 La combinaison de touches \keys{Ctrl+P} donne ou retire à une opération sélectionnée le statut d'\indexword{opération pointée}\index{opération!pointée}, et \keys{Ctrl+R} celui d'\indexword{opération rapprochée}\index{opération!rapprochée} (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}). Vous pouvez aussi donner à une opération le statut d'opération pointée, mais uniquement celui-ci, par la combinaison \keys{Ctrl+Clic} dans la colonne P/R, sur la ligne de l'opération à pointer.
-
+%TODO following
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}), il est par contre impossible de modifier son montant. Les autres champs restent modifiables. Si vous avez vraiment et impérativement besoin de modifier le montant (mais si vous avez déjà rapproché l'opération, cela ne devrait pas être le cas), procédez comme suit:
 
 \begin{enumerate}
-	 \item sélectionnez l'opération;
-	 \item annulez son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R};
-	 \item modifiez l'opération;
-	 \item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Si vous ne le faisiez pas, le rapprochement relatif à cette opération serait faussé, d'une valeur égale à la différence entre le précédent et le nouveau montant de cette opération.
+	\item sélectionnez l'opération;
+	\item annulez son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R};
+	\item modifiez le montant;
+	\item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Si vous ne le faisiez pas, le rapprochement relatif à cette opération serait faussé, d'une valeur égale à la différence entre le précédent et le nouveau montant de cette opération.
 \end{enumerate}
 
 \Attention{}: cette manipulation est hautement déconseillée, car elle fausse momentanément le rapprochement associé à cette opération, et il redevient exact à la fin, si vous n'en avez pas modifié le montant (cette manipulation sera d'ailleurs probablement automatiquement désactivée dans une future version de Grisbi dans le cas d'une comptabilité de type association).
@@ -821,31 +877,30 @@ Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliatio
 
 \section{Suppression d'une opération\label{transactions-delete}}
 
-Pour supprimer une opération, sélectionnez-la, et utilisez l'une de ces
-méthodes:
+Pour supprimer une opération, sélectionnez-la, et utilisez l'une de ces méthodes:
 \begin{itemize}
-	 \item appuyez sur la touche du clavier \keys{Suppr};
-	 \item dans la barre de menu, sélectionnez \menus{Éditer - Supprimer une opération};
-	 \item dans la barre d'outils, cliquez-gauche sur \menus{Supprimer};
-	 \item dans le menu contextuel, sélectionnez \menus{Supprimer l'opération}.
+	\item appuyez sur la touche du clavier \keys{Suppr};
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Supprimer une opération};
+	\item dans la barre d'outils, cliquez-gauche sur \menus{Supprimer};
+	\item après un clic-gauche sur une opération, dans le menu contextuel, sélectionnez \menus{Supprimer l'opération}.
 \end{itemize}
-
+%TODO following
 % espace pour changement de thème
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 La suppression d'une sous-opération ventilée se fait de la même façon, mais vous devrez faire en sorte que finalement la somme des sous-opérations soit égale à la valeur de l'opération ventilée.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 
 La suppression n'est pas possible si:
 
 \begin{itemize}
-	 \item l'opération est ouverte en modification: il faut préalablement sortir du mode édition, en utilisant la touche \keys{Échap};
-	 \item l'opération est \indexword{rapprochée}\index{opération!rapprochée} (il faut préalablement annuler son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R}).
+	\item l'opération est ouverte en modification: il faut préalablement sortir du mode édition, en utilisant la touche \keys{Échap};
+	\item l'opération est \indexword{rapprochée}\index{opération!rapprochée} (il faut préalablement annuler son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R}).
 \end{itemize}
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 \Attention{}: cette dernière manipulation est hautement déconseillée car elle fausse le rapprochement associé à cette opération.
 
 
@@ -853,12 +908,12 @@ La suppression n'est pas possible si:
 
 Pour utiliser une \indexword{opération comme modèle}\index{opération!modèle}, sélectionnez-la, et utilisez l'une de ces méthodes:
 \begin{itemize}
-	 \item dans la barre de menu, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle};
-	 \item dans le menu contextuel, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle}.
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle};
+	\item dans le menu contextuel, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle}.
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 Une nouvelle opération s'affiche sur fond rouge{couleur}, dans une nouvelle ligne en-dessous de l'opération sélectionnée précédemment; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 
 Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant sa date.
@@ -869,12 +924,12 @@ Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant sa
 Pour cloner une opération, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis utilisez l'une de ces deux méthodes:
 
 \begin{itemize}
-	 \item dans la barre de menu, sélectionnez \menus{Éditer - Cloner l'opération};
-	 \item dans le menu contextuel, sélectionnez \menus{Cloner l'opération}.
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Cloner l'opération};
+	\item dans le menu contextuel, sélectionnez \menus{Cloner l'opération}.
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 L'opération sélectionnée précédemment apparaît toujours sur fond rouge{couleur}, et l'opération clonée s'affiche dans une nouvelle ligne en-dessous; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 
 Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant la date.
@@ -884,12 +939,12 @@ Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant la
 
 Pour convertir une opération en opération planifiée, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis utilisez l'une de ces deux méthodes:
 \begin{itemize}
-	 \item dans la barre de menu, sélectionnez \menus{Éditer - Convertir en opération planifiée};
-	 \item dans le menu contextuel, sélectionnez \menus{Convertir l'opération en opération planifiée}.
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Convertir en opération planifiée};
+	\item dans le menu contextuel, sélectionnez \menus{Convertir l'opération en opération planifiée}.
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{3mm}
 L'onglet \menus{Échéancier} s'affiche. La nouvelle opération apparaît dans la liste des opérations planifiées, et le formulaire de saisie s'affiche avec les paramètres de l'opération. Vérifiez ou éditez ces paramètres selon vos besoins, puis validez.
 
 
@@ -898,14 +953,14 @@ L'onglet \menus{Échéancier} s'affiche. La nouvelle opération apparaît dans l
 Pour déplacer une opération dans un autre compte, sélectionnez-la, puis utilisez l'une de ces deux méthodes:
 
 \begin{itemize}
-	 \item dans la barre de menu, sélectionnez \menus{Éditer - Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste;
-	 \item dans le menu contextuel, sélectionnez \menus{Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste.
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste;
+	\item dans le menu contextuel, sélectionnez \menus{Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste.
 \end{itemize}
 
 Il est bien entendu que les deux comptes doivent se trouver dans le même fichier de comptes.
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 \Note{}: il est impossible de déplacer une opération si elle a le statut \emph{Rapproché}. Par contre, c'est possible si elle a le statut \emph{Pointé}.
 
 
@@ -914,11 +969,11 @@ Il est bien entendu que les deux comptes doivent se trouver dans le même fichie
 Il peut arriver que vous ayez besoin d'un nouveau tiers, d'une nouvelle catégorie ou d'une nouvelle imputation budgétaire pendant une saisie d'opération. Dans ce cas, Grisbi permet d'en faire la création \frquote{à la volée}: saisissez le nouveau nom dans la zone de liste déroulante, et Grisbi l'ajoutera automatiquement à la liste. Vous pourrez ultérieurement faire toutes les modifications nécessaires dans les onglets \menus{Tiers} (voir la section \vref{thirdparties-modify}, \menus{Modification d'un tiers}), \menus{Catégories} (voir la section \vref{categories-modify}, \menus{Modification d'une catégorie ou d'une sous-catégorie}) ou \menus{Imputations budgétaires} (voir la section \vref{budgetarylines-modify}, \menus{Modification d'une (sous-)imputation budgétaire}).
  
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{5mm} 
+ \vspacepdf{3mm}
 \Note{}: pour saisir une \indexword{catégorie}\index{catégories!syntaxe}\index{sous-catégories!syntaxe}\index{syntaxe!catégories: sous-catégories}
  (ou une \indexword{imputation budgétaire}: sous-imputation budgétaire\index{imputations budgétaires!syntaxe}\index{sous-imputations budgétaires!syntaxe}\index{syntaxe!imputations budgétaires: sous-imputations budgétaires}) avec une sous-catégorie (ou sous-imputation), il faut respecter la syntaxe \emph{catégorie: sous-catégorie} (avec les deux points comme séparateur, encadrés par des espaces), sinon Grisbi ne comprendra pas. De même si vous ajoutez une nouvelle sous-catégorie (ou sous-imputation budgétaire) à une catégorie (ou imputation) existante.
 % espace après Attention ou Note: 5 mm
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 
 Vous pouvez également créer un tiers, une catégorie ou une imputation budgétaire directement dans leur onglet respectif, sélectionné dans le panneau de navigation.
 
@@ -935,7 +990,7 @@ Pour imprimer la liste des opérations, cliquez sur le bouton \menus{Imprimer} d
 En fonction de votre gestionnaire d'impression, vous pourrez disposer de réglages divers tels que la taille et l'orientation de la feuille, la résolution, la police d'impression et sa taille, etc.
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{5mm}
+ \vspacepdf{3mm}
 \Note{}: la liste des opérations de certains comptes peut être très longue; affichez un aperçu avant impression pour vérifier ce que vous allez imprimer.
 
 
