@@ -50,7 +50,7 @@ La barre d'outils est présente en haut du panneau des détails et présente les
 	 		\item \menus{Vue complète},
 		 	\item[] \hspace{-15pt} ainsi que:
 	 		\item l'affichage ou non des \indexword{opérations rapprochées}\index{affichage!opérations rapprochées},
-	 		\item l'affichage ou non des \indexword{lignes d'archives}\index{affichage!lignes d'archives}.
+	 		\item l'affichage ou non des \indexword{lignes d'archives}\index{affichage!lignes d'archives} (\vref{datamanagement-archive-display}).
 		\end{itemize}
 \end{itemize}
 
@@ -239,6 +239,7 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 
 
 \Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\newline
 
 Le formulaire de saisie comprend par défaut les sept champs suivants:
 \begin{itemize}
@@ -492,7 +493,7 @@ Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent 
 Dans le formulaire de saisie, vous pouvez saisir les nombres, avec ou sans décimales, dans les champs tels que \menus{Débit} et \menus{Crédit}, à l'aide du clavier.
 
 Vous pouvez aussi y saisir des \indexword{formules arithmétiques}\index{champ de saisie!formule arithmétique}\index{formule arithmétique!champ de saisie} simples, à l'aide des quatre opérateurs d'addition, soustraction, multiplication et division. Cela remplace la \indexword{calculatrice}\index{calculatrice} sur votre bureau.
-%TODO following
+%TODO verify
 Pour saisir une formule arithmétique, saisissez-la comme si c'était un texte, par exemple \frquote{3,40-2,10} , puis continuez normalement la saisie des autres champs de votre opération; si elle est mal écrite, elle s'affiche en \textcolor{red}{rouge}. Lorsque vous cliquez sur le bouton \menus{Valider} et pour une nouvelle opération, le résultat \frquote{1,30} s'affiche dans la liste des opérations, sinon le résultat s'affiche, en plus, dans le champ de saisie. Et si la formule est toujours mal écrite, le message \frquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}} s'affiche à la place et vous ne pourrez pas valider l'opération financière.
 
 Cette calculatrice accepte le mélange des points et des virgules comme séparateur décimal, par exemple \frquote{1.2+2,3}, et Grisbi effectuera le calcul.  
@@ -835,6 +836,9 @@ En cliquant sur le triangle à gauche de l'opération ventilée, vous sélection
 	\vspace{-5pt}
 \end{figure}
 
+\vspacepdf{3mm}
+\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+
 \subsection{Rappel automatique d'une opération ventilée\label{transactions-breakdown-recall}}
 
 Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération ventilée 
@@ -845,22 +849,30 @@ Cependant, pour une opération ventilée, une case à cocher intitulée \menus{R
 
 \section{Modification d'une opération\label{transactions-modify}}
 
-Pour modifier une opération ou une sous-opération ventilée, sélectionnez-la dans la liste des opérations; elle s'affichera alors dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un clic-gauche et modifier les valeurs à votre convenance.%passez en mode édition par l'une de ces méthodes:
+Pour modifier une opération ou une sous-opération ventilée, sélectionnez-la dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un clic-gauche et modifier les valeurs à votre convenance.%passez en mode édition par l'une de ces méthodes:
 
-Si le formulaire de saisie n'est pas affiché, procédez d'une des manières suivantes: 
+
+Si le formulaire de saisie n'est pas affiché, procédez d'une des manières suivantes:
+
 \begin{itemize}
-	\item appuyez sur la touche du clavier \keys{Entrée \return};
 	\item dans la barre de menu, sélectionnez \menus{Éditer - Éditer l'opération};
+	\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item sélectionnez l'opération à modifier et appuyez sur la touche \keys{Entrée \return};
+	\item double-cliquez sur l'opération à modifier;
 	\item dans la barre d'outils, cliquez sur \menus{Éditer};
-	\item avec un clic droit sur une opération, dans le menu contextuel, sélectionnez \menus{Éditer l'opération};
+	\item après un clic droit sur l'opération à modifier, dans le menu contextuel, sélectionnez \menus{Éditer l'opération};
+	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
- 
-A l'issue, la date s'affiche \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} dans le formulaire.
+  
+A l'issue, la date s'affiche en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} dans le formulaire.
 
 Il est alors possible de modifier toutes les informations désirées, en se déplaçant dans les champs de saisie. 
 
 La combinaison de touches \keys{Ctrl+P} donne ou retire à une opération sélectionnée le statut d'\indexword{opération pointée}\index{opération!pointée}, et \keys{Ctrl+R} celui d'\indexword{opération rapprochée}\index{opération!rapprochée} (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}). Vous pouvez aussi donner à une opération le statut d'opération pointée, mais uniquement celui-ci, par la combinaison \keys{Ctrl+Clic} dans la colonne P/R, sur la ligne de l'opération à pointer.
-%TODO following
+
 % espace pour changement de thème
 \vspacepdf{3mm}
 Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}), il est par contre impossible de modifier son montant. Les autres champs restent modifiables. Si vous avez vraiment et impérativement besoin de modifier le montant (mais si vous avez déjà rapproché l'opération, cela ne devrait pas être le cas), procédez comme suit:
@@ -868,10 +880,10 @@ Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliatio
 \begin{enumerate}
 	\item sélectionnez l'opération;
 	\item annulez son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R};
-	\item modifiez le montant;
+	\item modifiez le montant;%TODO verify
 	\item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Si vous ne le faisiez pas, le rapprochement relatif à cette opération serait faussé, d'une valeur égale à la différence entre le précédent et le nouveau montant de cette opération.
 \end{enumerate}
-
+%TODO verify
 \Attention{}: cette manipulation est hautement déconseillée, car elle fausse momentanément le rapprochement associé à cette opération, et il redevient exact à la fin, si vous n'en avez pas modifié le montant (cette manipulation sera d'ailleurs probablement automatiquement désactivée dans une future version de Grisbi dans le cas d'une comptabilité de type association).
 
 
@@ -882,9 +894,9 @@ Pour supprimer une opération, sélectionnez-la, et utilisez l'une de ces métho
 	\item appuyez sur la touche du clavier \keys{Suppr};
 	\item dans la barre de menu, sélectionnez \menus{Éditer - Supprimer une opération};
 	\item dans la barre d'outils, cliquez-gauche sur \menus{Supprimer};
-	\item après un clic-gauche sur une opération, dans le menu contextuel, sélectionnez \menus{Supprimer l'opération}.
+	\item après un clic-droit sur une opération, dans le menu contextuel, sélectionnez \menus{Supprimer l'opération}.
 \end{itemize}
-%TODO following
+%TODO verify
 % espace pour changement de thème
  \vspacepdf{3mm}
 La suppression d'une sous-opération ventilée se fait de la même façon, mais vous devrez faire en sorte que finalement la somme des sous-opérations soit égale à la valeur de l'opération ventilée.
@@ -909,38 +921,38 @@ La suppression n'est pas possible si:
 Pour utiliser une \indexword{opération comme modèle}\index{opération!modèle}, sélectionnez-la, et utilisez l'une de ces méthodes:
 \begin{itemize}
 	\item dans la barre de menu, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle};
-	\item dans le menu contextuel, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle}.
+	\item après un clic-droit, dans le menu contextuel, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle}.
 \end{itemize}
 
 % espace pour changement de thème
  \vspacepdf{3mm}
-Une nouvelle opération s'affiche sur fond rouge{couleur}, dans une nouvelle ligne en-dessous de l'opération sélectionnée précédemment; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
+Une nouvelle opération avec la date du jour s'affiche sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, dans une nouvelle ligne en-dessous de la dernière opération; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 
 Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant sa date.
 
 
 \section{Clonage d'une opération\label{transactions-duplicate}}
 
-Pour cloner une opération, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis utilisez l'une de ces deux méthodes:
+Pour cloner une opération, sélectionnez-la, puis utilisez l'une de ces deux méthodes:
 
 \begin{itemize}
 	\item dans la barre de menu, sélectionnez \menus{Éditer - Cloner l'opération};
-	\item dans le menu contextuel, sélectionnez \menus{Cloner l'opération}.
+	\item après un clic-droit, dans le menu contextuel, sélectionnez \menus{Cloner l'opération}.
 \end{itemize}
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-L'opération sélectionnée précédemment apparaît toujours sur fond rouge{couleur}, et l'opération clonée s'affiche dans une nouvelle ligne en-dessous; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
+Une nouvelle opération avec la date de l'opération sélectionnée précédemment apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et s'affiche dans une nouvelle ligne en-dessous de l'opération sélectionnée; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 
 Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant la date.
 
 
 \section{Conversion d'une opération en opération planifiée\label{transactions-schedule}}
 
-Pour convertir une opération en opération planifiée, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis utilisez l'une de ces deux méthodes:
+Pour convertir une opération en opération planifiée, sélectionnez-la, puis utilisez l'une de ces deux méthodes:
 \begin{itemize}
 	\item dans la barre de menu, sélectionnez \menus{Éditer - Convertir en opération planifiée};
-	\item dans le menu contextuel, sélectionnez \menus{Convertir l'opération en opération planifiée}.
+	\item après un clic-droit, dans le menu contextuel, sélectionnez \menus{Convertir l'opération en opération planifiée}.
 \end{itemize}
 
 % espace pour changement de thème
@@ -954,13 +966,13 @@ Pour déplacer une opération dans un autre compte, sélectionnez-la, puis utili
 
 \begin{itemize}
 	\item dans la barre de menu, sélectionnez \menus{Éditer - Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste;
-	\item dans le menu contextuel, sélectionnez \menus{Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste.
+	\item après un clic-droit, dans le menu contextuel, sélectionnez \menus{Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste.
 \end{itemize}
 
 Il est bien entendu que les deux comptes doivent se trouver dans le même fichier de comptes.
 
 % espace avant Attention ou Note: 5 mm
- \vspacepdf{3mm}
+\vspacepdf{3mm}
 \Note{}: il est impossible de déplacer une opération si elle a le statut \emph{Rapproché}. Par contre, c'est possible si elle a le statut \emph{Pointé}.
 
 
@@ -969,9 +981,9 @@ Il est bien entendu que les deux comptes doivent se trouver dans le même fichie
 Il peut arriver que vous ayez besoin d'un nouveau tiers, d'une nouvelle catégorie ou d'une nouvelle imputation budgétaire pendant une saisie d'opération. Dans ce cas, Grisbi permet d'en faire la création \frquote{à la volée}: saisissez le nouveau nom dans la zone de liste déroulante, et Grisbi l'ajoutera automatiquement à la liste. Vous pourrez ultérieurement faire toutes les modifications nécessaires dans les onglets \menus{Tiers} (voir la section \vref{thirdparties-modify}, \menus{Modification d'un tiers}), \menus{Catégories} (voir la section \vref{categories-modify}, \menus{Modification d'une catégorie ou d'une sous-catégorie}) ou \menus{Imputations budgétaires} (voir la section \vref{budgetarylines-modify}, \menus{Modification d'une (sous-)imputation budgétaire}).
  
 % espace avant Attention ou Note: 5 mm
- \vspacepdf{3mm}
-\Note{}: pour saisir une \indexword{catégorie}\index{catégories!syntaxe}\index{sous-catégories!syntaxe}\index{syntaxe!catégories: sous-catégories}
- (ou une \indexword{imputation budgétaire}: sous-imputation budgétaire\index{imputations budgétaires!syntaxe}\index{sous-imputations budgétaires!syntaxe}\index{syntaxe!imputations budgétaires: sous-imputations budgétaires}) avec une sous-catégorie (ou sous-imputation), il faut respecter la syntaxe \emph{catégorie: sous-catégorie} (avec les deux points comme séparateur, encadrés par des espaces), sinon Grisbi ne comprendra pas. De même si vous ajoutez une nouvelle sous-catégorie (ou sous-imputation budgétaire) à une catégorie (ou imputation) existante.
+\vspacepdf{3mm}
+\Note{}: pour saisir une \indexword{catégorie}\index{catégories!syntaxe}\index{sous-catégories!syntaxe}\index{syntaxe!catégories : sous-catégories}
+ (ou une \indexword{imputation budgétaire} : sous-imputation budgétaire\index{imputations budgétaires!syntaxe}\index{sous-imputations budgétaires!syntaxe}\index{syntaxe!imputations budgétaires : sous-imputations budgétaires}) avec une sous-catégorie (ou sous-imputation), il faut respecter la syntaxe \emph{catégorie : sous-catégorie} (avec les deux points comme séparateur, encadrés par des espaces), sinon Grisbi ne comprendra pas. De même si vous ajoutez une nouvelle sous-catégorie (ou sous-imputation budgétaire) à une catégorie (ou imputation) existante.
 % espace après Attention ou Note: 5 mm
  \vspacepdf{3mm}
 
@@ -979,18 +991,18 @@ Vous pouvez également créer un tiers, une catégorie ou une imputation budgét
 
 
 \section{Impression de la liste des opérations\label{transactions-print}}
-
+%TODO verify
 Pour imprimer la liste des opérations, cliquez sur le bouton \menus{Imprimer} de la barre d'outils; une fenêtre d'impression s'ouvre, dont l'aspect et les fonctions dépendent de votre gestionnaire d'impression; vous aurez le plus souvent les choix suivants:
 
 \begin{itemize}
-	\item imprimer dans un fichier (au format \gls{PostScript}, \gls{PDF} ou \gls{SVG});
+	\item imprimer dans un fichier (au format \gls{PDF}, \gls{PostScript}, ou \gls{SVG});
 	\item imprimer avec votre imprimante.
 \end{itemize}
 
 En fonction de votre gestionnaire d'impression, vous pourrez disposer de réglages divers tels que la taille et l'orientation de la feuille, la résolution, la police d'impression et sa taille, etc.
 
 % espace avant Attention ou Note: 5 mm
- \vspacepdf{3mm}
+\vspacepdf{3mm}
 \Note{}: la liste des opérations de certains comptes peut être très longue; affichez un aperçu avant impression pour vérifier ce que vous allez imprimer.
 
 
