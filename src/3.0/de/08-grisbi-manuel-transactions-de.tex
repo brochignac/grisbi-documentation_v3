@@ -14,61 +14,117 @@
 % $Id: 08-grisbi-manuel-transaction-fr.tex, v 3.0 2026/04 Dominique Brochard
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Account transactions\label{transactions}}
+\chapter{Buchungen\label{transactions}}
+%\chapter{Account transactions\label{transactions}}
 %\chapter{Opérations d'un compte\label{transactions}}
 
-The various accounts you have created contain transactions. To view the list of accounts stored in your accounts file, use the information bar or the navigation panel (see the \vref{home}, \menus{Home} chapter and the \vref{accounts-list}, \menus{Account List} section).
+Die verschiedenen Konten, die Sie erstellen haben, enthalten Buchungen. Um die Liste der in Ihrer Kontendatei gespeicherten Konten anzuzeigen, verwenden Sie die Informationsleiste oder das Navigationsbereich (siehe das Kapitel \vref{home}, \menus{Startseite} und den Abschnitt \vref{accounts-list}, \menus{Liste der Konten}).
+%The various accounts you have created contain transactions. To view the list of accounts stored in your accounts file, use the information bar or the navigation panel (see the \vref{home}, \menus{Home} chapter and the \vref{accounts-list}, \menus{Account List} section).
 %Les différents comptes que vous avez créés contiennent les opérations. Pour afficher la liste des comptes enregistrés dans votre fichier de comptes, utilisez la barre d'information ou le panneau de navigation (voir le chapitre \vref{home}, \menus{Accueil} et la section \vref{accounts-list}, \menus{Liste des comptes}).
 
-To view the transactions for an account, select that account from the list: the \menus{Transactions} tab will appear by default. It contains four main sections:
+Um die Transaktionen eines Kontos anzuzeigen, wählen Sie dieses Konto aus der Liste aus: Standardmäßig wird die Registerkarte \menus{Buchungen} angezeigt. Sie enthält vier Hauptbereiche:
+%To view the transactions for an account, select that account from the list: the \menus{Transactions} tab will appear by default. It contains four main sections:
 %Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste: l'onglet \menus{Opérations} s'affiche par défaut. Il possède quatre éléments principaux:
 
 \begin{enumerate}
-	\item the toolbar;
+	\item Werkzeugliste;
+	%\item the toolbar;
 	%\item la barre d'outils;
-	\item the list of transactions;
+	\item Buchungsliste;
+	%\item the list of transactions;
 	%\item la liste des opérations;
-	\item the transaction entry form;
+	\item Buchungsformular
+	%\item the transaction/scheduled form;
 	%\item le formulaire de saisie des opérations;
-	\item the \indexword{checked balance}\index{balance!checked}.
+	\item Abgestimmter saldo.
+	%\item the \indexword{reconciled balance}\index{balance!reconciled}.
 	%\item le \indexword{solde pointé}\index{solde!pointé}.
 \end{enumerate}
 
 % espace avant Attention ou Note: 5 mm
 \vspacepdf{3mm}
-\Note{}: If you have never carried out a reconciliation – i.e. you have not performed any reconciliation entries – Grisbi cannot calculate or display a reconciled balance.
-%\Note{}: si vous n'avez jamais fait de rapprochement, donc pas de pointages, Grisbi ne peut ni calculer ni afficher de solde pointé.
+\Note{}: Wenn Sie noch nie einen Abgleich durchgeführt haben, also keine Abstimmungen vorgenommen haben, kann Grisbi keinen abgeglichenen Saldo berechnen oder anzeigen.
+%\Note{}: if you have never carried out a reconciliation – i.e. you have not performed any reconciliation entries – Grisbi cannot calculate or display a reconciled balance.
+%\Note{}: si vous n'avez jamais fait de rapprochement, donc pas de pointages, Grisbi ne peut ni calculer ni afficher de solde rapproché.
 
 
-\section{Toolbar\label{transactions-functions}}
+\section{Werkzeugliste\label{transactions-functions}}
+%\section{Toolbar\label{transactions-functions}}
 %\section{Barre d'outils\label{transactions-functions}}
 
-The toolbar is located at the top of the details panel and offers the following functions:
+Die Werkzeugleiste befindet sich oben im Detailbereich und bietet folgende Funktionen:
+%The toolbar is located at the top of the details panel and offers the following functions:
 %La barre d'outils est présente en haut du panneau des détails et présente les fonctions suivantes:
 
 \begin{itemize}
-	\item \menus{Nouvelle Opération}: va à la fin de la liste des opérations et ouvre le formulaire de saisie vierge;
-	\item \menus{Supprimer}: supprime l'opération sélectionnée;
-	\item \menus{Éditer}: ouvre le formulaire de saisie pour l'opération sélectionnée et permet de la modifier;
-	\item \menus{Rapprocher}: ouvre la page de rapprochement du compte sélectionné (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire});
-	\item \menus{Imprimer}: ouvre la fenêtre de sélection de l'imprimante et de ses options;
-	\item \menus{Affichage}: ouvre un menu déroulant; vous pouvez choisir l'\indexword{affichage des opérations}\index{affichage!opérations} parmi quatre possibilités:
+	\item \menus{Buchung erstellen}: springt zum Ende der Buchungsliste und öffnet ein leeres Buchungsformular;
+	%\item \menus{New transaction}: goes to the end of the list of transactions and opens a blank entry form;
+	%\item \menus{Nouvelle Opération}: va à la fin de la liste des opérations et ouvre le formulaire de saisie vierge;
+	\item \menus{Löschen}: löscht die ausgewählte Buchung;
+	%\item \menus{Delete}: deletes the selected transaction;
+	%\item \menus{Supprimer}: supprime l'opération sélectionnée;
+	\item \menus{Bearbeiten}: Öffnet das Buchungsformular für den ausgewählten Buchung und ermöglicht dessen Bearbeitung;
+	%\item \menus{Edit}: opens the input form for the selected transaction and allows you to edit it;
+	%\item \menus{Éditer}: ouvre le formulaire de saisie pour l'opération sélectionnée et permet de la modifier;
+	\item \menus{Abstimmen}: Öffnet die Abstimmungsseite für das ausgewählte Konto (siehe Abschnitt \vref{reconciliation}, \menus{Bankabstimmung});
+	%\item \menus{Reconcile}: opens the reconciliation page for the selected account (see the section \vref{reconciliation}, \menus{Bank reconciliation});
+	%\item \menus{Rapprocher}: ouvre la page de rapprochement du compte sélectionné (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire});
+	\item \menus{Drucken}: Öffnet das Fenster zur Auswahl des Druckers und seiner Optionen;
+	%\item \menus{Print}: opens the window for selecting the printer and its options;
+	%\item \menus{Imprimer}: ouvre la fenêtre de sélection de l'imprimante et de ses options;
+	\item \menus{Ansicht}: Öffnet ein Dropdown-Menü; Sie können aus vier Optionen die \indexword{Ansicht der Buchungen}\index{Ansicht!Buchungen} auswählen:
+	%\item \menus{View}: opens a drop-down menu; you can choose the \indexword{view of transactions}\index{view!transactions} from four options:
+	%\item \menus{Affichage}: ouvre un menu déroulant; vous pouvez choisir l'\indexword{affichage des opérations}\index{affichage!opérations} parmi quatre possibilités:
 		\begin{itemize} 
-	 		\item \menus{Vue simple},
-	 		
-	 		%\item \menus{Mode \frquote{deux lignes}},
-	 		
-	 		%\item \menus{Mode \frquote{trois lignes}},
-	 		\item \menus{Vue complète},
-		 	\item[] \hspace{-15pt} ainsi que:
-	 		\item l'affichage ou non des \indexword{opérations rapprochées}\index{affichage!opérations rapprochées},
-	 		\item l'affichage ou non des \indexword{lignes d'archives}\index{affichage!lignes d'archives} (\vref{datamanagement-archive-display}).
+			\item \menus{Einzeilig},
+			%\item \menus{Simple view},
+			%\item \menus{Vue simple},
+			\item \menus{Zweizeilig},
+			%\item \menus{Two lines view},
+			%\item \menus{Mode \frquote{deux lignes}},
+			\item menus{Dreizeilig},
+			%\item \menus{Three lines view},
+			%\item \menus{Mode \frquote{trois lignes}},
+			\item \menus{Vollständig},
+			%\item \menus{Complete view},
+			%\item \menus{Vue complète},
+			\item[] \hspace{-15pt} sowie:
+			%\item[] \hspace{-15pt} as well as:
+			%\item[] \hspace{-15pt} ainsi que:
+			\item die Anzeige oder Nichtanzeige der \indexword{abgestimmte Buchungen}\index{Anzeige!abgestimmte Buchungen},
+			%\item whether or not to show \indexword{reconciled operations}\index{show!reconciled operations},
+			%\item l'affichage ou non des \indexword{opérations rapprochées}\index{affichage!opérations rapprochées},
+			\item ob die erstellten Archive angezeigt werden sollen oder nicht\index{anzeige!archivezeilen} (\vref{datamanagement-archive-display}),
+			%\item whether or not to show the \indexword{archives lines}\index{display!archives lines} (\vref{datamanagement-archive-display}),
+			%\item l'affichage ou non des \indexword{lignes d'archives}\index{affichage!lignes d'archives} (\vref{datamanagement-archive-display}),
+		\end{itemize}
+	\item ein Schnellsuchfeld und eine Dropdown-Liste, mit denen Sie nach folgenden Kriterien filtern können:
+	%\item a quick search box and a drop-down list allowing you to filter by:
+	%\item un champ de recherche rapide et une liste déroulante permettant de filtrer selon:
+		\begin{itemize} 
+			\item \menus{Empfänger Name},
+			%\item \menus{Payee name},
+			%\item le \menus{Nom du tiers},
+			\item \menus{Notiz},
+			%\item \menus{Note},
+			%\item la \menus{remarque},
+			\item \menus{Empfänger und Notiz},
+			%\item \menus{Payee and note},
+			%\item les \menus{Tiers et remarque},
+			\item \menus{Gruppe},
+			%\item \menus{Budgetary line},
+			%\item l'\menus{Imputation budgétaire},
+			\item \menus{Kategorie}.
+			%\menus{Category}.
+			%\item la \menus{Catégorie}.
 		\end{itemize}
 \end{itemize}
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Les options du menu \menus{Affichage} influent par défaut sur l'affichage de tous les comptes. Vous pouvez préférer un affichage différent pour chaque compte, cela est configurable dans le menu \menus{Éditer - Préférences - Opérations - Comportement de la liste} (voir le paragraphe \vref{setup-operations-list-differenciation}, \menus{Différenciation des comptes}).
+Die Optionen im Menü \menus{Ansicht} wirken sich standardmäßig auf die Darstellung aller Konten aus. Möglicherweise bevorzugen Sie für jedes Konto eine andere Darstellung; dies kann im Menü \menus{Bearbeiten – Einstellungen – Buchungen – Einstellungen} konfiguriert werden (siehe Abschnitt \vref{setup-operations-list-differentiation}, \menus{Konto-Differenzierung}).
+%The options in the \menus{View} menu affect the display of all accounts by default. You may prefer a different display for each account; this can be configured in the \menus{Edit - Preferences - Transactions - List Behaviour} menu (see the section \vref{setup-operations-list-differentiation}, \menus{Account Differentiation}).
+%Les options du menu \menus{Affichage} influent par défaut sur l'affichage de tous les comptes. Vous pouvez préférer un affichage différent pour chaque compte, cela est configurable dans le menu \menus{Éditer - Préférences - Opérations - Comportement de la liste} (voir le paragraphe \vref{setup-operations-list-differenciation}, \menus{Différenciation des comptes}).
 
 %Obsolete
 %La \indexword{barre d'outils}\index{barre d'outils!déplacement} peut être déplacée dans l'écran en cliquant sur sa poignée (petit rectangle vertical à gauche de la barre) et en la déplaçant. Pour la ré-attacher à son emplacement d'origine dans le pavé des détails, la remettre en haut de la fenêtre, le haut de la poignée sur le petit trait qui visualise sa place d'origine.
@@ -116,7 +172,7 @@ Vous pouvez choisir d'afficher ou non:
  \vspacepdf{3mm}
 Du point de vue de la base de données de Grisbi, une opération est constituée de ses \indexword{champs d'information}\index{champ d'information!définition}. Les champs d'information de chaque opération s'affichent dans les différentes \indexword{cellules}\index{cellule!champ d'information} définies par l'intersection des lignes et des colonnes. Il ne peut y avoir au maximum que quatre lignes et sept colonnes, ce qui définit un maximum de vingt-huit champs d'information pour chaque opération.
 
-Chaque opération peut être affichée sur 1, 2, 3 ou 4 lignes, suivant le mode d'affichage sélectionné (voir la section \vref{home-menus-display}, menu \menus{Affichage} dans la barre de menu ou la fonction \menus{Affichage} dans la section \vref{transactions-functions}, \menus{Barre d'outils}). L'affichage courant y est indiqué par une coche. 
+Chaque opération peut être affichée sur 1, 2, 3 ou 4 lignes, suivant le mode d'affichage sélectionné (voir la section \vref{home-menus-display}, menu \menus{Affichage} dans la barre de menu ou la fonction \menus{Affichage} dans la section \vref{transactions-functions}, \menus{Barre d'outils}). L'affichage courant y est indiqué par une coche.
 
 Vous pouvez aussi configurer le contenu de ces lignes, ainsi que la mémorisation des réglages de l'affichage, individuellement pour chaque compte, dans le menu \menus{Éditer - Préférences - Opérations} (voir les sections \vref{setup-operations-list}, \menus{Comportement de la liste} et \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}).
 
@@ -165,7 +221,7 @@ La liste des opérations et le formulaire de saisie utilisent chacun un sous-ens
 
 \subsection{Gestion des champs d'information\label{transactions-list-fields-manage}}
 
-Grisbi affiche par défaut, dans la liste des opérations, un certain nombre de ces champs (tiers, catégorie, débit, etc.). Mais vous pouvez aussi \indexword{gérer les champs d'information}\index{champ d'information!gestion} différemment, c'est à dire afficher de nouveaux champs, les modifier ou en supprimer l'affichage, à votre convenance. 
+Grisbi affiche par défaut, dans la liste des opérations, un certain nombre de ces champs (tiers, catégorie, débit, etc.). Mais vous pouvez aussi \indexword{gérer les champs d'information}\index{champ d'information!gestion} différemment, c'est à dire afficher de nouveaux champs, les modifier ou en supprimer l'affichage, à votre convenance.
 Vous pouvez soit faire ces manipulations dans le menu \menus{Éditer - Préférences - Opérations - Cellules de la liste des opérations}, qui offre un aperçu complet de la disposition des champs dans les cellules, et permet de faire plusieurs modifications facilement (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}), soit le faire directement dans la liste des opérations, en suivant les méthodes ci-dessous:
 
 
@@ -225,7 +281,7 @@ Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexwor
 	\item cliquez sur ce triangle pour changer l'ordre du tri.
 \end{enumerate}
 
-\Note{}: un tri sur l'affichage réalisé ainsi n'affecte en aucun cas le solde à chaque ligne, qui est calculé après chaque opération; suivant le tri et les options d'affichage que vous avez choisi, le solde à chaque ligne peut présenter une évolution non chronologique. 
+\Note{}: un tri sur l'affichage réalisé ainsi n'affecte en aucun cas le solde à chaque ligne, qui est calculé après chaque opération; suivant le tri et les options d'affichage que vous avez choisi, le solde à chaque ligne peut présenter une évolution non chronologique.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
@@ -389,7 +445,7 @@ La dernière ligne, entièrement vide, en bas de la liste des opérations, appar
 \vspacepdf{3mm}
 Saisissez les différentes informations concernant votre opération dans les différents champs du formulaire. Certains champs peuvent être renseignés soit avec le clavier, soit avec une liste déroulante. Si vous utilisez le clavier, cette saisie sera automatiquement enregistrée dans la liste déroulante de ce champ. Si vous le voulez, vous pourrez toujours supprimer plus tard ce choix dans la liste: reportez-vous aux différents chapitres traitant de ces listes (\menus{Tiers}, \menus{Catégories}, \menus{Imputations budgétaires} et les différents onglets de la section \menus{Ressources} du menu \menus{Éditer - Préférences}.
 
-Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}. 
+Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}.
 
 Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
@@ -512,18 +568,18 @@ Pour saisir une formule arithmétique, saisissez-la comme si c'était un texte, 
   s'affiche à la place et vous ne pourrez pas valider l'opération financière.
 
 Cette calculatrice accepte le mélange des points et des virgules comme séparateur décimal, par exemple %\frquote{1.2+2,3}
-, et Grisbi effectuera le calcul.  
+, et Grisbi effectuera le calcul.
 
 Cette calculatrice accepte la multiplication ou la division, mais de manière exclusive de l'addition ou de la soustraction; c'est-à-dire qu'on peut mélanger additions et soustractions dans une saisie mais pas une multiplication (ou une division) et un quelconque autre opérateur: on ne peut pas mettre de parenthèses pour indiquer un ordre de priorité d'opération.
 
-Cette fonctionnalité peut être très utile, notamment pour réajuster les montants d'une opération ventilée en cas d'écart. 
+Cette fonctionnalité peut être très utile, notamment pour réajuster les montants d'une opération ventilée en cas d'écart.
 
 
 \subsection{Remise de chèques ou d'espèces\label{transactions-new-cheque}}
 
 Pour enregistrer une \indexword{remise de chèques}\index{remise!chèques}, vous les déposez d'abord sur votre compte bancaire à la banque qui vous remet un bordereau de remise, puis vous saisissez l'opération de remise, en crédit sur votre compte bancaire.
 
-Pour enregistrer une \indexword{remise d'espèces}\index{remise!espèces}, vous les déposez d'abord soit sur votre compte bancaire à la banque qui vous remet un bordereau de remise, soit dans votre porte-monnaie, puis vous saisissez l'opération de remise, en crédit sur votre compte de caisse. 
+Pour enregistrer une \indexword{remise d'espèces}\index{remise!espèces}, vous les déposez d'abord soit sur votre compte bancaire à la banque qui vous remet un bordereau de remise, soit dans votre porte-monnaie, puis vous saisissez l'opération de remise, en crédit sur votre compte de caisse.
 
 % espace pour changement de thème
  \vspacepdf{3mm}
@@ -536,7 +592,7 @@ Si vous recevez beaucoup de chèques (par exemple parce que vous gérez une asso
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Si aucune de ces méthodes ne vous convient, une meilleure solution consiste à utiliser un \emph{compte d'attente}. Pour cela, la méthode est explicitée en détails au paragraphe \vref{accounts-type-bank-waiting-remittance}, \menus{Remise de chèques ou d'espèces}. 
+Si aucune de ces méthodes ne vous convient, une meilleure solution consiste à utiliser un \emph{compte d'attente}. Pour cela, la méthode est explicitée en détails au paragraphe \vref{accounts-type-bank-waiting-remittance}, \menus{Remise de chèques ou d'espèces}.
 
 
 \subsection{Virements\label{transactions-new-transfer}}
@@ -562,7 +618,7 @@ Les \indexword{virements internes}\index{virement!interne} sont des transferts e
 	\item si vous utilisez un compte bancaire pour une carte bancaire à débit différé, vous saisissez le prélèvement mensuel par votre banque comme un virement de votre compte courant vers ce compte de carte.
 \end{itemize}
 
-Par contre, si vous n'utilisez aucun de ces comptes et que votre fichier de comptes contient uniquement un compte courant et un compte d'épargne, alors les virements internes correspondent à des virements d'un compte vers l'autre. Ce seront bien des opérations de type \menus{Virement}, et vous les enregistrerez dans la catégorie \menus{Virement: Compte d'épargne} ou \menus{Virement: Compte courant}, selon le cas. 
+Par contre, si vous n'utilisez aucun de ces comptes et que votre fichier de comptes contient uniquement un compte courant et un compte d'épargne, alors les virements internes correspondent à des virements d'un compte vers l'autre. Ce seront bien des opérations de type \menus{Virement}, et vous les enregistrerez dans la catégorie \menus{Virement: Compte d'épargne} ou \menus{Virement: Compte courant}, selon le cas.
 
 Vous pouvez réaliser des virements entre comptes en sélectionnant la catégorie \emph{Virement: le\_compte\_ à\_virer}. Selon que vous saisissez son montant en \menus{Débit} ou en \menus{Crédit}, ce sera un virement \emph{vers le compte} ou un virement \emph{à partir du compte}. Il est bien sûr nécessaire que les deux comptes se trouvent dans le même fichier crée par Grisbi.
 
@@ -579,7 +635,7 @@ Si vous faites un \indexword{virement entre deux comptes de devises différentes
 
 Lorsque vous saisissez une opération de type virement interne, d'un compte vers un autre, ou sur un compte à partir d'un autre, Grisbi crée automatiquement la \indexword{contre-opération}\index{contre-opération}\index{opération!contre-opération}\index{virement!contre-opération} dans l'autre compte, c'est-à-dire le virement correspondant dans le compte destinataire ou dans le compte origine.
 
-S'il s'agit d'un virement en devises, il créera aussi la contre-opération dans la devise du compte de destination de façon automatique si le taux de change de la devise est fixe, sinon il vous le demandera avant de passer l'écriture. 
+S'il s'agit d'un virement en devises, il créera aussi la contre-opération dans la devise du compte de destination de façon automatique si le taux de change de la devise est fixe, sinon il vous le demandera avant de passer l'écriture.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
@@ -588,7 +644,7 @@ Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher}
 
 \subsection{Avances: consentement et réception\label{transactions-new-advance}}
 
-Vous pouvez être amené à \indexword{consentir ou recevoir une avance}\index{avance!consentement}\index{avance!réception} de fonds: il peut s'agir, par exemple, d'une avance sur votre salaire ou d'un achat que vous faites pour le compte d'un de vos amis. 
+Vous pouvez être amené à \indexword{consentir ou recevoir une avance}\index{avance!consentement}\index{avance!réception} de fonds: il peut s'agir, par exemple, d'une avance sur votre salaire ou d'un achat que vous faites pour le compte d'un de vos amis.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
@@ -601,7 +657,7 @@ Vous pouvez gérer cela de deux manières:
 
 \subsection{Rappel automatique d'une opération\label{transactions-new-recall}}
 
-Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération, si vous avez activé l'option de \menus{Remplissage automatique des opérations} (menu \menus{Éditer - Préférences - Formulaire des opérations - Aide à la saisie}), vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération. 
+Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération, si vous avez activé l'option de \menus{Remplissage automatique des opérations} (menu \menus{Éditer - Préférences - Formulaire des opérations - Aide à la saisie}), vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération.
 
 Vous pouvez ajuster finement ce comportement dans les \menus{Préférences} (voir la section \vref{setup-form-input}, \menus{Aide à la saisie du formulaire}).
 
@@ -660,7 +716,7 @@ Lorsque vous saisissez une opération avec pour tiers un tiers virtuel, Grisbi e
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme %\frquote{État : nom\_du\_tiers\_virtuel}. 
+Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme %\frquote{État : nom\_du\_tiers\_virtuel}.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
@@ -828,7 +884,7 @@ Dans la liste des opérations, vous pourrez reconnaitre votre opération ventil�
 
 %Une fois le dernier champ du formulaire saisi et validé, la ligne active, en rouge{couleur}, passe à la dernière ligne vide de la liste, comme pour une opération normale.
 
-%Vous pouvez vérifier tout le contenu de cette opération ventilée, en cliquant sur le petit triangle à gauche de sa ligne pour dérouler l'opération\refimage{transactions-breakdown-complete-img}. 
+%Vous pouvez vérifier tout le contenu de cette opération ventilée, en cliquant sur le petit triangle à gauche de sa ligne pour dérouler l'opération\refimage{transactions-breakdown-complete-img}.
 
 %\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
@@ -858,7 +914,7 @@ En cliquant sur le triangle à gauche de l'opération ventilée, vous sélection
 \subsection{Rappel automatique d'une opération ventilée\label{transactions-breakdown-recall}}
 
 Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération ventilée 
-fonctionne comme celui d'une opération normale (voir la section \vref{transactions-new-recall}, \menus{Rappel automatique d'une opération}). 
+fonctionne comme celui d'une opération normale (voir la section \vref{transactions-new-recall}, \menus{Rappel automatique d'une opération}).
 
 Cependant, pour une opération ventilée, une case à cocher intitulée \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche du bouton \menus{Annuler}, et vous pouvez cocher cette case selon votre besoin.
 
@@ -885,7 +941,7 @@ Si le formulaire de saisie n'est pas affiché, procédez d'une des manières sui
   
 A l'issue, la date s'affiche en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} dans le formulaire.
 
-Il est alors possible de modifier toutes les informations désirées, en se déplaçant dans les champs de saisie. 
+Il est alors possible de modifier toutes les informations désirées, en se déplaçant dans les champs de saisie.
 
 La combinaison de touches \keys{Ctrl+P} donne ou retire à une opération sélectionnée le statut d'\indexword{opération pointée}\index{opération!pointée}, et \keys{Ctrl+R} celui d'\indexword{opération rapprochée}\index{opération!rapprochée} (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}). Vous pouvez aussi donner à une opération le statut d'opération pointée, mais uniquement celui-ci, par la combinaison \keys{Ctrl+Clic} dans la colonne P/R, sur la ligne de l'opération à pointer.
 
@@ -1032,7 +1088,7 @@ En fonction de votre gestionnaire d'impression, vous pourrez disposer de réglag
 %
 %On voit régulièrement dans les documentations, livres et autres articles,
 %publiés sur l'Internet et ailleurs, le mot \emph{complétion}. Ceci est un
-%horrible anglicisme. 
+%horrible anglicisme.
 %
 %Que l'on assimile un mot anglais lorsque le mot français équivalent n'existe pas
 %peut se comprendre, encore que le néologisme intelligent me semble préférable.
@@ -1069,7 +1125,7 @@ En fonction de votre gestionnaire d'impression, vous pourrez disposer de réglag
 %\begin{description}
 %
 %\item [complètement]n.m. Action de compléter: \emph{le complètement
-%d'un livre}. 
+%d'un livre}.
 %
 %\end{description}
 %
