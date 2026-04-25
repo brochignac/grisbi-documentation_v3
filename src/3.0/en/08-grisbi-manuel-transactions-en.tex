@@ -75,51 +75,55 @@ The toolbar is located at the top of the details panel and offers the following 
 	 		\item whether or not to show the \indexword{archives lines}\index{display!archives lines} (\vref{datamanagement-archive-display}).
 	 		%\item l'affichage ou non des \indexword{lignes d'archives}\index{affichage!lignes d'archives} (\vref{datamanagement-archive-display}).
 		\end{itemize}
-	\item a quick search box and a drop-down list allowing you to filter by:
-	%\item un champ de recherche rapide et une liste déroulante permettant de filtrer selon:
+		\vspacepdf{2mm}
+		\Note{}: the options in the \menus{View} menu affect the display of all accounts by default. You may prefer a different display for each account; this can be configured in the \menus{Edit - Preferences - Transactions - List Behaviour} menu (see the section \vref{setup-operations-list-differentiation}, \menus{Account Differentiation}).
+		%\Note{}: les options du menu \menus{Affichage} influent par défaut sur l'affichage de tous les comptes. Vous pouvez préférer un affichage différent pour chaque compte, cela est configurable dans le menu \menus{Éditer - Préférences - Opérations - Comportement de la liste} (voir le paragraphe \vref{setup-operations-list-differenciation}, \menus{Différenciation des comptes}).	
+	\item a \menus{Search} box, which must contain at least three characters,
+	%\item un champ \menus{Rechercher}, à remplir avec trois caractères minimum, 
+	\item a drop-down list on the right that allows you to filter the displayed operations by:
+	%\item une liste déroulante associée, à droite, permettant de filtrer les opérations affichées selon:
 		\begin{itemize} 
-			\item \menus{Payee name},
+			\item the \menus{Payee name},
 			%\item le \menus{Nom du tiers},
-			\item \menus{Note},
-			%\item la \menus{remarque},
-			\item \menus{Payee and note},
-			%\item les \menus{Tiers et remarque},
-			\item \menus{Budgetary line},
+			\item the \menus{Note},
+			%\item la \menus{Remarque},
+			\item the \menus{Payee and note} (selected by default),
+			%\item les \menus{Tiers et remarque} (sélectionné par défaut),
+			\item the \menus{Budgetary line},
 			%\item l'\menus{Imputation budgétaire},
-			\item \menus{Category}.
+			\item the \menus{Category}.
 			%\item la \menus{Catégorie}.
 		\end{itemize}
+		\vspacepdf{2mm}
+		\Note{}: the search is case-insensitive and must include at least three (3) alphanumeric characters; it displays only the matching operations in the list of operations. The search is performed ONLY on the displayed operations (note whether or not the \indexword{reconciled operations}\index{show!reconciled operations} are shown) and does not include the archives.
+		%\Note{}: la recherche est insensible à la casse et doit se faire avec un minimum de trois (3) caractères alpha-numériques; elle affiche uniquement toutes les opérations correspondantes dans la liste des opérations. La recherche ne se fait QUE sur les opérations affichées (attention à l'affichage ou non des \indexword{opérations rapprochées}\index{affichage!opérations rapprochées}) et ne concerne pas les archives.
 \end{itemize}
 
-% espace pour changement de thème
-\vspacepdf{3mm}
-The options in the \menus{View} menu affect the display of all accounts by default. You may prefer a different display for each account; this can be configured in the \menus{Edit - Preferences - Transactions - List Behaviour} menu (see the section \vref{setup-operations-list-differentiation}, \menus{Account Differentiation}).
-%Les options du menu \menus{Affichage} influent par défaut sur l'affichage de tous les comptes. Vous pouvez préférer un affichage différent pour chaque compte, cela est configurable dans le menu \menus{Éditer - Préférences - Opérations - Comportement de la liste} (voir le paragraphe \vref{setup-operations-list-differenciation}, \menus{Différenciation des comptes}).
 
-%Obsolete
-%La \indexword{barre d'outils}\index{barre d'outils!déplacement} peut être déplacée dans l'écran en cliquant sur sa poignée (petit rectangle vertical à gauche de la barre) et en la déplaçant. Pour la ré-attacher à son emplacement d'origine dans le pavé des détails, la remettre en haut de la fenêtre, le haut de la poignée sur le petit trait qui visualise sa place d'origine.
-%Obsolete
-
-
-\section{Liste des opérations\label{transactions-list}}
+\section{List of transactions\label{transactions-list}}
+%\section{Liste des opérations\label{transactions-list}}
 
 
 \subsection{Description\label{transactions-list-description}}
+%\subsection{Description\label{transactions-list-description}}
 
-La liste des opérations s'affiche dans le panneau des détails\refimage{transactions-list-img} sous la barre d'outils.
+The list of transactions is displayed in the details panel\refimage{transactions-list-img} below the toolbar.
+%La liste des opérations s'affiche dans le panneau des détails\refimage{transactions-list-img} sous la barre d'outils.
 
 % image centrée 
 \begin{figure}[ht]
 	\begin{center}
 	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_list}
 	\end{center}
-	\caption{Liste des opérations}
+	\caption{List of transactions}
+	%\caption{Liste des opérations}
 	\label{transactions-list-img}
 \end{figure}
 % image centrée 
 
 
-Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la largeur des colonnes à leur valeur par défaut, sélectionnez dans la barre de menu \menus{Affichage - Réinitialiser la largeur des colonnes}.
+The column header bar is displayed at the top. You can \indexword{widen or narrow a column}\index{column!width} by clicking on the separator between two columns and dragging it. To restore the columns to their default width, select \menus{View - Reset the column width} from the menu bar.
+%Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la largeur des colonnes à leur valeur par défaut, sélectionnez dans la barre de menu \menus{Affichage - Réinitialiser la largeur des colonnes}.
 
 Vous pouvez déplacer la liste des opérations vers le haut ou vers le bas avec la molette de la souris, ou bien avec la souris et l'ascenseur vertical. Le déplacement vers la gauche ou la droite se fait avec la souris et l'ascenseur horizontal.
 
