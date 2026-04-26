@@ -11,7 +11,7 @@
 % $Id: grisbi-manuel-transactions.tex, v 1.0 2014/02/12 Jean-Luc Duflot
 % some of its content was in accounts chapter:
 % $Id: grisbi-manuel-accounts.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
-% $Id: 08-grisbi-manuel-transaction-fr.tex, v 3.0 2026/04 Dominique Brochard
+% $Id: 08-grisbi-manuel-transaction-fr.tex, v 3.0 2026/05 Dominique Brochard
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Account transactions\label{transactions}}
@@ -125,63 +125,100 @@ The list of transactions is displayed in the details panel\refimage{transactions
 The column header bar is displayed at the top. You can \indexword{widen or narrow a column}\index{column!width} by clicking on the separator between two columns and dragging it. To restore the columns to their default width, select \menus{View - Reset the column width} from the menu bar.
 %Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la largeur des colonnes à leur valeur par défaut, sélectionnez dans la barre de menu \menus{Affichage - Réinitialiser la largeur des colonnes}.
 
-Vous pouvez déplacer la liste des opérations vers le haut ou vers le bas avec la molette de la souris, ou bien avec la souris et l'ascenseur vertical. Le déplacement vers la gauche ou la droite se fait avec la souris et l'ascenseur horizontal.
+You can scroll the list of transactions up or down using the mouse wheel, or by dragging the vertical scroll bar. To scroll left or right, use the mouse to drag the horizontal scroll bar.
+%Vous pouvez déplacer la liste des opérations vers le haut ou vers le bas avec la molette de la souris, ou bien avec la souris et l'ascenseur vertical. Le déplacement vers la gauche ou la droite se fait avec la souris et l'ascenseur horizontal.
 
-Vous pouvez choisir d'afficher ou non:
+You can choose whether or not to display:
+%Vous pouvez choisir d'afficher ou non:
 \begin{itemize}
-	\item les \indexword{opérations rapprochées}\index{affichage!opérations rapprochées} en sélectionnant:
+	\item the \indexword{reconciled transactions}\index{display!reconciled transactions} by selecting:
+	%\item les \indexword{opérations rapprochées}\index{affichage!opérations rapprochées} en sélectionnant:
 		\begin{itemize}
-			\item dans la barre de menu \menus{Affichage - Montrer les opérations rapprochées} (\keys{Alt+R}) (voir la section \vref{home-menus-display}),
-			\item dans la barre d'outils \menus{Affichage - Montrer les opérations rapprochées} (section \vref{transactions-functions});
+			\item in the menu bar \menus{View - Show reconciled transactions} (\keys{Alt+R}) (see the section \vref{home-menus-display}),
+			%\item dans la barre de menu \menus{Affichage - Montrer les opérations rapprochées} (\keys{Alt+R}) (voir la section \vref{home-menus-display}),
+			\item in the toolbar \menus{View - Show reconciled Transactions} (section \vref{transactions-functions});
+			%\item dans la barre d'outils \menus{Affichage - Montrer les opérations rapprochées} (section \vref{transactions-functions});
 		\end{itemize} 
-	\item les \indexword{lignes d'archives}\index{affichage!lignes d'archives} (voir la section \menus{Affichage des archives} \vref{datamanagement-archive-display}):
+	\item the \indexword{lines archives}\index{display!lines archives} (see the section \menus{Archives display} \vref{datamanagement-archive-display}):
+	%\item les \indexword{lignes d'archives}\index{affichage!lignes d'archives} (voir la section \menus{Affichage des archives} \vref{datamanagement-archive-display}):
 		\begin{itemize}
-			\item dans la barre de menu \menus{Affichage - Montrer les lignes d'archives} (\keys{Alt+L}) (voir la section \vref{home-menus-display}),
-			\item dans la barre d'outils \menus{Affichage - Montrer les lignes d'archives} (section \vref{transactions-functions}).
+			\item in the menu bar \menus{View - Show lines archives} (\keys{Alt+L}) (see the section \vref{home-menus-display}),
+			%\item dans la barre de menu \menus{Affichage - Montrer les lignes d'archives} (\keys{Alt+L}) (voir la section \vref{home-menus-display}),
+			\item in the toolbar \menus{View - Show lines archives} (section \vref{transactions-functions}).
+			%\item dans la barre d'outils \menus{Affichage - Montrer les lignes d'archives} (section \vref{transactions-functions}).
 		\end{itemize}
 \end{itemize}
 
 
 % espace pour changement de thème
- \vspacepdf{3mm}
-Du point de vue de la base de données de Grisbi, une opération est constituée de ses \indexword{champs d'information}\index{champ d'information!définition}. Les champs d'information de chaque opération s'affichent dans les différentes \indexword{cellules}\index{cellule!champ d'information} définies par l'intersection des lignes et des colonnes. Il ne peut y avoir au maximum que quatre lignes et sept colonnes, ce qui définit un maximum de vingt-huit champs d'information pour chaque opération.
+\vspacepdf{3mm}
+From the perspective of the Grisbi database, a transaction consists of its \indexword{information fields}\index{information field!definition}. The information fields for each transaction are displayed in the various \indexword{cells}\index{cell!information field} defined by the intersection of rows and columns. There can be a maximum of four rows and seven columns, which defines a maximum of twenty-eight information fields for each transaction.
+%Du point de vue de la base de données de Grisbi, une opération est constituée de ses \indexword{champs d'information}\index{champ d'information!définition}. Les champs d'information de chaque opération s'affichent dans les différentes \indexword{cellules}\index{cellule!champ d'information} définies par l'intersection des lignes et des colonnes. Il ne peut y avoir au maximum que quatre lignes et sept colonnes, ce qui définit un maximum de vingt-huit champs d'information pour chaque opération.
 
-Chaque opération peut être affichée sur 1, 2, 3 ou 4 lignes, suivant le mode d'affichage sélectionné (voir la section \vref{home-menus-display}, menu \menus{Affichage} dans la barre de menu ou la fonction \menus{Affichage} dans la section \vref{transactions-functions}, \menus{Barre d'outils}). L'affichage courant y est indiqué par une coche. 
+Each transaction can be displayed over 1, 2, 3 or 4 lines, depending on the selected display mode (see the \vref{home-menus-display} section, the \menus{View} menu in the menu bar, or the \menus{View} function in the \vref{transactions-functions}, \menus{Toolbar} section). The current display is indicated by a tick.
+%Chaque opération peut être affichée sur 1, 2, 3 ou 4 lignes, suivant le mode d'affichage sélectionné (voir la section \vref{home-menus-display}, menu \menus{Affichage} dans la barre de menu ou la fonction \menus{Affichage} dans la section \vref{transactions-functions}, \menus{Barre d'outils}). L'affichage courant y est indiqué par une coche. 
 
-Vous pouvez aussi configurer le contenu de ces lignes, ainsi que la mémorisation des réglages de l'affichage, individuellement pour chaque compte, dans le menu \menus{Éditer - Préférences - Opérations} (voir les sections \vref{setup-operations-list}, \menus{Comportement de la liste} et \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}).
+You can also configure the content of these lines, as well as the saving of display settings, individually for each account, in the \menus{Edit - Preferences - Transactions} (see the sections \vref{setup-operations-list}, \menus{List behavior} and \vref{setup-operations-cells}, \menus{Transactions list cells}).
+%Vous pouvez aussi configurer le contenu de ces lignes, ainsi que la mémorisation des réglages de l'affichage, individuellement pour chaque compte, dans le menu \menus{Éditer - Préférences - Opérations} (voir les sections \vref{setup-operations-list}, \menus{Comportement de la liste} et \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}).
 
-Le \indexword{libellé d'une colonne}\index{colonne!libellé} est toujours le nom du champ d'information affiché dans la première ligne des opérations.
+The \indexword{column label}\index{column!label} is always the name of the information field displayed in the first row of the transactions.
+%Le \indexword{libellé d'une colonne}\index{colonne!libellé} est toujours le nom du champ d'information affiché dans la première ligne des opérations.
 
-Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
+To improve the readability of the display, Grisbi does not show any borders around cells, columns, rows or transactions, but instead uses alternating colours of  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{purple background}} and white for each line.
+%Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
 
 
-\subsection{Champs d'information et de saisie\label{transactions-list-fields}}
+\subsection{Information and input fields\label{transactions-list-fields}}
+%\subsection{Champs d'information et de saisie\label{transactions-list-fields}}
 
-Grisbi sait gérer, pour chaque opération, une liste complète de champs d'information et de saisie\index{champs d'information}\index{champs de saisie}, qui sont les suivants:
+Grisbi can manage, for each transaction, a complete list of information fields and input fields\index{information fields}\index{input fields}, which are as follows:
+%Grisbi sait gérer, pour chaque opération, une liste complète de champs d'information et de saisie\index{champs d'information}\index{champs de saisie}, qui sont les suivants:
 
 \begin{itemize}
-	\item \menus{Date de l'opération}\index{date!opération}: \indexword{date} à laquelle est réalisée l'opération; elle peut être utilisée pour calculer les soldes;
-	\item \menus{Date de valeur}\index{date!valeur}: \indexword{date} à laquelle la banque comptabilise l'opération; c'est cette date qui fait foi pour le calcul des intérêts et des agios; elle peut être utilisée pour calculer les soldes;
-	\item \menus{Tiers};
-	\item \menus{Imputation budgétaire};
-	\item \menus{Débit}: montant débité du solde du compte; dans le cas d'opérations dans une \indexword{devise différente}\index{devise!différente} de celle du compte, montant de l'opération dans la devise différente;
-	\item \menus{Crédit};
-	\item \menus{Solde}: montant toujours calculé \emph{après} l'opération affichée sur la même ligne; il dépend chronologiquement du \indexword{tri primaire}\index{tri!primaire} sélectionné; un \indexword{solde négatif}\index{solde!négatif} est affiché en \textcolor{red}{rouge};
-	\item \menus{Montant}: dans le cas d'opérations dans une \indexword{devise différente}\index{devise!différente} de celle du compte, montant de l'opération dans la devise du compte;
-	\item \menus{Moyen de paiement};
-	\item \menus{\No rapprochement}: numéro de chaque rapprochement dans chaque compte;
-	\item \menus{Exercice};
-	\item \menus{Catégorie};
-	\item \menus{P/R}: statut de l'opération, \emph{P (Pointé)} ou \emph{R (Rapproché)};
-	\item \menus{Pièce comptable}, par exemple le numéro de la facture (\menus{Pièce comptable} et \menus{Numéro d'opération} sont des références réciproques qui assurent la traçabilité de l'opération);
-	\item \menus{Remarques}: informations éventuelles sur l'opération;
-	\item \menus{Infos banque/guichet}, utile uniquement si vous enregistrez un chèque reçu;
-	\item \menus{\No opération}: il s'agit d'un numéro d'ordre unique que Grisbi attribue à chaque opération; vous pouvez reporter ce numéro sur la pièce comptable correspondante (\menus{\No opération} et \menus{Pièce comptable} sont des références réciproques qui assurent la traçabilité de l'opération);
-	\item \menus{\No de chèque} ou \menus{\No chèque/virement}, si le mode de règlement sélectionné permet cette saisie;
-	\item \menus{Devise} de l'opération;
-	\item \menus{change} correspondant au taux de change;
-	\item \menus{Mode de règlement de la \indexword{contre-opération}}\index{contre-opération}: vous pouvez le configurer pour chaque compte dans le menu \menus{Éditer - Préférences - Ressources} (voir la section \vref{setup-resources-modes}, \menus{Modes de règlement});
-	\item \menus{Auto/Manuel}: statut de l'exécution d'une opération planifiée
+	\item \menus{Transaction date}\index{date!transaction}: \indexword{date} on which the transaction took place; this can be used to calculate balances;
+	%\item \menus{Date de l'opération}\index{date!opération}: \indexword{date} à laquelle est réalisée l'opération; elle peut être utilisée pour calculer les soldes;
+	\item \menus{Value date}\index{date!value}: \indexword{date} on which the bank records the transaction; this is the date used for calculating interest and fees; it may be used to calculate balances;
+	%\item \menus{Date de valeur}\index{date!valeur}: \indexword{date} à laquelle la banque comptabilise l'opération; c'est cette date qui fait foi pour le calcul des intérêts et des agios; elle peut être utilisée pour calculer les soldes;
+	\item \menus{Payee};
+	%\item \menus{Tiers};
+	\item \menus{Budgetary line};
+	%\item \menus{Imputation budgétaire};
+	\item \menus{Debit}: amount debited from the account balance; in the case of transactions in a \indexword{different currency}\index{currency!different} from that of the account, the transaction amount in the different currency;
+	%\item \menus{Débit}: montant débité du solde du compte; dans le cas d'opérations dans une \indexword{devise différente}\index{devise!différente} de celle du compte, montant de l'opération dans la devise différente;
+	\item \menus{Credit};
+	%\item \menus{Crédit};
+	\item \menus{Balance}: an amount always calculated \emph{after} the operation displayed on the same line; it depends chronologically on the selected \indexword{primary sort}\index{sort!primary}; a \indexword{negative balance}\index{balance!negative} is displayed in \textcolor{red}{red};
+	%\item \menus{Solde}: montant toujours calculé \emph{après} l'opération affichée sur la même ligne; il dépend chronologiquement du \indexword{tri primaire}\index{tri!primaire} sélectionné; un \indexword{solde négatif}\index{solde!négatif} est affiché en \textcolor{red}{rouge};
+	\item \menus{Amount}: for transactions in a \indexword{different currency}\index{currency!different} from that of the account, the transaction amount in the account’s currency;
+	%\item \menus{Montant}: dans le cas d'opérations dans une \indexword{devise différente}\index{devise!différente} de celle du compte, montant de l'opération dans la devise du compte;
+	\item \menus{Method of payment};
+	%\item \menus{Moyen de paiement};
+	\item \menus{Reconciliation reference}: the number of each reconciliation entry in each account;
+	%\item \menus{\No rapprochement}: numéro de chaque rapprochement dans chaque compte;
+	\item \menus{Financial year};
+	%\item \menus{Exercice};
+	\item \menus{Category};
+	%\item \menus{Catégorie};
+	\item \menus{C/R}: transaction status, \emph{C (Pending)} or \emph{R (Reconciled)};
+	%\item \menus{P/R}: statut de l'opération, \emph{P (Pointé)} ou \emph{R (Rapproché)};
+	\item 
+	%\item \menus{Pièce comptable}, par exemple le numéro de la facture (\menus{Pièce comptable} et \menus{Numéro d'opération} sont des références réciproques qui assurent la traçabilité de l'opération);
+	\item 
+	%\item \menus{Remarques}: informations éventuelles sur l'opération;
+	\item 
+	%\item \menus{Infos banque/guichet}, utile uniquement si vous enregistrez un chèque reçu;
+	\item 
+	%\item \menus{\No opération}: il s'agit d'un numéro d'ordre unique que Grisbi attribue à chaque opération; vous pouvez reporter ce numéro sur la pièce comptable correspondante (\menus{\No opération} et \menus{Pièce comptable} sont des références réciproques qui assurent la traçabilité de l'opération);
+	\item 
+	%\item \menus{\No de chèque} ou \menus{\No chèque/virement}, si le mode de règlement sélectionné permet cette saisie;
+	\item 
+	%\item \menus{Devise} de l'opération;
+	\item 
+	%\item \menus{change} correspondant au taux de change;
+	\item 
+	%\item \menus{Mode de règlement de la \indexword{contre-opération}}\index{contre-opération}: vous pouvez le configurer pour chaque compte dans le menu \menus{Éditer - Préférences - Ressources} (voir la section \vref{setup-resources-modes}, \menus{Modes de règlement});
+	\item 
+	%\item \menus{Auto/Manuel}: statut de l'exécution d'une opération planifiée
 \end{itemize}
 
 % espace pour changement de thème
@@ -245,7 +282,8 @@ Pour \indexword{déplacer un champ d'information}\index{champ d'information!dép
 Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexword{tri sur les opérations}\index{tri!opérations} sur un des champs d'information; procédez comme suit:
 
 \begin{enumerate}
-	\item cliquez-droit sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri};
+	\item 
+	%\item cliquez-droit sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri};
 	\item un menu contextuel affiche la liste des champs de cette colonne; sélectionnez le champ choisi comme critère de tri;
 	\item toutes les opérations s'affichent, triées selon le critère choisi;
 	\item un petit triangle noir apparaît à droite ou à gauche du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
@@ -262,7 +300,8 @@ Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexwor
 Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-operations-list-modes}, \menus{Modes d'affichage}).
 
 \vspacepdf{3mm}
-\Note{}: le choix du critère de \gls{tri primaire} (date d'opération ou date de valeur) qui peut y avoir été fait modifie nécessairement le solde affiché à chaque ligne d'opération, puisque Grisbi calcule et affiche le solde à chaque ligne.
+
+%\Note{}: le choix du critère de \gls{tri primaire} (date d'opération ou date de valeur) qui peut y avoir été fait modifie nécessairement le solde affiché à chaque ligne d'opération, puisque Grisbi calcule et affiche le solde à chaque ligne.
 
 
 \section{Formulaire de saisie\label{transactions-form}}
