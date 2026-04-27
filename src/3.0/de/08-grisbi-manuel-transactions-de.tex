@@ -242,6 +242,127 @@ Um die Lesbarkeit der Anzeige zu gewährleisten, zeigt Grisbi keine Rahmen um Ze
 %\subsection{Information and input fields\label{transactions-list-fields}}
 %\subsection{Champs d'information et de saisie\label{transactions-list-fields}}
 
-Grisbi kann für jede Buchung eine vollständige Liste von Informations- und Eingabefeldern\index{Informationsfelder} \index{Eingabefelder} verwalten, die wie folgt lauten:
+Grisbi kann für jede Buchung eine vollständige Liste von Informations- und Eingabefeldern\index{Informationsfelder}\index{Eingabefelder} verwalten, die wie folgt lauten:
 %Grisbi can manage, for each transaction, a complete list of information fields and input fields\index{information fields}\index{input fields}, which are as follows:
 %Grisbi sait gérer, pour chaque opération, une liste complète de champs d'information et de saisie\index{champs d'information}\index{champs de saisie}, qui sont les suivants:
+
+\begin{itemize}
+	\item \menus{Datum} der Buchung\index{datum!buchung}: \indexword{Datum}, an dem die Buchung erfolgte; dies kann zur Berechnung von Salden verwendet werden;
+	%\item \menus{Date} of the transaction\index{date!transaction}: \indexword{date} on which the transaction took place; this can be used to calculate balances;
+	%\item \menus{Date} de l'opération\index{date!opération}: \indexword{date} à laquelle est réalisée l'opération; elle peut être utilisée pour calculer les soldes;
+	\item \menus{Valutadatum}\index{Valutadatum}: \indexword{Datum} – das Datum, an dem die Bank die Buchung erfasst; dieses Datum wird zur Berechnung von Zinsen und Gebühren herangezogen; es kann zur Berechnung von Salden verwendet werden;
+	%\item \menus{Value date}\index{date!value}: \indexword{date} on which the bank records the transaction; this is the date used for calculating interest and fees; it may be used to calculate balances;
+	%\item \menus{Date de valeur}\index{date!valeur}: \indexword{date} à laquelle la banque comptabilise l'opération; c'est cette date qui fait foi pour le calcul des intérêts et des agios; elle peut être utilisée pour calculer les soldes;
+	%\item \menus{Empfänger};
+	\item \menus{Payee};
+	%\item \menus{Tiers};
+	\item \menus{Gruppe};
+	%\item \menus{Budgetary line};
+	%\item \menus{Imputation budgétaire};
+	\item \menus{Ausgaben}: Betrag, der vom Kontostand abgebucht wird; bei Buchungen in einer \indexword{anderen Währung}\index{Währung!anderen} als der des Kontos: Betrag der Buchung in der anderen Währung;
+	%\item \menus{Debit}: amount debited from the account balance; in the case of transactions in a \indexword{different currency}\index{currency!different} from that of the account, the transaction amount in the different currency;
+	%\item \menus{Débit}: montant débité du solde du compte; dans le cas d'opérations dans une \indexword{devise différente}\index{devise!différente} de celle du compte, montant de l'opération dans la devise différente;
+	\item \menus{Einnahmen};
+	%\item \menus{Credit};
+	%\item \menus{Crédit};
+	\item \menus{Saldo}: Der Betrag wird immer \emph{nach} der in derselben Zeile angezeigten Buchung berechnet; er hängt chronologisch von der ausgewählten \indexword{primären Sortierung}\index{Sortierung!primären} ab; ein \indexword{negativer Saldo}\index{Saldo!negativer} wird in \textcolor{red}{rot} angezeigt;
+	%\item \menus{Balance}: an amount always calculated \emph{after} the operation displayed on the same line; it depends chronologically on the selected \indexword{primary sort}\index{sort!primary}; a \indexword{negative balance}\index{balance!negative} is displayed in \textcolor{red}{red};
+	%\item \menus{Solde}: montant toujours calculé \emph{après} l'opération affichée sur la même ligne; il dépend chronologiquement du \indexword{tri primaire}\index{tri!primaire} sélectionné; un \indexword{solde négatif}\index{solde!négatif} est affiché en \textcolor{red}{rouge};
+	\item \menus{Betrag}: Bei Buchungen in einer \indexword{anderen Währung}\index{Währung!andere} als der des Kontos: Betrag der Buchung in der Währung des Kontos;
+	%\item \menus{Amount}: for transactions in a \indexword{different currency}\index{currency!different} from that of the account, the transaction amount in the account’s currency;
+	%\item \menus{Montant}: dans le cas d'opérations dans une \indexword{devise différente}\index{devise!différente} de celle du compte, montant de l'opération dans la devise du compte;
+	\item \menus{Zahlungsweise};
+	%\item \menus{Method of payment};
+	%\item \menus{Moyen de paiement};
+	\item \menus{Abstimmung Nr.}: Nummer jedes Abstimmung in jedem Konto;
+	%\item \menus{Reconciliation reference}: the number of each reconciliation entry in each account;
+	%\item \menus{\No rapprochement}: numéro de chaque rapprochement dans chaque compte;
+	\item \menus{Geschäftsjahr};
+	%\item \menus{Financial year};
+	%\item \menus{Exercice};
+	\item \menus{Kategorie};
+	%\item \menus{Category};
+	%\item \menus{Catégorie};
+	\item \menus{V/A}: Buchungstatus, \emph{V (Verrechnet)} oder \emph{A (Abgestimmt)};
+	%todo waiting to change C/R to P/R
+	%\item \menus{C/R}: transaction status, \emph{C (Pending)} or \emph{R (Reconciled)};
+	%\item \menus{P/R}: statut de l'opération, \emph{P (Pointé)} ou \emph{R (Rapproché)};
+	\item \menus{Beleg}, zum Beispiel die Rechnungsnummer (\menus{Beleg} und \menus{Buchungsnummer} sind Querverweise, die die Rückverfolgbarkeit der Buchung gewährleisten);
+	%\item \menus{Voucher}, for example the invoice number (\menus{Voucher} and \menus{Transaction number} are cross-references that ensure the traceability of the transaction);
+	%\item \menus{Pièce comptable}, par exemple le numéro de la facture (\menus{Pièce comptable} et \menus{Numéro d'opération} sont des références réciproques qui assurent la traçabilité de l'opération);
+	\item \menus{Notizen}: alle relevanten Informationen zur Buchung;
+	%\item \menus{Notes}: any relevant information about the transaction;
+	%\item \menus{Remarques}: informations éventuelles sur l'opération;
+	\item \menus{Bank}, nur relevant, wenn Sie einen erhaltenen Scheck erfassen;
+	%\item \menus{Bank references}, only relevant if you are recording a cheque you have received;
+	%\item \menus{Infos banque/guichet}, utile uniquement si vous enregistrez un chèque reçu;
+	\item \menus{Buchungsnummer}: Dies ist eine eindeutige Seriennummer, die Grisbi jeder Transaktion zuweist; Sie können diese Nummer in den entsprechenden Beleg übertragen (\menus{Buchungsnummer} und \menus{Beleg} sind Querverweise, die die Rückverfolgbarkeit der Buchung gewährleisten);
+	%\item \menus{Transaction number}: this is a unique serial number that Grisbi assigns to each transaction; you can transfer this number to the corresponding voucher (\menus{Transaction number} and \menus{Voucher} are cross-references that ensure the transaction can be traced);
+	%\item \menus{\No opération}: il s'agit d'un numéro d'ordre unique que Grisbi attribue à chaque opération; vous pouvez reporter ce numéro sur la pièce comptable correspondante (\menus{\No opération} et \menus{Pièce comptable} sont des références réciproques qui assurent la traçabilité de l'opération);
+	\item \menus{Schecknummer} sofern die ausgewählte Zahlungsmethode die Eingabe dieser Informationen zulässt;
+	%\item \menus{Cheque number} or \menus{Cheque/Transfer number}, if the selected payment method allows this information to be entered;
+	%\item \menus{\No de chèque} ou \menus{\No chèque/virement}, si le mode de règlement sélectionné permet cette saisie;
+	\item \menus{Währung} der Buchung;
+	%\item \menus{Currency} of the transaction;
+	%\item \menus{Devise} de l'opération;
+	\item \menus{Ändern} entsprechend dem Wechselkurs;
+	%\item \menus{Change} corresponding to the exchange rate;
+	%\item \menus{Change} correspondant au taux de change;
+	\item \menus{\indexword{Gegenbuchung}\index{Gegenbuchung}} als Zahlungsweise: Sie können dies für jedes Konto im Menü \menus{Bearbeiten – Einstellungen – Finanzdaten} konfigurieren (siehe Abschnitt \vref{setup-resources-modes}, %\menus{Zahlungsweise});
+	%\item \menus{\indexword{Contra-transaction}\index{Contra-transaction} method of payment}: you can configure this for each account in the \menus{Edit - Preferences - Resources} menu (see the section \vref{setup-resources-modes}, \menus{Payment methods});
+	%\item \menus{Mode de règlement de la \indexword{contre-opération}}\index{contre-opération}: vous pouvez le configurer pour chaque compte dans le menu \menus{Éditer - Préférences - Ressources} (voir la section \vref{setup-resources-modes}, \menus{Modes de règlement});
+	\item \menus{Automatisch/Manuell}: Status der Ausführung eines geplanten Buchung.
+	%\item \menus{Automatic/Manual}: status of a scheduled transaction's execution.
+	%\item \menus{Auto/Manuel}: statut de l'exécution d'une opération planifiée.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{3mm}
+Die Liste der Buchungen und das Buchungsformular verwenden jeweils einen Teil dieser Felder. Die beiden vollständigen Listen finden Sie in den Tabellen im Menü \menus{Bearbeiten – Einstellungen}:
+%The list of transactions and the transaction/scheduled form each use a subset of these fields. You can view the two complete lists in the tables under the \menus{Edit - Preferences} menu:
+%La liste des opérations et le formulaire de saisie utilisent chacun un sous-ensemble de ces champs. Vous pouvez voir les deux listes complètes dans les tableaux du menu \menus{Éditer - Préférences}:
+\begin{itemize}
+	\item Abschnitt \menus{Buchungen - Buchungsübersicht Zellen} (siehe Abschnitt \vref{setup-operations-cells} \menus{Zellen in der Buchungsliste});
+	%\item section \menus{Transactions - Transactions list cells} (see section \vref{setup-operations-cells} \menus{Cells in the transaction list});
+	%\item section \menus{Opérations - Cellules de la liste des opérations} (voir la section \vref{setup-operations-cells} \menus{Cellules de la liste des opérations});
+	\item Abschnitt \menus{Buchungsformular - Darstellung} (see section \vref{setup-form-content} \menus{Darstellung}).
+	\item section \menus{Transaction Form - Content} (see section \vref{setup-form-content} \menus{Content}).
+	%\item section \menus{Formulaire des opérations - Contenu} (voir la section \vref{setup-form-content} \menus{Contenu}).
+\end{itemize}
+
+
+\subsection{Verwaltung von Informationsfeldern\label{transactions-list-fields-manage}}
+%\subsection{Management of information fields\label{transactions-list-fields-manage}}
+%\subsection{Gestion des champs d'information\label{transactions-list-fields-manage}}
+
+Grisbi zeigt in der Buchungsliste standardmäßig eine Reihe dieser Felder an (Empfänger, Kategorie, Ausgabe usw.). Sie können die \indexword{Informationsfelder} jedoch auch anders \indexword{verwalten}\index{Informationsfeld!Verwaltung}, d.h. nach Belieben neue Felder anzeigen, diese ändern oder deren Anzeige deaktivieren.
+%By default, Grisbi displays a number of these fields (third party, category, debit, etc.) in the transaction list. However, you can also \indexword{manage the information fields}\index{information field!management} differently, i.e. display new fields, modify them or hide them, as you see fit.
+%Grisbi affiche par défaut, dans la liste des opérations, un certain nombre de ces champs (tiers, catégorie, débit, etc.). Mais vous pouvez aussi \indexword{gérer les champs d'information}\index{champ d'information!gestion} différemment, c'est à dire afficher de nouveaux champs, les modifier ou en supprimer l'affichage, à votre convenance.
+Sie können diese Einstellungen entweder im Menü \menus{Bearbeiten - Einstellungen - Buchungen - Buchungsübersicht Zellen} vornehmen, das einen vollständigen Überblick über die Anordnung der Felder in den Zellen bietet und es ermöglicht, mehrere Änderungen einfach vorzunehmen (siehe Abschnitt \vref{setup-operations-cells}, \menus{Zellen der Buchungsliste}), oder direkt in der Buchungsliste, indem Sie die folgenden Methoden befolgen:
+%You can either carry out these actions in the \menus{Edit - Preferences - Transactions - Transactions list cells}, which provides a complete overview of the layout of fields within the cells and allows you to make several changes easily (see the section \vref{setup-operations-cells}, \menus{Transactions list cells}), or do so directly in the transaction list, using the methods below:
+%Vous pouvez soit faire ces manipulations dans le menu \menus{Éditer - Préférences - Opérations - Cellules de la liste des opérations}, qui offre un aperçu complet de la disposition des champs dans les cellules, et permet de faire plusieurs modifications facilement (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}), soit le faire directement dans la liste des opérations, en suivant les méthodes ci-dessous:
+
+
+\subsubsection{Hinzufügen eines Informationsfeldes\label{transactions-list-fields-add}}
+%\subsubsection{Adding an information field\label{transactions-list-fields-add}}
+%\subsubsection{Ajout d'un champ d'information\label{transactions-list-fields-add}}
+
+Um ein \indexword{Informationsfeld} in eine Zelle \indexword{einzufügen}\index{Informationsfeld!einzufügen}, gehen Sie wie folgt vor:
+%To \indexword{add an information field}\index{information field!add} to a cell, do the following:
+%Pour \indexword{ajouter un champ d'information}\index{champ d'information!ajouter} dans une cellule, procédez comme suit:
+
+\begin{enumerate}
+	\item Wählen Sie in der Werkzeugliste \menus{Ansicht - Vollständig} oder in der Menüleiste \menus{Ansicht - 4 Zeilen pro Buchung}, um sicherzustellen, dass alle 28 Zellen angezeigt werden;
+	%\item select \menus{View - Complete view} from the toolbar, or \menus{View - Show four lines per transaction} from the menu bar, to ensure that you can see all twenty-eight cells;
+	%\item sélectionnez dans la barre d'outils \menus{Affichage - Vue complète} ou dans la barre de menu \menus{Affichage - Montrer quatre lignes par opération}, pour vous assurer de voir toutes les vingt-huit cellules;
+	\item Klicken Sie mit der rechten Maustaste auf eine der leeren Zellen in der Spalte, in der Sie dieses Feld hinzufügen möchten: Seien Sie dabei genau, da nicht erkennbar ist, auf welche Zelle Sie geklickt haben;
+	%\item right-click in one of the empty cells in the column where you want to add this field: be precise, as there is no way of telling which cell you have clicked on;
+	%\item cliquez-droit dans une des cellules vides de la colonne où vous voulez ajouter ce champ: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
+	\item Es erscheint ein Kontextmenü; wählen Sie \menus{Spalte auswählen}; vergewissern Sie sich, dass in dieser Zelle noch kein Informationsfeld vorhanden ist, indem Sie sicherstellen, dass keines der Felder in der Dropdown-Liste links neben seinem Namen mit einem Häkchen markiert ist;
+	%\item a context menu will appear; select \menus{Change cell content}; check that there is no information field already in this cell by ensuring that none of the fields in the drop-down list has a tick to the left of its name;
+	%\item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; vérifiez qu'il n'y a pas déjà de champ d'information dans cette cellule, en constatant qu'aucun champ de la liste déroulante n'a de coche à gauche de son nom;
+	\item Wählen Sie ein Informationsfeld aus der Liste aus; dieses Feld wird in die ausgewählte Zelle eingefügt und bei allen Buchungen in der Liste angezeigt.
+	%\item select an information field from the list; this field will be added to the selected cell, and all transactions in the list will display it.
+	%\item choisissez un champ d'information proposé dans la liste; ce champ s'ajoute dans la cellule choisie, et toutes les opérations de la liste l'affichent.
+\end{enumerate}
+
