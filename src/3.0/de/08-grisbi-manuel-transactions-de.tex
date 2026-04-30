@@ -284,7 +284,6 @@ Grisbi kann für jede Buchung eine vollständige Liste von Informations- und Ein
 	%\item \menus{Category};
 	%\item \menus{Catégorie};
 	\item \menus{V/A}: Buchungstatus, \emph{V (Verrechnet)} oder \emph{A (Abgestimmt)};
-	%todo waiting to change C/R to P/R
 	%\item \menus{C/R}: transaction status, \emph{C (Pending)} or \emph{R (Reconciled)};
 	%\item \menus{P/R}: statut de l'opération, \emph{P (Pointé)} ou \emph{R (Rapproché)};
 	\item \menus{Beleg}, zum Beispiel die Rechnungsnummer (\menus{Beleg} und \menus{Buchungsnummer} sind Querverweise, die die Rückverfolgbarkeit der Buchung gewährleisten);
@@ -347,7 +346,7 @@ Sie können diese Einstellungen entweder im Menü \menus{Bearbeiten - Einstellun
 %\subsubsection{Adding an information field\label{transactions-list-fields-add}}
 %\subsubsection{Ajout d'un champ d'information\label{transactions-list-fields-add}}
 
-Um ein \indexword{Informationsfeld} in eine Zelle \indexword{einzufügen}\index{Informationsfeld!einzufügen}, gehen Sie wie folgt vor:
+Um ein \indexword{Informationsfeld}\index{Informationsfeld!einzufügen} in eine Zelle \indexword{einzufügen}, gehen Sie wie folgt vor:
 %To \indexword{add an information field}\index{information field!add} to a cell, do the following:
 %Pour \indexword{ajouter un champ d'information}\index{champ d'information!ajouter} dans une cellule, procédez comme suit:
 
@@ -365,4 +364,208 @@ Um ein \indexword{Informationsfeld} in eine Zelle \indexword{einzufügen}\index{
 	%\item select an information field from the list; this field will be added to the selected cell, and all transactions in the list will display it.
 	%\item choisissez un champ d'information proposé dans la liste; ce champ s'ajoute dans la cellule choisie, et toutes les opérations de la liste l'affichent.
 \end{enumerate}
+
+
+\subsubsection{Änderung eines Informationsfeldes\label{transactions-list-fields-modify}}
+%\subsubsection{Editing an information field\label{transactions-list-fields-modify}}
+%\subsubsection{Modification d'un champ d'information\label{transactions-list-fields-modify}}
+
+Um ein \indexword{Informationsfeld}\index{Informationsfeld!bearbeiten} in einer Zelle zu \indexword{bearbeiten}, gehen Sie wie folgt vor:
+%To \indexword{edit an information field}\index{information field!edit} in a cell, do the following:
+%Pour \indexword{modifier un champ d'information}\index{champ d'information!modifier} dans une cellule, procédez comme suit:
+
+\begin{enumerate}
+	\item Wählen Sie in der Werkzeugliste \menus{Ansicht - Vollständig} oder in der Menüleiste \menus{Ansicht - 4 Zeilen pro Buchung}, um sicherzustellen, dass alle 28 Zellen angezeigt werden;
+	%\item select \menus{View - Complete view} from the toolbar, or \menus{View - Show four lines per transaction} from the menu bar, to ensure that you can see all twenty-eight cells;
+	%\item sélectionnez dans la barre d'outils \menus{Affichage - Vue complète} ou dans la barre de menu \menus{Affichage - Montrer quatre lignes par opération}, pour vous assurer de voir toutes les vingt-huit cellules;
+	\item Klicken Sie mit der rechten Maustaste auf eine der leeren Zellen in der Spalte, in der Sie dieses Feld bearbeiten möchten: Seien Sie dabei genau, da nicht erkennbar ist, auf welche Zelle Sie geklickt haben;
+	%\item right-click in one of the empty cells in the column where you want to modify this field: be precise, as there is no way of telling which cell you have clicked on;
+	%\item cliquez-droit dans une des cellules vides de la colonne où vous voulez modifier ce champ: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
+	\item Es erscheint ein Kontextmenü; wählen Sie \menus{Spalte auswählen}; Das Feld mit den aktuellen Informationen in dieser Zelle ist durch ein Häkchen links neben dem Namen gekennzeichnet;
+	%\item a context menu will appear; select \menus{Change cell content}; the current information field in this cell is indicated by a tick to the left of its name;
+	%\item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; le champ d'information actuel dans cette cellule est indiqué par une coche à gauche de son nom;
+	\item Wählen Sie ein anderes Feld aus der Liste aus; dieses Feld ersetzt das vorherige in der ausgewählten Zelle, und es wird in allen Buchungen der Liste angezeigt.
+	%\item select another field from the list; this field will replace the previous one in the selected cell, and all transactions in the list will display it.
+	%\item choisissez un autre champ d'information proposé dans la liste; ce champ remplace le précédent dans la cellule choisie, et toutes les opérations de la liste l'affichent.
+\end{enumerate}
+
+
+\subsubsection{Ein Informationsfeld löschen\label{transactions-list-fields-remove}}
+%\subsubsection{Deleting an information field\label{transactions-list-fields-remove}}
+%\subsubsection{Suppression d'un champ d'information\label{transactions-list-fields-remove}}
+
+Um ein \indexword{Informationsfeld}\index{Informationsfeld!löschen} in einer Zelle zu \indexword{löschen}, gehen Sie wie folgt vor:
+%To \indexword{delete an information field}\index{information field!delete} in a cell, do the following:
+%Pour \indexword{supprimer un champ d'information}\index{champ d'information!supprimer} dans une cellule, procédez comme suit:
+
+\begin{enumerate}
+	\item Wählen Sie in der Werkzeugliste \menus{Ansicht - Vollständig} oder in der Menüleiste \menus{Ansicht - 4 Zeilen pro Buchung}, um sicherzustellen, dass alle 28 Zellen angezeigt werden;
+	%\item select \menus{View - Complete view} from the toolbar, or \menus{View - Show four lines per transaction} from the menu bar, to ensure that you can see all twenty-eight cells;
+	%\item sélectionnez \menus{Affichage - Vue complète} dans la barre d'outils ou \menus{Affichage - Montrer quatre lignes par opération} dans la barre de menu, pour vous assurer de voir toutes les vingt-huit cellules;
+	\item Klicken Sie mit der rechten Maustaste in die Zelle des Feldes, das Sie löschen möchten: Gehen Sie dabei vorsichtig vor, da nicht erkennbar ist, auf welche Zelle Sie geklickt haben;
+	%\item right-click in the cell of the field you want to delete: be sure to do this carefully, as there is no way of telling which cell you have clicked on;
+	%\item cliquez-droit dans la cellule du champ à supprimer: faites-le précisément, car rien ne permet d'identifier sur quelle cellule vous avez cliqué;
+	\item Es erscheint ein Kontextmenü; wählen Sie \menus{Spalte auswählen}; Das Feld mit den aktuellen Informationen in dieser Zelle ist durch ein Häkchen links neben dem Namen gekennzeichnet;
+	%\item a context menu will appear; select \menus{Change cell content}; the current information field in this cell is indicated by a tick to the left of its name;
+	%\item un menu contextuel s'affiche; sélectionnez \menus{Modifier le contenu de la cellule}; le champ d'information actuel dans cette cellule est indiqué par une coche à gauche de son nom;
+	\item Wählen Sie in der Liste den \menus{Zelle löschen} aus; das aktuelle Informationsfeld wird für alle Buchungen in der Liste ausgeblendet (die Informationen werden jedoch unter keinen Umständen aus Ihrer Kontodatei gelöscht).
+	%\item select \menus{Clear Cell} from the list; the current information field will disappear for all operations in the list (but the information will not be deleted from your accounts file under any circumstances).
+	%\item choisissez \menus{Effacer la cellule} dans la liste; le champ d'information actuel disparaît pour toutes les opérations de la liste (mais les informations ne sont en aucun cas supprimées de votre fichier de comptes).
+\end{enumerate}
+
+
+\subsubsection{Ein Informationsfeld verschieben\label{transactions-list-fields-move}}
+%\subsubsection{Moving an information field\label{transactions-list-fields-move}}
+%\subsubsection{Déplacement d'un champ d'information\label{transactions-list-fields-move}}
+
+
+Um \indexword{ein Informationsfeld zu verschieben}\index{Informationsfeld!verschieben}, können Sie es löschen und anschließend in ein anderes leeres Feld einfügen; dies ist jedoch auch über das Menü \menus{Bearbeiten - Einstellungen - Buchungen - Buchungsübersicht Zellen} möglich (siehe Abschnitt \vref{setup-operations-cells}, \menus{Buchungsübersicht Zellen}).
+%To \indexword{move an information field}\index{information field!move}, you can delete it and then add it to another empty field, but you can also do this via the \menus{Edit - Preferences - Transactions - Transactions list cells} (see the section \vref{setup-operations-cells}, \menus{Transactions list cells}).
+%Pour \indexword{déplacer un champ d'information}\index{champ d'information!déplacer}, vous pouvez le supprimer puis l'ajouter dans un autre champ vide, mais vous pouvez aussi le faire dans le menu \menus{Éditer - Préférences - Opérations - Cellules de la liste des opérations} (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations}).
+
+
+\subsection{Sortierung\label{transactions-list-sorts}}
+%\subsection{Sorts\label{transactions-list-sorts}}
+%\subsection{Tris\label{transactions-list-sorts}}
+
+Um die Reihenfolge der Buchungen zu ändern, können Sie eine \indexword{Sortierung der Buchungen}\index{Sortierung!Buchungen} nach einem der Informationsfelder vornehmen; gehen Sie dazu wie folgt vor:
+%To change the order in which transactions are displayed, you can \indexword{sort the transactions}\index{sort!transactions} by one of the information fields; proceed as follows:
+%Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexword{tri sur les opérations}\index{tri!opérations} sur un des champs d'information; procédez comme suit:
+
+
+\begin{enumerate}
+	\item Klicken Sie mit der rechten Maustaste auf die Spaltenüberschrift, die das als \gls{Sortierung} Kriterium ausgewählte Feld enthält;
+	%\item right-click on the column header containing the field selected as the \gls{sorting} criterion;
+	%\item cliquez-droit sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri};
+	\item Ein Kontextmenü zeigt eine Liste der Felder in dieser Spalte an; wählen Sie das Feld aus, das Sie als Sortierkriterium verwenden möchten;
+	%\item a context menu displays a list of the fields in that column; select the field you wish to use as the sort criterion;
+	%\item un menu contextuel affiche la liste des champs de cette colonne; sélectionnez le champ choisi comme critère de tri;
+	\item Es werden alle Buchungen angezeigt, sortiert nach dem ausgewählten Kriterium;
+	%\item all transactions are displayed, sorted according to the selected criterion;
+	%\item toutes les opérations s'affichent, triées selon le critère choisi;
+	\item rechts oder links neben der Spaltenüberschrift erscheint ein kleines schwarzes Dreieck; es zeigt nach unten, wenn die Sortierung aufsteigend ist, und nach oben, wenn sie absteigend ist;
+	%\item a small black triangle appears to the right or left of the column heading; it points downwards if the sort is ascending, and upwards if it is descending;
+	%\item un petit triangle noir apparaît à droite ou à gauche du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
+	%\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+	%\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+	\item Klicken Sie auf dieses Dreieck, um die Sortierreihenfolge zu ändern.
+	%\item click on this triangle to change the sort order.
+	%\item cliquez sur ce triangle pour changer l'ordre du tri.
+\end{enumerate}
+
+\Note{}: Eine derartige Sortierung der Anzeige hat keinerlei Auswirkungen auf den Saldo in den einzelnen Zeilen, der nach jedem Buchung neu berechnet wird; je nach gewählter Sortierung und den von Ihnen gewählten Anzeigeoptionen kann der Saldo in den einzelnen Zeilen eine nicht chronologische Entwicklung aufweisen.
+%\Note{}: sorting the display in this way does not affect the balance for each line, which is calculated after each transaction; depending on the sort order and display options you have chosen, the balance for each line may not appear in chronological order.
+%\Note{}: un tri sur l'affichage réalisé ainsi n'affecte en aucun cas le solde à chaque ligne, qui est calculé après chaque opération; suivant le tri et les options d'affichage que vous avez choisi, le solde à chaque ligne peut présenter une évolution non chronologique.
+
+%espace pour changement de thème
+\vspacepdf{3mm}
+Sie können die allgemeine Sortierreihenfolge auch im Menü \menus{Bearbeiten – Einstellungen} konfigurieren (siehe den Abschnitt \vref{setup-operations-list-modes}, \menus{Buchungsübersicht Einstellungen}).
+%You can also configure the general sort order in the \menus{Edit - Preferences} menu (see the section \vref{setup-operations-list-modes}, \menus{Transaction list behavior}).
+%Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-operations-list-modes}, \menus{Comportement de la liste des opérations}).
+
+\vspacepdf{3mm}
+\Note{}: Die Wahl des dort möglicherweise ausgewählten Kriteriums für die \gls{Primärsortierung} (Buchungsdatum oder Valutadatum) wirkt sich zwangsläufig auf den in jeder Buchungszeile angezeigten Saldo aus, da Grisbi den Saldo in jeder Zeile berechnet und anzeigt.
+%\Note{}: the choice of the \gls{primary sorting} criterion (transaction date or value date) that may have been selected there will necessarily affect the balance displayed on each transaction line, as Grisbi calculates and displays the balance on each line.
+%\Note{}: le choix du critère de \gls{tri primaire} (date d'opération ou date de valeur) qui peut y avoir été fait modifie nécessairement le solde affiché à chaque ligne d'opération, puisque Grisbi calcule et affiche le solde à chaque ligne.
+
+
+\section{Buchungsformular\label{transactions-form}}
+%\section{Transaction/Scheduled entry form\label{transactions-form}}
+%\section{Formulaire de saisie\label{transactions-form}}
+
+Das Eingabeformular befindet sich unterhalb der Buchungsliste, wo links neben \menus{Buchungsformular} ein kleines Dreieck angezeigt wird, mit dem man dieses Formular \indexword{ein- oder ausblenden}\index{Buchungsformular!ein- oder ausblenden} kann\refimage{transactions-form-img}.
+%The entry form is located below the list of transactions, where a line displays, to the left of \menus{Transaction/Scheduled Form}, a small triangle that allows you to \indexword{show or hide}\index{entry-form!hide-show} this form\refimage{transactions-form-img}.
+%Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher ou de masquer}\index{formulaire de saisie!masquer-afficher} ce formulaire\refimage{transactions-form-img}.
+
+% image centrée 
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_form}
+	\end{center}
+	\caption{Individuelles Formular zur Erfassung von Buchungen}
+	%\caption{Customised transaction entry form}
+	%\caption{Formulaire personnalisé de saisie des opérations}
+	\label{transactions-form-img}
+\end{figure}
+% image centrée 
+
+
+\Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
+%\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\newline
+
+Das Buchungsformular enthält standardmäßig die folgenden sieben Felder:
+%The entry form includes the following seven fields by default:
+%Le formulaire de saisie comprend par défaut les sept champs suivants:
+\begin{itemize}
+	\item \menus{Datum} der Buchung,
+	%\item \menus{Date} of the operation,
+	%\item \menus{Date} de l'opération,
+	\item \menus{Empfänger},
+	%\item \menus{Payee},
+	%\item \menus{Tiers},
+	\item \menus{Ausgaben},
+	%\item \menus{Debit},
+	%\item \menus{Débit},
+	\item \menus{Einnahmen},
+	%\item \menus{Credit},
+	%\item \menus{Crédit},
+	\item \menus{Kategorien : Unterkategorien},
+	%\item \menus{Categories : Sub-categories},
+	%\item \menus{Catégorie},
+	\item \menus{Zahlungsweise},
+	\item \menus{Method of payment}
+	%\item \menus{Moyen de paiement},
+	\item \menus{Notiz}.
+	\item \menus{Notes}
+	%\item \menus{Remarques}.
+\end{itemize}
+Möglicherweise benötigen Sie zusätzliche Felder wie \menus{Geschäftsjahr}, \menus{Gruppen} oder andere; dies nehmen Sie in den Einstellungen für den Formularinhalt vor. Es gibt zwei Möglichkeiten, darauf zuzugreifen:
+%You may need additional fields, such as \menus{Financial year}, \menus{Budgetary line} or others; this is done in the form content settings. There are two ways to access them:
+%Vous pouvez avoir besoin de champs supplémentaires, par exemple \menus{Exercice}, \menus{Imputation budgétaire} ou autres; cela se fait dans les paramètres du contenu du formulaire. Vous pouvez y accéder de deux façons différentes:
+\begin{itemize}
+	\item entweder durch einen Rechtsklick in das Buchungsformular, in einen grauen Bereich außerhalb der Eingabefelder, und anschließendes Klicken auf die Schaltfläche \menus{Buchungsformular Einstellungen} (siehe Abschnitt \vref{setup-form}, \menus{Buchungsformular - Darstellung}),
+	%\item either by right-clicking in the entry form, in a grey area outside the entry fields, and then clicking the \menus{Configure the form} button (see the section \vref{setup-form}, \menus{Transaction Form - Content}),
+	%\item soit par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, puis en cliquant sur le bouton \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations - Contenu}),
+	\item oder indem Sie über das Menü \menus{Bearbeiten - Einstellungen - Buchungsformular - Darstellung} die Felder nach Ihren Wünschen bearbeiten.
+	%\item or by going to the \menus{Edit - Preferences - Transaction Form - Content} menu to edit the fields as you wish.
+	%\item soit en allant dans le menu \menus{Éditer - Préférences - Formulaire des opérations - Contenu} pour modifier les champs à votre convenance.
+\end{itemize}
+%espace pour changement de thème
+\vspacepdf{3mm}
+Eine vollständige Liste der Felder, die Grisbi verarbeiten kann, finden Sie im Abschnitt \vref{transactions-list-fields}, \menus{Informationen und Eingabefelder}
+For a full list of the fields that Grisbi can handle, see the section \vref{transactions-list-fields}, \menus{Information and entry fields}
+%Pour connaître l'ensemble des champs que peut gérer Grisbi, voir la section \vref{transactions-list-fields}, \menus{Champs d'information et de saisie}.
+
+\vspacepdf{3mm}
+Sobald das Formular angezeigt wird, können Sie über ein Kontextmenü, das durch einen Rechtsklick in ein Eingabefeld aufgerufen wird, folgende Aktionen ausführen:
+Once the form is displayed, a context menu that can be accessed by right-clicking in an entry field allows you to perform the following actions:
+%Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit dans un champ de saisie permet d'effectuer les actions suivantes:
+
+\begin{itemize}
+	\item \menus{Ausschneiden} (die Auswahl);
+	%\item \menus{Cut} (selection);
+	%\item \menus{Couper} (la sélection);
+	\item \menus{Kopieren} (die Auswahl);
+	%\item \menus{Copy} (selection);
+	%\item \menus{Copier} (la sélection);
+	\item \menus{Einfügen} (die Auswahl);
+	%\item \menus{Paste} ()selection;
+	%\item \menus{Coller} (la sélection);
+	\item \menus{Löschen} (die Auswahl);
+	%\item \menus{Delete} (selection);
+	%\item \menus{Supprimer} (la sélection);
+	\item[]\hspace{-12pt} puis
+	\item \menus{Alle auswählen} (im Eingabefeld);
+	%\item \menus{Select All} (in the entry field);
+	%\item \menus{Tout sélectionner} (dans le champ de saisie);
+	\item \menus{Emoji Einfügen}\index{Emoji}.
+	%\item \menus{Insert Emoji}\index{emoji}.
+	%\item \menus{Insérer un émoji}\index{émoji}.
+\end{itemize}
+
 

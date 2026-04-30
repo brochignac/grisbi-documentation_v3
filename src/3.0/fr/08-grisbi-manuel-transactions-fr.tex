@@ -222,13 +222,13 @@ Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexwor
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-operations-list-modes}, \menus{Modes d'affichage}).
+Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-operations-list-modes}, \menus{Comportement de la liste des opérations}).
 
 \vspacepdf{3mm}
 \Note{}: le choix du critère de \gls{tri primaire} (date d'opération ou date de valeur) qui peut y avoir été fait modifie nécessairement le solde affiché à chaque ligne d'opération, puisque Grisbi calcule et affiche le solde à chaque ligne.
 
 
-\section{Formulaire de saisie\label{transactions-form}}
+\section{Formulaire de saisie des opérations\label{transactions-form}}
 
 Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher ou de masquer}\index{formulaire de saisie!masquer-afficher} ce formulaire\refimage{transactions-form-img}.
 
@@ -237,6 +237,7 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 	\begin{center}
 	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_form}
 	\end{center}
+	\vspace{-10pt}
 	\caption{Formulaire personnalisé de saisie des opérations}
 	\label{transactions-form-img}
 \end{figure}
@@ -248,19 +249,18 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 
 Le formulaire de saisie comprend par défaut les sept champs suivants:
 \begin{itemize}
-	\item \menus{Date de l'opération},
+	\item \menus{Date} de l'opération,
 	\item \menus{Tiers},
 	\item \menus{Débit},
 	\item \menus{Crédit},
-	\item \menus{Catégorie},
+	\item \menus{Catégories : Sous-catégories},
 	\item \menus{Moyen de paiement},
 	\item \menus{Remarques}.
 \end{itemize}
-Vous pouvez avoir besoin de champs supplémentaires, par exemple \menus{Exercice}, \menus{Imputation budgétaire} ou autre. Vous pouvez procéder de deux façons: 
+Vous pouvez avoir besoin de champs supplémentaires, par exemple \menus{Exercice}, \menus{Imputation budgétaire} ou autres; cela se fait dans les paramètres du contenu du formulaire. Vous pouvez y accéder de deux façons différentes:
 \begin{itemize}
-	\item soit par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, puis en cliquant sur le bouton \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}),
-	\item soit en allant dans le menu \menus{Éditer - Préférences - Formulaire des opérations - Contenu} pour modifier les champs à votre convenance.
-.
+	\item soit par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, puis en cliquant sur le bouton \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations - Contenu}),
+	\item soit par le menu \menus{Éditer - Préférences - Formulaire des opérations - Contenu} pour modifier les champs à votre convenance.
 \end{itemize}
 %espace pour changement de thème
 \vspacepdf{3mm}
