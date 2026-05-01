@@ -230,7 +230,7 @@ Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Édi
 
 \section{Formulaire de saisie des opérations\label{transactions-form}}
 
-Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher ou de masquer}\index{formulaire de saisie!masquer-afficher} ce formulaire\refimage{transactions-form-img}.
+Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher}(voir aussi \vref{transactions-new-display}) \indexword{ou de masquer}\index{formulaire de saisie!afficher-masquer} ce formulaire\refimage{transactions-form-img}.
 
 % image centrée 
 \begin{figure}[htbp]
@@ -287,14 +287,14 @@ Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit
 
 \section{Solde pointé\label{transactions-balance}}
 
-En-dessous de la liste des opérations, sur la même ligne que le formulaire de saisie, s'affichent à droite deux informations:
+En-dessous de la liste des opérations, sur la même ligne que le libellé \menus{Formulaire de saisie des opérations}, s'affichent à droite deux informations:
 \begin{itemize}
 	\item la date du dernier relevé bancaire rapproché,
 	\item le \indexword{solde pointé}\index{solde!pointé} correspondant à ce dernier rapprochement, à moins que vous ne pointiez très régulièrement vos opérations, auquel cas il correspond au solde tel que le connaît votre banque (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}).
 \end{itemize}
 
 
-\section{Sélection d'une opération \label{transactions-selection}}
+\section{Sélection d'une opération\label{transactions-selection}}
 
 Pour sélectionner une opération, vous avez deux moyens:
 
@@ -305,7 +305,7 @@ Pour sélectionner une opération, vous avez deux moyens:
 
 L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
 
-Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, selon le contexte, les fonctions suivantes:
+Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, selon le contexte, les fonctions suivantes\refimage{transactions-contextMenu-img}:
 
 \vspace{3mm}
 \noindent
@@ -349,6 +349,8 @@ Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, sel
 
 La saisie d'une opération se fait dans le formulaire de saisie, situé en-dessous de la liste des opérations.
 
+\subsection{Affichage du formulaire\label{transactions-new-display}}
+
 Pour ouvrir ou affichez le formulaire de saisie, utilisez une des méthodes suivantes:
 
 \begin{itemize}
@@ -358,12 +360,17 @@ Pour ouvrir ou affichez le formulaire de saisie, utilisez une des méthodes suiv
 	\item double-cliquez sur la ligne vide en bas de la liste des opérations;
 	\item appuyez sur la combinaison de touches \keys{Ctrl+T};
 	\item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
-	\item dans le menu contextuel, sélectionnez \menus{Nouvelle opération};
+	\item dans le menu contextuel de la liste des opérations, sélectionnez \menus{Nouvelle opération};
 	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
 
-% saut de ligne pour indentation correcte de la note dans la liste
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
 	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
+
+La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
+
+\subsection{Masquage du formulaire\label{transactions-new-hide}}
 
 Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
 
@@ -371,15 +378,14 @@ Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
 	\item dans la barre de menu, sélectionnez \menus{Affichage} et décochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
 	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
 	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
 	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
-% espace après Attention ou Note: 5 mm
-\vspacepdf{3mm}
-La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
 
-% espace pour changement de thème
-\vspacepdf{3mm}
+\subsection{Saisie des informations\label{transactions-new-entry}}
+
 Saisissez les différentes informations concernant votre opération dans les différents champs du formulaire. Certains champs peuvent être renseignés soit avec le clavier, soit avec une liste déroulante. Si vous utilisez le clavier, cette saisie sera automatiquement enregistrée dans la liste déroulante de ce champ. Si vous le voulez, vous pourrez toujours supprimer plus tard ce choix dans la liste: reportez-vous aux différents chapitres traitant de ces listes (\menus{Tiers}, \menus{Catégories}, \menus{Imputations budgétaires} et les différents onglets de la section \menus{Ressources} du menu \menus{Éditer - Préférences}.
 
 Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}.

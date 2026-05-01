@@ -234,7 +234,7 @@ Die \indexword{Bezeichnung einer Spalte}\index{Spalte!Bezeichnung} ist immer der
 %Le \indexword{libellé d'une colonne}\index{colonne!libellé} est toujours le nom du champ d'information affiché dans la première ligne des opérations.
 
 
-Um die Lesbarkeit der Anzeige zu gewährleisten, zeigt Grisbi keine Rahmen um Zellen, Spalten, Zeilen und Buchungen an, sondern wechselt in jeder Zeile zwischen einem \fboxsep=3pt{\colorbox[RGB]{215,215,255}{violetter Hintergrund}} und Weiß.
+Um die Lesbarkeit der Anzeige zu gewährleisten, zeigt Grisbi keine Rahmen um Zellen, Spalten, Zeilen und Buchungen an, sondern wechselt in jeder Zeile zwischen einem \fboxsep=2pt{\colorbox[RGB]{215,215,255}{violetter Hintergrund}} und Weiß.
 %To improve the readability of the display, Grisbi does not show any borders around cells, columns, rows or transactions, but instead uses alternating colours of  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{purple background}} and white for each line.
 %Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
 
@@ -476,9 +476,9 @@ Sie können die allgemeine Sortierreihenfolge auch im Menü \menus{Bearbeiten �
 %\section{Transaction/Scheduled entry form\label{transactions-form}}
 %\section{Formulaire de saisie\label{transactions-form}}
 
-Das Eingabeformular befindet sich unterhalb der Buchungsliste, wo links neben \menus{Buchungsformular} ein kleines Dreieck angezeigt wird, mit dem man dieses Formular \indexword{ein- oder ausblenden}\index{Buchungsformular!ein- oder ausblenden} kann\refimage{transactions-form-img}.
-%The entry form is located below the list of transactions, where a line displays, to the left of \menus{Transaction/Scheduled Form}, a small triangle that allows you to \indexword{show or hide}\index{entry-form!hide-show} this form\refimage{transactions-form-img}.
-%Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher ou de masquer}\index{formulaire de saisie!masquer-afficher} ce formulaire\refimage{transactions-form-img}.
+Das Eingabeformular befindet sich unterhalb der Buchungsliste, wo links neben \menus{Buchungsformular} ein kleines Dreieck angezeigt wird, mit dem man dieses Formular \indexword{anzeige} (siehe auch \vref{transactions-new-display}) \indexword{oder ausblenden}\index{Buchungsformular!anzeige-ausblenden} kann\refimage{transactions-form-img}.
+%The entry form is located below the list of transactions, where a line displays, to the left of \menus{Transaction/Scheduled Form}, a small triangle that allows you to \indexword{show or hide}\index{transaction form!show-hide} this form\refimage{transactions-form-img}.
+%Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher ou de masquer}\index{formulaire de saisie!afficher-masquer} ce formulaire\refimage{transactions-form-img}.
 
 % image centrée 
 \begin{figure}[htbp]
@@ -492,7 +492,7 @@ Das Eingabeformular befindet sich unterhalb der Buchungsliste, wo links neben \m
 \end{figure}
 % image centrée 
 
-
+\vspacepdf{2mm}
 \Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
 %\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
 %\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
@@ -535,6 +535,7 @@ Möglicherweise benötigen Sie zusätzliche Felder wie \menus{Geschäftsjahr}, \
 	%\item or by going to the \menus{Edit - Preferences - Transaction Form - Content} menu to edit the fields as you wish.
 	%\item soit en allant dans le menu \menus{Éditer - Préférences - Formulaire des opérations - Contenu} pour modifier les champs à votre convenance.
 \end{itemize}
+
 %espace pour changement de thème
 \vspacepdf{3mm}
 Eine vollständige Liste der Felder, die Grisbi verarbeiten kann, finden Sie im Abschnitt \vref{transactions-list-fields}, \menus{Informationen und Eingabefelder}
@@ -567,5 +568,205 @@ Once the form is displayed, a context menu that can be accessed by right-clickin
 	%\item \menus{Insert Emoji}\index{emoji}.
 	%\item \menus{Insérer un émoji}\index{émoji}.
 \end{itemize}
+
+
+\section{Ausgewiesener Saldo\label{transactions-balance}}
+%\section{Pointed balance\label{transactions-balance}}
+%\section{Solde pointé\label{transactions-balance}}
+
+Unterhalb der Buchungsliste, in derselben Zeile wie die Beschriftung \menus{Buchungsformular}, werden rechts zwei Informationen angezeigt:
+%Below the list of transactions, on the same line as the label \menus{Transaction/Scheduled form}, two pieces of information are displayed on the right:
+%En-dessous de la liste des opérations, sur la même ligne que le libellé \menus{Formulaire de saisie des opérations}, s'affichent à droite deux informations:
+\begin{itemize}
+	\item das Datum des zuletzt abgestimmten Kontoauszugs,
+	%\item the date of the last reconciled bank statement,
+	%\item la date du dernier relevé bancaire rapproché,
+	\item den \indexword{abgestimmter Saldo}\index{Saldo!abgestimmter}, der diesem letzten Abgleich entspricht, es sei denn, Sie gleichen Ihre Buchungen sehr regelmäßig ab; in diesem Fall entspricht er dem von Ihrer Bank erfassten Saldo (siehe das Kapitel \vref{reconciliation}, Menüs {Bankabstimmung}).
+	%\item the \indexword{reconciled balance}\index{balance!reconciled} corresponding to this latest reconciliation, unless you reconcile your transactions very regularly, in which case it corresponds to the balance as recorded by your bank (see the chapter \vref{reconciliation}, \menus{Bank reconciliation}).
+	%\item le \indexword{solde pointé}\index{solde!pointé} correspondant à ce dernier rapprochement, à moins que vous ne pointiez très régulièrement vos opérations, auquel cas il correspond au solde tel que le connaît votre banque (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}).
+\end{itemize}
+
+
+\section{Eine Buchung auswählen\label{transactions-selection}}
+%\section{Selecting an transaction\label{transactions-selection}}
+%\section{Sélection d'une opération\label{transactions-selection}}
+
+Es gibt zwei Möglichkeiten, eine Buchung auszuwählen:
+%There are two ways to select an transaction:
+%Pour sélectionner une opération, vous avez deux moyens:
+\begin{itemize}
+	\item Klicken Sie auf eine der Zeilen;
+	%\item click on one of its lines;
+	%\item cliquez sur une de ses lignes;
+	\item Bewegen Sie die Auswahl mit den Tasten \keys{\arrowkeyup} und \keys{\arrowkeydown}.
+	%\item move the selection using the \keys{\arrowkeyup} and \keys{\arrowkeydown} keys.
+	%\item déplacez la sélection avec les touches du clavier \keys{\arrowkeyup} et \keys{\arrowkeydown}.
+\end{itemize}
+
+Die Buchung erscheint dann in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und ihre Details werden im Formular angezeigt.
+%The transaction then appears in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and its details are displayed in the form.
+%L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
+
+Ein Rechtsklick auf eine Buchungszeile öffnet ein Kontextmenü, das je nach Kontext die folgenden Funktionen enthält\refimage{transactions-contextMenu-img}:
+%Right-clicking on a transaction line displays a context menu containing the following functions, depending on the context\refimage{transactions-contextMenu-img}:
+%Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, selon le contexte, les fonctions suivantes:
+
+\vspace{3mm}
+\noindent
+\begin{minipage}{.65\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{Die Gegenbuchung anzeigen}\index{Gegenbuchung!anzeigen}: Diese Option ist nur verfügbar, wenn es sich bei der Buchung um eine Überweisung handelt;
+		%\item \menus{Displays the contra-transaction}\index{contra-transaction!display}: this option is only available if the transaction is a transfer;
+		%\item \menus{Afficher la contre-opération}\index{contre-opération!afficher}: ce choix est présent seulement si l'opération est un virement;
+		\item \menus{Buchung bearbeiten};
+		%\item \menus{Edit transaction};
+		%\item \menus{Éditer l'opération};
+		\item \menus{Buchung erstellen};
+		%\item \menus{New transaction};
+		%\item \menus{Nouvelle opération};
+		\item \menus{Buchung löschen};
+		%\item \menus{Delete transaction};
+		%\item \menus{Supprimer l'opération};
+		\item \menus{Buchung als Vorlage verwenden};
+		%\item \menus{Use selected transaction as a template};
+		%\item \menus{Utiliser l'opération sélectionnée comme modèle};
+		\item \menus{Buchung du­pli­zie­ren};
+		%\item \menus{Clone transaction};
+		%\item \menus{Cloner l'opération};
+		\item \menus{Buchung regelmäßig ausführen}; So lassen sich Fälligkeitstermine ganz einfach nachträglich festlegen;
+		%\item \menus{Convert transaction to scheduled transaction}: this makes it easy to create due dates retrospectively;
+		%\item \menus{Convertir l'opération en opération planifiée}: cela permet de créer facilement des échéances après coup;
+		\item \menus{Buchung verschieben nach};
+		%\item \menus{Move transaction to another account};
+		%\item \menus{Déplacer l'opération vers un autre compte};
+		\item \menus{Buchungen suchen} (siehe das Kapitel \vref{search});
+		%\item \menus{Search} (see the chapter \vref{search});
+		%\item \menus{Rechercher} (voir le chapitre \vref{search});
+		\item \menus{Spalte auswählen}.
+		%\item \menus{Change cell content}.
+		%\item \menus{Modifier le contenu de la cellule}.
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{.35\linewidth}
+	%\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+	%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+	\vspace{-25pt}
+	\centering							% centering the floating figure in the "wrap"
+	%\raggedleft
+	\includegraphics[width=1\textwidth]{image/screenshot/transactions_contextMenu}
+	\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{%						% for a change of options of the caption package
+		format=plain,					% to avoid error message with labelsep option below, default=hang
+		type=figure,%
+		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+		justification=centering,		% centring of text and caption label 
+		labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Kontextmenü für eine Buchung}			% \caption is mandatory to reference a figure in lof
+	%\caption{Context menu for an transaction}		% \caption is mandatory to reference a figure in lof
+	%\caption{Menu contextuel d'une opération}		% \caption is mandatory to reference a figure in lof
+	\vspace{-10pt}						% space below the caption
+	\label{transactions-contextMenu-img}
+	%\end{wrapfigure}
+\end{minipage}
+
+
+\section{Ein neue Buchung einstellen\label{transactions-new}}
+%\section{Entering a new transaction\label{transactions-new}}
+%\section{Saisie d'une nouvelle opération\label{transactions-new}}
+
+Buchungen werden über das Buchungsformular erfasst, das sich unterhalb der Buchungsliste befindet.
+%Transactions are entered using the entry form, located below the list of transactions.
+%La saisie d'une opération se fait dans le formulaire de saisie, situé en-dessous de la liste des opérations.
+Anzeige/Ausblenden
+\subsection{Anzeige des Formulars\label{transactions-new-display}}
+%\subsection{Displaying the form\label{transactions-new-display}}
+%\subsection{Affichage du formulaire\label{transactions-new-display}}
+
+Um das Buchungsformular zu öffnen oder anzuzeigen, gehen Sie wie folgt vor:
+%To open or display the data entry form, use one of the following methods:
+%Pour ouvrir ou affichez le formulaire de saisie, utilisez une des méthodes suivantes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung erstellen}, wenn ein Konto ausgewählt ist;
+	%\item in the menu bar, select \menus{Edit - New transaction} if an account is selected;
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération} si un compte est sélectionné;
+	\item Wählen Sie in der Menüleiste \menus{Ansicht} und aktivieren Sie das Kontrollkästchen neben der Option \menus{Buchungsformular anzeigen};
+	%\item in the menu bar, select \menus{View} and tick the box next to the \menus{Show transaction form} option;
+	%\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item Markieren Sie die Leerzeile am Ende der Transaktionsliste und drücken Sie die Taste \keys{Enter \return};
+	%\item select the blank line at the bottom of the list of transactions and press the \keys{Enter \return} key;
+	%\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
+	\item Doppelklicken Sie auf die leere Zeile am Ende der Buchungsliste;
+	%\item double-click on the empty line at the bottom of the list of transactions;
+	%\item double-cliquez sur la ligne vide en bas de la liste des opérations;
+	\item Drücken Sie die Tastenkombination \keys{Strg+T};
+	%\item press the \keys{Ctrl+T} key combination;
+	%\item appuyez sur la combinaison de touches \keys{Ctrl+T};
+	\item Klicken Sie in der Menüleiste auf \menus{Buchung erstellen};
+	%\item in the toolbar, click on \menus{New transaction};
+	%\item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
+	\item Wählen Sie im Kontextmenü der Buchungsliste \menus{Buchung erstellen};
+	%\item in the context menu of the transaction list, select \menus{New transaction};
+	%\item dans le menu contextuel de la liste des opérations, sélectionnez \menus{Nouvelle opération};
+	\item Klicken Sie auf das kleine Dreieck neben der Beschriftung \indexword{anzeigen/ausblenden}\index{Buchungsform!anzeige/ausblenden} im Formular für Buchungsformular links neben der Beschriftung.
+	%\item click on the small triangle next to the label \indexword{show/hide}\index{transaction form!show-hide} on the transaction entry form to the left of the label.
+	%\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
+	\Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
+	%\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\end{itemize}
+
+Die letzte Zeile am Ende der Liste der Buchungen, die vollständig leer ist, erscheint in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}, und das leere Buchungsformular wird angezeigt, wobei nur das aktuelle Datum oder das zuletzt eingegebene Datum in \fboxsep=2pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{weiß auf blauem Hintergrund}}}} erscheint.
+%The last line, which is completely blank, at the bottom of the list of operations, appears in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dark pink background}}, and the blank input form is displayed, showing only the current date, or the last date entered, in \fboxsep=2pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}}}.
+%La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
+
+Ausblenden
+\subsection{Ausblenden des Formulars\label{transactions-new-hide}}
+%\subsection{Hiding the form\label{transactions-new-hide}}
+%\subsection{Masquage du formulaire\label{transactions-new-hide}}
+
+Um das Buchungsformular auszublenden, wähle eine der folgenden Methoden:
+%To hide the entry form, use one of the following methods:
+%Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Ansicht} und deaktivieren Sie das Kontrollkästchen neben der Option \menus{Buchungsformular anzeigen};
+	%\item in the menu bar, select \menus{View} and uncheck the box next to the \menus{Show transaction form} option;
+	%\item dans la barre de menu, sélectionnez \menus{Affichage} et décochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item Klicken Sie auf das kleine Dreieck neben der Beschriftung \indexword{Anzeigen/Ausblenden} im Buchungsformular links neben der Beschriftung.
+	%\item click on the small triangle next to the label \indexword{show/hide} on the transaction entry form to the left of the label.
+	%\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
+	\Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
+	%\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\end{itemize}
+
+
+\subsection{Eingabe von Informationen\label{transactions-new-entry}}
+%\subsection{Entering information\label{transactions-new-entry}}
+%\subsection{Saisie des informations\label{transactions-new-entry}}
+
+Geben Sie die relevanten Angaben zu Ihrer Buchung in die verschiedenen Felder des Formulars ein. Einige Felder können entweder über die Tastatur oder über eine Auswahlliste ausgefüllt werden. Wenn Sie die Tastatur verwenden, wird Ihre Eingabe automatisch in der Auswahlliste für dieses Feld gespeichert. Falls gewünscht, können Sie diese Auswahl später jederzeit aus der Liste entfernen: Beachten Sie dazu die verschiedenen Abschnitte, die sich mit diesen Listen befassen (\menus{Empfänger}, \menus{Kategorien}, \menus{Gruppen} sowie die verschiedenen Registerkarten im Abschnitt \menus{Finanzdaten} des Menüs \menus{Bearbeiten – Einstellungen}.
+%Enter the relevant details about your transaction in the various fields of the form. Some fields can be filled in either using the keyboard or via a drop-down list. If you use the keyboard, your entry will be automatically saved in the drop-down list for that field. If you wish, you can always remove this selection from the list later: refer to the various sections dealing with these lists (\menus{Payee}, \menus{Categories}, \menus{Budgetary lines} and the various tabs in the \menus{Resources} section of the \menus{Edit - Preferences} menu.
+%Saisissez les différentes informations concernant votre opération dans les différents champs du formulaire. Certains champs peuvent être renseignés soit avec le clavier, soit avec une liste déroulante. Si vous utilisez le clavier, cette saisie sera automatiquement enregistrée dans la liste déroulante de ce champ. Si vous le voulez, vous pourrez toujours supprimer plus tard ce choix dans la liste: reportez-vous aux différents chapitres traitant de ces listes (\menus{Tiers}, \menus{Catégories}, \menus{Imputations budgétaires} et les différents onglets de la section \menus{Ressources} du menu \menus{Éditer - Préférences}.
+
+Jedes Eingabefeld muss mit dem entsprechenden Datentyp (Datum, Zahl, Text) ausgefüllt werden; andernfalls werden die falschen Daten \textcolor{red}{rot} angezeigt.
+%Each entry field must be filled in with the appropriate data type (date, number, text); otherwise, the incorrect data will turn \textcolor{red}{red}.
+%Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}.
+
+Sobald das letzte Feld des Formulars ausgefüllt und abgeschickt wurde, erscheint die Buchung in der Buchungsliste, und die aktive Zeile, die mit \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund} hervorgehoben ist, springt zur letzten leeren Zeile in der Liste.
+%Once the last field in the form has been filled in and submitted, the transaction appears in the list of transactions, and the active line, highlighted in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dark pink background}}, moves to the last empty line in the list.
+%Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
+
+% espace pour changement de thème
+\vspacepdf{3mm}
+In den folgenden Unterabschnitten werden die verschiedenen verfügbaren Eingabemethoden beschrieben.
+%The following subsections describe the various input methods available.
+%Les sous-sections suivantes donnent les différentes méthodes de saisie disponibles.
 
 
