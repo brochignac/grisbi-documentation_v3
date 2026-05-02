@@ -230,7 +230,7 @@ Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Édi
 
 \section{Formulaire de saisie des opérations\label{transactions-form}}
 
-Le formulaire de saisie est situé en-dessous de la liste des opérations, où une ligne affiche, à gauche de \menus{Formulaire de saisie des opérations}, un petit triangle qui permet d'\indexword{afficher}(voir aussi \vref{transactions-new-display}) \indexword{ou de masquer}\index{formulaire de saisie!afficher-masquer} ce formulaire\refimage{transactions-form-img}.
+Le formulaire de saisie est situé en-dessous de la liste des opérations\refimage{transactions-form-img}.
 
 % image centrée 
 \begin{figure}[htbp]
@@ -239,13 +239,54 @@ Le formulaire de saisie est situé en-dessous de la liste des opérations, où u
 	\end{center}
 	\vspace{-10pt}
 	\caption{Formulaire personnalisé de saisie des opérations}
+	\vspace{-20pt}
 	\label{transactions-form-img}
 \end{figure}
 % image centrée 
 
 
-\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-\newline
+\subsection{Visibilité du formulaire\label{transactions-form-exposure}}
+
+Le formulaire peut être masqué ou affiché selon vos besoins.
+
+
+\subsubsection{Affichage du formulaire\label{transactions-form-exposure-display}}
+
+Pour \indexword{ouvrir ou afficher}\index{formulaire de saisie!afficher} le formulaire de saisie, utilisez une des méthodes suivantes:
+
+\begin{itemize}
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération} si un compte est sélectionné;
+	\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
+	\item double-cliquez sur la ligne vide en bas de la liste des opérations;
+	\item appuyez sur la combinaison de touches \keys{Ctrl+T};
+	\item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
+	\item dans le menu contextuel de la liste des opérations, sélectionnez \menus{Nouvelle opération};
+	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
+	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\end{itemize}
+
+La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
+
+
+\subsubsection{Masquage du formulaire\label{transactions-form-exposure-hide}}
+
+Pour \indexword{masquer}\index{formulaire de saisie!masquer} le formulaire de saisie, utilisez une des méthodes suivantes:
+
+\begin{itemize}
+	\item dans la barre de menu, sélectionnez \menus{Affichage} et décochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
+	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\end{itemize}
+
+
+\subsection{Contenu du formulaire\label{transactions-form-content}}
 
 Le formulaire de saisie comprend par défaut les sept champs suivants:
 \begin{itemize}
@@ -259,7 +300,7 @@ Le formulaire de saisie comprend par défaut les sept champs suivants:
 \end{itemize}
 Vous pouvez avoir besoin de champs supplémentaires, par exemple \menus{Exercice}, \menus{Imputation budgétaire} ou autres; cela se fait dans les paramètres du contenu du formulaire. Vous pouvez y accéder de deux façons différentes:
 \begin{itemize}
-	\item soit par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, puis en cliquant sur le bouton \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations - Contenu}),
+	\item soit par un clic-droit dans le formulaire, dans une zone grise en dehors des champs de saisie, puis en cliquant sur le bouton \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations - Contenu}),
 	\item soit par le menu \menus{Éditer - Préférences - Formulaire des opérations - Contenu} pour modifier les champs à votre convenance.
 \end{itemize}
 %espace pour changement de thème
@@ -278,11 +319,6 @@ Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit
 	\item \menus{Tout sélectionner} (dans le champ de saisie);
 	\item \menus{Insérer un émoji}\index{émoji}.
 \end{itemize}
-
-%espace pour changement de thème
-% \vspacepdf{3mm}
-
-%De plus, un autre menu contextuel, accessible par un clic-droit en dehors d'un champ de saisie, permet d'accéder à la \indexword{configuration du formulaire}\index{formulaire de saisie!configuration}: vous pouvez en configurer précisément le contenu, la présentation, le comportement, ainsi que les paramètres d'aide à la saisie, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}).
 
 
 \section{Solde pointé\label{transactions-balance}}
@@ -347,41 +383,7 @@ Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, sel
 
 \section{Saisie d'une nouvelle opération\label{transactions-new}}
 
-La saisie d'une opération se fait dans le formulaire de saisie, situé en-dessous de la liste des opérations.
-
-\subsection{Affichage du formulaire\label{transactions-new-display}}
-
-Pour ouvrir ou affichez le formulaire de saisie, utilisez une des méthodes suivantes:
-
-\begin{itemize}
-	\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération} si un compte est sélectionné;
-	\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
-	\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
-	\item double-cliquez sur la ligne vide en bas de la liste des opérations;
-	\item appuyez sur la combinaison de touches \keys{Ctrl+T};
-	\item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
-	\item dans le menu contextuel de la liste des opérations, sélectionnez \menus{Nouvelle opération};
-	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
-
-	% saut de ligne pour indentation correcte de la note dans la liste
-	\vspacepdf{2mm}
-	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-\end{itemize}
-
-La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
-
-\subsection{Masquage du formulaire\label{transactions-new-hide}}
-
-Pour masquer le formulaire de saisie, utilisez une des méthodes suivantes:
-
-\begin{itemize}
-	\item dans la barre de menu, sélectionnez \menus{Affichage} et décochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
-	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
-	
-	% saut de ligne pour indentation correcte de la note dans la liste
-	\vspacepdf{2mm}
-	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-\end{itemize}
+La saisie d'une opération se fait dans le formulaire de saisie (section \vref{transactions-form}), situé en-dessous de la liste des opérations.
 
 
 \subsection{Saisie des informations\label{transactions-new-entry}}
