@@ -577,62 +577,87 @@ The following subsections describe the various input methods available.
 %Les sous-sections suivantes donnent les différentes méthodes de saisie disponibles.
 
 
-\subsection{Commandes principales au clavier\label{transactions-new-keyboard}}
+\subsection{Main keyboard commands\label{transactions-new-keyboard}}
+%\subsection{Commandes principales au clavier\label{transactions-new-keyboard}}
 
-La touche \keys{Tab \tab} permet le déplacement dans le formulaire.
+The \keys{Tab \tab} key allows you to navigate within the form.
+%La touche \keys{Tab \tab} permet le déplacement dans le formulaire.
 
-La touche \keys{Entrée \return} permet soit de se déplacer dans le formulaire de saisie, soit de valider la saisie; cela est configurable dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form-behaviour}, \menus{Comportement}). Cette configuration affecte à la fois la touche \keys{Entrée \return} du clavier alphabétique et celle du pavé numérique.
+The \keys{Enter \return} key can be used either to move around the entry form or to submit the entry; this can be configured in the \menus{Edit - Preferences - Transaction form} menu (see the \vref{setup-form-behaviour} section, \menus{Form behavior}). This setting applies to both the \keys{Enter \return} key on the alphabetic keyboard and the one on the numeric keypad.
+%La touche \keys{Entrée \return} permet soit de se déplacer dans le formulaire de saisie, soit de valider la saisie; cela est configurable dans le menu \menus{Éditer - Préférences - Formulaire des opérations} (voir la section \vref{setup-form-behaviour}, \menus{Comportement du formulaire}). Cette configuration affecte à la fois la touche \keys{Entrée \return} du clavier alphabétique et celle du pavé numérique.
 
-La touche \keys{Échap} permet d'annuler la saisie en cours.
+The \keys{Esc} key cancels the current entry.
+%La touche \keys{Échap} permet d'annuler la saisie en cours.
 
 
-\subsection{Saisie de la date au clavier\label{transactions-new-dates}}
+\subsection{Entering the date using the keyboard\label{transactions-new-dates}}
+%\subsection{Saisie de la date au clavier\label{transactions-new-dates}}
 
-La date du jour ou la dernière date entrée s'affiche automatiquement à l'ouverture du formulaire.
-
-%espace pour changement de thème
-\vspacepdf{3mm}
-Vous pouvez saisir la date avec l'un de ces formats:
-
-\begin{itemize}
-	\item jj/mm/aa (avec délimiteur entre le jour, mois et année);
-	\item jjmmaa ou jjmm (sans délimiteur); dans ce cas, vous devrez bien utiliser deux chiffres pour les jour, mois et année;
-	\item j/m/a si le jour, le mois ou l'année ne comportent qu'un seul chiffre (par ex.: 1/1/1 pour le premier janvier 2001).
-\end{itemize}
-
-De plus, il n'est pas nécessaire de saisir l'année si celle-ci est identique à l'année en cours, ni le mois si celui-ci est le mois en cours, car Grisbi complétera automatiquement.
+The current date or the last date entered is displayed automatically when the form is opened.
+%La date du jour ou la dernière date entrée s'affiche automatiquement à l'ouverture du formulaire.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Enfin, vous pouvez incrémenter ou décrémenter la date affichée:
+You can enter the date in one of the following formats:
+%Vous pouvez saisir la date avec l'un de ces formats:
 
 \begin{itemize}
-	\item par jour avec les touches \keys{{+}} ou \keys{{-}};
-	\item par semaine avec les touches \keys{Maj \shift+{+}}ou \keys{Maj \shift+{-}};
-	\item par mois avec les touches\keys{Pg.Préc} ou \keys{Pg.Suiv};
-	\item par année avec les combinaisons de touches \keys{Maj \shift+Pg.Préc} ou \keys{Maj \shift+Pg.Suiv}.
+	\item mm/dd/yy (with a separator between the month, day and year);
+	%\item jj/mm/aa (avec délimiteur entre le jour, mois et année);
+	\item mmddyy or mmdd (without delimiters); in this case, you must use two digits for the month, day and year;
+	%\item jjmmaa ou jjmm (sans délimiteur); dans ce cas, vous devrez bien utiliser deux chiffres pour les jour, mois et année;
+	\item m/d/y if the month, day or year consists of a single digit (e.g. 1/1/1 for January 1st, 2001).
+	%\item j/m/a si le jour, le mois ou l'année ne comportent qu'un seul chiffre (par ex.: 1/1/1 pour le premier janvier 2001).
+\end{itemize}
+
+Furthermore, there is no need to enter the year if it is the same as the current year, or the month if it is the current month, as Grisbi will fill these in automatically.
+%De plus, il n'est pas nécessaire de saisir l'année si celle-ci est identique à l'année en cours, ni le mois si celui-ci est le mois en cours, car Grisbi complétera automatiquement.
+
+%espace pour changement de thème
+\vspacepdf{3mm}
+Finally, you can increase or decrease the displayed date:
+%Enfin, vous pouvez incrémenter ou décrémenter la date affichée:
+
+\begin{itemize}
+	\item per day using the \keys{{+}} or \keys{{-}} keys;
+	%\item par jour avec les touches \keys{{+}} ou \keys{{-}};
+	\item per week using the \keys{Shift \shift+{+}} or \keys{Shift \shift+{-}} keys;
+	%\item par semaine avec les touches \keys{Maj \shift+{+}} ou \keys{Maj \shift+{-}};
+	\item per month using the \keys{PageUp} or \keys{PageDown} keys;
+	%\item par mois avec les touches\keys{Pg.Préc} ou \keys{Pg.Suiv};
+	\item per year using the key combinations \keys{Shift \shift+PageUp} or \keys{Shift \shift+PageDown}.
+	%\item par année avec les combinaisons de touches \keys{Maj \shift+Pg.Préc} ou \keys{Maj \shift+Pg.Suiv}.
 \end{itemize}
 
 
-\subsection{Saisie de la date au calendrier\label{transactions-new-calendar}}
+\subsection{Entering a date in the calendar\label{transactions-new-calendar}}
+%\subsection{Saisie de la date au calendrier\label{transactions-new-calendar}}
 
-Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \return}, affiche un calendrier permettant de sélectionner la date.
+Double-clicking on the date, or pressing the \keys{Ctrl+Enter \return} key combination, brings up a calendar from which you can select the date.
+%Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \return}, affiche un calendrier permettant de sélectionner la date.
 
 %espace pour changement de thème
- \vspacepdf{3mm}
-Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
+\vspacepdf{3mm}
+You can then select a new date using the mouse or keyboard:
+%Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
 % espace avant image 5mm
 \vspacepdf{3mm}
 
 \noindent
 \begin{minipage}{.65\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
-		\item les touches \keys{{+}} ou \keys{{-}}, de même que \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
-		\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
-		\item les touches \keys{Pg.préc} ou \keys{Pg.Suiv} permettent de passer au mois précédent ou suivant;
-		\item les touches \keys{Début} ou \keys{Fin} permettent de passer au premier jour ou au dernier jour du mois.
-		\item un clic sur le bouton \menus{Annuler} ou l'appui sur la touche \keys{Échap} ferme le calendrier sans modifier la date;
-		\item un double-clic ou l'appui sur la touche \keys{Entrée \return} valide la date sélectionnée.
+		\item the \keys{{+}} or \keys{{-}} keys, as well as the \keys{\arrowkeyleft} or \keys{\arrowkeyright} keys, allow you to move to the previous or next day;
+		%\item les touches \keys{{+}} ou \keys{{-}}, de même que \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
+		\item the \keys{\arrowkeyup} or \keys{\arrowkeydown} keys allow you to move to the previous or next week;
+		%\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
+		\item the \keys{PageUp} or \keys{PageDown} keys allow you to move to the previous or next month;
+		%\item les touches \keys{Pg.préc} ou \keys{Pg.Suiv} permettent de passer au mois précédent ou suivant;
+		\item the \keys{Home} or \keys{End} keys allow you to move to the first or last day of the month;
+		%\item les touches \keys{Début} ou \keys{Fin} permettent de passer au premier jour ou au dernier jour du mois;
+		\item clicking the \menus{Cancel} button or pressing the \keys{Esc} key closes the calendar without changing the date;
+		%\item un clic sur le bouton \menus{Annuler} ou l'appui sur la touche \keys{Échap} ferme le calendrier sans modifier la date;
+		\item double-clicking or pressing the \keys{Enter \return} key confirms the selected date.
+		%\item un double-clic ou l'appui sur la touche \keys{Entrée \return} valide la date sélectionnée.
 	\end{itemize}
 \end{minipage}
 \hspace{10pt}
@@ -650,72 +675,93 @@ Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
 		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
 		justification=centering,		% centring of text and caption label 
 		labelsep=newline}				% define the separator between the label and the caption text
-	\caption{Calendrier}		% \caption is mandatory to reference a figure in lof
+	\caption{Calendar}
+	%\caption{Calendrier}		% \caption is mandatory to reference a figure in lof
 	\vspace{-10pt}						% space below the caption
 	\label{transactions-calendar-img}
 	%\end{wrapfigure}
 \end{minipage}
 
 
-\subsection{Listes déroulantes\label{transactions-new-lists}}
+\subsection{Drop-down lists\label{transactions-new-lists}}
+%\subsection{Listes déroulantes\label{transactions-new-lists}}
 
-Certains champs disposent d'une liste déroulante de choix déjà définis. Vous pouvez y sélectionner un libellé avec la souris, ou préférer saisir les données au clavier dans le champ de saisie.
+Some fields have a drop-down list of predefined options. You can select an option using the mouse, or you can type the data into the entry field using the keyboard.
+%Certains champs disposent d'une liste déroulante de choix déjà définis. Vous pouvez y sélectionner un libellé avec la souris, ou préférer saisir les données au clavier dans le champ de saisie.
 
-L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur le petit triangle à droite du champ, ou avec les touches du clavier \keys{Pg.Suiv} ou \keys{\arrowkeydown}, le déplacement dans cette liste peut se faire avec:
+You can open a drop-down list by clicking the small triangle to the right of the field with the mouse, or by pressing the \keys{PagegDown} or \keys{\arrowkeydown} keys on the keyboard; to navigate through the list, you can use:
+%L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur le petit triangle à droite du champ, ou avec les touches du clavier \keys{Pg.Suiv} ou \keys{\arrowkeydown}, le déplacement dans cette liste peut se faire avec:
 \begin{itemize}
-	\item la souris et l'ascenseur à droite de la liste,
-	\item la molette de la souris,
-	\item les touches \keys{Pg.Préc}, \keys{Pg.Suiv}, \keys{\arrowkeyup} ou \keys{\arrowkeydown},
+	\item the mouse and the scrollbar to the right of the list,
+	%\item la souris et l'ascenseur à droite de la liste,
+	\item the mouse wheel,
+	%\item la molette de la souris,
+	\item the \keys{PageUp}, \keys{PageDown}, \keys{\arrowkeyup} or \keys{\arrowkeydown} keys,
+	%\item les touches \keys{Pg.Préc}, \keys{Pg.Suiv}, \keys{\arrowkeyup} ou \keys{\arrowkeydown},
 \end{itemize}
-	et la validation d'un choix à l'intérieur d'une liste déroulante se fait avec la touche \keys{Entrée \return}.
+	
+%et la validation d'un choix à l'intérieur d'une liste déroulante se fait avec la touche \keys{Entrée \return}.
 
 \vspacepdf{3mm}
-\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+%\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complètement}\index{champ de saisie!auto-complètement} sélectionné apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
+Grisbi will suggest automatically completing the word you have entered as soon as it has recognised enough characters. The selected \indexword{auto-complete}\index{entry field!auto-complete} appears on \fboxsep=3pt{\colorbox[RGB]{61,174,233}{blue background}}. To confirm your choice, press the \keys{Tab \tab} key or the \keys{Enter \return} key, depending on your configuration settings; otherwise, continue typing.
+%Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complétion}\index{champ de saisie!auto-complétion} sélectionnée apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
 
-Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
-
-
-\subsection{Saisie de formules\label{transactions-new-numbers}}
-
-Dans le formulaire de saisie, vous pouvez saisir les nombres, avec ou sans décimales, dans les champs tels que \menus{Débit} et \menus{Crédit}, à l'aide du clavier.
-
-Vous pouvez aussi y saisir des \indexword{formules arithmétiques}\index{champ de saisie!formule arithmétique}\index{formule arithmétique!champ de saisie} simples, à l'aide des quatre opérateurs d'addition, soustraction, multiplication et division. Cela remplace la \indexword{calculatrice}\index{calculatrice} sur votre bureau.
-%TODO verify
-Pour saisir une formule arithmétique, saisissez-la comme si c'était un texte, par exemple %\frquote{3,40-2,10}
-, puis continuez normalement la saisie des autres champs de votre opération; si elle est mal écrite, elle s'affiche en \textcolor{red}{rouge}. Lorsque vous cliquez sur le bouton \menus{Valider} et pour une nouvelle opération, le résultat %\frquote{1,30}
- s'affiche dans la liste des opérations, sinon le résultat s'affiche, en plus, dans le champ de saisie. Et si la formule est toujours mal écrite, le message %\frquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}}
-  s'affiche à la place et vous ne pourrez pas valider l'opération financière.
-
-Cette calculatrice accepte le mélange des points et des virgules comme séparateur décimal, par exemple %\frquote{1.2+2,3}
-, et Grisbi effectuera le calcul.
-
-Cette calculatrice accepte la multiplication ou la division, mais de manière exclusive de l'addition ou de la soustraction; c'est-à-dire qu'on peut mélanger additions et soustractions dans une saisie mais pas une multiplication (ou une division) et un quelconque autre opérateur: on ne peut pas mettre de parenthèses pour indiquer un ordre de priorité d'opération.
-
-Cette fonctionnalité peut être très utile, notamment pour réajuster les montants d'une opération ventilée en cas d'écart.
+The drop-down lists for currencies, financial years and methods of payment can be opened using the \keys{Space} key or a left-click of the mouse; you can navigate through them using the \keys{\arrowkeyup} and \keys{\arrowkeydown} keys, and confirm your selection using the \keys{Space} key, the \keys{Enter \return} key or a left-click of the mouse.
+%Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
 
 
-\subsection{Remise de chèques ou d'espèces\label{transactions-new-cheque}}
+\subsection{Entering formulas\label{transactions-new-numbers}}
+%\subsection{Saisie de formules\label{transactions-new-numbers}}
 
-Pour enregistrer une \indexword{remise de chèques}\index{remise!chèques}, vous les déposez d'abord sur votre compte bancaire à la banque qui vous remet un bordereau de remise, puis vous saisissez l'opération de remise, en crédit sur votre compte bancaire.
+In the entry form, you can enter numbers, with or without decimals, into fields such as \menus{Debit} and \menus{Credit} using the keyboard.
+%Dans le formulaire de saisie, vous pouvez saisir les nombres, avec ou sans décimales, dans les champs tels que \menus{Débit} et \menus{Crédit}, à l'aide du clavier.
 
-Pour enregistrer une \indexword{remise d'espèces}\index{remise!espèces}, vous les déposez d'abord soit sur votre compte bancaire à la banque qui vous remet un bordereau de remise, soit dans votre porte-monnaie, puis vous saisissez l'opération de remise, en crédit sur votre compte de caisse.
+You can also enter simple \indexword{arithmetic expressions}\index{entry field!arithmetic expression}\index{arithmetic expression!entry field} using the four basic arithmetic operators: addition, subtraction, multiplication and division. This replaces the \indexword{calculator}\index{calculator} on your desk.
+%Vous pouvez aussi y saisir des \indexword{formules arithmétiques}\index{champ de saisie!formule arithmétique}\index{formule arithmétique!champ de saisie} simples, à l'aide des quatre opérateurs d'addition, soustraction, multiplication et division. Cela remplace la \indexword{calculatrice}\index{calculatrice} sur votre bureau.
+
+To enter an arithmetic formula, type it as if it were text, for example \enquote{3.40-2.10}, then continue entering the other fields of your transaction as normal; if it is entered incorrectly, it will be displayed in \textcolor{red}{red}. When you click the \menus{Validate} button and for a new transaction, the result \enquote{1.30} appears in the list of transactions; otherwise, the result also appears in the entry field. And if the formula is still incorrect, the message \enquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}}  will appear instead and you will not be able to validate the financial transaction.
+%Pour saisir une formule arithmétique, saisissez-la comme si c'était un texte, par exemple \frquote{3,40-2,10}, puis continuez normalement la saisie des autres champs de votre opération; si elle est mal écrite, elle s'affiche en \textcolor{red}{rouge}. Lorsque vous cliquez sur le bouton \menus{Valider} et pour une nouvelle opération, le résultat \frquote{1,30} s'affiche dans la liste des opérations, sinon le résultat s'affiche, en plus, dans le champ de saisie. Et si la formule est toujours mal écrite, le message \frquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}}  s'affiche à la place et vous ne pourrez pas valider l'opération financière.
+
+% FAUX pour la version anglaise : la virgule sert de séparateur de milliers et fait un "mauvais" mélange avec le point comme séparateur décimal.
+%Cette calculatrice accepte le mélange des points et des virgules comme séparateur décimal, par exemple \frquote{1.2+2,3}, et Grisbi effectuera le calcul.
+
+This calculator accepts the multiplication or division, but in a manner exclusive of addition or subtraction; that is to say that we can mix additions and subtractions in an entry but not a multiplication (or division) and any other operator: we cannot put parentheses to indicate an order of priority of operation.
+%Cette calculatrice accepte la multiplication ou la division, mais de manière exclusive de l'addition ou de la soustraction; c'est-à-dire qu'on peut mélanger additions et soustractions dans une saisie mais pas une multiplication (ou une division) et un quelconque autre opérateur: on ne peut pas mettre de parenthèses pour indiquer un ordre de priorité d'opération.
+
+This feature can be very useful, particularly for adjusting the amounts of a split transaction in the event of a discrepancy.
+%Cette fonctionnalité peut être très utile, notamment pour réajuster les montants d'une opération ventilée en cas d'écart.
+
+
+\subsection{Depositing cheques or cash\label{transactions-new-cheque}}
+%\subsection{Remise de chèques ou d'espèces\label{transactions-new-cheque}}
+
+To record a \indexword{cheque deposit}\index{deposit!cheque}, first deposit the cheques into your bank account at the bank, which will give you a deposit slip, then enter the deposit transaction as a credit to your bank account.
+%Pour enregistrer une \indexword{remise de chèques}\index{remise!chèques}, vous les déposez d'abord sur votre compte bancaire à la banque qui vous remet un bordereau de remise, puis vous saisissez l'opération de remise, en crédit sur votre compte bancaire.
+
+To record a \indexword{cash deposit}\index{deposit!cash}, you must first deposit the cash either into your bank account at the bank, which will issue you with a deposit slip, or into your cash box, and then enter the deposit transaction as a credit to your cash account.
+%Pour enregistrer une \indexword{remise d'espèces}\index{remise!espèces}, vous les déposez d'abord soit sur votre compte bancaire à la banque qui vous remet un bordereau de remise, soit dans votre porte-monnaie, puis vous saisissez l'opération de remise, en crédit sur votre compte de caisse.
 
 % espace pour changement de thème
- \vspacepdf{3mm}
-Si vous recevez beaucoup de chèques (par exemple parce que vous gérez une association et que vos adhérents payent leur cotisation par chèque), vous avez deux méthodes de gestion:
+\vspacepdf{3mm}
+If you receive a lot of cheques (for example, because you run a charity and your members pay their membership fees by cheque), you have two options:
+%Si vous recevez beaucoup de chèques (par exemple parce que vous gérez une association et que vos adhérents payent leur cotisation par chèque), vous avez deux méthodes de gestion:
 
 \begin{itemize}
-	\item soit vous enregistrez individuellement une opération pour chaque chèque dans votre compte bancaire, puis vous groupez ces chèques pour les déposer à la banque; votre bordereau de remise ne contient alors que leur montant global; lors du rapprochement bancaire, votre relevé bancaire ne mentionne que ce montant global, mais non le montant de chaque chèque saisi dans votre compte bancaire; de ce fait, le pointage est rendu peu facile (vous devriez au moins avoir fait auparavant une liste de ces chèques);
-	\item soit vous enregistrez une seule opération pour tous vos chèques, vous aurez alors perdu l'information du tiers de chaque chèque, et cette information n'apparaîtra pas dans l'onglet \menus{Tiers}, même si vous essayez de ventiler cette opération.
+	\item either you record each cheque as a separate transaction in your bank account, and then bundle these cheques together to deposit them at the bank; your deposit slip will then show only the total amount; when reconciling your bank account, your bank statement will show only this total amount, but not the amount of each cheque entered into your bank account; as a result, reconciliation becomes rather difficult (you should at least have made a list of these cheques beforehand);
+	%\item soit vous enregistrez individuellement une opération pour chaque chèque dans votre compte bancaire, puis vous groupez ces chèques pour les déposer à la banque; votre bordereau de remise ne contient alors que leur montant global; lors du rapprochement bancaire, votre relevé bancaire ne mentionne que ce montant global, mais non le montant de chaque chèque saisi dans votre compte bancaire; de ce fait, le pointage est rendu peu facile (vous devriez au moins avoir fait auparavant une liste de ces chèques);
+	\item either you record a single transaction for all your cheques, in which case you will have lost the third-party details for each cheque, and this information will not appear in the \menus{Payee} tab, even if you try to split this transaction.
+	%\item soit vous enregistrez une seule opération pour tous vos chèques, vous aurez alors perdu l'information du tiers de chaque chèque, et cette information n'apparaîtra pas dans l'onglet \menus{Tiers}, même si vous essayez de ventiler cette opération.
 \end{itemize} 
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Si aucune de ces méthodes ne vous convient, une meilleure solution consiste à utiliser un \emph{compte d'attente}. Pour cela, la méthode est explicitée en détails au paragraphe \vref{accounts-type-bank-waiting-remittance}, \menus{Remise de chèques ou d'espèces}.
+If none of these methods suit you, a better solution is to use a \emph{suspense account}. The procedure for doing so is explained in detail in the section \vref{accounts-type-bank-waiting-remittance}, \menus{Delivery of cheques or cash}.
+%Si aucune de ces méthodes ne vous convient, une meilleure solution consiste à utiliser un \emph{compte d'attente}. Pour cela, la méthode est explicitée en détails au paragraphe \vref{accounts-type-bank-waiting-remittance}, \menus{Remise de chèques ou d'espèces}.
 
 
 \subsection{Virements\label{transactions-new-transfer}}

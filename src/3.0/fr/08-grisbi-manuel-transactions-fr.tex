@@ -403,7 +403,7 @@ Les sous-sections suivantes donnent les différentes méthodes de saisie disponi
 
 La touche \keys{Tab \tab} permet le déplacement dans le formulaire.
 
-La touche \keys{Entrée \return} permet soit de se déplacer dans le formulaire de saisie, soit de valider la saisie; cela est configurable dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-form-behaviour}, \menus{Comportement}). Cette configuration affecte à la fois la touche \keys{Entrée \return} du clavier alphabétique et celle du pavé numérique.
+La touche \keys{Entrée \return} permet soit de se déplacer dans le formulaire de saisie, soit de valider la saisie; cela est configurable dans le menu \menus{Éditer - Préférences - Formulaire des opérations} (voir la section \vref{setup-form-behaviour}, \menus{Comportement du formulaire}). Cette configuration affecte à la fois la touche \keys{Entrée \return} du clavier alphabétique et celle du pavé numérique.
 
 La touche \keys{Échap} permet d'annuler la saisie en cours.
 
@@ -430,7 +430,7 @@ Enfin, vous pouvez incrémenter ou décrémenter la date affichée:
 
 \begin{itemize}
 	\item par jour avec les touches \keys{{+}} ou \keys{{-}};
-	\item par semaine avec les touches \keys{Maj \shift+{+}}ou \keys{Maj \shift+{-}};
+	\item par semaine avec les touches \keys{Maj \shift+{+}} ou \keys{Maj \shift+{-}};
 	\item par mois avec les touches\keys{Pg.Préc} ou \keys{Pg.Suiv};
 	\item par année avec les combinaisons de touches \keys{Maj \shift+Pg.Préc} ou \keys{Maj \shift+Pg.Suiv}.
 \end{itemize}
@@ -441,7 +441,7 @@ Enfin, vous pouvez incrémenter ou décrémenter la date affichée:
 Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \return}, affiche un calendrier permettant de sélectionner la date.
 
 %espace pour changement de thème
- \vspacepdf{3mm}
+\vspacepdf{3mm}
 Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
 % espace avant image 5mm
 \vspacepdf{3mm}
@@ -452,7 +452,7 @@ Vous pouvez alors sélectionner une nouvelle date avec la souris ou le clavier:
 		\item les touches \keys{{+}} ou \keys{{-}}, de même que \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
 		\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
 		\item les touches \keys{Pg.préc} ou \keys{Pg.Suiv} permettent de passer au mois précédent ou suivant;
-		\item les touches \keys{Début} ou \keys{Fin} permettent de passer au premier jour ou au dernier jour du mois.
+		\item les touches \keys{Début} ou \keys{Fin} permettent de passer au premier jour ou au dernier jour du mois;
 		\item un clic sur le bouton \menus{Annuler} ou l'appui sur la touche \keys{Échap} ferme le calendrier sans modifier la date;
 		\item un double-clic ou l'appui sur la touche \keys{Entrée \return} valide la date sélectionnée.
 	\end{itemize}
@@ -489,14 +489,14 @@ L'ouverture d'une liste déroulante peut se faire avec la souris en cliquant sur
 	\item la molette de la souris,
 	\item les touches \keys{Pg.Préc}, \keys{Pg.Suiv}, \keys{\arrowkeyup} ou \keys{\arrowkeydown},
 \end{itemize}
-	et la validation d'un choix à l'intérieur d'une liste déroulante se fait avec la touche \keys{Entrée \return}.
+et la validation d'un choix à l'intérieur d'une liste déroulante se fait avec la touche \keys{Entrée \return}.
 
 \vspacepdf{3mm}
 \Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complètement}\index{champ de saisie!auto-complètement} sélectionné apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
+Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complétion}\index{champ de saisie!auto-complétion} sélectionnée apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
 
 Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
 
@@ -506,7 +506,7 @@ Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent 
 Dans le formulaire de saisie, vous pouvez saisir les nombres, avec ou sans décimales, dans les champs tels que \menus{Débit} et \menus{Crédit}, à l'aide du clavier.
 
 Vous pouvez aussi y saisir des \indexword{formules arithmétiques}\index{champ de saisie!formule arithmétique}\index{formule arithmétique!champ de saisie} simples, à l'aide des quatre opérateurs d'addition, soustraction, multiplication et division. Cela remplace la \indexword{calculatrice}\index{calculatrice} sur votre bureau.
-%TODO verify
+
 Pour saisir une formule arithmétique, saisissez-la comme si c'était un texte, par exemple \frquote{3,40-2,10}, puis continuez normalement la saisie des autres champs de votre opération; si elle est mal écrite, elle s'affiche en \textcolor{red}{rouge}. Lorsque vous cliquez sur le bouton \menus{Valider} et pour une nouvelle opération, le résultat \frquote{1,30} s'affiche dans la liste des opérations, sinon le résultat s'affiche, en plus, dans le champ de saisie. Et si la formule est toujours mal écrite, le message \frquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}} s'affiche à la place et vous ne pourrez pas valider l'opération financière.
 
 Cette calculatrice accepte le mélange des points et des virgules comme séparateur décimal, par exemple \frquote{1.2+2,3}, et Grisbi effectuera le calcul.
@@ -523,7 +523,7 @@ Pour enregistrer une \indexword{remise de chèques}\index{remise!chèques}, vous
 Pour enregistrer une \indexword{remise d'espèces}\index{remise!espèces}, vous les déposez d'abord soit sur votre compte bancaire à la banque qui vous remet un bordereau de remise, soit dans votre porte-monnaie, puis vous saisissez l'opération de remise, en crédit sur votre compte de caisse.
 
 % espace pour changement de thème
- \vspacepdf{3mm}
+\vspacepdf{3mm}
 Si vous recevez beaucoup de chèques (par exemple parce que vous gérez une association et que vos adhérents payent leur cotisation par chèque), vous avez deux méthodes de gestion:
 
 \begin{itemize}
