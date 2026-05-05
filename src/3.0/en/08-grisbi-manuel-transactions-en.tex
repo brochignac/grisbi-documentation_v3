@@ -727,8 +727,11 @@ You can also enter simple \indexword{arithmetic expressions}\index{entry field!a
 To enter an arithmetic formula, type it as if it were text, for example \enquote{3.40-2.10}, then continue entering the other fields of your transaction as normal; if it is entered incorrectly, it will be displayed in \textcolor{red}{red}. When you click the \menus{Validate} button and for a new transaction, the result \enquote{1.30} appears in the list of transactions; otherwise, the result also appears in the entry field. And if the formula is still incorrect, the message \enquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}}  will appear instead and you will not be able to validate the financial transaction.
 %Pour saisir une formule arithmétique, saisissez-la comme si c'était un texte, par exemple \frquote{3,40-2,10}, puis continuez normalement la saisie des autres champs de votre opération; si elle est mal écrite, elle s'affiche en \textcolor{red}{rouge}. Lorsque vous cliquez sur le bouton \menus{Valider} et pour une nouvelle opération, le résultat \frquote{1,30} s'affiche dans la liste des opérations, sinon le résultat s'affiche, en plus, dans le champ de saisie. Et si la formule est toujours mal écrite, le message \frquote{\textcolor{red}{\#\#\#\textsf{ERR}\#\#\#}}  s'affiche à la place et vous ne pourrez pas valider l'opération financière.
 
+\vspacepdf{2mm}
+\Attention{}: please use only the period as a decimal point and the comma as a thousands separator; otherwise, this will cause calculation errors (e.g., "1,2+2.4=14.40"). For your information, with Grisbi in other languages (French, German, etc.), the period and comma are interchangeable as decimal separators.
 % FAUX pour la version anglaise : la virgule sert de séparateur de milliers et fait un "mauvais" mélange avec le point comme séparateur décimal.
 %Cette calculatrice accepte le mélange des points et des virgules comme séparateur décimal, par exemple \frquote{1.2+2,3}, et Grisbi effectuera le calcul.
+\vspacepdf{2mm}
 
 This calculator accepts the multiplication or division, but in a manner exclusive of addition or subtraction; that is to say that we can mix additions and subtractions in an entry but not a multiplication (or division) and any other operator: we cannot put parentheses to indicate an order of priority of operation.
 %Cette calculatrice accepte la multiplication ou la division, mais de manière exclusive de l'addition ou de la soustraction; c'est-à-dire qu'on peut mélanger additions et soustractions dans une saisie mais pas une multiplication (ou une division) et un quelconque autre opérateur: on ne peut pas mettre de parenthèses pour indiquer un ordre de priorité d'opération.
@@ -764,16 +767,21 @@ If none of these methods suit you, a better solution is to use a \emph{suspense 
 %Si aucune de ces méthodes ne vous convient, une meilleure solution consiste à utiliser un \emph{compte d'attente}. Pour cela, la méthode est explicitée en détails au paragraphe \vref{accounts-type-bank-waiting-remittance}, \menus{Remise de chèques ou d'espèces}.
 
 
-\subsection{Virements\label{transactions-new-transfer}}
+\subsection{Transfers\label{transactions-new-transfer}}
+%\subsection{Virements\label{transactions-new-transfer}}
 
-Le terme \indexword{virement}\index{opération!virement} recouvre deux notions différentes: les virements externes et les virements internes. Voici dans chaque cas les méthodes de saisie conseillées.
+The term \indexword{transfer}\index{transaction!transfer} covers two different concepts: external transfers and internal transfers. Here are the recommended entry methods for each case.
+%Le terme \indexword{virement}\index{opération!virement} recouvre deux notions différentes: les virements externes et les virements internes. Voici dans chaque cas les méthodes de saisie conseillées.
 
 
-\subsubsection{Virements externes\label{transactions-new-transfer-external}}
+\subsubsection{External transfers\label{transactions-new-transfer-external}}
+%\subsubsection{Virements externes\label{transactions-new-transfer-external}}
 
-Les \indexword{virements externes}\index{virement!externe} sont des virements que votre banque, ou vous-même si vous passez un ordre par Internet, effectue vers ou à partir de votre compte. Ils peuvent être entrants (par ex. si votre employeur donne l'ordre à votre banque de vous virer le montant de votre salaire) ou sortants (par ex. si vous donnez l'ordre à votre banque de faire un virement Swift pour payer une facture à l'étranger).
+\indexword{External transfers}\index{external transfer} are transfers made by your bank, or by you if you place an order online, to or from your account. They can be incoming (e.g. if your employer instructs your bank to transfer your salary to you) or outgoing (e.g. if you instruct your bank to make a SWIFT transfer to pay a bill abroad).
+%Les \indexword{virements externes}\index{virement!externe} sont des virements que votre banque, ou vous-même si vous passez un ordre par Internet, effectue vers ou à partir de votre compte. Ils peuvent être entrants (par ex. si votre employeur donne l'ordre à votre banque de vous virer le montant de votre salaire) ou sortants (par ex. si vous donnez l'ordre à votre banque de faire un virement Swift pour payer une facture à l'étranger).
 
-Il s'agit d'un type d'opération assimilable à un chèque, et vous pourrez la saisir en sélectionnant le \menus{Moyen de paiement}: \menus{Virement} dans le formulaire de saisie.
+This is a type of transaction similar to a cheque, and you can enter it by selecting \menus{Payment of method}: \menus{Transfer} in the entry form.
+%Il s'agit d'un type d'opération assimilable à un chèque, et vous pourrez la saisir en sélectionnant le \menus{Moyen de paiement}: \menus{Virement} dans le formulaire de saisie.
 
 
 \subsubsection{Virements internes\label{transactions-new-transfer-internal}}
