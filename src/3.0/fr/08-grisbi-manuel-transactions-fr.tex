@@ -18,18 +18,29 @@
 
 Les différents comptes que vous avez créés contiennent les opérations. Pour afficher la liste des comptes enregistrés dans votre fichier de comptes, utilisez la barre d'information ou le panneau de navigation (voir le chapitre \vref{home}, \menus{Accueil} et la section \vref{accounts-list}, \menus{Liste des comptes}).
 
-Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste: l'onglet \menus{Opérations} s'affiche par défaut. Il possède quatre éléments principaux:
+Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste: l'onglet \menus{Opérations}\refimage{transactions-tab-img} s'affiche par défaut. Il possède quatre éléments principaux:
 
 \begin{enumerate}
-	\item la barre d'outils;
-	\item la liste des opérations;
-	\item le formulaire de saisie des opérations;
-	\item le \indexword{solde rapproché}\index{solde!rapproché}.
+	\item la barre d'outils (section \vref{transactions-functions});
+	\item la liste des opérations (section \vref{transactions-list});
+	\item le formulaire de saisie des opérations (section \vref{transactions-form});
+	\item le \indexword{solde rapproché}\index{solde!rapproché} (section \vref{transactions-balance}).
 \end{enumerate}
 
 % espace avant Attention ou Note: 5 mm
 \vspacepdf{3mm}
 \Note{}: si vous n'avez jamais fait de rapprochement, donc pas de pointages, Grisbi ne peut ni calculer ni afficher de solde rapproché.
+
+
+% image centrée 
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_tab}
+	\end{center}
+	\caption{L'onglet \menus{Opérations} d'un compte}
+	\label{transactions-tab-img}
+\end{figure}
+% image centrée 
 
 
 \section{Barre d'outils\label{transactions-functions}}
@@ -73,18 +84,7 @@ La barre d'outils est présente en haut du panneau des détails et présente les
 
 \subsection{Description\label{transactions-list-description}}
 
-La liste des opérations s'affiche dans le panneau des détails\refimage{transactions-list-img} sous la barre d'outils.
-
-% image centrée 
-\begin{figure}[ht]
-	\begin{center}
-	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_list}
-	\end{center}
-	\caption{Liste des opérations}
-	\label{transactions-list-img}
-\end{figure}
-% image centrée 
-
+La liste des opérations s'affiche dans le panneau des détails\refimage{transactions-tab-img} sous la barre d'outils.
 
 Elle affiche, en haut, la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la largeur des colonnes à leur valeur par défaut, sélectionnez dans la barre de menu \menus{Affichage - Réinitialiser la largeur des colonnes}.
 
@@ -321,7 +321,7 @@ Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit
 \end{itemize}
 
 
-\section{Solde pointé\label{transactions-balance}}
+\section{Solde rapproché\label{transactions-balance}}
 
 En-dessous de la liste des opérations, sur la même ligne que le libellé \menus{Formulaire de saisie des opérations}, s'affichent à droite deux informations:
 \begin{itemize}
@@ -559,16 +559,18 @@ Les \indexword{virements internes}\index{virement!interne} sont des transferts e
 	\item si vous utilisez un compte bancaire pour une carte bancaire à débit différé, vous saisissez le prélèvement mensuel par votre banque comme un virement de votre compte courant vers ce compte de carte.
 \end{itemize}
 
-Par contre, si vous n'utilisez aucun de ces comptes et que votre fichier de comptes contient uniquement un compte courant et un compte d'épargne, alors les virements internes correspondent à des virements d'un compte vers l'autre. Ce seront bien des opérations de type \menus{Virement}, et vous les enregistrerez dans la catégorie \menus{Virement: Compte d'épargne} ou \menus{Virement: Compte courant}, selon le cas.
+Par contre, si vous n'utilisez aucun de ces comptes et que votre fichier de comptes contient uniquement un compte courant et un compte d'épargne, alors les virements internes correspondent à des virements d'un compte vers l'autre. Ce seront bien des opérations de type \menus{Virement}, et vous les enregistrerez dans la catégorie \menus{Virement : Compte d'épargne} ou \menus{Virement : Compte courant}, selon le cas.
 
 Vous pouvez réaliser des virements entre comptes en sélectionnant la catégorie \emph{Virement: le\_compte\_ à\_virer}. Selon que vous saisissez son montant en \menus{Débit} ou en \menus{Crédit}, ce sera un virement \emph{vers le compte} ou un virement \emph{à partir du compte}. Il est bien sûr nécessaire que les deux comptes se trouvent dans le même fichier crée par Grisbi.
 
 % espace pour changement de thème
-\vspacepdf{3mm}
-Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si vous faites une opération de virement dans votre compte en yens à partir d'un compte en euros, dans le compte en yens le virement apparaîtra en yens dans le champ \menus{Crédit}, et son solde en yens sera correct, et dans le compte en euros le débit apparaîtra en yens dans le champ \menus{Débit} et en euros dans le champ \menus{Montant}.
+\vspacepdf{2mm}
+Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yen, vous faites une opération de virement en crédit provenant d'un compte en euro, le virement apparaîtra en yen dans la colonne \menus{Crédit}, et son solde en yen sera correct. Dans le compte en euro, le montant du débit apparaîtra en yen dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} dans la colonne \menus{Crédit}, si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
 
-\Note{}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations et ajuster le nombre de lignes affichées dans la liste des opérations (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}).
+\vspacepdf{2mm}
+\Note{}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations en vérifiant/ajoutant le champ \menus{Montant} (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}) et en ajustant le nombre de lignes affichées dans la liste des opérations (voir la section \vref{transactions-functions} \menus{Barre d'outils} ou la section \vref{home-menus-display} \menus{Menu Affichage}).
 
+\vspacepdf{2mm}
 \Note{}: si vous affichez une opération existante dans le formulaire de saisie, vous devrait configurer le contenu du formulaire de saisie en y ajoutant le champ \menus{Devise} pour visualiser la devise associée à l'opération en débit ou en crédit (voir la section \vref{setup-form-content}, \menus{Contenu}).
 
 

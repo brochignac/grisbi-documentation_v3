@@ -22,21 +22,21 @@ Die verschiedenen Konten, die Sie erstellen haben, enthalten Buchungen. Um die L
 %The various accounts you have created contain transactions. To view the list of accounts stored in your accounts file, use the information bar or the navigation panel (see the \vref{home}, \menus{Home} chapter and the \vref{accounts-list}, \menus{Account List} section).
 %Les différents comptes que vous avez créés contiennent les opérations. Pour afficher la liste des comptes enregistrés dans votre fichier de comptes, utilisez la barre d'information ou le panneau de navigation (voir le chapitre \vref{home}, \menus{Accueil} et la section \vref{accounts-list}, \menus{Liste des comptes}).
 
-Um die Transaktionen eines Kontos anzuzeigen, wählen Sie dieses Konto aus der Liste aus: Standardmäßig wird die Registerkarte \menus{Buchungen} angezeigt. Sie enthält vier Hauptbereiche:
+Um die Transaktionen eines Kontos anzuzeigen, wählen Sie dieses Konto aus der Liste aus: Standardmäßig wird die Registerkarte \menus{Buchungen}\refimage{transactions-tab-img} angezeigt. Sie enthält vier Hauptbereiche:
 %To view the transactions for an account, select that account from the list: the \menus{Transactions} tab will appear by default. It contains four main sections:
 %Pour afficher les opérations d'un compte, sélectionnez ce compte dans la liste: l'onglet \menus{Opérations} s'affiche par défaut. Il possède quatre éléments principaux:
 
 \begin{enumerate}
-	\item Werkzeugliste;
+	\item Werkzeugliste (Abschnitt \vref{transactions-functions});
 	%\item the toolbar;
 	%\item la barre d'outils;
-	\item Buchungsliste;
+	\item Buchungsliste (Abschnitt \vref{transactions-list});
 	%\item the list of transactions;
 	%\item la liste des opérations;
-	\item Buchungsformular
+	\item Buchungsformular (Abschnitt \vref{transactions-form});
 	%\item the transaction/scheduled form;
 	%\item le formulaire de saisie des opérations;
-	\item Abgestimmter saldo.
+	\item Abgestimmter saldo (Abschnitt \vref{transactions-balance}).
 	%\item the \indexword{reconciled balance}\index{balance!reconciled}.
 	%\item le \indexword{solde pointé}\index{solde!pointé}.
 \end{enumerate}
@@ -46,6 +46,18 @@ Um die Transaktionen eines Kontos anzuzeigen, wählen Sie dieses Konto aus der L
 \Note{}: Wenn Sie noch nie einen Abgleich durchgeführt haben, also keine Abstimmungen vorgenommen haben, kann Grisbi keinen abgeglichenen Saldo berechnen oder anzeigen.
 %\Note{}: if you have never carried out a reconciliation – i.e. you have not performed any reconciliation entries – Grisbi cannot calculate or display a reconciled balance.
 %\Note{}: si vous n'avez jamais fait de rapprochement, donc pas de pointages, Grisbi ne peut ni calculer ni afficher de solde rapproché.
+
+% image centrée 
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_tab}
+	\end{center}
+	\caption{Die Registerkarte \menus{Buchungen} eines Kontos}
+	%\caption{List of transactions}
+	%\caption{Liste des opérations}
+	\label{transactions-tab-img}
+\end{figure}
+% image centrée 
 
 
 \section{Werkzeugliste\label{transactions-functions}}
@@ -163,22 +175,9 @@ Die Werkzeugleiste befindet sich oben im Detailbereich und bietet folgende Funkt
 %\subsection{Description\label{transactions-list-description}}
 %\subsection{Description\label{transactions-list-description}}
 
-Die Liste der Buchungen wird im Bereich details\refimage{transactions-list-img} unterhalb der Werkzeugleiste angezeigt.
+Die Liste der Buchungen wird im Bereich details\refimage{transactions-tab-img} unterhalb der Werkzeugleiste angezeigt.
 %The list of transactions is displayed in the details panel\refimage{transactions-list-img} below the toolbar.
 %La liste des opérations s'affiche dans le panneau des détails\refimage{transactions-list-img} sous la barre d'outils.
-
-% image centrée 
-\begin{figure}[ht]
-	\begin{center}
-	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_list}
-	\end{center}
-	\caption{Liste der Buchungen}
-	%\caption{List of transactions}
-	%\caption{Liste des opérations}
-	\label{transactions-list-img}
-\end{figure}
-% image centrée 
-
 
 Oben wird die Spaltenkopfzeile angezeigt. Sie können \indexword{eine Spalte verbreitern oder verengen}\index{Spalte!Breite}, indem Sie auf die Trennlinie zwischen zwei Spalten klicken und diese ziehen. Um die Spalten wieder auf ihre Standardbreite zurückzusetzen, wählen Sie \menus{Ansicht – Spaltenbreite zurücksetzen} aus der Menüleiste.
 %The column header bar is displayed at the top. You can \indexword{widen or narrow a column}\index{column!width} by clicking on the separator between two columns and dragging it. To restore the columns to their default width, select \menus{View - Reset the column width} from the menu bar.
@@ -1037,5 +1036,46 @@ Der Begriff \indexword{Umbuchung}\index{Buchung!Umbuchung} umfasst zwei verschie
 Es handelt sich um eine Buchung, die mit einem Scheck vergleichbar ist. Sie können sie erfassen, indem Sie im Erfassungsformular \menus{Zahlungsweise}: \menus{Umbuchung} auswählen.
 %This is a type of transaction similar to a cheque, and you can enter it by selecting \menus{Payment of method}: \menus{Transfer} in the entry form.
 %Il s'agit d'un type d'opération assimilable à un chèque, et vous pourrez la saisir en sélectionnant le \menus{Moyen de paiement}: \menus{Virement} dans le formulaire de saisie.
+
+
+\subsubsection{Interne Umbuchungen\label{transactions-new-transfer-internal}}
+%\subsubsection{Internal transfers\label{transactions-new-transfer-internal}}
+%\subsubsection{Virements internes\label{transactions-new-transfer-internal}}
+
+The \indexword{internal transfers}\index{transfer! internal} are transfers between your various Grisbi accounts, which do not necessarily have an equivalent in the bank; here are some examples:
+%Les \indexword{virements internes}\index{virement!interne} sont des transferts entre vos différents comptes de Grisbi, et qui n'ont pas forcément d'équivalent en banque; voici quelques exemples:
+
+\begin{itemize}
+	\item if you use a cash account, when you make a cash withdrawal at the bank, you enter a transfer to that cash account in Grisbi, but the transaction type is \menus{Withdrawal};
+	%\item si vous utilisez un compte de caisse, lorsque vous faites un retrait d'espèces à la banque, vous saisissez dans Grisbi un virement vers ce compte de caisse, mais le type d'opération est \menus{Retrait};
+	\item if you use an advance account, when you issue or receive a refund check, you enter an internal transfer, even though the type of transaction is \menus{Check};
+	%\item si vous utilisez un compte d'avances, lorsque vous établissez ou recevez un chèque de remboursement, vous saisissez un virement interne, bien que le type d'opération soit \menus{Chèque};
+	\item if you use a liability account to manage a loan, you enter the monthly direct debit made by your bank as an internal transfer from your bank account to your liability account, as a \menus{Direct debit};
+	%\item si vous utilisez un compte de passif pour gérer un emprunt, vous saisissez le prélèvement mensuel effectué par votre banque comme un virement interne de votre compte bancaire vers votre compte de passif, en tant que type \menus{Prélèvement};
+	\item if you use a bank account for a deferred debit card, you enter the monthly withdrawal by your bank as a transfer from your current account to this card account.
+	%\item si vous utilisez un compte bancaire pour une carte bancaire à débit différé, vous saisissez le prélèvement mensuel par votre banque comme un virement de votre compte courant vers ce compte de carte.
+\end{itemize}
+
+
+However, if you do not use any of these accounts and your account file contains only a current account and a savings account, then internal transfers will be transfers from one account to the other. These will indeed be transactions of the \menus{Transfer} type, and you should record them in the \menus{Transfer: Savings account} or \menus{Transfer: Current account} category, as appropriate.
+%Par contre, si vous n'utilisez aucun de ces comptes et que votre fichier de comptes contient uniquement un compte courant et un compte d'épargne, alors les virements internes correspondent à des virements d'un compte vers l'autre. Ce seront bien des opérations de type \menus{Virement}, et vous les enregistrerez dans la catégorie \menus{Virement: Compte d'épargne} ou \menus{Virement: Compte courant}, selon le cas.
+
+
+%You can make transfers between accounts by selecting the category \emph{Transfer: the\_account\_to\_transfer\_from}. Depending on whether you enter the amount under \menus{Debit} or \menus{Credit}, this will be a transfer \emph{to the account} or a transfer \emph{from the account}. Of course, both accounts must be in the same file created by Grisbi.
+Vous pouvez réaliser des virements entre comptes en sélectionnant la catégorie \emph{Virement: le\_compte\_ à\_virer}. Selon que vous saisissez son montant en \menus{Débit} ou en \menus{Crédit}, ce sera un virement \emph{vers le compte} ou un virement \emph{à partir du compte}. Il est bien sûr nécessaire que les deux comptes se trouvent dans le même fichier crée par Grisbi.
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+If you make a \indexword{transfer between two accounts in different currencies}\index{currency! different}\index{currency! transfer}\index{transfer! currency}, Grisbi will automatically carry out the conversion, and the debit and credit will clearly show the currencies; for example, if, in your yen account, you make a transfer transaction in credit from an euro account, the transfer will appear in yen in the \menus{Credit} column, and its yen balance will be correct. In the euro account, the debit amount will appear in yen in the \menus{Debit} column, and in euro in parentheses, in the \menus{Amount} field in the \menus{Credit} column, if the display is at least in \menus{\enquote{Two lines view}} (see notes below).
+%Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yens, vous faites une opération de virement en crédit provenant d'un compte en euros, le virement apparaîtra en yens dans la colonne \menus{Crédit}, et son solde en yens sera correct. Dans le compte en euros, le montant du débit apparaîtra en yens dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} dans la colonne \menus{Crédit}, si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
+
+\vspacepdf{2mm}
+\Note{}: to display the \menus{Amount} field, you will need to configure the transaction list and adjust the number of lines displayed in the transaction list (see the section \vref{setup-operations-cells}, \menus{Transaction list cells} or the section \vref{transactions-list-fields-manage}, \menus{Management of information fields}).
+\Note{}: to display the \menus{Amount} field, you will need to configure the transaction list by checking/adding the \menus{Amount} field (see the section \vref{setup-operations-cells}, \menus{Transaction list cells} or the section \vref{transactions-list-fields-manage}, \menus{Management of information fields}) and adjusting the number of lines displayed in the transaction list (see the section \vref{transactions-functions} \menus{Toolbar} or the section \vref{home-menus-display} \menus{View Menu}).
+%\Note{}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations en vérifiant/ajoutant le champ \menus{Montant} (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}) et en ajustant le nombre de lignes affichées dans la liste des opérations (voir la section \vref{transactions-functions} \menus{Barre d'outils} ou la section \vref{home-menus-display} \menus{Menu Affichage}).
+
+\vspacepdf{2mm}
+\Note{}: If you display an existing transaction in the entry form, you should configure the form’s content by adding the \menus{Currency} field to view the currency associated with the debit or credit transaction (see the \vref{setup-form-content} section, \menus{Content}).
+%\Note{}: si vous affichez une opération existante dans le formulaire de saisie, vous devrait configurer le contenu du formulaire de saisie en y ajoutant le champ \menus{Devise} pour visualiser la devise associée à l'opération en débit ou en crédit (voir la section \vref{setup-form-content}, \menus{Contenu}).
 
 
