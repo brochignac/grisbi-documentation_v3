@@ -1042,40 +1042,100 @@ Es handelt sich um eine Buchung, die mit einem Scheck vergleichbar ist. Sie kön
 %\subsubsection{Internal transfers\label{transactions-new-transfer-internal}}
 %\subsubsection{Virements internes\label{transactions-new-transfer-internal}}
 
-The \indexword{internal transfers}\index{transfer! internal} are transfers between your various Grisbi accounts, which do not necessarily have an equivalent in the bank; here are some examples:
+Die \indexword{interne Umbuchungen}\index{Umbuchungen!interne} sind Umbuchungen zwischen Ihren verschiedenen Grisbi-Konten, für die es nicht unbedingt eine Entsprechung bei der Bank gibt; hier einige Beispiele:
+%The \indexword{internal transfers}\index{transfer!internal} are transfers between your various Grisbi accounts, which do not necessarily have an equivalent in the bank; here are some examples:
 %Les \indexword{virements internes}\index{virement!interne} sont des transferts entre vos différents comptes de Grisbi, et qui n'ont pas forcément d'équivalent en banque; voici quelques exemples:
 
 \begin{itemize}
-	\item if you use a cash account, when you make a cash withdrawal at the bank, you enter a transfer to that cash account in Grisbi, but the transaction type is \menus{Withdrawal};
-	%\item si vous utilisez un compte de caisse, lorsque vous faites un retrait d'espèces à la banque, vous saisissez dans Grisbi un virement vers ce compte de caisse, mais le type d'opération est \menus{Retrait};
-	\item if you use an advance account, when you issue or receive a refund check, you enter an internal transfer, even though the type of transaction is \menus{Check};
+	\item Wenn Sie ein Bargeldkonto verwenden und an der Bank Bargeld abheben, erfassen Sie in Grisbi eine Überweisung auf dieses Bargeldkonto, wobei die Buchungsart \menus{Abhebung} lautet;
+	%\item if you use a cash account, when you make a cash withdrawal at the bank, you enter a transfer to that cash account in Grisbi, but the transaction type is \menus{Withdrawal};
+	%\item si vous utilisez un compte de caisse, lorsque vous faites un retrait d'espèces à la banque, vous saisissez dans Grisbi un virement vers ce compte de caisse, mais le type d'opération est un \menus{Retrait};
+	\item Wenn Sie ein Vorschusskonto verwenden, erfassen Sie bei der Ausstellung oder dem Erhalt eines Rückerstattungsschecks eine interne Umbuchung, auch wenn die Buchungsart \menus{Scheck} lautet;
+	%\item if you use an advance account, when you issue or receive a refund check, you enter an internal transfer, even though the type of transaction is \menus{Check};
 	%\item si vous utilisez un compte d'avances, lorsque vous établissez ou recevez un chèque de remboursement, vous saisissez un virement interne, bien que le type d'opération soit \menus{Chèque};
-	\item if you use a liability account to manage a loan, you enter the monthly direct debit made by your bank as an internal transfer from your bank account to your liability account, as a \menus{Direct debit};
+	\item Wenn Sie ein Passivkonto zur Verwaltung eines Darlehens verwenden, erfassen Sie die monatliche Lastschrift Ihrer Bank als interne Überweisung von Ihrem Bankkonto auf Ihr Passivkonto unter dem \menus{Barzahlung};
+	%\item if you use a liability account to manage a loan, you enter the monthly direct debit made by your bank as an internal transfer from your bank account to your liability account, as a \menus{Direct debit};
 	%\item si vous utilisez un compte de passif pour gérer un emprunt, vous saisissez le prélèvement mensuel effectué par votre banque comme un virement interne de votre compte bancaire vers votre compte de passif, en tant que type \menus{Prélèvement};
-	\item if you use a bank account for a deferred debit card, you enter the monthly withdrawal by your bank as a transfer from your current account to this card account.
+	\item Wenn Sie ein Bankkonto für eine Debitkarte mit nachträglicher Abbuchung nutzen, geben Sie die monatliche Abbuchung durch Ihre Bank als Umbuchung von Ihrem Girokonto auf dieses Kartenkonto ein.
+	%\item if you use a bank account for a deferred debit card, you enter the monthly withdrawal by your bank as a transfer from your current account to this card account.
 	%\item si vous utilisez un compte bancaire pour une carte bancaire à débit différé, vous saisissez le prélèvement mensuel par votre banque comme un virement de votre compte courant vers ce compte de carte.
 \end{itemize}
 
 
-However, if you do not use any of these accounts and your account file contains only a current account and a savings account, then internal transfers will be transfers from one account to the other. These will indeed be transactions of the \menus{Transfer} type, and you should record them in the \menus{Transfer: Savings account} or \menus{Transfer: Current account} category, as appropriate.
+Wenn Sie jedoch keines dieser Konten nutzen und Ihre Kontodatei nur ein Girokonto und ein Sparkonto enthält, handelt es sich bei den internen Umbunchungen um Umbunchungen von einem Konto auf das andere. Dabei handelt es sich tatsächlich um Buchungen vom Typ \menus{Umbuchung}, und Sie sollten diese entsprechend in der Kategorie \menus{Umbuchung: Sparkonto} oder \menus{Umbuchung: Girokonto} erfassen.
+%However, if you do not use any of these accounts and your account file contains only a current account and a savings account, then internal transfers will be transfers from one account to the other. These will indeed be transactions of the \menus{Transfer} type, and you should record them in the \menus{Transfer: Savings account} or \menus{Transfer: Current account} category, as appropriate.
 %Par contre, si vous n'utilisez aucun de ces comptes et que votre fichier de comptes contient uniquement un compte courant et un compte d'épargne, alors les virements internes correspondent à des virements d'un compte vers l'autre. Ce seront bien des opérations de type \menus{Virement}, et vous les enregistrerez dans la catégorie \menus{Virement: Compte d'épargne} ou \menus{Virement: Compte courant}, selon le cas.
 
-
-%You can make transfers between accounts by selecting the category \emph{Transfer: the\_account\_to\_transfer\_from}. Depending on whether you enter the amount under \menus{Debit} or \menus{Credit}, this will be a transfer \emph{to the account} or a transfer \emph{from the account}. Of course, both accounts must be in the same file created by Grisbi.
-Vous pouvez réaliser des virements entre comptes en sélectionnant la catégorie \emph{Virement: le\_compte\_ à\_virer}. Selon que vous saisissez son montant en \menus{Débit} ou en \menus{Crédit}, ce sera un virement \emph{vers le compte} ou un virement \emph{à partir du compte}. Il est bien sûr nécessaire que les deux comptes se trouvent dans le même fichier crée par Grisbi.
+Sie können Umbuchungen zwischen Konten vornehmen, indem Sie die Kategorie \emph{Umbuchung: das\_zu\_belastende\_Konto} auswählen. Je nachdem, ob Sie den Betrag unter \menus{Ausgaben} oder \menus{Einnahmen} eingeben, handelt es sich um eine Umbuchung \emph{auf das Konto} oder eine Umbuchung \emph{vom Konto}. Natürlich müssen sich beide Konten in derselben von Grisbi erstellten Datei befinden.
+%You can make transfers between accounts by selecting the category \emph{Transfer: the\_account\_to\_be\_charged}. Depending on whether you enter the amount under \menus{Debit} or \menus{Credit}, this will be a transfer \emph{to the account} or a transfer \emph{from the account}. Of course, both accounts must be in the same file created by Grisbi.
+%Vous pouvez réaliser des virements entre comptes en sélectionnant la catégorie \emph{Virement: le\_compte\_à\_imputer}. Selon que vous saisissez son montant en \menus{Débit} ou en \menus{Crédit}, ce sera un virement \emph{vers le compte} ou un virement \emph{à partir du compte}. Il est bien sûr nécessaire que les deux comptes se trouvent dans le même fichier créé par Grisbi.
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-If you make a \indexword{transfer between two accounts in different currencies}\index{currency! different}\index{currency! transfer}\index{transfer! currency}, Grisbi will automatically carry out the conversion, and the debit and credit will clearly show the currencies; for example, if, in your yen account, you make a transfer transaction in credit from an euro account, the transfer will appear in yen in the \menus{Credit} column, and its yen balance will be correct. In the euro account, the debit amount will appear in yen in the \menus{Debit} column, and in euro in parentheses, in the \menus{Amount} field in the \menus{Credit} column, if the display is at least in \menus{\enquote{Two lines view}} (see notes below).
+Wenn Sie eine \indexword{Umbuchung zwischen zwei Konten in unterschiedlichen Währungen}\index{Währung!different}\index{Währung!transfer}\index{Umbuchung!Währung} vornehmen, führt Grisbi automatisch die Umrechnung durch, und bei Ausgaben und Einnahmen werden die Währungen deutlich angezeigt; wenn Sie beispielsweise auf Ihrem Yen-Konto eine Überweisung als Gutschrift von einem Euro-Konto vornehmen, erscheint die Überweisung in der Spalte \menus{Einnahmen} in Yen, und der Yen-Saldo ist korrekt. Auf dem Euro-Konto erscheint der Sollbetrag in der Spalte \menus{Ausgaben} in Yen und in Klammern in Euro im Feld \menus{Betrag} in der Spalte \menus{Einnahmen}, sofern die Ansicht mindestens im \menus{Zweizeilig} erfolgt (siehe Notizen unten).
+%If you make a \indexword{transfer between two accounts in different currencies}\index{currency!different}\index{currency!transfer}\index{transfer!currency}, Grisbi will automatically carry out the conversion, and the debit and credit will clearly show the currencies; for example, if, in your yen account, you make a transfer transaction in credit from an euro account, the transfer will appear in yen in the \menus{Credit} column, and its yen balance will be correct. In the euro account, the debit amount will appear in yen in the \menus{Debit} column, and in euro in parentheses, in the \menus{Amount} field in the \menus{Credit} column, if the display is at least in \menus{Two lines view} (see notes below).
 %Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yens, vous faites une opération de virement en crédit provenant d'un compte en euros, le virement apparaîtra en yens dans la colonne \menus{Crédit}, et son solde en yens sera correct. Dans le compte en euros, le montant du débit apparaîtra en yens dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} dans la colonne \menus{Crédit}, si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
 
 \vspacepdf{2mm}
-\Note{}: to display the \menus{Amount} field, you will need to configure the transaction list and adjust the number of lines displayed in the transaction list (see the section \vref{setup-operations-cells}, \menus{Transaction list cells} or the section \vref{transactions-list-fields-manage}, \menus{Management of information fields}).
-\Note{}: to display the \menus{Amount} field, you will need to configure the transaction list by checking/adding the \menus{Amount} field (see the section \vref{setup-operations-cells}, \menus{Transaction list cells} or the section \vref{transactions-list-fields-manage}, \menus{Management of information fields}) and adjusting the number of lines displayed in the transaction list (see the section \vref{transactions-functions} \menus{Toolbar} or the section \vref{home-menus-display} \menus{View Menu}).
-%\Note{}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations en vérifiant/ajoutant le champ \menus{Montant} (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}) et en ajustant le nombre de lignes affichées dans la liste des opérations (voir la section \vref{transactions-functions} \menus{Barre d'outils} ou la section \vref{home-menus-display} \menus{Menu Affichage}).
+\noindent
+\Note{}: Um das Feld \menus{Betrag} anzuzeigen, müssen Sie die Buchungsliste wie folgt konfigurieren:
+%\Note{}: to display the \menus{Amount} field, you will need to configure the transaction list by:
+%\Note{}: pour que le champ \menus{Montant} s'affiche, vous devrez configurer la liste des opérations en: 
+\begin{itemize}
+	\item das Feld \menus{Betrag} überprüfen/hinzufügen (siehe den Abschnitt \vref{setup-operations-cells}, \menus{Buchungsübersicht Zellen} oder den Abschnitt \vref{transactions-list-fields-manage}, \menus{Verwaltung von Informationsfeldern}),
+	%\item checking/adding the \menus{Amount} field (see the section \vref{setup-operations-cells}, \menus{Transaction list cells} or the section \vref{transactions-list-fields-manage}, \menus{Management of information fields}),
+	%\item vérifiant/ajoutant le champ \menus{Montant} (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}), 
+	\item Anpassen der Anzahl der in der Buchungsliste angezeigten Zeilen (siehe den Abschnitt \vref{transactions-functions} \menus{Werkzeugliste} oder den Abschnitt \vref{home-menus-display} \menus{Menü Ansicht}).
+	%\item adjusting the number of lines displayed in the transaction list (see the section \vref{transactions-functions} \menus{Toolbar} or the section \vref{home-menus-display} \menus{View Menu}).
+	%\item ajustant le nombre de lignes affichées dans la liste des opérations (voir la section \vref{transactions-functions} \menus{Barre d'outils} ou la section \vref{home-menus-display} \menus{Menu Affichage}).
+\end{itemize}
 
 \vspacepdf{2mm}
-\Note{}: If you display an existing transaction in the entry form, you should configure the form’s content by adding the \menus{Currency} field to view the currency associated with the debit or credit transaction (see the \vref{setup-form-content} section, \menus{Content}).
+\Note{}: Wenn Sie im Buchungformular eine bestehende Buchung anzeigen, sollten Sie den Inhalt des Formulars so konfigurieren, dass das Feld \menus{Währung} hinzugefügt wird, um die Währung anzuzeigen, die mit der Ausgaben- oder Einnahmen-Bunchung verknüpft ist (siehe Abschnitt \vref{setup-form-content}, \menus{Darstellung}).
+%\Note{}: if you display an existing transaction in the entry form, you should configure the form’s content by adding the \menus{Currency} field to view the currency associated with the debit or credit transaction (see the \vref{setup-form-content} section, \menus{Content}).
 %\Note{}: si vous affichez une opération existante dans le formulaire de saisie, vous devrait configurer le contenu du formulaire de saisie en y ajoutant le champ \menus{Devise} pour visualiser la devise associée à l'opération en débit ou en crédit (voir la section \vref{setup-form-content}, \menus{Contenu}).
+
+
+\subsubsection{Gegenbuchung einer Umbuchung\label{transactions-new-transfer-associatedOperation}}
+%\subsubsection{Contra-transaction of a transfer\label{transactions-new-transfer-associatedOperation}}
+%\subsubsection{Contre-opération d'un virement\label{transactions-new-transfer-associatedOperation}}
+
+Wenn Sie einen Buchung vom Typ \dequote{interne Umbuchung} eingeben - von einem Konto auf ein anderes oder von einem Konto auf ein anderes -, erstellt Grisbi automatisch die \indexword{Gegenbuchung}\index{Gegenbuchung}\index{Buchung!Gegenbuchung}\index{Umbuchung!Gegenbuchung} auf dem anderen Konto, d. h. die entsprechende Umbuchung auf dem Empfängerkonto oder dem Absenderkonto.
+%When you enter a transaction of the type \enquote{internal transfer} - from one account to another, or from one account to another - Grisbi automatically creates the \indexword{contra-transaction}\index{contra-transaction}\index{transaction!contra-transaction}\index{transfer!contra-transaction} in the other account, i.e. the corresponding transfer in the recipient account or the source account.
+%Lorsque vous saisissez une opération de type \frquote{virement interne}, d'un compte vers un autre, ou sur un compte à partir d'un autre, Grisbi crée automatiquement la \indexword{contre-opération}\index{contre-opération}\index{opération!contre-opération}\index{virement!contre-opération} dans l'autre compte, c'est-à-dire le virement correspondant dans le compte destinataire ou dans le compte origine.
+
+Wenn die Umbunchung in einer Fremdwährung erfolgt, wird der Gegenbuchung automatisch in der Währung des Empfängerkontos erstellt, sofern der Wechselkurs feststeht; andernfalls werden Sie vor der Buchung um Bestätigung gebeten.
+%If the transfer is in a foreign currency, it will automatically create the contra-transaction entry in the currency of the destination account if the exchange rate is fixed; otherwise, it will ask you to confirm this before posting the entry.
+%S'il s'agit d'un virement en devises, il créera aussi la contre-opération dans la devise du compte de destination de façon automatique si le taux de change de la devise est fixe, sinon il vous le demandera avant de passer l'écriture.
+
+% espace pour changement de thème
+\vspacepdf{3mm}
+Um die \indexword{Gegenbuchung}\index{Gegenbuchung!Ansicht} einer Umbuchung anzuzeigen, klicken Sie mit der rechten Maustaste auf die entsprechende Zeile in einem der beiden Konten und wählen Sie im Kontextmenü \menus{Die Gegenbuchung anzeigen} aus: Das andere Konto wird angezeigt und der Buchung ist markiert (auf \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}). Wenn Sie genau denselben Vorgang in diesem Konto wiederholen, werden das ursprüngliche Konto und die Umbuchung erneut angezeigt.
+%To \indexword{view the contra-transaction}\index{contra-transaction!view} for a transfer, right-click on its line in one of the two accounts, and in the context menu, select \menus{Displays the contra-transaction}: the other account is displayed and the transaction is selected (on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}). If you repeat exactly the same action in that same account, the original account and its transfer are displayed again.
+%Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher} d'un virement, cliquez-droit sur sa ligne dans un des deux comptes, et dans le menu contextuel, sélectionnez \menus{Afficher la contre-opération}: l'autre compte s'affiche et l'opération est sélectionnée (sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}). Si vous refaites exactement la même manipulation dans ce même compte, le compte d'origine et son virement se ré-affichent.
+
+
+\subsection{Vorschüssen: Zustimmung und Erhalt\label{transactions-new-advance}}
+%\subsection{Advances: consent and receipt\label{transactions-new-advance}}
+%\subsection{Avances: consentement et réception\label{transactions-new-advance}}
+
+Möglicherweise müssen Sie \indexword{einer Vorschüsse zustimmen oder eine solche erhalten}\index{Vorschüsse!Zustimmung}\index{Vorschüsse!Erhalt} von Geldern: Dies könnte beispielsweise ein Gehaltsvorschuss oder ein Kauf sein, den Sie im Auftrag eines Freundes tätigen.
+%You may need to \indexword{consent to or receipt an advance}\index{advance!consent}\index{advance!receipt} of funds: this could be, for example, an advance on your salary or a purchase you make on behalf of a friend.
+%Vous pouvez être amené à \indexword{consentir ou recevoir une avance}\index{avance!consentement}\index{avance!réception} de fonds: il peut s'agir, par exemple, d'une avance sur votre salaire ou d'un achat que vous faites pour le compte d'un de vos amis.
+
+%espace pour changement de thème
+\vspacepdf{2mm}
+Sie haben zwei Möglichkeiten, dies zu regeln:
+%There are two ways to handle this:
+%Vous pouvez gérer cela de deux manières:
+\begin{itemize}
+	\item Der einfachste Ansatz besteht darin, eine eigene Kategorie anzulegen und ihr Ausgaben- und Einnahmen-Bunchungen zuzuordnen; sobald alle Vorschüsse zurückgezahlt sind, sollte der Saldo dieser Kategorie, wie in der Kategorieübersicht angezeigt, null betragen (siehe Abschnitt \vref{categories-list}, \menus{Liste der Kategorien und Unterkategorien});
+	%\item the simplest approach is to create a dedicated category and assign debit and credit transactions to it; once all advances have been repaid, the balance of this category, as shown in the list of categories, should be zero (see the section \vref{categories-list}, \menus{List of categories and sub-categories});
+	%\item la plus simple est de créer une catégorie dédiée, et d'y affecter les opérations de débit et de crédit; quand toutes les avances sont remboursées, le solde de cette catégorie, affiché dans la liste des catégories, doit être égal à zéro (voir la section \vref{categories-list}, \menus{Liste des catégories et des sous-catégories}); 
+	\item Ein sinnvollerer Ansatz ist die Einrichtung eines Vorschusskontos, das einen unmittelbareren Überblick über den Stand der ausstehenden Vorschüsse bietet: Dies wird im Abschnitt \vref{accounts-type-bank-advance}, \menus{Vorschusskonto} ausführlich beschrieben.
+	%\item a more useful approach is to create an advance account, which provides a more immediate overview of the status of outstanding advances: this is described in detail in the section \vref{accounts-type-bank-advance}, \menus{Advance Account}.
+	%\item une manière plus intéressante est de créer un compte d'avances, qui permet une vision plus immédiate de l'état des avances en cours: elle est décrite en détails dans le paragraphe \vref{accounts-type-bank-advance}, \menus{Compte d'avances}.
+\end{itemize}
+
 
 
