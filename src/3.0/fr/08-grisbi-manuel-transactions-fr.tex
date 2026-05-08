@@ -565,7 +565,7 @@ Vous pouvez réaliser des virements entre comptes en sélectionnant la catégori
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yen, vous faites une opération de virement en crédit provenant d'un compte en euro, le virement apparaîtra en yen dans la colonne \menus{Crédit}, et son solde en yen sera correct. Dans le compte en euro, le montant du débit apparaîtra en yen dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} dans la colonne \menus{Crédit}, si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
+Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yen, vous faites une opération de virement en crédit provenant d'un compte en euro, le virement apparaîtra en yen dans la colonne \menus{Crédit}, et son solde en yen sera correct. Dans le compte en euro, le montant du débit apparaîtra en yen dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} (\vref{transactions-list-fields}) dans la colonne \menus{Crédit} (par défaut), si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
 
 \vspacepdf{2mm}
 \noindent
@@ -603,9 +603,9 @@ Vous pouvez gérer cela de deux manières:
 \end{itemize}
 
 
-\subsection{Rappel automatique d'une opération\label{transactions-new-recall}}
+\subsection{Remplissage automatique du formulaire\label{transactions-new-autofill}}%\label{transactions-new-recall}}
 
-Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération, si vous avez activé l'option de \menus{Remplissage automatique des opérations} (menu \menus{Éditer - Préférences - Formulaire des opérations - Aide à la saisie}), vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération.
+Le \indexword{remplissage automatique}\index{formulaire!remplissage automatique}\index{opération!remplissage automatique} d'une opération, si vous avez activé l'option \menus{Remplissage automatique des opérations à partir du tiers} (du menu \menus{Éditer - Préférences - Formulaire des opérations - Aide à la saisie}), vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération.
 
 Vous pouvez ajuster finement ce comportement dans les \menus{Préférences} (voir la section \vref{setup-form-input}, \menus{Aide à la saisie du formulaire}).
 
@@ -622,8 +622,8 @@ Grisbi peut gérer des opérations saisies avec une \indexword{devise différent
 \vspacepdf{3mm}
 Pour utiliser une devise différente, vous devez d'abord procéder aux configurations suivantes:
 \begin{enumerate}
-	\item créez la devise, si elle ne l'est pas déjà, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-resources-currencies}, \menus{Devises});
-	\item dans le même menu, créez le ou les liens dont vous avez besoin entre la nouvelle devise et les autres déjà enregistrées (voir la section \vref{setup-resources-rate}, \menus{Liens entre devises});
+	\item créez la devise, si elle ne l'est pas déjà, dans le menu \menus{Éditer - Préférences - Ressources} (voir la section \vref{setup-resources-currencies}, \menus{Devises});
+	\item dans le menu suivant, créez le ou les liens dont vous avez besoin entre la nouvelle devise et les autres déjà enregistrées (voir la section \vref{setup-resources-rate}, \menus{Liens entre devises});
 	\item configurez l'affichage du champ \menus{Devise} dans le formulaire de saisie des opérations (voir la section \vref{setup-form-content}, \menus{Contenu});
 	% saut de ligne pour alignement de la note sur l'item
 	 

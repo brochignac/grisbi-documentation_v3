@@ -1072,9 +1072,9 @@ Sie können Umbuchungen zwischen Konten vornehmen, indem Sie die Kategorie \emph
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Wenn Sie eine \indexword{Umbuchung zwischen zwei Konten in unterschiedlichen Währungen}\index{Währung!different}\index{Währung!transfer}\index{Umbuchung!Währung} vornehmen, führt Grisbi automatisch die Umrechnung durch, und bei Ausgaben und Einnahmen werden die Währungen deutlich angezeigt; wenn Sie beispielsweise auf Ihrem Yen-Konto eine Überweisung als Gutschrift von einem Euro-Konto vornehmen, erscheint die Überweisung in der Spalte \menus{Einnahmen} in Yen, und der Yen-Saldo ist korrekt. Auf dem Euro-Konto erscheint der Sollbetrag in der Spalte \menus{Ausgaben} in Yen und in Klammern in Euro im Feld \menus{Betrag} in der Spalte \menus{Einnahmen}, sofern die Ansicht mindestens im \menus{Zweizeilig} erfolgt (siehe Notizen unten).
-%If you make a \indexword{transfer between two accounts in different currencies}\index{currency!different}\index{currency!transfer}\index{transfer!currency}, Grisbi will automatically carry out the conversion, and the debit and credit will clearly show the currencies; for example, if, in your yen account, you make a transfer transaction in credit from an euro account, the transfer will appear in yen in the \menus{Credit} column, and its yen balance will be correct. In the euro account, the debit amount will appear in yen in the \menus{Debit} column, and in euro in parentheses, in the \menus{Amount} field in the \menus{Credit} column, if the display is at least in \menus{Two lines view} (see notes below).
-%Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yens, vous faites une opération de virement en crédit provenant d'un compte en euros, le virement apparaîtra en yens dans la colonne \menus{Crédit}, et son solde en yens sera correct. Dans le compte en euros, le montant du débit apparaîtra en yens dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} dans la colonne \menus{Crédit}, si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
+Wenn Sie eine \indexword{Umbuchung zwischen zwei Konten in unterschiedlichen Währungen}\index{Währung!different}\index{Währung!transfer}\index{Umbuchung!Währung} vornehmen, führt Grisbi automatisch die Umrechnung durch, und bei Ausgaben und Einnahmen werden die Währungen deutlich angezeigt; wenn Sie beispielsweise auf Ihrem Yen-Konto eine Überweisung als Gutschrift von einem Euro-Konto vornehmen, erscheint die Überweisung in der Spalte \menus{Einnahmen} in Yen, und der Yen-Saldo ist korrekt. Auf dem Euro-Konto erscheint der Sollbetrag in der Spalte \menus{Ausgaben} in Yen und in Klammern in Euro im Feld \menus{Betrag} (\vref{transactions-list-fields}) in der Spalte \menus{Einnahmen} (standardmäßig), sofern die Ansicht mindestens im \menus{Zweizeilig} erfolgt (siehe Notizen unten).
+%If you make a \indexword{transfer between two accounts in different currencies}\index{currency!different}\index{currency!transfer}\index{transfer!currency}, Grisbi will automatically carry out the conversion, and the debit and credit will clearly show the currencies; for example, if, in your yen account, you make a transfer transaction in credit from an euro account, the transfer will appear in yen in the \menus{Credit} column, and its yen balance will be correct. In the euro account, the debit amount will appear in yen in the \menus{Debit} column, and in euro in parentheses, in the \menus{Amount} (\vref{transactions-list-fields}) field in the \menus{Credit} column (by default), if the display is at least in \menus{Two lines view} (see notes below).
+%Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yens, vous faites une opération de virement en crédit provenant d'un compte en euros, le virement apparaîtra en yens dans la colonne \menus{Crédit}, et son solde en yens sera correct. Dans le compte en euros, le montant du débit apparaîtra en yens dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} (\vref{transactions-list-fields}) dans la colonne \menus{Crédit} (par defaut), si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
 
 \vspacepdf{2mm}
 \noindent
@@ -1137,5 +1137,96 @@ Sie haben zwei Möglichkeiten, dies zu regeln:
 	%\item une manière plus intéressante est de créer un compte d'avances, qui permet une vision plus immédiate de l'état des avances en cours: elle est décrite en détails dans le paragraphe \vref{accounts-type-bank-advance}, \menus{Compte d'avances}.
 \end{itemize}
 
+
+\subsection{Automatisches Ausfüllen des Buchungsformulars\label{transactions-new-autofill}}%\label{transactions-new-recall}
+%\subsection{Automatic form completion\label{transactions-new-autofill}}%\label{transactions-new-recall}
+%\subsection{Remplissage automatique du formulaire\label{transactions-new-autofill}}%\label{transactions-new-recall}
+
+Die \indexword{automatische Ausfüllung}\index{Formular!automatische Ausfüllung}\index{Buchung!automatische Ausfüllung} eines Buchung, sofern Sie die Option \menus{Automatisch die letzte Buchung vom ausgewählten Empfänger übernehmen} (im Menü \menus{Bearbeiten - Einstellungen - Buchungsformular - Vervollständigung}), ermöglicht es Ihnen, einen Buchung, der einem in Ihrer Grisbi-Datei bereits bekannten Empfänger zugeordnet ist, wesentlich schneller einzugeben: Bei der Eingabe des Empfängers werden, sobald Sie das Eingabefeld verlassen, die anderen Felder des Buchungsformulars automatisch mit den Daten des zuletzt für diesen Empfänger eingegebenen Buchungs ausgefüllt. Es liegt an Ihnen, diese bei Bedarf zu ändern, bevor Sie den Buchung bestätigen.
+%The \indexword{automatic completion}\index{form!automatic completion}\index{transaction!automatic completion} of a transaction, if you have enabled the \menus{Automatic filling transactions from payee} option (under the \menus{Edit - Preferences - Transaction form - Completion}), allows you to enter a transaction assigned to a payee already known to your Grisbi file much more quickly: when entering the payee, as soon as you leave the input field, the other fields in the form are automatically filled in to match the last transaction entered for that payee. It is up to you to modify them if necessary before confirming the transaction.
+%Le \indexword{remplissage automatique}\index{formulaire!remplissage automatique}\index{opération!remplissage automatique} d'une opération, si vous avez activé l'option \menus{Remplissage automatique des opérations à partir du tiers} (du menu \menus{Éditer - Préférences - Formulaire des opérations - Aide à la saisie}), vous permet de saisir beaucoup plus rapidement une opération affectée à un tiers déjà connu par votre fichier Grisbi: lors de la saisie du tiers, dès que vous sortez de la zone de saisie, les autres champs du formulaire sont automatiquement complétés à l'identique de la dernière opération saisie pour ce tiers. À vous de les modifier si nécessaire avant de valider l'opération.
+
+Sie können dieses Verhalten im Menü \menus{Einstellungen} anpassen (siehe den Abschnitt \vref{setup-form-input}, \menus{Automatische Vervollständigung}).
+%You can fine-tune this behaviour in the \menus{Preferences} menu (see the section \vref{setup-form-input}, \menus{Form completion}).
+%Vous pouvez ajuster finement ce comportement dans les \menus{Préférences} (voir la section \vref{setup-form-input}, \menus{Aide à la saisie du formulaire}).
+
+% espace avant Attention ou Note: 5 mm
+\vspacepdf{3mm}
+\Note{}:Wenn Sie keine Felder ändern und den buchung bestätigen, erhalten Sie einen einfachen Duplikatbuchung, der jedoch das aktuelle Datum trägt.
+%\Note{}: if you do not change any fields and confirm the transaction, you will simply end up with a duplicate transaction, but one dated today.
+%\Note{}: si vous ne modifiez aucun champ et que vous validez l'opération, vous obtiendrez une opération purement et simplement dupliquée, mais qui portera la date du jour courant.
+
+
+\section{Eingabe einer Devisenbuchung\label{transactions-currencies}}
+%\section{Entering a currency transaction\label{transactions-currencies}}
+%\section{Saisie d'une opération en devises\label{transactions-currencies}}
+
+Mit Grisbi können Sie Buchungen verwalten, die in einer \indexword{anderen Währung}\index{Währung!anderer} als der des Kontos erfasst wurden, mit oder ohne Wechselgebühren.
+%Grisbi can handle transactions entered in a \indexword{different currency}\index{currency!different} from that of the account, with or without exchange fees.
+%Grisbi peut gérer des opérations saisies avec une \indexword{devise différente}\index{devise!différente} de celle du compte, avec ou sans frais de change.
+
+% espace pour changement de thème
+\vspacepdf{3mm}
+Um eine andere Währung zu verwenden, müssen Sie zunächst folgende Einstellungen vornehmen:
+%To use a different currency, you must first carry out the following settings:
+%Pour utiliser une devise différente, vous devez d'abord procéder aux configurations suivantes:
+\begin{enumerate}
+	\item Erstellen Sie die Währung, falls sie noch nicht angelegt wurde, über das Menü \menus{Bearbeiten - Einstellungen - Finanzdaten} (siehe Abschnitt \vref{setup-resources-currencies}, \menus{Währungen});
+	%\item create the currency, if it has not already been created, via the \menus{Edit - Preferences - Resources} menu (see the \vref{setup-resources-currencies} section, \menus{Currencies});
+	%\item créez la devise, si elle ne l'est pas déjà, dans le menu \menus{Éditer - Préférences- Ressources} (voir la section \vref{setup-resources-currencies}, \menus{Devises});
+	\item Erstellen Sie im folgenden Menü die gewünschten Verknüpfungen zwischen der neuen Währung und den bereits gespeicherten Währungen (siehe Abschnitt \vref{setup-resources-rate}, \menus{Wechselkurse});
+	%\item in the following menu, create the link(s) you need between the new currency and the others already saved (see the section \vref{setup-resources-rate}, \menus{Currencies links});
+	%\item dans le menu suivant, créez le ou les liens dont vous avez besoin entre la nouvelle devise et les autres déjà enregistrées (voir la section \vref{setup-resources-rate}, \menus{Liens entre devises});
+	\item Konfigurieren Sie die Darstellung des Feldes \menus{Währung} im Buchungsformular (siehe Abschnitt \vref{setup-form-content}, \menus{Darstellung});
+	%\item configure the display of the \menus{Currency} field in the transaction form (see the \vref{setup-form-content} section, \menus{Content});
+	%\item configurez l'affichage du champ \menus{Devise} dans le formulaire de saisie des opérations (voir la section \vref{setup-form-content}, \menus{Contenu});
+	% saut de ligne pour alignement de la note sur l'item
+	
+	\Note{}: Die Felder \menus{Währung} und \menus{Ändern} sind im Bunchungsformular miteinander verknüpft: Wenn Sie die Darstellung des Feldes \menus{Währung} im Formular anpassen, wird das Feld \menus{Ändern} automatisch an derselben Stelle positioniert und umgekehrt; anschließend können Sie beide Felder an die gewünschten Zellen verschieben.
+	%\Note{}: the \menus{Currency} and \menus{Change} fields are linked in the data entry form: configuring the display of the \menus{Currency} field in the form automatically positions the \menus{Change} field in the same place, and vice versa; you can then move them to the desired cells.
+	%\Note{}: les champs \menus{Devise} et \menus{Change} sont liés dans le formulaire de saisie: la configuration de l'affichage du champ \menus{Devise} dans le formulaire y positionne automatiquement le champ \menus{Change}, et inversement; vous pouvez ensuite les déplacer dans les cellules voulues.
+	\item Konfigurieren Sie die Anzeige des Feldes \menus{Betrag} in der Buchungsliste (siehe Abschnitt \vref{setup-operations-cells}, \menus{Buchungsübersicht Zellen} oder Abschnitt \vref{transactions-list-fields-manage}, \menus{Verwaltung von Informationsfeldern}).
+	%\item configure the display of the \menus{Amount} field in the transaction list (see the section \vref{setup-operations-cells}, \menus{Transactions list cells} or the section \vref{transactions-list-fields-manage}, \menus{Management of information fields}).
+	%\item configurez l'affichage du champ \menus{Montant} dans la liste des opérations (voir la section \vref{setup-operations-cells}, \menus{Cellules de la liste des opérations} ou la section \vref{transactions-list-fields-manage}, \menus{Gestion des champs d'information}).
+\end{enumerate}
+
+% espace pour changement de thème
+\vspacepdf{3mm}
+
+Wenn Sie den Eintrag \indexword{Währungsbuchung}\index{Buchung!Währung}\index{Währung!Buchung} in das Buchungsformular eingeben, wählen Sie aus der Dropdown-Liste die Währung aus, in der die Buchung erfasst werden soll. Dabei können sich verschiedene Fragen stellen:
+%When entering the \indexword{currency transaction}\index{transaction!currency}\index{currency!transaction} in the entry form, select the currency in which the transaction is to be recorded from the drop-down list. Several questions may arise:
+%Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}\index{devise!opération} dans le formulaire de saisie, choisissez dans la liste déroulante la devise dans laquelle l'opération doit être enregistrée. Plusieurs questions peuvent se poser:
+
+% image centrée 
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_changeRate}
+	\end{center}
+	\caption{Wechselgebühren und Wechselkurse}
+	%\caption{Fees and exchange rates}
+	%\caption{Frais et taux de change}
+	\label{transactions-changeRate-img}
+\end{figure}
+% image centrée 
+
+\begin{itemize}
+	\item Wenn Sie für diese Währung noch keinen Link (Wechselkurs) angelegt haben, zeigt Grisbi das Fenster Wechselgebühren und Wechselkurse \refimage{transactions-changeRate-img} an: Geben Sie dort den Wechselkurs ein, bestätigen Sie das Fenster und anschließend die Buchung: Der Betrag in dieser Währung wird im Feld \menus{Ausgaben} und der Betrag in der Kontowährung im Feld \menus{Betrag} angezeigt;
+	%\item if you have not created a link (exchange rate) for this currency, Grisbi displays the fees and exchange rates window \refimage{transactions-changeRate-img}: enter the exchange rate there, confirm the window, then confirm the transaction: the amount in the currency is displayed in the \menus{Debit} field and the amount in the account’s currency in the \menus{Amount} field;
+	%\item si vous n'avez pas créé de lien (taux de change) pour cette devise, Grisbi affiche la fenêtre de frais et taux de change \refimage{transactions-changeRate-img}: saisissez-y le taux de change, validez la fenêtre puis validez l'opération: le montant en devise s'affiche dans le champ \menus{Débit} et celui dans la devise du compte dans le champ \menus{Montant};
+	% saut de ligne pour alignement de la note sur l'item
+	
+	\Note{}: Sie können die Umrechnungsrichtung umkehren (ein Euro entspricht X Einheiten der Währung oder eine Einheit der Währung entspricht Y Euro), indem Sie die Namen der Währungen in den beiden Dropdown-Listen vertauschen; so können Sie den Wechselkurs genau so eingeben, wie er Ihnen mitgeteilt wurde; dieser Kurs kann jederzeit nach der Erstellung der Buchung angepasst werden.
+	%\Note{}: you can reverse the direction of the conversion (one euro equals X of the currency, or one unit of the currency equals Y euros) by swapping the names of the currencies in the two drop-down lists; this allows you to enter the exchange rate exactly as it has been provided to you; this rate can be adjusted at any time after the transaction has been created.
+	%\Note{}: vous pouvez inverser le sens de la conversion (un euro vaut X Devise, ou bien une Devise vaut Y euros) en inversant le nom des devises dans les deux listes déroulantes; vous pouvez ainsi entrer exactement le taux de change tel qu'il vous est communiqué; ce taux peut être ajusté à tout moment après la création de l'opération.
+	\item Wenn Sie den Wechselkurs ändern möchten, öffnen Sie den Buchung zur Bearbeitung, klicken Sie im Buchungsformular auf die Schaltfläche \menus{Ändern}, aktivieren Sie das Kontrollkästchen \menus{Verknüpfung ändern}, falls es noch nicht markiert ist, ändern Sie den Kurs, schließen Sie das Fenster und bestätigen Sie anschließend die Buchung;
+	%\item if you wish to change the exchange rate, open the transaction for editing, click the \menus{Change} button in the input form, tick the \menus{Change the link} checkbox if it is not already ticked, then change the rate, and save the window and the transaction;
+	%\item si vous voulez modifier le taux de change, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, cochez la case de libellé \menus{Modifier le taux de change} si elle ne l'est pas, puis modifiez-le, et validez la fenêtre puis l'opération;
+	\item Wenn Sie \indexword{Wechselgebühren}\index{Wechselgebühren} haben, öffnen Sie den Buchung zur Bearbeitung, klicken Sie im Buchungsformular auf die Schaltfläche \menus{Ändern}, geben Sie die Gebühren in der Kontowährung in das Feld \menus{Wechselkursgebühren} ein und bestätigen Sie das Fenster sowie den Buchung; Diese Gebühren werden dann zum Inhalt des Feldes \menus{Betrag} hinzugefügt; Sie können sie jedoch stattdessen auch in einem separaten Buchung unter Verwendung einer speziellen Kategorie eingeben, zum Beispiel \emph{Gebühren: Bankgebühren}: So können Sie sie separat verbuchen;
+	%\item if you have any \indexword{exchange fees}\index{exchange fees}, open the transaction in edit mode, click the \menus{Change} button in the entry form, enter the fees in the account’s currency in the \menus{Exchange fees} field, and confirm the window and then the transaction; These fees are then added to the contents of the \menus{Amount} field; however, you can instead enter them in a separate transaction, using a dedicated category, for example \emph{Financial expenses: Bank charges}: this allows you to record them separately;
+	%\item si vous avez des \indexword{frais de change}\index{frais de change}, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, saisissez les frais en devise du compte dans le champ \menus{Frais de change}, et validez la fenêtre puis l'opération; ces frais sont alors ajoutés au contenu du champ \menus{Montant}; mais vous pouvez à la place les saisir dans une opération indépendante, en utilisant une catégorie dédiée, par exemple \emph{Frais financiers: Frais bancaires}: cela peut vous permettre de les comptabiliser à part;
+	\item Wenn Sie einen festen Wechselkurs wünschen: Siehe den Abschnitt \vref{setup-resources-rate}, \menus{Wechselkurse}.
+	%\item if you want the exchange rate to be fixed: see the section \vref{setup-resources-rate}, \menus{Currencies links}.
+	%\item si vous voulez que le taux de change soit fixe: voir la section \vref{setup-resources-rate}, \menus{Liens entre devises}.
+\end{itemize}
 
 
