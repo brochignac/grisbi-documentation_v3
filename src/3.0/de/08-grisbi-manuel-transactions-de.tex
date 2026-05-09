@@ -1230,3 +1230,263 @@ Wenn Sie den Eintrag \indexword{Währungsbuchung}\index{Buchung!Währung}\index{
 \end{itemize}
 
 
+\section{Erfassung eines Geschäfts mit einem virtuellen Dritten\label{transactions-virtualThird}}
+%\section{Entering a transaction with a virtual third party\label{transactions-virtualThird}}
+%\section{Saisie d'une opération avec tiers virtuel\label{transactions-virtualThird}}
+
+Mit Grisbi können Sie virtuelle Dritte verwenden: Ein virtueller Dritter ist ein \emph{Bericht}, der eine Liste mehrerer Dritter darstellt.
+%Grisbi allows you to use virtual third parties: a virtual third party is a \emph{report} that represents a list of several third parties.
+%Grisbi vous permet d'utiliser des tiers virtuels: un tiers virtuel est un \emph{état} qui représente une liste de plusieurs tiers.
+
+Wenn Sie eine Buchung mit einem virtuellen Dritten als Empfänger eingeben, erfasst Grisbi nach der Validierung für \emph{jeden} der durch diesen virtuellen Dritten vertretenen Dritten eine identische Buchung (Betrag, Kategorie, Gruppe, Zahlungsweise usw.). So können Sie beispielsweise die Mitgliedsbeiträge für 200 Mitglieder eines Vereins in einem einzigen Vorgang erfassen, was Ihnen viel Zeit spart\ldots
+%When you enter a transaction with a virtual third party as the payee, Grisbi records, upon validation, an identical transaction (amount, category, budgetary line, payment method, etc.) for \emph{each} of the third parties represented by that virtual third party. For example, you can enter a membership fee request for 200 members of an association in a single go, which saves a considerable amount of time\ldots
+%Lorsque vous saisissez une opération avec pour tiers un tiers virtuel, Grisbi enregistre, au moment de sa validation, une opération identique (montant, catégorie, imputation budgétaire, moyen de paiement etc.) pour \emph{chacun} des tiers représentés par ce tiers virtuel. Par exemple, vous pouvez saisir en une seule fois un appel à cotisation pour 200 adhérents d'une association, ce qui représente un gain de temps très appréciable\ldots
+
+\vspacepdf{3mm}
+Um \indexword{eine Buchung mit einem virtuellen Dritten zu erfassen}\index{virtueller Dritter!Buchungserfassung}, gehen Sie wie folgt vor:
+%To \indexword{enter a transaction with a virtual third party}\index{virtual third party!transaction entry}, proceed as follows:
+%Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, procédez de la sorte:
+\begin{itemize}
+	\item Geben Sie diesen Dritten im Feld \menus{Empfänger} des Buchungsformulars im Format \dequote{Bericht : Name\_des\_virtuellen\_Dritten} ein;
+	%\item enter this third party in the \menus{Payee} field of the entry form, in the format \enquote{Report : name\_of\_virtual\_third\_party};
+	%\item saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme \frquote{État : nom\_du\_tiers\_virtuel}.
+	% saut de ligne pour alignement de la note sur l'item
+	
+	\Note{}: Bitte achten Sie darauf, die Syntax einzuhalten, indem Sie vor UND nach den \dequote{:} jeweils ein Leerzeichen einfügen.
+	%\Note{}: please ensure you follow the syntax correctly, with a space before AND after the \enquote{:}.
+	%\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:}.
+	\item Erstellen Sie einen virtuellen Dritten, indem Sie einen Bericht vom Typ \menus{Benutzerdefinierter Bericht} erstellen, der eine Liste der Empfänger enthält: siehe den Abschnitt \vref{reportscreation-display-general-virtualThird}, \menus{Virtueller Dritter};
+	%\item create a virtual third party by creating a report of type \menus{Blank report} containing a list of payees: see the section \vref{reportscreation-display-general-virtualThird}, \menus{Virtual Third Party};
+	%\item créez un tiers virtuel en créant un état de type \menus{État vierge} contenant une liste de tiers: voir le paragraphe \vref{reportscreation-display-general-virtualThird}, \menus{Tiers virtuel},
+	\item Passen Sie den virtuellen Dritten nach Ihren Wünschen an, indem Sie den Bericht ändern, mit dem er erstellt wurde: siehe Abschnitt \vref{reports-modify}, \menus{Bericht bearbeiten}.
+	%\item modify the virtual third party as required by editing the report that created it: see the section \vref{reports-modify}, \menus{Modifying a report}.
+	%\item modifiez le tiers virtuel à votre convenance en modifiant l'état qui l'a créé: voir la section \vref{reports-modify}, \menus{Modification d'un état}.
+\end{itemize}
+
+%espace pour changement de thème
+\vspacepdf{3mm}
+Um einen virtuellen Dritten zu löschen, haben Sie zwei Möglichkeiten:
+%To delete a virtual third party, you have two options:
+%Pour supprimer un tiers virtuel, vous avez deux possibilités:
+\begin{itemize}
+	\item Deaktivieren Sie das Kontrollkästchen \menus{Den Bericht in der Auswahlliste der Empfänger anzeigen} im Abschnitt \menus{Allgemein} des Berichts, in dem dieser definiert ist, und klicken Sie anschließend auf die Schaltfläche \menus{Prüfen} (siehe Abschnitt \vref{reports-modify},
+	%\item uncheck the \menus{Consider the payees of this report as a multiple payee} box in the \menus{General} section of the report that defines it, then click on the \menus{Validate} button (see the section \vref{reports-modify},
+	%\item décochez la case \menus{Considérer les tiers de cet état comme un tiers virtuel} dans les \menus{Généralités} de l'état qui le définit, puis validez (voir la section \vref{reports-modify}, \menus{Modification d'un état});
+	\item Löschen Sie den Bericht, der ihn definiert (siehe Abschnitt \vref{reports-delete}, \menus{Bericht löschen}).
+	%\item delete the report that defines it (see the section \vref{reports-delete}, \menus{Deleting a report}).
+	%\item supprimez l'état qui le définit (voir la section \vref{reports-delete}, \menus{Suppression d'un état}).
+\end{itemize}
+
+
+\section{Splittbuchung\label{transactions-breakdown}}
+%\section{Breakdown of a transaction\label{transactions-breakdown}}
+%\section{Ventilation d'une opération\label{transactions-breakdown}}
+
+\indexword{Einen Buchung splitten}\index{splitten!Buchung} bedeutet, den Betrag auf mehrere Zeilen aufzuteilen (zum Beispiel können Ihre Einkäufe im Supermarkt auf die Kategorien \emph{Lebensmittel : Lebensmittelgeschäft} und \emph{Bekleidung : Kleidung} aufgeteilt werden). Sie können einen Betrag auch auf dieselbe Kategorie aufteilen, jedoch mit unterschiedlichen Angaben im Feld \menus{Notiz} (zum Beispiel, um die Details einer Buchung zu speichern).
+%\indexword{Break down a transaction}\index{break down!transaction} means to split the amount across several lines (for example, your supermarket purchases can be split between the categories \emph{Food : Groceries} and \emph{Personal care : Clothing}). You can also split a sum within the same category, but with different information in the \menus{Notes} field (for example, to record the details of a transaction).
+%\indexword{Ventiler une opération}\index{ventiler!opération} signifie répartir son montant entre plusieurs lignes (par exemple, vos achats au supermarché peuvent se répartir entre les catégories \emph{Alimentation : Épicerie} et \emph{Soins : Habillement}). Vous pouvez aussi répartir une somme sur la même catégorie, mais avec des informations différentes dans le champ \menus{Remarques} (par exemple pour mémoriser le détail d'une opération).
+
+\vspacepdf{3mm}
+\Note{}: Bitte achten Sie darauf, die Syntax korrekt einzuhalten, und lassen Sie vor UND nach dem \dequote{:} zwischen der Kategorie und einer neuen Unterkategorie jeweils ein Leerzeichen.
+%\Note{}: please ensure you follow the syntax correctly, leaving a space before AND after the \enquote{:} between the category and a new sub-category.
+%\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:} entre la catégorie et une nouvelle sous-catégorie.
+
+
+\subsection{Eingabe der Splittbuchung\label{transactions-breakdown-master}}
+%\subsection{Entering the breaken-down transaction\label{transactions-breakdown-master}}
+%\subsection{Saisie de l'opération ventilée\label{transactions-breakdown-master}}
+
+Um \indexword{eine Splittbuchung einzugeben}\index{Splittbuchung}, gehen Sie wie folgt vor:
+%To \indexword{enter a breaken-down transaction}\index{transaction!breaken-down}, proceed as follows:
+%Pour \indexword{saisir une opération ventilée}\index{opération!ventilée}, procédez comme suit:
+
+\begin{enumerate}
+	\item Geben Sie im Buchungsformular Ihre Buchung wie gewohnt ein, bis Sie zum Feld \menus{Kategorien} gelangen. Dort wählen Sie die Kategorie \menus{Buchung splitten} aus (sie befindet sich am Ende des Dropdown-Menüs, aber es ist einfacher, die Buchstaben \dequote{bu} einzugeben);
+	%\item in the form, start entering your transaction as you would for a normal transaction until you reach the \menus{Categories} field, where you should select the \menus{Split Transaction} category (towards the end of the drop-down menu, but it’s easier to type the letters \enquote{sp});
+	%\item dans le formulaire, commencez la saisie de votre opération comme une opération normale jusqu'au champ \menus{Catégories}, où vous choisissez la catégorie \menus{Opération ventilée} (vers la fin du menu déroulant, mais il est plus simple de taper la lettre %\frquote{o});
+	\item Geben Sie die restlichen Angaben ein und bestätigen Sie anschließend:
+	%\item continue entering the remaining details, then validate:
+	%\item continuez à saisir les autres données, puis validez:
+	\item In der Buchungsliste erscheinen folgende Einträge:
+	%\item the following appear in the list of transactions:
+	%\item dans la liste des opérations, apparaissent:
+	\begin{itemize}
+		\item Die erste Zeile des neuen Buchung ist in \textcolor{red}{\textsf{rot}} geschrieben und daher hervorgehoben; sie bleibt so lange in \textcolor{red}{\textsf{rot}}, wie die Summe der Teilbuchungen vom Betrag der Buchung abweicht;
+		%\item the first line of the new operation is written in \textcolor{red}{\textsf{red}} and is therefore highlighted; it will remain in \textcolor{red}{\textsf{red}} as long as the total of the sub-transactions differs from the amount of the transaction;
+		%\item la première ligne de la nouvelle opération écrite en \textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
+		\item und darunter eine neue Zeile mit \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}, deren Gesamtsumme Null beträgt und deren Differenz der Differenz zwischen dieser Summe und dem Gesamtwert der aufgeschlüsselten Buchung entspricht, also negativ ist\refimage{transactions-breakdown-img};
+		%\item and below that, a new line, with \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, with a total of zero and a difference equal to the difference between this total and the total value of the split transaction, i.e. a negative figure\refimage{transactions-breakdown-img};
+		%\item et en-dessous une nouvelle ligne, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
+	\end{itemize}
+	
+	% image centrée 
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown}
+		\end{center}
+		\vspace{-15pt}
+		\caption{Eingabe der Splittbuchung}
+		%\caption{Entering the split transaction}
+		%\caption{Saisie de l'opération ventilée}
+		\label{transactions-breakdown-img}
+		\vspace{-5pt}
+	\end{figure}
+	% image centrée
+	
+	\item Im Buchungsformular befindet sich der Cursor im Feld \menus{Ausgaben}, und die Felder \menus{Datum}, \menus{Empfänger} und \menus{Zahlungsweise} sind ausgegraut, was bedeutet, dass sie nicht mehr bearbeitet werden können: Dies ist das Buchungsformular für Teilbuchungen, das für die Eingabe von Teilbuchungen bereit ist;
+	%\item in the entry form, the cursor is in the \menus{Debit} field, and the \menus{Date}, \menus{Payee} and \menus{Payment method} fields are greyed out, meaning they can no longer be edited: this is the sub-transaction form, which is ready for entering sub-transactions;
+	%\item dans le formulaire de saisie, le curseur est dans le champ \menus{Débit}, et les champs \menus{Date}, \menus{Tiers} et \menus{Moyen de paiement} sont grisés, ce qui signifie qu'on ne peut plus les modifier: il s'agit du formulaire de sous-opération, qui est prêt pour la saisie des sous-opérations;
+	\item Fahren Sie mit dem folgenden Unterabschnitt fort: \menus{Eingabe von Teilbuchungen}.
+	%\item go to the next subsection \menus{Entering split sub-transactions}.
+	%\item passez à la sous-section suivante \menus{Saisie des sous-opérations ventilées}.
+\end{enumerate}
+
+
+\subsection{Eingabe von Teilbuchungen\label{transactions-breakdown-slave}}
+%\subsection{Entering split sub-transactions\label{transactions-breakdown-slave}}
+%\subsection{Saisie des sous-opérations ventilées\label{transactions-breakdown-slave}}
+
+\Note{}: Der Betrag einer Teilbuchung kann das Ergebnis einer Buchung sein, die mehrere auf einem Beleg oder einer Rechnung aufgeführte Käufe oder Ausgaben umfasst; Sie können daher den \indexword{Formeln}\index{Formeln} in den Eingabefeldern \menus{Ausgaben} oder \menus{Einnahmen} verwenden, um die Beträge von Teilbuchungen einfacher zu ermitteln (siehe den Abschnitt \vref{transactions-new-numbers}, \menus{Formeln eingeben}).
+%\Note{}: the amount of a sub-transaction may be the result of a transaction involving several purchases or expenses listed on a receipt or invoice; you can therefore use the \indexword{calculator}\index{calculator} in the \menus{Debit} or \menus{Credit} input fields to more easily obtain the amounts of sub-transactions (see the section \vref{transactions-new-numbers}, \menus{Entering formulas}).
+%\Note{}: le montant d'une sous-opération peut-être le résultat d'une opération portant sur plusieurs achats ou dépenses inscrites sur un ticket de caisse ou une facture; vous pouvez donc utiliser la \indexword{calculatrice}\index{calculatrice} dans les champs de saisie \menus{Débit} ou \menus{Crédit} pour obtenir plus facilement les montants des sous-opérations (voir la section \vref{transactions-new-numbers}, \menus{Saisie de formules}).
+
+\vspacepdf{3mm}
+Um \indexword{Teilbuchungen}\index{Teilbuchungen} einzugeben, geben Sie Folgendes ein:
+%To enter \indexword{split sub-transactions}\index{sub-transactions!split}, continue typing as follows:
+%Pour saisir les \indexword{sous-opérations ventilées}\index{sous-opération!ventilée}, continuez la saisie comme suit:
+%\vspacepdf{3mm}
+\begin{enumerate}
+	\item Füllen Sie in diesem Formular für Teilbuchung die leeren Felder (die nicht ausgegraut sind) aus und speichern Sie dann Ihren ersten Teilbuchung;
+	%\item in this sub-operation form, fill in the empty fields (those not greyed out), then save your first sub-operation;
+	%\item dans ce formulaire de sous-opération, saisissez les champs libres (non grisés), puis validez votre première sous-opération;
+	
+	% image centrée 
+	\begin{figure}[htp]
+		\begin{center}
+			\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub1}
+		\end{center}
+		\vspace{-15pt}
+		\caption{Eingabe der ersten Teilbuchung}
+		%\caption{Entering the first split sub-transaction}
+		%\caption{Saisie de la première sous-opération ventilée}
+		\label{transactions-breakdown-sub1-img}
+		\vspace{-5pt}
+	\end{figure}
+	% image centrée
+	
+	\item In der Buchungsliste wird diese Teilbuchung auf \fboxsep=3pt{\colorbox[RGB]{240,200,200}{rosa Hintergrund}} angezeigt, und es erscheint eine neue Zeile auf \fboxsep=3pt{\colorbox [RGB]{245,155,155}{dunkelrosa Hintergrund}}, und ist somit ausgewählt. Es wird eine Summe angezeigt, die dem Wert der ersten eingegebenen Teilbuchung entspricht, jedoch als negativer Wert, sowie eine Differenz, die der Differenz zwischen dem Gesamtwert der Spilttbuchung und dem Wert dieser Teilbuchung entspricht, ebenfalls als negativer Wert\refimage{transactions-breakdown-sub1-img};
+	%\item in the list of operations, this sub-transaction is displayed on \fboxsep=3pt{\colorbox[RGB]{240,200,200}{pink background}}, and a new line appears, on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying a total equal to the first sub-transaction entered, in negative figures, and a difference equal to the difference between the total value of the split transaction and the value of this sub-transaction, in negative form\refimage{transactions-breakdown-sub1-img};
+	%\item dans la liste des opérations, cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}}, et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
+	\item Eine Splittbuchung umfasst mindestens zwei Teilbuchungen (ansonsten hätte dies keinen Sinn\ldots); geben Sie daher im Formular für Teilbuchungen auf dieselbe Weise eine zweite Teilbuchung ein und bestätigen Sie diese: Diese Teilbuchung erscheint auf \fboxsep=3pt{\colorbox [RGB]{240,200,200}{rosa Hintergrund}} und eine neue Zeile erscheint auf \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und ist somit ausgewählt, wobei die aktuelle Summe der eingegebenen Teilbuchungen und die aktuelle Differenz angezeigt werden \refimage{transactions-breakdown-sub2-img};
+	Die Summe der Teilbuchungen hat sich um den Betrag dieser zweiten Teilbuchungen (negativ) erhöht, während sich die Differenz um denselben Betrag (negativ) verringert hat;
+	%\item there are at least two sub-transactions in a split transaction (otherwise there is no point in doing it\ldots); therefore, in the sub-transaction form, enter a second sub-transaction in the same way, then click on \menus{Validate}: this sub-transaction appears on \fboxsep=3pt{\colorbox[RGB]{240,200,200}{pink background}} and a new line appears, on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying the latest total of the sub-transactions entered and the latest difference \refimage{transactions-breakdown-sub2-img};	the total of the sub-transactions has increased (negatively) by the amount of this second sub-transaction, whilst the difference has decreased (negatively) by the same amount;
+	%\item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}} et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img}; le total des sous-opérations a augmenté (en négatif) du montant de cette deuxième sous-opération, tandis que l'écart a diminué (en négatif) du même montant; 
+	
+	% image centrée 
+	\begin{figure}[htp]
+		\begin{center}
+			\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub2}
+		\end{center}
+		\vspace{-15pt}
+		\caption{Aufruf der zweiten Teilbuchung}
+		%\caption{Entering the second split sub-transaction}
+		%\caption{Saisie de la deuxième sous-opération ventilée}
+		\label{transactions-breakdown-sub2-img}
+		\vspace{-10pt}
+	\end{figure}
+	% image centrée 
+\newpage
+	\item Wenn die Differenz nicht Null ist, kann auf dieselbe Weise eine dritte Teilbuchung eingegeben werden\refimage{transactions-breakdown-sub3-img},
+	%\item if the difference is not zero, a third sub-transaction can then be entered in the same way\refimage{transactions-breakdown-sub3-img},
+	%\item si l'écart n'est pas nul, on peut alors saisir une troisième sous-opération de la même manière\refimage{transactions-breakdown-sub3-img},
+	
+	% image centrée 
+	\begin{figure}[htp]
+		\begin{center}
+			\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub3}
+		\end{center}
+		\vspace{-15pt}
+		\caption{Aufruf der dritten Teilbuchung}
+		%\caption{Entering the third split sub-transaction} 
+		%\caption{Saisie de la troisième sous-opération ventilée}
+		\label{transactions-breakdown-sub3-img}
+		\vspace{-10pt}
+	\end{figure}
+	% image centrée 
+	
+	\item und so weiter, bis der Betrag, den Sie für Ihre letzte Teilbuchung im Buchungsformular eingegeben haben, genau der angezeigten Differenz entspricht.
+	%\item and so on until the amount you have entered for your last sub-transaction in the form is exactly equal to the difference shown.
+	%\item et ainsi de suite jusqu'à ce que le montant saisi de votre dernière sous-opération dans le formulaire soit exactement égal à l'écart affiché.
+	
+	\Note{}: Bis die Splittbuchung abgeschlossen ist, wird sie weiterhin in \textcolor{red}{rot} angezeigt.
+	%\Note{}: until the transaction is complete, it remains displayed in \textcolor{red} red.
+	%\Note{}: tant que l'opération n'est pas complète, celle-çi reste écrite en \textcolor{red}{rouge}.
+\end{enumerate}
+
+
+\subsection{Validierung der Splittbuchung\label{transactions-breakdown-validation}}
+%\subsection{Validation of the split transaction\label{transactions-breakdown-validation}}
+%\subsection{Validation de l'opération ventilée\label{transactions-breakdown-validation}}
+
+Sobald dieser letzte Teilbuchung bestätigt wurde, erscheint Ihre Splittbuchung wie eine normale Buchung in der Buchungsliste, und die aktive Zeile, die mit \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} hervorgehoben ist, springt zur letzten freien Zeile in der Liste.
+%Once this final sub-operation has been validated, your split transaction will appear in the list of transactions just as a normal transaction would, and the active line, highlighted in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, will move to the last empty line in the list.
+%À la validation de cette dernière sous-opération, votre opération ventilée s'affiche alors dans la liste des opérations comme pour une opération normale, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
+
+In der Buchungsliste können Sie Ihre Splittbuchung anhand des Dreiecks links neben der ersten Spalte erkennen \refimage{transactions-breakdown-display-img}.
+%In the list of transactions, you will be able to identify your transaction by the presence of a triangle to the left of the first column \refimage{transactions-breakdown-display-img}.
+%Dans la liste des opérations, vous pourrez reconnaitre votre opération ventilée par la présence d'un triangle à gauche de la première colonne \refimage{transactions-breakdown-display-img}.
+
+\begin{figure}[!htbp]
+	%\vspace{-15pt}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_display}
+	\end{center}
+	\vspace{-15pt}
+	\caption{Splitbuchung in der Buchungsliste}
+	%\caption{Split transaction in the list of transactions}
+	%\caption{Opération ventilée dans la liste des opérations}
+	\label{transactions-breakdown-display-img}
+	\vspace{-20pt}
+\end{figure}
+
+
+\subsection{Anzeige der Splittbuchung\label{transactions-breakdown-display}}
+%\subsection{Displaying the split transaction\label{transactions-breakdown-display}}
+%\subsection{Affichage de l'opération ventilée\label{transactions-breakdown-display}}
+
+Wenn Sie auf das Dreieck links neben der Splittbuchung klicken, wählen Sie diese Buchung aus und können die Details ihrer Teilbuchungen anzeigen \refimage{transactions-breakdown-fulldisplay-img}.
+%By clicking on the triangle to the left of the split transaction, you select that transaction and view the details of its sub-transactions \refimage{transactions-breakdown-fulldisplay-img}.
+%En cliquant sur le triangle à gauche de l'opération ventilée, vous sélectionnez cette opération et vous affichez le détail de ses sous-opérations \refimage{transactions-breakdown-fulldisplay-img}.
+
+\begin{figure}[!htbp]
+	%\vspace{-40pt}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_fulldisplay}
+	\end{center}
+	\vspace{-15pt}
+	\caption{Vollständige Anzeige des Splittbuchung}
+	%\caption{Full view of the split transaction}
+	%\caption{Affichage complet de l'opération ventilée}
+	\label{transactions-breakdown-fulldisplay-img}
+	\vspace{-15pt}
+\end{figure}
+
+\vspacepdf{2mm}
+\Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
+%\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+
+%\newpage
+\subsection{Automatisches Ausfüllen des Buchungsformulars für einen Splittbuchung\label{transactions-breakdown-autofill}}
+%\subsection{Automatic completion of the form for a split transaction\label{transactions-breakdown-autofill}}
+%\subsection{Remplissage automatique du formulaire d'une opération ventilée\label{transactions-breakdown-autofill}}
+
+Die \indexword{automatische Ausfüllung}\index{Splittbuchung!automatische Ausfüllung} des Formulars für eine aufgeteilte Buchung funktioniert genauso wie bei einer normalen Buchung (siehe Abschnitt \vref{transactions-new-autofill}, \menus{Automatische Ausfüllung des Buchungsformulars}).
+%The \indexword{automatic completion}\index{split transaction!autofill} feature for a split transaction works in the same way as for a standard transaction (see the section \vref{transactions-new-autofill}, \menus{Automatic form completion}).
+%Le \indexword{remplissage automatique}\index{opération ventilée!remplissage automatique} du formulaire d'une opération ventilée fonctionne comme pour celui d'une opération normale (voir la section \vref{transactions-new-autofill}, \menus{Remplissage automatique du formulaire}).
+
+Bei einem Splittbuchung erscheint jedoch am unteren Rand des Buchungsformulars links neben der Schaltfläche \menus{Abbrechen} ein Kontrollkästchen mit der Bezeichnung \menus{Unterelemente erstellen}, das Sie je nach Bedarf aktivieren können.
+%However, for a broken-down operation, a tick box labelled \menus{Recover the children} appears at the bottom of the input form, to the left of the \menus{Cancel} button, and you can tick this box as required.
+%Cependant, pour une opération ventilée, une case à cocher intitulée \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche du bouton \menus{Annuler}, et vous pouvez cocher cette case selon votre besoin.
+
+

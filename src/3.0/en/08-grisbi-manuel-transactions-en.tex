@@ -199,8 +199,7 @@ Grisbi can manage, for each transaction, a complete list of information fields a
 	%\item \menus{Exercice};
 	\item \menus{Category};
 	%\item \menus{Catégorie};
-	%todo waiting to change C/R to P/R
-	\item \menus{C/R}: transaction status, \emph{C (Pending)} or \emph{R (Reconciled)};
+	\item \menus{P/R}: transaction status, \emph{P (Pointed)} or \emph{R (Reconciled)};
 	%\item \menus{P/R}: statut de l'opération, \emph{P (Pointé)} ou \emph{R (Rapproché)};
 	\item \menus{Voucher}, for example the invoice number (\menus{Voucher} and \menus{Transaction number} are cross-references that ensure the traceability of the transaction);
 	%\item \menus{Pièce comptable}, par exemple le numéro de la facture (\menus{Pièce comptable} et \menus{Numéro d'opération} sont des références réciproques qui assurent la traçabilité de l'opération);
@@ -809,7 +808,7 @@ You can make transfers between accounts by selecting the category \emph{Transfer
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-If you make a \indexword{transfer between two accounts in different currencies}\index{currency!different}\index{currency!transfer}\index{transfer!currency}, Grisbi will automatically carry out the conversion, and the debit and credit will clearly show the currencies; for example, if, in your yen account, you make a transfer transaction in credit from an euro account, the transfer will appear in yen in the \menus{Credit} column, and its yen balance will be correct. In the euro account, the debit amount will appear in yen in the \menus{Debit} column, and in euro in parentheses, in the \menus{Amount} (\vref{transactions-list-fields}) field in the \menus{Credit} column (by default), if the display is at least in \menus{Two lines view} (see notes below).
+If you make a \indexword{transfer between two accounts in different currencies}\index{currency!different}\index{currency!transfer}\index{transfer!currency}, Grisbi will automatically carry out the conversion, and the debit and credit will clearly show the currencies; for example, if, in your yen account, you make a transfer transaction in credit from an pound sterling account, the transfer will appear in yen in the \menus{Credit} column, and its yen balance will be correct. In the pound sterling account, the debit amount will appear in yen in the \menus{Debit} column, and in pound sterling in parentheses, in the \menus{Amount} (\vref{transactions-list-fields}) field in the \menus{Credit} column (by default), if the display is at least in \menus{Two lines view} (see notes below).
 %Si vous faites un \indexword{virement entre deux comptes de devises différentes}\index{devise!différente}\index{devise!virement}\index{virement!devise}, Grisbi effectuera automatiquement la conversion, et le débit et le crédit feront apparaître clairement les devises; par exemple, si, dans votre compte en yens, vous faites une opération de virement en crédit provenant d'un compte en euros, le virement apparaîtra en yens dans la colonne \menus{Crédit}, et son solde en yens sera correct. Dans le compte en euros, le montant du débit apparaîtra en yens dans la colonne \menus{Débit}, et en euro entre parenthèses, dans le champ \menus{Montant} (\vref{transactions-list-fields}) dans la colonne \menus{Crédit} (par defaut), si l'affichage est au minimum en \menus{Mode \frquote{deux lignes}} (voir les notes ci-dessous).
 
 \vspacepdf{2mm}
@@ -922,7 +921,7 @@ When entering the \indexword{currency transaction}\index{transaction!currency}\i
 	%\item si vous n'avez pas créé de lien (taux de change) pour cette devise, Grisbi affiche la fenêtre de frais et taux de change \refimage{transactions-changeRate-img}: saisissez-y le taux de change, validez la fenêtre puis validez l'opération: le montant en devise s'affiche dans le champ \menus{Débit} et celui dans la devise du compte dans le champ \menus{Montant};
 	% saut de ligne pour alignement de la note sur l'item
 	 
-	\Note{}: you can reverse the direction of the conversion (one euro equals X of the currency, or one unit of the currency equals Y euros) by swapping the names of the currencies in the two drop-down lists; this allows you to enter the exchange rate exactly as it has been provided to you; this rate can be adjusted at any time after the transaction has been created.
+	\Note{}: you can reverse the direction of the conversion (one pound sterling is worth X Currency, or one Currency is worth Y pounds sterling) by swapping the names of the currencies in the two drop-down lists; this allows you to enter the exchange rate exactly as it has been provided to you; this rate can be adjusted at any time after the transaction has been created.
 	%\Note{}: vous pouvez inverser le sens de la conversion (un euro vaut X Devise, ou bien une Devise vaut Y euros) en inversant le nom des devises dans les deux listes déroulantes; vous pouvez ainsi entrer exactement le taux de change tel qu'il vous est communiqué; ce taux peut être ajusté à tout moment après la création de l'opération.
 	\item if you wish to change the exchange rate, open the transaction for editing, click the \menus{Change} button in the input form, tick the \menus{Change the link} checkbox if it is not already ticked, then change the rate, and save the window and the transaction;
 	%\item si vous voulez modifier le taux de change, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, cochez la case de libellé \menus{Modifier le taux de change} si elle ne l'est pas, puis modifiez-le, et validez la fenêtre puis l'opération;
@@ -933,51 +932,72 @@ When entering the \indexword{currency transaction}\index{transaction!currency}\i
 \end{itemize}
 
 
-\section{Saisie d'une opération avec tiers virtuel\label{transactions-virtualThird}}
+\section{Entering a transaction with a virtual third party\label{transactions-virtualThird}}
+%\section{Saisie d'une opération avec tiers virtuel\label{transactions-virtualThird}}
 
-Grisbi vous permet d'utiliser des tiers virtuels: un tiers virtuel est un \emph{état} qui représente une liste de plusieurs tiers.
+Grisbi allows you to use virtual third parties: a virtual third party is a \emph{report} that represents a list of several third parties.
+%Grisbi vous permet d'utiliser des tiers virtuels: un tiers virtuel est un \emph{état} qui représente une liste de plusieurs tiers.
 
-Lorsque vous saisissez une opération avec pour tiers un tiers virtuel, Grisbi enregistre, au moment de sa validation, une opération identique (montant, catégorie, imputation budgétaire, moyen de paiement etc.) pour \emph{chacun} des tiers représentés par ce tiers virtuel. Par exemple, vous pouvez saisir en une seule fois un appel à cotisation pour 200 adhérents d'une association, ce qui représente un gain de temps très appréciable\ldots
+When you enter a transaction with a virtual third party as the payee, Grisbi records, upon validation, an identical transaction (amount, category, budgetary line, payment method, etc.) for \emph{each} of the third parties represented by that virtual third party. For example, you can enter a membership fee request for 200 members of an association in a single go, which saves a considerable amount of time\ldots
+%Lorsque vous saisissez une opération avec pour tiers un tiers virtuel, Grisbi enregistre, au moment de sa validation, une opération identique (montant, catégorie, imputation budgétaire, moyen de paiement etc.) pour \emph{chacun} des tiers représentés par ce tiers virtuel. Par exemple, vous pouvez saisir en une seule fois un appel à cotisation pour 200 adhérents d'une association, ce qui représente un gain de temps très appréciable\ldots
 
-% espace pour changement de thème
 \vspacepdf{3mm}
-Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme %\frquote{État : nom\_du\_tiers\_virtuel}.
-
-% espace pour changement de thème
-\vspacepdf{3mm}
-Pour créer un tiers virtuel, créez un état de type \menus{État vierge} contenant une liste de tiers: voir le paragraphe \vref{reportscreation-display-general-virtualThird}, \menus{Tiers virtuel}.
-
-% espace pour changement de thème
-\vspacepdf{3mm}
-Pour modifier un tiers virtuel, modifiez l'état qui l'a créé: voir la section \vref{reports-modify}, \menus{Modification d'un état}.
+To \indexword{enter a transaction with a virtual third party}\index{virtual third party!transaction entry}, proceed as follows:
+%Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, procédez de la sorte:
+\begin{itemize}
+	\item enter this third party in the \menus{Payee} field of the entry form, in the format \enquote{Report : name\_of\_virtual\_third\_party};
+	%\item saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme \frquote{État : nom\_du\_tiers\_virtuel}.
+	% saut de ligne pour alignement de la note sur l'item
+	
+	\Note{}: please ensure you follow the syntax correctly, with a space before AND after the \enquote{:}.
+	%\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:}.
+	\item create a virtual third party by creating a report of type \menus{Blank report} containing a list of payees: see the section \vref{reportscreation-display-general-virtualThird}, \menus{Virtual Third Party};
+	%\item créez un tiers virtuel en créant un état de type \menus{État vierge} contenant une liste de tiers: voir le paragraphe \vref{reportscreation-display-general-virtualThird}, \menus{Tiers virtuel},
+	\item modify the virtual third party as required by editing the report that created it: see the section \vref{reports-modify}, \menus{Modifying a report}.
+	%\item modifiez le tiers virtuel à votre convenance en modifiant l'état qui l'a créé: voir la section \vref{reports-modify}, \menus{Modification d'un état}.
+\end{itemize}
 
 %espace pour changement de thème
-\vspacepdf{3mm}
-Pour supprimer un tiers virtuel, vous avez deux possibilités:
-
+\vspacepdf{2mm}
+To delete a virtual third party, you have two options:
+%Pour supprimer un tiers virtuel, vous avez deux possibilités:
 \begin{itemize}
-	\item décochez la case \menus{Considérer les tiers de cet état comme un tiers virtuel} dans les \menus{Généralités} de l'état qui le définit, puis validez (voir la section \vref{reports-modify}, \menus{Modification d'un état});
-	\item supprimez l'état qui le définit (voir la section \vref{reports-delete}, \menus{Suppression d'un état}).
+	\item uncheck the \menus{Consider the payees of this report as a multiple payee} box in the \menus{General} section of the report that defines it, then click on the \menus{Validate} button (see the section \vref{reports-modify},
+	%\item décochez la case \menus{Considérer les tiers de cet état comme un tiers virtuel} dans les \menus{Généralités} de l'état qui le définit, puis validez (voir la section \vref{reports-modify}, \menus{Modification d'un état});
+	\item delete the report that defines it (see the section \vref{reports-delete}, \menus{Deleting a report}).
+	%\item supprimez l'état qui le définit (voir la section \vref{reports-delete}, \menus{Suppression d'un état}).
 \end{itemize}
 
 
-\section{Ventilation d'une opération\label{transactions-breakdown}}
+\section{Breakdown of a transaction\label{transactions-breakdown}}
+%\section{Ventilation d'une opération\label{transactions-breakdown}}
 
-\indexword{Ventiler une opération}\index{ventiler!opération} signifie répartir son montant entre plusieurs lignes (par exemple, vos achats au supermarché peuvent se répartir entre les catégories \emph{Alimentation : Épicerie} et \emph{Soins : Habillement}). Vous pouvez aussi répartir une somme sur la même catégorie, mais avec des informations différentes dans le champ \menus{Remarques} (par exemple pour mémoriser le détail d'une opération).
+\indexword{Break down a transaction}\index{break down!transaction} means to split the amount across several lines (for example, your supermarket purchases can be split between the categories \emph{Food : Groceries} and \emph{Personal care : Clothing}). You can also split a sum within the same category, but with different information in the \menus{Notes} field (for example, to record the details of a transaction).
+%\indexword{Ventiler une opération}\index{ventiler!opération} signifie répartir son montant entre plusieurs lignes (par exemple, vos achats au supermarché peuvent se répartir entre les catégories \emph{Alimentation : Épicerie} et \emph{Soins : Habillement}). Vous pouvez aussi répartir une somme sur la même catégorie, mais avec des informations différentes dans le champ \menus{Remarques} (par exemple pour mémoriser le détail d'une opération).
+
+\vspacepdf{3mm}
+\Note{}: please ensure you follow the syntax correctly, leaving a space before AND after the \enquote{:} between the category and a new sub-category.
+%\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:} entre la catégorie et une nouvelle sous-catégorie.
 
 
-\subsection{Saisie de l'opération ventilée\label{transactions-breakdown-master}}
+\subsection{Entering the breaken-down transaction\label{transactions-breakdown-master}}
+%\subsection{Saisie de l'opération ventilée\label{transactions-breakdown-master}}
 
-Pour \indexword{saisir une opération ventilée}\index{opération!ventilée}, procédez comme suit:
+To \indexword{enter a breaken-down transaction}\index{transaction!breaken-down}, proceed as follows:
+%Pour \indexword{saisir une opération ventilée}\index{opération!ventilée}, procédez comme suit:
 	 
 \begin{enumerate}
-	\item dans le formulaire, commencez la saisie de votre opération comme une opération normale jusqu'au champ \menus{Catégories}, où vous choisissez la catégorie \menus{Opération ventilée} (vers la fin du menu déroulant, mais il est plus simple de taper la lettre %\frquote{o});
-	\item continuez à saisir les autres données, puis validez:
-	\item dans la liste des opérations, apparaissent:
+	\item in the form, start entering your transaction as you would for a normal transaction until you reach the \menus{Categories} field, where you should select the \menus{Split Transaction} category (towards the end of the drop-down menu, but it’s easier to type the letters \enquote{sp});
+	%\item dans le formulaire, commencez la saisie de votre opération comme une opération normale jusqu'au champ \menus{Catégories}, où vous choisissez la catégorie \menus{Opération ventilée} (vers la fin du menu déroulant, mais il est plus simple de taper la lettre %\frquote{o});
+	\item continue entering the remaining details, then validate:
+	%\item continuez à saisir les autres données, puis validez:
+	\item the following appear in the list of transactions:
+	%\item dans la liste des opérations, apparaissent:
 	\begin{itemize}
-		\item la première ligne de la nouvelle opération écrite en %\fboxsep=2pt{\colorbox[RGB]{215,215,255}{\textcolor{red}{\textsf{caractères rouges sur fond bleu}}}},
-		\textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
-		\item et en-dessous une nouvelle ligne, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
+		\item the first line of the new operation is written in \textcolor{red}{\textsf{red}} and is therefore highlighted; it will remain in \textcolor{red}{\textsf{red}} as long as the total of the sub-transactions differs from the amount of the transaction;
+		%\item la première ligne de la nouvelle opération écrite en \textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
+		\item and below that, a new line, with \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, with a total of zero and a difference equal to the difference between this total and the total value of the split transaction, i.e. a negative figure\refimage{transactions-breakdown-img};
+		%\item et en-dessous une nouvelle ligne, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
 	\end{itemize}
 
 		% image centrée 
@@ -985,102 +1005,99 @@ Pour \indexword{saisir une opération ventilée}\index{opération!ventilée}, pr
 		\begin{center}
 		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown}
 		\end{center}
-		\vspace{-15pt}
-		\caption{Saisie de l'opération ventilée}
+		\vspace{-20pt}
+		\caption{Entering the split transaction}
+		%\caption{Saisie de l'opération ventilée}
 		\label{transactions-breakdown-img}
-		\vspace{-5pt}
+		\vspace{-10pt}
 		\end{figure}
 		% image centrée
 
-	\item dans le formulaire de saisie, le curseur est dans le champ \menus{Débit}, et les champs \menus{Date}, \menus{Tiers} et \menus{Moyen de paiement} sont grisés, ce qui signifie qu'on ne peut plus les modifier: il s'agit du formulaire de sous-opération, qui est prêt pour la saisie des sous-opérations;
-	\item passez à la sous-section suivante \menus{Saisie des sous-opérations ventilées}.
+	\item in the entry form, the cursor is in the \menus{Debit} field, and the \menus{Date}, \menus{Payee} and \menus{Payment method} fields are greyed out, meaning they can no longer be edited: this is the sub-transaction form, which is ready for entering sub-transactions;
+	%\item dans le formulaire de saisie, le curseur est dans le champ \menus{Débit}, et les champs \menus{Date}, \menus{Tiers} et \menus{Moyen de paiement} sont grisés, ce qui signifie qu'on ne peut plus les modifier: il s'agit du formulaire de sous-opération, qui est prêt pour la saisie des sous-opérations;
+	\item go to the next subsection \menus{Entering split sub-transactions}.
+	%\item passez à la sous-section suivante \menus{Saisie des sous-opérations ventilées}.
 \end{enumerate}
 
 
-\subsection{Saisie des sous-opérations ventilées\label{transactions-breakdown-slave}}
+\subsection{Entering split sub-transactions\label{transactions-breakdown-slave}}
+%\subsection{Saisie des sous-opérations ventilées\label{transactions-breakdown-slave}}
 
-\Note{}: le montant d'une sous-opération peut-être le résultat d'une opération portant sur plusieurs achats ou dépenses inscrites sur un ticket de caisse ou une facture; vous pouvez donc utiliser la \indexword{calculatrice}\index{calculatrice} dans les champs de saisie \menus{Débit} ou \menus{Crédit} pour obtenir plus facilement les montants des sous-opérations (voir la section \vref{transactions-new-numbers}, \menus{Saisie de formules}).
+\Note{}: the amount of a sub-transaction may be the result of a transaction involving several purchases or expenses listed on a receipt or invoice; you can therefore use the \indexword{calculator}\index{calculator} in the \menus{Debit} or \menus{Credit} input fields to more easily obtain the amounts of sub-transactions (see the section \vref{transactions-new-numbers}, \menus{Entering formulas}).
+%\Note{}: le montant d'une sous-opération peut-être le résultat d'une opération portant sur plusieurs achats ou dépenses inscrites sur un ticket de caisse ou une facture; vous pouvez donc utiliser la \indexword{calculatrice}\index{calculatrice} dans les champs de saisie \menus{Débit} ou \menus{Crédit} pour obtenir plus facilement les montants des sous-opérations (voir la section \vref{transactions-new-numbers}, \menus{Saisie de formules}).
 
-\vspacepdf{3mm}
-Pour saisir les \indexword{sous-opérations ventilées}\index{sous-opération!ventilée}, continuez la saisie comme suit:
+\vspacepdf{2mm}
+To enter \indexword{split sub-transactions}\index{sub-transactions!split}, continue typing as follows:
+%Pour saisir les \indexword{sous-opérations ventilées}\index{sous-opération!ventilée}, continuez la saisie comme suit:
 %\vspacepdf{3mm}
 \begin{enumerate}
-	\item dans ce formulaire de sous-opération, saisissez les champs libres (non grisés), puis validez votre première sous-opération;
+	\item in this sub-operation form, fill in the empty fields (those not greyed out), then save your first sub-operation;
+	%\item dans ce formulaire de sous-opération, saisissez les champs libres (non grisés), puis validez votre première sous-opération;
 
 		% image centrée 
 		\begin{figure}[htp]
 		\begin{center}
 		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub1}
 		\end{center}
-		\vspace{-15pt}
-		\caption{Saisie de la première sous-opération ventilée}
+		\vspace{-20pt}
+		\caption{Entering the first split sub-transaction}
+		%\caption{Saisie de la première sous-opération ventilée}
 		\label{transactions-breakdown-sub1-img}
-		\vspace{-5pt}
+		\vspace{-10pt}
 		\end{figure}
 		% image centrée
  
-	\item dans la liste des opérations, cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}}, et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
-	\item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}} et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img};
-	le total des sous-opérations a augmenté (en négatif) du montant de cette deuxième sous-opération, tandis que l'écart a diminué (en négatif) du même montant; 
+	\item in the list of operations, this sub-transaction is displayed on \fboxsep=3pt{\colorbox[RGB]{240,200,200}{pink background}}, and a new line appears, on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying a total equal to the first sub-transaction entered, in negative figures, and a difference equal to the difference between the total value of the split transaction and the value of this sub-transaction, in negative form\refimage{transactions-breakdown-sub1-img};
+	%\item dans la liste des opérations, cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}}, et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
+	\item there are at least two sub-transactions in a split transaction (otherwise there is no point in doing it\ldots); therefore, in the sub-transaction form, enter a second sub-transaction in the same way, then click on \menus{Validate}: this sub-transaction appears on \fboxsep=3pt{\colorbox[RGB]{240,200,200}{pink background}} and a new line appears, on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying the latest total of the sub-transactions entered and the latest difference \refimage{transactions-breakdown-sub2-img};
+	the total of the sub-transactions has increased (negatively) by the amount of this second sub-transaction, whilst the difference has decreased (negatively) by the same amount;
+	%\item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}} et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img}; le total des sous-opérations a augmenté (en négatif) du montant de cette deuxième sous-opération, tandis que l'écart a diminué (en négatif) du même montant; 
 
 	% image centrée 
 	\begin{figure}[htp]
 	\begin{center}
 	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub2}
 	\end{center}
-	\vspace{-10pt}
-	\caption{Saisie de la deuxième sous-opération ventilée}
+	\vspace{-15pt}
+	\caption{Entering the second split sub-transaction}
+	%\caption{Saisie de la deuxième sous-opération ventilée}
 	\label{transactions-breakdown-sub2-img}
-	\vspace{-5pt}
+	\vspace{-10pt}
 	\end{figure}
 	% image centrée 
-
-
-	\item si l'écart n'est pas nul, on peut alors saisir une troisième sous-opération de la même manière\refimage{transactions-breakdown-sub3-img},
+\newpage
+	\item if the difference is not zero, a third sub-transaction can then be entered in the same way\refimage{transactions-breakdown-sub3-img},
+	%\item si l'écart n'est pas nul, on peut alors saisir une troisième sous-opération de la même manière\refimage{transactions-breakdown-sub3-img},
 	
 	% image centrée 
-	\begin{figure}[htp]
+	\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_sub3}
 	\end{center}
 	\vspace{-10pt}
-	\caption{Saisie de la troisième sous-opération ventilée}
+	\caption{Entering the third split sub-transaction} 
+	%\caption{Saisie de la troisième sous-opération ventilée}
 	\label{transactions-breakdown-sub3-img}
 	\vspace{-5pt}
 	\end{figure}
 	% image centrée 
 
-	\item et ainsi de suite jusqu'à ce que le montant saisi de votre dernière sous-opération dans le formulaire soit exactement égal à l'écart affiché.
+	\item and so on until the amount you have entered for your last sub-transaction in the form is exactly equal to the difference shown.
+	%\item et ainsi de suite jusqu'à ce que le montant saisi de votre dernière sous-opération dans le formulaire soit exactement égal à l'écart affiché.
 	
-	\Note{}: tant que l'opération n'est pas complète, celle-çi reste écrite en \textcolor{red}{rouge}. %validez celle-ci: l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
-	
-	
-%	la dernière sous-opération s'affiche sur fond rose{couleur} et une nouvelle ligne sur fond rose{couleur} apparaît, vide, ce qui indique qu'il n'y a plus d'écart et que la somme des sous-opérations est bien égale à la valeur totale de l'opération ventilée\refimage{transactions-breakdown-complete-img}.
-
-%La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
-
-%Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
-
-	% image centrée 
-%	\begin{figure}[htp]
-%	\begin{center}
-%	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_complete}
-%	\end{center}
-%	\vspace{-10pt}
-%	\caption{Saisie de la dernière sous-opération ventilée}
-%	\label{transactions-breakdown-complete-img}
-%	\end{figure}
-	% image centrée 
-	
-%	\item passez à la sous-section suivante \menus{Validation de l'opération ventilée}.
+	\Note{}: until the transaction is complete, it remains displayed in \textcolor{red} red.
+	%\Note{}: tant que l'opération n'est pas complète, celle-çi reste écrite en \textcolor{red}{rouge}.
 \end{enumerate}
 
 
-\subsection{Validation de l'opération ventilée\label{transactions-breakdown-validation}}
+\subsection{Validation of the split transaction\label{transactions-breakdown-validation}}
+%\subsection{Validation de l'opération ventilée\label{transactions-breakdown-validation}}
 
-À la validation de cette dernière sous-opération, votre opération ventilée s'affiche alors dans la liste des opérations comme pour une opération normale, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
+Once this final sub-operation has been validated, your split transaction will appear in the list of transactions just as a normal transaction would, and the active line, highlighted in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, will move to the last empty line in the list.
+%À la validation de cette dernière sous-opération, votre opération ventilée s'affiche alors dans la liste des opérations comme pour une opération normale, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
-Dans la liste des opérations, vous pourrez reconnaitre votre opération ventilée par la présence d'un triangle à gauche de la première colonne \refimage{transactions-breakdown-display-img}.
+In the list of transactions, you will be able to identify your transaction by the presence of a triangle to the left of the first column \refimage{transactions-breakdown-display-img}.
+%Dans la liste des opérations, vous pourrez reconnaitre votre opération ventilée par la présence d'un triangle à gauche de la première colonne \refimage{transactions-breakdown-display-img}.
 
 \begin{figure}[!htbp]
 	%\vspace{-15pt}
@@ -1088,39 +1105,18 @@ Dans la liste des opérations, vous pourrez reconnaitre votre opération ventil�
 		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_display}
 	\end{center}
 	\vspace{-10pt}
-	\caption{Opération ventilée dans la liste des opérations}
+	\caption{Split transaction in the list of transactions}
+	%\caption{Opération ventilée dans la liste des opérations}
 	\label{transactions-breakdown-display-img}
 	\vspace{-5pt}
 \end{figure}
 
 
-%À ce moment, toutes les sous-opérations sont entrées et validées et, dans la liste des opérations, la ligne de l'opération ventilée est affichée sur fond rouge{couleur}, donc sélectionnée. Le formulaire réaffiche les données que vous y avez saisies. Toutes les sous-opérations étant correctes, validez l'opération ventilée, qui s'affiche alors dans la liste des opérations, en caractères noirs et sur fond rouge{couleur}, sans les sous-opérations\refimage{transactions-breakdown-oneLine-img}.
+\subsection{Displaying the split transaction\label{transactions-breakdown-display}}
+%\subsection{Affichage de l'opération ventilée\label{transactions-breakdown-display}}
 
-% image centrée 
-%\begin{figure}[htp]
-%\begin{center}
-%\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_oneLine}
-%\end{center}
-%\vspace{-10pt}
-%\caption{Opération ventilée validée}
-%\label{transactions-breakdown-oneLine-img}
-%\end{figure}
-% image centrée 
-
-%Une fois le dernier champ du formulaire saisi et validé, la ligne active, en rouge{couleur}, passe à la dernière ligne vide de la liste, comme pour une opération normale.
-
-%Vous pouvez vérifier tout le contenu de cette opération ventilée, en cliquant sur le petit triangle à gauche de sa ligne pour dérouler l'opération\refimage{transactions-breakdown-complete-img}.
-
-%\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-
-% espace après Attention ou Note: 5 mm
-%\vspacepdf{3mm}
-%Vous pouvez alors modifier les sous-opérations en les sélectionnant et en modifiant leurs champs de la même manière, et de façon à ce que finalement leur somme soit égale à la valeur de l'opération ventilée.
-
-
-\subsection{Affichage de l'opération ventilée\label{transactions-breakdown-display}}
-
-En cliquant sur le triangle à gauche de l'opération ventilée, vous sélectionnez cette opération et vous affichez le détail de ses sous-opérations \refimage{transactions-breakdown-fulldisplay-img}.
+By clicking on the triangle to the left of the split transaction, you select that transaction and view the details of its sub-transactions \refimage{transactions-breakdown-fulldisplay-img}.
+%En cliquant sur le triangle à gauche de l'opération ventilée, vous sélectionnez cette opération et vous affichez le détail de ses sous-opérations \refimage{transactions-breakdown-fulldisplay-img}.
 
 \begin{figure}[htbp]
 	%\vspace{-15pt}
@@ -1128,23 +1124,28 @@ En cliquant sur le triangle à gauche de l'opération ventilée, vous sélection
 		\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_fulldisplay}
 	\end{center}
 	\vspace{-10pt}
-	\caption{Affichage complet de l'opération ventilée}
+	\caption{Full view of the split transaction}
+	%\caption{Affichage complet de l'opération ventilée}
 	\label{transactions-breakdown-fulldisplay-img}
 	\vspace{-5pt}
 \end{figure}
 
 \vspacepdf{3mm}
-\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-
-\subsection{Rappel automatique d'une opération ventilée\label{transactions-breakdown-recall}}
-
-Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération ventilée 
-fonctionne comme celui d'une opération normale (voir la section \vref{transactions-new-recall}, \menus{Rappel automatique d'une opération}).
-
-Cependant, pour une opération ventilée, une case à cocher intitulée \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche du bouton \menus{Annuler}, et vous pouvez cocher cette case selon votre besoin.
+\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 
-\section{Modification d'une opération\label{transactions-modify}}
+\subsection{Automatic completion of the form for a split transaction\label{transactions-breakdown-autofill}}
+%\subsection{Remplissage automatique du formulaire d'une opération ventilée\label{transactions-breakdown-autofill}}
+
+The \indexword{automatic completion}\index{split transaction!autofill} feature for a split transaction works in the same way as for a standard transaction (see the section \vref{transactions-new-autofill}, \menus{Automatic form completion}).
+%Le \indexword{remplissage automatique}\index{opération ventilée!remplissage automatique} du formulaire d'une opération ventilée fonctionne comme pour celui d'une opération normale (voir la section \vref{transactions-new-autofill}, \menus{Remplissage automatique du formulaire}).
+
+However, for a broken-down operation, a tick box labelled \menus{Recover the children} appears at the bottom of the input form, to the left of the \menus{Cancel} button, and you can tick this box as required.
+%Cependant, pour une opération ventilée, une case à cocher intitulée \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche du bouton \menus{Annuler}, et vous pouvez cocher cette case selon votre besoin.
+
+
+\section{Modification d'une opération ventilée\label{transactions-modify}}
 
 Pour modifier une opération ou une sous-opération ventilée, sélectionnez-la dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un clic-gauche et modifier les valeurs à votre convenance.%passez en mode édition par l'une de ces méthodes:
 

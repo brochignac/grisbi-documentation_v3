@@ -647,7 +647,7 @@ Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}
 
 \begin{itemize}
 	\item si vous n'avez pas créé de lien (taux de change) pour cette devise, Grisbi affiche la fenêtre de frais et taux de change \refimage{transactions-changeRate-img}: saisissez-y le taux de change, validez la fenêtre puis validez l'opération: le montant en devise s'affiche dans le champ \menus{Débit} et celui dans la devise du compte dans le champ \menus{Montant};
-	 % espace pour notte alignée avec l'item
+	% saut de ligne pour alignement de la note sur l'item
 	 
 	\Note{}: vous pouvez inverser le sens de la conversion (un euro vaut X Devise, ou bien une Devise vaut Y euros) en inversant le nom des devises dans les deux listes déroulantes; vous pouvez ainsi entrer exactement le taux de change tel qu'il vous est communiqué; ce taux peut être ajusté à tout moment après la création de l'opération.
 	\item si vous voulez modifier le taux de change, ouvrez l'opération en modification, cliquez sur le bouton \menus{Change} dans le formulaire de saisie, cochez la case de libellé \menus{Modifier le taux de change} si elle ne l'est pas, puis modifiez-le, et validez la fenêtre puis l'opération;
@@ -664,23 +664,19 @@ Lorsque vous saisissez une opération avec pour tiers un tiers virtuel, Grisbi e
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme \frquote{État : nom\_du\_tiers\_virtuel}.
-
-\vspacepdf{3mm}
-\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:}.
-
-% espace pour changement de thème
-\vspacepdf{3mm}
-Pour créer un tiers virtuel, créez un état de type \menus{État vierge} contenant une liste de tiers: voir le paragraphe \vref{reportscreation-display-general-virtualThird}, \menus{Tiers virtuel}.
-
-% espace pour changement de thème
-\vspacepdf{3mm}
-Pour modifier un tiers virtuel, modifiez l'état qui l'a créé: voir la section \vref{reports-modify}, \menus{Modification d'un état}.
+Pour \indexword{saisir une opération avec un tiers virtuel}\index{tiers virtuel!saisie d'opération}, procédez de la sorte:
+\begin{itemize}
+	\item saisissez ce tiers dans le champ \menus{Tiers} du formulaire de saisie, sous la forme \frquote{État : nom\_du\_tiers\_virtuel};
+	% saut de ligne pour alignement de la note sur l'item
+	
+	\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:}.
+	\item créez un tiers virtuel en créant un état de type \menus{État vierge} contenant une liste de tiers: voir le paragraphe \vref{reportscreation-display-general-virtualThird}, \menus{Tiers virtuel};
+	\item modifiez le tiers virtuel à votre convenance en modifiant l'état qui l'a créé: voir la section \vref{reports-modify}, \menus{Modification d'un état}.
+\end{itemize}
 
 %espace pour changement de thème
 \vspacepdf{3mm}
 Pour supprimer un tiers virtuel, vous avez deux possibilités:
-
 \begin{itemize}
 	\item décochez la case \menus{Considérer les tiers de cet état comme un tiers virtuel} dans les \menus{Généralités} de l'état qui le définit, puis validez (voir la section \vref{reports-modify}, \menus{Modification d'un état});
 	\item supprimez l'état qui le définit (voir la section \vref{reports-delete}, \menus{Suppression d'un état}).
@@ -692,7 +688,7 @@ Pour supprimer un tiers virtuel, vous avez deux possibilités:
 \indexword{Ventiler une opération}\index{ventiler!opération} signifie répartir son montant entre plusieurs lignes (par exemple, vos achats au supermarché peuvent se répartir entre les catégories \emph{Alimentation : Épicerie} et \emph{Soins : Habillement}). Vous pouvez aussi répartir une somme sur la même catégorie, mais avec des informations différentes dans le champ \menus{Remarques} (par exemple pour mémoriser le détail d'une opération).
 
 \vspacepdf{3mm}
-\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:} lors de la création d'une sous-catégorie.
+\Note{}: veuillez à bien respectez la syntaxe avec un espace avant ET après les \frquote{:} entre la catégorie et une nouvelle sous-catégorie.
 
 
 \subsection{Saisie de l'opération ventilée\label{transactions-breakdown-master}}
@@ -704,8 +700,7 @@ Pour \indexword{saisir une opération ventilée}\index{opération!ventilée}, pr
 	\item continuez à saisir les autres données, puis validez:
 	\item dans la liste des opérations, apparaissent:
 	\begin{itemize}
-		\item la première ligne de la nouvelle opération écrite en %\fboxsep=2pt{\colorbox[RGB]{215,215,255}{\textcolor{red}{\textsf{caractères rouges sur fond bleu}}}},
-		\textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
+		\item la première ligne de la nouvelle opération écrite en \textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
 		\item et en-dessous une nouvelle ligne, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
 	\end{itemize}
 
@@ -728,7 +723,7 @@ Pour \indexword{saisir une opération ventilée}\index{opération!ventilée}, pr
 
 \subsection{Saisie des sous-opérations ventilées\label{transactions-breakdown-slave}}
 
-\Note{}: le montant d'une sous-opération peut-être le résultat d'une opération portant sur plusieurs achats ou dépenses inscrites sur un ticket de caisse ou une facture; vous pouvez donc utiliser la \indexword{calculatrice}\index{calculatrice} dans les champs de saisie \menus{Débit} ou \menus{Crédit} pour obtenir plus facilement les montants des sous-opérations (voir la section \vref{transactions-new-numbers}, \menus{Saisie de formules}).
+\Note{}: le montant d'une sous-opération peut être le résultat d'une opération portant sur plusieurs achats ou dépenses inscrites sur un ticket de caisse ou une facture; vous pouvez donc utiliser la \indexword{calculatrice}\index{calculatrice} dans les champs de saisie \menus{Débit} ou \menus{Crédit} pour obtenir plus facilement les montants des sous-opérations (voir la section \vref{transactions-new-numbers}, \menus{Saisie de formules}).
 
 \vspacepdf{3mm}
 Pour saisir les \indexword{sous-opérations ventilées}\index{sous-opération!ventilée}, continuez la saisie comme suit:
@@ -781,27 +776,7 @@ Pour saisir les \indexword{sous-opérations ventilées}\index{sous-opération!ve
 
 	\item et ainsi de suite jusqu'à ce que le montant saisi de votre dernière sous-opération dans le formulaire soit exactement égal à l'écart affiché.
 	
-	\Note{}: tant que l'opération n'est pas complète, celle-çi reste écrite en \textcolor{red}{rouge}. %validez celle-ci: l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
-	
-	
-%	la dernière sous-opération s'affiche sur fond rose{couleur} et une nouvelle ligne sur fond rose{couleur} apparaît, vide, ce qui indique qu'il n'y a plus d'écart et que la somme des sous-opérations est bien égale à la valeur totale de l'opération ventilée\refimage{transactions-breakdown-complete-img}.
-
-%La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
-
-%Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
-
-	% image centrée 
-%	\begin{figure}[htp]
-%	\begin{center}
-%	\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_complete}
-%	\end{center}
-%	\vspace{-10pt}
-%	\caption{Saisie de la dernière sous-opération ventilée}
-%	\label{transactions-breakdown-complete-img}
-%	\end{figure}
-	% image centrée 
-	
-%	\item passez à la sous-section suivante \menus{Validation de l'opération ventilée}.
+	\Note{}: tant que l'opération n'est pas complète, celle-çi reste écrite en \textcolor{red}{rouge}.
 \end{enumerate}
 
 
@@ -823,30 +798,6 @@ Dans la liste des opérations, vous pourrez reconnaitre votre opération ventil�
 \end{figure}
 
 
-%À ce moment, toutes les sous-opérations sont entrées et validées et, dans la liste des opérations, la ligne de l'opération ventilée est affichée sur fond rouge{couleur}, donc sélectionnée. Le formulaire réaffiche les données que vous y avez saisies. Toutes les sous-opérations étant correctes, validez l'opération ventilée, qui s'affiche alors dans la liste des opérations, en caractères noirs et sur fond rouge{couleur}, sans les sous-opérations\refimage{transactions-breakdown-oneLine-img}.
-
-% image centrée 
-%\begin{figure}[htp]
-%\begin{center}
-%\includegraphics[width=0.95\textwidth]{image/screenshot/transactions_breakdown_oneLine}
-%\end{center}
-%\vspace{-10pt}
-%\caption{Opération ventilée validée}
-%\label{transactions-breakdown-oneLine-img}
-%\end{figure}
-% image centrée 
-
-%Une fois le dernier champ du formulaire saisi et validé, la ligne active, en rouge{couleur}, passe à la dernière ligne vide de la liste, comme pour une opération normale.
-
-%Vous pouvez vérifier tout le contenu de cette opération ventilée, en cliquant sur le petit triangle à gauche de sa ligne pour dérouler l'opération\refimage{transactions-breakdown-complete-img}.
-
-%\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-
-% espace après Attention ou Note: 5 mm
-%\vspacepdf{3mm}
-%Vous pouvez alors modifier les sous-opérations en les sélectionnant et en modifiant leurs champs de la même manière, et de façon à ce que finalement leur somme soit égale à la valeur de l'opération ventilée.
-
-
 \subsection{Affichage de l'opération ventilée\label{transactions-breakdown-display}}
 
 En cliquant sur le triangle à gauche de l'opération ventilée, vous sélectionnez cette opération et vous affichez le détail de ses sous-opérations \refimage{transactions-breakdown-fulldisplay-img}.
@@ -865,15 +816,15 @@ En cliquant sur le triangle à gauche de l'opération ventilée, vous sélection
 \vspacepdf{3mm}
 \Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
-\subsection{Rappel automatique d'une opération ventilée\label{transactions-breakdown-recall}}
 
-Le \indexword{rappel automatique}\index{opération!rappel automatique} d'une opération ventilée 
-fonctionne comme celui d'une opération normale (voir la section \vref{transactions-new-recall}, \menus{Rappel automatique d'une opération}).
+\subsection{Remplissage automatique du formulaire d'une opération ventilée\label{transactions-breakdown-autofill}}
+
+Le \indexword{remplissage automatique}\index{opération ventilée!remplissage automatique} du formulaire d'une opération ventilée fonctionne comme pour celui d'une opération normale (voir la section \vref{transactions-new-autofill}, \menus{Remplissage automatique du formulaire}).
 
 Cependant, pour une opération ventilée, une case à cocher intitulée \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche du bouton \menus{Annuler}, et vous pouvez cocher cette case selon votre besoin.
 
 
-\section{Modification d'une opération\label{transactions-modify}}
+\section{Modification d'une opération ventilée\label{transactions-modify}}
 
 Pour modifier une opération ou une sous-opération ventilée, sélectionnez-la dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un clic-gauche et modifier les valeurs à votre convenance.%passez en mode édition par l'une de ces méthodes:
 
