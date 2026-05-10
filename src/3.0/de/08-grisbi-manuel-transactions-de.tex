@@ -283,7 +283,7 @@ Grisbi kann für jede Buchung eine vollständige Liste von Informations- und Ein
 	%\item \menus{Category};
 	%\item \menus{Catégorie};
 	\item \menus{V/A}: Buchungstatus, \emph{V (Verrechnet)} oder \emph{A (Abgestimmt)};
-	%\item \menus{C/R}: transaction status, \emph{C (Pending)} or \emph{R (Reconciled)};
+	%\item \menus{P/R}: transaction status, \emph{C (Pending)} or \emph{R (Reconciled)};
 	%\item \menus{P/R}: statut de l'opération, \emph{P (Pointé)} ou \emph{R (Rapproché)};
 	\item \menus{Beleg}, zum Beispiel die Rechnungsnummer (\menus{Beleg} und \menus{Buchungsnummer} sind Querverweise, die die Rückverfolgbarkeit der Buchung gewährleisten);
 	%\item \menus{Voucher}, for example the invoice number (\menus{Voucher} and \menus{Transaction number} are cross-references that ensure the traceability of the transaction);
@@ -605,7 +605,7 @@ Möglicherweise benötigen Sie zusätzliche Felder wie \menus{Geschäftsjahr}, \
 %You may need additional fields, such as \menus{Financial year}, \menus{Budgetary line} or others; this is done in the form content settings. There are two ways to access them:
 %Vous pouvez avoir besoin de champs supplémentaires, par exemple \menus{Exercice}, \menus{Imputation budgétaire} ou autres; cela se fait dans les paramètres du contenu du formulaire. Vous pouvez y accéder de deux façons différentes:
 \begin{itemize}
-	\item entweder durch einen Rechtsklick in das Buchungsformular, in einen grauen Bereich außerhalb der Eingabefelder, und anschließendes Klicken auf die Schaltfläche \menus{Buchungsformular Einstellungen} (siehe Abschnitt \vref{setup-form}, \menus{Buchungsformular - Darstellung}),
+	\item entweder durch einen \texttt{Rechtsklick} in das Buchungsformular, in einen grauen Bereich außerhalb der Eingabefelder, und anschließendes Klicken auf die Schaltfläche \menus{Buchungsformular Einstellungen} (siehe Abschnitt \vref{setup-form}, \menus{Buchungsformular - Darstellung}),
 	%\item either by right-clicking in the entry form, in a grey area outside the entry fields, and then clicking the \menus{Configure the form} button (see the section \vref{setup-form}, \menus{Transaction Form - Content}),
 	%\item soit par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, puis en cliquant sur le bouton \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations - Contenu}),
 	\item oder indem Sie über das Menü \menus{Bearbeiten - Einstellungen - Buchungsformular - Darstellung} die Felder nach Ihren Wünschen bearbeiten.
@@ -620,7 +620,7 @@ Eine vollständige Liste der Felder, die Grisbi verarbeiten kann, finden Sie im 
 %Pour connaître l'ensemble des champs que peut gérer Grisbi, voir la section \vref{transactions-list-fields}, \menus{Champs d'information et de saisie}.
 
 \vspacepdf{3mm}
-Sobald das Formular angezeigt wird, können Sie über ein Kontextmenü, das durch einen Rechtsklick in ein Eingabefeld aufgerufen wird, folgende Aktionen ausführen:
+Sobald das Formular angezeigt wird, können Sie über ein Kontextmenü, das durch einen \texttt{Rechtsklick} in ein Eingabefeld aufgerufen wird, folgende Aktionen ausführen:
 Once the form is displayed, a context menu that can be accessed by right-clicking in an entry field allows you to perform the following actions:
 %Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit dans un champ de saisie permet d'effectuer les actions suivantes:
 
@@ -684,7 +684,7 @@ Die Buchung erscheint dann in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dunkelros
 %The transaction then appears in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and its details are displayed in the form.
 %L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
 
-Ein Rechtsklick auf eine Buchungszeile öffnet ein Kontextmenü, das je nach Kontext die folgenden Funktionen enthält\refimage{transactions-contextMenu-img}:
+Ein \texttt{Rechtsklick} auf eine Buchungszeile öffnet ein Kontextmenü, das je nach Kontext die folgenden Funktionen enthält\refimage{transactions-contextMenu-img}:
 %Right-clicking on a transaction line displays a context menu containing the following functions, depending on the context\refimage{transactions-contextMenu-img}:
 %Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, selon le contexte, les fonctions suivantes:
 
@@ -948,7 +948,7 @@ Grisbi schlägt Ihnen eine automatische Vervollständigung des eingegebenen Wort
 %Grisbi will suggest automatically completing the word you have entered as soon as it has recognised enough characters. The selected \indexword{auto-complete}\index{entry field!auto-complete} appears on \fboxsep=3pt{\colorbox[RGB]{61,174,233}{blue background}}. To confirm your choice, press the \keys{Tab \tab} key or the \keys{Enter \return} key, depending on your configuration settings; otherwise, continue typing.
 %Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complétion}\index{champ de saisie!auto-complétion} sélectionné apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
 
-Die Auswahllisten für Währungen, Geschäftsjahren und Zahlungsarten lassen sich mit der \keys{Leertaste} oder einem Linksklick öffnen; die Navigation erfolgt mit den Tasten \keys{\arrowkeyup} und \keys{\arrowkeydown}, und die Auswahl wird mit der \keys{Leertaste}, der \keys{\return} oder einem Linksklick bestätigt.
+Die Auswahllisten für Währungen, Geschäftsjahren und Zahlungsarten lassen sich mit der \keys{Leertaste} oder einem \texttt{Linksklick} öffnen; die Navigation erfolgt mit den Tasten \keys{\arrowkeyup} und \keys{\arrowkeydown}, und die Auswahl wird mit der \keys{Leertaste}, der \keys{\return} oder einem \texttt{Linksklick} bestätigt.
 %The drop-down lists for currencies, financial years and methods of payment can be opened using the \keys{Space} key or a left-click of the mouse; you can navigate through them using the \keys{\arrowkeyup} and \keys{\arrowkeydown} keys, and confirm your selection using the \keys{Space} key, the \keys{Enter \return} key or a left-click of the mouse.
 %Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
 
@@ -1477,9 +1477,9 @@ Wenn Sie auf das Dreieck links neben der Splittbuchung klicken, wählen Sie dies
 %\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
 %\newpage
-\subsection{Automatisches Ausfüllen des Buchungsformulars für einen Splittbuchung\label{transactions-breakdown-autofill}}
-%\subsection{Automatic completion of the form for a split transaction\label{transactions-breakdown-autofill}}
-%\subsection{Remplissage automatique du formulaire d'une opération ventilée\label{transactions-breakdown-autofill}}
+\subsection{Automatisches Ausfüllen des Buchungsformulars für einen Splittbuchung\label{transactions-breakdown-autofill}}%\label{transactions-breakdown-recall}
+%\subsection{Automatic completion of the form for a split transaction\label{transactions-breakdown-autofill}}%\label{transactions-breakdown-recall}
+%\subsection{Remplissage automatique du formulaire d'une opération ventilée\label{transactions-breakdown-autofill}}%\label{transactions-breakdown-recall}
 
 Die \indexword{automatische Ausfüllung}\index{Splittbuchung!automatische Ausfüllung} des Formulars für eine aufgeteilte Buchung funktioniert genauso wie bei einer normalen Buchung (siehe Abschnitt \vref{transactions-new-autofill}, \menus{Automatische Ausfüllung des Buchungsformulars}).
 %The \indexword{automatic completion}\index{split transaction!autofill} feature for a split transaction works in the same way as for a standard transaction (see the section \vref{transactions-new-autofill}, \menus{Automatic form completion}).
@@ -1488,5 +1488,234 @@ Die \indexword{automatische Ausfüllung}\index{Splittbuchung!automatische Ausfü
 Bei einem Splittbuchung erscheint jedoch am unteren Rand des Buchungsformulars links neben der Schaltfläche \menus{Abbrechen} ein Kontrollkästchen mit der Bezeichnung \menus{Unterelemente erstellen}, das Sie je nach Bedarf aktivieren können.
 %However, for a broken-down operation, a tick box labelled \menus{Recover the children} appears at the bottom of the input form, to the left of the \menus{Cancel} button, and you can tick this box as required.
 %Cependant, pour une opération ventilée, une case à cocher intitulée \menus{Restaurer les sous-opérations} apparaît en bas du formulaire de saisie, à gauche du bouton \menus{Annuler}, et vous pouvez cocher cette case selon votre besoin.
+
+
+\section{Eine Buchung bearbeiten\label{transactions-modify}}
+%\section{Editing an transaction\label{transactions-modify}}
+%\section{Modification d'une opération\label{transactions-modify}}
+
+Um eine Transaktion, eine aufgeschlüsselte Transaktion oder eine ihrer Untertransaktionen zu bearbeiten, wählen Sie diese aus der Transaktionsliste aus, wo sie in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} angezeigt wird; sie erscheint auch im Eingabeformular, wo Sie die gewünschten Felder per \texttt{Linksklick} auswählen und die Werte nach Belieben ändern können.
+%To edit an transaction, a broken-down transaction, or one of its sub-transactions, select it from the list of transactions, where it will be displayed in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}; it will also appear in the entry form, where you can select the desired fields by \texttt{left-click} and modify the values as you see fit.
+%Pour modifier une opération, ou une opération ventilée ou une de ses sous-opérations, sélectionnez-la dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un \texttt{clic-gauche} et modifier les valeurs à votre convenance.
+
+\vspace{2mm}
+Wenn das Buchungsformular ausgeblendet ist, gehen Sie wie folgt vor, um es anzuzeigen:
+%If the entry form is hidden, do one of the following to display it:
+%Si le formulaire de saisie est masqué, procédez d'une des manières suivantes pour l'afficher:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung erstellen}, wenn ein Konto ausgewählt ist;
+	%\item in the menu bar, select \menus{Edit - New transaction} if an account is selected;
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération} si un compte est sélectionné;
+	\item Wählen Sie in der Menüleiste \menus{Ansicht} und aktivieren Sie das Kontrollkästchen neben der Option \menus{Buchungsformular anzeigen};
+	%\item in the menu bar, select \menus{View} and tick the box next to the \menus{Show transaction form} option;
+	%\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item Markieren Sie die Leerzeile am Ende der Transaktionsliste und drücken Sie die Taste \keys{Enter \return};
+	%\item select the blank line at the bottom of the list of transactions and press the \keys{Enter \return} key;
+	%\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
+	\item Doppelklicken Sie auf die leere Zeile am Ende der Buchungsliste;
+	%\item double-click on the empty line at the bottom of the list of transactions;
+	%\item double-cliquez sur la ligne vide en bas de la liste des opérations;
+	\item Drücken Sie die Tastenkombination \keys{Strg+T};
+	%\item press the \keys{Ctrl+T} key combination;
+	%\item appuyez sur la combinaison de touches \keys{Ctrl+T};
+	\item Klicken Sie in der Menüleiste auf \menus{Buchung erstellen};
+	%\item in the toolbar, click on \menus{New transaction};
+	%\item dans la barre d'outils, cliquez sur \menus{Nouvelle opération};
+	\item Wählen Sie im Kontextmenü der Buchungsliste \menus{Buchung erstellen};
+	%\item in the context menu of the transaction list, select \menus{New transaction};
+	%\item dans le menu contextuel de la liste des opérations, sélectionnez \menus{Nouvelle opération};
+	\item Klicken Sie auf das kleine Dreieck neben der Beschriftung \indexword{anzeigen/ausblenden}\index{Buchungsform!anzeige/ausblenden} im Formular für Buchungsformular links neben der Beschriftung.
+	%\item click on the small triangle next to the label \indexword{show/hide}\index{transaction form!show-hide} on the transaction entry form to the left of the label.
+	%\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
+	\Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
+	%\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\end{itemize}
+
+Anschließend wird das Datum im Buchungsformular in \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{weiß auf blauem Hintergrund}}}} angezeigt.
+%When the process is complete, the date appears in \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}}} in the form.
+%A l'issue, la date s'affiche en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} dans le formulaire.
+
+Sie können dann alle gewünschten Angaben bearbeiten, indem Sie durch die Eingabefelder navigieren.
+%You can then edit any information you wish by navigating through the entry fields.
+%Il est alors possible de modifier toutes les informations désirées, en se déplaçant dans les champs de saisie.
+
+Die Tastenkombination \keys{Strg+P} setzt oder löscht den Status \indexword{verrechnet Buchung}\index{Buchung!verrechnet} für eine ausgewählte Buchung, und \keys{Strg+R} setzt oder löscht den Status \indexword{abgestimmte Buchung}\index{Buchung!abgestimmte} (siehe das Kapitel \vref{reconciliation}, \menus{Bankabgleich}). Sie können einer Buchung auch den Status einer markierten Buchung zuweisen – jedoch nur diesen Status –, indem Sie die Tastenkombination \keys{Strg} + \texttt{Linksklick} in der Spalte \dequote{V/A} auf der Zeile der zu markierenden Buchung verwenden.
+%The \keys{Ctrl+P} key combination sets or clears the \indexword{pointed transaction}\index{transaction!pointed} status for a selected transaction, and \keys{Ctrl+R} sets or clears the \indexword{reconciled transaction}\index{transaction!reconciled} status (see the \vref{reconciliation} chapter, \menus{Bank Reconciliation}). You can also assign a transaction the status of a pointed transaction—but only this status—by using the \keys{Ctrl} + \texttt{Left Click} shortcut in the P/R column on the line of the transaction to be pointed.
+%La combinaison de touches \keys{Ctrl+P} donne ou retire à une opération sélectionnée le statut d'\indexword{opération pointée}\index{opération!pointée}, et \keys{Ctrl+R} celui d'\indexword{opération rapprochée}\index{opération!rapprochée} (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}). Vous pouvez aussi donner à une opération le statut d'opération pointée, mais uniquement celui-ci, par la combinaison \keys{Ctrl+Clic} dans la colonne P/R, sur la ligne de l'opération à pointer.
+
+% espace pour changement de thème
+\vspacepdf{2mm}%TODO: En ATTENTE
+If the transaction has already been reconciled (see the section \vref{reconciliation}, \menus{Bank reconciliation}), you cannot change its amount. The other fields remain editable. If you absolutely must change the amount (though if you have already reconciled the transaction, this should not be necessary), proceed as follows:
+%Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}), il est par contre impossible de modifier son montant. Les autres champs restent modifiables. Si vous avez vraiment et impérativement besoin de modifier le montant (mais si vous avez déjà rapproché l'opération, cela ne devrait pas être le cas), procédez comme suit:
+
+\begin{enumerate}
+	\item select the transaction;
+	%\item sélectionnez l'opération;
+	\item cancel its \emph{Reconciled} status by pressing the \keys{Ctrl+R} key combination;
+	%\item annulez son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R};
+	\item change the amount;
+	%\item modifiez le montant;%TODO verify
+	\item press the \keys{Ctrl+R} key combination again. If you do not do this, the reconciliation for this transaction will be inaccurate by an amount equal to the difference between the previous and new amounts for this transaction.
+	%\item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Si vous ne le faisiez pas, le rapprochement relatif à cette opération serait faussé, d'une valeur égale à la différence entre le précédent et le nouveau montant de cette opération.
+\end{enumerate}
+
+\Attention{}: cette manipulation est hautement déconseillée, car elle fausse momentanément le rapprochement associé à cette opération, et il redevient exact à la fin, si vous n'en avez pas modifié le montant (cette manipulation sera d'ailleurs probablement automatiquement désactivée dans une future version de Grisbi dans le cas d'une comptabilité de type association).
+
+
+\section{Eine Buchung löschen\label{transactions-delete}}
+%\section{Deleting a transaction\label{transactions-delete}}
+%\section{Suppression d'une opération\label{transactions-delete}}
+
+Um einen \indexword{Buchung zu löschen}\index{Buchung!löschen}, wählen Sie ihn aus und gehen Sie wie folgt vor:
+%To delete a transaction, select it and use one of the following methods:
+%Pour supprimer une opération, sélectionnez-la, et utilisez l'une de ces méthodes:
+\begin{itemize}
+	\item Drücken Sie die \keys{Entf}-Taste auf der Tastatur;
+	%\item press the \keys{Delete} key on the keyboard;
+	%\item appuyez sur la touche du clavier \keys{Suppr};
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung löschen};
+	%\item in the menu bar, select \menus{Edit - Remove transaction};
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Supprimer une opération};
+	\item Klicken Sie in der Symbolleiste auf die Schaltfläche \menus{Löschen};
+	%\item in the toolbar, \texttt{left-click} on the \menus{Delete} button;
+	%\item dans la barre d'outils, cliquez-gauche sur \menus{Supprimer};
+	\item Klicken Sie mit der rechten Maustaste und wählen Sie im Kontextmenü den Eintrag \menus{Transaktion löschen} aus.
+	%\item after \texttt{right-click} on a transaction, select \menus{Delete transaction} from the context menu.
+	%\item après un \texttt{clic-droit} sur une opération, dans le menu contextuel, sélectionnez \menus{Supprimer l'opération}.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Das Löschen einer TeilBuchung erfolgt auf dieselbe Weise, wobei die Splittbuchung \textcolor{red}{rot} angezeigt wird. Sie müssen daher sicherstellen, dass die Summe der TeilBuchungen letztendlich dem Wert der Splittbuchung entspricht.
+%Deleting a broken-down sub-transaction is done in the same way, and the broken-down transaction will turn \textcolor{red}{red}. You must therefore ensure that the sum of the sub-transactions ultimately equals the value of the broken-down transaction.
+%La suppression d'une sous-opération ventilée se fait de la même façon et l'opération ventilée passera en \textcolor{red}{rouge}. Vous devrez donc faire en sorte que finalement la somme des sous-opérations soit égale à la valeur de l'opération ventilée.
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Das Löschen ist nicht möglich, wenn:
+%Deletion is not possible if:
+%La suppression n'est pas possible si:
+\begin{itemize}
+	\item Der Buchung ist zur Bearbeitung geöffnet: Sie müssen zunächst den Bearbeitungsmodus verlassen, indem Sie die Taste \keys{Esc} drücken;
+	%\item the transaction is open for editing: you must first exit edit mode by pressing the \keys{Esc} key;
+	%\item l'opération est ouverte en modification: il faut préalablement sortir du mode édition, en utilisant la touche \keys{Échap};
+	\item Die Buchung ist \indexword{abgestimmt}\index{transaction!abgestimmt} (Sie müssen zunächst den Status \emph{Abgestimmt} aufheben, indem Sie die Tastenkombination \keys{Strg+R} drücken).
+	%\item the transaction is \indexword{reconciled}\index{transaction!reconciled} (you must first deselect its \emph{Reconciled} status by pressing the \keys{Ctrl+R} key combination).
+	%\item l'opération est \indexword{rapprochée}\index{opération!rapprochée} (il faut préalablement annuler son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R}).
+\end{itemize}
+
+% espace avant Attention ou Note: 5 mm
+\vspacepdf{3mm}
+\Attention{}: Von diesem letzten Schritt wird dringend abgeraten, da er die mit dieser Buchung verbundene Abstimmung verfälscht.
+%\Attention{}: this final step is strongly discouraged as it distorts the reconciliation associated with this transaction.
+%\Attention{}: cette dernière manipulation est hautement déconseillée car elle fausse le rapprochement associé à cette opération.
+
+
+\section{Verwenden Buchung als Vorlage\label{transactions-model}}
+%\section{Transaction selected as a template\label{transactions-model}}
+%\section{Opération sélectionnée comme modèle\label{transactions-model}}
+
+Um eine \indexword{Buchung als Vorlage}\index{Buchung!Vorlage} zu verwenden, markieren Sie diese und wenden Sie eine der folgenden Methoden an:
+%To use an \indexword{transaction as a template}\index{transaction!template}, select it and use one of the following methods:
+%Pour utiliser une \indexword{opération comme modèle}\index{opération!modèle}, sélectionnez-la, et utilisez l'une de ces méthodes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung als Vorlage verwenden};
+	%\item in the menu bar, select \menus{Edit - Use selected transaction as a template};
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Utiliser l'opération sélectionnée comme modèle};
+	\item Nachdem Sie mit der rechten Maustaste geklickt haben, wählen Sie im Kontextmenü den Eintrag \menus{Buchung als Vorlage verwenden} aus.
+	%\item after \texttt{right-clicking}, select \menus{Use selected transaction as a template} from the context menu.
+	%\item après un \texttt{clic-droit}, dans le menu contextuel, sélectionnez \menus{Utiliser l'opération sélectionnée comme modèle}.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Eine neue Buchung mit dem heutigen Datum wird in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} in einer neuen Zeile unterhalb der letzten Buchung angezeigt; natürlich weist sie weder den Status \emph{Verrechnet} noch den Status \emph{Abgestimmt} auf.
+%A new transaction with today's date is displayed in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, on a new line below the last transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
+%Une nouvelle opération avec la date du jour s'affiche sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, dans une nouvelle ligne en-dessous de la dernière opération; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
+
+Sie können diesen neuen Buchung dann bearbeiten, indem Sie beispielsweise das Datum ändern.
+%You can then edit this new transaction, for example by changing its date.
+%Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant sa date.
+
+
+\section{Cloning a transaction\label{transactions-duplicate}}
+%\section{Cloning a transaction\label{transactions-duplicate}}
+%\section{Clonage d'une opération\label{transactions-duplicate}}
+
+Um eine \indexword{Buchung zu klonen}\index{Buchung!klonen}, wählen Sie diese aus und wenden Sie dann eine der beiden folgenden Methoden an:
+To clone a transaction, select it, then use one of the following two methods:
+%Pour cloner une opération, sélectionnez-la, puis utilisez l'une de ces deux méthodes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten – Buchung duplizieren};
+	%\item in the menu bar, select \menus{Edit - Clone transaction};
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Cloner l'opération};
+	\item Wählen Sie nach einem \texttt{Rechtsklick} im Kontextmenü den Eintrag \menus{Buchung duplizieren} aus.
+	%\item after a \texttt{right-click}, select \menus{Clone transaction} from the context menu.
+	%\item après un \texttt{clic-droit}, dans le menu contextuel, sélectionnez \menus{Cloner l'opération}.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Eine neue Buchung mit dem zuvor ausgewählten Buchungsdatum erscheint in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und wird in einer neuen Zeile unterhalb der ausgewählten Buchung angezeigt; natürlich weist sie weder den Status \emph{Verrechnet} noch den Status \emph{Abgestimmt} auf.
+%A new transaction with the previously selected transaction date appears in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, and is displayed on a new line below the selected transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
+%Une nouvelle opération avec la date de l'opération sélectionnée précédemment apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et s'affiche dans une nouvelle ligne en-dessous de l'opération sélectionnée; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
+
+Sie können diesen neuen Buchung dann bearbeiten, indem Sie beispielsweise das Datum ändern.
+%You can then edit this new transaction, for example by changing its date.
+%Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant la date.
+
+
+\section{Umwandlung eines Buchung in eine geplante Buchung\label{transactions-schedule}}
+%\section{Converting a transaction into a scheduled transaction\label{transactions-schedule}}
+%\section{Conversion d'une opération en opération planifiée\label{transactions-schedule}}
+
+Um \indexword{eine Buchung in eine geplante Buchung umzuwandeln}\index{Buchung! in geplante Buchung}, wählen Sie diese aus und wenden Sie dann eine der beiden folgenden Methoden an:
+%To \indexword{convert an transaction into a scheduled transaction}\index{transaction!into a scheduled transaction}, select it, then use one of these two methods:
+%Pour \indexword{convertir une opération en opération planifiée}\index{opération!en opération planifiée}, sélectionnez-la, puis utilisez l'une de ces deux méthodes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung regelmäßig ausführen};
+	%\item in the menu bar, select \menus{Edit - Convert transaction to scheduled transaction};
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Convertir en opération planifiée};
+	\item Wählen Sie nach einem \texttt{Rechtsklick} im Kontextmenü den Eintrag \menus{Buchung regelmäßig ausführen} aus.
+	%\item after \texttt{right-clicking}, select \menus{Convert transaction to scheduled transaction} from the context menu.
+	%\item après un \texttt{clic-droit}, dans le menu contextuel, sélectionnez \menus{Convertir l'opération en opération planifiée}.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Die Registerkarte \menus{Planer} wird geöffnet. Die neue Buchung erscheint in der Liste der geplanten Buchungen, und das Buchungsformular wird mit den Buchungseinstellungen angezeigt. Überprüfen oder bearbeiten Sie diese Einstellungen nach Bedarf und bestätigen Sie anschließend.
+%The \menus{Scheduler} tab opens. The new transaction appears in the list of scheduled transactions, and the entry form is displayed with the transaction settings. Check or edit these settings as required, then confirm.
+%L'onglet \menus{Échéancier} s'affiche. La nouvelle opération apparaît dans la liste des opérations planifiées, et le formulaire de saisie s'affiche avec les paramètres de l'opération. Vérifiez ou éditez ces paramètres selon vos besoins, puis validez.
+
+
+\section{Verschieben eines Buchung auf ein anderes Konto\label{transactions-move}}
+%\section{Moving a transaction to another account\label{transactions-move}}
+%\section{Déplacement d'une opération vers un autre compte\label{transactions-move}}
+
+Um eine \indexword{Buchung auf ein anderes Konto zu verschieben}\indexword{Buchung!anderes Konto zu verschieben}, wählen Sie diese aus und gehen Sie dann wie folgt vor:
+%To \indexword{move a transaction to another account}\indexword{transaction!move to another account}, select it, then use one of these two methods:
+%Pour \indexword{déplacer une opération vers un autre compte}\indexword{opération!déplacer vers un autre compte}, sélectionnez-la, puis utilisez l'une de ces deux méthodes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung verschieben nach} und wählen Sie das Zielkonto aus der Liste aus;
+	%\item in the menu bar, select \menus{Edit - Move transaction to another account} and choose the destination account from the list;
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste;
+	\item Wählen Sie nach einem \texttt{Rechtsklick} im Kontextmenü den Eintrag \menus{Buchung verschieben nach} aus und wählen Sie das Zielkonto aus der Liste aus.
+	%\item after \texttt{right-clicking}, select \menus{Move transaction to another account} from the context menu and choose the destination account from the list.
+	%\item après un \texttt{clic-droit}, dans le menu contextuel, sélectionnez \menus{Déplacer l'opération vers un autre compte} et choisissez le compte destinataire dans la liste.
+\end{itemize}
+
+Es versteht sich von selbst, dass sich beide Konten in derselben von Grisbi erstellten Datei befinden müssen.
+%It goes without saying that both accounts must be in the same Grisbi created by file.
+%Il est bien entendu que les deux comptes doivent se trouver dans le même fichier créé par Grisbi.
+
+% espace avant Attention ou Note: 5 mm
+\vspacepdf{3mm}
+\Note{}: Ein Buchung kann nicht verschoben werden, wenn er den Status \emph{Abgestimmt} hat. Ist der Status hingegen \emph{Verrechnet}, ist dies möglich.
+%\Note{}: it is not possible to move a transaction if it has the status \emph{Reconciled}. However, it is possible if it has the status \emph{Pointed}.
+%\Note{}: il est impossible de déplacer une opération si elle a le statut \emph{Rapproché}. Par contre, c'est possible si elle a le statut \emph{Pointé}.
 
 
