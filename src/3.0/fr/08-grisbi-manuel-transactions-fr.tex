@@ -850,17 +850,21 @@ Il est alors possible de modifier toutes les informations désirées, en se dép
 La combinaison de touches \keys{Ctrl+P} donne ou retire à une opération sélectionnée le statut d'\indexword{opération pointée}\index{opération!pointée}, et \keys{Ctrl+R} celui d'\indexword{opération rapprochée}\index{opération!rapprochée} (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}). Vous pouvez aussi donner à une opération le statut d'opération pointée, mais uniquement celui-ci, par la combinaison \keys{Ctrl} + \texttt{clic gauche} dans la colonne \frquote{P/R}, sur la ligne de l'opération à pointer.
 
 % espace pour changement de thème
-\vspacepdf{3mm}
-Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}), il est par contre impossible de modifier son montant. Les autres champs restent modifiables. Si vous avez vraiment et impérativement besoin de modifier le montant (mais si vous avez déjà rapproché l'opération, cela ne devrait pas être le cas), procédez comme suit:
-%TODO: En ATTENTE
+\vspacepdf{2mm}
+Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}), il est par contre impossible de modifier son montant. Les autres champs restent modifiables.
+
+\vspacepdf{2mm}
+Si vous avez vraiment et impérativement besoin de modifier le montant (mais si vous avez déjà rapproché l'opération, cela ne devrait pas être le cas), procédez comme suit:
 \begin{enumerate}
 	\item sélectionnez l'opération;
 	\item annulez son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R};
-	\item modifiez l'opération;
-	\item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Si vous ne le faisiez pas, le rapprochement relatif à cette opération serait faussé, d'une valeur égale au montant de cette opération.
+	\item modifiez le montant;
+	\item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Le rapprochement relatif à cette opération sera alors faussé, d'une valeur égale à la différence entre l'ancien et le nouveau montant de cette opération;
+	\item vous devrez alors créer une nouvelle opération égale à la différence et la rapprocher pour avoir un rapprochement exact.
 \end{enumerate}
 
-\Attention{}: cette manipulation est hautement déconseillée, car elle fausse momentanément le rapprochement associé à cette opération, et il redevient exact à la fin, si vous n'en avez pas modifié le montant (cette manipulation sera d'ailleurs probablement automatiquement désactivée dans une future version de Grisbi dans le cas d'une comptabilité de type association).
+\vspacepdf{2mm}
+\Attention{}: dé-rapprocher une opération rapprochée est hautement déconseillée, car elle fausse momentanément le rapprochement associé à cette opération, et il redevient exact à la fin, si vous n'en avez pas modifié le montant (cette manipulation sera d'ailleurs probablement automatiquement désactivée dans une future version de Grisbi dans le cas d'une comptabilité de type association).
 
 
 \section{Suppression d'une opération\label{transactions-delete}}
@@ -929,7 +933,7 @@ Pour \indexword{convertir une opération en opération planifiée}\index{opérat
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{3mm}
+\vspacepdf{2mm}
 L'onglet \menus{Échéancier} s'affiche. La nouvelle opération apparaît dans la liste des opérations planifiées, et le formulaire de saisie s'affiche avec les paramètres de l'opération. Vérifiez ou éditez ces paramètres selon vos besoins, puis validez.
 
 
@@ -944,7 +948,7 @@ Pour \indexword{déplacer une opération vers un autre compte}\indexword{opérat
 Il est bien entendu que les deux comptes doivent se trouver dans le même fichier créé par Grisbi.
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{3mm}
+\vspacepdf{2mm}
 \Note{}: il est impossible de déplacer une opération si elle a le statut \emph{Rapproché}. Par contre, c'est possible si elle a le statut \emph{Pointé}.
 
 
@@ -953,11 +957,10 @@ Il est bien entendu que les deux comptes doivent se trouver dans le même fichie
 Il peut arriver que vous ayez besoin d'un nouveau tiers, d'une nouvelle catégorie ou d'une nouvelle imputation budgétaire pendant une saisie d'opération. Dans ce cas, Grisbi permet d'en faire la création \frquote{à la volée}: saisissez le nouveau nom dans la zone de liste déroulante, et Grisbi l'ajoutera automatiquement à la liste. Vous pourrez ultérieurement faire toutes les modifications nécessaires dans les onglets \menus{Tiers} (voir la section \vref{thirdparties-modify}, \menus{Modification d'un tiers}), \menus{Catégories} (voir la section \vref{categories-modify}, \menus{Modification d'une catégorie ou d'une sous-catégorie}) ou \menus{Imputations budgétaires} (voir la section \vref{budgetarylines-modify}, \menus{Modification d'une (sous-)imputation budgétaire}).
  
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{3mm}
-\Note{}: pour saisir une \indexword{catégorie}\index{catégories!syntaxe}\index{sous-catégories!syntaxe}\index{syntaxe!catégories : sous-catégories} (ou une \indexword{imputation budgétaire} : sous-imputation budgétaire\index{imputations budgétaires!syntaxe}\index{sous-imputations budgétaires!syntaxe}\index{syntaxe!imputations budgétaires : sous-imputations budgétaires}) avec une sous-catégorie (ou sous-imputation), il faut respecter la syntaxe \emph{catégorie : sous-catégorie} (avec les deux points comme séparateur, encadrés par des espaces), sinon Grisbi ne comprendra pas. De même si vous ajoutez une nouvelle sous-catégorie (ou sous-imputation budgétaire) à une catégorie (ou imputation) existante.
-% espace après Attention ou Note: 5 mm
- \vspacepdf{3mm}
+\vspacepdf{2mm}
+\Note{}: pour saisir une \indexword{catégorie}\index{catégories!syntaxe}\index{sous-catégories!syntaxe}\index{syntaxe!catégories : sous-catégories} (ou une \indexword{imputation budgétaire}\index{imputations budgétaires!syntaxe}\index{sous-imputations budgétaires!syntaxe}\index{syntaxe!imputations budgétaires : sous-imputations budgétaires}) avec une sous-catégorie (ou sous-imputation), il faut respecter la syntaxe \emph{catégorie : sous-catégorie} (avec les deux points comme séparateur, encadrés par des espaces), sinon Grisbi ne comprendra pas. De même si vous ajoutez une nouvelle sous-catégorie (ou sous-imputation budgétaire) à une catégorie (ou imputation) existante.
 
+\vspacepdf{2mm}
 Vous pouvez également créer un tiers, une catégorie ou une imputation budgétaire directement dans leur onglet respectif, sélectionné dans le panneau de navigation.
 
 

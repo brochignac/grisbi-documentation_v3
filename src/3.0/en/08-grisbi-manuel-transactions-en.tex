@@ -1187,23 +1187,29 @@ You can then edit any information you wish by navigating through the entry field
 The \keys{Ctrl+P} key combination sets or clears the \indexword{pointed transaction}\index{transaction!pointed} status for a selected transaction, and \keys{Ctrl+R} sets or clears the \indexword{reconciled transaction}\index{transaction!reconciled} status (see the \vref{reconciliation} chapter, \menus{Bank Reconciliation}). You can also assign a transaction the status of a pointed transaction—but only this status—by using the \keys{Ctrl} + \texttt{Left Click} shortcut in the \enquote{P/R} column on the line of the transaction to be pointed.
 %La combinaison de touches \keys{Ctrl+P} donne ou retire à une opération sélectionnée le statut d'\indexword{opération pointée}\index{opération!pointée}, et \keys{Ctrl+R} celui d'\indexword{opération rapprochée}\index{opération!rapprochée} (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}). Vous pouvez aussi donner à une opération le statut d'opération pointée, mais uniquement celui-ci, par la combinaison \keys{Ctrl+Clic} dans la colonne \frquote{P/R}, sur la ligne de l'opération à pointer.
 
-% espace pour changement de thème
-\vspacepdf{3mm}%TODO: En ATTENTE
-If the transaction has already been reconciled (see the section \vref{reconciliation}, \menus{Bank reconciliation}), you cannot change its amount. The other fields remain editable. If you absolutely must change the amount (though if you have already reconciled the transaction, this should not be necessary), proceed as follows:
-%Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}), il est par contre impossible de modifier son montant. Les autres champs restent modifiables. Si vous avez vraiment et impérativement besoin de modifier le montant (mais si vous avez déjà rapproché l'opération, cela ne devrait pas être le cas), procédez comme suit:
+\vspacepdf{2mm}
+If the transaction has already been reconciled (see the section \vref{reconciliation}, \menus{Bank reconciliation}), you cannot change its amount. The other fields remain editable.
+%Si l'opération a déjà été rapprochée (voir le chapitre \vref{reconciliation}, \menus{Rapprochement bancaire}), il est par contre impossible de modifier son montant. Les autres champs restent modifiables.
 
+\vspacepdf{2mm}
+If you absolutely must change the amount (though if you have already reconciled the transaction, this should not be necessary), proceed as follows:
+%Si vous avez vraiment et impérativement besoin de modifier le montant (mais si vous avez déjà rapproché l'opération, cela ne devrait pas être le cas), procédez comme suit:
 \begin{enumerate}
 	\item select the transaction;
 	%\item sélectionnez l'opération;
 	\item cancel its \emph{Reconciled} status by pressing the \keys{Ctrl+R} key combination;
 	%\item annulez son statut \emph{Rapproché} en appuyant sur la combinaison de touches \keys{Ctrl+R};
 	\item change the amount;
-	%\item modifiez le montant;%TODO verify
-	\item press the \keys{Ctrl+R} key combination again. If you do not do this, the reconciliation for this transaction will be inaccurate by an amount equal to the difference between the previous and new amounts for this transaction.
-	%\item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Si vous ne le faisiez pas, le rapprochement relatif à cette opération serait faussé, d'une valeur égale à la différence entre le précédent et le nouveau montant de cette opération.
+	%\item modifiez le montant;
+	\item press the \keys{Ctrl+R} key combination again. The reconciliation for this transaction will then be distorted by an amount equal to the difference between the old and new amounts for this transaction;
+	%\item appuyez à nouveau sur la combinaison de touches \keys{Ctrl+R}. Le rapprochement relatif à cette opération sera alors faussé, d'une valeur égale à la différence entre l'ancien et le nouveau montant de cette opération;
+	\item you will then need to create a new transaction equal to the difference and reconcile it to ensure the reconciliation is accurate.
+	%\item vous devrez alors créer une nouvelle opération égale à la différence et la rapprocher pour avoir un rapprochement exact.
 \end{enumerate}
 
-\Attention{}: cette manipulation est hautement déconseillée, car elle fausse momentanément le rapprochement associé à cette opération, et il redevient exact à la fin, si vous n'en avez pas modifié le montant (cette manipulation sera d'ailleurs probablement automatiquement désactivée dans une future version de Grisbi dans le cas d'une comptabilité de type association).
+\vspacepdf{2mm}
+\Attention{}: undoing a reconciled transaction is strongly discouraged, as it temporarily distorts the reconciliation associated with that transaction; however, it will be restored to its correct state at the end, provided you have not altered the amount (this function will likely be disabled automatically in a future version of Grisbi for association-type accounting).
+%\Attention{}: dé-rapprocher une opération rapprochée est hautement déconseillée, car elle fausse momentanément le rapprochement associé à cette opération, et il redevient exact à la fin, si vous n'en avez pas modifié le montant (cette manipulation sera d'ailleurs probablement automatiquement désactivée dans une future version de Grisbi dans le cas d'une comptabilité de type association).
 
 
 \section{Deleting a transaction\label{transactions-delete}}
@@ -1325,35 +1331,42 @@ It goes without saying that both accounts must be in the same Grisbi created by 
 %\Note{}: il est impossible de déplacer une opération si elle a le statut \emph{Rapproché}. Par contre, c'est possible si elle a le statut \emph{Pointé}.
 
 
-\section{Nouveau tiers, catégorie ou imputation budgétaire\label{transactions-fillcombo}}
+\section{New payee, category or budgetary line\label{transactions-fillcombo}}
+%\section{Nouveau tiers, catégorie ou imputation budgétaire\label{transactions-fillcombo}}
 
-Il peut arriver que vous ayez besoin d'un nouveau tiers, d'une nouvelle catégorie ou d'une nouvelle imputation budgétaire pendant une saisie d'opération. Dans ce cas, Grisbi permet d'en faire la création %\frquote{à la volée}
-: saisissez le nouveau nom dans la zone de liste déroulante, et Grisbi l'ajoutera automatiquement à la liste. Vous pourrez ultérieurement faire toutes les modifications nécessaires dans les onglets \menus{Tiers} (voir la section \vref{thirdparties-modify}, \menus{Modification d'un tiers}), \menus{Catégories} (voir la section \vref{categories-modify}, \menus{Modification d'une catégorie ou d'une sous-catégorie}) ou \menus{Imputations budgétaires} (voir la section \vref{budgetarylines-modify}, \menus{Modification d'une (sous-)imputation budgétaire}).
+You may find that you need a new payee, a new category or a new budgetary line whilst entering a transaction. In this case, Grisbi allows you to create them \enquote{on the fly}: simply enter the new name in the drop-down list, and Grisbi will automatically add it to the list. You can subsequently make any necessary changes in the \menus{Payee} (see the section \vref{thirdparties-modify}, \menus{Modifying a third party}), \menus{Categories} (see the section \vref{categories-modify}, \menus{Modifying a category or sub-category}) or \menus{Budgetary lines} (see the section \vref{budgetarylines-modify}, \menus{Modifying a (sub-)budgetary line}).
+%Il peut arriver que vous ayez besoin d'un nouveau tiers, d'une nouvelle catégorie ou d'une nouvelle imputation budgétaire pendant une saisie d'opération. Dans ce cas, Grisbi permet d'en faire la création \frquote{à la volée}: saisissez le nouveau nom dans la zone de liste déroulante, et Grisbi l'ajoutera automatiquement à la liste. Vous pourrez ultérieurement faire toutes les modifications nécessaires dans les onglets \menus{Tiers} (voir la section \vref{thirdparties-modify}, \menus{Modification d'un tiers}), \menus{Catégories} (voir la section \vref{categories-modify}, \menus{Modification d'une catégorie ou d'une sous-catégorie}) ou \menus{Imputations budgétaires} (voir la section \vref{budgetarylines-modify}, \menus{Modification d'une (sous-)imputation budgétaire}).
  
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{3mm}
-\Note{}: pour saisir une \indexword{catégorie}\index{catégories!syntaxe}\index{sous-catégories!syntaxe}\index{syntaxe!catégories : sous-catégories}
- (ou une \indexword{imputation budgétaire} : sous-imputation budgétaire\index{imputations budgétaires!syntaxe}\index{sous-imputations budgétaires!syntaxe}\index{syntaxe!imputations budgétaires : sous-imputations budgétaires}) avec une sous-catégorie (ou sous-imputation), il faut respecter la syntaxe \emph{catégorie : sous-catégorie} (avec les deux points comme séparateur, encadrés par des espaces), sinon Grisbi ne comprendra pas. De même si vous ajoutez une nouvelle sous-catégorie (ou sous-imputation budgétaire) à une catégorie (ou imputation) existante.
-% espace après Attention ou Note: 5 mm
- \vspacepdf{3mm}
+\vspacepdf{2mm}
+\Note{}: to enter a \indexword{category}\index{categories!syntax}\index{subcategories!syntax}\index{syntax!categories : subcategories}
+(or a \indexword{budgetary line}\index{budgetary lines!syntax}\index{sub-budgetary lines!syntax}\index{syntax!budgetary lines : sub-budgetary lines}) with a sub-category (or sub-budgetary line), you must use the syntax \emph{category : sub-category} (with a colon as the separator, flanked by spaces), otherwise Grisbi will not recognise it. The same applies if you add a new sub-category (or sub-budgetary line) to an existing category (or budgetary line).
+%\Note{}: pour saisir une \indexword{catégorie}\index{catégories!syntaxe}\index{sous-catégories!syntaxe}\index{syntaxe!catégories : sous-catégories} (ou une \indexword{imputation budgétaire}\index{imputations budgétaires!syntaxe}\index{sous-imputations budgétaires!syntaxe}\index{syntaxe!imputations budgétaires : sous-imputations budgétaires}) avec une sous-catégorie (ou sous-imputation), il faut respecter la syntaxe \emph{catégorie : sous-catégorie} (avec les deux points comme séparateur, encadrés par des espaces), sinon Grisbi ne comprendra pas. De même si vous ajoutez une nouvelle sous-catégorie (ou sous-imputation budgétaire) à une catégorie (ou imputation) existante.
 
-Vous pouvez également créer un tiers, une catégorie ou une imputation budgétaire directement dans leur onglet respectif, sélectionné dans le panneau de navigation.
+\vspacepdf{2mm}
+You can also create a payee, a category or a budgetary line directly in their respective tabs, selected from the navigation panel.
+%Vous pouvez également créer un tiers, une catégorie ou une imputation budgétaire directement dans leur onglet respectif, sélectionné dans le panneau de navigation.
 
 
-\section{Impression de la liste des opérations\label{transactions-print}}
-%TODO verify
-Pour imprimer la liste des opérations, cliquez sur le bouton \menus{Imprimer} de la barre d'outils; une fenêtre d'impression s'ouvre, dont l'aspect et les fonctions dépendent de votre gestionnaire d'impression; vous aurez le plus souvent les choix suivants:
+\section{Printing the list of transactions\label{transactions-print}}
+%\section{Impression de la liste des opérations\label{transactions-print}}
 
+To print the list of transactions, click the \menus{Print} button on the toolbar; a print dialogue box will open, the appearance and functions of which depend on your printer driver; you will usually have the following options:
+%Pour imprimer la liste des opérations, cliquez sur le bouton \menus{Imprimer} de la barre d'outils; une fenêtre d'impression s'ouvre, dont l'aspect et les fonctions dépendent de votre gestionnaire d'impression; vous aurez le plus souvent les choix suivants:
 \begin{itemize}
-	\item imprimer dans un fichier (au format \gls{PDF}, \gls{PostScript}, ou \gls{SVG});
-	\item imprimer avec votre imprimante.
+	\item print to a file (in \gls{PDF}, \gls{PostScript}, or \gls{SVG} format);
+	%\item imprimer dans un fichier (au format \gls{PDF}, \gls{PostScript}, ou \gls{SVG});
+	\item print to your printer.
+	%\item imprimer avec votre imprimante.
 \end{itemize}
 
-En fonction de votre gestionnaire d'impression, vous pourrez disposer de réglages divers tels que la taille et l'orientation de la feuille, la résolution, la police d'impression et sa taille, etc.
+Depending on your printer driver, you may have various settings available, such as paper size and orientation, resolution, font and font size, etc.
+%En fonction de votre gestionnaire d'impression, vous pourrez disposer de réglages divers tels que la taille et l'orientation de la feuille, la résolution, la police d'impression et sa taille, etc.
 
 % espace avant Attention ou Note: 5 mm
-\vspacepdf{3mm}
-\Note{}: la liste des opérations de certains comptes peut être très longue; affichez un aperçu avant impression pour vérifier ce que vous allez imprimer.
+\vspacepdf{2mm}
+\Note{}: the list of transactions for some accounts can be very long; view a print preview to check what you are about to print.
+%\Note{}: la liste des opérations de certains comptes peut être très longue; affichez un aperçu avant impression pour vérifier ce que vous allez imprimer.
 
 
 %XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
