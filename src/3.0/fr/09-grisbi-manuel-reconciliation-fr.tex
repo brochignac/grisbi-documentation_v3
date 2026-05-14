@@ -24,7 +24,7 @@ Pour faire un rapprochement bancaire, munissez-vous du relevé de votre compte b
 
 \subsection{Description\label{reconciliation-account-description}}
 
-Pour avoir accès à la fonction de rapprochement bancaire, cliquez sur \menus{Rapprocher} dans la barre d'outils\refimage{reconciliation-list-img}.
+Pour avoir accès à la fonction de rapprochement bancaire, cliquez sur \menus{Rapprocher}\refimage{reconciliation-list-img} dans la barre d'outils.
 
 % image centrée
 %\vspace{-5pt}
@@ -50,7 +50,7 @@ Vous pouvez donc exécuter sur cette liste les mêmes actions qu'en dehors de la
 La zone de rapprochement comporte les éléments suivants:
 \begin{itemize}
 	\item[]
-	\begin{figure}[h]
+	\begin{figure}[htbp]
 		\begin{center}
 			\includegraphics[width=0.5\textwidth]{image/screenshot/reconciliation_infos}
 		\end{center}
@@ -78,13 +78,13 @@ La zone de rapprochement comporte les éléments suivants:
 
 \subsubsection{\No de rapprochement\label{reconciliation-account-description-number}}
 
-Le \menus{\No rapprochement} est le seul paramètre qui permet d'identifier à coup sûr un rapprochement quelconque; ce numéro peut comprendre du texte et des nombres. Par défaut, Grisbi attribue un numéro à chaque rapprochement, composé du nom du compte concerné, suivi d'un nombre; ce nombre est incrémenté automatiquement au rapprochement suivant. Ce \menus{\No rapprochement} est donc unique pour chaque rapprochement d'un compte, et il est visible dans le menu \menus{Éditer - Préférences - Rapprochement} (voir la section \vref{setup-operations-reconciliation}, \menus{Rapprochement}. 
+Le \menus{\No rapprochement} est le seul paramètre qui permet d'identifier à coup sûr un rapprochement quelconque; ce numéro peut comprendre du texte et des nombres. Par défaut, Grisbi attribue un numéro à chaque rapprochement, composé du nom du compte concerné, suivi d'un nombre; ce nombre est incrémenté automatiquement au rapprochement suivant. Ce \menus{\No rapprochement} est donc unique pour chaque rapprochement d'un compte, et il est visible dans le menu \menus{Éditer - Préférences - Opérations - Rapprochement} (voir la section \vref{setup-operations-reconciliation}, \menus{Rapprochement}.
 
 Grisbi vous permet de personnaliser cette numérotation, qui devra être de la forme \frquote{texte~+~nombre}, pour être unique pour chacun de vos rapprochements. Vous pouvez inventer la numérotation qui vous convient, et ce, compte par compte; par exemple, ils pourront porter le même numéro que vos relevés bancaires. Si, pour quelque raison, le \menus{\No rapprochement} ne respecte pas cette forme, il vous sera difficile de retrouver son contenu, c'est à dire les opérations qui lui appartiennent (voir la section \vref{reconciliation-manage-content}, \menus{Contenu d'un rapprochement}); cependant, vous pourrez toujours y modifier le numéro de chaque rapprochement, mais cela risque d'être assez fastidieux\ldots
 
 % espace avant Attention ou Note : 5 mm
 \vspacepdf{2mm}
-\Note{}: s'il vous est possible d'avoir la même \indexword{numérotation}\index{rapprochement!numérotation} pour les rapprochements (par ex. de 1 à n) dans des comptes différents, il est impossible de l'avoir plusieurs fois dans un même compte. Vous pourrez par exemple prévoir une numérotation du type année-numéro: 2003-01 pour votre premier relevé mensuel de 2003, et ensuite Grisbi numérotera les suivants jusqu'à 2003-12; l'année suivante vous numéroterez le premier 2004-01, etc. Quelque soit le contenu de votre numérotation, il suffit que la fin soit numérique pour que Grisbi sache l'incrémenter, par exemple AV-001 ou REM-001, ou bien encore CCP-1106 pour le compte CCP de l'année 2011 mois 06, qui ne permettra aucune confusion sur les comptes et les dates. 
+\Note{}: s'il vous est possible d'avoir la même \indexword{numérotation}\index{rapprochement!numérotation} pour les rapprochements (par ex. de 1 à n) dans des comptes différents, il est impossible de l'avoir plusieurs fois dans un même compte. Vous pourrez par exemple prévoir une numérotation du type année-numéro: 2003-01 pour votre premier relevé mensuel de 2025, et ensuite Grisbi numérotera les suivants jusqu'à 2025-12; l'année suivante vous numéroterez le premier 2026-01, etc. Quelque soit le contenu de votre numérotation, il suffit que la fin soit numérique pour que Grisbi sache l'incrémenter, par exemple AV-001 ou REM-001, ou bien encore CCP-2406 pour le compte CCP de l'année 2024 mois 06, qui ne permettra aucune confusion sur les comptes et les dates.
 
 
 \subsubsection{Dates et soldes\label{reconciliation-account-description-DateBalance}}
@@ -96,8 +96,6 @@ La date du \indexword{rapprochement en cours}\index{rapprochement!en cours} peut
 % espace avant Attention ou Note : 5 mm
 \vspacepdf{2mm}
 \Attention{}: la date finale du rapprochement précédent et la date initiale du rapprochement en cours peuvent être identiques, ou doivent se suivre chronologiquement, pour ne pas avoir de chevauchement de périodes de rapprochement; cependant, si vous avez fait de telles erreurs, Grisbi pourra probablement les corriger: voir la section \vref{reconciliation-manage}, \menus{Gestion des rapprochements des comptes}.
-% espace arès Attention ou Note : 5 mm
-\vspacepdf{5mm}
 
 
 \subsubsection{Ordre d'affichage des opérations\label{reconciliation-account-description-sort}}
@@ -106,43 +104,43 @@ Afin de faciliter l'identification des opérations pendant le rapprochement vous
 
 % espace pour changement de thème: 5 mm
 \vspacepdf{2mm}
-Vous pouvez aussi trier les opérations en cochant la case \menus{Tri par mode de règlement} dans la zone de rapprochement, ou bien en configurant l'ordre d'affichage selon ces modes de règlement, individuellement pour chaque compte, dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-operations-sort}, \menus{Option de tri pour les rapprochements}).
+Vous pouvez aussi trier les opérations en cochant la case \menus{Tri par mode de règlement} dans la zone de rapprochement, ou bien en configurant l'ordre d'affichage selon ces modes de règlement, individuellement pour chaque compte, dans le menu \menus{Éditer - Préférences - Opérations} (voir la section \vref{setup-operations-sort}, \menus{Option de tri pour les rapprochements}).
 
 % espace pour changement de thème: 5 mm
 \vspacepdf{2mm}
-Vous pouvez encore masquer ou afficher les \indexword{opérations rapprochées}\index{affichage!opérations rapprochées} (\frquote{R}), grâce aux choix proposés par la fonction \menus{Affichage} de la barre de menus ou de la barre d'outils, ou bien, plus simplement, par la combinaison de touches \keys{Alt+R}. 
+Vous pouvez encore masquer ou afficher les \indexword{opérations rapprochées}\index{affichage!opérations rapprochées} (\frquote{R}), grâce aux choix proposés par la fonction \menus{Affichage} de la barre de menus ou de la barre d'outils, ou bien, plus simplement, par la combinaison de touches \keys{Alt+R}.
 
-\subsection{Procédure de rapprochement\label{reconciliation-account-howto} }
+
+\subsection{Procédure de rapprochement\label{reconciliation-account-howto}}
 
 La procédure pour opérer un rapprochement est la suivante:
-
 \begin{enumerate}
 	\item dans la barre d'outils, cliquez sur \menus{Rapprocher};
 	\item vérifiez que la \indexword{zone de rapprochement}\index{rapprochement!zone} affiche un \indexword{numéro de rapprochement}\index{rapprochement!numéro}, sinon saisissez-en un, sous la forme \frquote{texte~+~nombre} qui sera unique pour chacun d'eux; pour les rapprochements suivants, Grisbi incrémentera automatiquement ce nombre;
 	 % saut de ligne pour indentation correcte de la note dans la liste
  
-	\Note{}: l'incrémentation ne fonctionnera que si la numérotation de votre rapprochement se termine par un chiffre, par exemple \frquote{CCP-2011/06}, et pas du tout dans le cas de \frquote{2011/06-CCP}.
+	\Note{}: l'incrémentation ne fonctionnera que si la numérotation de votre rapprochement se termine par un chiffre, par exemple \frquote{CCP-2024/06}, et pas du tout dans le cas de \frquote{2024/06-CCP}.
 		
 	\item la première ligne du tableau indique la date du rapprochement précédent et le solde à cette date, qui sont alors la date et le solde initiaux de votre rapprochement en cours: ils sont en grisé, vous ne pouvez donc pas les modifier; ce solde initial est aussi celui de votre dernier relevé bancaire; il est reporté dans la ligne \menus{\indexword{Solde initial}}\index{solde!initial} en-dessous;
-	\item dans la seconde ligne du tableau, saisissez la date du jour (ou celle du relevé bancaire) (voir les sections \vref{transactions-new-dates}, \menus{Saisie de date au clavier} ou \vref{transactions-new-calendar}, \menus{Saisie de date au calendrier}) ainsi que le solde courant, que vous trouvez sur votre dernier relevé bancaire: ce sont la date et le solde de fin de votre rapprochement; de même, ce solde est reporté dans la ligne \menus{Solde final} en-dessous;
+	\item dans la seconde ligne du tableau, saisissez la date du jour (ou celle du relevé bancaire) (voir les sections \vref{transactions-new-dates}, \menus{Saisie de date au clavier} ou \vref{transactions-new-calendar}, \menus{Saisie de date au calendrier}) ainsi que le solde courant, que vous trouvez sur votre dernier relevé bancaire: ce sont la date et le solde de fin de votre rapprochement; de même, ce solde est reporté dans la ligne \menus{\indexword{Solde final}}\index{solde!final} en-dessous;
 	\item dans la liste des opérations, pour chaque opération commune à votre compte et votre relevé bancaire, cochez l'opération dans votre relevé bancaire, et pointez dans Grisbi l'opération par l'un des moyens suivants:
 		\begin{itemize}
 			\item cliquez sur la ligne d'opération dans la \indexword{colonne} \menus{P/R}\index{colonne!P/R},
 			\item appuyez sur la combinaison de touches \keys{Ctrl+P},
 			\item appuyez sur la barre d'espace (ce qui déplace aussi la sélection sur la ligne en-dessous);			
 		\end{itemize}	 
-	Un \frquote{P} y apparaît alors pour indiquer que l'opération est \frquote{pointée}; si vous vous êtes trompé(e), un autre clic, un autre \key{Ctrl+P} ou un autre appui sur la barre d'espace (précédé du déplacement de la sélection sur la ligne au-dessus) supprime le \frquote{P}; à chaque nouveau \frquote{P}, dans la colonne \menus{P/R}, la ligne \menus{Pointage} de la zone de rapprochement est augmentée du même montant, en positif si c'est un crédit et en négatif si c'est un débit, et la ligne \menus{Écart} fait de même;
-	\item lorsque vous avez coché toutes les opérations correspondantes de votre relevé bancaire dans la liste d'opérations de Grisbi: 
+	Un \frquote{P} y apparaît alors pour indiquer que l'opération est \frquote{pointée}; si vous vous êtes trompé(e), un autre clic, un autre \keys{Ctrl+P} ou un autre appui sur la barre d'espace (précédé du déplacement de la sélection sur la ligne au-dessus) supprime le \frquote{P}; à chaque nouveau \frquote{P}, dans la colonne \menus{P/R}, la ligne \menus{Pointage} de la zone de rapprochement est augmentée du même montant, en positif si c'est un crédit et en négatif si c'est un débit, et la ligne \menus{Écart} fait de même;
+	\item lorsque vous avez coché toutes les opérations correspondantes de votre relevé bancaire dans la liste d'opérations de Grisbi:
 	\begin{itemize}
 		\item la ligne \menus{Écart} doit indiquer zéro et,
 		\item la ligne \menus{Pointage} doit indiquer la valeur de la différence entre le \menus{Solde initial} et le \menus{Solde final};
 	\end{itemize}
 	Si ce n'est pas le cas, c'est qu'il s'est glissé une erreur quelque part dans une opération, dans un solde ou ailleurs;
 	\item si vous voulez interrompre le \indexword{rapprochement}\index{rapprochement!interrompre} en cours, invalidez par le bouton \menus{Annuler}: Grisbi supprime la zone de rapprochement, mais les opérations pointées dans la liste le restent; ainsi, lorsque vous reprendrez le rapprochement, les pointages ne seront pas perdus; par contre, il vous faudra saisir à nouveau la \menus{date} et le \menus{solde};
-	\item quand tout est correct dans la zone de rapprochement, en particulier quand le contenu de \menus{Écart} est nul, le bouton \menus{Valider} devient opérationnel, alors cliquez dessus; Grisbi supprime la zone de rapprochement, et remplace les \frquote{P} par des \frquote{R} dans la liste des opérations, pour indiquer que ces opérations-là sont \frquote{rapprochées}; à partir de ce moment, ces opérations ne sont plus que partiellement modifiables, car les montants sont figés (puisque c'est leur exactitude et leur correspondance avec le relevé bancaire qui sont le but même de l'opération de rapprochement).
+	\item quand tout est correct dans la zone de rapprochement, en particulier quand le contenu de \menus{Écart} est nul, le bouton \menus{Valider} devient opérationnel, alors cliquez dessus; Grisbi supprime la zone de rapprochement, et remplace les \frquote{P} (Pointé) par des \frquote{R} dans la liste des opérations, pour indiquer que ces opérations-là sont \frquote{Rapprochées}; à partir de ce moment, ces opérations ne sont plus que partiellement modifiables, car les montants sont figés (puisque c'est leur exactitude et leur correspondance avec le relevé bancaire qui sont le but même de l'opération de rapprochement).
 \end{enumerate}
 
-Après un rapprochement, si vous voulez ne plus afficher les \indexword{opérations rapprochées}\index{affichage!opérations rapprochées} (\frquote{R}) dans la liste des opérations, dé-sélectionnez, dans la barre de menus ou dans la barre d'outils, la fonction \menus{Affichage - Montrer les opérations rapprochées}, ou bien, plus simplement, appuyez sur la combinaison de touches \keys{Alt+R}. La même action réaffiche les opérations rapprochées.
+Après un rapprochement, si vous voulez masquer les \indexword{opérations rapprochées}\index{affichage!opérations rapprochées} (\frquote{R}) dans la liste des opérations, dé-sélectionnez, dans la barre de menus ou dans la barre d'outils, la fonction \menus{Affichage - Montrer les opérations rapprochées}, ou bien, plus simplement, appuyez sur la combinaison de touches \keys{Alt+R}. La même action réaffiche les opérations rapprochées.
 
 % espace avant Attention ou Note : 5 mm
 \vspacepdf{2mm}
@@ -159,7 +157,6 @@ Après un rapprochement, si vous voulez ne plus afficher les \indexword{opérati
 \subsection{Gestion des paramètres des rapprochements\label{reconciliation-manage-parameters}}
 
 Pour gérer les \indexword{paramètres des rapprochements}\index{rapprochement!paramètres}, vous disposez des fonctionnalités suivantes:
-
 \begin{itemize}
 	\item lister tous les rapprochements réalisés sur tous les comptes;
 	\item supprimer des rapprochements;
@@ -168,16 +165,15 @@ Pour gérer les \indexword{paramètres des rapprochements}\index{rapprochement!p
 \end{itemize}
 
 % espace pour changement de thème : 5 mm
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Un assistant permet aussi d'aider à rétablir la continuité des rapprochements et de réparer certaines erreurs.
 
-Ces fonctionnalités sont disponibles dans le menu \menus{Éditer - Préférences}, et sont décrites en détail dans la section \vref{setup-operations-reconciliation}, \menus{Rapprochement}.
+Ces fonctionnalités sont disponibles dans le menu \menus{Éditer - Préférences - Opérations}, et sont décrites en détail dans la section \vref{setup-operations-reconciliation}, \menus{Rapprochement}.
 
 
 \subsection{Contenu d'un rapprochement\label{reconciliation-manage-content}}
 
 Vous ne pouvez afficher le \indexword{contenu d'un rapprochement}\index{rapprochement!contenu} que s'il dispose d'un \menus{\No rapprochement} unique. Si ce n'est pas le cas, vous devrez d'abord modifier le \menus{\No rapprochement} pour chacun des rapprochements du compte, avec un numéro de la forme \frquote{texte~+~nombre}, le nombre s'incrémentant à chaque rapprochement suivant (voir la section \vref{setup-operations-reconciliation}, \menus{Rapprochement}). Si c'est déjà le cas, vous pouvez utiliser l'une de ces deux méthodes:
-
 \begin{itemize}
 	\item dans la liste des opérations, trier les opérations suivant le critère \menus{\No rapprochement}: c'est la méthode la plus rapide;
 	\item créer un état des opérations appartenant à un \menus{\No rapprochement} connu: cette méthode permet d'en mémoriser son contenu.
@@ -201,12 +197,21 @@ Pour afficher les opérations d'un compte suivant un tel tri, procédez comme su
 
 Pour créer un état des opérations appartenant à un \menus{\No rapprochement} connu, procédez comme suit:
 \begin{enumerate}
-	\item sélectionnez l'onglet \menus{États}, puis choisissez \menus{Recherche} dans la liste déroulante; 
-	\item faites les choix adaptés à votre recherche dans les différents onglets, notamment:
+	\item sélectionnez l'onglet \menus{États};
+	\item créez un \menus{Nouvel état} en cliquant dessus;
+	\item dans la liste déroulante du \menus{Type d'état}, choisissez \menus{Rechercher} puis validez; 
+	\item dans la nouvelle fenêtre des propriétés de l'état, faites les choix adaptés à votre recherche dans les différentes catégories, notamment:
+	\begin{itemize}
+		\item dans la catégorie \menus{Sélection des données}, section \menus{Textes},
 		\begin{itemize}
-			\item dans l'onglet \menus{Textes}, cochez \menus{Sélectionnez les opérations d'après leur contenu}, choisissez \menus{\No rapprochement} dans la liste déroulante de libellé \menus{Opérations dont}, puis saisissez le numéro de rapprochement recherché dans le champ de libellé \menus{contient};
-			\item dans l'onglet \menus{Généralités}, saisissez un nom dans le champ \menus{Nom de l'état};
-			\item dans l'onglet \menus{Opérations}, cochez \menus{Afficher les opérations} puis, au moins:
+				\item cochez \menus{Sélectionnez les opérations d'après leur contenu},
+				\item dans la liste déroulante libellée \menus{Opérations dont}, choisissez \menus{\no de rapprochement},
+				\item puis saisissez le numéro de rapprochement recherché dans le champ libellé \menus{contient};
+		\end{itemize}
+		\item dans la catégorie \menus{Affichage des données},
+		\begin{itemize}
+			\item dans la section \menus{Généralités}, saisissez un nom dans le champ \menus{Nom :} de l'état;
+			\item dans la section \menus{Opérations}, cochez \menus{Afficher les opérations} puis, cochez au moins:
 			\begin{itemize}
 				\item \menus{tiers},
 				\item \menus{date},
@@ -214,12 +219,13 @@ Pour créer un état des opérations appartenant à un \menus{\No rapprochement}
 				\item \menus{Afficher les titres des colonnes};
 			\end{itemize}
 		\end{itemize}	
+	\end{itemize}
 	\item validez la fenêtre: la liste des opérations appartenant au rapprochement recherché s'affiche.
 \end{enumerate}
 
 % espace pour changement de thème : 5 mm
 \vspacepdf{2mm}
-Vous pouvez toujours modifier ensuite vos sélections en cliquant sur l'outil \menus{Propriétés} dans la barre d'outils (voir aussi le chapitre \vref{reportscreation}, \menus{Création d'un état}).
+Vous pouvez toujours modifier ensuite vos sélections en cliquant sur l'outil \menus{Propriétés} dans la barre d'outils de l'état (voir aussi le chapitre \vref{reportscreation}, \menus{Création d'un état}).
 
 
 \section{Résolution de problèmes de rapprochement\label{reconciliation-solve}}
@@ -231,18 +237,18 @@ Il se peut que vous n'arriviez pas à faire votre \indexword{rapprochement}\inde
 \Note{}: pour tous les cas décrits dans les sections suivantes, commencez par faire un test de débogage de votre fichier créé par Grisbi, qui vous permettra de préciser où se trouvent d'éventuels problèmes (voir la section \vref{maintenance-file-debug}, \menus{Déboguer le fichier de comptes}).
 
 
-\subsection{Rapprochement sur un compte nouveau\label{reconciliation-solve-new}}
+\subsection{Rapprochement sur un nouveau compte\label{reconciliation-solve-new}}
 
 Si vous utilisez Grisbi depuis un certain temps, et que vous ouvrez un nouveau compte bancaire à la banque, comme le solde de ce compte est nul, vous créez un nouveau compte dans Grisbi avec un solde initial nul; vous saisirez le premier versement sur le compte bancaire par une opération initiale dans le nouveau compte dans Grisbi. C'est le cas le plus simple, qui ne pose de problème pour aucun rapprochement ultérieur.
 
 
-\subsection{Rapprochement sur un compte ancien\label{reconciliation-solve-old}}
+\subsection{Rapprochement sur un ancien compte\label{reconciliation-solve-old}}
 
 Par contre, si vous avez un compte bancaire depuis longtemps et que vous commencez à utiliser Grisbi, vous créerez un compte dans Grisbi, soit en mettant un solde initial égal au solde du compte bancaire à ce jour, dans l'onglet \menus{Propriétés} du compte, soit en créant une opération de dépôt initial du même montant dans la liste des opérations du compte. 
 
 % espace pour changement de thème : 5 mm
 \vspacepdf{2mm}
-De ce fait, si vous voulez par la suite, pour avoir toutes vos opérations dans Grisbi, entrer des opérations antérieures à la date de première utilisation de Grisbi, vous devrez soit modifier le solde initial du compte, soit modifier l'opération de dépôt initial, du montant total de ces opérations antérieures. Dans ces deux cas, le solde des opérations dans la liste des opérations sera modifié automatiquement et sera correct, mais le solde initial de votre premier rapprochement, indiqué dans l'onglet \menus{Rapprochement} du menu \menus{Éditer - Préférences}, ne sera pas modifié et sera donc incorrect; ce qui fait que le rapprochement incluant ces opérations ne pourra pas être bon. De plus ces opérations ne seront associées à aucun rapprochement. Dans l'un et l'autre cas, voici comment résoudre cela:
+De ce fait, si vous voulez par la suite, pour avoir toutes vos opérations dans Grisbi, entrer des opérations antérieures à la date de première utilisation de Grisbi, vous devrez soit modifier le solde initial du compte, soit modifier l'opération de dépôt initial, du montant total de ces opérations antérieures. Dans ces deux cas, le solde des opérations dans la liste des opérations sera modifié automatiquement et sera correct, mais le solde initial de votre premier rapprochement, indiqué dans l'onglet \menus{Rapprochement} du menu \menus{Éditer - Préférences - Opérations}, ne sera pas modifié et sera donc incorrect; ce qui fait que le rapprochement incluant ces opérations ne pourra pas être bon. De plus ces opérations ne seront associées à aucun rapprochement. Dans l'un et l'autre cas, voici comment résoudre cela:
 
 % espace avant Attention ou Note : 5 mm
 \vspacepdf{2mm}
@@ -250,15 +256,14 @@ De ce fait, si vous voulez par la suite, pour avoir toutes vos opérations dans 
 
 % espace après Attention ou Note : 5 mm
 \vspacepdf{2mm}
-
 Si vous procédez en modifiant le solde initial du compte:
 \begin{enumerate}
 	\item vérifiez que le dernier rapprochement de ce compte est fait et correct;
-	\item saisissez les opérations antérieures au premier rapprochement de ce compte;	
+	\item saisissez les opérations antérieures au premier rapprochement de ce compte;
 	\item modifiez le solde initial du premier rapprochement dans l'onglet \menus{Rapprochement}, du montant total des opérations antérieures que vous venez de saisir;
 	\item modifiez la date initiale du premier rapprochement, pour une date antérieure à la date de l'opération la plus ancienne que vous avez ajoutée;
 	\item forcez en \menus{Rapproché} le statut de chaque opération antérieure ajoutée par un \keys{Ctrl+R}: une fenêtre s'ouvre, sélectionnez le premier rapprochement (celui dont vous avez changé la date initiale) pour associer ce rapprochement à l'opération, puis validez; 
-	\item procédez éventuellement à une vérification des rapprochements par la fonction \menus{Trouver les opérations marquées et non associées à un rapprochement} dans l'onglet \menus{Rapprochement} du menu \menus{Éditer - Préférences}.
+	\item procédez éventuellement à une vérification des rapprochements par la fonction \menus{Trouver les opérations marquées et non associées à un rapprochement} dans l'onglet \menus{Rapprochement} du menu \menus{Éditer - Préférences - Opérations}.
 \end{enumerate}
 
 % espace pour séparation de la procédure: 5 mm
@@ -266,13 +271,13 @@ Si vous procédez en modifiant le solde initial du compte:
 Si vous procédez en modifiant l'opération de dépôt initial:
 \begin{enumerate}
 	\item vérifiez que le dernier rapprochement de ce compte est fait et correct;
-	\item saisissez les opérations antérieures au premier rapprochement de ce compte;	
+	\item saisissez les opérations antérieures au premier rapprochement de ce compte;
 	\item modifiez le solde initial du premier rapprochement dans l'onglet \menus{Rapprochement}, en ajoutant le montant total des opérations antérieures que vous venez de saisir;
 	\item modifiez la date initiale du premier rapprochement, pour une date antérieure à la date de l'opération la plus ancienne que vous avez ajoutée;
 	\item changez le statut de l'opération de dépôt initial en \menus{Non Rapproché} par un \keys{Ctrl+R} (pour pouvoir la modifier);
-	\item modifiez le montant de cette opération du montant total des opérations antérieures que vous venez de saisir;	
-	\item forcez en \menus{Rapproché} le statut de l'opération de dépôt initial et de chaque opération antérieure ajoutée, par un \keys{Ctrl+R}: une fenêtre s'ouvre, sélectionnez le premier rapprochement (celui dont vous avez changé la date initiale) pour associer ce rapprochement à l'opération, puis validez; 
-	\item procédez éventuellement à une vérification des rapprochements par la fonction de libellé \menus{Trouver les opérations marquées et non associées à un rapprochement} dans l'onglet \menus{Rapprochement} du menu \menus{Éditer - Préférences}.
+	\item modifiez le montant de cette opération du montant total des opérations antérieures que vous venez de saisir;
+	\item forcez en \menus{Rapproché} le statut de l'opération de dépôt initial et de chaque opération antérieure ajoutée, par un \keys{Ctrl+R}: une fenêtre s'ouvre, sélectionnez le premier rapprochement (celui dont vous avez changé la date initiale) pour associer ce rapprochement à l'opération, puis validez;
+	\item procédez éventuellement à une vérification des rapprochements par la fonction libellée \menus{Trouver les opérations marquées et non associées à un rapprochement} dans l'onglet \menus{Rapprochement} du menu \menus{Éditer - Préférences - Opérations}.
 \end{enumerate}
 
 % espace pour séparation de la procédure: 5 mm
