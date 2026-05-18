@@ -252,8 +252,8 @@ Grisbi kann für jede Buchung eine vollständige Liste von Informations- und Ein
 	\item \menus{Valutadatum}\index{Valutadatum}: \indexword{Datum} – das Datum, an dem die Bank die Buchung erfasst; dieses Datum wird zur Berechnung von Zinsen und Gebühren herangezogen; es kann zur Berechnung von Salden verwendet werden;
 	%\item \menus{Value date}\index{date!value}: \indexword{date} on which the bank records the transaction; this is the date used for calculating interest and fees; it may be used to calculate balances;
 	%\item \menus{Date de valeur}\index{date!valeur}: \indexword{date} à laquelle la banque comptabilise l'opération; c'est cette date qui fait foi pour le calcul des intérêts et des agios; elle peut être utilisée pour calculer les soldes;
-	%\item \menus{Empfänger};
-	\item \menus{Payee};
+	\item \menus{Empfänger};
+	%\item \menus{Payee};
 	%\item \menus{Tiers};
 	\item \menus{Gruppe};
 	%\item \menus{Budgetary line};
@@ -595,10 +595,10 @@ Das Buchungsformular enthält standardmäßig die folgenden sieben Felder:
 	%\item \menus{Categories : Sub-categories},
 	%\item \menus{Catégorie},
 	\item \menus{Zahlungsweise},
-	\item \menus{Method of payment}
+	%\item \menus{Method of payment}
 	%\item \menus{Moyen de paiement},
 	\item \menus{Notiz}.
-	\item \menus{Notes}
+	%\item \menus{Notes}
 	%\item \menus{Remarques}.
 \end{itemize}
 Möglicherweise benötigen Sie zusätzliche Felder wie \menus{Geschäftsjahr}, \menus{Gruppen} oder andere; dies nehmen Sie in den Einstellungen für den Formularinhalt vor. Es gibt zwei Möglichkeiten, darauf zuzugreifen:
@@ -707,7 +707,7 @@ Ein \texttt{Rechtsklick} auf eine Buchungszeile öffnet ein Kontextmenü, das je
 		\item \menus{Buchung als Vorlage verwenden};
 		%\item \menus{Use selected transaction as a template};
 		%\item \menus{Utiliser l'opération sélectionnée comme modèle};
-		\item \menus{Buchung du­pli­zie­ren};
+		\item \menus{Buchung duplizieren};
 		%\item \menus{Clone transaction};
 		%\item \menus{Cloner l'opération};
 		\item \menus{Buchung regelmäßig ausführen}; So lassen sich Fälligkeitstermine ganz einfach nachträglich festlegen;
@@ -813,13 +813,13 @@ Sie können das Datum in einem der folgenden Formate eingeben:
 
 \begin{itemize}
 	\item TT/MM/JJ (mit Trennzeichen zwischen Tag, Monat und Jahr);
-	\item mm/dd/yy (with a separator between the month, day and year);
-	%\item jj/mm/aa (avec délimiteur entre le jour, mois et année);
+	%\item mm/dd/yy (with a separator between month, day and year);
+	%\item jj/mm/aa (avec délimiteur entre jour, mois et année);
 	\item TTMMJJ oder MMTT (ohne Trennzeichen); in diesem Fall müssen Sie für Tag, Monat und Jahr jeweils zwei Ziffern verwenden;
-	\item mmddyy or mmdd (without delimiters); in this case, you must use two digits for the month, day and year;
+	%\item mmddyy or mmdd (without delimiters); in this case, you must use two digits for the month, day and year;
 	%\item jjmmaa ou jjmm (sans délimiteur); dans ce cas, vous devrez bien utiliser deux chiffres pour les jour, mois et année;
 	\item T/M/J, wenn Tag, Monat oder Jahr nur eine Ziffer haben (z. B.: 1/1/1 für den 1. Januar 2001).
-	\item m/d/y if the month, day or year consists of a single digit (e.g. 1/1/1 for January 1st, 2001).
+	%\item m/d/y if the month, day or year consists of a single digit (e.g. 1/1/1 for January 1st, 2001).
 	%\item j/m/a si le jour, le mois ou l'année ne comportent qu'un seul chiffre (par ex.: 1/1/1 pour le premier janvier 2001).
 \end{itemize}
 
@@ -853,9 +853,9 @@ Schließlich können Sie das angezeigte Datum erhöhen oder verringern:
 %\subsection{Entering a date in the calendar\label{transactions-new-calendar}}
 %\subsection{Saisie de la date au calendrier\label{transactions-new-calendar}}
 
-Durch Doppelklicken auf das Datum oder durch Drücken der Tastenkombination \keys{Strg+\return} wird ein Kalender angezeigt, aus dem Sie das Datum auswählen können.
-%Double-clicking on the date, or pressing the \keys{Ctrl+Enter \return} key combination, brings up a calendar from which you can select the date.
-%Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \return}, affiche un calendrier permettant de sélectionner la date.
+Durch einen Doppelklick auf das Datum oder durch Drücken der Tastenkombination \keys{Strg+\return} wird ein Kalender angezeigt, in dem der aktuelle Monat und Tag markiert sind, sodass Sie das Datum auswählen können.
+%Double-clicking on the date, or pressing the \keys{Ctrl+Enter \return} key combination, displays a calendar with the current month and day highlighted, allowing you to select the date.
+%Un double-clic sur la date, ou la combinaison de touches \keys{Ctrl+Entrée \return}, affiche un calendrier avec le mois en cours et le jour en cours surligné, permettant de sélectionner la date.
 
 %espace pour changement de thème
 \vspacepdf{3mm}
@@ -1192,7 +1192,6 @@ Um eine andere Währung zu verwenden, müssen Sie zunächst folgende Einstellung
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-
 Wenn Sie den Eintrag \indexword{Währungsbuchung}\index{Buchung!Währung}\index{Währung!Buchung} in das Buchungsformular eingeben, wählen Sie aus der Dropdown-Liste die Währung aus, in der die Buchung erfasst werden soll. Dabei können sich verschiedene Fragen stellen:
 %When entering the \indexword{currency transaction}\index{transaction!currency}\index{currency!transaction} in the entry form, select the currency in which the transaction is to be recorded from the drop-down list. Several questions may arise:
 %Lors de la saisie de l'\indexword{opération en devise}\index{opération!devise}\index{devise!opération} dans le formulaire de saisie, choisissez dans la liste déroulante la devise dans laquelle l'opération doit être enregistrée. Plusieurs questions peuvent se poser:
@@ -1494,7 +1493,7 @@ Bei einem Splittbuchung erscheint jedoch am unteren Rand des Buchungsformulars l
 %\section{Editing an transaction\label{transactions-modify}}
 %\section{Modification d'une opération\label{transactions-modify}}
 
-Um eine Transaktion, eine aufgeschlüsselte Transaktion oder eine ihrer Untertransaktionen zu bearbeiten, wählen Sie diese aus der Transaktionsliste aus, wo sie in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} angezeigt wird; sie erscheint auch im Eingabeformular, wo Sie die gewünschten Felder per \texttt{Linksklick} auswählen und die Werte nach Belieben ändern können.
+Um eine Buchung, eine aufgeschlüsselte Buchung oder eine ihrer Unterbuchungen zu bearbeiten, wählen Sie diese aus der Buchungsliste aus, wo sie in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} angezeigt wird; sie erscheint auch im Buchungsformular, wo Sie die gewünschten Felder per \texttt{Linksklick} auswählen und die Werte nach Belieben ändern können.
 %To edit an transaction, a broken-down transaction, or one of its sub-transactions, select it from the list of transactions, where it will be displayed in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}; it will also appear in the entry form, where you can select the desired fields by \texttt{left-click} and modify the values as you see fit.
 %Pour modifier une opération, ou une opération ventilée ou une de ses sous-opérations, sélectionnez-la dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un \texttt{clic-gauche} et modifier les valeurs à votre convenance.
 
