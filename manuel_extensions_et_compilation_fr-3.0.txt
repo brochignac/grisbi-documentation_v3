@@ -1,8 +1,12 @@
 Compilation du manuel de Grisbi :
 [mise à jour: mars 2025 - wrapfig2]
-[mise à jour: novembre 2025 - babel, glossaries, glossaries-extra, hyperref, mfirstuc,
- suppression: macros.sty, hva/macros.hva]
+[mise à jour: novembre 2025 - babel, glossaries, glossaries-extra, hyperref, mfirstuc, suppression: macros.sty, hva/macros.hva]
 [mise à jour: décembre 2025 - ajout package "tools", logiciel "pandoc"]
+[mise à jour: juillet 2026 - babel (base), enumitem, glossaries, glossaries-extra, hyperref, koma-script, menukeys, varioref (extrait de latex-tools)]
+
+--------------------------------------------------
+|                   PRÉPARATION                  |
+--------------------------------------------------
 
 Pour compiler complètement le manuel dans les formats :
 - html : installez "pandoc"
@@ -10,61 +14,84 @@ Pour compiler complètement le manuel dans les formats :
 Vous devrez aussi vous assurer que les extensions appelées dans le fichier :
 - 00-grisbi-manual-$LANG.tex,
 par la commande \usepackage{package}, sont installées et en particulier :
-(pour vérifier si l'extension est présente, faire la commande suivante : kpsewhich -all "package".sty)
-[si seulement "package".dtx présent, taper en ligne de commande: << tex package.dtx >> ou << tex package.ins >>
+
+[pour vérifier si l'extension est présente, faire la commande suivante :
+kpsewhich -all "package".sty]
+
+[si seulement "package".dtx ou "package".ins présent dans le dossier, taper en ligne de commande:
+$ tex package.dtx
+ou
+$ tex package.ins
 pour générer package.sty]
 
-[pour installer, copier dans le:
-- home: ~/texmf/tex/latex/"package"/
-ou
-- systeme: /usr/share/texlive/texmf-dist/tex/latex/"package"/]
-
-babel (base) (1)(2)=[v25.15-2025/11](requiert docstrip v2.3c ou sup.),
+babel (=base) (1)(2)=[v26.9-2026/06](requiert docstrip v2.3c ou sup.?),
 ---bigfoot (fourni perpage) (1) (est remplacé par footmisc),
 caption (1)(2)=[2023/10],
-enumitem (1)(2)=[v3.11-2025/02]
+enumitem (1)=[v3.11-2025/02],
 ---fixfoot (1) (est remplacé par footmisc),
-footmisc (fourni perpage, label et footref) (1)(2)=[v7.0b-2025/05]
-glossaries (1)(2)=[v4.9-2025/11](ne fournit plus glossaries-extra ni mfirstuc),
-glossaries-extra (2)=[v1.9-2025/11]
+footmisc (fourni perpage, label et footref) (1)=[v7.0b-2025/05]
+glossaries (1)(2)=[v5.1-2026/04](ne fournit plus glossaries-extra ni mfirstuc),
+glossaries-extra (1)(2)=[v2.1-2026/04]
 glossaries-english (2)=[v1-2014/11] (non obligatoire)
 glossaries-french (2)=[v1-2014/11] (non obligatoire)
 glossaries-german (2)=[v1-2014/11] (non obligatoire)
-hyperref (1)(2)=[v7.01o-2025/07 > casse la compilation pdf] (remplace url)
+hyperref (1)(2)=[v7.01r-2026/06] (remplace url)
 idxlayout (1) (for KOMA-Script),
 imakeidx (1),
-menukeys (1)(2)=[v1.6.2-2022/07]
+koma-script (1),(2)=[v3.49.2-2026/02],
+menukeys (1)(2)=[v1.6.3-2026/05],
 mfirstuc (2)=[v2.09-2025/04](requit par glossaries)
-picins (2)=[1995] (est remplacé par wrapfig2),
-tabularray (1)(2)=[v2025C=2025/11/27] (remplace tabular et array),
-tools (2)=[2025/11/01] ,collection d'outils dont le package array,
+---picins (2)=[1995] (est remplacé par wrapfig2),
+tabularray (1)(2)=[v2025C-2025/11/27] (remplace tabular et array),
 translator (1),
 ---url (1) (est remplacé par hyperref),
-varioref (tools) (1)(2)=[v1.6g-2025/01], ou cleveref (?)
+varioref (extrait de latex-tools) (1)(2)=[v1.6j-2026/06], ou cleveref (?)
 wrapfig2 (1)(2)=[v7.0.2-2025/03] (remplace picins),
 xindy (2)(3) (verifier si nécessaire).
+
 (1) contenu dans texlive-latex-base, -extra, -recommanded.
 (2) disponible dans le dépôt du CTAN https://ctan.org/ [date-du-dépôt], plus récent.
 (3) xindy.deb package
 
-mktexlsr /...somewhere.../texmf
+---------------------------------------------------
 
-La compilation se fait avec les commandes suivantes, dans le répertoire src/3.0/$LANG :
+pour installer, copier dans le dossier :
+- home: ~/texmf/tex/latex/"package"/
+ou
+- system: /usr/share/texlive/texmf-dist/tex/latex/"package"/
 
-# compile au format PDF avec images, index et glossaire :
+-------------------------------------------------------
+
+Pour la mise à jour de votre arborescence :
+$ sudo mktexlsr /...somewhere.../texmf
+(ex : sudo mktexlsr ~/texmf)
+
+-------------------------------------------------------
+|              COMPILATION DU MANUEL                  |
+-------------------------------------------------------
+
+Avec les commandes suivantes, dans le répertoire src/3.0/$LANG :
+
+# compilation au format PDF avec images, index et glossaire :
 $ make pdf
 
-# compile au format HTML :
+# compilation au format HTML :
 $ make html_pandoc
 
+-------------------------------------------------------
 
 Pour nettoyer le répertoire src/ en supprimant TOUS les fichiers
-auxiliaires créés par une compilation précédente (.aux, .log, etc.) :
+auxiliaires créés par une compilation précédente du manuel (.aux, .log, etc.) :
 $ make clean
 
 Ou bien supprimer ces mêmes fichiers et TOUS les fichiers créés par le
 Makefile (c'est ce qui est recommandé de faire avant chaque compilation) :
 $ make distclean
+
+Ou d'un coup :
+$ make clean && make distclean
+
+-------------------------------------------------------
 
 Après compilation:
 - le fichier grisbi-manuel_3.0-$LANG.pdf se trouve dans src/3.0/$LANG/pdf/
