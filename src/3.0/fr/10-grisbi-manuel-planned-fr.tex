@@ -13,13 +13,22 @@
 
 L'échéancier permet de planifier des opérations qui reviennent régulièrement avec des dates ou des intervalles de temps déterminés. Une fois qu'une opération est enregistrée dans l'échéancier, Grisbi recopie automatiquement l'opération planifiée dans la liste des opérations dès que sa \indexword{date d'échéance}\index{date!échéance} est atteinte.
 
-De plus, Grisbi affiche dans la page d'accueil des alertes au déclenchement des échéances de ces opérations (voir la section \vref{home-details-homepage}, \menus{Affichage de la page d'accueil}.
+
+De plus, Grisbi affiche dans la page d'accueil des alertes au déclenchement des échéances de ces opérations (voir la section \vref{home-details-homepage}, \menus{Affichage de la page d'accueil}).
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Pour planifier des opérations, cliquez sur \menus{Échéancier} dans le panneau de navigation, ou sélectionnez \menus{Opérations Planifiées} avec la barre d'information (voir le chapitre \vref{home}, \menus{Accueil}).
+\vspacepdf{2mm}
+Pour accéder aux opérations planifiées, cliquez sur \menus{Échéancier} dans le panneau de navigation, ou sélectionnez \menus{Opérations Planifiées} avec la barre d'information (voir le chapitre \vref{home}, \menus{Accueil}).
 
-Un calendrier s'affiche en bas du panneau de navigation, et le pavé des détails possède alors trois éléments:
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/planned_transactions_display}
+	\end{center}
+	\caption{Affichage des opérations planifiées}
+	\label{planned-transactions-display-img}
+\end{figure}
+
+Un calendrier s'affiche en bas du panneau de navigation, et le pavé des détails possède alors trois éléments\refimage{planned-transactions-display-img}:
 \begin{itemize}
 	\item la barre d'outils;
 	\item la liste des opérations planifiées;
@@ -27,7 +36,7 @@ Un calendrier s'affiche en bas du panneau de navigation, et le pavé des détail
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Vous pouvez configurer les paramètres des alertes de l'échéancier dans le menu \menus{Éditer - Préférences - Généralités - Paramètres divers} (voir la section \vref{setup-general-planned}, \menus{Échéancier}).
 
 
@@ -42,10 +51,6 @@ La barre d'outils des opérations planifiées présente les fonctions suivantes:
 	\item \menus{Exécuter}: exécute l'opération planifiée sélectionnée, c'est-à-dire la recopie dans la liste des opérations du compte concerné;
 	\item \menus{Affichage}: une liste déroulante permet de choisir l'affichage des opérations planifiées: toutes, selon diverses périodicités, ou selon un réglage personnalisé.
 \end{itemize}
-
-% espace pour changement de thème
-\vspacepdf{5mm}
-La barre d'outils peut être déplacée dans l'écran en cliquant sur sa poignée (petit rectangle vertical à gauche de la barre) et en la déplaçant. Pour la réattacher à son emplacement d'origine dans le pavé des détails, la remettre en haut de la fenêtre, le haut de la poignée sur le petit trait qui visualise sa place d'origine.
 
 
 \section{Liste des opérations planifiées\label{plannedtransactions-list}}
@@ -65,12 +70,12 @@ détails\refimage{planned-transactions-list-img}.
 \label{planned-transactions-list-img}
 \end{figure}
 
-Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la \indexword{largeur des colonnes}\index{colonne!largeur} à leur valeur par défaut, sélectionnez le menu \menus{Affichage - Réinitialiser la largeur des colonnes}.
+Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la \indexword{largeur des colonnes}\index{colonne!largeur} à leur valeur par défaut, sélectionnez le menu \menus{Affichage - Réinitialiser la largeur des colonnes} dans la barre de menu.
 
 Vous pouvez déplacer la liste des opérations planifiées vers le haut ou vers le bas avec la molette de la souris, ou bien avec la souris et l'ascenseur vertical. Le déplacement éventuel vers la gauche ou la droite se fait avec la souris et l'ascenseur horizontal.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Chaque opération est affichée sur une seule ligne et au maximum six colonnes, ce qui fait au maximum six champs d'information pour chaque opération planifiée. Les champs d'affichage, ainsi que les \indexword{libellés des colonnes}\index{colonne!libellé}, sont les suivants:
 \begin{itemize}
 	\item \menus{Date}: la date de l'opération;
@@ -79,55 +84,68 @@ Chaque opération est affichée sur une seule ligne et au maximum six colonnes, 
 	\item \menus{Périodicité}: la périodicité de l'opération;
 	\item \menus{Mode}: le mode d'exécution, automatique ou manuel;
 	\item \menus{Montant}: le montant de l'opération; un \indexword{montant négatif}\index{montant!négatif} est affiché en \textcolor{red}{rouge}.
-% saut de ligne pour indentation correcte de la note dans la liste
+	% saut de ligne pour indentation correcte de la note dans la liste
 
-\Note{}: si l'affichage du champ \menus{Remarques} a été demandé, il s'affiche à la place des champs \menus{Périodicité} et \menus{Mode}, ce qui ne fait plus que cinq colonnes et cinq champs affichés.
+	\Note{}: si l'affichage du champ \menus{Remarques} a été demandé, il s'affiche à la place des champs \menus{Périodicité} et \menus{Mode}, ce qui ne fait plus que cinq colonnes et cinq champs affichés (voir la section \vref{plannedtransactions-comments},  \menus{Remarques des opérations planifiées}).
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Une ligne supplémentaire vide s'affiche juste en-dessous de la dernière ligne d'opération, et sert à créer une nouvelle opération planifiée (voir la section \vref{plannedtransactions-new}, \menus{Nouvelle opération planifiée}).
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Pour des raisons de lisibilité de l'affichage, Grisbi présente une alternance de couleurs de \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-En cliquant sur l'outil \menus{Affichage} dans la barre d'outils, une liste déroulante vous permet de choisir plusieurs modes d'affichage des prochaines occurrences:
+\vspacepdf{2mm}
+En cliquant sur l'outil \menus{Affichage} dans la barre d'outils, une liste déroulante\refimage{planned-transactions-view-select-img} vous permet de choisir plusieurs modes d'affichage des prochaines occurrences:
 % espace avant image 5mm
-\vspacepdf{3mm}
 
-\begin{itemize}
-	\item 
-	\begin{figure}[htbp]
-		\begin{center}
-		\includegraphics[scale=0.50]{image/screenshot/planned_transactions_display}
-		\end{center}
-		\label{planned-transactions-display-img}
-	\end{figure}
-	\item \menus{Vue unique}: la prochaine occurrence de chaque opération;
-	\item \menus{Vue hebdomadaire}; à échéance de 7 jours;
-	\item \menus{Vue mensuelle}: à échéance de 30 jours;
-	\item \menus{Vue bimestrielle}: à échéance de 60 jours ;
-	\item \menus{Vue trimestrielle}: à échéance de 90 jours ;
-	\item \menus{Vue annuelle}: à échéance d'un an;
-	\item \menus{Vue personnalisée}: à échéance d'un nombre quelconque de jours, semaines, mois ou années.
-% espace pour Note ou Attention à la ligne dans une liste
+\vspacepdf{5mm}
+\noindent
+\begin{minipage}{.65\linewidth}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{Vue unique}: la prochaine occurrence de chaque opération;
+		\item \menus{Vue hebdomadaire}; à échéance de 7 jours;
+		\item \menus{Vue mensuelle}: à échéance de 30 jours;
+		\item \menus{Vue bimestrielle}: à échéance de 60 jours ;
+		\item \menus{Vue trimestrielle}: à échéance de 90 jours ;
+		\item \menus{Vue annuelle}: à échéance d'un an;
+		\item \menus{Vue personnalisée}: à échéance d'un nombre quelconque de jours, semaines, mois ou années.
+		
+		\vspacepdf{2mm}
+		L'affichage courant y est indiqué par une coche, ainsi que le nombre d'opérations dans cette vue.
+	\end{itemize}
+\end{minipage}
+\hspace{15pt}
+\begin{minipage}{.35\linewidth}
+	\vspace{-5pt}
+	\centering
+	\includegraphics[width=.8\textwidth]{image/screenshot/planned_transactions_view_select}
+	%\vspace{-5pt}
+	\captionsetup{%						% for a change of options of the caption package
+	format=plain,						% to avoid error message with labelsep option below, default=hang
+	type=figure,%
+	name=Fig.,%							% rename label caption, default="Figure" (or "Table")
+	justification=centering,			% centring of text and caption label 
+	labelsep=newline}					% define the separator between the label and the caption text
+	\caption{Choix d'affichage}
+	\vspace{-10pt}
+	\label{planned-transactions-view-select-img}
+\end{minipage}	
 
-% espace pour changement de thème
-\vspacepdf{3mm}
-L'affichage courant y est indiqué par une coche, ainsi que le nombre d'opérations dans cette vue.
-\end{itemize}
-
-Si vous choisissez l'affichage personnalisé, une nouvelle fenêtre affiche deux listes déroulantes pour choisir le nombre et la période désirés\refimage{planned-transactions-display-custom-img}.
+\vspacepdf{5mm}
+Si vous choisissez \menus{Vue personnalisée}, une nouvelle fenêtre affiche un champ incrémental pour choisir le nombre de périodes et une liste déroulante pour le type de la période désirée\refimage{planned-transactions-display-custom-img}.
 
 % image centrée 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[scale=0.5]{image/screenshot/planned_transactions_display_custom}
+\includegraphics[width=0.5\textwidth]{image/screenshot/planned_transactions_display_custom}
 \end{center}
+\vspace{-10pt}
 \caption{Choix de l'affichage de la période personnalisée}
+\vspace{-10pt}
 \label{planned-transactions-display-custom-img}
 \end{figure}
 % image centrée 
@@ -143,31 +161,31 @@ Pour changer l'ordre d'affichage des opérations planifiées, vous pouvez faire 
 	\item un petit triangle noir apparaît à droite du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
 
 	\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-	 \item cliquez sur ce triangle pour changer l'ordre du tri.
+	
+	\item cliquez sur ce triangle pour changer l'ordre du tri.
 \end{enumerate}
 
 
 \section{Formulaire de saisie des opérations planifiées\label{plannedtransactions-form}}
 
-Le formulaire de saisie des opérations planifiées s'affiche en-dessous de la liste des opérations planifiées. Il est similaire au formulaire de saisie des opérations ordinaires, mais il comprend, dans sa partie supérieure, une ligne supplémentaire de trois à six champs pour indiquer\refimage{planned-transactions-form-img}:
-indiquer:
+Le formulaire de saisie des opérations planifiées\refimage{planned-transactions-form-img} s'affiche en-dessous de la liste des opérations planifiées. Il est similaire au formulaire de saisie des opérations ordinaires, mais il comprend, dans sa partie supérieure, une ligne supplémentaire de quatre à six champs pour indiquer:
 
 % image centrée
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.95\textwidth]{image/screenshot/planned_transactions_form}
 \end{center}
+\vspace{-10pt}
 \caption{Formulaire de saisie des opérations planifiées}
 \label{planned-transactions-form-img}
 \end{figure}
 % image centrée
 
-
 \begin{itemize}
 	\item le compte affecté; dans le cas d'un virement entre deux comptes, vous pouvez sélectionner l'un ou l'autre des deux comptes (origine ou destination); le type de l'opération (débit ou crédit) doit être renseigné dans le champ adéquat, et la contre-opération sera automatiquement créée dans l'autre compte au moment de l'exécution de l'opération planifiée;
 	\item le mode d'exécution:
 	\begin{itemize}
-		\item \menus{Manuel}: vous devrez exécuter manuellement la saisie dans le formulaire en sélectionnant la fonction \menus{Exécuter} dans la barre de fonctions ou dans le menu contextuel (voir la section \vref{plannedtransactions-execution}, \menus{Exécution d'une opération planifiée},
+		\item \menus{Manuel}: vous devrez exécuter manuellement la saisie dans le formulaire en sélectionnant la fonction \menus{Exécuter} dans la barre de fonctions ou dans le menu contextuel (voir la section \vref{plannedtransactions-execution}, \menus{Exécution d'une opération planifiée}),
 		\item \menus{Automatique}: l'opération sera automatiquement saisie dans la liste des opérations à la date programmée;
 	\end{itemize}
 	\item la \menus{Périodicité}:
@@ -178,65 +196,97 @@ indiquer:
 		\item \menus{Bimestrielle},
 		\item \menus{Trimestrielle},
 		\item \menus{Annuelle},
-		\item \menus{Personnalisée}; dans ce cas, vous devrez préciser plus finement le nombre de périodes entre chaque saisie ou demande de validation de l'opération, ainsi que la période voulue (jours, semaines, mois, années)\refimage{planned-transactions-frequency_custom-img};
+		\item \menus{Personnalisée}\refimage{planned-transactions-form-frequency-custom-img}; dans ce cas, vous devrez préciser plus finement le nombre de périodes entre chaque saisie ou demande de validation de l'opération, ainsi que la période voulue (jours, semaines, mois, années);
 		% image centrée
-		\begin{figure}[htbp]
-			\begin{center}
-			\includegraphics[scale=0.5]{image/screenshot/planned_transactions_frequency_custom}
-			\end{center}
+		%\hspace{20pt}
+		\item[]	\begin{figure}[htbp]
+			\begin{flushright}						% right align
+			\captionsetup{%							% for a change of options of the caption package
+				justification=centering}			% centring of text and caption label
+			\includegraphics[width=0.95\linewidth]{image/screenshot/planned_transactions_form_frequency_custom}
+			\end{flushright}
 			\caption{Saisie d'une périodicité personnalisée}
-			\label{planned-transactions-frequency_custom-img}
+			\label{planned-transactions-form-frequency-custom-img}
 		\end{figure}
 		% image centrée
 	\end{itemize}
-	\item la \menus{Date limite} des échéances; le choix par défaut est \menus{Aucune}; un double-clic ou la combinaison de touches \keys{Ctrl+Entrée \return} dans ce champ ouvre un calendrier (voir la section \vref{plannedtransactions-calendar}, \menus{Calendrier et prévisions}); vous pouvez aussi saisir manuellement la date en utilisant les multiples combinaisons de touches telles que décrites dans la section \vref{transactions-new-dates}, \menus{Saisie de date au clavier}.
+	\item la \menus{Date limite} des échéances; le choix par défaut est \menus{Aucune}; un double-clic ou la combinaison de touches \keys{Ctrl+Entrée \return} dans ce champ ouvre un calendrier (voir la section \vref{plannedtransactions-calendar}, \menus{Calendrier et prévisions}); vous pouvez aussi saisir manuellement la date en utilisant les multiples combinaisons de touches telles que décrites dans la section \vref{transactions-new-dates}, \menus{Saisie de la date au clavier}.
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-La partie inférieure du formulaire est strictement identique au formulaire de saisie des opérations ordinaires, et est géré de la même manière\refimage{planned-transactions-form-img}, voir la section \vref{transactions-form}, \menus{Formulaire de saisie}.
+\vspacepdf{2mm}
+La partie inférieure du formulaire est strictement identique au formulaire de saisie des opérations ordinaires, et est géré de la même manière\refimage{planned-transactions-form-img}, voir la section \vref{transactions-form}, \menus{Formulaire de saisie des opérations}.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Une fois le formulaire affiché, un menu contextuel accessible par un clic-droit dans un champ de saisie permet d'effectuer les actions suivantes:
+\vspacepdf{2mm}
+Une fois le formulaire affiché, un menu contextuel accessible par un \texttt{clic-droit} dans un champ de saisie permet d'effectuer les actions suivantes:
 
 \begin{itemize}
 	\item \menus{Couper} (la sélection);
 	\item \menus{Copier} (la sélection);
-	\item\menus{Coller} (la sélection);
+	\item \menus{Coller} (la sélection);
 	\item \menus{Supprimer} (la sélection);
+	\item[]\hspace{-12pt} puis
 	\item \menus{Tout sélectionner} (dans le champ de saisie);
-	\item \menus{Méthodes de saisie};
-	\item \menus{Insérer un caractère de contrôle Unicode}.
+	\item \menus{Insérer un émoji}\index{émoji}.
 \end{itemize}
 
-Le choix \menus{\gls{methodes de saisie}} permet de changer les caractères accentués.
-
-Le choix \menus{Insérer un \gls{caractere de controle Unicode}} permet d'insérer un code Unichar qui modifie la présentation; par exemple RLO (forçage droite-à-gauche) renverse l'ordre des lettres et la position du texte.
-
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 De plus, un autre menu contextuel accessible par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, permet d'accéder à la configuration du formulaire, en sélectionnant \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}).
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Notez que le choix des types d'opérations est nécessairement lié au type du compte sélectionné (voir la section \vref{accounts-type}, \menus{Types de compte de Grisbi}).
 
 
 \section{Calendrier et prévisions\label{plannedtransactions-calendar}}
 
-Un calendrier s'affiche à la place du bas du panneau de navigation. Il indique en caractères gras les dates auxquelles des opérations planifiées de tous les comptes arrivent à échéance, et en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} la date du jour.
+Un calendrier\refimage{planned-transactions-calendar-img} s'affiche en bas du panneau de navigation\refimage{planned-transactions-display-img}. Le jour en cours est \fboxsep=2pt{\colorbox[RGB]{198,200,201}{surligné}, et les dates \textbf{en gras} correspondent aux dates des opérations planifiées de tous les comptes arrivant à échéance.
 
-Cliquez sur le calendrier pour le sélectionner. Vous pouvez le parcourir avec la souris ou le clavier:
-\begin{itemize}
-	\item
+%Cliquez sur le calendrier pour le sélectionner. Vous pouvez le parcourir avec la souris ou le clavier:
+%\begin{itemize}
+%	\item[]	\begin{Center}
+%			\includegraphics[width=0.65\linewidth]{image/screenshot/planned_calendar}
+%			\end{Center}
+%			\label{planned-transactions-calendar-img}
+%	\item les touches \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
+%	\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
+%	\item la combinaison de touches \keys{Ctrl+\arrowkeyleft} ou \keys{Ctrl+\arrowkeyright} permet de passer au mois précédent ou suivant;
+%	\item la combinaison de touches \keys{Ctrl+\arrowkeyup} ou \keys{Ctrl+\arrowkeydown} permet de passer à l'année précédente ou suivante.
+%\end{itemize}
+
+\vspace{5mm}
+\noindent
+\begin{minipage}{.6\linewidth}
+	\vspace{-15pt}
+	\begin{itemize}[rightmargin=.6cm]
+		\item les touches \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
+		\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
+		\item la combinaison de touches \keys{Ctrl+\arrowkeyleft} ou \keys{Ctrl+\arrowkeyright} permet de passer au mois précédent ou suivant;
+		\item la combinaison de touches \keys{Ctrl+\arrowkeyup} ou \keys{Ctrl+\arrowkeydown} permet de passer à l'année précédente ou suivante.
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{.4\linewidth}
+	%\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+	%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+	\vspace{-10pt}
+	%\centering							% centering the floating figure in the "wrap"
+	\raggedleft
+	\includegraphics[width=.9\textwidth]{image/screenshot/planned_transactions_calendar}
+	%\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{%						% for a change of options of the caption package
+		format=plain,					% to avoid error message with labelsep option below, default=hang
+		type=figure,%
+		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+		justification=centering,		% centring of text and caption label 
+		labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Calendrier des échéances}		% \caption is mandatory to reference a figure in lof
+	%\vspace{-10pt}						% space below the caption
 	\label{planned-transactions-calendar-img}
-	\includegraphics[scale=0.5]{image/screenshot/planned_transactions_calendar}
-	\item les touches \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
-	\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
-	\item la combinaison de touches \keys{Ctrl+\arrowkeyleft} ou \keys{Ctrl+\arrowkeyright} permet de passer au mois précédent ou suivant;
-	\item la combinaison de touches \keys{Ctrl+\arrowkeyup} ou \keys{Ctrl+\arrowkeydown} permet de passer à l'année précédente ou suivante.
-\end{itemize}
+	%\end{wrapfigure}
+\end{minipage}
 
 
 \section{Sélection d'une opération planifiée\label{plannedtransactions-selection}}
@@ -244,60 +294,91 @@ Cliquez sur le calendrier pour le sélectionner. Vous pouvez le parcourir avec l
 Pour sélectionner une opération planifiée, vous avez deux moyens:
 \begin{itemize}
 	 \item cliquer sur sa ligne;
-	 \item déplacer la sélection avec les touches du clavier \keys{\arrowkeyup} et \keys{\arrowkeydown}.
+	 \item déplacer la sélection avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} du clavier.
 \end{itemize}
 
-L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}} et ses détails s'affichent dans le formulaire.
+L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
 
-% espace pour changement de thème
-\vspacepdf{5mm}
-Un menu contextuel est disponible sur la liste des opérations planifiées. Un clic-droit sur la ligne d'une opération permet les fonctions suivantes, selon le contexte:
-\begin{itemize}
-	\item 
-	\label{planned-transactions-context-img}
-	\includegraphics[scale=0.5]{image/screenshot/planned_transactions_context}
-	\item \menus{Éditer l'opération};
-	\item \menus{Cloner l'opération};
-	\item \menus{Nouvelle opération};
-	\item \menus{Supprimer l'opération};
-	\item \menus{Afficher les remarques};
-	\item \menus{Afficher Périodicité/Mode};
-	\item \menus{Exécuter l'opération}.
-\end{itemize}
+\vspace{2mm}
+Un \texttt{clic-droit} sur la ligne d'une opération planifiée affiche un menu contextuel avec les fonctions suivantes\refimage{planned-transactions-contextMenu-img}:
+
+\vspace{3mm}
+\noindent
+\begin{minipage}{.65\linewidth}
+	\vspace{-25pt}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{Éditer l'opération};
+		\item \menus{Cloner l'opération};
+		\item \menus{Nouvelle opération};
+		\item \menus{Supprimer l'opération};
+		\item \menus{Afficher les remarques} ou \menus{Afficher Périodicité/Mode};
+		\item \menus{Exécuter l'opération}.
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{.35\linewidth}
+	%\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+	%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+	%\vspace{-20pt}
+	\centering							% centering the floating figure in the "wrap"
+	%\raggedleft
+	\includegraphics[width=.9\textwidth]{image/screenshot/planned_transactions_contextMenu}
+	%\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{%						% for a change of options of the caption package
+		format=plain,					% to avoid error message with labelsep option below, default=hang
+		type=figure,%
+		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+		justification=centering,		% centring of text and caption label 
+		labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Menu contextuel\\ d'une opération planifiée}		% \caption is mandatory to reference a figure in lof
+	%\vspace{-10pt}						% space below the caption
+	\label{planned-transactions-contextMenu-img}
+	%\end{wrapfigure}
+\end{minipage}
 
 
 \section{Nouvelle opération planifiée\label{plannedtransactions-new}}
 
 La saisie d'une opération planifiée se fait d'une manière similaire à la saisie d'une opération ordinaire.
 
-Vous pouvez ouvrir le formulaire de saisie avec l'une de ces méthodes:
+Pour \indexword{ouvrir ou afficher}\index{formulaire de saisie!afficher} le formulaire de saisie, utilisez une des méthodes suivantes:
 \begin{itemize}
+	\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération} si un compte est sélectionné;
+	\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
 	\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
-	\item double-cliquez sur la ligne vide;
-	\item dans la barre d'outils, cliquez-gauche sur l'outil \menus{Nouvelle échéance};
-	\item dans le menu contextuel, sélectionnez le choix \menus{Nouvelle opération};
-	\item cliquez-gauche sur le petit triangle d'affichage/masquage à gauche du libellé \menus{Formulaire de saisie des opérations}, tout en bas du pavé des détails.
+	\item cliquez sur la ligne vide en bas de la liste des opérations;
+	\item appuyez sur la combinaison de touches \keys{Ctrl+T};
+	\item dans la barre d'outils, cliquez sur \menus{Nouvelle échéance};
+	\item dans le menu contextuel de la liste des opérations, sélectionnez \menus{Nouvelle opération};
+	\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
+	\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
-\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
-
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Renseignez les champs avec les paramètres de votre opération planifiée. Pour plus de détails sur la saisie de ces paramètres dans le formulaire, voir les sections \vref{plannedtransactions-form}, \menus{Formulaire de saisie des opérations planifiées} et \vref{plannedtransactions-calendar}, \menus{Calendrier et prévisions}.
 
 
 \section{Ventilation d'une opération planifiée\label{plannedtransactions-breakdown}}
 
-La ventilation d'une opération planifiée se fait d'une manière similaire à la ventilation d'une opération ordinaire. Une fois que vous avez renseigné les champs de la première ligne du formulaire (voir la section \vref{plannedtransactions-form}, \menus{Formulaire de saisie des opérations planifiées}), saisissez les autres paramètres de l'opération dans la partie inférieure de ce formulaire (voir la section \vref{transactions-form}, \menus{Formulaire de saisie}), et procédez à la saisie de l'opération planifiée ventilée, comme décrit précisément dans la section \vref{transactions-breakdown}, \menus{Ventilation d'une opération}.
+La ventilation d'une opération planifiée se fait d'une manière similaire à la ventilation d'une opération ordinaire. Une fois que vous avez renseigné les champs de la première ligne du formulaire (voir la section \vref{plannedtransactions-form}, \menus{Formulaire de saisie des opérations planifiées}), saisissez les autres paramètres de l'opération dans la partie inférieure de ce formulaire (voir la section \vref{transactions-form}, \menus{Formulaire de saisie des opérations}), et procédez à la saisie de l'opération planifiée ventilée, comme décrit précisément dans la section \vref{transactions-breakdown}, \menus{Ventilation d'une opération}.
 
 
 \section{Modification d'une opération planifiée\label{plannedtransactions-modify}}
 
-Pour modifier une opération planifiée, procédez comme suit:
+Pour modifier une opération planifiée, ou une opération planifiée ventilée ou une de ses sous-opérations, procédez comme suit:
+
 \begin{enumerate}
-	\item sélectionnez-la dans la liste;
-	\item cliquez sur l'outil \menus{Éditer} dans la barre d'outils, ou cliquez-droit sur la ligne de l'opération et sélectionnez \menus{Éditer l'opération} dans le menu contextuel;
-	\item le formulaire de saisie s'ouvre sur le champ \menus{Date}: vous pouvez alors modifier toutes les données de l'opération;
+	\item sélectionnez-la soit:
+		\begin{itemize}
+			\item par sélection dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}},
+			\item par \texttt{clic-gauche} sur l'outil \menus{Éditer} de la barre d'outils,
+			\item par \texttt{clic-droit} sur la ligne de l'opération puis sélection de \menus{Éditer l'opération} dans le menu contextuel;
+		\end{itemize}
+	\item le formulaire de saisie s'affiche et le champ \menus{Date} est sélectionné: vous pouvez alors modifier toutes les données de l'opération à votre convenance;
 	\item validez par le bouton \menus{Valider}.
 \end{enumerate}
 
@@ -311,10 +392,10 @@ Pour cloner une opération planifiée, sélectionnez-la pour qu'elle s'affiche d
 \end{itemize}
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 L'opération sélectionnée précédemment apparaît toujours sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et l'opération clonée s'affiche dans une nouvelle ligne en-dessous.
 
-Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant la date.
+Vous pouvez alors éditer cette nouvelle opération pour, par exemple, en modifier la date.
 
 
 \section{Remarques des opérations planifiées\label{plannedtransactions-comments}}
@@ -325,7 +406,7 @@ Vous pouvez afficher ou cacher les remarques de deux manières:
 	\item cliquez-droit sur la ligne de l'opération et sélectionnez \menus{Afficher/Masquer les remarques} dans le menu contextuel.
 \end{itemize}
 
-Les remarques de toutes les opérations s'affichent alors à la place des colonnes \menus{Périodicité} et \menus{Mode} dans la liste des opérations planifiées. Recommencer la même séquence réaffiche les colonnes \menus{Périodicité} et \menus{Mode} à la place de la colonne \menus{Remarques}\refimage{planned-transactions-list-comments-img}.
+Les remarques de toutes les opérations s'affichent alors à la place des colonnes \menus{Périodicité} et \menus{Mode} dans la liste des opérations planifiées\refimage{planned-transactions-list-comments-img}. Recommencer la même séquence réaffiche les colonnes \menus{Périodicité} et \menus{Mode} à la place de la colonne \menus{Remarques}.
 
 % image centrée
 \begin{figure}[htbp]
@@ -340,25 +421,31 @@ Les remarques de toutes les opérations s'affichent alors à la place des colonn
 
 \section{Exécution d'une opération planifiée\label{plannedtransactions-execution}}
 
-La fonction \menus{Exécuter une opération planifiée} sert uniquement à faire la recopie, dans le formulaire de saisie, de l'occurrence d'une opération sélectionnée dans la liste des opérations planifiées. Pour que cette occurrence soit effectivement transférée dans la liste des opérations du compte concerné, il est nécessaire de valider ensuite le formulaire de saisie, après avoir éventuellement modifié l'opération.
+Cette fonction permet de forcer manuellement l'exécution d'une opération planifiée en dehors de la date prévue.
+
+La fonction \menus{Exécuter} de la barre d'outils sert uniquement à faire la recopie, dans le formulaire de saisie, de l'occurrence d'une opération sélectionnée dans la liste des opérations planifiées. Pour que cette occurrence soit effectivement transférée dans la liste des opérations du compte concerné, il est nécessaire de valider ensuite le formulaire de saisie, après avoir éventuellement modifié l'opération.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
+\vspacepdf{2mm}
 Pour exécuter une occurrence d'une opération planifiée, procédez comme suit:
 \begin{enumerate}
 	\item sélectionnez-la dans la liste;
-	\item cliquez sur l'outil \menus{Exécuter} dans la barre d'outils, ou cliquez-droit sur la ligne de l'opération et sélectionnez \menus{Exécuter l'opération} dans le menu contextuel;
-	\item l'occurrence sélectionnée de l'opération s'affiche dans le formulaire de saisie; vous pouvez alors la modifier selon votre besoin;
-	\item validez par le bouton \menus{Valider}; l'occurrence de l'opération est transférée dans la liste des opérations du compte concerné, et la liste des opérations planifiées affiche l'occurrence suivante (si elle existe, car l'opération planifiée peut être unique) de l'opération planifiée.
+	\item exécutez-la ensuite avec:
+		\begin{itemize}
+			\item soit un \texttt{clic-gauche} sur l'outil \menus{Exécuter} de la barre d'outils,
+			\item soit un \texttt{clic-droit} sur la ligne de l'opération puis la sélection d' \menus{Exécuter l'opération} dans le menu contextuel;
+		\end{itemize}
+	\item l'occurrence sélectionnée alors s'affiche dans le formulaire de saisie avec le masquage de la ligne supérieure des paramètres de l'opération planifiée; vous pouvez ensuite la modifier selon votre besoin;
+	\item validez avec le bouton \menus{Valider}; l'occurrence de l'opération est transférée dans la liste des opérations du compte concerné, et la liste des opérations planifiées affiche l'occurrence suivante (si elle existe, car l'opération planifiée peut être unique) de l'opération planifiée.
 \end{enumerate}
 
 % espace avant Attention ou Note : 5 mm
-\vspacepdf{5mm}
-\Note{}: après cette validation, la recopie est faite sans autre avertissement.
+\vspacepdf{2mm}
+\Note{}: après cette validation, le transfert est fait sans autre avertissement.
 
 % espace pour changement de thème
-\vspacepdf{5mm}
-Vous pouvez aussi vérifier que l'occurrence exécutée de l'opération planifiée se trouve maintenant bien dans la liste des opérations du compte concerné.
+\vspacepdf{2mm}
+Vous pouvez aussi vérifier que la validation de l'exécution de l'occurrence de l'opération planifiée affiche bien ladite opération dans la liste des opérations du compte concerné.
 
 
 \section{Suppression d'une opération planifiée\label{plannedtransactions-remove}}
@@ -366,26 +453,40 @@ Vous pouvez aussi vérifier que l'occurrence exécutée de l'opération planifi�
 Pour supprimer une opération planifiée, procédez comme suit:
 \begin{enumerate}
 	\item sélectionnez-la dans la liste;
-	\item cliquez sur l'outil \menus{Supprimer} dans la barre d'outils, ou cliquez-droit sur la ligne de l'opération et sélectionnez \menus{Supprimer l'opération} dans le menu contextuel;
-	\item une boîte de dialogue s'ouvre et vous propose de supprimer, soit toutes les occurrences (toutes les opérations, courante et futures, seront supprimées), soit uniquement l'occurrence courante (seule l'opération affichée sera supprimée)\refimage{planned-transactions-delete-img};
-	\item 
-	% image centrée
+	\item puis après soit:
+		\begin{itemize}
+			\item un \texttt{clic-gauche} sur l'outil \menus{Supprimer} dans la barre d'outils,
+			\item ou un \texttt{clic-droit} sur la ligne de l'opération planifiée puis la sélection de \menus{Supprimer l'opération} dans le menu contextuel;
+		\end{itemize}
+	\item une boîte de dialogue s'ouvre\refimage{planned-transactions-delete-img} et vous propose de supprimer:
 	\begin{figure}[htbp]
-	\begin{center}
-	\includegraphics[scale=0.5]{image/screenshot/planned_transactions_delete}
-	\end{center}
-	\caption{Suppression d'une opération planifiée}
-	\label{planned-transactions-delete-img}
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{image/screenshot/planned_transactions_delete}
+		\end{center}
+		\vspace{-10pt}
+		\caption{Suppression d'une opération planifiée}
+		\vspace{-10pt}
+		\label{planned-transactions-delete-img}
 	\end{figure}
-	% image centrée
+		\begin{itemize}
+	 		\item \keys{Toutes les occurrences}: toutes les opérations, courante et futures, seront supprimées, les opérations passées sont conservées, 
+	 		\item \keys{Juste celle-çi}: c'est-à-dire uniquement l'occurrence courante (seule l'opération sélectionnée sera supprimée);
+	 		\item la case à cocher \menus{Gardez ce choix et ne plus voir ce message?} permet de conserver votre choix pour les suppressions futures et la boîte de dialogue ne s'affichera plus;
+	 		
+	 		\vspacepdf{2mm}
+	 		\Attention{}: en cochant cette case, les suppression futures seront immédiates, sans avertissement et sans boîte de dialogue.
+	 		
+	 		\vspacepdf{2mm}
+	 		\Note{}: vous pourrez rétablir l'affichage de la boîte de dialogue de suppression dans les préférence de Grisbi, voir le chapitre \vref{setup-operations-remove} \menus{Messages avant suppression}.
+		\end{itemize}
 	\item faites votre choix, la suppression est exécutée immédiatement.
 \end{enumerate}
 
  % espace avant Attention ou Note : 5 mm
-\vspacepdf{3mm}
+\vspacepdf{2mm}
 \Attention{}: immédiatement après le choix entre \menus{Toutes les occurrences} et \menus{Juste celle-ci}, la suppression est exécutée sans autre avertissement.
 
  % espace avant Attention ou Note : 5 mm
-\vspacepdf{4mm}
+\vspacepdf{2mm}
 \Attention{}: la suppression d'une opération planifiée est \indexword{irréversible}\index{opération!irréversible}!
 
