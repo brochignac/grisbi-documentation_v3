@@ -13,3 +13,76 @@ Mit dem Planer können Sie wiederkehrende Buchungen mit bestimmten Daten oder Ze
 %The scheduler allows you to plan recurring transactions with specific dates or time intervals. Once a transaction is entered into the scheduler, Grisbi automatically copies the scheduled transaction to the transaction list as soon as its \indexword{due date}\index{due!date} is reached.
 %L'échéancier permet de planifier des opérations qui reviennent régulièrement avec des dates ou des intervalles de temps déterminés. Une fois qu'une opération est enregistrée dans l'échéancier, Grisbi recopie automatiquement l'opération planifiée dans la liste des opérations dès que sa \indexword{date d'échéance}\index{date!échéance} est atteinte.
 
+
+Darüber hinaus zeigt Grisbi auf der Startseite Benachrichtigungen an, wenn die Fälligkeitstermine für diese Buchungen anstehen (siehe Abschnitt \vref{home-details-homepage}, \menus{Startseite}).
+%Furthermore, Grisbi displays alerts on the home page when the due dates for these transactions are due (see the section \vref{home-details-homepage}, \menus{Homepage}).
+%De plus, Grisbi affiche dans la page d'accueil des alertes au déclenchement des échéances de ces opérations (voir la section \vref{home-details-homepage}, \menus{Affichage de la page d'accueil}).
+
+% espace pour changement de thème
+
+\vspacepdf{2mm}
+Um auf geplante Buchungen zuzugreifen, klicken Sie im Navigationsbereich auf \menus{Planer} oder wählen Sie in der Informationsleiste \menus{Geplante Buchungen} aus (siehe Abschnitt \vref{home}, \menus{Startseite}).
+%To access scheduled transactions, click on \menus{Scheduler} in the navigation panel, or select \menus{Scheduled transactions} from the information bar (see the chapter \vref{home}, \menus{Home}).
+%Pour accéder aux opérations planifiées, cliquez sur \menus{Échéancier} dans le panneau de navigation, ou sélectionnez \menus{Opérations planifiées} avec la barre d'information (voir le chapitre \vref{home}, \menus{Accueil}).
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/planned_transactions_display}
+	\end{center}
+	\caption{Geplante Transaktionen anzeigen}
+	%\caption{Viewing scheduled transactions}
+	%\caption{Affichage des opérations planifiées}
+	\label{planned-transactions-display-img}
+\end{figure}
+
+Am unteren Rand des Navigationsbereichs wird ein Kalender angezeigt, und der Detailbereich enthält nun drei Elemente\refimage{planned-transactions-display-img}:
+%A calendar appears at the bottom of the navigation panel, and the details panel then contains three elements\refimage{planned-transactions-display-img}:
+%Un calendrier s'affiche en bas du panneau de navigation, et le pavé des détails possède alors trois éléments\refimage{planned-transactions-display-img}:
+\begin{itemize}
+	\item die Werkzeugliste;
+	%\item the toolbar;
+	%\item la barre d'outils;
+	\item die Liste der geplanten Buchungen;
+	%\item the list of scheduled transactions;
+	%\item la liste des opérations planifiées;
+	\item the Buchungsformular
+	%\item the transaction/scheduled form.
+	%\item le formulaire de saisie des opérations planifiées.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Sie können die Einstellungen für Benachrichtigungen zu geplanten Buchungen im Menü \menus{Bearbeiten – Einstellungen – Allgemein – Allgemeines} konfigurieren (siehe Abschnitt \vref{setup-general-planned}, \menus{Planer}).
+%You can configure the schedule alert settings in the menu \menus{Edit - Preferences - Generalities - Various settings} (see the section \vref{setup-general-planned}, \menus{Scheduler}).
+%Vous pouvez configurer les paramètres des alertes de l'échéancier dans le menu \menus{Éditer - Préférences - Généralités - Paramètres divers} (voir la section \vref{setup-general-planned}, \menus{Échéancier}).
+
+
+\section{Werkzeugliste\label{plannedtransactions-functions}}
+%\section{Toolbar\label{plannedtransactions-functions}}
+%\section{Barre d'outils\label{plannedtransactions-functions}}
+
+Die Werkzeugliste für geplante Buchungen bietet folgende Funktionen:
+%The planned transactions toolbar offers the following functions:
+%La barre d'outils des opérations planifiées présente les fonctions suivantes:
+\begin{itemize}
+	\item \menus{Geplante Buchung erstellen}: Öffnet das leere Buchungsformular;
+	%\item \menus{New scheduled}: opens the blank Transaction/Scheduled form;
+	%\item \menus{Nouvelle Échéance}: ouvre le formulaire de saisie vierge;
+	\item \menus{Löschen}: Löscht den ausgewählten geplanten Buchung;
+	%\item \menus{Delete}: deletes the selected scheduled transaction;
+	%\item \menus{Supprimer}: supprime l'opération planifiée sélectionnée;
+	\item \menus{Bearbeiten}: Öffnet das Buchungsformular für den ausgewählten Buchung und ermöglicht dessen Bearbeitung;
+	%\item \menus{Edit}: opens the Transaction/Scheduled form for the selected transaction and allows you to edit it;
+	%\item \menus{Éditer}: ouvre le formulaire de saisie pour l'opération sélectionnée et permet de la modifier;
+	\item \menus{Notizen} oder \menus{Frequenz/Art}: Blendet die Spalte \menus{Notizen} anstelle der Spalten \menus{Frequenz} und \menus{Art} ein oder umgekehrt;
+	%\item \menus{Notes} or \menus{Frequency/Mode}: displays the \menus{Notes} column instead of the \menus{Frequency} and \menus{Mode} columns, or vice versa;
+	%\item \menus{Remarques} ou \menus{Périodicité/Mode}: affiche la colonne \menus{Remarques} à la place des colonnes \menus{Périodicité} et \menus{Mode}, ou inversement;
+	\item \menus{Ausführen}: Führt den ausgewählten geplanten Buchung aus, d. h. Übernimmt ihn in die Buchungsliste des betreffenden Kontos (Abschnitt \vref{plannedtransactions-execution});
+	%\item \menus{Execute}: executes the selected scheduled transaction, i.e. copies it into the list of transactions for the relevant account (section \vref{plannedtransactions-execution});
+	%\item \menus{Exécuter}: exécute l'opération planifiée sélectionnée, c'est-à-dire la recopie dans la liste des opérations du compte concerné (section \vref{plannedtransactions-execution});
+	\item \menus{Ansicht}: Über ein Dropdown-Menü können Sie die Anzeige der geplanten Buchung auswählen: alle, nach verschiedenen Zeiträumen oder nach einer benutzerdefinierten Einstellung (Abschnitt \vref{plannedtransactions-view}).
+	%\item \menus{View}: a drop-down list allows you to choose how scheduled transactions are displayed: all, according to various frequencies, or according to a custom view (section \vref{plannedtransactions-view}).
+	%\item \menus{Affichage}: une liste déroulante permet de choisir l'affichage des opérations planifiées: toutes, selon diverses périodicités, ou selon un réglage personnalisé (section \vref{plannedtransactions-view}).
+\end{itemize}
+
+%TODO following
