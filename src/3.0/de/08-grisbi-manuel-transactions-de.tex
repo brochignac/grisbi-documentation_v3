@@ -233,7 +233,7 @@ Die \indexword{Bezeichnung einer Spalte}\index{Spalte!Bezeichnung} ist immer der
 %Le \indexword{libellé d'une colonne}\index{colonne!libellé} est toujours le nom du champ d'information affiché dans la première ligne des opérations.
 
 
-Um die Lesbarkeit der Anzeige zu gewährleisten, zeigt Grisbi keine Rahmen um Zellen, Spalten, Zeilen und Buchungen an, sondern wechselt in jeder Zeile zwischen einem \fboxsep=2pt{\colorbox[RGB]{215,215,255}{violetter Hintergrund}} und Weiß.
+Um die Lesbarkeit der Anzeige zu gewährleisten, zeigt Grisbi keine Rahmen um Zellen, Spalten, Zeilen und Buchungen an, sondern wechselt in jeder Zeile zwischen einem {\setlength{\fboxsep}{2pt}\colorbox[RGB]{215,215,255}{violetter Hintergrund}} und Weiß.
 %To improve the readability of the display, Grisbi does not show any borders around cells, columns, rows or transactions, but instead uses alternating colours of  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{purple background}} and white for each line.
 %Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
 
@@ -542,7 +542,7 @@ Um das Buchungsformular \indexword{zu öffnen oder anzuzeigen}\index{Buchungsfor
 	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
-Die letzte Zeile am Ende der Liste der Buchungen, die vollständig leer ist, erscheint in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}, und das leere Buchungsformular wird angezeigt, wobei nur das aktuelle Datum oder das zuletzt eingegebene Datum in \fboxsep=2pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{weiß auf blauem Hintergrund}}}} erscheint.
+Die letzte Zeile am Ende der Liste der Buchungen, die vollständig leer ist, erscheint in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}, und das leere Buchungsformular wird angezeigt, wobei nur das aktuelle Datum oder das zuletzt eingegebene Datum in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{weiß auf blauem Hintergrund}}}} erscheint.
 %The last line, which is completely blank, at the bottom of the list of operations, appears in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dark pink background}}, and the blank input form is displayed, showing only the current date, or the last date entered, in \fboxsep=2pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}}}.
 %La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
 
@@ -680,7 +680,7 @@ Es gibt zwei Möglichkeiten, eine Buchung auszuwählen:
 	%\item déplacez la sélection avec les touches du clavier \keys{\arrowkeyup} et \keys{\arrowkeydown}.
 \end{itemize}
 
-Die Buchung erscheint dann in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und ihre Details werden im Formular angezeigt.
+Die Buchung erscheint dann in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und ihre Details werden im Formular angezeigt.
 %The transaction then appears in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and its details are displayed in the form.
 %L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
 
@@ -769,7 +769,7 @@ Jedes Eingabefeld muss mit dem entsprechenden Datentyp (Datum, Zahl, Text) ausge
 %Each entry field must be filled in with the appropriate data type (date, number, text); otherwise, the incorrect data will turn \textcolor{red}{red}.
 %Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}.
 
-Sobald das letzte Feld des Formulars ausgefüllt und abgeschickt wurde, erscheint die Buchung in der Buchungsliste, und die aktive Zeile, die mit \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} hervorgehoben ist, springt zur letzten leeren Zeile in der Liste.
+Sobald das letzte Feld des Formulars ausgefüllt und abgeschickt wurde, erscheint die Buchung in der Buchungsliste, und die aktive Zeile, die mit {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} hervorgehoben ist, springt zur letzten leeren Zeile in der Liste.
 %Once the last field in the form has been filled in and submitted, the transaction appears in the list of transactions, and the active line, highlighted in \fboxsep=2pt{\colorbox[RGB]{245,155,155}{dark pink background}}, moves to the last empty line in the list.
 %Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
@@ -944,7 +944,7 @@ und die Bestätigung einer Auswahl in einer Dropdown-Liste erfolgt mit der Taste
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Grisbi schlägt Ihnen eine automatische Vervollständigung des eingegebenen Wortes vor, sobald genügend Zeichen erkannt wurden. Der ausgewählte \indexword{Autovervollständigung}\index{Eingabefeld!Autovervollständigung} erscheint auf \fboxsep=3pt{\colorbox[RGB]{61,174,233}{blauem Hintergrund}}. Um Ihre Auswahl zu bestätigen, drücken Sie je nach Ihren Konfigurationseinstellungen die \keys{\tab}-Taste oder die \keys{\return}-Taste; andernfalls tippen Sie einfach weiter.
+Grisbi schlägt Ihnen eine automatische Vervollständigung des eingegebenen Wortes vor, sobald genügend Zeichen erkannt wurden. Der ausgewählte \indexword{Autovervollständigung}\index{Eingabefeld!Autovervollständigung} erscheint auf {\setlength{\fboxsep}{2pt}\colorbox[RGB]{61,174,233}{blauem Hintergrund}}. Um Ihre Auswahl zu bestätigen, drücken Sie je nach Ihren Konfigurationseinstellungen die \keys{\tab}-Taste oder die \keys{\return}-Taste; andernfalls tippen Sie einfach weiter.
 %Grisbi will suggest automatically completing the word you have entered as soon as it has recognised enough characters. The selected \indexword{auto-complete}\index{entry field!auto-complete} appears on \fboxsep=3pt{\colorbox[RGB]{61,174,233}{blue background}}. To confirm your choice, press the \keys{Tab \tab} key or the \keys{Enter \return} key, depending on your configuration settings; otherwise, continue typing.
 %Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complétion}\index{champ de saisie!auto-complétion} sélectionné apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
 
@@ -1110,7 +1110,7 @@ Wenn die Umbunchung in einer Fremdwährung erfolgt, wird der Gegenbuchung automa
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-Um die \indexword{Gegenbuchung}\index{Gegenbuchung!Ansicht} einer Umbuchung anzuzeigen, klicken Sie mit der rechten Maustaste auf die entsprechende Zeile in einem der beiden Konten und wählen Sie im Kontextmenü \menus{Die Gegenbuchung anzeigen} aus: Das andere Konto wird angezeigt und der Buchung ist markiert (auf \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}). Wenn Sie genau denselben Vorgang in diesem Konto wiederholen, werden das ursprüngliche Konto und die Umbuchung erneut angezeigt.
+Um die \indexword{Gegenbuchung}\index{Gegenbuchung!Ansicht} einer Umbuchung anzuzeigen, klicken Sie mit der rechten Maustaste auf die entsprechende Zeile in einem der beiden Konten und wählen Sie im Kontextmenü \menus{Die Gegenbuchung anzeigen} aus: Das andere Konto wird angezeigt und der Buchung ist markiert (auf {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}). Wenn Sie genau denselben Vorgang in diesem Konto wiederholen, werden das ursprüngliche Konto und die Umbuchung erneut angezeigt.
 %To \indexword{view the contra-transaction}\index{contra-transaction!view} for a transfer, right-click on its line in one of the two accounts, and in the context menu, select \menus{Displays the contra-transaction}: the other account is displayed and the transaction is selected (on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}). If you repeat exactly the same action in that same account, the original account and its transfer are displayed again.
 %Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher} d'un virement, cliquez-droit sur sa ligne dans un des deux comptes, et dans le menu contextuel, sélectionnez \menus{Afficher la contre-opération}: l'autre compte s'affiche et l'opération est sélectionnée (sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}). Si vous refaites exactement la même manipulation dans ce même compte, le compte d'origine et son virement se ré-affichent.
 
@@ -1313,7 +1313,7 @@ Um \indexword{eine Splittbuchung einzugeben}\index{Splittbuchung}, gehen Sie wie
 		\item Die erste Zeile des neuen Buchung ist in \textcolor{red}{\textsf{rot}} geschrieben und daher hervorgehoben; sie bleibt so lange in \textcolor{red}{\textsf{rot}}, wie die Summe der Teilbuchungen vom Betrag der Buchung abweicht;
 		%\item the first line of the new operation is written in \textcolor{red}{\textsf{red}} and is therefore highlighted; it will remain in \textcolor{red}{\textsf{red}} as long as the total of the sub-transactions differs from the amount of the transaction;
 		%\item la première ligne de la nouvelle opération écrite en \textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
-		\item und darunter eine neue Zeile mit \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}, deren Gesamtsumme Null beträgt und deren Differenz der Differenz zwischen dieser Summe und dem Gesamtwert der aufgeschlüsselten Buchung entspricht, also negativ ist\refimage{transactions-breakdown-img};
+		\item und darunter eine neue Zeile mit {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}, deren Gesamtsumme Null beträgt und deren Differenz der Differenz zwischen dieser Summe und dem Gesamtwert der aufgeschlüsselten Buchung entspricht, also negativ ist\refimage{transactions-breakdown-img};
 		%\item and below that, a new line, with \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, with a total of zero and a difference equal to the difference between this total and the total value of the split transaction, i.e. a negative figure\refimage{transactions-breakdown-img};
 		%\item et en-dessous une nouvelle ligne, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
 	\end{itemize}
@@ -1373,10 +1373,10 @@ Um \indexword{Teilbuchungen}\index{Teilbuchungen} einzugeben, geben Sie Folgende
 	\end{figure}
 	% image centrée
 	
-	\item In der Buchungsliste wird diese Teilbuchung auf \fboxsep=3pt{\colorbox[RGB]{240,200,200}{rosa Hintergrund}} angezeigt, und es erscheint eine neue Zeile auf \fboxsep=3pt{\colorbox [RGB]{245,155,155}{dunkelrosa Hintergrund}}, und ist somit ausgewählt. Es wird eine Summe angezeigt, die dem Wert der ersten eingegebenen Teilbuchung entspricht, jedoch als negativer Wert, sowie eine Differenz, die der Differenz zwischen dem Gesamtwert der Spilttbuchung und dem Wert dieser Teilbuchung entspricht, ebenfalls als negativer Wert\refimage{transactions-breakdown-sub1-img};
+	\item In der Buchungsliste wird diese Teilbuchung auf {\setlength{\fboxsep}{2pt}\colorbox[RGB]{240,200,200}{rosa Hintergrund}} angezeigt, und es erscheint eine neue Zeile auf {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}}, und ist somit ausgewählt. Es wird eine Summe angezeigt, die dem Wert der ersten eingegebenen Teilbuchung entspricht, jedoch als negativer Wert, sowie eine Differenz, die der Differenz zwischen dem Gesamtwert der Spilttbuchung und dem Wert dieser Teilbuchung entspricht, ebenfalls als negativer Wert\refimage{transactions-breakdown-sub1-img};
 	%\item in the list of operations, this sub-transaction is displayed on \fboxsep=3pt{\colorbox[RGB]{240,200,200}{pink background}}, and a new line appears, on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying a total equal to the first sub-transaction entered, in negative figures, and a difference equal to the difference between the total value of the split transaction and the value of this sub-transaction, in negative form\refimage{transactions-breakdown-sub1-img};
 	%\item dans la liste des opérations, cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}}, et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
-	\item Eine Splittbuchung umfasst mindestens zwei Teilbuchungen (ansonsten hätte dies keinen Sinn\ldots); geben Sie daher im Formular für Teilbuchungen auf dieselbe Weise eine zweite Teilbuchung ein und bestätigen Sie diese: Diese Teilbuchung erscheint auf \fboxsep=3pt{\colorbox [RGB]{240,200,200}{rosa Hintergrund}} und eine neue Zeile erscheint auf \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und ist somit ausgewählt, wobei die aktuelle Summe der eingegebenen Teilbuchungen und die aktuelle Differenz angezeigt werden \refimage{transactions-breakdown-sub2-img};
+	\item Eine Splittbuchung umfasst mindestens zwei Teilbuchungen (ansonsten hätte dies keinen Sinn\ldots); geben Sie daher im Formular für Teilbuchungen auf dieselbe Weise eine zweite Teilbuchung ein und bestätigen Sie diese: Diese Teilbuchung erscheint auf {\setlength{\fboxsep}{2pt}\colorbox[RGB]{240,200,200}{rosa Hintergrund}} und eine neue Zeile erscheint auf {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und ist somit ausgewählt, wobei die aktuelle Summe der eingegebenen Teilbuchungen und die aktuelle Differenz angezeigt werden \refimage{transactions-breakdown-sub2-img};
 	Die Summe der Teilbuchungen hat sich um den Betrag dieser zweiten Teilbuchungen (negativ) erhöht, während sich die Differenz um denselben Betrag (negativ) verringert hat;
 	%\item there are at least two sub-transactions in a split transaction (otherwise there is no point in doing it\ldots); therefore, in the sub-transaction form, enter a second sub-transaction in the same way, then click on \menus{Validate}: this sub-transaction appears on \fboxsep=3pt{\colorbox[RGB]{240,200,200}{pink background}} and a new line appears, on \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying the latest total of the sub-transactions entered and the latest difference \refimage{transactions-breakdown-sub2-img};	the total of the sub-transactions has increased (negatively) by the amount of this second sub-transaction, whilst the difference has decreased (negatively) by the same amount;
 	%\item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}} et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img}; le total des sous-opérations a augmenté (en négatif) du montant de cette deuxième sous-opération, tandis que l'écart a diminué (en négatif) du même montant; 
@@ -1427,7 +1427,7 @@ Um \indexword{Teilbuchungen}\index{Teilbuchungen} einzugeben, geben Sie Folgende
 %\subsection{Validation of the split transaction\label{transactions-breakdown-validation}}
 %\subsection{Validation de l'opération ventilée\label{transactions-breakdown-validation}}
 
-Sobald dieser letzte Teilbuchung bestätigt wurde, erscheint Ihre Splittbuchung wie eine normale Buchung in der Buchungsliste, und die aktive Zeile, die mit \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}} hervorgehoben ist, springt zur letzten freien Zeile in der Liste.
+Sobald dieser letzte Teilbuchung bestätigt wurde, erscheint Ihre Splittbuchung wie eine normale Buchung in der Buchungsliste, und die aktive Zeile, die mit {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}} hervorgehoben ist, springt zur letzten freien Zeile in der Liste.
 %Once this final sub-operation has been validated, your split transaction will appear in the list of transactions just as a normal transaction would, and the active line, highlighted in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, will move to the last empty line in the list.
 %À la validation de cette dernière sous-opération, votre opération ventilée s'affiche alors dans la liste des opérations comme pour une opération normale, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
 
@@ -1493,7 +1493,7 @@ Bei einem Splittbuchung erscheint jedoch am unteren Rand des Buchungsformulars l
 %\section{Editing an transaction\label{transactions-modify}}
 %\section{Modification d'une opération\label{transactions-modify}}
 
-Um eine Buchung, eine aufgeschlüsselte Buchung oder eine ihrer Unterbuchungen zu bearbeiten, wählen Sie diese aus der Buchungsliste aus, wo sie in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} angezeigt wird; sie erscheint auch im Buchungsformular, wo Sie die gewünschten Felder per \texttt{Linksklick} auswählen und die Werte nach Belieben ändern können.
+Um eine Buchung, eine aufgeschlüsselte Buchung oder eine ihrer Unterbuchungen zu bearbeiten, wählen Sie diese aus der Buchungsliste aus, wo sie in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} angezeigt wird; sie erscheint auch im Buchungsformular, wo Sie die gewünschten Felder per \texttt{Linksklick} auswählen und die Werte nach Belieben ändern können.
 %To edit an transaction, a broken-down transaction, or one of its sub-transactions, select it from the list of transactions, where it will be displayed in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}; it will also appear in the entry form, where you can select the desired fields by \texttt{left-click} and modify the values as you see fit.
 %Pour modifier une opération, ou une opération ventilée ou une de ses sous-opérations, sélectionnez-la dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un \texttt{clic-gauche} et modifier les valeurs à votre convenance.
 
@@ -1534,7 +1534,7 @@ Wenn das Buchungsformular ausgeblendet ist, gehen Sie wie folgt vor, um es anzuz
 	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
-Anschließend wird das Datum im Buchungsformular in \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{weiß auf blauem Hintergrund}}}} angezeigt.
+Anschließend wird das Datum im Buchungsformular in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{weiß auf blauem Hintergrund}}}} angezeigt.
 %When the process is complete, the date appears in \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}}} in the form.
 %A l'issue, la date s'affiche en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} dans le formulaire.
 
@@ -1651,7 +1651,7 @@ Um eine \indexword{Buchung als Vorlage}\index{Buchung!Vorlage} zu verwenden, mar
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Eine neue Buchung mit dem heutigen Datum wird in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} in einer neuen Zeile unterhalb der letzten Buchung angezeigt; natürlich weist sie weder den Status \emph{Verrechnet} noch den Status \emph{Abgestimmt} auf.
+Eine neue Buchung mit dem heutigen Datum wird in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} in einer neuen Zeile unterhalb der letzten Buchung angezeigt; natürlich weist sie weder den Status \emph{Verrechnet} noch den Status \emph{Abgestimmt} auf.
 %A new transaction with today's date is displayed in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, on a new line below the last transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
 %Une nouvelle opération avec la date du jour s'affiche sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, dans une nouvelle ligne en-dessous de la dernière opération; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 
@@ -1678,7 +1678,7 @@ To clone a transaction, select it, then use one of the following two methods:
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Eine neue Buchung mit dem zuvor ausgewählten Buchungsdatum erscheint in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und wird in einer neuen Zeile unterhalb der ausgewählten Buchung angezeigt; natürlich weist sie weder den Status \emph{Verrechnet} noch den Status \emph{Abgestimmt} auf.
+Eine neue Buchung mit dem zuvor ausgewählten Buchungsdatum erscheint in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund}} und wird in einer neuen Zeile unterhalb der ausgewählten Buchung angezeigt; natürlich weist sie weder den Status \emph{Verrechnet} noch den Status \emph{Abgestimmt} auf.
 %A new transaction with the previously selected transaction date appears in \fboxsep=3pt{\colorbox[RGB]{245,155,155}{dark pink background}}, and is displayed on a new line below the selected transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
 %Une nouvelle opération avec la date de l'opération sélectionnée précédemment apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et s'affiche dans une nouvelle ligne en-dessous de l'opération sélectionnée; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 

@@ -95,7 +95,7 @@ Une ligne supplémentaire vide s'affiche juste en-dessous de la dernière ligne 
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Pour des raisons de lisibilité de l'affichage, Grisbi présente une alternance de couleurs de \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
+Pour des raisons de lisibilité de l'affichage, Grisbi présente une alternance de couleurs de {\setlength{\fboxsep}{2pt}\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
 
 % espace pour changement de thème
 \vspacepdf{2mm}
@@ -242,7 +242,7 @@ Notez que le choix des types d'opérations est nécessairement lié au type du c
 
 \section{Calendrier et prévisions\label{plannedtransactions-calendar}}
 
-Un calendrier\refimage{planned-transactions-calendar-img} s'affiche en bas du panneau de navigation\refimage{planned-transactions-display-img}. Le jour en cours est \fboxsep=2pt{\colorbox[RGB]{198,200,201}{surligné}, et les dates \textbf{en gras} correspondent aux dates des opérations planifiées de tous les comptes arrivant à échéance.
+Un calendrier\refimage{planned-transactions-calendar-img} s'affiche en bas du panneau de navigation\refimage{planned-transactions-display-img}. Le jour en cours est {\setlength{\fboxsep}{2pt}\colorbox[RGB]{198,200,201}{surligné}}, et les dates \textbf{en gras} correspondent aux dates des opérations planifiées de tous les comptes arrivant à échéance.
 
 %Cliquez sur le calendrier pour le sélectionner. Vous pouvez le parcourir avec la souris ou le clavier:
 %\begin{itemize}
@@ -297,7 +297,7 @@ Pour sélectionner une opération planifiée, vous avez deux moyens:
 	 \item déplacer la sélection avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} du clavier.
 \end{itemize}
 
-L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
+L'opération apparaît alors sur {\setlength{\fboxsep}{2pt}[RGB]{245,155,155}{fond rose foncé} et ses détails s'affichent dans le formulaire.
 
 \vspace{2mm}
 Un \texttt{clic-droit} sur la ligne d'une opération planifiée affiche un menu contextuel avec les fonctions suivantes\refimage{planned-transactions-contextMenu-img}:
@@ -374,7 +374,7 @@ Pour modifier une opération planifiée, ou une opération planifiée ventilée 
 \begin{enumerate}
 	\item sélectionnez-la soit:
 		\begin{itemize}
-			\item par sélection dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}},
+			\item par sélection dans la liste des opérations où elle s'affichera sur {\setlength{\fboxsep}{2pt}[RGB]{245,155,155}{fond rose foncé}},
 			\item par \texttt{clic-gauche} sur l'outil \menus{Éditer} de la barre d'outils,
 			\item par \texttt{clic-droit} sur la ligne de l'opération puis sélection de \menus{Éditer l'opération} dans le menu contextuel;
 		\end{itemize}
@@ -393,7 +393,7 @@ Pour cloner une opération planifiée, sélectionnez-la pour qu'elle s'affiche d
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-L'opération sélectionnée précédemment apparaît toujours sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et l'opération clonée s'affiche dans une nouvelle ligne en-dessous.
+L'opération sélectionnée précédemment apparaît toujours sur {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{fond rose foncé}}, et l'opération clonée s'affiche dans une nouvelle ligne en-dessous.
 
 Vous pouvez alors éditer cette nouvelle opération pour, par exemple, en modifier la date.
 
