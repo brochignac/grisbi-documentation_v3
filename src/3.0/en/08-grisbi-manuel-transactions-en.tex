@@ -164,8 +164,8 @@ You can also configure the content of these lines, as well as the saving of disp
 The \indexword{column label}\index{column!label} is always the name of the information field displayed in the first row of the transactions.
 %Le \indexword{libellé d'une colonne}\index{colonne!libellé} est toujours le nom du champ d'information affiché dans la première ligne des opérations.
 
-To improve the readability of the display, Grisbi does not show any borders around cells, columns, rows or transactions, but instead uses alternating colours of  {\setlength{\fboxsep}{2pt}\colorbox[RGB]{215,215,255}{purple background}} and white for each line.
-%Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de  \fboxsep=3pt{\colorbox[RGB]{215,215,255}{fond violet}} et blanc à chaque ligne.
+To improve the readability of the display, Grisbi does not show any borders around cells, columns, rows or transactions, but instead uses alternating colours of \colorbox[RGB]{215,215,255}{purple background} and white for each line.
+%Pour des raisons de lisibilité de l'affichage, Grisbi n'affiche aucune bordure aux cellules, colonnes, lignes et opérations, mais présente une alternance de couleurs de \colorbox[RGB]{215,215,255}{fond violet} et blanc à chaque ligne.
 
 
 \subsection{Information and input fields\label{transactions-list-fields}}
@@ -394,8 +394,8 @@ To \indexword{open or display}\index{entry form!display} the entry form, use one
 	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
 
-The last line, which is completely blank, at the bottom of the list of operations, appears in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}, and the blank input form is displayed, showing only the current date, or the last date entered, in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}}}.
-%La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}}.
+The last line, which is completely blank, at the bottom of the list of operations, appears in \colorbox[RGB]{245,155,155}{dark pink background}, and the blank input form is displayed, showing only the current date, or the last date entered, in \colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}}.
+%La dernière ligne, entièrement vide, en bas de la liste des opérations, apparaît sur \colorbox[RGB]{245,155,155}{fond rose foncé}, et le formulaire de saisie vierge s'affiche, avec seule la date du jour, ou la dernière date entrée, en \colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}.
 
 \subsubsection{Hiding the form\label{transactions-new-exposure-hide}}
 %\subsection{Masquage du formulaire\label{transactions-new-hide}}
@@ -496,8 +496,8 @@ There are two ways to select an transaction:
 	 %\item déplacez la sélection avec les touches du clavier \keys{\arrowkeyup} et \keys{\arrowkeydown}.
 \end{itemize}
 
-The transaction then appears in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}} and its details are displayed in the form.
-%L'opération apparaît alors sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} et ses détails s'affichent dans le formulaire.
+The transaction then appears in \colorbox[RGB]{245,155,155}{dark pink background} and its details are displayed in the form.
+%L'opération apparaît alors sur \colorbox[RGB]{245,155,155}{fond rose foncé} et ses détails s'affichent dans le formulaire.
 
 \texttt{Right-click} on a transaction line displays a context menu containing the following functions, depending on the context\refimage{transactions-contextMenu-img}:
 %Un clic-droit sur la ligne d'une opération affiche un menu contextuel avec, selon le contexte, les fonctions suivantes:
@@ -567,8 +567,8 @@ Enter the relevant details about your transaction in the various fields of the f
 Each entry field must be filled in with the appropriate data type (date, number, text); otherwise, the incorrect data will turn \textcolor{red}{red}.
 %Chaque champ de saisie doit être renseigné par le type de donnée qui lui convient (date, nombre, texte), sinon la donnée erronée deviendra \textcolor{red}{rouge}.
 
-Once the last field in the form has been filled in and submitted, the transaction appears in the list of transactions, and the active line, highlighted in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}, moves to the last empty line in the list.
-%Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
+Once the last field in the form has been filled in and submitted, the transaction appears in the list of transactions, and the active line, highlighted in \colorbox[RGB]{245,155,155}{dark pink background}, moves to the last empty line in the list.
+%Une fois le dernier champ du formulaire saisi et validé, l'opération s'affiche dans la liste des opérations, et la ligne active, sur \colorbox[RGB]{245,155,155}{fond rose foncé}, passe à la dernière ligne vide de la liste.
 
 % espace pour changement de thème
 \vspacepdf{3mm}
@@ -707,8 +707,8 @@ You can open a drop-down list by clicking the small triangle to the right of the
 
 %espace pour changement de thème
 \vspacepdf{3mm}
-Grisbi will suggest automatically completing the word you have entered as soon as it has recognised enough characters. The selected \indexword{auto-complete}\index{entry field!auto-complete} appears on {\setlength{\fboxsep}{2pt}\colorbox[RGB]{61,174,233}{blue background}}. To confirm your choice, press the \keys{Tab \tab} key or the \keys{Enter \return} key, depending on your configuration settings; otherwise, continue typing.
-%Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complétion}\index{champ de saisie!auto-complétion} sélectionnée apparaît sur \fboxsep=3pt{\colorbox[RGB]{61,174,233}{fond bleu}}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
+Grisbi will suggest automatically completing the word you have entered as soon as it has recognised enough characters. The selected \indexword{auto-complete}\index{entry field!auto-complete} appears on \colorbox[RGB]{61,174,233}{blue background}. To confirm your choice, press the \keys{Tab \tab} key or the \keys{Enter \return} key, depending on your configuration settings; otherwise, continue typing.
+%Grisbi vous proposera de compléter automatiquement le mot saisi dès qu'il en aura reconnu suffisamment de caractères. L'\indexword{auto-complétion}\index{champ de saisie!auto-complétion} sélectionnée apparaît sur \colorbox[RGB]{61,174,233}{fond bleu}. Pour valider votre choix, appuyez sur la touche \keys{Tab \tab} ou la touche \keys{Entrée \return}, selon votre choix de configuration, sinon continuez la saisie.
 
 The drop-down lists for currencies, financial years and methods of payment can be opened using the \keys{Space} key or a \texttt{left-click} of the mouse; you can navigate through them using the \keys{\arrowkeyup} and \keys{\arrowkeydown} keys, and confirm your selection using the \keys{Space} key, the \keys{Enter \return} key or a \texttt{left-click} of the mouse.
 %Les listes déroulantes des devises, exercices et modes de règlement s'ouvrent avec la touche \keys{Espace} ou un clic gauche de la souris; on s'y déplace avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} et l'on valide avec la touche \keys{Espace}, la touche \keys{Entrée \return} ou un clic gauche de la souris.
@@ -838,8 +838,8 @@ If the transfer is in a foreign currency, it will automatically create the contr
 
 % espace pour changement de thème
 \vspacepdf{3mm}
-To \indexword{view the contra-transaction}\index{contra-transaction!view} for a transfer, \texttt{right-click} on its line in one of the two accounts, and in the context menu, select \menus{Displays the contra-transaction}: the other account is displayed and the transaction is selected (on {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}). If you repeat exactly the same action in that same account, the original account and its transfer are displayed again.
-%Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher} d'un virement, cliquez-droit sur sa ligne dans un des deux comptes, et dans le menu contextuel, sélectionnez \menus{Afficher la contre-opération}: l'autre compte s'affiche et l'opération est sélectionnée (sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}). Si vous refaites exactement la même manipulation dans ce même compte, le compte d'origine et son virement se ré-affichent.
+To \indexword{view the contra-transaction}\index{contra-transaction!view} for a transfer, \texttt{right-click} on its line in one of the two accounts, and in the context menu, select \menus{Displays the contra-transaction}: the other account is displayed and the transaction is selected (on \colorbox[RGB]{245,155,155}{dark pink background}). If you repeat exactly the same action in that same account, the original account and its transfer are displayed again.
+%Pour \indexword{afficher la contre-opération}\index{contre-opération!afficher} d'un virement, cliquez-droit sur sa ligne dans un des deux comptes, et dans le menu contextuel, sélectionnez \menus{Afficher la contre-opération}: l'autre compte s'affiche et l'opération est sélectionnée (sur \colorbox[RGB]{245,155,155}{fond rose foncé}). Si vous refaites exactement la même manipulation dans ce même compte, le compte d'origine et son virement se ré-affichent.
 
 
 \subsection{Advances: consent and receipt\label{transactions-new-advance}}
@@ -996,8 +996,8 @@ To \indexword{enter a breaken-down transaction}\index{transaction!breaken-down},
 	\begin{itemize}
 		\item the first line of the new operation is written in \textcolor{red}{\textsf{red}} and is therefore highlighted; it will remain in \textcolor{red}{\textsf{red}} as long as the total of the sub-transactions differs from the amount of the transaction;
 		%\item la première ligne de la nouvelle opération écrite en \textcolor{red}{\textsf{rouge}} donc sélectionnée, et qui restera écrite en \textcolor{red}{\textsf{rouge}} tant que le total des sous-opérations sera différent du montant de l'opération;
-		\item and below that, a new line, with {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}, with a total of zero and a difference equal to the difference between this total and the total value of the split transaction, i.e. a negative figure\refimage{transactions-breakdown-img};
-		%\item et en-dessous une nouvelle ligne, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
+		\item and below that, a new line, with \colorbox[RGB]{245,155,155}{dark pink background}, with a total of zero and a difference equal to the difference between this total and the total value of the split transaction, i.e. a negative figure\refimage{transactions-breakdown-img};
+		%\item et en-dessous une nouvelle ligne, sur \colorbox[RGB]{245,155,155}{fond rose foncé}, avec un total égal à zéro et un écart égal à la différence entre ce total et la valeur totale de l'opération ventilée, donc en négatif\refimage{transactions-breakdown-img};
 	\end{itemize}
 
 		% image centrée 
@@ -1047,11 +1047,11 @@ To enter \indexword{split sub-transactions}\index{sub-transactions!split}, conti
 		\end{figure}
 		% image centrée
  
-	\item in the list of operations, this sub-transaction is displayed on {\setlength{\fboxsep}{2pt}\colorbox[RGB]{240,200,200}{pink background}}, and a new line appears, on {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying a total equal to the first sub-transaction entered, in negative figures, and a difference equal to the difference between the total value of the split transaction and the value of this sub-transaction, in negative form\refimage{transactions-breakdown-sub1-img};
-	%\item dans la liste des opérations, cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}}, et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
-	\item there are at least two sub-transactions in a split transaction (otherwise there is no point in doing it\ldots); therefore, in the sub-transaction form, enter a second sub-transaction in the same way, then click on \menus{Validate}: this sub-transaction appears on {\setlength{\fboxsep}{2pt}\colorbox[RGB]{240,200,200}{pink background}} and a new line appears, on {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}} and is therefore selected, displaying the latest total of the sub-transactions entered and the latest difference \refimage{transactions-breakdown-sub2-img};
+	\item in the list of operations, this sub-transaction is displayed on \colorbox[RGB]{240,200,200}{pink background}, and a new line appears, on \colorbox[RGB]{245,155,155}{dark pink background} and is therefore selected, displaying a total equal to the first sub-transaction entered, in negative figures, and a difference equal to the difference between the total value of the split transaction and the value of this sub-transaction, in negative form\refimage{transactions-breakdown-sub1-img};
+	%\item dans la liste des opérations, cette sous-opération s'affiche sur \colorbox[RGB]{240,200,200}{fond rose}, et une nouvelle ligne apparaît, sur \colorbox[RGB]{245,155,155}{fond rose foncé} donc sélectionnée, qui affiche un total égal à la première sous-opération saisie, en négatif, et un écart égal à la différence entre la valeur totale de l'opération ventilée et la valeur de cette sous-opération, en négatif\refimage{transactions-breakdown-sub1-img};
+	\item there are at least two sub-transactions in a split transaction (otherwise there is no point in doing it\ldots); therefore, in the sub-transaction form, enter a second sub-transaction in the same way, then click on \menus{Validate}: this sub-transaction appears on \colorbox[RGB]{240,200,200}{pink background} and a new line appears, on \colorbox[RGB]{245,155,155}{dark pink background} and is therefore selected, displaying the latest total of the sub-transactions entered and the latest difference \refimage{transactions-breakdown-sub2-img};
 	the total of the sub-transactions has increased (negatively) by the amount of this second sub-transaction, whilst the difference has decreased (negatively) by the same amount;
-	%\item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur \fboxsep=3pt{\colorbox[RGB]{240,200,200}{fond rose}} et une nouvelle ligne apparaît, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img}; le total des sous-opérations a augmenté (en négatif) du montant de cette deuxième sous-opération, tandis que l'écart a diminué (en négatif) du même montant; 
+	%\item il y a au moins deux sous-opérations dans une opération ventilée (sinon cela n'a aucun intérêt\ldots); donc, dans le formulaire de sous-opération, saisissez une deuxième sous-opération de la même manière, puis validez: cette sous-opération s'affiche sur \colorbox[RGB]{240,200,200}{fond rose} et une nouvelle ligne apparaît, sur \colorbox[RGB]{245,155,155}{fond rose foncé} donc sélectionnée, qui affiche le dernier total des sous-opérations saisies et le dernier écart \refimage{transactions-breakdown-sub2-img}; le total des sous-opérations a augmenté (en négatif) du montant de cette deuxième sous-opération, tandis que l'écart a diminué (en négatif) du même montant; 
 
 	% image centrée 
 	\begin{figure}[htp]
@@ -1093,8 +1093,8 @@ To enter \indexword{split sub-transactions}\index{sub-transactions!split}, conti
 \subsection{Validation of the split transaction\label{transactions-breakdown-validation}}
 %\subsection{Validation de l'opération ventilée\label{transactions-breakdown-validation}}
 
-Once this final sub-operation has been validated, your split transaction will appear in the list of transactions just as a normal transaction would, and the active line, highlighted in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}, will move to the last empty line in the list.
-%À la validation de cette dernière sous-opération, votre opération ventilée s'affiche alors dans la liste des opérations comme pour une opération normale, et la ligne active, sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, passe à la dernière ligne vide de la liste.
+Once this final sub-operation has been validated, your split transaction will appear in the list of transactions just as a normal transaction would, and the active line, highlighted in \colorbox[RGB]{245,155,155}{dark pink background}, will move to the last empty line in the list.
+%À la validation de cette dernière sous-opération, votre opération ventilée s'affiche alors dans la liste des opérations comme pour une opération normale, et la ligne active, sur \colorbox[RGB]{245,155,155}{fond rose foncé}, passe à la dernière ligne vide de la liste.
 
 In the list of transactions, you will be able to identify your transaction by the presence of a triangle to the left of the first column \refimage{transactions-breakdown-display-img}.
 %Dans la liste des opérations, vous pourrez reconnaitre votre opération ventilée par la présence d'un triangle à gauche de la première colonne \refimage{transactions-breakdown-display-img}.
@@ -1148,8 +1148,8 @@ However, for a broken-down operation, a tick box labelled \menus{Recover the chi
 \section{Editing an transaction\label{transactions-modify}}
 %\section{Modification d'une opération\label{transactions-modify}}
 
-To edit an transaction, a broken-down transaction, or one of its sub-transactions, select it from the list of transactions, where it will be displayed in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}; it will also appear in the entry form, where you can select the desired fields by \texttt{left-click} and modify the values as you see fit.
-%Pour modifier une opération, ou une opération ventilée ou une de ses sous-opérations, sélectionnez-la dans la liste des opérations où elle s'affichera sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un \texttt{clic-gauche} et modifier les valeurs à votre convenance.
+To edit an transaction, a broken-down transaction, or one of its sub-transactions, select it from the list of transactions, where it will be displayed in \colorbox[RGB]{245,155,155}{dark pink background}; it will also appear in the entry form, where you can select the desired fields by \texttt{left-click} and modify the values as you see fit.
+%Pour modifier une opération, ou une opération ventilée ou une de ses sous-opérations, sélectionnez-la dans la liste des opérations où elle s'affichera sur \colorbox[RGB]{245,155,155}{fond rose foncé}; elle s'affichera également dans le formulaire de saisie, où vous pourrez sélectionner les champs désirés par un \texttt{clic-gauche} et modifier les valeurs à votre convenance.
 
 \vspace{2mm}
 If the entry form is hidden, do one of the following to display it:
@@ -1178,8 +1178,8 @@ If the entry form is hidden, do one of the following to display it:
 	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 \end{itemize}
   
-When the process is complete, the date appears in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}}} in the form.
-%A l'issue, la date s'affiche en \fboxsep=3pt{\colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}}} dans le formulaire.
+When the process is complete, the date appears in \colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{white on a blue background}}} in the form.
+%A l'issue, la date s'affiche en \colorbox[RGB]{61,174,233}{\textcolor{white}{\textsf{blanc sur fond bleu}}} dans le formulaire.
 
 You can then edit any information you wish by navigating through the entry fields.
 %Il est alors possible de modifier toutes les informations désirées, en se déplaçant dans les champs de saisie.
@@ -1268,8 +1268,8 @@ To use an \indexword{transaction as a template}\index{transaction!template}, sel
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-A new transaction with today's date is displayed in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}, on a new line below the last transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
-%Une nouvelle opération avec la date du jour s'affiche sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, dans une nouvelle ligne en-dessous de la dernière opération; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
+A new transaction with today's date is displayed in \colorbox[RGB]{245,155,155}{dark pink background}, on a new line below the last transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
+%Une nouvelle opération avec la date du jour s'affiche sur \colorbox[RGB]{245,155,155}{fond rose foncé}, dans une nouvelle ligne en-dessous de la dernière opération; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 
 You can then edit this new transaction, for example by changing its date.
 %Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant sa date.
@@ -1289,8 +1289,8 @@ To \indexword{clone a transaction}\index{transaction!clone}, select it, then use
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-A new transaction with the previously selected transaction date appears in {\setlength{\fboxsep}{2pt}\colorbox[RGB]{245,155,155}{dark pink background}}, and is displayed on a new line below the selected transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
-%Une nouvelle opération avec la date de l'opération sélectionnée précédemment apparaît sur \fboxsep=3pt{\colorbox[RGB]{245,155,155}{fond rose foncé}}, et s'affiche dans une nouvelle ligne en-dessous de l'opération sélectionnée; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
+A new transaction with the previously selected transaction date appears in \colorbox[RGB]{245,155,155}{dark pink background}, and is displayed on a new line below the selected transaction; naturally, it has neither the \emph{Pointed} status nor the \emph{Reconciled} status.
+%Une nouvelle opération avec la date de l'opération sélectionnée précédemment apparaît sur \colorbox[RGB]{245,155,155}{fond rose foncé}, et s'affiche dans une nouvelle ligne en-dessous de l'opération sélectionnée; elle n'a évidemment ni le statut \emph{Pointé} ni le statut \emph{Rapproché}.
 
 You can then edit this new transaction, for example by changing its date.
 %Vous pouvez alors éditer cette nouvelle opération, par exemple en modifiant la date.

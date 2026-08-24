@@ -354,6 +354,8 @@
 % For pdf only; for html, redefined  by an empty command in hva/macros.hva
 \mainmatter							% pages are numbered in Arabic numerals and the page counter is reset to 1.
 %\KOMAScriptVersion						% print the used version number of Koma-Script
+\setlength{\fboxsep}{2pt}				% define \fboxsep (default=3pt) for \colorbox for the whole handbook
+% use {\setlength{\fboxsep}{new-value}\colorbox[RGB]{x,y,z}{text}} for other new-value
 
 \include{01-grisbi-manuel-preamble-de}
 %\cleardoubleemptypage
