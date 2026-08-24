@@ -68,69 +68,93 @@ The planned transactions toolbar offers the following functions:
 \end{itemize}
 
 %TODO following
-\section{Liste des opérations planifiées\label{plannedtransactions-list}}
+\section{List of scheduled transactions\label{plannedtransactions-list}}
+%\section{Liste des opérations planifiées\label{plannedtransactions-list}}
 
 
 \subsection{Description\label{plannedtransactions-list-description}}
+%\subsection{Description\label{plannedtransactions-list-description}}
 
-La liste des opérations planifiées s'affiche dans le panneau des
-détails\refimage{planned-transactions-list-img}.
+The list of scheduled transactions is displayed in the details panel\refimage{planned-transactions-list-img}.
+%La liste des opérations planifiées s'affiche dans le panneau des détails\refimage{planned-transactions-list-img}.
 
 % image centrée
 \begin{figure}[htbp]
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{image/screenshot/planned_transactions_list}
 	\end{center}
-	\caption{Liste des opérations planifiées}
+	\caption{List of scheduled transactions}
+	%\caption{Liste des opérations planifiées}
 	\label{planned-transactions-list-img}
 \end{figure}
 
-Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la \indexword{largeur des colonnes}\index{colonne!largeur} à leur valeur par défaut, sélectionnez le menu \menus{Affichage - Réinitialiser la largeur des colonnes} dans la barre de menu.
+The column heading bar appears at the top. You can \indexword{widen or narrow a column}\index{column!width} by clicking on the separator between two columns and dragging it. To restore the \indexword{column widths}\index{column!width} to their default values, select the \menus{View - Reset the column width} menu from the menu bar.
+%Elle affiche en haut la barre des libellés des colonnes. Vous pouvez \indexword{élargir ou rétrécir une colonne}\index{colonne!largeur} en cliquant sur le séparateur entre deux colonnes et en le déplaçant. Pour rétablir la \indexword{largeur des colonnes}\index{colonne!largeur} à leur valeur par défaut, sélectionnez le menu \menus{Affichage - Réinitialiser la largeur des colonnes} dans la barre de menu.
 
-Vous pouvez déplacer la liste des opérations planifiées vers le haut ou vers le bas avec la molette de la souris, ou bien avec la souris et l'ascenseur vertical. Le déplacement éventuel vers la gauche ou la droite se fait avec la souris et l'ascenseur horizontal.
+You can scroll the list of scheduled transactions up or down using the mouse wheel, or by using the mouse and the vertical scroll bar. To scroll left or right, use the mouse and the horizontal scroll bar.
+%Vous pouvez déplacer la liste des opérations planifiées vers le haut ou vers le bas avec la molette de la souris, ou bien avec la souris et l'ascenseur vertical. Le déplacement éventuel vers la gauche ou la droite se fait avec la souris et l'ascenseur horizontal.
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Chaque opération est affichée sur une seule ligne et au maximum six colonnes, ce qui fait au maximum six champs d'information pour chaque opération planifiée. Les champs d'affichage, ainsi que les \indexword{libellés des colonnes}\index{colonne!libellé}, sont les suivants:
+Each transaction is displayed on a single line and across a maximum of six columns, providing a maximum of six information fields for each scheduled transaction. The display fields, along with the \indexword{column headings}\index{column!heading}, are as follows:
+%Chaque opération est affichée sur une seule ligne et au maximum six colonnes, ce qui fait au maximum six champs d'information pour chaque opération planifiée. Les champs d'affichage, ainsi que les \indexword{libellés des colonnes}\index{colonne!libellé}, sont les suivants:
 \begin{itemize}
-	\item \menus{Date}: la date de l'opération;
-	\item \menus{Compte}: le compte concerné;
-	\item \menus{Tiers};
-	\item \menus{Périodicité}: la périodicité de l'opération;
-	\item \menus{Mode}: le mode d'exécution, automatique ou manuel;
-	\item \menus{Montant}: le montant de l'opération; un \indexword{montant négatif}\index{montant!négatif} est affiché en \textcolor{red}{rouge}.
+	\item \menus{Date}: the date of the transaction;
+	%\item \menus{Date}: la date de l'opération;
+	\item \menus{Account}: the account in question;
+	%\item \menus{Compte}: le compte concerné;
+	\item \menus{Payee}: 
+	%\item \menus{Tiers};
+	\item \menus{Frequency}: the frequency of the transaction;
+	%\item \menus{Périodicité}: la périodicité de l'opération;
+	\item \menus{Mode}: the method of execution, automatic or manual;
+	%\item \menus{Mode}: le mode d'exécution, automatique ou manuel;
+	\item \menus{Amount}: the transaction amount; a \indexword{negative amount}\index{amount!negative} is displayed in \textcolor{red}{red}.
+	%\item \menus{Montant}: le montant de l'opération; un \indexword{montant négatif}\index{montant!négatif} est affiché en \textcolor{red}{rouge}.
 	% saut de ligne pour indentation correcte de la note dans la liste
 	
-	\Note{}: si l'affichage du champ \menus{Remarques} a été demandé, il s'affiche à la place des champs \menus{Périodicité} et \menus{Mode}, ce qui ne fait plus que cinq colonnes et cinq champs affichés (voir la section \vref{plannedtransactions-comments},  \menus{Remarques des opérations planifiées}).
+	\Note{}: if the \menus{Notes} field has been requested, it is displayed in place of the \menus{Frequency} and \menus{Method} fields, resulting in only five columns and five fields being displayed (see section \vref{plannedtransactions-comments}, \menus{Comments on planned transactions}).
+	%\Note{}: si l'affichage du champ \menus{Remarques} a été demandé, il s'affiche à la place des champs \menus{Périodicité} et \menus{Mode}, ce qui ne fait plus que cinq colonnes et cinq champs affichés (voir la section \vref{plannedtransactions-comments}, \menus{Remarques des opérations planifiées}).
 \end{itemize}
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Une ligne supplémentaire vide s'affiche juste en-dessous de la dernière ligne d'opération, et sert à créer une nouvelle opération planifiée (voir la section \vref{plannedtransactions-new}, \menus{Nouvelle opération planifiée}).
+An additional blank line appears just below the last transaction line and is used to create a new scheduled transaction (see section \vref{plannedtransactions-new}, \menus{New Scheduled Transaction}).
+%Une ligne supplémentaire vide s'affiche juste en-dessous de la dernière ligne d'opération, et sert à créer une nouvelle opération planifiée (voir la section \vref{plannedtransactions-new}, \menus{Nouvelle opération planifiée}).
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Pour des raisons de lisibilité de l'affichage, Grisbi présente une alternance de couleurs de \colorbox[RGB]{215,215,255}{fond violet} et blanc à chaque ligne.
+To improve the readability of the display, Grisbi alternates between a \colorbox[RGB]{215,215,255}{purple background} and white for each line.
+%Pour des raisons de lisibilité de l'affichage, Grisbi présente une alternance de couleurs de \colorbox[RGB]{215,215,255}{fond violet} et blanc à chaque ligne.
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-En cliquant sur l'outil \menus{Affichage}\label{plannedtransactions-view} dans la barre d'outils, une liste déroulante\refimage{planned-transactions-view-select-img} vous permet de choisir plusieurs modes d'affichage des prochaines occurrences:
+By clicking on the \menus{View}\label{plannedtransactions-view} tool in the toolbar, a drop-down list\refimage{planned-transactions-view-select-img} allows you to choose from several display modes for upcoming transactions \textit{from today’s date}:
+%En cliquant sur l'outil \menus{Affichage}\label{plannedtransactions-view} dans la barre d'outils, une liste déroulante\refimage{planned-transactions-view-select-img} vous permet de choisir plusieurs modes d'affichage des prochaines occurrences \textit{à compter de la date du jour}:
 % espace avant image 5mm
 
 \vspacepdf{5mm}
 \noindent
 \begin{minipage}{.65\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
-		\item \menus{Vue unique}: la prochaine occurrence de chaque opération;
-		\item \menus{Vue hebdomadaire}; à échéance de 7 jours;
-		\item \menus{Vue mensuelle}: à échéance de 30 jours;
-		\item \menus{Vue bimestrielle}: à échéance de 60 jours ;
-		\item \menus{Vue trimestrielle}: à échéance de 90 jours ;
-		\item \menus{Vue annuelle}: à échéance d'un an;
-		\item \menus{Vue personnalisée}: à échéance d'un nombre quelconque de jours, semaines, mois ou années.
+		\item \menus{Unique view}: the next occurrence of each transaction;
+		%\item \menus{Vue unique}: la prochaine occurrence de chaque opération;
+		\item \menus{Week view}: due in 7 days;
+		%\item \menus{Vue hebdomadaire}: à échéance de 7 jours;
+		\item \menus{Month view}: within 30 days;
+		%\item \menus{Vue mensuelle}: à échéance de 30 jours;
+		\item \menus{Two months view}: within 60 days;
+		%\item \menus{Vue bimestrielle}: à échéance de 60 jours;
+		\item \menus{Quarter view}: within 90 days;
+		%\item \menus{Vue trimestrielle}: à échéance de 90 jours;
+		\item \menus{Year view}: within one year;
+		%\item \menus{Vue annuelle}: à échéance d'un an;
+		\item \menus{Custom view}: within any number of days, weeks, months or years.
+		%\item \menus{Vue personnalisée}: à échéance d'un nombre quelconque de jours, semaines, mois ou années.
+		% saut de ligne pour indentation correcte de la note dans la liste
 		
-		\vspacepdf{2mm}
-		L'affichage courant y est indiqué par une coche, ainsi que le nombre d'opérations dans cette vue.
+		\Note{}: the current view is indicated by a tick, and the number of transactions in the selected view is shown in brackets.
+		%\Note{}: l'affichage courant y est indiqué par une coche et, entre parenthèses, vous avez le nombre d'opérations dans la vue sélectionnée.
 	\end{itemize}
 \end{minipage}
 \hspace{15pt}
@@ -145,13 +169,15 @@ En cliquant sur l'outil \menus{Affichage}\label{plannedtransactions-view} dans l
 		name=Fig.,%							% rename label caption, default="Figure" (or "Table")
 		justification=centering,			% centring of text and caption label 
 		labelsep=newline}					% define the separator between the label and the caption text
-	\caption{Choix d'affichage}
+	\caption{View selection}
+	%\caption{Choix d'affichage}
 	\vspace{-10pt}
 	\label{planned-transactions-view-select-img}
 \end{minipage}	
 
 \vspacepdf{5mm}
-Si vous choisissez \menus{Vue personnalisée}, une nouvelle fenêtre affiche un champ incrémental pour choisir le nombre de périodes et une liste déroulante pour le type de la période désirée\refimage{planned-transactions-view-custom-img}.
+If you select \menus{Custom view}, a new window will appear showing an incremental field to select the number of periods and a drop-down list for the type of period required\refimage{planned-transactions-view-custom-img}.
+%Si vous choisissez \menus{Vue personnalisée}, une nouvelle fenêtre affiche un champ incrémental pour choisir le nombre de périodes et une liste déroulante pour le type de la période désirée\refimage{planned-transactions-view-custom-img}.
 
 % image centrée 
 \begin{figure}[htbp]
@@ -159,7 +185,8 @@ Si vous choisissez \menus{Vue personnalisée}, une nouvelle fenêtre affiche un 
 		\includegraphics[width=0.5\textwidth]{image/screenshot/planned_transactions_view_custom}
 	\end{center}
 	\vspace{-10pt}
-	\caption{Choix de l'affichage de la période personnalisée}
+	\caption{Selecting the custom period view}
+	%\caption{Choix de l'affichage de la période personnalisée}
 	\vspace{-10pt}
 	\label{planned-transactions-view-custom-img}
 \end{figure}

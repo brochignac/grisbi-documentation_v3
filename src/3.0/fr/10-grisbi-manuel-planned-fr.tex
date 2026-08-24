@@ -86,7 +86,7 @@ Chaque opération est affichée sur une seule ligne et au maximum six colonnes, 
 	\item \menus{Montant}: le montant de l'opération; un \indexword{montant négatif}\index{montant!négatif} est affiché en \textcolor{red}{rouge}.
 	% saut de ligne pour indentation correcte de la note dans la liste
 
-	\Note{}: si l'affichage du champ \menus{Remarques} a été demandé, il s'affiche à la place des champs \menus{Périodicité} et \menus{Mode}, ce qui ne fait plus que cinq colonnes et cinq champs affichés (voir la section \vref{plannedtransactions-comments},  \menus{Remarques des opérations planifiées}).
+	\Note{}: si l'affichage du champ \menus{Remarques} a été demandé, il s'affiche à la place des champs \menus{Périodicité} et \menus{Mode}, ce qui ne fait plus que cinq colonnes et cinq champs affichés (voir la section \vref{plannedtransactions-comments}, \menus{Remarques des opérations planifiées}).
 \end{itemize}
 
 % espace pour changement de thème
@@ -99,7 +99,9 @@ Pour des raisons de lisibilité de l'affichage, Grisbi présente une alternance 
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-En cliquant sur l'outil \menus{Affichage}\label{plannedtransactions-view} dans la barre d'outils, une liste déroulante\refimage{planned-transactions-view-select-img} vous permet de choisir plusieurs modes d'affichage des prochaines occurrences:
+En cliquant sur l'outil \menus{Affichage}\label{plannedtransactions-view} dans la barre d'outils, une liste déroulante\refimage{planned-transactions-view-select-img} vous permet de choisir plusieurs modes d'affichage des prochaines occurrences
+%TODO à vérifier
+ \textit{à compter de la date du jour}:
 % espace avant image 5mm
 
 \vspacepdf{5mm}
@@ -107,15 +109,15 @@ En cliquant sur l'outil \menus{Affichage}\label{plannedtransactions-view} dans l
 \begin{minipage}{.65\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
 		\item \menus{Vue unique}: la prochaine occurrence de chaque opération;
-		\item \menus{Vue hebdomadaire}; à échéance de 7 jours;
+		\item \menus{Vue hebdomadaire}: à échéance de 7 jours;
 		\item \menus{Vue mensuelle}: à échéance de 30 jours;
-		\item \menus{Vue bimestrielle}: à échéance de 60 jours ;
-		\item \menus{Vue trimestrielle}: à échéance de 90 jours ;
+		\item \menus{Vue bimestrielle}: à échéance de 60 jours;
+		\item \menus{Vue trimestrielle}: à échéance de 90 jours;
 		\item \menus{Vue annuelle}: à échéance d'un an;
 		\item \menus{Vue personnalisée}: à échéance d'un nombre quelconque de jours, semaines, mois ou années.
+		% saut de ligne pour indentation correcte de la note dans la liste
 		
-		\vspacepdf{2mm}
-		L'affichage courant y est indiqué par une coche, ainsi que le nombre d'opérations dans cette vue.
+		\Note{}: l'affichage courant y est indiqué par une coche et, entre parenthèses, vous avez le nombre d'opérations dans la vue sélectionnée.
 	\end{itemize}
 \end{minipage}
 \hspace{15pt}
