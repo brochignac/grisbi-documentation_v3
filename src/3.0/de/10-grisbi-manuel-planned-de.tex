@@ -238,5 +238,193 @@ Wenn Sie \menus{Ansicht benutzerdefiniert} wählen, öffnet sich ein neues Fenst
 \end{figure}
 % image centrée 
 
+\subsection{Sortierungen\label{plannedtransactions-list-sorts}}
+%\subsection{Sorts\label{plannedtransactions-list-sorts}}
+%\subsection{Tris\label{plannedtransactions-list-sorts}}
+%TODO : subsection to update - bug 2391
+To change the order in which transactions are displayed, you can \indexword{sort the transactions}\index{sort!transactions} by one of the information fields; proceed as follows:
+%Pour changer l'ordre d'affichage des opérations, vous pouvez faire un \indexword{tri sur les opérations}\index{tri!opérations} sur un des champs d'information; procédez comme suit:
 
-%TODO following
+\begin{enumerate}
+	%\item \texttt{right-click} on the column header containing the field selected as the \gls{sorting} criterion;
+	%\item cliquez-droit sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri};
+	\item a context menu displays a list of the fields in that column; select the field you wish to use as the sort criterion;
+	%\item un menu contextuel affiche la liste des champs de cette colonne; sélectionnez le champ choisi comme critère de tri;
+	\item all transactions are displayed, sorted according to the selected criterion;
+	%\item toutes les opérations s'affichent, triées selon le critère choisi;
+	\item a small black triangle appears to the right or left of the column heading; it points downwards if the sort is ascending, and upwards if it is descending;
+	%\item un petit triangle noir apparaît à droite ou à gauche du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
+	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\Note{}: depending on the theme of your desktop environment or the window manager you are using, these triangles can be replaced with other characters such as +, -, >, <, etc.
+	%\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+	\item click on this triangle to change the sort order.
+	%\item cliquez sur ce triangle pour changer l'ordre du tri.
+\end{enumerate}
+
+\Note{}: sorting the display in this way does not affect the balance for each line, which is calculated after each transaction; depending on the sort order and display options you have chosen, the balance for each line may not appear in chronological order.
+%\Note{}: un tri sur l'affichage réalisé ainsi n'affecte en aucun cas le solde à chaque ligne, qui est calculé après chaque opération; suivant le tri et les options d'affichage que vous avez choisi, le solde à chaque ligne peut présenter une évolution non chronologique.
+
+%espace pour changement de thème
+\vspacepdf{3mm}
+You can also configure the general sort order in the \menus{Edit - Preferences} menu (see the section \vref{setup-operations-list-modes}, \menus{Transaction list behavior}).
+%Vous pouvez aussi configurer l'ordre général des tris dans le menu \menus{Éditer - Préférences} (voir la section \vref{setup-operations-list-modes}, \menus{Comportement de la liste des opérations}).
+
+\vspacepdf{3mm}
+%\Note{}: the choice of the \gls{primary sorting} criterion (transaction date or value date) that may have been selected there will necessarily affect the balance displayed on each transaction line, as Grisbi calculates and displays the balance on each line.
+%\Note{}: le choix du critère de \gls{tri primaire} (date d'opération ou date de valeur) qui peut y avoir été fait modifie nécessairement le solde affiché à chaque ligne d'opération, puisque Grisbi calcule et affiche le solde à chaque ligne.
+
+
+
+
+%%%   To change the order in which scheduled transactions are displayed, you can \indexword{sort by transactions}\index{sort!transactions} on one of the information fields; proceed as follows:
+%Pour changer l'ordre d'affichage des opérations planifiées, vous pouvez faire un \indexword{tri sur les opérations}\index{tri!opérations} sur un des champs d'information; procédez comme suit:
+
+\begin{enumerate}
+	%\item click on the column heading containing the information field selected as the \gls{sorting} criterion; the only possible sort criteria are \menus{Date}, \menus{Account} and \menus{Payee};
+	%\item cliquez sur le libellé de la colonne qui contient le champ d'information choisi comme critère de \gls{tri}; les seuls critères de tri possibles sont la \menus{Date}, le \menus{Compte} et le \menus{Tiers};
+	\item all transactions are displayed, sorted according to the selected criterion;
+	%\item toutes les opérations s'affichent, triées selon le critère choisi;
+	\item a small black triangle appears to the right of the column heading; it points downwards if the sort is ascending, and upwards if it is descending;
+	%\item un petit triangle noir apparaît à droite du libellé de la colonne; il pointe vers le bas si le tri est ascendant, vers le haut si le tri est descendant;
+	
+	\Note{}: 
+	%\Note{}: ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+	
+	\item 
+	%\item cliquez sur ce triangle pour changer l'ordre du tri.
+\end{enumerate}
+
+
+\section{Geplanter Buchungsformular\label{plannedtransactions-form}}
+%\section{Form for entering scheduled transactions\label{plannedtransactions-form}}
+%\section{Formulaire de saisie des opérations planifiées\label{plannedtransactions-form}}
+
+Das Geplanter Buchungsformular\refimage{planned-transactions-form-img} wird unterhalb der Liste der geplanten Buchungen angezeigt. Es ähnelt dem Formular zur Erfassung gewöhnlicher Buchungen, enthält jedoch im oberen Bereich eine zusätzliche Zeile mit vier bis sechs Feldern zur Angabe:
+%The scheduled transactions entry form\refimage{planned-transactions-form-img} appears below the list of scheduled transactions. It is similar to the standard transactions entry form, but includes an additional row at the top with four to six fields for specifying:
+%Le formulaire de saisie des opérations planifiées\refimage{planned-transactions-form-img} s'affiche en-dessous de la liste des opérations planifiées. Il est similaire au formulaire de saisie des opérations ordinaires, mais il comprend, dans sa partie supérieure, une ligne supplémentaire de quatre à six champs pour indiquer:
+
+% image centrée
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/planned_transactions_form}
+	\end{center}
+	\vspace{-10pt}
+	\caption{Geplanter Buchungsformular}
+	%\caption{Form for entering scheduled transactions}
+	%\caption{Formulaire de saisie des opérations planifiées}
+	\label{planned-transactions-form-img}
+\end{figure}
+% image centrée
+
+\begin{itemize}
+	\item des betroffenen Kontos; im Falle einer Umbuchung zwischen zwei Konten können Sie eines der beiden Konten (Absender- oder Empfängerkonto) auswählen; die Art der Buchung (Ausgaben oder Einnahmen) muss im entsprechenden Feld angegeben werden, und die Gegenbuchung wird bei Ausführung der geplanten Buchung automatisch auf dem anderen Konto erstellt;
+	%\item the account to be debited; in the case of a transfer between two accounts, you can select either account (source or destination); the transaction type (debit or credit) must be entered in the appropriate field, and the offsetting entry will be automatically created in the other account when the scheduled transaction is executed;
+	%\item le compte affecté; dans le cas d'un virement entre deux comptes, vous pouvez sélectionner l'un ou l'autre des deux comptes (origine ou destination); le type de l'opération (débit ou crédit) doit être renseigné dans le champ adéquat, et la contre-opération sera automatiquement créée dans l'autre compte au moment de l'exécution de l'opération planifiée;
+	\item die Ausführungsmethode:
+	%\item the execution method:
+	%\item le mode d'exécution:
+	\begin{itemize}
+		\item \menus{Manuell}: Sie müssen die Eingabe im Formular manuell ausführen, indem Sie die Funktion \menus{Ausführen} in der Funktionsleiste oder im Kontextmenü auswählen (siehe Abschnitt \vref{plannedtransactions-execution}, \menus{Ausführung einer geplanten Buchung}),
+		%\item \menus{Manual}: you will need to manually execute the entry in the form by selecting the \menus{Execute} function from the function bar or the context menu (see the section \vref{plannedtransactions-execution}, \menus{Executing a scheduled transaction}),
+		%\item \menus{Manuel}: vous devrez exécuter manuellement la saisie dans le formulaire en sélectionnant la fonction \menus{Exécuter} dans la barre de fonctions ou dans le menu contextuel (voir la section \vref{plannedtransactions-execution}, \menus{Exécution d'une opération planifiée}),
+		\item \menus{Automatisch}: die Buchung wird automatisch zum geplanten Datum in die Buchungsliste aufgenommen;
+		%\item \menus{Automatic}: the transaction will be automatically entered into the list of transactions on the scheduled date;
+		%\item \menus{Automatique}: l'opération sera automatiquement saisie dans la liste des opérations à la date programmée;
+	\end{itemize}
+	\item the \menus{Frequenz}:
+	%\item the \menus{Frequency}:
+	%\item la \menus{Périodicité}:
+	\begin{itemize}
+		\item \menus{Einmal},
+		%\item \menus{Once},
+		%\item \menus{Une fois},
+		\item \menus{Wöchentlich},
+		%\item \menus{Weekly},
+		%\item \menus{Hebdomadaire},
+		\item \menus{Monatlich},
+		%\item \menus{Monthly},
+		%\item \menus{Mensuelle},
+		\item \menus{Zweimonatlich},
+		%\item \menus{BimonthlyBimonthly},
+		%\item \menus{Bimestrielle},
+		\item \menus{Vierteljährlich},
+		%\item \menus{Quarterly},
+		%\item \menus{Trimestrielle},
+		\item \menus{Jährlich},
+		%\item \menus{Annually},
+		%\item \menus{Annuelle},
+		\item \menus{Benutzerdefiniert}\refimage{planned-transactions-form-frequency-custom-img}; In diesem Fall müssen Sie die Anzahl der Zeiträume zwischen jeder Eingabe oder jeder Aufforderung zur Bestätigung des Buchung sowie den gewünschten Zeitraum (Tage, Wochen, Monate, Jahre) genauer angeben;
+		%\item \menus{Custom}\refimage{planned-transactions-form-frequency-custom-img}; in this case, you will need to specify in greater detail the number of periods between each entry or request for validation of the transaction, as well as the desired time period (days, weeks, months, years);
+		%\item \menus{Personnalisée}\refimage{planned-transactions-form-frequency-custom-img}; dans ce cas, vous devrez préciser plus finement le nombre de périodes entre chaque saisie ou demande de validation de l'opération, ainsi que la période voulue (jours, semaines, mois, années);
+		% image centrée
+		%\hspace{20pt}
+		\item[]	\begin{figure}[htbp]
+			\begin{flushright}						% right align
+				\captionsetup{%							% for a change of options of the caption package
+					justification=centering}			% centring of text and caption label
+				\includegraphics[width=0.95\linewidth]{image/screenshot/planned_transactions_form_frequency_custom}
+			\end{flushright}
+			\caption{Eingabe einer benutzerdefinierten Frequenz}
+			%\caption{Entering a custom frequency}
+			%\caption{Saisie d'une périodicité personnalisée}
+			\label{planned-transactions-form-frequency-custom-img}
+		\end{figure}
+		% image centrée
+	\end{itemize}
+	\item die \menus{Fälligkeitstermin}; Die Standardeinstellung ist leer; ein Doppelklick oder die Tastenkombination \keys{Strg+Enter \return} in diesem Feld öffnet einen Kalender; Sie können das Datum auch manuell eingeben, indem Sie die verschiedenen Tastenkombinationen verwenden, wie sie im Abschnitt \vref{transactions-new-dates}, \menus{Eingabe des Datums überdie Tastatur} beschrieben sind.
+	%\item the \menus{Limite date} for due dates; the default selection is empty; double-clicking or pressing the key combination \keys{Ctrl+Enter \return} in this field opens a calendar; you can also enter the date manually using the various key combinations described in the section \vref{transactions-new-dates}, \menus{Entering the date using the keyboard}.
+	%\item la \menus{Date limite} des échéances; le choix par défaut est vide; un double-clic ou la combinaison de touches \keys{Ctrl+Entrée \return} dans ce champ ouvre un calendrier; vous pouvez aussi saisir manuellement la date en utilisant les multiples combinaisons de touches telles que décrites dans la section \vref{transactions-new-dates}, \menus{Saisie de la date au clavier}.
+	\end{itemize}
+	
+	% espace pour changement de thème
+	\vspacepdf{2mm}
+	Der untere Teil des Buchungsformular ist identisch mit dem Buchungsformular zur Eingabe gewöhnlicher Buchungen und wird auf dieselbe Weise verwaltet\refimage{planned-transactions-form-img}, siehe Abschnitt \vref{transactions-form}, \menus{Buchungsformular}.
+	%The lower part of the form is exactly the same as the form for entering ordinary transactions, and is handled in the same way\refimage{planned-transactions-form-img}, see the section \vref{transactions-form}, \menus{Transaction/Scheduled entry form}.
+	%La partie inférieure du formulaire est strictement identique au formulaire de saisie des opérations ordinaires, et est géré de la même manière\refimage{planned-transactions-form-img}, voir la section \vref{transactions-form}, \menus{Formulaire de saisie des opérations}.
+
+	% espace pour changement de thème
+	\vspacepdf{2mm}
+	Sobald das Buchungsformular angezeigt wird, ermöglicht ein Kontextmenü, das durch einen \texttt{Rechtsklick} in ein Eingabefeld aufgerufen wird, die folgenden Aktionen:
+	%Once the form is displayed, a context menu accessible by \texttt{right-clicking} in an input field allows you to perform the following actions:
+	%Une fois le formulaire affiché, un menu contextuel accessible par un \texttt{clic-droit} dans un champ de saisie permet d'effectuer les actions suivantes:
+	
+	\begin{itemize}
+	\item \menus{Ausschneiden} (der Auswahl);
+	%\item \menus{Cut} (the selection);
+	%\item \menus{Couper} (la sélection);
+	\item \menus{Kopieren} (der Auswahl);
+	%\item \menus{Copy} (the selection);
+	%\item \menus{Copier} (la sélection);
+	\item \menus{Einfügen} (der Auswahl);
+	%\item \menus{Paste} (the selection);
+	%\item \menus{Coller} (la sélection);
+	\item \menus{Löschen} (der Auswahl);
+	%\item \menus{Delete} (the selection);
+	%\item \menus{Supprimer} (la sélection);
+	\item[]\hspace{-12pt} dann
+	%\item[]\hspace{-12pt} then
+	%\item[]\hspace{-12pt} puis
+	\item \menus{Alles auswählen} (im Eingabefeld);
+	%\item \menus{Select All} (in the input field);
+	%\item \menus{Tout sélectionner} (dans le champ de saisie);
+	\item \menus{Emoji einfügen}\index{émoji}.
+	%\item \menus{Insert Emoji}\index{émoji}.
+	%\item \menus{Insérer un émoji}\index{émoji}.
+	\end{itemize}
+	
+	% espace pour changement de thème
+	\vspacepdf{2mm}
+	Darüber hinaus ermöglicht ein weiteres Kontextmenü, das durch einen Rechtsklick im Buchungsformular in einem grauen Bereich außerhalb der Eingabefelder aufgerufen wird, den Zugriff auf die Formularkonfiguration durch Auswahl von \menus{Buchungsformular Einstellungen} (siehe Abschnitt \vref{setup-form}, \menus{Buchungsformular}).
+	%In addition, another context menu, accessible by right-clicking in the entry form within a grey area outside the input fields, allows you to access the form’s configuration by selecting \menus{Configure the form} (see the section \vref{setup-form}, \menus{Transactions form}).
+	%De plus, un autre menu contextuel accessible par un clic-droit dans le formulaire de saisie, dans une zone grise en dehors des champs de saisie, permet d'accéder à la configuration du formulaire, en sélectionnant \menus{Configurer le formulaire} (voir la section \vref{setup-form}, \menus{Formulaire des opérations}).
+	
+	% espace pour changement de thème
+	\vspacepdf{2mm}
+	Bitte beachten Sie, dass die Auswahl der Buchungstypen zwangsläufig mit dem ausgewählten Kontotyp verknüpft ist (siehe Abschnitt \vref{accounts-type}, \menus{Arten von Grisbi-Konten}).
+	%Please note that the choice of transaction types is necessarily linked to the selected account type (see the section \vref{accounts-type}, \menus{Types of Grisbi accounts}).
+	%Notez que le choix des types d'opérations est nécessairement lié au type du compte sélectionné (voir la section \vref{accounts-type}, \menus{Types de compte de Grisbi}).
+	
+
+
+
