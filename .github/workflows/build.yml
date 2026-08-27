@@ -16,7 +16,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job
       # can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: setup prerequisites
         shell: bash
@@ -35,13 +35,13 @@ jobs:
           make
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: html_3.0-fr
           path: src/3.0/fr/html/grisbi-manuel_3.0-fr.html
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pdf_3.0-fr
           path: src/3.0/fr/pdf/grisbi-manuel_3.0-fr.pdf
@@ -53,13 +53,13 @@ jobs:
           make
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: html_3.0-en
           path: src/3.0/en/html/grisbi-manuel_3.0-en.html
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pdf_3.0-en
           path: src/3.0/en/pdf/grisbi-manuel_3.0-en.pdf
@@ -71,13 +71,13 @@ jobs:
           make
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: html_3.0-de
           path: src/3.0/de/html/grisbi-manuel_3.0-de.html
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pdf_3.0-de
           path: src/3.0/de/pdf/grisbi-manuel_3.0-de.pdf
@@ -87,13 +87,13 @@ jobs:
         run: cd src/2.0/fr ; make
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pdf-fr-2.0
           path: src/2.0/fr/pdf_img/grisbi-manuel-img-2.0.pdf
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: html-fr-2.0
           path: src/2.0/fr/html_img
@@ -103,13 +103,13 @@ jobs:
         run: cd src/1.0/en ; make English
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pdf-en-1.0
           path: src/1.0/en/pdf_img/grisbi-manuel-en-img-1.0.pdf
 
       - name: artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: html-en-1.0
           path: src/1.0/en/html_img
