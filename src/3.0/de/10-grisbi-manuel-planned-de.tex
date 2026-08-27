@@ -238,7 +238,7 @@ Wenn Sie \menus{Ansicht benutzerdefiniert} wählen, öffnet sich ein neues Fenst
 \end{figure}
 % image centrée 
 
-\subsection{Sortierungen\label{plannedtransactions-list-sorts}}
+\subsection{Sortierungen\textcolor{red}{--ZU KORRIGIEREN--}\label{plannedtransactions-list-sorts}}
 %\subsection{Sorts\label{plannedtransactions-list-sorts}}
 %\subsection{Tris\label{plannedtransactions-list-sorts}}
 %TODO : subsection to update - bug 2391
@@ -424,7 +424,192 @@ Das Geplanter Buchungsformular\refimage{planned-transactions-form-img} wird unte
 	Bitte beachten Sie, dass die Auswahl der Buchungstypen zwangsläufig mit dem ausgewählten Kontotyp verknüpft ist (siehe Abschnitt \vref{accounts-type}, \menus{Arten von Grisbi-Konten}).
 	%Please note that the choice of transaction types is necessarily linked to the selected account type (see the section \vref{accounts-type}, \menus{Types of Grisbi accounts}).
 	%Notez que le choix des types d'opérations est nécessairement lié au type du compte sélectionné (voir la section \vref{accounts-type}, \menus{Types de compte de Grisbi}).
+
+
+\section{Kalender und Prognosen\label{plannedtransactions-calendar}}
+%\section{Calendar and forecasts\label{plannedtransactions-calendar}}
+%\section{Calendrier et prévisions\label{plannedtransactions-calendar}}
+
+Am unteren Rand des Navigationsbereichs\refimage{planned-transactions-display-img} wird ein Kalender\refimage{planned-transactions-calendar-img} angezeigt. Der aktuelle Tag ist \colorbox[RGB]{198,200,201}{hervorgehoben}, und die \textbf{fettgedruckten} Daten entsprechen den Terminen der für diesen Tag geplanten Buchungen für alle Konten.
+%A calendar\refimage{planned-transactions-calendar-img} is displayed at the bottom of the navigation panel\refimage{planned-transactions-display-img}. The current day is \colorbox[RGB]{198,200,201}{highlighted}, and the dates \textbf{in bold} correspond to the dates of scheduled transactions for all accounts due on that day.
+%Un calendrier\refimage{planned-transactions-calendar-img} s'affiche en bas du panneau de navigation\refimage{planned-transactions-display-img}. Le jour en cours est \colorbox[RGB]{198,200,201}{surligné}, et les dates \textbf{en gras} correspondent aux dates des opérations planifiées de tous les comptes arrivant à échéance.
+
+
+\vspace{5mm}
+\noindent
+\begin{minipage}{.6\linewidth}
+	\vspace{-15pt}
+	\begin{itemize}[rightmargin=.6cm]
+		\item Mit den Tasten \keys{\arrowkeyleft} oder \keys{\arrowkeyright} können Sie zum vorherigen oder nächsten Tag wechseln;
+		%\item the \keys{\arrowkeyleft} or \keys{\arrowkeyright} keys allow you to move to the previous or next day;
+		%\item les touches \keys{\arrowkeyleft} ou \keys{\arrowkeyright}, permettent de passer au jour précédent ou suivant;
+		\item mit den Tasten \keys{\arrowkeyup} oder \keys{\arrowkeydown} können Sie zur vorherigen oder nächsten Woche wechseln;
+		%\item the \keys{\arrowkeyup} or \keys{\arrowkeydown} keys allow you to move to the previous or next week;
+		%\item les touches \keys{\arrowkeyup} ou \keys{\arrowkeydown} permettent de passer à la semaine précédente ou suivante;
+		\item Mit den Tastenkombinationen \keys{Strg+\arrowkeyleft} oder \keys{Strg+\arrowkeyright} können Sie zum vorherigen oder nächsten Monat wechseln;
+		%\item the key combination \keys{Ctrl+\arrowkeyleft} or \keys{Ctrl+\arrowkeyright} allows you to move to the previous or next month;
+		%\item la combinaison de touches \keys{Ctrl+\arrowkeyleft} ou \keys{Ctrl+\arrowkeyright} permet de passer au mois précédent ou suivant;
+		\item mit den Tastenkombinationen \keys{Strg+\arrowkeyup} oder \keys{Strg+\arrowkeydown} können Sie zum vorherigen oder nächsten Jahr wechseln.
+		%\item the \keys{Ctrl+\arrowkeyup} or \keys{Ctrl+\arrowkeydown} key combinations allow you to move to the previous or next year.
+		%\item la combinaison de touches \keys{Ctrl+\arrowkeyup} ou \keys{Ctrl+\arrowkeydown} permet de passer à l'année précédente ou suivante.
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{.4\linewidth}
+	%\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+	%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+	\vspace{-10pt}
+	%\centering							% centering the floating figure in the "wrap"
+	\raggedleft
+	\includegraphics[width=.9\textwidth]{image/screenshot/planned_transactions_calendar}
+	%\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{%						% for a change of options of the caption package
+		format=plain,					% to avoid error message with labelsep option below, default=hang
+		type=figure,%
+		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+		justification=centering,		% centring of text and caption label 
+		labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Fälligkeitskalender}		% \caption is mandatory to reference a figure in lof
+	%\caption{Due dates calendar}		% \caption is mandatory to reference a figure in lof
+	%\caption{Calendrier des échéances}		% \caption is mandatory to reference a figure in lof
+	%\vspace{-10pt}						% space below the caption
+	\label{planned-transactions-calendar-img}
+	%\end{wrapfigure}
+\end{minipage}
+
+
+\section{Auswahl einer geplanten Buchung\label{plannedtransactions-selection}}
+%\section{Selecting a scheduled transaction\label{plannedtransactions-selection}}
+%\section{Sélection d'une opération planifiée\label{plannedtransactions-selection}}
+
+Es gibt zwei Möglichkeiten, eine geplante Buchung auszuwählen:
+%There are two ways to select a scheduled transaction:
+%Pour sélectionner une opération planifiée, vous avez deux moyens:
+\begin{itemize}
+	\item Klicken Sie auf die entsprechende Zeile;
+	%\item click on its row;
+	%\item cliquer sur sa ligne;
+	\item bewegen Sie die Auswahl mit den Tasten \keys{\arrowkeyup} und \keys{\arrowkeydown} auf der Tastatur.
+	%\item move the selection using the \keys{\arrowkeyup} and \keys{\arrowkeydown} keys on the keyboard.
+	%\item déplacer la sélection avec les touches \keys{\arrowkeyup} et \keys{\arrowkeydown} du clavier.
+\end{itemize}
+
+Der Buchung wird dann auf \colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund} angezeigt und seine Details werden im Buchungsformular angezeigt.
+%The transaction will then appear on a \colorbox[RGB]{245,155,155}{dark pink background} and its details will be displayed in the form.
+%L'opération apparaît alors sur \colorbox[RGB]{245,155,155}{fond rose foncé} et ses détails s'affichent dans le formulaire.
+
+\vspace{2mm}
+Ein \texttt{Rechtsklick} auf die Zeile eines geplanten Buchung öffnet ein Kontextmenü mit den folgenden Funktionen\refimage{planned-transactions-contextMenu-img}:
+%A \texttt{right-click} on the row of a scheduled transaction displays a context menu with the following functions\refimage{planned-transactions-contextMenu-img}:
+%Un \texttt{clic-droit} sur la ligne d'une opération planifiée affiche un menu contextuel avec les fonctions suivantes\refimage{planned-transactions-contextMenu-img}:
+
+\vspace{3mm}
+\noindent
+\begin{minipage}{.65\linewidth}
+	\vspace{-25pt}
+	\begin{itemize}[rightmargin=.6cm]
+		\item \menus{Buchung bearbeiten};
+		%\item \menus{Edit transaction};
+		%\item \menus{Éditer l'opération};
+		\item \menus{Buchung duplizieren};
+		%\item \menus{Clone transaction};
+		%\item \menus{Cloner l'opération};
+		\item \menus{Buchung erstellen};
+		%\item \menus{New transaction};
+		%\item \menus{Nouvelle opération};
+		\item \menus{Buchung löschen};
+		%\item \menus{Delete transaction};
+		%\item \menus{Supprimer l'opération};
+		\item \menus{Notizen anzeigen} oder \menus{Frequenz/Art anzeigen};
+		%\item \menus{Displays notes} or \menus{Displays Frequency/Mode};
+		%\item \menus{Afficher les remarques} ou \menus{Afficher Périodicité/Mode};
+		\item \menus{Buchung ausführen}.
+		%\item \menus{Execute transaction}.
+		%\item \menus{Exécuter l'opération}.
+	\end{itemize}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{.35\linewidth}
+	%\begin{wrapfigure}{R}{0.4\textwidth}%50mm
+	%\vspace{-\intextsep}				% space above the floating (minus intextsep=separation between float and text in text)
+	%\vspace{-20pt}
+	\centering							% centering the floating figure in the "wrap"
+	%\raggedleft
+	\includegraphics[width=.9\textwidth]{image/screenshot/planned_transactions_contextMenu}
+	%\vspace{-15pt}						% space between the floating and the caption below the floating
+	\captionsetup{%						% for a change of options of the caption package
+		format=plain,					% to avoid error message with labelsep option below, default=hang
+		type=figure,%
+		name=Fig.,%						% rename label caption, default="Figure" (or "Table")
+		justification=centering,		% centring of text and caption label 
+		labelsep=newline}				% define the separator between the label and the caption text
+	\caption{Kontextmenü für\\ eine geplante Buchung}		% \caption is mandatory to reference a figure in lof
+	%\caption{Context menu\\ for a scheduled transaction}		% \caption is mandatory to reference a figure in lof
+	%\caption{Menu contextuel\\ d'une opération planifiée}		% \caption is mandatory to reference a figure in lof
+	%\vspace{-10pt}						% space below the caption
+	\label{planned-transactions-contextMenu-img}
+	%\end{wrapfigure}
+\end{minipage}
+
+
+\section{Neuer geplanter Buchung\label{plannedtransactions-new}}
+%\section{New scheduled transaction\label{plannedtransactions-new}}
+%\section{Nouvelle opération planifiée\label{plannedtransactions-new}}
+
+Die Eingabe eines geplanten Buchung erfolgt ähnlich wie die Eingabe eines Standardbuchung.
+%Entering a scheduled transaction is done in a similar way to entering a standard transaction.
+%La saisie d'une opération planifiée se fait d'une manière similaire à la saisie d'une opération ordinaire.
+
+Um das Buchungsformular \indexword{zu öffnen oder anzuzeigen}\index{Buchungsformular!anzeigen}, verwenden Sie eine der folgenden Methoden:
+%To \indexword{open or display}\index{entry form!display} the entry form, use one of the following methods:
+%Pour \indexword{ouvrir ou afficher}\index{formulaire de saisie!afficher} le formulaire de saisie, utilisez une des méthodes suivantes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung erstellen};
+	%\item from the menu bar, select \menus{Edit - New transaction};
+	%\item dans la barre de menu, sélectionnez \menus{Éditer - Nouvelle opération};
+	\item Wählen Sie in der Menüleiste \menus{Ansicht} und aktivieren Sie das Kontrollkästchen für die Option \menus{Buchungsformular anzeigen};
+	%\item from the menu bar, select \menus{View} and tick the box for the \menus{Show transaction form} option;
+	%\item dans la barre de menu, sélectionnez \menus{Affichage} et cochez la case de l'option \menus{Montrer le formulaire de saisie des opérations};
+	\item Markieren Sie die leere Zeile am Ende der Buchungsliste und drücken Sie die Taste \keys{Enter \return};
+	%\item select the empty line at the bottom of the list of transactions and press the \keys{Enter \return} key;
+	%\item sélectionnez la ligne vide en bas de la liste des opérations et appuyez sur la touche \keys{Entrée \return};
+	\item Klicken Sie auf die leere Zeile am Ende der Buchungsliste;
+	%\item click on the empty line at the bottom of the list of transactions;
+	%\item cliquez sur la ligne vide en bas de la liste des opérations;
+	\item Drücken Sie die Tastenkombination \keys{Strg+T};
+	%\item press the \keys{Ctrl+T} key combination;
+	%\item appuyez sur la combinaison de touches \keys{Ctrl+T};
+	\item Klicken Sie in der Symbolleiste auf \menus{Geplante Buchung erstellen};
+	%\item in the toolbar, click \menus{New scheduled};
+	%\item dans la barre d'outils, cliquez sur \menus{Nouvelle échéance};
+	\item Wählen Sie im Kontextmenü der Buchungsliste \menus{Buchung erstellen} aus;
+	%\item in the context menu of the transaction list, select \menus{New Transaction};
+	%\item dans le menu contextuel de la liste des opérations, sélectionnez \menus{Nouvelle opération};
+	\item Klicken Sie auf das kleine Dreieck neben der Beschriftung \indexword{anzeigen/ausblenden}\index{Buchungsform!anzeige/ausblenden} im Formular für Buchungsformular links neben der Beschriftung.
+	%\item click on the small \indexword{show/hide}\index{entry form!hide-show} triangle on the transaction form to the left of its label.
+	%\item cliquez sur le petit triangle d'\indexword{affichage/masquage}\index{formulaire de saisie!masquer-afficher} du formulaire de saisie des opérations à gauche de son libellé.
 	
+	% saut de ligne pour indentation correcte de la note dans la liste
+	\vspacepdf{2mm}
+	\Note{}: Je nach Design deiner Desktop-Umgebung oder des von dir verwendeten Fenstermanagers können diese Dreiecke durch andere Zeichen wie +, -, >, < usw. ersetzt werden.
+	%\Note{}: depending on the theme of your desktop environment or the window manager you are using, this triangle may be replaced by other characters such as +, -, >, <, etc.
+	%\Note{}: ce triangle peut être remplacé, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Füllen Sie die Felder mit den Details Ihrer geplanten Transaktion aus. Weitere Informationen zur Eingabe dieser Details in das Formular finden Sie in den Abschnitten \vref{plannedtransactions-form}, \menus{Geplanter Buchungsformular} und \vref{plannedtransactions-calendar}, \menus{Kalender und Prognosen}.
+%Fill in the fields with the details of your scheduled transaction. For more details on entering these details into the form, see the sections \vref{plannedtransactions-form}, \menus{Transaction/Scheduled form} and \vref{plannedtransactions-calendar}, \menus{Calendar and Forecasts}.
+%Renseignez les champs avec les paramètres de votre opération planifiée. Pour plus de détails sur la saisie de ces paramètres dans le formulaire, voir les sections \vref{plannedtransactions-form}, \menus{Formulaire de saisie des opérations planifiées} et \vref{plannedtransactions-calendar}, \menus{Calendrier et prévisions}.
+
+
+\section{Splitt einer geplanten Buchung\label{plannedtransactions-breakdown}}
+%\section{Breakdown of a scheduled transaction\label{plannedtransactions-breakdown}}
+%\section{Ventilation d'une opération planifiée\label{plannedtransactions-breakdown}}
+
+Die Splitt einer geplanten Buchung erfolgt ähnlich wie bei einer gewöhnlichen Buchung. Nachdem Sie die Felder in der ersten Zeile des Formulars ausgefüllt haben (siehe Abschnitt \vref{plannedtransactions-form}, \menus{Geplanter Buchungsformular}), geben Sie die übrigen Buchungsparameter im unteren Teil dieses Buchungsformulars ein (siehe Abschnitt \vref{transactions-form}, \menus{Buchungsformular}) ein und fahren Sie mit der Eingabe der aufgeteilten geplanten Buchung fort, wie im Abschnitt \vref{transactions-breakdown}, \menus{Splittbuchung} ausführlich beschrieben.
+%The breakdown of a scheduled transaction is carried out in a similar way to that of an ordinary transaction. Once you have completed the fields on the first line of the form (see section \vref{plannedtransactions-form}, \menus{Transaction/Scheduled form}), enter the other transaction parameters in the lower part of this form (see section \vref{transactions-form}, \menus{Transaction/Scheduled entry form}), and proceed to enter the split scheduled transaction, as described in detail in the section \vref{transactions-breakdown}, \menus{Breakdown of a transaction}.
+%La ventilation d'une opération planifiée se fait d'une manière similaire à la ventilation d'une opération ordinaire. Une fois que vous avez renseigné les champs de la première ligne du formulaire (voir la section \vref{plannedtransactions-form}, \menus{Formulaire de saisie des opérations planifiées}), saisissez les autres paramètres de l'opération dans la partie inférieure de ce formulaire (voir la section \vref{transactions-form}, \menus{Formulaire de saisie des opérations}), et procédez à la saisie de l'opération planifiée ventilée, comme décrit précisément dans la section \vref{transactions-breakdown}, \menus{Ventilation d'une opération}.
 
 
 
