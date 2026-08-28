@@ -644,3 +644,188 @@ Um eine geplante Buchung, eine geplante Buchung mit Aufschlüsselung oder eine i
 \end{enumerate}
 
 
+\section{Duplizieren einer geplanten Buchung\label{plannedtransactions-duplicate}}
+%\section{Cloning a scheduled transaction\label{plannedtransactions-duplicate}}
+%\section{Clonage d'une opération planifiée\label{plannedtransactions-duplicate}}
+
+Um einen geplanten Buchung zu duplizieren, wählen Sie ihn aus, sodass er im Buchungsformular angezeigt wird, und verwenden Sie dann eine der beiden folgenden Methoden:
+%To clone a scheduled transaction, select it so that it appears in the form, then use one of the following two methods:
+%Pour cloner une opération planifiée, sélectionnez-la pour qu'elle s'affiche dans le formulaire de saisie, puis utilisez l'une de ces deux méthodes:
+\begin{itemize}
+	\item Wählen Sie in der Menüleiste \menus{Bearbeiten - Buchung duplizieren};
+	%\item in the menu bar, select \menus{Edit - Clone transaction};
+	%\item dans la barre de menus, sélectionnez \menus{Éditer - Cloner l'opération};
+	\item Wählen Sie im Kontextmenü \menus{Buchung duplizieren}.
+	%\item from the context menu, select \menus{Clone transaction}. 
+	%\item dans le menu contextuel, sélectionnez \menus{Cloner l'opération}.
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Der zuvor ausgewählte Buchung wird weiterhin auf \colorbox[RGB]{245,155,155}{dunkelrosa Hintergrund} angezeigt, und der geklonte Buchung wird in einer neuen Zeile darunter angezeigt.
+%The selected transaction is still displayed on a \colorbox[RGB]{245,155,155}{dark pink background}, and the cloned transaction appears on a new line below it.
+%L'opération sélectionnée précédemment apparaît toujours sur \colorbox[RGB]{245,155,155}{fond rose foncé}, et l'opération clonée s'affiche dans une nouvelle ligne en-dessous.
+
+Sie können diesen neuen Buchung nun bearbeiten, um beispielsweise das Datum zu ändern.
+%You can then edit this new transaction, for example, to change the date.
+%Vous pouvez alors éditer cette nouvelle opération pour, par exemple, en modifier la date.
+
+
+\section{Notizen zu geplanten Buchungen\label{plannedtransactions-comments}}
+%\section{Notes on scheduled transactions\label{plannedtransactions-comments}}
+%\section{Remarques des opérations planifiées\label{plannedtransactions-comments}}
+
+Sie können die Notizen auf zwei Arten ein- oder ausblenden:
+%You can show or hide notes in two ways:
+%Vous pouvez afficher ou cacher les remarques de deux manières:
+\begin{itemize}
+	\item Klicken Sie in der Symbolleiste auf das Symbol \menus{Notizen};
+	%\item click on the \menus{Notes} tool in the toolbar;
+	%\item cliquez sur l'outil \menus{Remarques} dans la barre d'outils;
+	\item klicken Sie mit der rechten Maustaste auf die Zeile der Buchung und wählen Sie im Kontextmenü \menus{Notizen anzeigen} aus.
+	%\item right-click on the transaction row and select \menus{Displays notes} from the context menu.
+	%\item cliquez-droit sur la ligne de l'opération et sélectionnez \menus{Afficher les remarques} dans le menu contextuel.
+\end{itemize}
+
+Die Notizen zu allen Buchungen werden dann anstelle der Spalten \menus{Frequenz} und \menus{Art} in der Liste der geplanten Buchungen\refimage{planned-transactions-list-comments-img} angezeigt. Wenn Sie denselben Vorgang wiederholen, werden die Spalten \menus{Frequenz} und \menus{Modus} anstelle der Spalte \menus{Notizen} wiederhergestellt.
+%The notes for all transactions are then displayed in place of the \menus{Frequency} and \menus{Mode} columns in the list of scheduled transactions\refimage{planned-transactions-list-comments-img}. Repeating the same sequence will restore the \menus{Frequency} and \menus{Mode} columns in place of the \menus{Notes} column.
+%Les remarques de toutes les opérations s'affichent alors à la place des colonnes \menus{Périodicité} et \menus{Mode} dans la liste des opérations planifiées\refimage{planned-transactions-list-comments-img}. Recommencer la même séquence réaffiche les colonnes \menus{Périodicité} et \menus{Mode} à la place de la colonne \menus{Remarques}.
+
+% image centrée
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{image/screenshot/planned_transactions_list_comments}
+	\end{center}
+	\caption{Anzeigen von Notizen zu geplanten Buchungen}
+	%\caption{Displaying notes for scheduled transactions}
+	%\caption{Affichage des remarques des opérations planifiées}
+	\label{planned-transactions-list-comments-img}
+\end{figure}
+
+
+\section{Ausführen einer geplanten Buchung\label{plannedtransactions-execution}}
+%\section{Executing a scheduled transaction\label{plannedtransactions-execution}}
+%\section{Exécution d'une opération planifiée\label{plannedtransactions-execution}}
+
+Mit dieser Funktion können Sie die Ausführung einer geplanten Buchung manuell außerhalb des geplanten Termins erzwingen.
+%This function allows you to manually force the execution of a scheduled transaction outside the scheduled date.
+%Cette fonction permet de forcer manuellement l'exécution d'une opération planifiée en dehors de la date prévue.
+
+Die Funktion \menus{Ausführen} in der Symbolleiste dient ausschließlich dazu, die Details einer aus der Liste der geplanten Buchungen ausgewählten Buchung in das Buchungsformular zu kopieren. Damit diese Buchung tatsächlich in die Buchungsliste des entsprechenden Kontos übernommen wird, müssen Sie das Buchungsformular speichern, nachdem Sie gegebenenfalls Änderungen an der Buchung vorgenommen haben.
+%The \menus{Execute} function on the toolbar is used solely to copy the details of a transaction selected from the list of scheduled transactions into the transaction/scheduled form. For this instance to be effectively transferred to the list of transactions for the relevant account, you must then save the Transaction/Scheduled form, after making any necessary changes to the transaction.
+%La fonction \menus{Exécuter} de la barre d'outils sert uniquement à faire la recopie, dans le formulaire de saisie, de l'occurrence d'une opération sélectionnée dans la liste des opérations planifiées. Pour que cette occurrence soit effectivement transférée dans la liste des opérations du compte concerné, il est nécessaire de valider ensuite le formulaire de saisie, après avoir éventuellement modifié l'opération.
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Um eine geplante Buchung auszuführen, gehen Sie wie folgt vor:
+%To execute an instance of a scheduled transaction, proceed as follows:
+%Pour exécuter une occurrence d'une opération planifiée, procédez comme suit:
+\begin{enumerate}
+	\item Wählen Sie sie aus der Liste aus;
+	%\item select it from the list;
+	%\item sélectionnez-la dans la liste;
+	\item führen Sie sie dann aus, indem Sie:
+	%\item then execute it by:
+	%\item exécutez-la ensuite avec:
+	\begin{itemize}
+		\item entweder mit der \texttt{linken Maustaste} auf das Werkzeug \menus{Ausführen} in der Symbolleiste klicken,
+		%\item either \texttt{left-clicking} on the \menus{Execute} tool in the toolbar,
+		%\item soit un \texttt{clic-gauche} sur l'outil \menus{Exécuter} de la barre d'outils,
+		\item oder mit der \texttt{rechten Maustaste} auf die Buchungszeile klicken und im Kontextmenü \menus{Buchung ausführen} auswählen;
+		%\item or \texttt{right-clicking} on the transaction line and selecting \menus{Execute} from the context menu;
+		%\item soit un \texttt{clic-droit} sur la ligne de l'opération puis la sélection d' \menus{Exécuter l'opération} dans le menu contextuel;
+	\end{itemize}
+	\item Die ausgewählte Buchung wird dann im Buchungsformular angezeigt, wobei die oberste Zeile der Parameter der geplanten Buchung ausgeblendet ist; Sie können sie anschließend nach Bedarf bearbeiten;
+	%\item the selected transaction is then displayed in the transaction/scheduled form, with the top row of the scheduled transaction’s parameters hidden; you can then edit it as required;
+	%\item l'occurrence sélectionnée alors s'affiche dans le formulaire de saisie avec le masquage de la ligne supérieure des paramètres de l'opération planifiée; vous pouvez ensuite la modifier selon votre besoin;
+	\item Bestätigen Sie durch Klicken auf die Schaltfläche \menus{OK}; die Instanz der Buchung wird in die Buchungsliste des entsprechenden Kontos übernommen, und in der Liste der geplanten Buchungen wird die nächste Instanz (sofern vorhanden, da möglicherweise nur eine geplante Buchung vorliegt) der geplanten Buchung angezeigt.
+	%\item confirm by clicking the \menus{Validate} button; the instance of the transaction is transferred to the list of transactions for the relevant account, and the list of scheduled transactions displays the next instance (if any, as there may be only one scheduled transaction) of the scheduled transaction.
+	%\item validez avec le bouton \menus{Valider}; l'occurrence de l'opération est transférée dans la liste des opérations du compte concerné, et la liste des opérations planifiées affiche l'occurrence suivante (si elle existe, car l'opération planifiée peut être unique) de l'opération planifiée.
+\end{enumerate}
+
+% espace avant Attention ou Note : 5 mm
+\vspacepdf{2mm}
+\Note{}: Nach der Bestätigung wird die Überweisung ohne weitere Benachrichtigung ausgeführt.
+%\Note{}: Once confirmed, the transfer is carried out without further notification.
+%\Note{}: après cette validation, le transfert est fait sans autre avertissement.
+
+% espace pour changement de thème
+\vspacepdf{2mm}
+Sie können außerdem überprüfen, ob die geplante Buchung nach ihrer Bestätigung in der Liste der Buchungen des entsprechenden Kontos erscheint.
+%You can also check that, once the scheduled transaction has been validated, it appears in the list of transactions for the relevant account.
+%Vous pouvez aussi vérifier que la validation de l'exécution de l'occurrence de l'opération planifiée affiche bien ladite opération dans la liste des opérations du compte concerné.
+
+
+\section{Geplanten Buchung löschen\label{plannedtransactions-remove}}
+%\section{Deleting a scheduled transaction\label{plannedtransactions-remove}}
+%\section{Suppression d'une opération planifiée\label{plannedtransactions-remove}}
+
+Um eine geplante Buchung zu löschen, gehen Sie wie folgt vor:
+%To delete a scheduled transaction, proceed as follows:
+%Pour supprimer une opération planifiée, procédez comme suit:
+\begin{enumerate}
+	\item Wählen Sie sie aus der Liste aus;
+	%\item select it from the list;
+	%\item sélectionnez-la dans la liste;
+	\item dann entweder:
+	%\item then either:
+	%\item puis après soit:
+	\begin{itemize}
+		\item Klicken Sie mit der linken Maustaste auf das Werkzeug \menus{Löschen} in der Symbolleiste,
+		%\item left-click on the \menus{Delete} tool in the toolbar,
+		%\item un \texttt{clic-gauche} sur l'outil \menus{Supprimer} dans la barre d'outils,
+		\item oder klicken Sie mit der rechten Maustaste auf die Zeile der geplanten Buchung und wählen Sie \menus{Buchung löschen} aus dem Kontextmenü;
+		%\item or right-click on the line for the scheduled task and select \menus{Delete transaction} from the context menu;
+		%\item ou un \texttt{clic-droit} sur la ligne de l'opération planifiée puis la sélection de \menus{Supprimer l'opération} dans le menu contextuel;
+	\end{itemize}
+	\item Es öffnet sich ein Dialogfeld\refimage{planned-transactions-delete-img}, in dem Sie zum Löschen aufgefordert werden:
+	%\item a dialogue box opens\refimage{planned-transactions-delete-img} and asks you to delete:
+	%\item une boîte de dialogue s'ouvre\refimage{planned-transactions-delete-img} et vous propose de supprimer:
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{image/screenshot/planned_transactions_delete}
+		\end{center}
+		\vspace{-10pt}
+		\caption{Löschen einer geplanten Buchung}
+		%\caption{Deleting a scheduled transaction}
+		%\caption{Suppression d'une opération planifiée}
+		\vspace{-10pt}
+		\label{planned-transactions-delete-img}
+	\end{figure}
+	\begin{itemize}
+		\item \keys{Gesamte buchung}: Alle Buchungen, sowohl aktuelle als auch zukünftige, werden gelöscht; vergangene Buchungen bleiben erhalten,
+		%\item \keys{All the occurencies}: all transactions, both current and future, will be deleted; past transactions are retained,
+		%\item \keys{Toutes les occurrences}: toutes les opérations, courante et futures, seront supprimées, les opérations passées sont conservées, 
+		\item \keys{Nur diese Buchung}: Das heißt, nur die aktuelle Instanz (nur die ausgewählte Buchung wird gelöscht);
+		%\item \keys{Only this one}: that is, only the current occurence (only the selected transaction will be deleted);
+		%\item \keys{Juste celle-çi}: c'est-à-dire uniquement l'occurrence courante (seule l'opération sélectionnée sera supprimée);
+		\item Über das Kontrollkästchen \menus{Auswahl beibehalten und mit Meldung nicht mehr anzeigen?} können Sie Ihre Auswahl für zukünftige Löschvorgänge speichern, sodass das Dialogfeld nicht mehr erscheint;
+		%\item the tick box \menus{Keep this choice and do longer see this message?} allows you to save your choice for future deletions, and the dialogue box will no longer appear;
+		%\item la case à cocher \menus{Gardez ce choix et ne plus voir ce message?} permet de conserver votre choix pour les suppressions futures et la boîte de dialogue ne s'affichera plus;
+		
+		\vspacepdf{2mm}
+		\Attention{}: wenn Sie dieses Kontrollkästchen aktivieren, erfolgen zukünftige Löschvorgänge sofort, ohne Warnung und ohne Dialogfeld.
+		%\Attention{}: by ticking this box, future deletions will take place immediately, without warning and without a dialogue box.
+		%\Attention{}: en cochant cette case, les suppression futures seront immédiates, sans avertissement et sans boîte de dialogue.
+		
+		\vspacepdf{2mm}
+		\Note{}: Sie können die Anzeige des Löschdialogfelds in den Grisbi-Einstellungen wieder aktivieren; siehe das Kapitel \vref{setup-operations-remove} \menus{Löschrückfragen}.
+		%\Note{}: you can re-enable the display of the deletion dialogue box in Grisbi’s preferences; see the chapter \vref{setup-operations-remove} \menus{Messages before deleting}.
+		%\Note{}: vous pourrez rétablir l'affichage de la boîte de dialogue de suppression dans les préférence de Grisbi, voir le chapitre \vref{setup-operations-remove} \menus{Messages avant suppression}.
+	\end{itemize}
+	\item Treffen Sie Ihre Wahl; der Löschvorgang wird sofort ausgeführt.
+	%\item make your choice; the deletion is carried out immediately.
+	%\item faites votre choix, la suppression est exécutée immédiatement.
+\end{enumerate}
+
+% espace avant Attention ou Note : 5 mm
+\vspacepdf{2mm}
+\Attention{}: Unmittelbar nach der Auswahl von entweder \menus{Gesamte buchung} oder \menus{Nur diese Buchung} wird der Löschvorgang ohne weitere Warnung ausgeführt.
+%\Attention{}: immediately after selecting either \menus{All the occurrencies} or \menus{Only this one}, the deletion is carried out without further warning.
+%\Attention{}: immédiatement après le choix entre \menus{Toutes les occurrences} et \menus{Juste celle-ci}, la suppression est exécutée sans autre avertissement.
+
+% espace avant Attention ou Note : 5 mm
+\vspacepdf{2mm}
+\Attention{}: Das Löschen eines geplanten Buchung ist \indexword{unwiderruflich};\index{Buchung!unwiderruflich}!
+%\Attention{}: deleting a scheduled transaction is \indexword{irreversible};\index{transaction!irreversible}!
+%\Attention{}: la suppression d'une opération planifiée est \indexword{irréversible}\index{opération!irréversible}!
