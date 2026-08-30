@@ -11,7 +11,7 @@
 
 \chapter{Échéancier\label{plannedtransactions}}
 
-L'échéancier permet de planifier des opérations qui reviennent régulièrement avec des dates ou des intervalles de temps déterminés. Une fois qu'une opération est enregistrée dans l'échéancier, Grisbi recopie automatiquement l'opération planifiée dans la liste des opérations dès que sa \indexword{date d'échéance}\index{date!échéance} est atteinte.
+%L'échéancier permet de planifier des opérations qui reviennent régulièrement avec des dates ou des intervalles de temps déterminés. Une fois qu'une opération est enregistrée dans l'échéancier, Grisbi recopie automatiquement l'opération planifiée dans la liste des opérations dès que sa \indexword{date d'échéance}\index{date!échéance} est atteinte.
 
 
 De plus, Grisbi affiche dans la page d'accueil des alertes au déclenchement des échéances de ces opérations (voir la section \vref{home-details-homepage}, \menus{Affichage de la page d'accueil}).
@@ -221,7 +221,7 @@ La partie inférieure du formulaire est strictement identique au formulaire de s
 
 % espace pour changement de thème
 \vspacepdf{2mm}
-Une fois le formulaire affiché, un menu contextuel accessible par un \texttt{clic-droit} dans un champ de saisie permet d'effectuer les actions suivantes:
+Une fois le formulaire affiché, un menu contextuel accessible par un \cmds{clic-droit} dans un champ de saisie permet d'effectuer les actions suivantes:
 
 \begin{itemize}
 	\item \menus{Couper} (la sélection);
@@ -290,7 +290,7 @@ Pour sélectionner une opération planifiée, vous avez deux moyens:
 L'opération apparaît alors sur \colorbox[RGB]{245,155,155}{fond rose foncé} et ses détails s'affichent dans le formulaire.
 
 \vspace{2mm}
-Un \texttt{clic-droit} sur la ligne d'une opération planifiée affiche un menu contextuel avec les fonctions suivantes\refimage{planned-transactions-contextMenu-img}:
+Un \cmds{clic-droit} sur la ligne d'une opération planifiée affiche un menu contextuel avec les fonctions suivantes\refimage{planned-transactions-contextMenu-img}:
 
 \vspace{3mm}
 \noindent
@@ -365,8 +365,8 @@ Pour modifier une opération planifiée, ou une opération planifiée ventilée 
 	\item sélectionnez-la soit:
 		\begin{itemize}
 			\item par sélection dans la liste des opérations où elle s'affichera sur \colorbox[RGB]{245,155,155}{fond rose foncé},
-			\item par \texttt{clic-gauche} sur l'outil \menus{Éditer} de la barre d'outils,
-			\item par \texttt{clic-droit} sur la ligne de l'opération puis sélection de \menus{Éditer l'opération} dans le menu contextuel;
+			\item par \cmds{clic-gauche} sur l'outil \menus{Éditer} de la barre d'outils,
+			\item par \cmds{clic-droit} sur la ligne de l'opération puis sélection de \menus{Éditer l'opération} dans le menu contextuel;
 		\end{itemize}
 	\item le formulaire de saisie s'affiche et le champ \menus{Date} est sélectionné: vous pouvez alors modifier toutes les données de l'opération à votre convenance;
 	\item validez par le bouton \menus{Valider}.
@@ -422,8 +422,8 @@ Pour exécuter une occurrence d'une opération planifiée, procédez comme suit:
 	\item sélectionnez-la dans la liste;
 	\item exécutez-la ensuite avec:
 		\begin{itemize}
-			\item soit un \texttt{clic-gauche} sur l'outil \menus{Exécuter} de la barre d'outils,
-			\item soit un \texttt{clic-droit} sur la ligne de l'opération puis la sélection d' \menus{Exécuter l'opération} dans le menu contextuel;
+			\item soit un \cmds{clic-gauche} sur l'outil \menus{Exécuter} de la barre d'outils,
+			\item soit un \cmds{clic-droit} sur la ligne de l'opération puis la sélection d' \menus{Exécuter l'opération} dans le menu contextuel;
 		\end{itemize}
 	\item l'occurrence sélectionnée alors s'affiche dans le formulaire de saisie avec le masquage de la ligne supérieure des paramètres de l'opération planifiée; vous pouvez ensuite la modifier selon votre besoin;
 	\item validez avec le bouton \menus{Valider}; l'occurrence de l'opération est transférée dans la liste des opérations du compte concerné, et la liste des opérations planifiées affiche l'occurrence suivante (si elle existe, car l'opération planifiée peut être unique) de l'opération planifiée.
@@ -445,8 +445,8 @@ Pour supprimer une opération planifiée, procédez comme suit:
 	\item sélectionnez-la dans la liste;
 	\item puis après soit:
 		\begin{itemize}
-			\item un \texttt{clic-gauche} sur l'outil \menus{Supprimer} dans la barre d'outils,
-			\item ou un \texttt{clic-droit} sur la ligne de l'opération planifiée puis la sélection de \menus{Supprimer l'opération} dans le menu contextuel;
+			\item un \cmds{clic-gauche} sur l'outil \menus{Supprimer} dans la barre d'outils,
+			\item ou un \cmds{clic-droit} sur la ligne de l'opération planifiée puis la sélection de \menus{Supprimer l'opération} dans le menu contextuel;
 		\end{itemize}
 	\item une boîte de dialogue s'ouvre\refimage{planned-transactions-delete-img} et vous propose de supprimer:
 	\begin{figure}[htbp]
@@ -459,8 +459,8 @@ Pour supprimer une opération planifiée, procédez comme suit:
 		\label{planned-transactions-delete-img}
 	\end{figure}
 		\begin{itemize}
-	 		\item \keys{Toutes les occurrences}: toutes les opérations, courante et futures, seront supprimées, les opérations passées sont conservées, 
-	 		\item \keys{Juste celle-çi}: c'est-à-dire uniquement l'occurrence courante (seule l'opération sélectionnée sera supprimée);
+	 		\item \menus{Toutes les occurrences}: toutes les opérations, courante et futures, seront supprimées, les opérations passées sont conservées, 
+	 		\item \menus{Juste celle-çi}: c'est-à-dire uniquement l'occurrence courante (seule l'opération sélectionnée sera supprimée);
 	 		\item la case à cocher \menus{Gardez ce choix et ne plus voir ce message?} permet de conserver votre choix pour les suppressions futures et la boîte de dialogue ne s'affichera plus;
 	 		
 	 		\vspacepdf{2mm}
