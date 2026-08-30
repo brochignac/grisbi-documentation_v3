@@ -13,10 +13,142 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\chapter{Premier démarrage de Grisbi\label{start}}
+\chapter{Premiers pas avec Grisbi\label{start}}
 
 
-\section{Assistant premier démarrage\label{start-first}}
+\section{Installation\label{start-install}}
+
+Grisbi est disponible en version stable, en version instable et en version de développement pour Windows, Linux et macOS.
+
+Sur le site \lang{Sourceforge.net}, vous trouverez la \lang{version stable}\footnote{\urlSourceForgeGrisbiStable} et \lang{la version instable}\footnote{\urlSourceForgeGrisbiInstable}.
+
+La version de développement est, elle, disponible sur \lang{GitHub}\footnote{\urlGitHubGrisbi}
+
+\vspace{2mm}
+\noindent
+\Attention{}: il est déconseillé d'utiliser la version instable ou de développement avec votre fichier de compte habituel, sous peine de possibles pertes de données en cas de dysfonctionnement.
+
+\subsection{Version stable\label{start-install-stable}}
+
+Téléchargez la dernière version stable pour votre système d'exploitation.
+
+\Note{}: vous y trouverez en particulier des instructions d'installation pour le système macOS.
+
+\subsubsection{Windows\label{start-install-stable-windows}}
+
+Windows 7 et 8 ne sont plus supportés ainsi que les processeurs 32bit.
+
+\begin{enumerate}
+	\item cliquez sur le fichier de la forme \frquote{Grisbi-64bit-version-setup.exe} précédemment téléchargé;
+	\item une fenêtre avec un avertissement de sécurité s'ouvre, vous informant que l'éditeur n'a pas pu être vérifié; cliquez sur \menus{Exécuter};
+	\item sélectionnez votre langage dans la liste déroulante puis cliquez sur \menus{OK};
+	\item la fenêtre de bienvenue de l'installation s'ouvre; cliquez sur \menus{Suivant};
+	\item la fenêtre suivante vous demande si vous acceptez la \gls{Licence Publique Generale GNU} (GNU General Public License) Version 2; cliquez sur \menus{J'accepte};
+	\item Grisbi vous propose ensuite un dossier d'installation par défaut, que vous pourrez modifier; puis cliquez sur \menus{Installer};
+	\item en fin d'installation, la dernière fenêtre vous propose de:
+		\begin{itemize}
+			\item \frquote{Lancer Grisbi 64bit} (par defaut) ou non en décochant la case;
+			\item \frquote{Créer une icône sur le bureau}  (par defaut) ou non en décochant la case;
+		\end{itemize}
+	\item cliquez sur \menus{Fermer}.
+	\item vous pourrez ensuite paramétrer Grisbi (voir la section \vref{start-first} \menus{Assistant au premier démarrage}).
+\end{enumerate}
+
+\subsubsection{Linux\label{start-install-stable-linux}}
+
+\paragraph{Debian/Ubuntu et dérivés}\mbox{}		%\mbox{}= to allow a line break
+
+La dernière version stable est disponible dans les dépôts; vous pourrez l'installer avec votre gestionnaire de paquets en recherchant \frquote{Grisbi}.
+
+Si vous téléchargez les deux (2) fichiers d'\gls{extension} \frquote{.deb}, vous pourrez les installer avec la commande suivante:
+
+%\begin{verbatim}
+\cmds{sudo apt install ./grisbi\_*\_amd64.deb ./grisbi-common\_*\_all.deb}
+%\end{verbatim}
+
+\paragraph{Autres distributions Linux}\mbox{}		%\mbox{}= to allow a line break
+
+La dernière version stable est disponible pour Mageia, openSUSE, Solus.
+
+\paragraph{Flatpak}\mbox{}		%\mbox{}= to allow a line break
+
+Grisbi est également disponible en version Flatpak sur \lang{Flathub}\footnote{\urlFlatpakGrisbi}.
+
+\paragraph{Fichiers sources}\mbox{}		%\mbox{}= to allow a line break
+
+Vous pouvez aussi installer Grisbi à partir des sources, le fichier \frquote{grisbi-version.tar.xz}, précédemment téléchargé.
+
+Il vous faudra, au préalable, avoir installé (sous Debian/Ubuntu):
+\begin{itemize}
+	\item meson (outil de compilation),
+	\item libglib2-dev,
+	\item libgtk-3-dev et libgtk-3-bin
+	\item libgsf-1-dev,
+	\item libgoffice,
+	\item libofx-dev (optionnel),
+	\item libssl-dev (optionnel) pour le chiffrement du fichier,
+	\item libxml2-dev (optionnel).
+\end{itemize}
+
+Puis pour compiler et installer Grisbi, procédez comme suit:
+
+\begin{enumerate}
+	\item décompressez le fichier \frquote{grisbi-version.tar.xz},
+	\item allez dans le dossier contenant le fichier décompressé et exécutez, dans l'ordre, les commandes suivantes:
+		\begin{itemize}
+		\item \cmds{meson setup builddir -{}-prefix=/dossier\_où\_installer\_grisbi}
+		% using -{}- to break ligature with \texttt{}(=\cmds{}), if not, prints -prefix=...
+		\item \cmds{meson compile -C builddir}
+		\item \cmds{meson install -C builddir}
+		\end{itemize}
+	\item vous trouverez l'exécutable dans le dossier \frquote{/dossier\_où\_installer\_grisbi/bin}.
+\end{enumerate}
+
+\subsubsection{macOS\label{start-install-stable-macos}}
+
+Pour installer Grisbi sous macOS, veuillez vous référer à la page de téléchargement\footnote{\urlSourceForgeGrisbiStable} à partir de la version 3.90.0.
+
+
+\subsection{Version instable\label{start-install-instable}}
+
+Des versions instables sont également disponibles sur \lang{Sourceforge.net}\footnote{\urlSourceForgeGrisbiInstable} et sont installables de la même façon que les versions stables pour tous les systèmes d'exploitation (voir la section \vref{start-install-stable}).
+
+
+
+\subsection{Version de développement\label{start-install-devel}}
+
+La version de développement est disponible sur \lang{GitHub}\footnote{\label{fn:github}\urlGitHubGrisbi}.
+
+Pour plus d'information, reportez-vous aux pages \lang{Wiki}\footnote{\urlGitHubGrisbiWiki} sur GitHub.
+
+Sous Debian/Ubuntu, il vous faudra, au préalable, avoir installé:
+\begin{itemize}
+	\item meson (outil de compilation),
+	\item libglib2-dev,
+	\item libgtk-3-dev et libgtk-3-bin,
+	\item libgsf-1-dev,
+	\item libgoffice,
+	\item libofx-dev (optionnel),
+	\item libssl-dev (optionnel) pour le chiffrement du fichier,
+	\item libxml2-dev (optionnel).
+\end{itemize}
+
+Il vous faudra ensuite récupérer les sources sur \lang{GitHub}\footref{fn:github} avec la commande suivante:
+
+\cmds{git clone https://github.com/grisbi/grisbi.git}
+
+Puis dans le dossier de téléchargement des sources, exécutez, dans l'ordre, les commandes suivantes:
+\begin{itemize}
+	\item \cmds{meson setup builddir -{}-prefix=/dossier\_où\_installer\_grisbi}
+	% using -{}- to break ligature with \texttt{}(=\cmds{}), if not, prints -prefix=...
+	\item \cmds{meson compile -C builddir}
+	\item \cmds{meson install -C builddir \&\& rm -r builddir}
+\end{itemize}
+
+L'exécutable est alors disponible dans le dossier \frquote{/dossier\_où\_installer\_grisbi/bin}.
+
+
+\section{Assistant au premier démarrage\label{start-first}}
 
 
 Après l'installation de Grisbi et au premier lancement du logiciel, celui-çi vous aidera avec trois assistants consécutifs:
