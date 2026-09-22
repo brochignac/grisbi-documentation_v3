@@ -1,8 +1,255 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Contents: The first start chapter
+% $Id : 03-grisbi-manuel-start-en.tex, v 3.0 2024/11 Dominique Brochard
+%	- comment \ifIllustration to always have pictures in manuel
+%	- accounts' file to accounting's file / fichier de compteS vers fichier de comptabilité
+%	- adding new "start_category_select" screenshot (4/6)
+%	- rewriting
+% $Id : 03-grisbi-manuel-start-en.tex, v 3.0 2026/09 Dominique Brochard
+%	- adding "Installation" section
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Erster Start von Grisbi\label{start}}
+
+\chapter{Erste Schritte mit Grisbi\label{start}}
+%\chapter{Getting started with Grisbi\label{start}}
+%\chapter{Premiers pas avec Grisbi\label{start}}
+
+\section{Erstinstallation\label{start-install}}
+%\section{Installation\label{start-install}}
+
+Grisbi ist als stabile Version, als instabile Version und als Entwicklungsversion für Windows, Linux und macOS verfügbar.
+%Grisbi is available in stable, unstable and development versions for Windows, Linux and macOS.
+%Grisbi est disponible en version stable, en version instable et en version de développement pour Windows, Linux et macOS.
+
+\noindent
+Auf der Website \lang{Sourceforge.net} finden Sie die \lang{stabile Version}\footnote{\urlSourceForgeGrisbiStable} und \lang{die instabile Version}\footnote{\urlSourceForgeGrisbiInstable}.
+%On the \lang{Sourceforge.net} website, you will find the \lang{stable version}\footnote{\urlSourceForgeGrisbiStable} and \lang{unstable version}\footnote{\urlSourceForgeGrisbiInstable}.
+%Sur le site \lang{Sourceforge.net}, vous trouverez la \lang{version stable}\footnote{\urlSourceForgeGrisbiStable} et \lang{la version instable}\footnote{\urlSourceForgeGrisbiInstable}.
+
+\noindent
+Die Entwicklungsversion ist auf \lang{GitHub}\footnote{\urlGitHubGrisbi} verfügbar.
+%The development version is available on \lang{GitHub}\footnote{\urlGitHubGrisbi}
+%La version de développement est, elle, disponible sur \lang{GitHub}\footnote{\urlGitHubGrisbi}.
+
+\vspacepdf{2mm}
+\noindent
+\Attention{}: Es wird nicht empfohlen, die instabile oder die Entwicklungsversion mit Ihrer regulären Kontodatei zu verwenden, da dies im Falle einer Fehlfunktion zu Datenverlusten führen könnte.
+%\Attention{}: it is not recommended to use the unstable or development versions with your regular account file, as this may result in data loss in the event of a malfunction.
+%\Attention{}: il est déconseillé d'utiliser les versions instable ou de développement avec votre fichier de compte habituel, sous peine de possibles pertes de données en cas de dysfonctionnement.
+
+\subsection{Stabile Version\label{start-install-stable}}
+%\subsection{Stable version\label{start-install-stable}}
+%\subsection{Version stable\label{start-install-stable}}
+
+Laden Sie die neueste stabile Version für Ihr Betriebssystem herunter.
+%Download the latest stable version for your operating system.
+%Téléchargez la dernière version stable pour votre système d'exploitation.
+
+\vspacepdf{2mm}
+\noindent
+\Note{}: Dort finden Sie insbesondere Installationsanweisungen für macOS.
+%\Note{}: you will find installation instructions for macOS in particular.
+%\Note{}: vous y trouverez en particulier des instructions d'installation pour le système macOS.
+
+\subsubsection{Windows\label{start-install-stable-windows}}
+
+Windows 7 und 8 werden nicht mehr unterstützt, ebenso wenig wie 32-Bit-Prozessoren.
+%Windows 7 and 8 are no longer supported, nor are 32-bit processors.
+%Windows 7 et 8 ne sont plus supportés ainsi que les processeurs 32bit.
+
+\begin{enumerate}
+	\item Klicken Sie auf die zuvor heruntergeladene Datei mit dem Namen \dequote{Grisbi-64bit-version-setup.exe};
+	%\item click on the file named \enquote{Grisbi-64bit-version-setup.exe} that you downloaded earlier;
+	%\item cliquez sur le fichier de la forme \frquote{Grisbi-64bit-version-setup.exe} précédemment téléchargé;
+	\item Es öffnet sich ein Fenster mit einer Sicherheitswarnung, die Sie darüber informiert, dass der Herausgeber nicht überprüft werden konnte; klicken Sie auf \menus{Ausführen};
+	%\item a window with a security warning will open, informing you that the publisher could not be verified; click on \menus{Execute};
+	%\item une fenêtre avec un avertissement de sécurité s'ouvre, vous informant que l'éditeur n'a pas pu être vérifié; cliquez sur \menus{Exécuter};
+	\item wählen Sie Ihre Sprache aus der Dropdown-Liste aus und klicken Sie dann auf \menus{OK};
+	%\item select your language from the drop-down list, then click \menus{OK};
+	%\item sélectionnez votre langage dans la liste déroulante puis cliquez sur \menus{OK};
+	\item das Begrüßungsfenster der Installation wird geöffnet; klicken Sie auf \menus{Weiter};
+	%\item the installation welcome window will open; click \menus{Next};
+	%\item la fenêtre de bienvenue de l'installation s'ouvre; cliquez sur \menus{Suivant};
+	\item im nächsten Fenster werden Sie gefragt, ob Sie die \gls{GNU General Public License} Version 2 akzeptieren; klicken Sie auf \menus{Ich akzeptiere};
+	%\item the next window asks whether you accept the \gls{GNU General Public License} Version 2; click \menus{I accept};
+	%\item la fenêtre suivante vous demande si vous acceptez la \gls{Licence Publique Generale GNU} (GNU General Public License) Version 2; cliquez sur \menus{J'accepte};
+	\item Grisbi schlägt Ihnen anschließend einen Standard-Installationsordner vor, den Sie nach Belieben ändern können; klicken Sie dann auf \menus{Installieren};
+	%\item Grisbi will then present you with a default installation folder, which you can modify as you wish; then click on \menus{Install};
+	%\item Grisbi vous propose ensuite un dossier d'installation par défaut, que vous pourrez modifier à votre convenance; puis cliquez sur \menus{Installer};
+	\item Am Ende der Installation bietet Ihnen das letzte Fenster folgende Optionen an:
+	%\item at the end of the installation, the final window will ask you to:
+	%\item à la fin de l'installation, la dernière fenêtre vous propose de:
+	\begin{itemize}
+		\item \dequote{Grisbi 64-Bit starten} (Standard) oder nicht, indem Sie das Kontrollkästchen deaktivieren;
+		%\item \enquote{Launch Grisbi 64-bit} (by default), or not, by unticking the box;
+		%\item \frquote{Lancer Grisbi 64bit} (par défaut), ou non en décochant la case;
+		\item \dequote{Ein Symbol auf dem Desktop erstellen} (Standard) oder nicht, indem Sie das Kontrollkästchen deaktivieren;
+		%\item \enquote{Create a desktop icon} (by default), or not by unticking the box;
+		%\item \frquote{Créer une icône sur le bureau} (par défaut), ou non en décochant la case;
+	\end{itemize}
+	\item klicken Sie auf \menus{Schließen}.
+	%\item click on \menus{Close}.
+	%\item cliquez sur \menus{Fermer}.
+	\item Anschließend können Sie Grisbi konfigurieren (siehe Abschnitt \vref{start-first} \menus{Assistent Basiskonfiguration}).
+	%\item You can then configure Grisbi (see the section \vref{start-first} \menus{Initial set-up wizard}).
+	%\item vous pourrez ensuite paramétrer Grisbi (voir la section \vref{start-first} \menus{Assistant au premier démarrage}).
+\end{enumerate}
+
+\subsubsection{Linux\label{start-install-stable-linux}}
+
+\paragraph{Debian/Ubuntu und Derivate}\mbox{}		%\mbox{}= to allow a line break
+%\paragraph{Debian/Ubuntu and derivatives}\mbox{}		%\mbox{}= to allow a line break
+%\paragraph{Debian/Ubuntu et dérivés}\mbox{}		%\mbox{}= to allow a line break
+
+Die neueste stabile Version ist in den Repositories verfügbar; Sie können sie über Ihren Paketmanager installieren, indem Sie nach \dequote{Grisbi} suchen.
+%The latest stable version is available in the repositories; you can install it using your package manager by searching for \enquote{Grisbi}.
+%La dernière version stable est disponible dans les dépôts; vous pourrez l'installer avec votre gestionnaire de paquets en recherchant \frquote{Grisbi}.
+
+Wenn Sie die beiden \gls{Dateinamenserweiterung} \dequote{.deb}-Dateien von \lang{Sourceforge.net}\footnote{\label{fn:sourceforgeStable}\urlSourceForgeGrisbiStable} herunterladen, können Sie diese mit dem folgenden Befehl in einem \lang{Terminal}-Fenster installieren:
+%If you download the two \gls{extension} \enquote{.deb} files from \lang{Sourceforge.net}\footnote{\label{fn:sourceforgeStable}\urlSourceForgeGrisbiStable}, you can install them using the following command in a \lang{Terminal} window: %using ‘fn:github’ prevents duplicate references in footnotes
+%Si vous téléchargez les deux fichiers d'\gls{extension} \frquote{.deb} sur \lang{Sourceforge.net}\footnote{\label{fn:sourceforgeStable}\urlSourceForgeGrisbiStable}, vous pourrez les installer avec la commande suivante dans une fenêtre d'un \lang{Terminal}: %using ‘fn:github’ prevents duplicate references in footnotes
+
+\vspacepdf{2mm}
+\cmds{sudo apt install ./grisbi\_*\_amd64.deb ./grisbi-common\_*\_all.deb}
+
+\paragraph{Andere Linux-Distributionen}\mbox{}		%\mbox{}= to allow a line break
+%\paragraph{Other Linux distributions}\mbox{}		%\mbox{}= to allow a line break
+%\paragraph{Autres distributions Linux}\mbox{}		%\mbox{}= to allow a line break
+
+Die neueste stabile Version ist für Mageia, openSUSE und Solus verfügbar.
+%The latest stable version is available for Mageia, openSUSE and Solus.
+%La dernière version stable est disponible pour Mageia, openSUSE, Solus.
+
+\paragraph{Flatpak}\mbox{}		%\mbox{}= to allow a line break
+
+Grisbi ist außerdem als Flatpak-Version auf \lang{Flathub}\footnote{\urlFlatpakGrisbi}Ordner\_wo\_Grisbi\_installiert\_wird/bin verfügbar.
+%Grisbi is also available as a Flatpak version on \lang{Flathub}\footnote{\urlFlatpakGrisbi}.
+%Grisbi est également disponible en version Flatpak sur \lang{Flathub}\footnote{\urlFlatpakGrisbi}.
+
+\paragraph{Quellcode-Dateien}\mbox{}		%\mbox{}= to allow a line break
+%\paragraph{Source files}\mbox{}		%\mbox{}= to allow a line break
+%\paragraph{Fichiers sources}\mbox{}		%\mbox{}= to allow a line break
+
+Sie können Grisbi auch aus den Quelldateien installieren, und zwar mithilfe der zuvor heruntergeladenen Datei \dequote{grisbi-version.tar.xz}.
+%You can also install Grisbi from source using the \enquote{grisbi-version.tar.xz} file, which you downloaded earlier.
+%Vous pouvez aussi installer Grisbi à partir des sources, le fichier \frquote{grisbi-version.tar.xz}, précédemment téléchargé.
+
+Unter Debian/Ubuntu müssen Sie zuvor Folgendes installiert haben:
+%On Debian/Ubuntu, you will first need to have installed:
+%Sous Debian/Ubuntu, il vous faudra, au préalable, avoir installé:
+\begin{itemize}
+\item  meson (Kompilierungstool),
+%\item meson (compilation tools),
+%\item meson (outil de compilation),
+\item libglib2-dev,
+\item libgtk-3-dev und libgtk-3-bin
+\item libgsf-1-dev,
+\item libgoffice,
+\item libofx-dev (optional)%(optionnel),
+\item libssl-dev (optional) für die Dateiverschlüsselung,%for file encryption,%(optionnel) pour le chiffrement du fichier,
+\item libxml2-dev (optional).
+\end{itemize}
+
+Um Grisbi zu kompilieren und zu installieren, gehen Sie wie folgt vor:
+%To compile and install Grisbi, follow these steps:
+%Puis pour compiler et installer Grisbi, procédez comme suit:
+
+\begin{enumerate}
+	\item Entpacken Sie die Datei \dequote{grisbi-version.tar.xz},
+	%\item unpack the file \enquote{grisbi-version.tar.xz},
+	%\item décompressez le fichier \frquote{grisbi-version.tar.xz},
+	\item wechseln Sie in den Ordner, der die entpackte Datei enthält, und führen Sie nacheinander die folgenden Befehle aus:
+	%\item go to the folder containing the unpacked files and run the following commands in order:
+	%\item allez dans le dossier contenant le fichier décompressé et exécutez, dans l'ordre, les commandes suivantes:
+\end{enumerate}
+
+\setlength{\parindent}{20pt}
+\cmds{meson setup builddir -{}-prefix=/Ordner\_wo\_Grisbi\_installieren}\par
+%\cmds{meson setup builddir -{}-prefix=/folder\_where\_to\_install\_grisbi}\par
+%\cmds{meson setup builddir -{}-prefix=/dossier\_où\_installer\_grisbi}\par
+% using -{}- to break ligature with \texttt{}(=\cmds{}), if not, prints -prefix=...
+\vspacepdf{1mm}
+\cmds{meson compile -C builddir}\par
+\vspace{1mm}
+\cmds{meson install -C builddir \&\& rm -r builddir}
+
+\begin{enumerate}[resume]
+	\item Sie finden die ausführbare Datei im Ordner \dequote{/Ordner\_wo\_Grisbi\_installieren/bin}.
+	%\item you will find the executable file in the folder \enquote{/folder\_where\_to\_install\_grisbi/bin}.
+	%\item vous trouverez l'exécutable dans le dossier \frquote{/dossier\_où\_installer\_grisbi/bin}.
+\end{enumerate}
+
+
+\subsubsection{macOS\label{start-install-stable-macos}}
+
+Um Grisbi unter macOS zu installieren, beachten Sie bitte die Download-Seite\footref{fn:sourceforgeStable} ab Version 3.90.0.%using ‘fn:github’ prevents duplicate references in footnotes
+%To install Grisbi on macOS, please refer to the download page\footref{fn:sourceforgeStable} from version 3.90.0 onwards.%using ‘fn:github’ prevents duplicate references in footnotes
+%Pour installer Grisbi sous macOS, veuillez vous référer à la page de téléchargement\footref{fn:sourceforgeStable} à partir de la version 3.90.0.%using ‘fn:github’ prevents duplicate references in footnotes
+
+\subsection{Unstabile Version\label{start-install-instable}}
+%\subsection{Instable version\label{start-install-instable}}
+%\subsection{Version instable\label{start-install-instable}}
+
+Unstabile Versionen sind ebenfalls auf \lang{Sourceforge.net}\footnote{\urlSourceForgeGrisbiInstable} verfügbar und lassen sich auf dieselbe Weise wie die stabilen Versionen für alle Betriebssysteme installieren (siehe Abschnitt \vref{start-install-stable}).
+%Unstable versions are also available on \lang{Sourceforge.net}\footnote{\urlSourceForgeGrisbiInstable} and can be installed in the same way as the stable versions for all operating systems (see the section \vref{start-install-stable}).
+%Des versions instables sont également disponibles sur \lang{Sourceforge.net}\footnote{\urlSourceForgeGrisbiInstable} et sont installables de la même façon que les versions stables pour tous les systèmes d'exploitation (voir la section \vref{start-install-stable}).
+
+\subsection{Entwicklungsversion\label{start-install-devel}}
+%\subsection{Development version\label{start-install-devel}}
+%\subsection{Version de développement\label{start-install-devel}}
+
+Die Entwicklungsversion ist auf \lang{GitHub}\footnote{\label{fn:github}\urlGitHubGrisbi} verfügbar.
+%The development version is available on \lang{GitHub}\footnote{\label{fn:github}\urlGitHubGrisbi}. %using ‘fn:github’ prevents duplicate references in footnotes
+%La version de développement est disponible sur \lang{GitHub}\footnote{\label{fn:github}\urlGitHubGrisbi}. %using ‘fn:github’ prevents duplicate references in footnotes
+Weitere Informationen finden Sie auf den \lang{Wiki}\footnote{\urlGitHubGrisbiWiki}-Seiten auf GitHub.
+%For further information, please refer to the \lang{Wiki}\footnote{\urlGitHubGrisbiWiki} pages on GitHub.
+%Pour plus d'information, reportez-vous aux pages \lang{Wiki}\footnote{\urlGitHubGrisbiWiki} sur GitHub.
+
+\noindent
+Unter Debian/Ubuntu müssen Sie zuvor Folgendes installiert haben:
+%On Debian/Ubuntu, you will first need to have installed:
+%Sous Debian/Ubuntu, il vous faudra, au préalable, avoir installé:
+\begin{itemize}
+	\item  meson (Kompilierungstool),
+	%\item meson (compilation tools),
+	%\item meson (outil de compilation),
+	\item libglib2-dev,
+	\item libgtk-3-dev und libgtk-3-bin
+	\item libgsf-1-dev,
+	\item libgoffice,
+	\item libofx-dev (optional)%(optionnel),
+	\item libssl-dev (optional) für die Dateiverschlüsselung,%for file encryption,%(optionnel) pour le chiffrement du fichier,
+	\item libxml2-dev (optional).
+\end{itemize}
+
+Anschließend müssen Sie die Quellcode-Dateien von \lang{GitHub}\footref{fn:github} mit dem folgenden Befehl herunterladen:
+%You will then need to fetch the source code from \lang{GitHub}\footref{fn:github} using the following command:
+%Il vous faudra ensuite récupérer les sources sur \lang{GitHub}\footref{fn:github} avec la commande suivante:
+%using ‘fn:github’ prevents duplicate references in footnotes
+
+\vspacepdf{2mm}
+\cmds{git clone https://github.com/grisbi/grisbi.git}
+
+\vspacepdf{2mm}
+Führen Sie dann im Ordner, in den der Quellcode heruntergeladen wurde, nacheinander die folgenden Befehle aus:
+%Then, in the folder where the source code was downloaded, run the following commands in order:
+%Puis dans le dossier de téléchargement des sources, exécutez, dans l'ordre, les commandes suivantes:
+
+\vspacepdf{2mm}
+\setlength{\parindent}{20pt}
+\cmds{meson setup builddir -{}-prefix=/Ordner\_wo\_Grisbi\_installieren}\par
+%\cmds{meson setup builddir -{}-prefix=/folder\_where\_to\_install\_grisbi}\par
+%\cmds{meson setup builddir -{}-prefix=/dossier\_où\_installer\_grisbi}\par
+% using -{}- to break ligature with \texttt{}(=\cmds{}), if not, prints -prefix=...
+\vspacepdf{1mm}
+\cmds{meson compile -C builddir}\par
+\vspacepdf{1mm}
+\cmds{meson install -C builddir \&\& rm -r builddir}
+
+\vspacepdf{3mm}
+Die ausführbare Datei befindet sich anschließend im Ordner \dequote{/Ordner\_wo\_Grisbi\_installieren/bin}.
+%The executable is then available in the folder \enquote{/folder\_where\_to\_install\_grisbi/bin}.
+%L'exécutable est alors disponible dans le dossier \frquote{/dossier\_où\_installer\_grisbi/bin}.
 
 
 \section{Assistent Basiskonfiguration\label{start-first}}
