@@ -7,6 +7,7 @@
 % $Id: grisbi-manuel-menus.tex, v 0.5.0 2004/06/01 Loic Breilloux
 % $Id: grisbi-manuel-home.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
 % $Id: grisbi-manuel-home.tex, v 1.0 2014/02/12 Jean-Luc Duflot
+% $Id: 04-grisbi-manuel-home-fr.tex, v 3.0 2025/03 Dominique Brochard
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Entering Grisbi\label{entrance}}%Entrée dans Grisbi
@@ -271,7 +272,7 @@ A partial balance can be specified for a group of accounts  If defined this is d
 \vspacepdf{3mm}
 You can configure certain aspects of the display of the details panel:
 \begin{itemize}
-	\item in the \menus{Edit - Preferences} menu: %TODO verify sections/paragraphs with \vref{setup-xxx}
+	\item in the \menus{Edit - Preferences} menu:
 	\begin{itemize}
 		\item \menus{\indexword{Generalities}\index{generalities}}:
 		\begin{itemize}
@@ -297,6 +298,7 @@ You can configure certain aspects of the display of the details panel:
 
 %In particular, if you find a spelling error in this page, you can correct it: see the paragraph \vref{setup-general-home-final}, \menus{?? Pluriel de final ??} !
 
+\newpage
 \section{Menu bar\label{home-menus}}
 
 As in many graphics applications, most of Grisbi's important features are accessible through the menus in the \indexword{Menu Bar}\index{menu bar}. The features are detailed below.
@@ -306,11 +308,7 @@ As in many graphics applications, most of Grisbi's important features are access
 
 This menu includes the following functions:
 
-\vspace{3mm}
-\begin{itemize}[rightmargin=.6cm]
-	\item \menus{New window}: non-functional (perhaps in the future?) %TODO: to update
-\end{itemize}
-
+\vspace{2mm}
 \noindent
 \begin{minipage}{.7\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
@@ -355,26 +353,29 @@ This menu includes the following functions:
 \Note{}: in the \menus{Edit} menu, some entries are only active when an account or transaction is selected.
 %\textbf{Note}: dans le menu Édition, certaines entrées ne sont actives que lorsqu'un compte ou une opération est sélectionné(e).
 
+\vspace{2mm}
 This menu includes the following functions:
 
-\vspace{3mm}
+\vspace{2mm}
 \noindent
 \begin{minipage}{.7\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
-		\item \menus{Edit transaction}: allows a selected transaction to be rectified, see section \vref{transactions-modify}, \menus{Modification d'une opération};%TODO to translate
+		\item \menus{Edit transaction}: allows a selected transaction to be rectified, see section \vref{transactions-modify}, \menus{Editing a transaction};
 		%\menus{Éditer l'opération}: permet la rectification d'une opération existante, voir la section \vref{transactions-modify}, \menus{Modification d'une opération};
-		\item \menus{New transaction}: allows the creation of a new transaction in an account (shortcut \keys{Ctrl+T}), see the section \vref{transactions-new}, \menus{Saisie d'une nouvelle opération};%TODO to translate
+		\item \menus{New transaction}: allows the creation of a new transaction in an account (shortcut \keys{Ctrl+T}), see the section \vref{transactions-new}, \menus{Entering a new transaction};
 		%\menus{Nouvelle opération}: permet la création d'une nouvelle opération dans un compte (raccourci-clavier \keys{Ctrl+T}), voir la section \vref{transactions-new}, \menus{Saisie d'une nouvelle opération};
 		\item \menus{Remove transaction}: deletes a selected transaction, see section \vref{transactions-delete}, \menus{Deleting a transaction};
 		%\menus{Supprimer une opération}: supprime une opération existante, voir la section \vref{transactions-delete}, \menus{Suppression d'une opération};
+		\item \menus{Use selected transaction as a template}: creates a copy of a selected transaction, with the current date entered in the transaction form, see section \vref{transactions-model}, \menus{Transaction selected as a template};
+		%\item \menus{Utiliser l'opération sélectionnée comme modèle}: permet de créer une nouvelle opération à partir d'une opération sélectionnée, voir la section \vref{transactions-model}, \menus{Opération sélectionnée comme modèle};
 	\end{itemize}
 \end{minipage}
 \hspace{10pt}	
 \begin{minipage}{.3\linewidth}
-	\vspace{-5pt}					% space above the floating (minus intextsep=separation between float and text in text)
+	\vspace{-15pt}					% space above the floating (minus intextsep=separation between float and text in text)
 	\centering						% centering the floating figure in the "wrap"
 		\includegraphics[width=1\textwidth]{image/screenshot/home_menubar_edit}
-	\vspace{-15pt}					% space between the floating and the caption below the floating
+	\vspace{-5pt}					% space between the floating and the caption below the floating
 	\captionsetup{
 	type=figure,%				% define "figure" or "table" type, mandatory
 	name=Fig.,%					% rename label caption, default="Figure" (or "Table")
@@ -384,43 +385,47 @@ This menu includes the following functions:
 	\label{home_menubar_edit}
 \end{minipage}
 
+\vspace{-6mm}
 \begin{itemize}
-	\item \menus{Use selected transaction as a template}: creates a copy of a selected transaction, with the current date entered in the transaction form, see section \vref{transactions-model}, \menus{Selecting a transaction for use as a template};
-	%\menus{Utiliser l'opération sélectionnée comme modèle}: permet de créer une nouvelle opération à partir d'une opération sélectionnée, voir la section \vref{transactions-model}, \menus{Opération sélectionnée comme modèle};
 	\item \menus{Clone transaction}: creates a copy identical to the selected transaction and opens the transaction form, see section \vref{transactions-duplicate}, \menus{Clone a transaction};
-	%\menus{Cloner l'opération}: permet de dupliquer une opération existante, voir la section \vref{transactions-duplicate}, \menus{Clonage d'une opération};
-	\item \menus{Convert to scheduled transaction}: see section \vref{transactions-schedule}, \menus{Converting a transaction to a scheduled transaction};
-	%\menus{Convertir en opération planifiée}: voir la section \vref{transactions-schedule}, \menus{Conversion d'une opération en opération planifiée};
+	%\item \menus{Cloner l'opération}: permet de dupliquer une opération existante, voir la section \vref{transactions-duplicate}, \menus{Clonage d'une opération};
+	\item \menus{Convert to scheduled transaction}: see section \vref{transactions-schedule}, \menus{Converting a transaction into a scheduled transaction};
+	%\item \menus{Convertir en opération planifiée}: voir la section \vref{transactions-schedule}, \menus{Conversion d'une opération en opération planifiée};
 	\item \menus{Move transaction to another account}: moves the transaction to the selected account, see section \vref{transactions-move}, \menus{Moving a transaction to another account};
-	%\menus{Déplacer l'opération vers un autre compte}: déplace l'opération vers le compte sélectionné, voir la section \vref{transactions-move}, \menus{Déplacement d'une opération vers un autre compte};
-	\item \menus{Search} (shortcut \keys{Ctrl+F}):
+	%\item \menus{Déplacer l'opération vers un autre compte}: déplace l'opération vers le compte sélectionné, voir la section \vref{transactions-move}, \menus{Déplacement d'une opération vers un autre compte};
+	\item \menus{Search} (shortcut \keys{Ctrl+F}) (see the capter \vref{search}, \menus{Search}):
+	%\item \menus{Rechercher} (raccourci-clavier \keys{Ctrl+F}) (voir le chapitre \vref{search}, \menus{Recherche}):
 		\begin{itemize}
-			\item displays the search box when you select:
+			\item displays the search box after the selection of:
+			%\item affiche la fenêtre de recherche après la sélection de:
 				\begin{itemize}
 					\item an account or a transaction,
+					%\item un compte ou une opération,
 					\item the \enquote{Payees} tab or a payee,
+					%\item l'onglet \frquote{Tiers} ou un tiers,
 					\item the \enquote{Categories} tab or a category,
+					%\item l'onglet \frquote{Catégories} ou une catégorie,
 					\item the \enquote{Budgetary lines} tab or a budgetary line is selected
+					%\item l'onglet \frquote{Imputations budgétaires} ou une imputation budgétaire,
 			 	\end{itemize}
-			 	
-			 	(see chapter \vref{accounts-search}, \menus{alphanumeric search})\textcolor{red}{-> TO CREATE} %TODO to create, 
-			%affiche la fenêtre de recherche quand un compte ou une opération, l'onglet \frquote{Tiers} ou un tiers, l'onglet \frquote{Catégories} ou une catégorie, l'onglet \frquote{Imputations budgétaires} ou une imputation budgétaire est sélectionné, voir le chapitre \vref{accounts-search}, \menus{Recherche alphanumérique} -> A CRÉER; %TODO to create
-			\item opens the properties window for a report when the \enquote{Reports} tab of the navigation panel or a report is selected, see chapter \vref{reports-creation}, \menus{Création d'un état}; %TODO to modify
-			%ouvre la fenêtre de propriétés de l'état quand l'onglet \frquote{États} du panneau de navigation ou un état est sélectionné, voir le chapitre \vref{reports-creation}, \menus{Création d'un état};
+			\item opens the \menus{Report properties} window for a report when the \enquote{Reports} tab of the navigation panel or a report is selected, see chapter \vref{reports-creation}, \menus{Creating a report};
+			%\item ouvre la fenêtre de \menus{Propriétés de l'état} quand l'onglet \frquote{États} du panneau de navigation ou un état est sélectionné, voir le chapitre \vref{reports-creation}, \menus{Création d'un état};
 		\end{itemize}
 	\item \menus{New account}: starts the wizard for creating a new account in your Grisbi file (shortcut \keys{Shift+Ctrl+N}), see section \vref{accounts-new}, \menus{Creating a new account};
-	%\menus{Nouveau compte}: démarre l'assistant de	création d'un nouveau compte dans votre fichier Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+N}), voir la section \vref{accounts-new}, \menus{Création d'un nouveau compte};
+	%\item \menus{Nouveau compte}: démarre l'assistant de	création d'un nouveau compte dans votre fichier Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+N}), voir la section \vref{accounts-new}, \menus{Création d'un nouveau compte};
 	\item \menus{Remove current account}: deletes the selected account from your Grisbi file, see section \vref{accounts-delete}, \menus{Removing the current account};
-	%\menus{Supprimer le compte courant}: efface le compte sélectionné de votre fichier Grisbi, voir la section \vref{accounts-delete}, \menus{Suppression d'un compte};
+	%\item \menus{Supprimer le compte courant}: efface le compte sélectionné de votre fichier Grisbi, voir la section \vref{accounts-delete}, \menus{Suppression d'un compte};
 	\item \menus{Preferences}: allows you to configure Grisbi (shortcut \keys{Shift \shift+Ctrl+P}); see the chapter \vref{setup}, \menus{Configuration of Grisbi}.
-	%\menus{Préférences}: permet de configurer Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+P}); voir le chapitre \vref{setup}, \menus{Configuration de Grisbi}.
+	%\item \menus{Préférences}: permet de configurer Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+P}); voir le chapitre \vref{setup}, \menus{Configuration de Grisbi}.
 \end{itemize}
 
 
 \subsection{\menus{View} menu\label{home-menus-display}}
 
 \Note{}: in the \menus{View} menu, entries are only active when an account is selected.
+%\Note{}: dans le menu \menus{Affichage}, les entrées ne sont actives que lorsqu'un compte est sélectionné.
 
+\newpage
 This menu includes the following functions: 
 
 \vspace{3mm}
@@ -433,7 +438,7 @@ This menu includes the following functions:
 	%Montrer les opérations rapprochées}: permet l'affichage des opérations rapprochées du compte sélectionné (raccourci-clavier \keys{Alt+R});
 	\item \menus{Show lines archives}: displays the archive lines for the selected account (shortcut \keys{Alt+L});
 	%Montrer les lignes d'archives}: affiche les lignes d'archives du compte sélectionné (raccourci-clavier \keys{Alt+L});
-	\item \menus{Show \indexword{closed accounts}}\index{closed!account}: displays account(s) that have been closed and not deleted, see section \vref{accounts-properties}, \menus{Account properties?}; %TODO to update
+	\item \menus{Show \indexword{closed accounts}}\index{closed!account}: displays account(s) that have been closed and not deleted, see section \vref{accounts-properties}, \menus{Account properties};
 	%\menus{Montrer les \indexword{comptes clos}}\index{compte!clos}: affiche le(s) compte(s) clos et non supprimé(s), voir la section \vref{accounts-properties}, \menus{Propriétés d'un compte};
 	\end{itemize}
 \end{minipage}
@@ -540,7 +545,8 @@ Grisbi has a number of keyboard shortcuts, listed in the Grisbi preferences (see
 \subsection{Navigation panel}
 
 \begin{itemize}
-	\item Select a tab or an account: \keys{\arrowkeyup}, \keys{\arrowkeydown}%Sélectionner un onglet ou un compte: \keys{\arrowkeyup}, \keys{\arrowkeydown}
+	\item Select a tab or an account: \keys{\arrowkeyup}, \keys{\arrowkeydown}
+	%\item Sélectionner un onglet ou un compte: \keys{\arrowkeyup}, \keys{\arrowkeydown}
 	\item On the Accounts tab:%Sur l'onglet Comptes:
 	\begin{itemize}
 		\item Opens the accounts list: \keys{\arrowkeyright}%Ouvrir la liste des comptes: \keys{\arrowkeyright}
@@ -551,15 +557,17 @@ Grisbi has a number of keyboard shortcuts, listed in the Grisbi preferences (see
 		\item Switches to the list of transactions or planned transactions: \keys{\arrowkeyright}%Bascule vers la liste des opérations ou des opérations planifiées: \keys{\arrowkeyright}
 		\item Switches to the navigation panel: \keys{\arrowkeyleft}%Bascule vers le panneau de navigation: \keys{\arrowkeyleft}
 	\end{itemize}
-	\item On a selected account:%TODO to update
-	%Sur un compte sélectionné:%TODO to update
+	\item On a selected account:
+	%Sur un compte sélectionné:
 	\begin{itemize}
-		\item Displays the character search window: \keys{Ctrl+F}%Affiche la fenêtre de recherche de caractères: \keys{Ctrl+F}
+		\item Displays the \menus{Search} window: \keys{Ctrl+F}
+		%\item Affiche la fenêtre \menus{Rechercher}: \keys{Ctrl+F}
 	\end{itemize}
-	\item On the Reports tab:%TODO to update
+	\item On the \menus{Reports} tab:
 	%Sur l'onglet États
 	\begin{itemize}
-		\item Opens the search report properties window: \keys{Ctrl+F}%Ouvre la fenêtre des propriétés d'un état de recherche: \keys{Ctrl+F}
+		\item Opens the \menus{Report properties} search window: \keys{Ctrl+F}
+		%\item Ouvre la fenêtre des \menus{Propriétés de l'état} de recherche: \keys{Ctrl+F}
 	\end{itemize}	
 	\item Select the first/last tab (Accounts/Reports): \keys{PageUp} or \keys{PageDown}%Sélectionner le premier/dernier onglet (Comptes/États): \keys{Pg.Préc / \PgUpSymbol} ou \keys{Pg.Suiv / \PgDownSymbol}
 \end{itemize}
