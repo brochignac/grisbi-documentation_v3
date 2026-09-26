@@ -7,6 +7,7 @@
 % $Id: grisbi-manuel-menus.tex, v 0.5.0 2004/06/01 Loic Breilloux
 % $Id: grisbi-manuel-home.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
 % $Id: grisbi-manuel-home.tex, v 1.0 2014/02/12 Jean-Luc Duflot
+% $Id: 04-grisbi-manuel-home-fr.tex, v 3.0 2025/03 Dominique Brochard
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Entrée dans Grisbi\label{entrance}}
@@ -282,7 +283,7 @@ Un solde partiel, qui correspond à un groupe de comptes, s'affiche en \textcolo
 \vspacepdf{3mm}
 Vous pouvez configurer certains aspects de l'affichage du panneau des détails:
 \begin{itemize}
-	\item dans le menu \menus{Éditer - Préférences}:%TODO verify sections/paragraphs with \vref{setup-xxx}
+	\item dans le menu \menus{Éditer - Préférences}:
 		\begin{itemize}
 			\item \menus{\indexword{Géneralités}\index{généralités}}:
 				\begin{itemize}
@@ -318,11 +319,7 @@ Comme dans de nombreuses applications graphiques, la plupart des fonctionnalité
 
 Ce menu comprend les fonctions suivantes:
 
-\vspace{3mm}
-\begin{itemize}[rightmargin=.6cm]
-	\item \menus{Nouvelle fenêtre}: non fonctionnel (dans le futur peut-être?);	%TODO: to update
-\end{itemize}
-
+\vspace{2mm}
 \noindent
 \begin{minipage}{.7\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
@@ -368,7 +365,7 @@ Ce menu comprend les fonctions suivantes:
 
 Ce menu comprend les fonctions suivantes:
 
-\vspace{3mm}
+\vspace{2mm}
 \noindent
 \begin{minipage}{.7\linewidth}
 	\begin{itemize}[rightmargin=.6cm]
@@ -397,18 +394,16 @@ Ce menu comprend les fonctions suivantes:
 \item \menus{Cloner l'opération}: crée une copie identique à l'opération sélectionnée et ouvre le formulaire de saisie, voir la section \vref{transactions-duplicate}, \menus{Clonage d'une opération};
 \item \menus{Convertir en opération planifiée}: voir la section \vref{transactions-schedule}, \menus{Conversion d'une opération en opération planifiée};
 \item \menus{Déplacer l'opération vers un autre compte}: déplace l'opération vers le compte sélectionné, voir la section \vref{transactions-move}, \menus{Déplacement d'une opération vers un autre compte};
-\item \menus{Rechercher} (raccourci-clavier \keys{Ctrl+F}):
+\item \menus{Rechercher} (raccourci-clavier \keys{Ctrl+F}) (voir le chapitre \vref{search}, \menus{Recherches}):
 	\begin{itemize}
-		\item affiche la fenêtre de recherche quand vous sélectionnez:
+		\item affiche la fenêtre de recherche après la sélection de:
 			\begin{itemize}
 				\item un compte ou une opération,
 				\item l'onglet \frquote{Tiers} ou un tiers,
 				\item l'onglet \frquote{Catégories} ou une catégorie,
 				\item l'onglet \frquote{Imputations budgétaires} ou une imputation budgétaire,
-				
-				(voir le chapitre \vref{accounts-search}, \menus{Recherche alphanumérique}) \textcolor{red}{-> A CRÉER} %TODO to create
  			\end{itemize}
- 		\item ouvre la fenêtre de propriétés de l'état quand l'onglet \frquote{États} du panneau de navigation ou un état est sélectionné, voir le chapitre \vref{reports-creation}, \menus{Création d'un état};
+ 		\item ouvre la fenêtre de \menus{Propriétés de l'état} quand l'onglet \frquote{États} du panneau de navigation ou un état est sélectionné, voir le chapitre \vref{reports-creation}, \menus{Création d'un état};
 	\end{itemize}
 \item \menus{Nouveau compte}: démarre l'assistant de création d'un nouveau compte dans votre fichier Grisbi (raccourci-clavier \keys{Maj \shift+Ctrl+N}), voir la section \vref{accounts-new}, \menus{Création d'un nouveau compte};
 \item \menus{Supprimer le compte courant}: efface le compte sélectionné de votre fichier Grisbi, voir la section \vref{accounts-delete}, \menus{Suppression d'un compte};
@@ -532,13 +527,13 @@ Grisbi dispose d'un certain nombre de raccourcis-clavier, listés dans les préf
 			\item Bascule vers la liste des opérations ou des opérations planifiées: \keys{\arrowkeyright}
 			\item Bascule vers le panneau de navigation: \keys{\arrowkeyleft}
 		\end{itemize}
-	\item Sur un compte sélectionné:%TODO to update
+	\item Sur un compte sélectionné:
 		\begin{itemize}
-			\item Affiche la fenêtre de recherche de caractères: \keys{Ctrl+F}
+			\item Affiche la fenêtre \menus{Rechercher}: \keys{Ctrl+F}
 		\end{itemize}
-	\item Sur l'onglet États:%TODO to update
+	\item Sur l'onglet États:
 		\begin{itemize}
-			\item Ouvre la fenêtre des propriétés d'un état de recherche: \keys{Ctrl+F}
+			\item Ouvre la fenêtre des \menus{Propriétés de l'état} de recherche: \keys{Ctrl+F}
 		\end{itemize}	
 	\item Sélectionner le premier/dernier onglet (Comptes/États): \keys{Pg.Préc} ou \keys{Pg.Suiv}
 \end{itemize}
